@@ -10,6 +10,9 @@ on:
       - 'package-lock.json'
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   sync:
     runs-on: ubuntu-latest
@@ -34,4 +37,3 @@ jobs:
         with:
           commit_message: 'chore: sync models after code update'
           file_pattern: 'data/models.json data/capability-cache.json'
-          push_options: '--force'
