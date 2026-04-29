@@ -1,74 +1,105 @@
 import * as fs from 'fs';
 import * as path from 'path';
-import {
-  fetchGiteeModels,
-  fetchXunfeiModels,
-  fetchNvidiaModels,
-  fetchGoogleModels,
-} from './providers/index.js';
-import {
-  evaluateCapabilities,
-  evaluateDynamicPricing,
-  mergeModelEntry,
-} from './evaluator.js';
-import type { ModelEntry, RawModelData } from './types.js';
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
+import { enhanceWithCache, saveProviderOutput, updateCache } from './evaluator.js';
+import type { RawModelData, EnhancedModelData, AggregatedOutput, ProviderPlugin } from './types.js';
 
-const OUTPUT_PATH = path.resolve('data/models.json');
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+const PROVIDERS_DIR = join(__dirname, 'providers');
 
-interface ProviderConfig {
+interface DiscoveredProvider {
   name: string;
-  fetch: () => Promise<RawModelData[]>;
+  fetch: ProviderPlugin;
 }
 
-const providers: ProviderConfig[] = [
-  { name: 'gitee', fetch: fetchGiteeModels },
-  { name: 'xunfei', fetch: fetchXunfeiModels },
-  { name: 'nvidia', fetch: fetchNvidiaModels },
-  { name: 'google', fetch: fetchGoogleModels },
-];
+async function discoverProviders(): Promise<DiscoveredProvider[]> {
+  const providers: DiscoveredProvider[] = [];
 
-async function runAggregator(): Promise<void> {
-  console.log('[Aggregator] Starting model aggregation...');
-
-  const allRawModels: RawModelData[] = [];
-
-  await Promise.all(
-    providers.map(async (provider) => {
-      try {
-        console.log(`[Aggregator] Fetching from ${provider.name}...`);
-        const models = await provider.fetch();
-        console.log(`[Aggregator] ${provider.name}: ${models.length} models fetched`);
-        allRawModels.push(...models);
-      } catch (error) {
-        console.error(`[Aggregator] ${provider.name} failed:`, error);
-      }
-    })
-  );
-
-  console.log(`[Aggregator] Total raw models: ${allRawModels.length}`);
-
-  const mergedEntries: ModelEntry[] = allRawModels.map((raw) => {
-    const cached = evaluateCapabilities(raw.vendor, raw.modelId, raw);
-    const dynamic = evaluateDynamicPricing(raw);
-    return mergeModelEntry(raw, cached, dynamic);
-  });
-
-  const outputDir = path.dirname(OUTPUT_PATH);
-  if (!fs.existsSync(outputDir)) {
-    fs.mkdirSync(outputDir, { recursive: true });
+  if (!fs.existsSync(PROVIDERS_DIR)) {
+    return providers;
   }
 
-  const output = {
-    updatedAt: new Date().toISOString(),
-    totalModels: mergedEntries.length,
-    models: mergedEntries,
-  };
+  const entries = fs.readdirSync(PROVIDERS_DIR, { withFileTypes: true });
 
-  fs.writeFileSync(OUTPUT_PATH, JSON.stringify(output, null, 2));
-  console.log(`[Aggregator] Output written to ${OUTPUT_PATH}`);
+  for (const entry of entries) {
+    if (!entry.isDirectory()) {
+      continue;
+    }
+
+    const indexPath = join(PROVIDERS_DIR, entry.name, 'index.ts');
+    if (!fs.existsSync(indexPath)) {
+      continue;
+    }
+
+    try {
+      const modulePath = `./providers/${entry.name}/index.js`;
+      const providerModule = await import(modulePath);
+      const fetchFn = providerModule.fetchModels || providerModule.default?.fetchModels;
+      if (typeof fetchFn === 'function') {
+        providers.push({ name: entry.name, fetch: fetchFn });
+        console.log(`[Aggregator] Loaded provider: ${entry.name}`);
+      }
+    } catch (error) {
+      console.warn(`[Aggregator] Failed to load provider ${entry.name}:`, error);
+    }
+  }
+
+  return providers;
 }
 
-runAggregator().catch((error) => {
+async function runProvider(
+  provider: DiscoveredProvider
+): Promise<{ provider: string; models: EnhancedModelData[] }> {
+  console.log(`[Aggregator] Fetching from ${provider.name}...`);
+
+  try {
+    const rawModels = await provider.fetch();
+    console.log(`[Aggregator] ${provider.name}: ${rawModels.length} raw models fetched`);
+
+    const enhancedModels = rawModels.map(raw => {
+      const enhanced = enhanceWithCache(provider.name, raw.modelId, raw);
+      updateCache(provider.name, raw.modelId, raw, enhanced);
+      return enhanced;
+    });
+
+    return { provider: provider.name, models: enhancedModels };
+  } catch (error) {
+    console.error(`[Aggregator] ${provider.name} failed:`, error);
+    return { provider: provider.name, models: [] };
+  }
+}
+
+async function main(): Promise<void> {
+  console.log('[Aggregator] Starting model aggregation...');
+
+  const providers = await discoverProviders();
+  console.log(`[Aggregator] Discovered ${providers.length} providers: ${providers.map(p => p.name).join(', ')}`);
+
+  const results = await Promise.all(providers.map(runProvider));
+
+  for (const result of results) {
+    if (result.models.length > 0) {
+      const outputPath = saveProviderOutput(result.provider, result.models);
+      console.log(`[Aggregator] Saved ${result.models.length} models to ${outputPath}`);
+    }
+  }
+
+  const allModels: EnhancedModelData[] = results.flatMap(r => r.models);
+  const output: AggregatedOutput = {
+    updatedAt: new Date().toISOString(),
+    totalModels: allModels.length,
+    providers: results.filter(r => r.models.length > 0).map(r => r.provider),
+    models: allModels,
+  };
+
+  const outputPath = path.resolve('data/models.json');
+  fs.writeFileSync(outputPath, JSON.stringify(output, null, 2));
+  console.log(`[Aggregator] Saved ${allModels.length} total models to ${outputPath}`);
+}
+
+main().catch(error => {
   console.error('[Aggregator] Fatal error:', error);
   process.exit(1);
 });

@@ -11,28 +11,35 @@ export interface RawModelData {
   metadata?: Record<string, unknown>;
 }
 
+export interface EnhancedModelData extends RawModelData {
+  tags: string[];
+  isReasoning: boolean;
+  isMultimodal: boolean;
+  contextLabel: string;
+  billingMode: 'free' | 'pay' | 'mixed';
+}
+
 export interface CachedCapabilities {
   tags: string[];
   isReasoning: boolean;
   isMultimodal: boolean;
   contextSize: string;
+  description?: string;
   updatedAt: string;
 }
 
-export interface ModelEntry {
-  vendor: string;
-  modelId: string;
-  name: string;
-  description?: string;
-  contextSize: string;
-  isFree: boolean;
-  billingMode: 'free' | 'pay' | 'mixed';
-  isReasoning: boolean;
-  isMultimodal: boolean;
-  capabilities: string[];
-  priceInput?: number;
-  priceOutput?: number;
-  raw: Record<string, unknown>;
+export interface ProviderOutput {
+  provider: string;
+  updatedAt: string;
+  totalModels: number;
+  models: EnhancedModelData[];
+}
+
+export interface AggregatedOutput {
+  updatedAt: string;
+  totalModels: number;
+  providers: string[];
+  models: EnhancedModelData[];
 }
 
 export type ProviderPlugin = () => Promise<RawModelData[]>;

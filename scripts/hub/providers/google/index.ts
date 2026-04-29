@@ -1,16 +1,16 @@
-import type { RawModelData } from '../types.js';
+import type { RawModelData, ProviderPlugin } from '../../types.js';
 
-export async function fetchGoogleModels(): Promise<RawModelData[]> {
+async function fetchGoogleModels(): Promise<RawModelData[]> {
   const response = await fetch('https://generativelanguage.googleapis.com/v1beta/models', {
-    headers: { 'Accept': 'application/json' },
+    headers: { Accept: 'application/json' },
   });
 
   if (!response.ok) {
-    console.warn(`Google API responded with ${response.status}`);
+    console.warn(`[google] API responded with ${response.status}`);
     return [];
   }
 
-  const data = await response.json() as Record<string, unknown>;
+  const data = (await response.json()) as Record<string, unknown>;
 
   if (!Array.isArray(data.models)) {
     return [];
@@ -30,3 +30,5 @@ export async function fetchGoogleModels(): Promise<RawModelData[]> {
     metadata: m,
   }));
 }
+
+export const fetchModels: ProviderPlugin = fetchGoogleModels;

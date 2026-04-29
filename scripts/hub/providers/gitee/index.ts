@@ -1,16 +1,16 @@
-import type { RawModelData } from '../types.js';
+import type { RawModelData, ProviderPlugin } from '../../types.js';
 
-export async function fetchGiteeModels(): Promise<RawModelData[]> {
+async function fetchGiteeModels(): Promise<RawModelData[]> {
   const response = await fetch('https://ai.gitee.com/api/models', {
-    headers: { 'Accept': 'application/json' },
+    headers: { Accept: 'application/json' },
   });
 
   if (!response.ok) {
-    console.warn(`Gitee API responded with ${response.status}`);
+    console.warn(`[gitee] API responded with ${response.status}`);
     return [];
   }
 
-  const data = await response.json() as Record<string, unknown>;
+  const data = (await response.json()) as Record<string, unknown>;
 
   if (!Array.isArray(data.models)) {
     return [];
@@ -34,3 +34,5 @@ export async function fetchGiteeModels(): Promise<RawModelData[]> {
     metadata: m,
   }));
 }
+
+export const fetchModels: ProviderPlugin = fetchGiteeModels;

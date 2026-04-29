@@ -1,19 +1,20 @@
-import type { RawModelData } from '../types.js';
+import type { RawModelData, ProviderPlugin } from '../../types.js';
 
-export async function fetchNvidiaModels(): Promise<RawModelData[]> {
+async function fetchNvidiaModels(): Promise<RawModelData[]> {
+  const apiKey = process.env.NVIDIA_API_KEY || '';
   const response = await fetch('https://integrate.api.nvidia.com/v1/models', {
     headers: {
-      'Authorization': `Bearer ${process.env.NVIDIA_API_KEY || ''}`,
-      'Accept': 'application/json',
+      Authorization: `Bearer ${apiKey}`,
+      Accept: 'application/json',
     },
   });
 
   if (!response.ok) {
-    console.warn(`Nvidia API responded with ${response.status}`);
+    console.warn(`[nvidia] API responded with ${response.status}`);
     return [];
   }
 
-  const data = await response.json() as Record<string, unknown>;
+  const data = (await response.json()) as Record<string, unknown>;
 
   if (!Array.isArray(data.models)) {
     return [];
@@ -37,3 +38,5 @@ export async function fetchNvidiaModels(): Promise<RawModelData[]> {
     metadata: m,
   }));
 }
+
+export const fetchModels: ProviderPlugin = fetchNvidiaModels;
