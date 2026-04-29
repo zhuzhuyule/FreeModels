@@ -149,8 +149,8 @@ async function fetchGiteeModels(): Promise<RawModelData[]> {
       modelIdent = service.name || 'Unknown';
     }
 
-    const priceInput = tPriceInput > 0 ? tPriceInput / 1_000_000 : undefined;
-    const priceOutput = tPriceOutput > 0 ? tPriceOutput / 1_000_000 : undefined;
+    const priceInput = tPriceInput > 0 ? tPriceInput / 1_000_000 : (tPriceInput === 0 ? 0 : undefined);
+    const priceOutput = tPriceOutput > 0 ? tPriceOutput / 1_000_000 : (tPriceOutput === 0 ? 0 : undefined);
 
     models.push({
       vendor: 'gitee',

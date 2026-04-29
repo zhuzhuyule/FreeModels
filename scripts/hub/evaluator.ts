@@ -104,6 +104,7 @@ export function enhanceWithCache(
 
   return {
     ...base,
+    isFree: base.billingMode === 'free',
     parameterCount,
     tier: profile.tier,
     speed: profile.speed,

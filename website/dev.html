@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Model Hub - Dev</title>
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --bg:#f8fafc;--surface:#ffffff;--surface2:#f1f5f9;--border:#e2e8f0;
+    --text:#0f172a;--text2:#64748b;--accent:#3b82f6;--accent2:#2563eb;
+    --green:#22c55e;--orange:#f59e0b;--red:#ef4444;
+  }
+  body{font-family:system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.5;min-height:100vh}
+  a{color:var(--accent);text-decoration:none}
+
+  .header{background:white;border-bottom:1px solid var(--border);padding:16px 24px;display:flex;align-items:center;gap:16px}
+  .header h1{font-size:18px;font-weight:700}
+  .header .badge{background:var(--accent);color:white;padding:2px 8px;border-radius:12px;font-size:12px;font-weight:600}
+  .header .count{color:var(--text2);font-size:14px}
+
+  .filter-bar{padding:16px 24px;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+  .search{position:relative;flex:1;min-width:240px}
+  .search input{width:100%;padding:8px 12px 8px 36px;border:1px solid var(--border);border-radius:8px;font-size:14px;outline:none}
+  .search input:focus{border-color:var(--accent)}
+  .search::before{content:"🔍";position:absolute;left:12px;top:50%;transform:translateY(-50%);font-size:12px;opacity:.5}
+  select{ padding:8px 12px;border:1px solid var(--border);border-radius:8px;font-size:14px;outline:none;cursor:pointer;min-width:120px}
+  select:focus{border-color:var(--accent)}
+
+  .table-wrap{padding:0 24px 24px;overflow-x:auto}
+  table{width:100%;border-collapse:separate;border-spacing:0;background:white;border:1px solid var(--border);border-radius:12px;overflow:hidden}
+  thead{background:var(--surface2)}
+  th{padding:12px 16px;font-size:11px;font-weight:700;color:var(--text2);text-transform:uppercase;letter-spacing:.05em;text-align:left;cursor:pointer;user-select:none;white-space:nowrap}
+  th:hover{color:var(--accent)}
+  th.sorted{color:var(--accent)}
+  th .sort{margin-left:4px;opacity:.4;font-size:9px}
+  th.sorted .sort{opacity:1}
+  td{padding:10px 16px;font-size:13px;border-top:1px solid var(--border);white-space:nowrap}
+  tbody tr:hover{background:var(--surface2)}
+
+  .badge{display:inline-block;padding:2px 8px;border-radius:6px;font-size:11px;font-weight:600}
+  .badge-free{background:#dcfce7;color:#166534}
+  .badge-pay{background:#fee2e2;color:#991b1b}
+  .badge-small{background:#e0e7ff;color:#3730a3}
+  .badge-medium{background:#fef3c7;color:#92400e}
+  .badge-large{background:#fce7f3;color:#9d174d}
+  .badge-fast{background:#dcfce7;color:#166534}
+  .badge-standard{background:#e0e7ff;color:#3730a3}
+  .badge-premium{background:#fef3c7;color:#92400e}
+
+  .empty{text-align:center;padding:60px 20px;color:var(--text2)}
+  .loading{text-align:center;padding:60px 20px;color:var(--text2)}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Model Hub</h1>
+  <span class="badge" id="viewBadge">all</span>
+  <span class="count" id="totalCount"></span>
+</div>
+
+<div class="filter-bar">
+  <div class="search">
+    <input type="text" id="searchInput" placeholder="搜索模型名称、描述...">
+  </div>
+  <select id="providerFilter">
+    <option value="">所有厂商</option>
+  </select>
+  <select id="tierFilter">
+    <option value="">所有规模</option>
+    <option value="small">Small</option>
+    <option value="medium">Medium</option>
+    <option value="large">Large</option>
+  </select>
+  <select id="speedFilter">
+    <option value="">所有速度</option>
+    <option value="fast">Fast</option>
+    <option value="standard">Standard</option>
+    <option value="premium">Premium</option>
+  </select>
+  <select id="billingFilter">
+    <option value="">所有计费</option>
+    <option value="free">免费</option>
+    <option value="pay">付费</option>
+  </select>
+  <select id="reasoningFilter">
+    <option value="">所有类型</option>
+    <option value="true">推理模型</option>
+  </select>
+  <select id="toolUseFilter">
+    <option value="">工具调用</option>
+    <option value="true">支持</option>
+  </select>
+</div>
+
+<div class="table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th data-key="idx" class="sorted"># <span class="sort">▲</span></th>
+        <th data-key="name">模型 <span class="sort">▲</span></th>
+        <th data-key="provider">厂商 <span class="sort">▲</span></th>
+        <th data-key="contextLabel">上下文 <span class="sort">▲</span></th>
+        <th data-key="tier">规模 <span class="sort">▲</span></th>
+        <th data-key="speed">速度 <span class="sort">▲</span></th>
+        <th data-key="billingMode">计费 <span class="sort">▲</span></th>
+        <th data-key="performanceLevel">等级 <span class="sort">▲</span></th>
+        <th>能力标签</th>
+      </tr>
+    </thead>
+    <tbody id="tableBody">
+      <tr><td colspan="9" class="loading">加载中...</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<script>
+let allModels = [];
+let filteredModels = [];
+let sortKey = 'idx';
+let sortAsc = true;
+let currentView = 'all';
+
+async function loadJSON(url) {
+  try {
+    const res = await fetch(url);
+    if (!res.ok) throw new Error(res.status);
+    return await res.json();
+  } catch (e) {
+    console.error('Failed to load', url, e);
+    return null;
+  }
+}
+
+async function loadData() {
+  const params = new URLSearchParams(window.location.search);
+  currentView = params.get('view') || 'all';
+  document.getElementById('viewBadge').textContent = currentView;
+
+  const data = await loadJSON(`data/views/${currentView}/models.json`) ||
+               await loadJSON('data/models.json');
+
+  if (!data || !data.models) {
+    document.getElementById('tableBody').innerHTML =
+      '<tr><td colspan="9" class="empty">加载失败，请确保先运行 npm run sync-models</td></tr>';
+    return;
+  }
+
+  allModels = data.models.map((m, i) => ({ ...m, idx: i + 1 }));
+  document.getElementById('totalCount').textContent = `共 ${allModels.length} 个模型`;
+
+  populateFilters();
+  applyFilters();
+}
+
+function populateFilters() {
+  const providers = [...new Set(allModels.map(m => m.provider))].sort();
+  const sel = document.getElementById('providerFilter');
+  sel.innerHTML = '<option value="">所有厂商</option>' +
+    providers.map(p => `<option value="${p}">${p}</option>`).join('');
+}
+
+function applyFilters() {
+  const q = document.getElementById('searchInput').value.toLowerCase().trim();
+  const provider = document.getElementById('providerFilter').value;
+  const tier = document.getElementById('tierFilter').value;
+  const speed = document.getElementById('speedFilter').value;
+  const billing = document.getElementById('billingFilter').value;
+  const reasoning = document.getElementById('reasoningFilter').value;
+  const toolUse = document.getElementById('toolUseFilter').value;
+
+  filteredModels = allModels.filter(m => {
+    if (q && !m.name?.toLowerCase().includes(q) &&
+        !m.description?.toLowerCase().includes(q) &&
+        !m.modelId?.toLowerCase().includes(q)) return false;
+    if (provider && m.provider !== provider) return false;
+    if (tier && m.tier !== tier) return false;
+    if (speed && m.speed !== speed) return false;
+    if (billing && m.billingMode !== billing) return false;
+    if (reasoning && String(m.isReasoning) !== reasoning) return false;
+    if (toolUse && String(m.hasToolUse) !== toolUse) return false;
+    return true;
+  });
+
+  sortModels();
+  renderTable();
+}
+
+function sortModels() {
+  filteredModels.sort((a, b) => {
+    let va = a[sortKey] ?? '';
+    let vb = b[sortKey] ?? '';
+    if (typeof va === 'number') return sortAsc ? va - vb : vb - va;
+    va = String(va).toLowerCase();
+    vb = String(vb).toLowerCase();
+    return sortAsc ? va.localeCompare(vb) : vb.localeCompare(va);
+  });
+}
+
+function renderTable() {
+  const tbody = document.getElementById('tableBody');
+  if (filteredModels.length === 0) {
+    tbody.innerHTML = '<tr><td colspan="9" class="empty">未找到匹配的模型</td></tr>';
+    return;
+  }
+  tbody.innerHTML = filteredModels.map(m => {
+    const tierClass = `badge-${m.tier || 'medium'}`;
+    const speedClass = `badge-${m.speed || 'standard'}`;
+    const billingClass = m.billingMode === 'free' ? 'badge-free' : 'badge-pay';
+    const caps = (m.tags || []).slice(0, 4).map(c => `<span class="tag">${esc(c)}</span>`).join('');
+    return `<tr>
+      <td style="color:var(--text2);font-weight:600">${m.idx}</td>
+      <td><div style="font-weight:600;max-width:200px;overflow:hidden;text-overflow:ellipsis">${esc(m.name)}</div>
+          <div style="font-size:11px;color:var(--text2);max-width:200px;overflow:hidden;text-overflow:ellipsis">${esc(m.description || '')}</div></td>
+      <td>${esc(m.provider)}</td>
+      <td>${m.contextLabel || '-'}</td>
+      <td><span class="badge ${tierClass}">${m.tier || '-'}</span></td>
+      <td><span class="badge ${speedClass}">${m.speed || '-'}</span></td>
+      <td><span class="badge ${billingClass}">${m.billingMode === 'free' ? '免费' : '付费'}</span></td>
+      <td>${m.performanceLevel || '-'}</td>
+      <td>${caps}</td>
+    </tr>`;
+  }).join('');
+}
+
+function esc(s) {
+  if (s == null) return '';
+  const d = document.createElement('div');
+  d.textContent = String(s);
+  return d.innerHTML;
+}
+
+document.querySelectorAll('th[data-key]').forEach(th => {
+  th.addEventListener('click', () => {
+    const key = th.dataset.key;
+    if (sortKey === key) { sortAsc = !sortAsc; }
+    else { sortKey = key; sortAsc = true; }
+    document.querySelectorAll('th').forEach(t => t.classList.remove('sorted'));
+    th.classList.add('sorted');
+    th.querySelector('.sort').textContent = sortAsc ? '▲' : '▼';
+    applyFilters();
+  });
+});
+
+document.getElementById('searchInput').addEventListener('input', applyFilters);
+['providerFilter', 'tierFilter', 'speedFilter', 'billingFilter', 'reasoningFilter', 'toolUseFilter'].forEach(id => {
+  document.getElementById(id).addEventListener('change', applyFilters);
+});
+
+loadData();
+</script>
+</body>
+</html>
