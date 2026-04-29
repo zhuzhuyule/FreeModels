@@ -8,6 +8,10 @@ import {
   loadCache,
   saveCache,
   PROVIDER_META,
+  saveProviderOutput,
+  saveViewOutput,
+  buildViews,
+  filterModels,
 } from './evaluator.js';
 import type {
   EnhancedModelData,
@@ -387,6 +391,18 @@ async function main(): Promise<void> {
 
   fs.writeFileSync(OUTPUT_PATH, JSON.stringify(output, null, 2));
   console.log(`[Aggregator] Saved ${allModels.length} models to ${OUTPUT_PATH}`);
+
+  for (const provider of availableProviders) {
+    const providerModels = allModels.filter(m => m.provider === provider);
+    saveProviderOutput(provider, providerModels);
+  }
+  console.log(`[Aggregator] Wrote per-provider files for ${availableProviders.length} provider(s).`);
+
+  for (const { view, filters } of buildViews(allModels)) {
+    const viewModels = filterModels(allModels, filters);
+    saveViewOutput(view, viewModels, filters);
+  }
+  console.log(`[Aggregator] Wrote view files.`);
 
   if (!skipNotify) {
     const payload: NotifyPayload = {

@@ -1,7 +1,7 @@
 {
   "provider": "gitee",
-  "updatedAt": "2026-04-29T03:21:41.457Z",
-  "totalModels": 201,
+  "updatedAt": "2026-04-29T14:00:02.963Z",
+  "totalModels": 202,
   "models": [
     {
       "vendor": "gitee",
@@ -11,7 +11,11 @@
       "contextSize": 500,
       "priceInput": 0,
       "priceOutput": 0,
+      "priceCurrency": "CNY",
       "isFree": true,
+      "isExperienceable": false,
+      "freeKind": "permanent",
+      "trialScope": "specific",
       "capabilities": [
         "embeddings"
       ],
@@ -38,6 +42,8 @@
       "contextLabel": "500",
       "billingMode": "free",
       "freeTier": "full",
+      "modelFamily": "jina-clip-v1",
+      "aliases": [],
       "tier": "medium",
       "speed": "fast",
       "useCase": [
@@ -53,9 +59,13 @@
       "name": "Qwen2.5-72B-Instruct",
       "description": "Qwen2.5-72B-Instruct  支持 32k 上下文, 生成长文本超过 8K 。支持 function call 与外部系统无缝交互，极大提升了灵活性和扩展性。模型知识明显增加，并且大大提高了编码和数学能力, 多语言支持超过 29 种",
       "contextSize": 32000,
-      "priceInput": 0.000004,
-      "priceOutput": 0.000004,
-      "isFree": true,
+      "priceInput": 4,
+      "priceOutput": 4,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation",
         "tool_use",
@@ -77,29 +87,27 @@
       "provider": "gitee",
       "tags": [
         "text-generation",
-        "tool_use",
-        "function_calling"
+        "tool-use",
+        "function-calling"
       ],
       "isReasoning": false,
       "isMultimodal": false,
       "hasToolUse": true,
       "contextLabel": "32K",
       "billingMode": "pay",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "qwen2.5-72b",
+      "modelVariant": "instruct",
+      "aliases": [],
       "tier": "large",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "content-creation",
-        "writing-assistance",
-        "agentic-tasks",
-        "tool-augmented",
-        "structured-output",
-        "api-integration",
-        "autonomous-agents"
+        "writing-assistance"
       ],
       "performanceLevel": "mid",
       "parameterCount": 72000000000,
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "3-10s"
     },
     {
       "vendor": "gitee",
@@ -107,9 +115,13 @@
       "name": "Qwen2.5-7B-Instruct",
       "description": "Qwen2.5-7B-Instruct 是一款 70 亿参数的大语言模型，支持 function call 与外部系统无缝交互，极大提升了灵活性和扩展性。优化中文和多语言场景，支持智能问答、内容生成等应用。",
       "contextSize": 32000,
-      "priceInput": 3.5e-7,
-      "priceOutput": 3.5e-7,
-      "isFree": true,
+      "priceInput": 0.35,
+      "priceOutput": 0.35,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation",
         "tool_use",
@@ -131,29 +143,27 @@
       "provider": "gitee",
       "tags": [
         "text-generation",
-        "tool_use",
-        "function_calling"
+        "tool-use",
+        "function-calling"
       ],
       "isReasoning": false,
       "isMultimodal": false,
       "hasToolUse": true,
       "contextLabel": "32K",
       "billingMode": "pay",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "qwen2.5-7b",
+      "modelVariant": "instruct",
+      "aliases": [],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "content-creation",
-        "writing-assistance",
-        "agentic-tasks",
-        "tool-augmented",
-        "structured-output",
-        "api-integration",
-        "autonomous-agents"
+        "writing-assistance"
       ],
-      "performanceLevel": "mid",
+      "performanceLevel": "entry",
       "parameterCount": 7000000000,
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -162,7 +172,11 @@
       "description": "Stable Diffusion 3.5 Large Turbo 专注于高质量图像生成，具备强大的细节表现力和场景还原能力。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "image-generation"
       ],
@@ -188,15 +202,18 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "trial",
-      "tier": "small",
-      "speed": "fast",
+      "freeTier": "none",
+      "modelFamily": "stable-diffusion-3.5-large",
+      "modelVariant": "turbo",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "standard",
       "useCase": [
         "creative-generation",
         "art"
       ],
       "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -204,9 +221,13 @@
       "name": "Qwen2.5-32B-Instruct",
       "description": "Qwen2.5-32B-Instruct 是一款 320 亿参数的大语言模型，性能表现均衡，优化中文和多语言场景，支持智能问答、内容生成等应用。",
       "contextSize": 32000,
-      "priceInput": 0.00000126,
-      "priceOutput": 0.00000126,
-      "isFree": true,
+      "priceInput": 1.26,
+      "priceOutput": 1.26,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation"
       ],
@@ -215,7 +236,7 @@
         "isReasoning": false,
         "isMultimodal": false,
         "hasToolUse": false,
-        "operationsCount": 2,
+        "operationsCount": 1,
         "serviceIdent": "Qwen2.5-32B-Instruct",
         "apiFormat": "OPEN_AI",
         "path": "v1/chat/completions",
@@ -232,16 +253,19 @@
       "hasToolUse": false,
       "contextLabel": "32K",
       "billingMode": "pay",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "qwen2.5-32b",
+      "modelVariant": "instruct",
+      "aliases": [],
       "tier": "large",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "content-creation",
         "writing-assistance"
       ],
-      "performanceLevel": "entry",
+      "performanceLevel": "mid",
       "parameterCount": 32000000000,
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "3-10s"
     },
     {
       "vendor": "gitee",
@@ -251,7 +275,11 @@
       "contextSize": 32000,
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation"
       ],
@@ -277,16 +305,18 @@
       "hasToolUse": false,
       "contextLabel": "32K",
       "billingMode": "free",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "internvl2-8b",
+      "aliases": [],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "content-creation",
         "writing-assistance"
       ],
       "performanceLevel": "entry",
       "parameterCount": 8000000000,
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -296,7 +326,11 @@
       "contextSize": 8000,
       "priceInput": 0,
       "priceOutput": 0,
+      "priceCurrency": "CNY",
       "isFree": true,
+      "isExperienceable": false,
+      "freeKind": "permanent",
+      "trialScope": "specific",
       "capabilities": [
         "embeddings"
       ],
@@ -323,6 +357,8 @@
       "contextLabel": "8K",
       "billingMode": "free",
       "freeTier": "full",
+      "modelFamily": "jina-clip-v2",
+      "aliases": [],
       "tier": "medium",
       "speed": "fast",
       "useCase": [
@@ -340,7 +376,11 @@
       "contextSize": 32000,
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation"
       ],
@@ -366,16 +406,18 @@
       "hasToolUse": false,
       "contextLabel": "32K",
       "billingMode": "free",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "internvl2.5-26b",
+      "aliases": [],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "content-creation",
         "writing-assistance"
       ],
       "performanceLevel": "entry",
       "parameterCount": 26000000000,
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -385,7 +427,11 @@
       "contextSize": 32000,
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation"
       ],
@@ -411,16 +457,19 @@
       "hasToolUse": false,
       "contextLabel": "32K",
       "billingMode": "free",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "qwen2-vl-72b",
+      "modelVariant": "vl",
+      "aliases": [],
       "tier": "large",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "content-creation",
         "writing-assistance"
       ],
-      "performanceLevel": "entry",
+      "performanceLevel": "mid",
       "parameterCount": 72000000000,
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "3-10s"
     },
     {
       "vendor": "gitee",
@@ -429,7 +478,11 @@
       "description": "RMBG-2.0 是一款基于深度学习的智能背景移除模型，具有高精度、快速处理和广泛场景适应能力。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "image-processing"
       ],
@@ -455,12 +508,14 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "trial",
-      "tier": "small",
-      "speed": "fast",
+      "freeTier": "none",
+      "modelFamily": "rmbg-2.0",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "standard",
       "useCase": [],
       "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -469,7 +524,11 @@
       "description": "whisper-large-v3-turbo 是一款高效的语音识别模型，具备快速、精准的语音转文本能力，支持多语言识别，并在低延迟和高准确度之间提供了优秀的平衡，特别适合实时语音处理和大规模应用场景。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "speech-recognition"
       ],
@@ -495,15 +554,22 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "whisper-large-v3",
+      "modelVariant": "turbo",
+      "aliases": [
+        "whisper-large-v3",
+        "groq/whisper-large-v3",
+        "groq/whisper-large-v3-turbo"
+      ],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "transcription",
         "voice-input"
       ],
       "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -512,7 +578,11 @@
       "description": "CosyVoice2 是一款升级版语音生成模型，提供更高精准度的多语种支持、情感调节与自然流畅的语音合成，适用于智能客服、语音助手等多个场景。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "speech-synthesis"
       ],
@@ -538,9 +608,11 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "cosyvoice2",
+      "aliases": [],
       "tier": "small",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "text-to-speech",
         "voice-output"
@@ -556,7 +628,11 @@
       "description": "用于对输入的文档图像进行智能几何变换处理，将变形的文档图像转换为规范的平面图像，显著提升后续OCR文本识别的准确率。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "image-to-image"
       ],
@@ -582,15 +658,17 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "uvdoc",
+      "aliases": [],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "image-editing",
         "style-transfer"
       ],
       "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -600,7 +678,11 @@
       "contextSize": 32000,
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation"
       ],
@@ -626,16 +708,18 @@
       "hasToolUse": false,
       "contextLabel": "32K",
       "billingMode": "free",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "internvl2.5-78b",
+      "aliases": [],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "content-creation",
         "writing-assistance"
       ],
       "performanceLevel": "entry",
       "parameterCount": 78000000000,
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -644,7 +728,11 @@
       "description": "GOT-OCR2_0提供功能强大的 OCR 解决方案，能够轻松识别图表、几何图形、公式和音乐符号，并将其转换为可编辑文本。该模型基于先进的深度学习架构，针对多语言文本、复杂排版以及图像噪声进行了全面优化，提供卓越的文字识别精度。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "vision"
       ],
@@ -670,15 +758,17 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "got-ocr2_0",
+      "aliases": [],
       "tier": "large",
-      "speed": "fast",
+      "speed": "premium",
       "useCase": [
         "image-understanding",
         "visual-q&a"
       ],
       "performanceLevel": "mid",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "3-10s"
     },
     {
       "vendor": "gitee",
@@ -687,7 +777,11 @@
       "description": "NSFW Classifier 是一个高精度的深度学习模型，专门用于实时识别和过滤不适合公开环境的敏感图片。",
       "priceInput": 0,
       "priceOutput": 0,
+      "priceCurrency": "CNY",
       "isFree": true,
+      "isExperienceable": false,
+      "freeKind": "permanent",
+      "trialScope": "specific",
       "capabilities": [
         "moderation"
       ],
@@ -714,6 +808,8 @@
       "contextLabel": "unknown",
       "billingMode": "free",
       "freeTier": "full",
+      "modelFamily": "nsfw-classifier",
+      "aliases": [],
       "tier": "medium",
       "speed": "fast",
       "useCase": [
@@ -730,7 +826,11 @@
       "description": "SenseVoiceSmall 是一款轻量级的语音识别模型，结合高效算法和小型化设计，提供低延迟和高准确度的语音处理能力，适用于资源受限的应用场景。",
       "priceInput": 0,
       "priceOutput": 0,
+      "priceCurrency": "CNY",
       "isFree": true,
+      "isExperienceable": false,
+      "freeKind": "permanent",
+      "trialScope": "specific",
       "capabilities": [
         "speech-recognition"
       ],
@@ -757,6 +857,8 @@
       "contextLabel": "unknown",
       "billingMode": "free",
       "freeTier": "full",
+      "modelFamily": "sensevoicesmall",
+      "aliases": [],
       "tier": "medium",
       "speed": "fast",
       "useCase": [
@@ -774,7 +876,11 @@
       "contextSize": 32000,
       "priceInput": 0,
       "priceOutput": 0,
+      "priceCurrency": "CNY",
       "isFree": true,
+      "isExperienceable": false,
+      "freeKind": "permanent",
+      "trialScope": "specific",
       "capabilities": [
         "moderation"
       ],
@@ -801,6 +907,8 @@
       "contextLabel": "32K",
       "billingMode": "free",
       "freeTier": "full",
+      "modelFamily": "security-semantic-filtering",
+      "aliases": [],
       "tier": "medium",
       "speed": "fast",
       "useCase": [
@@ -818,7 +926,11 @@
       "contextSize": 500,
       "priceInput": 0,
       "priceOutput": 0,
+      "priceCurrency": "CNY",
       "isFree": true,
+      "isExperienceable": false,
+      "freeKind": "permanent",
+      "trialScope": "specific",
       "capabilities": [
         "embeddings"
       ],
@@ -845,6 +957,9 @@
       "contextLabel": "500",
       "billingMode": "free",
       "freeTier": "full",
+      "modelFamily": "bce-embedding-base_v1",
+      "modelVariant": "embedding",
+      "aliases": [],
       "tier": "medium",
       "speed": "fast",
       "useCase": [
@@ -862,7 +977,11 @@
       "contextSize": 500,
       "priceInput": 0,
       "priceOutput": 0,
+      "priceCurrency": "CNY",
       "isFree": true,
+      "isExperienceable": false,
+      "freeKind": "permanent",
+      "trialScope": "specific",
       "capabilities": [
         "rerank"
       ],
@@ -889,6 +1008,9 @@
       "contextLabel": "500",
       "billingMode": "free",
       "freeTier": "full",
+      "modelFamily": "bce-reranker-base_v1",
+      "modelVariant": "reranker",
+      "aliases": [],
       "tier": "medium",
       "speed": "fast",
       "useCase": [
@@ -905,7 +1027,11 @@
       "description": "Florence-2-large 是一款多模态大模型，具备卓越的图像和文本跨模态理解与生成能力，支持精准的图像描述和视觉问答。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "vision"
       ],
@@ -931,15 +1057,17 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "trial",
-      "tier": "small",
-      "speed": "fast",
+      "freeTier": "none",
+      "modelFamily": "florence-2-large",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
       "useCase": [
         "image-understanding",
         "visual-q&a"
       ],
-      "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "performanceLevel": "mid",
+      "estimatedLatency": "3-10s"
     },
     {
       "vendor": "gitee",
@@ -947,9 +1075,13 @@
       "name": "DeepSeek-R1-Distill-Qwen-32B",
       "description": "DeepSeek-R1 系列通过强化学习与冷启动数据优化推理性能，开源模型刷新多任务标杆，超越 OpenAI-o1-mini 水平。",
       "contextSize": 32000,
-      "priceInput": 0.00000126,
-      "priceOutput": 0.00000126,
-      "isFree": true,
+      "priceInput": 1.26,
+      "priceOutput": 1.26,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation",
         "reasoning"
@@ -977,9 +1109,14 @@
       "hasToolUse": false,
       "contextLabel": "32K",
       "billingMode": "pay",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "deepseek-r1-distill-qwen-32b",
+      "modelVariant": "r1",
+      "aliases": [
+        "xunfei/DeepSeek-R1-Distill-Qwen-32B"
+      ],
       "tier": "large",
-      "speed": "fast",
+      "speed": "premium",
       "useCase": [
         "problem-solving",
         "logical-analysis",
@@ -988,9 +1125,9 @@
         "writing-assistance",
         "complex-reasoning"
       ],
-      "performanceLevel": "mid",
+      "performanceLevel": "high",
       "parameterCount": 32000000000,
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "3-10s"
     },
     {
       "vendor": "gitee",
@@ -1000,7 +1137,11 @@
       "contextSize": 32000,
       "priceInput": 0,
       "priceOutput": 0,
+      "priceCurrency": "CNY",
       "isFree": true,
+      "isExperienceable": false,
+      "freeKind": "permanent",
+      "trialScope": "specific",
       "capabilities": [
         "text-generation",
         "reasoning"
@@ -1029,6 +1170,9 @@
       "contextLabel": "32K",
       "billingMode": "free",
       "freeTier": "full",
+      "modelFamily": "deepseek-r1-distill-qwen-1.5b",
+      "modelVariant": "r1",
+      "aliases": [],
       "tier": "small",
       "speed": "fast",
       "useCase": [
@@ -1051,7 +1195,11 @@
       "contextSize": 32000,
       "priceInput": 0,
       "priceOutput": 0,
+      "priceCurrency": "CNY",
       "isFree": true,
+      "isExperienceable": false,
+      "freeKind": "permanent",
+      "trialScope": "specific",
       "capabilities": [
         "text-generation",
         "reasoning"
@@ -1080,6 +1228,9 @@
       "contextLabel": "32K",
       "billingMode": "free",
       "freeTier": "full",
+      "modelFamily": "deepseek-r1-distill-qwen-14b",
+      "modelVariant": "r1",
+      "aliases": [],
       "tier": "medium",
       "speed": "fast",
       "useCase": [
@@ -1102,7 +1253,11 @@
       "contextSize": 32000,
       "priceInput": 0,
       "priceOutput": 0,
+      "priceCurrency": "CNY",
       "isFree": true,
+      "isExperienceable": false,
+      "freeKind": "permanent",
+      "trialScope": "specific",
       "capabilities": [
         "text-generation",
         "reasoning"
@@ -1131,6 +1286,9 @@
       "contextLabel": "32K",
       "billingMode": "free",
       "freeTier": "full",
+      "modelFamily": "deepseek-r1-distill-qwen-7b",
+      "modelVariant": "r1",
+      "aliases": [],
       "tier": "medium",
       "speed": "fast",
       "useCase": [
@@ -1151,9 +1309,13 @@
       "name": "DeepSeek-V3",
       "description": "【仅限体验】DeepSeek-V3 是 685B 参数的高效 MoE 语言模型，性能优越，训练稳定，超越开源模型，并接近顶级闭源模型。",
       "contextSize": 32000,
-      "priceInput": 0.000002,
-      "priceOutput": 0.000008,
-      "isFree": true,
+      "priceInput": 2,
+      "priceOutput": 8,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation"
       ],
@@ -1179,15 +1341,19 @@
       "hasToolUse": false,
       "contextLabel": "32K",
       "billingMode": "pay",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "deepseek-v3",
+      "aliases": [
+        "xunfei/DeepSeek-V3"
+      ],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "content-creation",
         "writing-assistance"
       ],
       "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -1195,9 +1361,13 @@
       "name": "DeepSeek-R1",
       "description": "DeepSeek-R1 是一款采用强化学习技术的推理模型，凭借少量标注数据大幅提升推理能力，性能媲美 OpenAI o1。",
       "contextSize": 64000,
-      "priceInput": 0.000004,
-      "priceOutput": 0.000016,
-      "isFree": true,
+      "priceInput": 4,
+      "priceOutput": 16,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation",
         "reasoning"
@@ -1225,9 +1395,14 @@
       "hasToolUse": false,
       "contextLabel": "64K",
       "billingMode": "pay",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "deepseek-r1",
+      "modelVariant": "r1",
+      "aliases": [
+        "xunfei/DeepSeek-R1"
+      ],
       "tier": "large",
-      "speed": "fast",
+      "speed": "premium",
       "useCase": [
         "problem-solving",
         "logical-analysis",
@@ -1236,8 +1411,8 @@
         "writing-assistance",
         "complex-reasoning"
       ],
-      "performanceLevel": "mid",
-      "estimatedLatency": "< 1s"
+      "performanceLevel": "high",
+      "estimatedLatency": "3-10s"
     },
     {
       "vendor": "gitee",
@@ -1247,7 +1422,11 @@
       "contextSize": 32000,
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation"
       ],
@@ -1273,15 +1452,17 @@
       "hasToolUse": false,
       "contextLabel": "32K",
       "billingMode": "free",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "align-ds-v",
+      "aliases": [],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "content-creation",
         "writing-assistance"
       ],
       "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -1290,7 +1471,11 @@
       "description": "Step-Audio-TTS-3B 是一款高精度文本转语音模型，能生成自然、流畅且富有情感的语音，支持多种语音风格和口音。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "speech-synthesis"
       ],
@@ -1316,9 +1501,12 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "step-audio-tts-3b",
+      "modelVariant": "audio",
+      "aliases": [],
       "tier": "small",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "text-to-speech",
         "voice-output"
@@ -1334,7 +1522,11 @@
       "description": "Wan2.1-T2V-14B 是一款先进的文本到视频生成模型，能够根据自然语言描述生成高质量的视频内容，广泛应用于创意和设计领域。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "video-generation"
       ],
@@ -1360,15 +1552,17 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "wan2.1-t2v-14b",
+      "aliases": [],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "video-creation"
       ],
       "performanceLevel": "entry",
       "parameterCount": 14000000000,
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -1376,9 +1570,13 @@
       "name": "QwQ-32B",
       "description": "QwQ-32B 是一款独具创新的自然语言处理模型，能够高效处理复杂的对话生成与上下文理解任务。",
       "contextSize": 32000,
-      "priceInput": 0.000001,
-      "priceOutput": 0.000004,
-      "isFree": true,
+      "priceInput": 1,
+      "priceOutput": 4,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation"
       ],
@@ -1404,16 +1602,20 @@
       "hasToolUse": false,
       "contextLabel": "32K",
       "billingMode": "pay",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "qwq-32b",
+      "aliases": [
+        "xunfei/QwQ-32B"
+      ],
       "tier": "large",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "content-creation",
         "writing-assistance"
       ],
-      "performanceLevel": "entry",
+      "performanceLevel": "mid",
       "parameterCount": 32000000000,
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "3-10s"
     },
     {
       "vendor": "gitee",
@@ -1423,7 +1625,11 @@
       "contextSize": 8000,
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation"
       ],
@@ -1449,16 +1655,19 @@
       "hasToolUse": false,
       "contextLabel": "8K",
       "billingMode": "free",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "qwen2-audio-7b",
+      "modelVariant": "audio",
+      "aliases": [],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "content-creation",
         "writing-assistance"
       ],
       "performanceLevel": "entry",
       "parameterCount": 7000000000,
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -1468,7 +1677,11 @@
       "contextSize": 32000,
       "priceInput": 0,
       "priceOutput": 0,
+      "priceCurrency": "CNY",
       "isFree": true,
+      "isExperienceable": false,
+      "freeKind": "permanent",
+      "trialScope": "specific",
       "capabilities": [
         "text-generation"
       ],
@@ -1495,6 +1708,9 @@
       "contextLabel": "32K",
       "billingMode": "free",
       "freeTier": "full",
+      "modelFamily": "internlm3-8b",
+      "modelVariant": "instruct",
+      "aliases": [],
       "tier": "medium",
       "speed": "fast",
       "useCase": [
@@ -1512,7 +1728,11 @@
       "description": "PDF-Extract-Kit 是一款功能强大的开源工具箱，旨在从复杂多样的 PDF 文档中高效提取高质量内容。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "document-processing"
       ],
@@ -1538,15 +1758,17 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "pdf-extract-kit-1.0",
+      "aliases": [],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "pdf-processing",
         "ocr"
       ],
       "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -1555,7 +1777,11 @@
       "description": "Whisper-large-v3 是一个高精度、多语种的语音识别模型，适用于实时语音转录和语音交互应用。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "speech-recognition"
       ],
@@ -1581,15 +1807,21 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "whisper-large-v3",
+      "aliases": [
+        "whisper-large-v3-turbo",
+        "groq/whisper-large-v3",
+        "groq/whisper-large-v3-turbo"
+      ],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "transcription",
         "voice-input"
       ],
       "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -1597,9 +1829,13 @@
       "name": "Fin-R1 金融大模型",
       "description": "Fin-R1 是一款针对金融领域复杂推理的大型语言模型，由上海财经大学统计与数据科学学院张立文教授与其领衔的金融大语言模型课题组（SUFE-AIFLM-Lab）联合财跃星辰研发并开源发布。",
       "contextSize": 32000,
-      "priceInput": 0.000002,
-      "priceOutput": 0.000008,
-      "isFree": true,
+      "priceInput": 2,
+      "priceOutput": 8,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation",
         "reasoning"
@@ -1627,9 +1863,12 @@
       "hasToolUse": false,
       "contextLabel": "32K",
       "billingMode": "pay",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "fin-r1",
+      "modelVariant": "r1",
+      "aliases": [],
       "tier": "large",
-      "speed": "fast",
+      "speed": "premium",
       "useCase": [
         "problem-solving",
         "logical-analysis",
@@ -1638,8 +1877,8 @@
         "writing-assistance",
         "complex-reasoning"
       ],
-      "performanceLevel": "mid",
-      "estimatedLatency": "< 1s"
+      "performanceLevel": "high",
+      "estimatedLatency": "3-10s"
     },
     {
       "vendor": "gitee",
@@ -1649,7 +1888,11 @@
       "contextSize": 24000,
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation"
       ],
@@ -1675,16 +1918,19 @@
       "hasToolUse": false,
       "contextLabel": "24K",
       "billingMode": "free",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "qwen2.5-vl-32b",
+      "modelVariant": "vl",
+      "aliases": [],
       "tier": "large",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "content-creation",
         "writing-assistance"
       ],
-      "performanceLevel": "entry",
+      "performanceLevel": "mid",
       "parameterCount": 32000000000,
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "3-10s"
     },
     {
       "vendor": "gitee",
@@ -1693,7 +1939,11 @@
       "description": "Hunyuan3D-2 是腾讯混元团队推出的高质量 3D 生成模型，具备高保真度、细节丰富和高效生成的特点，可快速将文本或图像转换为逼真的 3D 物体。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "3d-generation"
       ],
@@ -1719,12 +1969,14 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "trial",
-      "tier": "small",
-      "speed": "fast",
+      "freeTier": "none",
+      "modelFamily": "hunyuan3d-2",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "standard",
       "useCase": [],
       "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -1733,7 +1985,11 @@
       "description": "MegaTTS3 是一款支持多语种、音色可控，并兼具高保真度和高自然度的端到端语音合成模型。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "speech-synthesis"
       ],
@@ -1759,15 +2015,17 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "megatts3",
+      "aliases": [],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "text-to-speech",
         "voice-output"
       ],
       "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -1776,7 +2034,11 @@
       "description": "高效准确的文本内容审核 API 服务，支持识别色情、暴力、辱骂等不良信息，适用于社交平台、评论区、即时通讯等场景，保障内容安全合规。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "moderation"
       ],
@@ -1803,9 +2065,12 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "moark-text-moderation",
+      "modelVariant": "moderation",
+      "aliases": [],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "content-creation",
         "writing-assistance",
@@ -1813,7 +2078,7 @@
         "safety"
       ],
       "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -1823,7 +2088,11 @@
       "contextSize": 10000,
       "priceInput": 0,
       "priceOutput": 0,
+      "priceCurrency": "CNY",
       "isFree": true,
+      "isExperienceable": false,
+      "freeKind": "permanent",
+      "trialScope": "specific",
       "capabilities": [
         "rerank"
       ],
@@ -1850,6 +2119,9 @@
       "contextLabel": "10K",
       "billingMode": "free",
       "freeTier": "full",
+      "modelFamily": "jina-reranker-m0",
+      "modelVariant": "reranker",
+      "aliases": [],
       "tier": "medium",
       "speed": "fast",
       "useCase": [
@@ -1866,7 +2138,11 @@
       "description": "Spark-TTS 是一款先进的文本转语音系统，它利用大型语言模型 (LLM) 的强大功能，实现高精度、自然的语音合成。它高效、灵活、功能强大，适用于研究和生产环境。",
       "priceInput": 0,
       "priceOutput": 0,
+      "priceCurrency": "CNY",
       "isFree": true,
+      "isExperienceable": false,
+      "freeKind": "permanent",
+      "trialScope": "specific",
       "capabilities": [
         "speech-synthesis"
       ],
@@ -1894,6 +2170,9 @@
       "contextLabel": "unknown",
       "billingMode": "free",
       "freeTier": "full",
+      "modelFamily": "spark-tts-0.5b",
+      "modelVariant": "tts",
+      "aliases": [],
       "tier": "small",
       "speed": "fast",
       "useCase": [
@@ -1914,7 +2193,11 @@
       "contextSize": 32000,
       "priceInput": 0,
       "priceOutput": 0,
+      "priceCurrency": "CNY",
       "isFree": true,
+      "isExperienceable": false,
+      "freeKind": "permanent",
+      "trialScope": "specific",
       "capabilities": [
         "embeddings",
         "code"
@@ -1935,7 +2218,7 @@
       "provider": "gitee",
       "tags": [
         "embeddings",
-        "code"
+        "code-generation"
       ],
       "isReasoning": false,
       "isMultimodal": false,
@@ -1943,11 +2226,16 @@
       "contextLabel": "32K",
       "billingMode": "free",
       "freeTier": "full",
+      "modelFamily": "nomic-embed-code",
+      "modelVariant": "code",
+      "aliases": [],
       "tier": "medium",
       "speed": "fast",
       "useCase": [
         "semantic-search",
-        "similarity"
+        "similarity",
+        "software-development",
+        "code-completion"
       ],
       "performanceLevel": "entry",
       "estimatedLatency": "< 1s"
@@ -1958,9 +2246,13 @@
       "name": "GLM-4-32B",
       "description": "GLM 家族新一代开源模型，320 亿参数，经过 15T 高质量数据的预训练，其中包含大量推理类的合成数据。在后训练阶段，除了针对对话场景进行了人类偏好对齐外，还通过拒绝采样和强化学习等技术强化了模型在指令遵循、工程代码、函数调用方面的效果，加强了智能体任务所需的原子能力。在工程代码、Artifacts 生成、函数调用、搜索问答及报告等方面都取得了不错的效果。",
       "contextSize": 32000,
-      "priceInput": 0.00000189,
-      "priceOutput": 0.00000189,
-      "isFree": true,
+      "priceInput": 1.89,
+      "priceOutput": 1.89,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation"
       ],
@@ -1986,16 +2278,18 @@
       "hasToolUse": false,
       "contextLabel": "32K",
       "billingMode": "pay",
-      "freeTier": "trial",
-      "tier": "small",
-      "speed": "fast",
+      "freeTier": "none",
+      "modelFamily": "glm-4-32b",
+      "aliases": [],
+      "tier": "large",
+      "speed": "standard",
       "useCase": [
         "content-creation",
         "writing-assistance"
       ],
-      "performanceLevel": "entry",
+      "performanceLevel": "mid",
       "parameterCount": 32000000000,
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "3-10s"
     },
     {
       "vendor": "gitee",
@@ -2005,7 +2299,11 @@
       "contextSize": 32000,
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation"
       ],
@@ -2031,16 +2329,18 @@
       "hasToolUse": false,
       "contextLabel": "32K",
       "billingMode": "free",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "internvl3-78b",
+      "aliases": [],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "content-creation",
         "writing-assistance"
       ],
       "performanceLevel": "entry",
       "parameterCount": 78000000000,
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -2050,7 +2350,11 @@
       "contextSize": 32000,
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation"
       ],
@@ -2076,16 +2380,18 @@
       "hasToolUse": false,
       "contextLabel": "32K",
       "billingMode": "free",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "internvl3-38b",
+      "aliases": [],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "content-creation",
         "writing-assistance"
       ],
       "performanceLevel": "entry",
       "parameterCount": 38000000000,
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -2094,7 +2400,11 @@
       "description": "all-mpnet-base-v2 是一个高性能句子嵌入模型，基于微软的 MPNet 架构，经过在超过 10 亿对句子数据上的对比学习微调，能够将句子或段落映射为 768 维的密集向量，广泛应用于语义搜索、文本聚类、相似度计算等自然语言处理任务。",
       "priceInput": 0,
       "priceOutput": 0,
+      "priceCurrency": "CNY",
       "isFree": true,
+      "isExperienceable": false,
+      "freeKind": "permanent",
+      "trialScope": "specific",
       "capabilities": [
         "embeddings"
       ],
@@ -2121,6 +2431,8 @@
       "contextLabel": "unknown",
       "billingMode": "free",
       "freeTier": "full",
+      "modelFamily": "all-mpnet-base-v2",
+      "aliases": [],
       "tier": "medium",
       "speed": "fast",
       "useCase": [
@@ -2136,9 +2448,13 @@
       "name": "DianJin 金融大模型",
       "description": "DianJin-R1-32B 是一款拥有 32B 参数、专为金融场景优化的大语言模型，具备强大的金融问答和多步推理能力，能生成结构化答案并在多个金融基准测试中表现优异。",
       "contextSize": 32000,
-      "priceInput": 0.000002,
-      "priceOutput": 0.000008,
-      "isFree": true,
+      "priceInput": 2,
+      "priceOutput": 8,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation",
         "reasoning"
@@ -2166,9 +2482,12 @@
       "hasToolUse": false,
       "contextLabel": "32K",
       "billingMode": "pay",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "dianjin-r1-32b",
+      "modelVariant": "r1",
+      "aliases": [],
       "tier": "large",
-      "speed": "fast",
+      "speed": "premium",
       "useCase": [
         "problem-solving",
         "logical-analysis",
@@ -2177,8 +2496,8 @@
         "writing-assistance",
         "complex-reasoning"
       ],
-      "performanceLevel": "mid",
-      "estimatedLatency": "< 1s"
+      "performanceLevel": "high",
+      "estimatedLatency": "3-10s"
     },
     {
       "vendor": "gitee",
@@ -2188,7 +2507,11 @@
       "contextSize": 32000,
       "priceInput": 0,
       "priceOutput": 0,
+      "priceCurrency": "CNY",
       "isFree": true,
+      "isExperienceable": false,
+      "freeKind": "permanent",
+      "trialScope": "specific",
       "capabilities": [
         "text-generation"
       ],
@@ -2215,6 +2538,8 @@
       "contextLabel": "32K",
       "billingMode": "free",
       "freeTier": "full",
+      "modelFamily": "healthgpt-l14",
+      "aliases": [],
       "tier": "medium",
       "speed": "fast",
       "useCase": [
@@ -2232,7 +2557,11 @@
       "contextSize": 32000,
       "priceInput": 0,
       "priceOutput": 0,
+      "priceCurrency": "CNY",
       "isFree": true,
+      "isExperienceable": false,
+      "freeKind": "permanent",
+      "trialScope": "specific",
       "capabilities": [
         "text-generation"
       ],
@@ -2259,6 +2588,10 @@
       "contextLabel": "32K",
       "billingMode": "free",
       "freeTier": "full",
+      "modelFamily": "qwen3-8b",
+      "aliases": [
+        "xunfei/Qwen3-8B"
+      ],
       "tier": "medium",
       "speed": "fast",
       "useCase": [
@@ -2277,7 +2610,11 @@
       "contextSize": 32000,
       "priceInput": 0,
       "priceOutput": 0,
+      "priceCurrency": "CNY",
       "isFree": true,
+      "isExperienceable": false,
+      "freeKind": "permanent",
+      "trialScope": "specific",
       "capabilities": [
         "text-generation"
       ],
@@ -2304,6 +2641,10 @@
       "contextLabel": "32K",
       "billingMode": "free",
       "freeTier": "full",
+      "modelFamily": "qwen3-0.6b",
+      "aliases": [
+        "xunfei/Qwen3-0.6B"
+      ],
       "tier": "medium",
       "speed": "fast",
       "useCase": [
@@ -2320,9 +2661,13 @@
       "name": "Qwen3-32B",
       "description": "Qwen3 是 Qwen 系列中的最新一代大型语言模型，提供了一系列密集型和混合专家（MoE）模型。基于在训练数据、模型架构和优化技术方面的广泛进步。",
       "contextSize": 32000,
-      "priceInput": 0.000001,
-      "priceOutput": 0.000004,
-      "isFree": true,
+      "priceInput": 1,
+      "priceOutput": 4,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation"
       ],
@@ -2348,16 +2693,21 @@
       "hasToolUse": false,
       "contextLabel": "32K",
       "billingMode": "pay",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "qwen3-32b",
+      "aliases": [
+        "groq/qwen/qwen3-32b",
+        "xunfei/Qwen3-32B"
+      ],
       "tier": "large",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "content-creation",
         "writing-assistance"
       ],
-      "performanceLevel": "entry",
+      "performanceLevel": "mid",
       "parameterCount": 32000000000,
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "3-10s"
     },
     {
       "vendor": "gitee",
@@ -2367,7 +2717,11 @@
       "contextSize": 32000,
       "priceInput": 0,
       "priceOutput": 0,
+      "priceCurrency": "CNY",
       "isFree": true,
+      "isExperienceable": false,
+      "freeKind": "permanent",
+      "trialScope": "specific",
       "capabilities": [
         "text-generation"
       ],
@@ -2394,6 +2748,10 @@
       "contextLabel": "32K",
       "billingMode": "free",
       "freeTier": "full",
+      "modelFamily": "qwen3-4b",
+      "aliases": [
+        "xunfei/Qwen3-4B"
+      ],
       "tier": "small",
       "speed": "fast",
       "useCase": [
@@ -2411,7 +2769,11 @@
       "description": "HiDream-I1 是一个全新的开源图像生成基础模型，是由国内智象未来开源的。拥有 170 亿参数(Flux是12B参数)，能够在几秒内实现行业领先的图像生成质量。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "image-generation"
       ],
@@ -2437,15 +2799,17 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "hidream-i1-full",
+      "aliases": [],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "creative-generation",
         "art"
       ],
       "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -2454,7 +2818,11 @@
       "description": "DeepSeek-Prover-V2 是一款专为 Lean 4 形式化定理证明打造的开源大语言模型，具备将复杂问题拆解为子目标、合成链式推理过程的能力。模型通过 DeepSeek-V3 驱动的递归证明管线进行冷启动训练，融合非形式与形式数学推理，显著提升了定理证明效率与泛化能力。",
       "priceInput": 0,
       "priceOutput": 0,
+      "priceCurrency": "CNY",
       "isFree": true,
+      "isExperienceable": false,
+      "freeKind": "permanent",
+      "trialScope": "specific",
       "capabilities": [
         "text-generation"
       ],
@@ -2481,6 +2849,8 @@
       "contextLabel": "unknown",
       "billingMode": "free",
       "freeTier": "full",
+      "modelFamily": "deepseek-prover-v2-7b",
+      "aliases": [],
       "tier": "medium",
       "speed": "fast",
       "useCase": [
@@ -2497,7 +2867,11 @@
       "description": "Hi3DGen 是一款将图片精准转换为立体感强、细节清晰的法线图的 AI 模型，特别适合需要高质量3D效果的应用场景。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "3d-generation"
       ],
@@ -2523,12 +2897,14 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "hi3dgen",
+      "aliases": [],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [],
       "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -2537,7 +2913,11 @@
       "description": "HiDream-E1-Full 是一款多模态图像编辑大模型，支持语言驱动的图像生成与精细编辑，广泛应用于电商视觉创作、品牌营销与数字内容设计等场景。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "image-to-image"
       ],
@@ -2563,15 +2943,17 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "hidream-e1-full",
+      "aliases": [],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "image-editing",
         "style-transfer"
       ],
       "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -2580,7 +2962,11 @@
       "description": "ACE-Step-v1-3.5B 是由 ACE Studio 和 StepFun 联合开发的开源音乐生成基础模型，采用扩散模型架构，结合了深度压缩自编码器（DCAE）和轻量级线性 Transformer，实现了在生成速度、音乐连贯性和可控性方面的突破。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "music-generation"
       ],
@@ -2606,12 +2992,14 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "ace-step-v1-3.5b",
+      "aliases": [],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [],
       "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -2621,7 +3009,11 @@
       "contextSize": 32000,
       "priceInput": 0,
       "priceOutput": 0,
+      "priceCurrency": "CNY",
       "isFree": true,
+      "isExperienceable": false,
+      "freeKind": "permanent",
+      "trialScope": "specific",
       "capabilities": [
         "text-generation"
       ],
@@ -2648,7 +3040,12 @@
       "contextLabel": "32K",
       "billingMode": "free",
       "freeTier": "full",
-      "tier": "small",
+      "modelFamily": "glm-4-9b",
+      "aliases": [
+        "bigmodel/glm-4-9b",
+        "glm-4-9b-chat"
+      ],
+      "tier": "medium",
       "speed": "fast",
       "useCase": [
         "content-creation",
@@ -2665,7 +3062,11 @@
       "description": "FLUX.1-dev 是一个多模态语言模型，具备强大的图文联合理解和生成能力，支持灵活的指令微调与多任务学习。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "image-generation"
       ],
@@ -2691,15 +3092,17 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "flux.1-dev",
+      "aliases": [],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "creative-generation",
         "art"
       ],
       "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -2707,9 +3110,13 @@
       "name": "Qwen3-235B-A22B",
       "description": "Qwen3 是 Qwen 系列中的最新一代大型语言模型，提供了一系列密集型和混合专家（MoE）模型。基于在训练数据、模型架构和优化技术方面的广泛进步。",
       "contextSize": 128000,
-      "priceInput": 0.0000025,
-      "priceOutput": 0.00001,
-      "isFree": true,
+      "priceInput": 2.5,
+      "priceOutput": 10,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation"
       ],
@@ -2735,16 +3142,22 @@
       "hasToolUse": false,
       "contextLabel": "128K",
       "billingMode": "pay",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "qwen3-235b-a22b",
+      "aliases": [
+        "Qwen3-235B-A22B-Instruct-2507",
+        "xunfei/Qwen3-235B-A22B-Instruct-2507",
+        "xunfei/Qwen3-235B-A22B"
+      ],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "content-creation",
         "writing-assistance"
       ],
       "performanceLevel": "entry",
       "parameterCount": 235000000000,
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -2753,7 +3166,11 @@
       "description": "DreamO 是由字节跳动与北京大学联合研发的开源图像定制生成模型，旨在通过统一架构支持多任务图像生成。它采用高效的组合建模方法，可根据用户指定的身份、主体、风格、背景等多个条件生成高度一致且定制化的图像。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "image-to-image"
       ],
@@ -2779,15 +3196,17 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "dreamo",
+      "aliases": [],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "image-editing",
         "style-transfer"
       ],
       "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -2797,7 +3216,11 @@
       "contextSize": 32000,
       "priceInput": 0,
       "priceOutput": 0,
+      "priceCurrency": "CNY",
       "isFree": true,
+      "isExperienceable": false,
+      "freeKind": "permanent",
+      "trialScope": "specific",
       "capabilities": [
         "text-generation"
       ],
@@ -2824,6 +3247,9 @@
       "contextLabel": "32K",
       "billingMode": "free",
       "freeTier": "full",
+      "modelFamily": "medgemma-4b",
+      "modelVariant": "it",
+      "aliases": [],
       "tier": "medium",
       "speed": "fast",
       "useCase": [
@@ -2840,7 +3266,11 @@
       "description": "Real-ESRGAN 模型是一种基于增强残差块的通用图像超分辨率模型，旨在在保持图像细节的同时，有效提升真实世界图像的分辨率和质量。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "image-to-image"
       ],
@@ -2866,15 +3296,17 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "real-esrgan",
+      "aliases": [],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "image-editing",
         "style-transfer"
       ],
       "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -2883,7 +3315,11 @@
       "description": "OmniConsistency 是一个增强图像风格一致性的扩散模型，专为高质量多风格图像生成而设计。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "image-to-image"
       ],
@@ -2909,15 +3345,17 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "omniconsistency",
+      "aliases": [],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "image-editing",
         "style-transfer"
       ],
       "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -2927,7 +3365,11 @@
       "contextSize": 32000,
       "priceInput": 0,
       "priceOutput": 0,
+      "priceCurrency": "CNY",
       "isFree": true,
+      "isExperienceable": false,
+      "freeKind": "permanent",
+      "trialScope": "specific",
       "capabilities": [
         "embeddings"
       ],
@@ -2954,6 +3396,9 @@
       "contextLabel": "32K",
       "billingMode": "free",
       "freeTier": "full",
+      "modelFamily": "qwen3-embedding-0.6b",
+      "modelVariant": "embedding",
+      "aliases": [],
       "tier": "medium",
       "speed": "fast",
       "useCase": [
@@ -2972,7 +3417,11 @@
       "contextSize": 32000,
       "priceInput": 0,
       "priceOutput": 0,
+      "priceCurrency": "CNY",
       "isFree": true,
+      "isExperienceable": false,
+      "freeKind": "permanent",
+      "trialScope": "specific",
       "capabilities": [
         "embeddings"
       ],
@@ -2999,6 +3448,9 @@
       "contextLabel": "32K",
       "billingMode": "free",
       "freeTier": "full",
+      "modelFamily": "qwen3-embedding-4b",
+      "modelVariant": "embedding",
+      "aliases": [],
       "tier": "small",
       "speed": "fast",
       "useCase": [
@@ -3017,7 +3469,11 @@
       "contextSize": 32000,
       "priceInput": 0,
       "priceOutput": 0,
+      "priceCurrency": "CNY",
       "isFree": true,
+      "isExperienceable": false,
+      "freeKind": "permanent",
+      "trialScope": "specific",
       "capabilities": [
         "embeddings"
       ],
@@ -3044,6 +3500,11 @@
       "contextLabel": "32K",
       "billingMode": "free",
       "freeTier": "full",
+      "modelFamily": "qwen3-embedding-8b",
+      "modelVariant": "embedding",
+      "aliases": [
+        "xunfei/Qwen3-Embedding-8B"
+      ],
       "tier": "medium",
       "speed": "fast",
       "useCase": [
@@ -3062,7 +3523,11 @@
       "contextSize": 8000,
       "priceInput": 0,
       "priceOutput": 0,
+      "priceCurrency": "CNY",
       "isFree": true,
+      "isExperienceable": false,
+      "freeKind": "permanent",
+      "trialScope": "specific",
       "capabilities": [
         "rerank"
       ],
@@ -3089,6 +3554,9 @@
       "contextLabel": "8K",
       "billingMode": "free",
       "freeTier": "full",
+      "modelFamily": "qwen3-reranker-0.6b",
+      "modelVariant": "reranker",
+      "aliases": [],
       "tier": "medium",
       "speed": "fast",
       "useCase": [
@@ -3107,7 +3575,11 @@
       "contextSize": 8000,
       "priceInput": 0,
       "priceOutput": 0,
+      "priceCurrency": "CNY",
       "isFree": true,
+      "isExperienceable": false,
+      "freeKind": "permanent",
+      "trialScope": "specific",
       "capabilities": [
         "rerank"
       ],
@@ -3134,6 +3606,9 @@
       "contextLabel": "8K",
       "billingMode": "free",
       "freeTier": "full",
+      "modelFamily": "qwen3-reranker-4b",
+      "modelVariant": "reranker",
+      "aliases": [],
       "tier": "small",
       "speed": "fast",
       "useCase": [
@@ -3152,7 +3627,11 @@
       "contextSize": 8000,
       "priceInput": 0,
       "priceOutput": 0,
+      "priceCurrency": "CNY",
       "isFree": true,
+      "isExperienceable": false,
+      "freeKind": "permanent",
+      "trialScope": "specific",
       "capabilities": [
         "rerank"
       ],
@@ -3179,6 +3658,11 @@
       "contextLabel": "8K",
       "billingMode": "free",
       "freeTier": "full",
+      "modelFamily": "qwen3-reranker-8b",
+      "modelVariant": "reranker",
+      "aliases": [
+        "xunfei/Qwen3-Reranker-8B"
+      ],
       "tier": "medium",
       "speed": "fast",
       "useCase": [
@@ -3196,7 +3680,11 @@
       "description": "InstantCharacter 是腾讯推出的一个基于扩散模型的高质量角色图像生成模型，支持文本控制和多风格定制。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "image-to-image"
       ],
@@ -3222,15 +3710,17 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "instantcharacter",
+      "aliases": [],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "image-editing",
         "style-transfer"
       ],
       "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -3240,7 +3730,11 @@
       "contextSize": 32000,
       "priceInput": 0,
       "priceOutput": 0,
+      "priceCurrency": "CNY",
       "isFree": true,
+      "isExperienceable": false,
+      "freeKind": "permanent",
+      "trialScope": "specific",
       "capabilities": [
         "text-generation"
       ],
@@ -3267,6 +3761,8 @@
       "contextLabel": "32K",
       "billingMode": "free",
       "freeTier": "full",
+      "modelFamily": "lingshu-32b",
+      "aliases": [],
       "tier": "large",
       "speed": "fast",
       "useCase": [
@@ -3284,7 +3780,11 @@
       "description": "IndexTTS-1.5 是一款先进的文本转语音（Text-to-Speech, TTS）模型，专为生成高自然度、富有表现力的人类语音而设计。它基于现代神经网络架构，在语音合成的质量、速度和可控性方面均实现了大幅提升。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "speech-synthesis"
       ],
@@ -3311,9 +3811,11 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "trial",
-      "tier": "small",
-      "speed": "fast",
+      "freeTier": "none",
+      "modelFamily": "indextts-1.5",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "standard",
       "useCase": [
         "content-creation",
         "writing-assistance",
@@ -3321,7 +3823,7 @@
         "voice-output"
       ],
       "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -3329,9 +3831,13 @@
       "name": "ERNIE-X1-Turbo",
       "description": "文心ERNIE X1 Turbo具备更长的思维链，更强的深度思考能力，进一步增强了多模态和工具调用能力，擅长文学创作、逻辑推理等",
       "contextSize": 32000,
-      "priceInput": 0.000001,
-      "priceOutput": 0.000004,
-      "isFree": true,
+      "priceInput": 1,
+      "priceOutput": 4,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation"
       ],
@@ -3357,15 +3863,18 @@
       "hasToolUse": false,
       "contextLabel": "32K",
       "billingMode": "pay",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "ernie-x1",
+      "modelVariant": "turbo",
+      "aliases": [],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "content-creation",
         "writing-assistance"
       ],
       "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -3373,9 +3882,13 @@
       "name": "ERNIE-4.5-Turbo-VL",
       "description": "文心一言大模型全新版本，图片理解、创作、翻译、代码等能力显著提升，首次支持32K上下文长度，首Token时延显著降低。",
       "contextSize": 32000,
-      "priceInput": 0.000003,
-      "priceOutput": 0.000009,
-      "isFree": true,
+      "priceInput": 3,
+      "priceOutput": 9,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation"
       ],
@@ -3401,15 +3914,18 @@
       "hasToolUse": false,
       "contextLabel": "32K",
       "billingMode": "pay",
-      "freeTier": "trial",
-      "tier": "small",
-      "speed": "fast",
+      "freeTier": "none",
+      "modelFamily": "ernie-4.5-vl",
+      "modelVariant": "vl",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "premium",
       "useCase": [
         "content-creation",
         "writing-assistance"
       ],
-      "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "performanceLevel": "mid",
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -3417,9 +3933,13 @@
       "name": "ERNIE-4.5-Turbo",
       "description": "文心4.5 Turbo在去幻觉、逻辑推理和代码能力等方面也有着明显增强。对比文心4.5，速度更快、价格更低。",
       "contextSize": 32000,
-      "priceInput": 8.000000000000001e-7,
-      "priceOutput": 0.0000032000000000000003,
-      "isFree": true,
+      "priceInput": 0.8,
+      "priceOutput": 3.2,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation"
       ],
@@ -3445,15 +3965,18 @@
       "hasToolUse": false,
       "contextLabel": "32K",
       "billingMode": "pay",
-      "freeTier": "trial",
-      "tier": "small",
-      "speed": "fast",
+      "freeTier": "none",
+      "modelFamily": "ernie-4.5",
+      "modelVariant": "turbo",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "standard",
       "useCase": [
         "content-creation",
         "writing-assistance"
       ],
       "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -3462,7 +3985,11 @@
       "description": "Duix.HeyGem 是由硅基智能（Duix.AI）开源推出的高质量 数字人生成模型系统，支持快速克隆和高保真视频合成，致力于让每个人都能轻松创建专属的数字分身。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "video-processing"
       ],
@@ -3488,12 +4015,14 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "duix.heygem",
+      "aliases": [],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [],
       "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -3502,7 +4031,11 @@
       "description": "AnimeSharp（又名 “4x‑AnimeSharp”） 是 Kim2091 基于 ESRGAN 架构开发的开源超分辨率模型，专注于动漫风格图像的放大与锐化。它于 2022 年 2 月重命名自 “4x-TextSharpV1”，原本也适用于文字图像但性能针对动漫内容进行了大幅优化 ",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "image-to-image"
       ],
@@ -3528,15 +4061,17 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "animesharp",
+      "aliases": [],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "image-editing",
         "style-transfer"
       ],
       "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -3546,7 +4081,11 @@
       "contextSize": 32000,
       "priceInput": 0,
       "priceOutput": 0,
+      "priceCurrency": "CNY",
       "isFree": true,
+      "isExperienceable": false,
+      "freeKind": "permanent",
+      "trialScope": "specific",
       "capabilities": [
         "embeddings"
       ],
@@ -3573,6 +4112,8 @@
       "contextLabel": "32K",
       "billingMode": "free",
       "freeTier": "full",
+      "modelFamily": "jina-embeddings-v4",
+      "aliases": [],
       "tier": "medium",
       "speed": "fast",
       "useCase": [
@@ -3589,7 +4130,11 @@
       "description": "FLUX.1-Kontext-dev 是一款支持图像编辑的 120 亿参数级 Flow Transformer 模型，专为高质量图像生成和上下文感知修改设计。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "image-to-image"
       ],
@@ -3615,15 +4160,17 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "flux.1-kontext-dev",
+      "aliases": [],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "image-editing",
         "style-transfer"
       ],
       "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -3631,9 +4178,13 @@
       "name": "Qwen3-14B",
       "description": "Qwen3‑14B 是阿里巴巴云推出的 Qwen3 系列中最新一代 14B 参数稠密预训练模型，具备应用混合“思考模式”和“非思考模式”能力，在多语种理解、推理、代码生成和长上下文处理上表现优异。",
       "contextSize": 32000,
-      "priceInput": 0.000005,
-      "priceOutput": 0.000005,
-      "isFree": true,
+      "priceInput": 5,
+      "priceOutput": 5,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation"
       ],
@@ -3659,25 +4210,33 @@
       "hasToolUse": false,
       "contextLabel": "32K",
       "billingMode": "pay",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "qwen3-14b",
+      "aliases": [
+        "xunfei/Qwen3-14B"
+      ],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "content-creation",
         "writing-assistance"
       ],
       "performanceLevel": "entry",
       "parameterCount": 14000000000,
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
       "modelId": "Qwen2.5-VL-7B-Instruct",
       "name": "Qwen2.5-VL-7B-Instruct",
       "description": "Qwen2.5-VL-7B-Instruct 是多模态大语言模型，基于 Qwen2.5 系列架构开发，具备强大的图文理解与推理能力。该模型支持输入图像与自然语言文本，并生成结构化或自然语言回答，适用于图像问答、图文分析、视觉推理等任务。",
-      "priceInput": 1.75e-7,
-      "priceOutput": 7e-7,
-      "isFree": true,
+      "priceInput": 0.175,
+      "priceOutput": 0.7,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation"
       ],
@@ -3703,16 +4262,19 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "pay",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "qwen2.5-vl-7b",
+      "modelVariant": "vl",
+      "aliases": [],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "content-creation",
         "writing-assistance"
       ],
       "performanceLevel": "entry",
       "parameterCount": 7000000000,
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -3720,9 +4282,13 @@
       "name": "Kimi-K2-Instruct",
       "description": "Kimi K2 (0905更新版) 是一个最先进的混合专家 (MoE) 语言模型，激活参数为 320 亿，总参数为 1 万亿。通过 Muon 优化器进行训练，Kimi K2 在前沿知识、推理和编码任务上表现出色，同时在智能体能力方面进行了精心优化。",
       "contextSize": 256000,
-      "priceInput": 0.000004,
-      "priceOutput": 0.000016,
+      "priceInput": 4,
+      "priceOutput": 16,
+      "priceCurrency": "CNY",
       "isFree": false,
+      "isExperienceable": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
       "capabilities": [
         "text-generation"
       ],
@@ -3749,6 +4315,11 @@
       "contextLabel": "256K",
       "billingMode": "pay",
       "freeTier": "none",
+      "modelFamily": "kimi-k2",
+      "modelVariant": "instruct",
+      "aliases": [
+        "xunfei/Kimi-K2-Instruct"
+      ],
       "tier": "medium",
       "speed": "standard",
       "useCase": [
@@ -3764,9 +4335,13 @@
       "name": "Qwen3-Coder",
       "description": "Qwen3-Coder-480B-A35B-Instruct是一款专为代码生成、代码理解和高效开发场景设计的大型语言模型，在 自主编码、自主浏览器使用 以及其他基础编码任务中，在开放模型中表现出 显著的性能，结果可与 Claude Sonnet 媲美。",
       "contextSize": 64000,
-      "priceInput": 0.000004,
-      "priceOutput": 0.000016,
-      "isFree": true,
+      "priceInput": 4,
+      "priceOutput": 16,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation"
       ],
@@ -3792,15 +4367,20 @@
       "hasToolUse": false,
       "contextLabel": "64K",
       "billingMode": "pay",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "qwen3-coder-480b-a35b",
+      "modelVariant": "coder",
+      "aliases": [
+        "qwen/qwen3-coder-480b-a35b-instruct"
+      ],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "content-creation",
         "writing-assistance"
       ],
       "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -3808,9 +4388,13 @@
       "name": "Qwen3-235B-A22B-Instruct-2507",
       "description": "Qwen3 是 Qwen 系列中的最新一代大型语言模型，提供了一系列密集型和混合专家（MoE）模型。基于在训练数据、模型架构和优化技术方面的广泛进步。",
       "contextSize": 256000,
-      "priceInput": 0.0000025,
-      "priceOutput": 0.00001,
-      "isFree": true,
+      "priceInput": 2.5,
+      "priceOutput": 10,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation"
       ],
@@ -3836,16 +4420,23 @@
       "hasToolUse": false,
       "contextLabel": "256K",
       "billingMode": "pay",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "qwen3-235b-a22b",
+      "modelVariant": "instruct",
+      "aliases": [
+        "Qwen3-235B-A22B",
+        "xunfei/Qwen3-235B-A22B-Instruct-2507",
+        "xunfei/Qwen3-235B-A22B"
+      ],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "content-creation",
         "writing-assistance"
       ],
       "performanceLevel": "entry",
       "parameterCount": 235000000000,
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -3853,9 +4444,13 @@
       "name": "GLM-4.5",
       "description": "GLM-4.5 是智谱 AI 推出的专为智能体设计的基础模型。GLM-4.5 拥有 3550 亿总参数量，其中 320 亿活跃参数。该模型统一了推理、编码和智能体能力，以满足智能体应用的复杂需求。",
       "contextSize": 128000,
-      "priceInput": 0.0000035,
-      "priceOutput": 0.000014,
-      "isFree": true,
+      "priceInput": 3.5,
+      "priceOutput": 14,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation"
       ],
@@ -3881,15 +4476,17 @@
       "hasToolUse": false,
       "contextLabel": "128K",
       "billingMode": "pay",
-      "freeTier": "trial",
-      "tier": "small",
-      "speed": "fast",
+      "freeTier": "none",
+      "modelFamily": "glm-4_5",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "standard",
       "useCase": [
         "content-creation",
         "writing-assistance"
       ],
       "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -3897,9 +4494,13 @@
       "name": "GLM-4.5-Air",
       "description": "GLM-4.5-Air 是智谱 AI 推出的 GLM-4.5 系列中的轻量化版本。GLM-4.5-Air 采用更紧凑的设计，拥有 1060 亿总参数量，其中 120 亿活跃参数。该模型在保持优异效率的同时，仍能提供强大的推理、编码和智能体能力。",
       "contextSize": 128000,
-      "priceInput": 0.000001,
-      "priceOutput": 0.000006,
-      "isFree": true,
+      "priceInput": 1,
+      "priceOutput": 6,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation"
       ],
@@ -3925,15 +4526,17 @@
       "hasToolUse": false,
       "contextLabel": "128K",
       "billingMode": "pay",
-      "freeTier": "trial",
-      "tier": "small",
-      "speed": "fast",
+      "freeTier": "none",
+      "modelFamily": "glm-4_5-air",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "standard",
       "useCase": [
         "content-creation",
         "writing-assistance"
       ],
       "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -3942,7 +4545,11 @@
       "description": "CogView4‑6B 是一款由清华大学开发的开源文本生成图像模型，支持中英文输入，擅长处理多对象、复杂属性与空间关系的高质量图像生成，广泛应用于创意设计与视觉内容创作场景。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "image-generation"
       ],
@@ -3968,16 +4575,18 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "cogview4_6b",
+      "aliases": [],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "creative-generation",
         "art"
       ],
       "performanceLevel": "entry",
       "parameterCount": 6000000000,
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -3986,7 +4595,11 @@
       "description": "Wan2.2‑I2V‑A14B 是阿里巴巴 AI 实验室团队推出的 Wan2.2 系列之一，属于图像转视频（Image-to-Video）模型，开源且采用 Apache 2.0 许可证，兼顾学术研究与商业应用",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "video-generation",
         "vision"
@@ -4015,17 +4628,19 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "trial",
-      "tier": "small",
-      "speed": "fast",
+      "freeTier": "none",
+      "modelFamily": "wan2_2-i2v-a14b",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
       "useCase": [
         "image-understanding",
         "visual-q&a",
         "video-creation"
       ],
-      "performanceLevel": "entry",
+      "performanceLevel": "mid",
       "parameterCount": 14000000000,
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "3-10s"
     },
     {
       "vendor": "gitee",
@@ -4034,7 +4649,11 @@
       "description": "FLUX.1-Krea-dev 是一个专为图像生成与编辑优化的大型多模态视觉语言模型。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "image-generation"
       ],
@@ -4060,15 +4679,17 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "flux_1-krea-dev",
+      "aliases": [],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "creative-generation",
         "art"
       ],
       "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -4076,9 +4697,13 @@
       "name": "Qwen3-30B-A3B-Instruct-2507",
       "description": "Qwen3‑30B‑A3B‑Instruct‑2507 是 Qwen 系列 30.5 B 参数的稀疏专家（MoE）大型语言模型，激活 3.3 B 参数、专为非思维模式设计，经过指令微调，显著提升指令遵循能力、逻辑推理、文本理解、数学、科学、编程以及多语言长尾知识表现，同时在人类偏好对齐上也有明显增强",
       "contextSize": 32000,
-      "priceInput": 7e-7,
-      "priceOutput": 0.0000028,
-      "isFree": true,
+      "priceInput": 0.7,
+      "priceOutput": 2.8,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation"
       ],
@@ -4104,16 +4729,22 @@
       "hasToolUse": false,
       "contextLabel": "32K",
       "billingMode": "pay",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "qwen3-30b-a3b",
+      "modelVariant": "instruct",
+      "aliases": [
+        "xunfei/Qwen3-30B-A3B-Instruct-2507",
+        "xunfei/Qwen3-30B-A3B"
+      ],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "content-creation",
         "writing-assistance"
       ],
       "performanceLevel": "entry",
       "parameterCount": 30000000000,
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -4122,7 +4753,11 @@
       "description": "Qwen‑Image 是一款由阿里云开发的20B参数级 MMDiT 图像生成基础模型，以其卓越的复杂文本渲染能力（尤其在英语和中文中表现出色）和高精度图像编辑功能而著称",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "image-generation",
         "vision"
@@ -4151,9 +4786,15 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "qwen-image",
+      "modelVariant": "image",
+      "aliases": [
+        "Qwen-Image-2512",
+        "xunfei/Qwen-Image-2512"
+      ],
       "tier": "large",
-      "speed": "fast",
+      "speed": "premium",
       "useCase": [
         "image-understanding",
         "visual-q&a",
@@ -4161,7 +4802,7 @@
         "art"
       ],
       "performanceLevel": "mid",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "3-10s"
     },
     {
       "vendor": "gitee",
@@ -4170,7 +4811,11 @@
       "description": "nonescape-v0 是一款图像分类模型，可检测并区分图片是人工拍摄创作还是由 AI 模型生成。",
       "priceInput": 0,
       "priceOutput": 0,
+      "priceCurrency": "CNY",
       "isFree": true,
+      "isExperienceable": false,
+      "freeKind": "permanent",
+      "trialScope": "specific",
       "capabilities": [
         "moderation"
       ],
@@ -4197,6 +4842,8 @@
       "contextLabel": "unknown",
       "billingMode": "free",
       "freeTier": "full",
+      "modelFamily": "nonescape-v0",
+      "aliases": [],
       "tier": "medium",
       "speed": "fast",
       "useCase": [
@@ -4212,9 +4859,13 @@
       "name": "gpt-oss-120b",
       "description": "gpt-oss-120b 是 OpenAI 开源权重模型系列中的大型版本，专为生产环境、通用用途和高推理需求设计。该模型拥有 117B 参数，其中 5.1B 为活跃参数，可在单个 H100 GPU 上运行。模型采用 harmony 响应格式训练，必须配合 harmony 格式使用才能正常工作。",
       "contextSize": 128000,
-      "priceInput": 8.000000000000001e-7,
-      "priceOutput": 0.0000032000000000000003,
-      "isFree": true,
+      "priceInput": 0.8,
+      "priceOutput": 3.2,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation"
       ],
@@ -4240,16 +4891,23 @@
       "hasToolUse": false,
       "contextLabel": "128K",
       "billingMode": "pay",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "gpt-oss-120b",
+      "aliases": [
+        "cerebras/gpt-oss-120b",
+        "groq/openai/gpt-oss-120b",
+        "openai/gpt-oss-120b",
+        "openrouter/openai/gpt-oss-120b"
+      ],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "content-creation",
         "writing-assistance"
       ],
       "performanceLevel": "entry",
       "parameterCount": 120000000000,
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -4257,9 +4915,13 @@
       "name": "GLM-4.5V",
       "description": "GLM-4.5V 是全球 100B 级效果最佳的开源视觉推理模型 ，支持 64K 长上下文，擅长图像、视频、文档理解及 GUI Agent 等常见任务，比GLM-4.1V-Thinking “更大更强”。模型新增“思考模式”开关，用户可灵活选择快速响应或深度推理，平衡效率与效果。",
       "contextSize": 64000,
-      "priceInput": 0.000004,
-      "priceOutput": 0.000012,
-      "isFree": true,
+      "priceInput": 4,
+      "priceOutput": 12,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation"
       ],
@@ -4285,15 +4947,17 @@
       "hasToolUse": false,
       "contextLabel": "64K",
       "billingMode": "pay",
-      "freeTier": "trial",
-      "tier": "small",
-      "speed": "fast",
+      "freeTier": "none",
+      "modelFamily": "glm-4_5v",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "standard",
       "useCase": [
         "content-creation",
         "writing-assistance"
       ],
       "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -4303,7 +4967,11 @@
       "contextSize": 64000,
       "priceInput": 0,
       "priceOutput": 0,
+      "priceCurrency": "CNY",
       "isFree": true,
+      "isExperienceable": false,
+      "freeKind": "permanent",
+      "trialScope": "specific",
       "capabilities": [
         "text-generation"
       ],
@@ -4330,6 +4998,8 @@
       "contextLabel": "64K",
       "billingMode": "free",
       "freeTier": "full",
+      "modelFamily": "baichuan-m2-32b",
+      "aliases": [],
       "tier": "large",
       "speed": "fast",
       "useCase": [
@@ -4347,7 +5017,11 @@
       "description": "Qwen‑Image‑Edit 是一个基于 20B 参数 Qwen‑Image 模型深度训练而成的图像编辑模型，具备中英文文字的精准增删改能力，以及语义与外观的双重编辑能力，展现专业级的图像编辑性能。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "image-to-image",
         "vision"
@@ -4376,9 +5050,14 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "qwen-image-edit",
+      "modelVariant": "image",
+      "aliases": [
+        "Qwen-Image-Edit-2511"
+      ],
       "tier": "large",
-      "speed": "fast",
+      "speed": "premium",
       "useCase": [
         "image-understanding",
         "visual-q&a",
@@ -4386,7 +5065,7 @@
         "style-transfer"
       ],
       "performanceLevel": "mid",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "3-10s"
     },
     {
       "vendor": "gitee",
@@ -4394,9 +5073,13 @@
       "name": "DeepSeek-V3.1",
       "description": "DeepSeek-V3.1 是一个混合模型，支持思考模式和非思考模式。与上一版本相比，这次升级在多个方面带来了改进。",
       "contextSize": 16000,
-      "priceInput": 0.000004,
-      "priceOutput": 0.000012,
-      "isFree": true,
+      "priceInput": 4,
+      "priceOutput": 12,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation"
       ],
@@ -4422,15 +5105,17 @@
       "hasToolUse": false,
       "contextLabel": "16K",
       "billingMode": "pay",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "deepseek-v3_1",
+      "aliases": [],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "content-creation",
         "writing-assistance"
       ],
       "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -4438,9 +5123,13 @@
       "name": "Hunyuan-MT-Chimera-7B 翻译大模型",
       "description": "Hunyuan-MT-Chimera-7B 是腾讯首款翻译集成模型，能够融合多个翻译系统（如 Hunyuan-MT-7B 和 Deepseek）的输出，为专业场景生成更优质、更准确的翻译结果。",
       "contextSize": 32000,
-      "priceInput": 3e-7,
-      "priceOutput": 3e-7,
-      "isFree": true,
+      "priceInput": 0.3,
+      "priceOutput": 0.3,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation"
       ],
@@ -4466,7 +5155,9 @@
       "hasToolUse": false,
       "contextLabel": "32K",
       "billingMode": "pay",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "hunyuan-mt-chimera-7b",
+      "aliases": [],
       "tier": "medium",
       "speed": "fast",
       "useCase": [
@@ -4484,7 +5175,11 @@
       "description": "IndexTTS 是一个零样本文本到语音系统，支持高质量语音合成并可通过音色、情感和语气进行多维度控制。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "speech-synthesis"
       ],
@@ -4510,15 +5205,17 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "trial",
-      "tier": "small",
-      "speed": "fast",
+      "freeTier": "none",
+      "modelFamily": "indextts-2",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "standard",
       "useCase": [
         "text-to-speech",
         "voice-output"
       ],
       "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -4526,9 +5223,13 @@
       "name": "Qwen3-Next-80B-A3B-Instruct",
       "description": "Qwen3-Next-80B-A3B-Instruct 是 Qwen3-Next 系列的首发大型语言模型，总参数约 80B（激活约 3B），非嵌入参数约 79B 亿采用混合注意力（Gated DeltaNet + Gated Attention）与高稀疏度 Mixture-of-Experts（MoE）架构，面向指令遵循与通用对话场景，兼顾参数效率与推理吞吐。",
       "contextSize": 32000,
-      "priceInput": 0.000001,
-      "priceOutput": 0.000004,
-      "isFree": true,
+      "priceInput": 1,
+      "priceOutput": 4,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation"
       ],
@@ -4554,16 +5255,23 @@
       "hasToolUse": false,
       "contextLabel": "32K",
       "billingMode": "pay",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "qwen3-next-80b-a3b",
+      "modelVariant": "instruct",
+      "aliases": [
+        "qwen/qwen3-next-80b-a3b-instruct",
+        "openrouter/qwen/qwen3-next-80b-a3b-instruct",
+        "xunfei/Qwen3-Next-80B-A3B-Instruct"
+      ],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "content-creation",
         "writing-assistance"
       ],
       "performanceLevel": "entry",
       "parameterCount": 80000000000,
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -4571,9 +5279,13 @@
       "name": "Qwen3-Next-80B-A3B-Thinking",
       "description": "Qwen3-Next-80B-A3B-Thinking 是 Qwen3-Next 系列的首发思考（Thinking）大语言模型。",
       "contextSize": 32000,
-      "priceInput": 0.000001,
-      "priceOutput": 0.00001,
-      "isFree": true,
+      "priceInput": 1,
+      "priceOutput": 10,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation"
       ],
@@ -4599,16 +5311,21 @@
       "hasToolUse": false,
       "contextLabel": "32K",
       "billingMode": "pay",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "qwen3-next-80b-a3b-thinking",
+      "modelVariant": "thinking",
+      "aliases": [
+        "qwen/qwen3-next-80b-a3b-thinking"
+      ],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "content-creation",
         "writing-assistance"
       ],
       "performanceLevel": "entry",
       "parameterCount": 80000000000,
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -4616,9 +5333,13 @@
       "name": "DeepSeek-V3.1-Terminus",
       "description": "DeepSeek-V3.1 现已更新至 DeepSeek-V3.1-Terminus 版本。此次更新在保持模型原有能力的基础上，针对用户反馈的问题进行了改进，包括：语言一致性： 缓解了中英文混杂、偶发异常字符等情况；Agent 能力： 进一步优化了 Code Agent 与 Search Agent 的表现。",
       "contextSize": 128000,
-      "priceInput": 0.000004,
-      "priceOutput": 0.000012,
-      "isFree": true,
+      "priceInput": 4,
+      "priceOutput": 12,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation",
         "code"
@@ -4639,22 +5360,26 @@
       "provider": "gitee",
       "tags": [
         "text-generation",
-        "code"
+        "code-generation"
       ],
       "isReasoning": false,
       "isMultimodal": false,
       "hasToolUse": false,
       "contextLabel": "128K",
       "billingMode": "pay",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "deepseek-v3_1-terminus",
+      "aliases": [],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "content-creation",
-        "writing-assistance"
+        "writing-assistance",
+        "software-development",
+        "code-completion"
       ],
-      "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "performanceLevel": "mid",
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -4663,7 +5388,11 @@
       "description": "MinerU 2.5-2509-1.2B 是一款约 11 亿参数的开源视觉语言模型，采用 AGPL-3.0 许可，专注于 OCR 与复杂文档解析，能够高效提取图像中的文字和结构化信息，适用于发票、合同等多样化文档的自动化处理。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "document-processing"
       ],
@@ -4689,15 +5418,17 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "trial",
-      "tier": "small",
-      "speed": "fast",
+      "freeTier": "none",
+      "modelFamily": "mineru2.5",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "standard",
       "useCase": [
         "pdf-processing",
         "ocr"
       ],
       "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -4705,9 +5436,13 @@
       "name": "GLM-4.6",
       "description": "GLM-4.6 是智谱最新的旗舰模型，其总参数量 355B，激活参数 32B。GLM-4.6 所有核心能力上均完成了对 GLM-4.5 的超越。",
       "contextSize": 200000,
-      "priceInput": 0.0000035,
-      "priceOutput": 0.000014,
-      "isFree": true,
+      "priceInput": 3.5,
+      "priceOutput": 14,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation"
       ],
@@ -4733,15 +5468,19 @@
       "hasToolUse": false,
       "contextLabel": "200K",
       "billingMode": "pay",
-      "freeTier": "trial",
-      "tier": "small",
-      "speed": "fast",
+      "freeTier": "none",
+      "modelFamily": "glm-4.6",
+      "aliases": [
+        "bigmodel/glm-4.6"
+      ],
+      "tier": "medium",
+      "speed": "standard",
       "useCase": [
         "content-creation",
         "writing-assistance"
       ],
       "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -4749,9 +5488,13 @@
       "name": "DeepSeek-V3.2-Exp",
       "description": "DeepSeek-V3.2-Exp 是 DeepSeek 系列的实验版本模型，作为迈向下一代架构的中间步骤，V3.2-Exp 在 V3.1-Terminus 的基础上引入了 DeepSeek 稀疏注意力机制——一种旨在探索和验证在长上下文场景中训练和推理效率优化的稀疏注意力机制。",
       "contextSize": 128000,
-      "priceInput": 0.000002,
-      "priceOutput": 0.000003,
-      "isFree": true,
+      "priceInput": 2,
+      "priceOutput": 3,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation"
       ],
@@ -4777,15 +5520,17 @@
       "hasToolUse": false,
       "contextLabel": "128K",
       "billingMode": "pay",
-      "freeTier": "trial",
-      "tier": "small",
-      "speed": "fast",
+      "freeTier": "none",
+      "modelFamily": "deepseek-v3.2-exp",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "standard",
       "useCase": [
         "content-creation",
         "writing-assistance"
       ],
       "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -4795,7 +5540,11 @@
       "contextSize": 8000,
       "priceInput": 0,
       "priceOutput": 0,
+      "priceCurrency": "CNY",
       "isFree": true,
+      "isExperienceable": false,
+      "freeKind": "permanent",
+      "trialScope": "specific",
       "capabilities": [
         "embeddings"
       ],
@@ -4822,6 +5571,9 @@
       "contextLabel": "8K",
       "billingMode": "free",
       "freeTier": "full",
+      "modelFamily": "youtu-embedding",
+      "modelVariant": "embedding",
+      "aliases": [],
       "tier": "medium",
       "speed": "fast",
       "useCase": [
@@ -4837,9 +5589,13 @@
       "name": "Qwen3-VL-8B-Instruct",
       "description": "Qwen3-VL-8B-Instruct 是 Qwen 系列的多模态指令模型，具备更强的视觉感知、跨模态推理和长上下文处理能力。",
       "contextSize": 32000,
-      "priceInput": 3.5e-7,
-      "priceOutput": 0.0000014,
-      "isFree": true,
+      "priceInput": 0.35,
+      "priceOutput": 1.4,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation"
       ],
@@ -4865,16 +5621,19 @@
       "hasToolUse": false,
       "contextLabel": "32K",
       "billingMode": "pay",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "qwen3-vl-8b",
+      "modelVariant": "vl",
+      "aliases": [],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "content-creation",
         "writing-assistance"
       ],
       "performanceLevel": "entry",
       "parameterCount": 8000000000,
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -4882,9 +5641,13 @@
       "name": "Qwen3-VL-4B-Instruct",
       "description": "Qwen3-VL-4B-Instruct 在保持轻量级（4B 级别）模型规模的同时，具备 原生多模态理解 + 指令响应能力，且在视觉-文本对齐、跨模态推理和快速响应效率方面具有其独特优势。",
       "contextSize": 32000,
-      "priceInput": 1.75e-7,
-      "priceOutput": 7e-7,
-      "isFree": true,
+      "priceInput": 0.175,
+      "priceOutput": 0.7,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation"
       ],
@@ -4910,9 +5673,12 @@
       "hasToolUse": false,
       "contextLabel": "32K",
       "billingMode": "pay",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "qwen3-vl-4b",
+      "modelVariant": "vl",
+      "aliases": [],
       "tier": "small",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "content-creation",
         "writing-assistance"
@@ -4927,9 +5693,13 @@
       "name": "Qwen3-VL-30B-A3B-Instruct",
       "description": "Qwen3-VL-30B-A3B-Instruct 是一款旗舰级多模态模型，具备超强的视觉理解、跨模态推理与视频时序感知能力。",
       "contextSize": 32000,
-      "priceInput": 7e-7,
-      "priceOutput": 0.0000028,
-      "isFree": true,
+      "priceInput": 0.7,
+      "priceOutput": 2.8,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation"
       ],
@@ -4955,16 +5725,19 @@
       "hasToolUse": false,
       "contextLabel": "32K",
       "billingMode": "pay",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "qwen3-vl-30b-a3b",
+      "modelVariant": "vl",
+      "aliases": [],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "content-creation",
         "writing-assistance"
       ],
       "performanceLevel": "entry",
       "parameterCount": 30000000000,
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -4974,7 +5747,11 @@
       "contextSize": 32000,
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation"
       ],
@@ -5000,16 +5777,18 @@
       "hasToolUse": false,
       "contextLabel": "32K",
       "billingMode": "free",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "qwen3guard-gen-8b",
+      "aliases": [],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "content-creation",
         "writing-assistance"
       ],
       "performanceLevel": "entry",
       "parameterCount": 8000000000,
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -5019,7 +5798,11 @@
       "contextSize": 32000,
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation"
       ],
@@ -5045,9 +5828,11 @@
       "hasToolUse": false,
       "contextLabel": "32K",
       "billingMode": "free",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "qwen3guard-gen-4b",
+      "aliases": [],
       "tier": "small",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "content-creation",
         "writing-assistance"
@@ -5064,7 +5849,11 @@
       "contextSize": 32000,
       "priceInput": 0,
       "priceOutput": 0,
+      "priceCurrency": "CNY",
       "isFree": true,
+      "isExperienceable": false,
+      "freeKind": "permanent",
+      "trialScope": "specific",
       "capabilities": [
         "text-generation"
       ],
@@ -5091,6 +5880,8 @@
       "contextLabel": "32K",
       "billingMode": "free",
       "freeTier": "full",
+      "modelFamily": "qwen3guard-gen-0.6b",
+      "aliases": [],
       "tier": "medium",
       "speed": "fast",
       "useCase": [
@@ -5108,7 +5899,11 @@
       "description": "AudioFly模型是科大讯飞推出的，可基于文本描述输入，生成44.1kHz 采样率的高质量音频，在文本与音效的匹配度上表现优异。AudioFly采用了潜在扩散模型（LDM）架构，经海量多元声音数据训练，支持单事件、多事件场景。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "speech-synthesis"
       ],
@@ -5134,15 +5929,17 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "audiofly",
+      "aliases": [],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "text-to-speech",
         "voice-output"
       ],
       "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -5152,7 +5949,11 @@
       "contextSize": 16000,
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "document-processing"
       ],
@@ -5178,15 +5979,18 @@
       "hasToolUse": false,
       "contextLabel": "16K",
       "billingMode": "free",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "paddleocr-vl",
+      "modelVariant": "vl",
+      "aliases": [],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "premium",
       "useCase": [
         "pdf-processing",
         "ocr"
       ],
-      "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "performanceLevel": "mid",
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -5195,7 +5999,11 @@
       "description": "DeepSeek-OCR 是由 DeepSeek 团队 开发的高精度光学字符识别（OCR, Optical Character Recognition）系统，旨在在复杂场景下实现高效、准确的文字检测与识别。\n它支持 多语言识别、复杂版面分析、表格与公式识别 等多种任务，适用于票据、文档、截图、自然场景图片等多样化输入。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "vision"
       ],
@@ -5221,15 +6029,19 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "deepseek-ocr",
+      "aliases": [
+        "xunfei/DeepSeek-OCR"
+      ],
       "tier": "large",
-      "speed": "fast",
+      "speed": "premium",
       "useCase": [
         "image-understanding",
         "visual-q&a"
       ],
       "performanceLevel": "mid",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "3-10s"
     },
     {
       "vendor": "gitee",
@@ -5237,9 +6049,13 @@
       "name": "Kimi-K2-Thinking",
       "description": "Kimi K2 Thinking 是最新、最强大的开源思维模型版本。从 Kimi K2 开始，Kimi 就在构建为一个能够逐步推理并动态调用工具的思维代理（thinking agent）。通过显著增加多步推理深度并在 200-300 个连续调用中保持稳定的工具使用，在人类最后的考试（HLE）、BrowseComp 和其他基准测试中树立了新的技术水平。",
       "contextSize": 32000,
-      "priceInput": 0.000004,
-      "priceOutput": 0.000016,
-      "isFree": true,
+      "priceInput": 4,
+      "priceOutput": 16,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation"
       ],
@@ -5265,15 +6081,20 @@
       "hasToolUse": false,
       "contextLabel": "32K",
       "billingMode": "pay",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "kimi-k2-thinking",
+      "modelVariant": "thinking",
+      "aliases": [
+        "xunfei/Kimi-K2-thinking"
+      ],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "content-creation",
         "writing-assistance"
       ],
       "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -5282,7 +6103,11 @@
       "description": "SeedVR2‑3B 是由 ByteDance‑Seed 提出的一个 3B 参数级别的一步式扩散对抗后训练模型，专为高分辨率图片修复设计。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "image-to-image"
       ],
@@ -5308,9 +6133,11 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "seedvr2-3b",
+      "aliases": [],
       "tier": "small",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "image-editing",
         "style-transfer"
@@ -5326,7 +6153,11 @@
       "description": "HunyuanVideo-1.5 是腾讯开源的一款轻量视频生成模型，能生成高质量、连贯、风格多样的短视频。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "video-generation"
       ],
@@ -5352,14 +6183,16 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "trial",
-      "tier": "small",
-      "speed": "fast",
+      "freeTier": "none",
+      "modelFamily": "hunyuanvideo-1.5",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "standard",
       "useCase": [
         "video-creation"
       ],
       "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -5367,9 +6200,13 @@
       "name": "ERNIE-5.0-Thinking",
       "description": "文心新一代模型文心5.0是原生全模态大模型，采用原生的全模态统一建模技术，将文本、图像、音频、视频联合建模，具备综合的全模态能力。",
       "contextSize": 128000,
-      "priceInput": 0.000004,
-      "priceOutput": 0.000016,
-      "isFree": true,
+      "priceInput": 4,
+      "priceOutput": 16,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation"
       ],
@@ -5395,15 +6232,18 @@
       "hasToolUse": false,
       "contextLabel": "128K",
       "billingMode": "pay",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "ernie-5.0-thinking",
+      "modelVariant": "thinking",
+      "aliases": [],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "content-creation",
         "writing-assistance"
       ],
       "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -5413,7 +6253,11 @@
       "contextSize": 2000,
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "image-generation",
         "vision"
@@ -5443,9 +6287,15 @@
       "hasToolUse": false,
       "contextLabel": "2K",
       "billingMode": "free",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "z-image",
+      "modelVariant": "image",
+      "aliases": [
+        "Z-Image",
+        "xunfei/Z-Image-Turbo"
+      ],
       "tier": "large",
-      "speed": "fast",
+      "speed": "premium",
       "useCase": [
         "content-creation",
         "writing-assistance",
@@ -5455,7 +6305,7 @@
         "art"
       ],
       "performanceLevel": "mid",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "3-10s"
     },
     {
       "vendor": "gitee",
@@ -5463,9 +6313,13 @@
       "name": "DeepSeek-V3.2",
       "description": "DeepSeek-V3.2 是一个在高计算效率与卓越推理和代理性能之间取得平衡的模型。",
       "contextSize": 128000,
-      "priceInput": 0.000002,
-      "priceOutput": 0.000003,
-      "isFree": true,
+      "priceInput": 2,
+      "priceOutput": 3,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation"
       ],
@@ -5491,15 +6345,20 @@
       "hasToolUse": false,
       "contextLabel": "128K",
       "billingMode": "pay",
-      "freeTier": "trial",
-      "tier": "small",
-      "speed": "fast",
+      "freeTier": "none",
+      "modelFamily": "deepseek-v3.2",
+      "aliases": [
+        "deepseek-ai/deepseek-v3.2",
+        "xunfei/DeepSeek-V3.2"
+      ],
+      "tier": "medium",
+      "speed": "standard",
       "useCase": [
         "content-creation",
         "writing-assistance"
       ],
       "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -5508,7 +6367,11 @@
       "description": "HunyuanOCR 是腾讯混元大模型体系下的通用光学字符识别（OCR）能力，基于多模态理解模型构建，具备高精度文本提取、版面还原与复杂场景识别能力。它支持多语言识别、复杂背景下文字提取，以及对表格、票据、证照等结构化信息的解析，适用于金融、政务、电商、教育等多类场景。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "vision"
       ],
@@ -5534,15 +6397,19 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "hunyuanocr",
+      "aliases": [
+        "xunfei/HunyuanOCR"
+      ],
       "tier": "large",
-      "speed": "fast",
+      "speed": "premium",
       "useCase": [
         "image-understanding",
         "visual-q&a"
       ],
       "performanceLevel": "mid",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "3-10s"
     },
     {
       "vendor": "gitee",
@@ -5551,7 +6418,11 @@
       "description": "1",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "image-generation"
       ],
@@ -5576,15 +6447,17 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "comfyui",
+      "aliases": [],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "creative-generation",
         "art"
       ],
       "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -5593,7 +6466,11 @@
       "description": "LongCat-Image 是美团 LongCat 团队开源的轻量级高质量图像生成模型，支持中英文文本生成逼真图像，并具备优秀的中文文字渲染能力。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "image-generation",
         "vision"
@@ -5622,9 +6499,12 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "longcat-image",
+      "modelVariant": "image",
+      "aliases": [],
       "tier": "large",
-      "speed": "fast",
+      "speed": "premium",
       "useCase": [
         "image-understanding",
         "visual-q&a",
@@ -5632,7 +6512,7 @@
         "art"
       ],
       "performanceLevel": "mid",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "3-10s"
     },
     {
       "vendor": "gitee",
@@ -5641,7 +6521,11 @@
       "description": "LongCat-Image-Edit 是美团开源的高精度图像编辑模型，支持文本、局部选区与参考图驱动的内容重绘，具备强语义理解、细节一致性和自然编辑效果，适用于创意设计、商品图优化与精细视觉修改。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "image-to-image",
         "vision"
@@ -5670,9 +6554,12 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "longcat-image-edit",
+      "modelVariant": "image",
+      "aliases": [],
       "tier": "large",
-      "speed": "fast",
+      "speed": "premium",
       "useCase": [
         "image-understanding",
         "visual-q&a",
@@ -5680,7 +6567,7 @@
         "style-transfer"
       ],
       "performanceLevel": "mid",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "3-10s"
     },
     {
       "vendor": "gitee",
@@ -5688,9 +6575,13 @@
       "name": "GLM-4.6V",
       "description": "GLM-4.6V 是 GLM 系列在多模态方向上的一次重要迭代，它将训练时上下文窗口提升到128k tokens，在视觉理解精度上达到同参数规模 SOTA，并首次在模型架构中将 Function Call（工具调用）能力原生融入视觉模型，打通从「视觉感知」到「可执行行动（Action）」的链路，为真实业务场景中的多模态 Agent 提供统一的技术底座。",
       "contextSize": 128000,
-      "priceInput": 0.000002,
-      "priceOutput": 0.000006,
-      "isFree": true,
+      "priceInput": 2,
+      "priceOutput": 6,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation",
         "tool_use",
@@ -5712,28 +6603,25 @@
       "provider": "gitee",
       "tags": [
         "text-generation",
-        "tool_use",
-        "function_calling"
+        "tool-use",
+        "function-calling"
       ],
       "isReasoning": false,
       "isMultimodal": false,
       "hasToolUse": true,
       "contextLabel": "128K",
       "billingMode": "pay",
-      "freeTier": "trial",
-      "tier": "small",
-      "speed": "fast",
+      "freeTier": "none",
+      "modelFamily": "glm-4.6v",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "standard",
       "useCase": [
         "content-creation",
-        "writing-assistance",
-        "agentic-tasks",
-        "tool-augmented",
-        "structured-output",
-        "api-integration",
-        "autonomous-agents"
+        "writing-assistance"
       ],
       "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -5743,7 +6631,11 @@
       "contextSize": 128000,
       "priceInput": 0,
       "priceOutput": 0,
+      "priceCurrency": "CNY",
       "isFree": true,
+      "isExperienceable": false,
+      "freeKind": "permanent",
+      "trialScope": "specific",
       "capabilities": [
         "text-generation"
       ],
@@ -5770,7 +6662,9 @@
       "contextLabel": "128K",
       "billingMode": "free",
       "freeTier": "full",
-      "tier": "small",
+      "modelFamily": "glm-4.6v-flash",
+      "aliases": [],
+      "tier": "medium",
       "speed": "fast",
       "useCase": [
         "content-creation",
@@ -5787,7 +6681,11 @@
       "contextSize": 32000,
       "priceInput": 0,
       "priceOutput": 0,
+      "priceCurrency": "CNY",
       "isFree": true,
+      "isExperienceable": false,
+      "freeKind": "permanent",
+      "trialScope": "specific",
       "capabilities": [
         "text-generation"
       ],
@@ -5814,6 +6712,8 @@
       "contextLabel": "32K",
       "billingMode": "free",
       "freeTier": "full",
+      "modelFamily": "huatuogpt-o1-7b",
+      "aliases": [],
       "tier": "medium",
       "speed": "fast",
       "useCase": [
@@ -5831,7 +6731,11 @@
       "description": "GLM-ASR是一款超轻量级中文语音识别模型，提供低资源设备上的实时转写能力，适用于移动端、IoT 与本地离线识别场景。",
       "priceInput": 0,
       "priceOutput": 0,
+      "priceCurrency": "CNY",
       "isFree": true,
+      "isExperienceable": false,
+      "freeKind": "permanent",
+      "trialScope": "specific",
       "capabilities": [
         "speech-recognition"
       ],
@@ -5858,6 +6762,11 @@
       "contextLabel": "unknown",
       "billingMode": "free",
       "freeTier": "full",
+      "modelFamily": "glm-asr",
+      "modelVariant": "asr",
+      "aliases": [
+        "bigmodel/glm-asr-2512"
+      ],
       "tier": "medium",
       "speed": "fast",
       "useCase": [
@@ -5873,9 +6782,13 @@
       "name": "AutoGLM-Phone-9B-Multilingual",
       "description": "AutoGLM-Phone-9B-Multilingual 是一个基于 AutoGLM 的多语言手机智能助手大模型，能够通过视觉-语言理解手机屏幕内容并根据自然语言指令自动执行操作任务（如打开应用、浏览界面、点击等）。",
       "contextSize": 32000,
-      "priceInput": 3.5e-7,
-      "priceOutput": 0.0000014,
-      "isFree": true,
+      "priceInput": 0.35,
+      "priceOutput": 1.4,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation"
       ],
@@ -5901,7 +6814,9 @@
       "hasToolUse": false,
       "contextLabel": "32K",
       "billingMode": "pay",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "autoglm-phone-9b-multilingual",
+      "aliases": [],
       "tier": "medium",
       "speed": "fast",
       "useCase": [
@@ -5918,9 +6833,13 @@
       "name": "KAT-Dev",
       "description": "KAT-Dev 是快手 Kwaipilot 团队推出的开源大模型系列，专注于软件工程任务，其中 KAT-Dev-32B 是一个 32B 参数的模型，在代码生成和智能体编程领域表现出色。‌",
       "contextSize": 32000,
-      "priceInput": 0.000001,
-      "priceOutput": 0.000004,
-      "isFree": true,
+      "priceInput": 1,
+      "priceOutput": 4,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation"
       ],
@@ -5946,15 +6865,17 @@
       "hasToolUse": false,
       "contextLabel": "32K",
       "billingMode": "pay",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "kat-dev",
+      "aliases": [],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "content-creation",
         "writing-assistance"
       ],
       "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -5962,9 +6883,13 @@
       "name": "Qwen3-Coder-30B-A3B-Instruct",
       "description": "Qwen3-Coder-30B-A3B-Instruct 是阿里巴巴 Qwen 系列的30 B 参数规模指令式大语言模型（专注代码与任务指令响应），优化的编码与“Agentic Coding”能力，用于生成代码和执行复杂指令任务。",
       "contextSize": 32000,
-      "priceInput": 0.000001,
-      "priceOutput": 0.000004,
-      "isFree": true,
+      "priceInput": 1,
+      "priceOutput": 4,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation"
       ],
@@ -5990,16 +6915,19 @@
       "hasToolUse": false,
       "contextLabel": "32K",
       "billingMode": "pay",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "qwen3-coder-30b-a3b",
+      "modelVariant": "coder",
+      "aliases": [],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "content-creation",
         "writing-assistance"
       ],
       "performanceLevel": "entry",
       "parameterCount": 30000000000,
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -6008,7 +6936,11 @@
       "description": "InfiniteTalk 是由 MeiGen-AI 发布的音频驱动视频生成模型，基于稀疏帧视频配音技术，可以将音频与图像/视频结合，生成无限时长的自然口型同步、头部与身体动作协调的高质量讲述视频。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "video-generation"
       ],
@@ -6034,14 +6966,16 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "infinitetalk",
+      "aliases": [],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "video-creation"
       ],
       "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -6050,7 +6984,11 @@
       "description": "GLM-TTS 是一个支持零样本克隆音色、情感可控和实时推理的高质量文本到语音（TTS）合成系统。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "speech-synthesis"
       ],
@@ -6076,15 +7014,20 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "glm-tts",
+      "modelVariant": "tts",
+      "aliases": [
+        "bigmodel/glm-tts"
+      ],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "text-to-speech",
         "voice-output"
       ],
       "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -6093,7 +7036,11 @@
       "description": "FLUX.2-dev 是 Black Forest Labs 推出的新一代高质量文生图模型，兼顾强文本理解与细节表现，适合专业级图像生成与创意设计场景。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "image-generation"
       ],
@@ -6119,15 +7066,17 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "trial",
-      "tier": "small",
-      "speed": "fast",
+      "freeTier": "none",
+      "modelFamily": "flux.2-dev",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "standard",
       "useCase": [
         "creative-generation",
         "art"
       ],
       "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -6135,9 +7084,13 @@
       "name": "GLM-4.7",
       "description": "GLM-4.7 是由智谱 AI 发布的最新一代大型语言模型，继承并扩展了 GLM-4 系列模型的核心能力，是面向高复杂任务（尤其是编码、推理与代理任务）的旗舰级开源模型。",
       "contextSize": 200000,
-      "priceInput": 0.0000035,
-      "priceOutput": 0.000014,
-      "isFree": true,
+      "priceInput": 3.5,
+      "priceOutput": 14,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation"
       ],
@@ -6163,15 +7116,19 @@
       "hasToolUse": false,
       "contextLabel": "200K",
       "billingMode": "pay",
-      "freeTier": "trial",
-      "tier": "small",
-      "speed": "fast",
+      "freeTier": "none",
+      "modelFamily": "glm-4.7",
+      "aliases": [
+        "xunfei/GLM-4.7"
+      ],
+      "tier": "medium",
+      "speed": "standard",
       "useCase": [
         "content-creation",
         "writing-assistance"
       ],
       "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -6179,9 +7136,13 @@
       "name": "MiniMax-M2.1",
       "description": "MiniMax-M2.1 是 MiniMax 系列的最新版本，专为多语言编程和真实世界复杂任务优化。作为一款 AI 原生模型，MiniMax-M2.1 在模型性能、智能体框架支持以及多场景适配方面实现了显著提升，旨在帮助企业和个人更快地找到 AI 原生的工作与生活方式。",
       "contextSize": 200000,
-      "priceInput": 0.0000021000000000000002,
-      "priceOutput": 0.000008400000000000001,
-      "isFree": true,
+      "priceInput": 2.1,
+      "priceOutput": 8.4,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation"
       ],
@@ -6207,15 +7168,17 @@
       "hasToolUse": false,
       "contextLabel": "200K",
       "billingMode": "pay",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "minimax-m2.1",
+      "aliases": [],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "content-creation",
         "writing-assistance"
       ],
       "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -6224,7 +7187,11 @@
       "description": "Qwen-Image-Edit-2511 是阿里通义团队在 Qwen-Image-Edit 基础上升级的开源图像编辑模型，主打提升编辑一致性、集成常用 LoRA 能力并增强人物/工业设计和几何推理表现，实现更稳定精确的 AI 图像编辑效果。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "image-to-image",
         "vision"
@@ -6253,9 +7220,14 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "qwen-image-edit",
+      "modelVariant": "image",
+      "aliases": [
+        "Qwen-Image-Edit"
+      ],
       "tier": "large",
-      "speed": "fast",
+      "speed": "premium",
       "useCase": [
         "image-understanding",
         "visual-q&a",
@@ -6263,7 +7235,7 @@
         "style-transfer"
       ],
       "performanceLevel": "mid",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "3-10s"
     },
     {
       "vendor": "gitee",
@@ -6272,7 +7244,11 @@
       "description": "Fun-ASR-Nano-2512 是一款高精度、低延迟的多语言语音识别模型，适用于实时语音转写、会议记录和智能语音交互等场景。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "speech-recognition"
       ],
@@ -6298,15 +7274,18 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "fun-asr-nano",
+      "modelVariant": "asr",
+      "aliases": [],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "transcription",
         "voice-input"
       ],
       "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -6315,7 +7294,11 @@
       "description": "SAM 3 是一款通用的图像分割模型，可在无需预定义类别的情况下，对图像中的任意目标进行高精度的像素级分割。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "vision"
       ],
@@ -6341,15 +7324,17 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "trial",
-      "tier": "small",
-      "speed": "fast",
+      "freeTier": "none",
+      "modelFamily": "sam3",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
       "useCase": [
         "image-understanding",
         "visual-q&a"
       ],
-      "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "performanceLevel": "mid",
+      "estimatedLatency": "3-10s"
     },
     {
       "vendor": "gitee",
@@ -6358,7 +7343,11 @@
       "description": "CosyVoice 3.0 是一个基于大语言模型的 先进多语言零样本文本转语音（TTS）系统，在内容一致性、说话人相似度和韵律自然度上超越前代 CosyVoice2，同时支持 9 种主流语言、多种中文方言、发音填充、低延迟流式输出和丰富的控制指令（如情绪、语速等）。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "speech-synthesis"
       ],
@@ -6384,15 +7373,17 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "trial",
-      "tier": "small",
-      "speed": "fast",
+      "freeTier": "none",
+      "modelFamily": "cosyvoice3",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "standard",
       "useCase": [
         "text-to-speech",
         "voice-output"
       ],
       "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -6401,7 +7392,11 @@
       "description": "VajraV1 是一个由 VayuAI 提供的、基于 YOLO 体系结构的开源实时视觉模型系列，支持目标检测、图像分割和人体关键点检测等多种计算机视觉任务，具有高效准确的性能表现。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "vision"
       ],
@@ -6427,15 +7422,17 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "vajrav1",
+      "aliases": [],
       "tier": "large",
-      "speed": "fast",
+      "speed": "premium",
       "useCase": [
         "image-understanding",
         "visual-q&a"
       ],
       "performanceLevel": "mid",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "3-10s"
     },
     {
       "vendor": "gitee",
@@ -6443,9 +7440,13 @@
       "name": "HY-MT1.5-7B 翻译大模型",
       "description": "HY-MT1.5-7B 是腾讯混元开源的高性能多语言机器翻译模型（7B 参数级别），基于获得 WMT25 翻译冠军的架构优化而来，支持 33 种语言互译、术语干预、上下文理解与格式保留等高级翻译功能，在标准翻译任务上实现高质量与高实用性输出。",
       "contextSize": 32000,
-      "priceInput": 3e-7,
-      "priceOutput": 3e-7,
-      "isFree": true,
+      "priceInput": 0.3,
+      "priceOutput": 0.3,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation"
       ],
@@ -6471,7 +7472,9 @@
       "hasToolUse": false,
       "contextLabel": "32K",
       "billingMode": "pay",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "hy-mt1.5-7b",
+      "aliases": [],
       "tier": "medium",
       "speed": "fast",
       "useCase": [
@@ -6488,9 +7491,13 @@
       "name": "司农大模型",
       "description": "Sinong1.0-32B由 NAULLM 团队发布的 320 亿参数开源农业大语言模型，面向农业生产、农业知识与农业管理等场景，强化农业专业语义理解、领域知识问答与指令跟随能力，适合农业智能应用与行业级落地。",
       "contextSize": 32000,
-      "priceInput": 0.000002,
-      "priceOutput": 0.000002,
-      "isFree": true,
+      "priceInput": 2,
+      "priceOutput": 2,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation"
       ],
@@ -6516,15 +7523,17 @@
       "hasToolUse": false,
       "contextLabel": "32K",
       "billingMode": "pay",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "sinong1.0-32b",
+      "aliases": [],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "content-creation",
         "writing-assistance"
       ],
       "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -6533,7 +7542,11 @@
       "description": "Qwen-Image-2512 是阿里巴巴通义千问团队推出的最新一代文本生成图像大模型，在人物真实感、自然细节刻画和文字渲染能力上全面升级，可高质量地将文本描述转化为语义准确、细节丰富的图像。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "image-generation",
         "vision"
@@ -6562,9 +7575,15 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "qwen-image",
+      "modelVariant": "image",
+      "aliases": [
+        "Qwen-Image",
+        "xunfei/Qwen-Image-2512"
+      ],
       "tier": "large",
-      "speed": "fast",
+      "speed": "premium",
       "useCase": [
         "image-understanding",
         "visual-q&a",
@@ -6572,7 +7591,7 @@
         "art"
       ],
       "performanceLevel": "mid",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "3-10s"
     },
     {
       "vendor": "gitee",
@@ -6580,9 +7599,13 @@
       "name": "MAI-UI-8B",
       "description": "MAI-UI-8B 是一款专注于多模态人机交互的 8B 参数级模型，擅长理解与生成 UI 相关内容，适用于界面理解、交互设计辅助和智能 UI 自动化等场景。",
       "contextSize": 32000,
-      "priceInput": 0.0000014,
-      "priceOutput": 0.0000014,
-      "isFree": true,
+      "priceInput": 1.4,
+      "priceOutput": 1.4,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation"
       ],
@@ -6608,16 +7631,18 @@
       "hasToolUse": false,
       "contextLabel": "32K",
       "billingMode": "pay",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "mai-ui-8b",
+      "aliases": [],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "content-creation",
         "writing-assistance"
       ],
       "performanceLevel": "entry",
       "parameterCount": 8000000000,
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -6626,7 +7651,11 @@
       "description": "GLM-Image 是智谱推出的多模态图像生成模型，擅长根据文本精准生成高质量图像，并在中文语义理解与文字渲染场景中表现突出。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "image-generation",
         "vision"
@@ -6655,9 +7684,14 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "glm-image",
+      "modelVariant": "image",
+      "aliases": [
+        "bigmodel/glm-image"
+      ],
       "tier": "large",
-      "speed": "fast",
+      "speed": "premium",
       "useCase": [
         "image-understanding",
         "visual-q&a",
@@ -6665,7 +7699,7 @@
         "art"
       ],
       "performanceLevel": "mid",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "3-10s"
     },
     {
       "vendor": "gitee",
@@ -6675,7 +7709,11 @@
       "contextSize": 200000,
       "priceInput": 0,
       "priceOutput": 0,
+      "priceCurrency": "CNY",
       "isFree": true,
+      "isExperienceable": false,
+      "freeKind": "permanent",
+      "trialScope": "specific",
       "capabilities": [
         "text-generation"
       ],
@@ -6702,7 +7740,11 @@
       "contextLabel": "200K",
       "billingMode": "free",
       "freeTier": "full",
-      "tier": "small",
+      "modelFamily": "glm-4.7-flash",
+      "aliases": [
+        "xunfei/GLM-4.7-Flash"
+      ],
+      "tier": "medium",
       "speed": "fast",
       "useCase": [
         "content-creation",
@@ -6717,9 +7759,13 @@
       "name": "Qwen3-VL-Embedding-8B",
       "description": "Qwen3-VL-Embedding-8B 是一款基于 Qwen3-VL 的 8B 参数 多模态嵌入（Embedding）模型，用于将文本、图像、截图等多种模态输入编码成语义向量，以支持高效跨模态检索、聚类和相似性计算。",
       "contextSize": 32000,
-      "priceInput": 3.5e-7,
-      "priceOutput": 3.5e-7,
-      "isFree": true,
+      "priceInput": 0.35,
+      "priceOutput": 0.35,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "embeddings"
       ],
@@ -6745,25 +7791,32 @@
       "hasToolUse": false,
       "contextLabel": "32K",
       "billingMode": "pay",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "qwen3-vl-embedding-8b",
+      "modelVariant": "vl",
+      "aliases": [],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "premium",
       "useCase": [
         "semantic-search",
         "similarity"
       ],
-      "performanceLevel": "entry",
+      "performanceLevel": "mid",
       "parameterCount": 8000000000,
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
       "modelId": "Qwen3-VL-Reranker-8B",
       "name": "Qwen3-VL-Reranker-8B",
       "description": "Qwen3-VL-Reranker-8B 是一款基于 Qwen3-VL 的 8B 参数多模态重排序模型，用于对文本、图像等检索结果进行高精度相关性排序。",
-      "priceInput": 3.5e-7,
-      "priceOutput": 3.5e-7,
-      "isFree": true,
+      "priceInput": 0.35,
+      "priceOutput": 0.35,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "rerank"
       ],
@@ -6789,16 +7842,19 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "pay",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "qwen3-vl-reranker-8b",
+      "modelVariant": "vl",
+      "aliases": [],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "premium",
       "useCase": [
         "search-improvement",
         "relevance"
       ],
-      "performanceLevel": "entry",
+      "performanceLevel": "mid",
       "parameterCount": 8000000000,
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -6807,7 +7863,11 @@
       "description": "FLUX.2-klein-9B 是 Black Forest Labs 推出的 9B 参数高效图像生成与编辑模型，主打极速推理与高质量输出。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "image-generation"
       ],
@@ -6833,16 +7893,18 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "trial",
-      "tier": "small",
-      "speed": "fast",
+      "freeTier": "none",
+      "modelFamily": "flux.2-klein-9b",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "standard",
       "useCase": [
         "creative-generation",
         "art"
       ],
       "performanceLevel": "entry",
       "parameterCount": 9000000000,
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -6851,7 +7913,11 @@
       "description": "1",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "web-search"
       ],
@@ -6876,24 +7942,30 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "search",
+      "aliases": [],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "information-retrieval",
         "research"
       ],
       "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
       "modelId": "Qwen3-VL-Embedding-2B",
       "name": "Qwen3-VL-Embedding-2B",
       "description": "Qwen3-VL-Embedding-2B 是一个支持文本、图像等多模态输入、用于生成统一高维语义向量的 2 B 参数级多模态嵌入模型，常用于跨模态检索和相似性搜索等任务。",
-      "priceInput": 9e-8,
-      "priceOutput": 9e-8,
+      "priceInput": 0.09,
+      "priceOutput": 0.09,
+      "priceCurrency": "CNY",
       "isFree": false,
+      "isExperienceable": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
       "capabilities": [
         "embeddings"
       ],
@@ -6920,6 +7992,9 @@
       "contextLabel": "unknown",
       "billingMode": "pay",
       "freeTier": "none",
+      "modelFamily": "qwen3-vl-embedding-2b",
+      "modelVariant": "vl",
+      "aliases": [],
       "tier": "small",
       "speed": "premium",
       "useCase": [
@@ -6937,7 +8012,11 @@
       "description": "LTX-2 是首个基于 DiT 的音视频基础模型，集成了现代视频生成的所有核心能力：同步音视频、高保真度、多种性能模式、生产就绪输出、API 访问和开放访问。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "video-generation"
       ],
@@ -6963,23 +8042,29 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "trial",
-      "tier": "small",
-      "speed": "fast",
+      "freeTier": "none",
+      "modelFamily": "ltx-2",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "standard",
       "useCase": [
         "video-creation"
       ],
       "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
       "modelId": "Qwen3-VL-Reranker-2B",
       "name": "Qwen3-VL-Reranker-2B",
       "description": "Qwen3-VL-Reranker-2B 是一个基于 Qwen3-VL 多模态基础模型的 2 B 参数级别、多模态重新排序（Reranker）模型，用于对检索到的文本/图像/视频等候选结果进行精细相关性评分，从而提升多模态检索管道的准确性。",
-      "priceInput": 9e-8,
-      "priceOutput": 9e-8,
-      "isFree": true,
+      "priceInput": 0.09,
+      "priceOutput": 0.09,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "rerank"
       ],
@@ -7005,9 +8090,12 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "pay",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "qwen3-vl-reranker-2b",
+      "modelVariant": "vl",
+      "aliases": [],
       "tier": "small",
-      "speed": "fast",
+      "speed": "premium",
       "useCase": [
         "search-improvement",
         "relevance"
@@ -7023,7 +8111,11 @@
       "description": "Qwen-Image-Layered 是一个由 Qwen 团队发布的 图像分层分解模型，它能将一张普通图像自动分解成多个 语义独立的 RGBA 图层，从而让每个图层可以 单独进行移动、重色、缩放、删除等编辑操作而不影响其它内容。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "image-to-image",
         "vision"
@@ -7052,9 +8144,12 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "qwen-image-layered",
+      "modelVariant": "image",
+      "aliases": [],
       "tier": "large",
-      "speed": "fast",
+      "speed": "premium",
       "useCase": [
         "image-understanding",
         "visual-q&a",
@@ -7062,7 +8157,7 @@
         "style-transfer"
       ],
       "performanceLevel": "mid",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "3-10s"
     },
     {
       "vendor": "gitee",
@@ -7070,9 +8165,13 @@
       "name": "Kimi-K2.5",
       "description": "Kimi K2.5 是一个开源的原生多模态代理模型，通过在 Kimi-K2-Base 上约 15 万亿个混合视觉和文本令牌上持续预训练构建。它无缝将视觉和语言理解与先进的代理能力、即时和思考模式，以及会话和代理范式相结合。",
       "contextSize": 256000,
-      "priceInput": 0.000004,
-      "priceOutput": 0.000021,
+      "priceInput": 4,
+      "priceOutput": 21,
+      "priceCurrency": "CNY",
       "isFree": false,
+      "isExperienceable": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
       "capabilities": [
         "text-generation"
       ],
@@ -7099,6 +8198,10 @@
       "contextLabel": "256K",
       "billingMode": "pay",
       "freeTier": "none",
+      "modelFamily": "kimi-k2.5",
+      "aliases": [
+        "xunfei/Kimi-K2.5"
+      ],
       "tier": "medium",
       "speed": "standard",
       "useCase": [
@@ -7114,9 +8217,13 @@
       "name": "PaddleOCR-VL-1.5",
       "description": "PaddleOCR-VL-1.5 是百度 PaddlePaddle 发布的 0.9 B 参数级多任务视觉语言模型，专为复杂文档 OCR 与布局解析设计，在真实世界文档（扫描、倾斜、弯曲等）上实现了先进的识别与结构化输出性能。",
       "contextSize": 16000,
-      "priceInput": 0.0000028,
-      "priceOutput": 0.0000028,
-      "isFree": true,
+      "priceInput": 2.8,
+      "priceOutput": 2.8,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation"
       ],
@@ -7142,15 +8249,18 @@
       "hasToolUse": false,
       "contextLabel": "16K",
       "billingMode": "pay",
-      "freeTier": "trial",
-      "tier": "small",
-      "speed": "fast",
+      "freeTier": "none",
+      "modelFamily": "paddleocr-vl-1.5",
+      "modelVariant": "vl",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "premium",
       "useCase": [
         "content-creation",
         "writing-assistance"
       ],
-      "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "performanceLevel": "mid",
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -7158,9 +8268,13 @@
       "name": "DeepSeek-OCR-2",
       "description": "DeepSeek-OCR-2 是一款高精度文字识别模型，能够从图片或 PDF 中提取文字，并自动按人类阅读顺序整理内容，特别适合识别表格、多栏文档和复杂排版页面。",
       "contextSize": 8000,
-      "priceInput": 0.0000028,
-      "priceOutput": 0.0000028,
-      "isFree": true,
+      "priceInput": 2.8,
+      "priceOutput": 2.8,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation"
       ],
@@ -7186,15 +8300,17 @@
       "hasToolUse": false,
       "contextLabel": "8K",
       "billingMode": "pay",
-      "freeTier": "trial",
-      "tier": "small",
-      "speed": "fast",
+      "freeTier": "none",
+      "modelFamily": "deepseek-ocr-2",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "standard",
       "useCase": [
         "content-creation",
         "writing-assistance"
       ],
       "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -7202,9 +8318,13 @@
       "name": "LegalOne 法律大模型",
       "description": "LegalOne-8B 是一个专为中文法律领域训练的 8B 参数法律大语言模型，具备法律法规理解、判例推理、咨询与文书生成等专业能力，并在权威法律任务评测中表现出与更大通用模型接近甚至领先的性能。",
       "contextSize": 32000,
-      "priceInput": 0.000002,
-      "priceOutput": 0.000002,
-      "isFree": true,
+      "priceInput": 2,
+      "priceOutput": 2,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation"
       ],
@@ -7230,15 +8350,17 @@
       "hasToolUse": false,
       "contextLabel": "32K",
       "billingMode": "pay",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "legalone-8b",
+      "aliases": [],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "content-creation",
         "writing-assistance"
       ],
       "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -7247,7 +8369,11 @@
       "description": "Qwen3-TTS 是一个由 Qwen 团队开发的开源高质量文本转语音（TTS）生成模型，可用于快速将文本合成为自然、人类般的语音。\n",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "speech-synthesis"
       ],
@@ -7273,15 +8399,18 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "qwen3-tts",
+      "modelVariant": "tts",
+      "aliases": [],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "text-to-speech",
         "voice-output"
       ],
       "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -7290,7 +8419,11 @@
       "description": "FLUX.2-klein-4B 是 Black Forest Labs 发布的一款 轻量级、高速推理的图像生成 AI 模型。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "image-generation"
       ],
@@ -7316,9 +8449,11 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "flux.2-klein-4b",
+      "aliases": [],
       "tier": "small",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "creative-generation",
         "art"
@@ -7334,7 +8469,11 @@
       "description": "Tongyi-MAI/Z-Image 是阿里通义实验室开发的一款高质量图像生成基础模型，基于高效的单流扩散 Transformer 架构，专注于强可控性、丰富风格覆盖和高视觉质量，适合作为图像创作、研究和下游开发的核心生成引擎。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "image-generation",
         "vision"
@@ -7363,9 +8502,15 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "z-image",
+      "modelVariant": "image",
+      "aliases": [
+        "z-image-turbo",
+        "xunfei/Z-Image-Turbo"
+      ],
       "tier": "large",
-      "speed": "fast",
+      "speed": "premium",
       "useCase": [
         "image-understanding",
         "visual-q&a",
@@ -7373,7 +8518,7 @@
         "art"
       ],
       "performanceLevel": "mid",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "3-10s"
     },
     {
       "vendor": "gitee",
@@ -7381,9 +8526,13 @@
       "name": "Qwen3-Coder-Next",
       "description": "Qwen3-Coder-Next 是一款开放权重的高效编程语言模型，专为代码生成、复杂工具调用与本地开发代理任务设计。",
       "contextSize": 32000,
-      "priceInput": 0.000004,
-      "priceOutput": 0.000004,
-      "isFree": true,
+      "priceInput": 4,
+      "priceOutput": 4,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation"
       ],
@@ -7409,15 +8558,20 @@
       "hasToolUse": false,
       "contextLabel": "32K",
       "billingMode": "pay",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "qwen3-coder-next",
+      "modelVariant": "coder",
+      "aliases": [
+        "xunfei/Qwen3-Coder-Next-FP8"
+      ],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "content-creation",
         "writing-assistance"
       ],
       "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -7425,9 +8579,13 @@
       "name": "GLM-5",
       "description": "GLM-5 是面向 Coding 与 Agent 场景的新一代大模型，在复杂系统工程与长程任务中达到开源 SOTA，真实编程体验逼近 Claude Opus 级别；基于 744B 新基座、异步强化学习与稀疏注意力，实现从“写代码”到“写工程”的全面升级。",
       "contextSize": 200000,
-      "priceInput": 0.000004,
-      "priceOutput": 0.000018,
+      "priceInput": 4,
+      "priceOutput": 18,
+      "priceCurrency": "CNY",
       "isFree": false,
+      "isExperienceable": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
       "capabilities": [
         "text-generation"
       ],
@@ -7454,6 +8612,11 @@
       "contextLabel": "200K",
       "billingMode": "pay",
       "freeTier": "none",
+      "modelFamily": "glm-5",
+      "aliases": [
+        "GLM-5-Turbo",
+        "xunfei/GLM-5"
+      ],
       "tier": "medium",
       "speed": "standard",
       "useCase": [
@@ -7470,7 +8633,11 @@
       "description": "Qwen3-ASR-1.7B 是一个开源的多语言语音识别（ASR）模型，基于 Qwen3-Omni 框架，可自动识别并转录长音频中的语音内容。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "speech-recognition"
       ],
@@ -7496,16 +8663,19 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "qwen3-asr-1.7b",
+      "modelVariant": "asr",
+      "aliases": [],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "transcription",
         "voice-input"
       ],
       "performanceLevel": "entry",
       "parameterCount": 1700000000,
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -7513,9 +8683,13 @@
       "name": "MiniMax-M2.5",
       "description": "MiniMax-M2.5 是 MiniMax 编码与智能体领域 SOTA，专为 Agent Universe 而设计，显著增强多语言编程能力，致力于提升真实世界复杂任务中的表现。",
       "contextSize": 200000,
-      "priceInput": 0.0000021000000000000002,
-      "priceOutput": 0.000008400000000000001,
+      "priceInput": 2.1,
+      "priceOutput": 8.4,
+      "priceCurrency": "CNY",
       "isFree": false,
+      "isExperienceable": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
       "capabilities": [
         "text-generation"
       ],
@@ -7542,6 +8716,11 @@
       "contextLabel": "200K",
       "billingMode": "pay",
       "freeTier": "none",
+      "modelFamily": "minimax-m2.5",
+      "aliases": [
+        "groq/minimax-m2.5",
+        "xunfei/MiniMax-M2.5"
+      ],
       "tier": "medium",
       "speed": "standard",
       "useCase": [
@@ -7557,9 +8736,13 @@
       "name": "Qwen3.5-35B-A3B",
       "description": "作为原生视觉-语言模型，Qwen3.5-397B-A17B 在推理、编程、智能体能力与多模态理解等全方位基准评估中表现优异，助力开发者与企业显著提升生产力。",
       "contextSize": 64000,
-      "priceInput": 4.0000000000000003e-7,
-      "priceOutput": 0.0000032000000000000003,
-      "isFree": true,
+      "priceInput": 0.4,
+      "priceOutput": 3.2,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation"
       ],
@@ -7585,7 +8768,11 @@
       "hasToolUse": false,
       "contextLabel": "64K",
       "billingMode": "pay",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "qwen3.5-35b-a3b",
+      "aliases": [
+        "xunfei/Qwen3.5-35B-A3B"
+      ],
       "tier": "small",
       "speed": "fast",
       "useCase": [
@@ -7602,9 +8789,13 @@
       "name": "Qwen3.5-27B",
       "description": "Qwen3.5 代表了一次重大飞跃，融合了多模态学习、架构效率、强化学习规模以及全球可访问性等方面的突破，为开发者和企业带来前所未有的能力与效率。",
       "contextSize": 64000,
-      "priceInput": 6e-7,
-      "priceOutput": 0.0000048,
-      "isFree": true,
+      "priceInput": 0.6,
+      "priceOutput": 4.8,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation"
       ],
@@ -7630,16 +8821,18 @@
       "hasToolUse": false,
       "contextLabel": "64K",
       "billingMode": "pay",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "qwen3.5-27b",
+      "aliases": [],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "content-creation",
         "writing-assistance"
       ],
       "performanceLevel": "entry",
       "parameterCount": 27000000000,
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -7647,9 +8840,13 @@
       "name": "GLM-5-Turbo",
       "description": "GLM-5-Turbo 是面向 OpenClaw 龙虾场景深度优化的基座模型。 其从训练阶段就针对龙虾任务的核心需求进行专项优化，增强如工具调用、指令遵循、定时与持续性任务、长链路执行等核心能力，使其在复杂、动态、长链路的任务中也真正具备可执行性。",
       "contextSize": 200000,
-      "priceInput": 0.000007,
-      "priceOutput": 0.000026,
+      "priceInput": 7,
+      "priceOutput": 26,
+      "priceCurrency": "CNY",
       "isFree": false,
+      "isExperienceable": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
       "capabilities": [
         "text-generation"
       ],
@@ -7676,6 +8873,12 @@
       "contextLabel": "200K",
       "billingMode": "pay",
       "freeTier": "none",
+      "modelFamily": "glm-5",
+      "modelVariant": "turbo",
+      "aliases": [
+        "GLM-5",
+        "xunfei/GLM-5"
+      ],
       "tier": "medium",
       "speed": "premium",
       "useCase": [
@@ -7691,9 +8894,13 @@
       "name": "Qwen3.5-122B-A10B",
       "description": "Qwen3.5-122B-A10B 是一款原生多模态大模型，具备复杂推理、代码生成与智能体能力。",
       "contextSize": 256000,
-      "priceInput": 0.0000014,
-      "priceOutput": 0.00001,
-      "isFree": true,
+      "priceInput": 1.4,
+      "priceOutput": 10,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation"
       ],
@@ -7702,7 +8909,7 @@
         "isReasoning": false,
         "isMultimodal": false,
         "hasToolUse": false,
-        "operationsCount": 3,
+        "operationsCount": 2,
         "serviceIdent": "Qwen3.5-122B-A10B",
         "apiFormat": "OPEN_AI",
         "path": "v1/chat/completions",
@@ -7719,16 +8926,20 @@
       "hasToolUse": false,
       "contextLabel": "256K",
       "billingMode": "pay",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "qwen3.5-122b-a10b",
+      "aliases": [
+        "qwen/qwen3.5-122b-a10b"
+      ],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "content-creation",
         "writing-assistance"
       ],
       "performanceLevel": "entry",
       "parameterCount": 122000000000,
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -7736,9 +8947,13 @@
       "name": "GLM-5V-Turbo",
       "description": "GLM-5V-Turbo 是智谱首个多模态 Coding 基座模型，面向视觉编程任务打造。能够原生处理图片、视频、文本等多模态输入，同时擅长长程规划、复杂编程和动作执行；深度适配 Agent 工作流，能够与 Claude Code、OpenClaw 等 Agent 深度协同，完成”看懂环境→规划动作→执行任务”的完整闭环。",
       "contextSize": 128000,
-      "priceInput": 0.000007,
-      "priceOutput": 0.000026,
+      "priceInput": 7,
+      "priceOutput": 26,
+      "priceCurrency": "CNY",
       "isFree": false,
+      "isExperienceable": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
       "capabilities": [
         "text-generation",
         "code"
@@ -7759,7 +8974,7 @@
       "provider": "gitee",
       "tags": [
         "text-generation",
-        "code"
+        "code-generation"
       ],
       "isReasoning": false,
       "isMultimodal": false,
@@ -7767,11 +8982,16 @@
       "contextLabel": "128K",
       "billingMode": "pay",
       "freeTier": "none",
+      "modelFamily": "glm-5v",
+      "modelVariant": "turbo",
+      "aliases": [],
       "tier": "medium",
-      "speed": "premium",
+      "speed": "standard",
       "useCase": [
         "content-creation",
-        "writing-assistance"
+        "writing-assistance",
+        "software-development",
+        "code-completion"
       ],
       "performanceLevel": "mid",
       "estimatedLatency": "1-3s"
@@ -7782,9 +9002,13 @@
       "name": "Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled",
       "description": "基于 Qwen3.5-27B 深度蒸馏 Claude-4.6 Opus 推理能力的高性能模型，擅长结构化思考与复杂问题分解，兼顾推理深度与效率。",
       "contextSize": 128000,
-      "priceInput": 6e-7,
-      "priceOutput": 0.0000048,
-      "isFree": true,
+      "priceInput": 0.6,
+      "priceOutput": 4.8,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation",
         "reasoning"
@@ -7812,9 +9036,12 @@
       "hasToolUse": false,
       "contextLabel": "128K",
       "billingMode": "pay",
-      "freeTier": "trial",
-      "tier": "small",
-      "speed": "fast",
+      "freeTier": "none",
+      "modelFamily": "qwen3.5-27b-claude-4.6-opus-reasoning-distilled",
+      "modelVariant": "reasoning",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
       "useCase": [
         "problem-solving",
         "logical-analysis",
@@ -7823,9 +9050,9 @@
         "writing-assistance",
         "complex-reasoning"
       ],
-      "performanceLevel": "entry",
+      "performanceLevel": "high",
       "parameterCount": 27000000000,
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "3-10s"
     },
     {
       "vendor": "gitee",
@@ -7833,9 +9060,13 @@
       "name": "GLM-5.1",
       "description": "GLM-5.1 是智谱最新旗舰模型，代码能力大大增强，长程任务显著提升，能够在单次任务中持续、自主地工作长达 8 小时，完成从规划、执行到迭代优化的完整闭环，交付工程级成果。",
       "contextSize": 200000,
-      "priceInput": 0.000008,
-      "priceOutput": 0.000028,
+      "priceInput": 8,
+      "priceOutput": 28,
+      "priceCurrency": "CNY",
       "isFree": false,
+      "isExperienceable": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
       "capabilities": [
         "text-generation"
       ],
@@ -7862,6 +9093,11 @@
       "contextLabel": "200K",
       "billingMode": "pay",
       "freeTier": "none",
+      "modelFamily": "glm-5.1",
+      "aliases": [
+        "z-ai/glm-5.1",
+        "xunfei/GLM-5.1"
+      ],
       "tier": "medium",
       "speed": "premium",
       "useCase": [
@@ -7877,9 +9113,13 @@
       "name": "gemma-4-26B-A4B-it",
       "description": "Google 的 Gemma 4 26B A4B-it 是一款基于 Mixture-of-Experts 架构的开源指令微调大模型，在仅激活约 4B 参数的高效推理下，提供接近 26B 规模的强大推理、编码与多模态能力。",
       "contextSize": 128000,
-      "priceInput": 0.0000035,
-      "priceOutput": 0.0000035,
-      "isFree": true,
+      "priceInput": 3.5,
+      "priceOutput": 3.5,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation"
       ],
@@ -7905,16 +9145,21 @@
       "hasToolUse": false,
       "contextLabel": "128K",
       "billingMode": "pay",
-      "freeTier": "trial",
-      "tier": "small",
-      "speed": "fast",
+      "freeTier": "none",
+      "modelFamily": "gemma-4-26b-a4b",
+      "modelVariant": "it",
+      "aliases": [
+        "openrouter/google/gemma-4-26b-a4b-it"
+      ],
+      "tier": "medium",
+      "speed": "standard",
       "useCase": [
         "content-creation",
         "writing-assistance"
       ],
       "performanceLevel": "entry",
       "parameterCount": 26000000000,
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -7922,9 +9167,13 @@
       "name": "MiniMax-M2.7",
       "description": "MiniMax-M2.7 在编程、工具调用与搜索、办公生产力及其他多个场景下达到或刷新了最新的 SOTA 基准，正式开启了模型递归自我提升（recursive self-improvement）的旅程。",
       "contextSize": 200000,
-      "priceInput": 0.0000021000000000000002,
-      "priceOutput": 0.000008400000000000001,
+      "priceInput": 2.1,
+      "priceOutput": 8.4,
+      "priceCurrency": "CNY",
       "isFree": false,
+      "isExperienceable": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
       "capabilities": [
         "text-generation"
       ],
@@ -7951,6 +9200,8 @@
       "contextLabel": "200K",
       "billingMode": "pay",
       "freeTier": "none",
+      "modelFamily": "minimax-m2.7",
+      "aliases": [],
       "tier": "medium",
       "speed": "standard",
       "useCase": [
@@ -7966,9 +9217,13 @@
       "name": "Qwen3.5-9B",
       "description": "Qwen3.5-9B 是一款兼具推理能力、代码生成与多语言理解能力的中型大模型，在复杂任务处理与通用场景中表现稳定。",
       "contextSize": 64000,
-      "priceInput": 2.0000000000000002e-7,
-      "priceOutput": 0.0000016000000000000001,
-      "isFree": true,
+      "priceInput": 0.2,
+      "priceOutput": 1.6,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation"
       ],
@@ -7994,7 +9249,9 @@
       "hasToolUse": false,
       "contextLabel": "64K",
       "billingMode": "pay",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "qwen3.5-9b",
+      "aliases": [],
       "tier": "medium",
       "speed": "fast",
       "useCase": [
@@ -8010,9 +9267,13 @@
       "modelId": "Kimi-K2.6",
       "name": "Kimi-K2.6",
       "description": "Kimi K2.6 作为国内领先的 Coding 模型，在长程代码任务中的表现取得了突破，面对不同编程语言（如 Rust、Go、Python）和任务场景（如前端、运维、性能优化）均具备更可靠的泛化能力。",
-      "priceInput": 0.0000065,
-      "priceOutput": 0.000027,
+      "priceInput": 6.5,
+      "priceOutput": 27,
+      "priceCurrency": "CNY",
       "isFree": false,
+      "isExperienceable": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
       "capabilities": [
         "text-generation"
       ],
@@ -8039,6 +9300,8 @@
       "contextLabel": "unknown",
       "billingMode": "pay",
       "freeTier": "none",
+      "modelFamily": "kimi-k2.6",
+      "aliases": [],
       "tier": "medium",
       "speed": "premium",
       "useCase": [
@@ -8054,9 +9317,13 @@
       "name": "Qwen3.6-Plus",
       "description": "Qwen3.6原生视觉语言系列Plus模型，展现出与当前顶尖前沿模型相媲美的卓越性能，模型效果相较3.5系列显著提升。",
       "contextSize": 64000,
-      "priceInput": 0.000008,
-      "priceOutput": 0.000048,
+      "priceInput": 8,
+      "priceOutput": 48,
+      "priceCurrency": "CNY",
       "isFree": false,
+      "isExperienceable": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
       "capabilities": [
         "text-generation"
       ],
@@ -8083,6 +9350,8 @@
       "contextLabel": "64K",
       "billingMode": "pay",
       "freeTier": "none",
+      "modelFamily": "qwen3.6-plus",
+      "aliases": [],
       "tier": "medium",
       "speed": "premium",
       "useCase": [
@@ -8098,9 +9367,13 @@
       "name": "Qwen3.6-Max",
       "description": "Qwen3.6系列中规模最大、综合能力最强的Max模型Preview版本，",
       "contextSize": 64000,
-      "priceInput": 0.000015,
-      "priceOutput": 0.00009,
+      "priceInput": 15,
+      "priceOutput": 90,
+      "priceCurrency": "CNY",
       "isFree": false,
+      "isExperienceable": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
       "capabilities": [
         "text-generation"
       ],
@@ -8127,23 +9400,29 @@
       "contextLabel": "64K",
       "billingMode": "pay",
       "freeTier": "none",
-      "tier": "medium",
+      "modelFamily": "qwen3.6-max",
+      "aliases": [],
+      "tier": "large",
       "speed": "premium",
       "useCase": [
         "content-creation",
         "writing-assistance"
       ],
       "performanceLevel": "mid",
-      "estimatedLatency": "1-3s"
+      "estimatedLatency": "3-10s"
     },
     {
       "vendor": "gitee",
       "modelId": "DeepSeek-V4-Pro",
       "name": "DeepSeek-V4-Pro",
       "description": "旗舰级 MoE 大模型，总参1.6T、激活 49B，原生支持百万级超长上下文。依托海量高质量训练数据，具备顶尖数学逻辑、复杂推理、专业代码与长文本深度解析能力，适配高阶科研、复杂办公、深度智能代理等高难度场景。",
-      "priceInput": 0.000012,
-      "priceOutput": 0.000024,
+      "priceInput": 12,
+      "priceOutput": 24,
+      "priceCurrency": "CNY",
       "isFree": false,
+      "isExperienceable": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
       "capabilities": [
         "text-generation"
       ],
@@ -8170,6 +9449,10 @@
       "contextLabel": "unknown",
       "billingMode": "pay",
       "freeTier": "none",
+      "modelFamily": "deepseek-v4-pro",
+      "aliases": [
+        "deepseek-ai/deepseek-v4-pro"
+      ],
       "tier": "large",
       "speed": "premium",
       "useCase": [
@@ -8184,9 +9467,13 @@
       "modelId": "DeepSeek-V4-Flash",
       "name": "DeepSeek-V4-Flash",
       "description": "高效轻量化MoE模型，总参284B，激活13B，原生支持百万超长上下文能力。推理速度快、延迟低、调用成本低廉，综合能力均衡，主打高并发、轻量化任务，适合日常对话、内容创作、基础 RAG、批量文案处理等普惠刚需场景。",
-      "priceInput": 0.000001,
-      "priceOutput": 0.000002,
-      "isFree": true,
+      "priceInput": 1,
+      "priceOutput": 2,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation"
       ],
@@ -8212,14 +9499,71 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "pay",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "deepseek-v4-flash",
+      "aliases": [
+        "deepseek-ai/deepseek-v4-flash"
+      ],
       "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "1-3s"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "Qwen3.6-35B-A3B",
+      "name": "Qwen3.6-35B-A3B",
+      "description": "Qwen3.6-35B-A3B 模型是一款基于混合专家架构的高性能大语言模型，具备强推理能力与高性价比，适用于复杂任务与高并发AI应用场景。",
+      "contextSize": 64000,
+      "priceInput": 0.4,
+      "priceOutput": 3.2,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
+      "capabilities": [
+        "text-generation"
+      ],
+      "metadata": {
+        "originalType": "text2text",
+        "isReasoning": false,
+        "isMultimodal": false,
+        "hasToolUse": false,
+        "operationsCount": 1,
+        "serviceIdent": "Qwen3.6-35B-A3B",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/chat/completions",
+        "tags": "文本生成, Function Calling, 视觉, 64K, OpenClaw 模型",
+        "freeUse": true,
+        "isFullyFree": false
+      },
+      "provider": "gitee",
+      "tags": [
+        "text-generation"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "64K",
+      "billingMode": "pay",
+      "freeTier": "none",
+      "modelFamily": "qwen3.6-35b-a3b",
+      "aliases": [
+        "xunfei/Qwen3.6-35B-A3B"
+      ],
+      "tier": "small",
       "speed": "fast",
       "useCase": [
         "content-creation",
         "writing-assistance"
       ],
       "performanceLevel": "entry",
+      "parameterCount": 35000000000,
       "estimatedLatency": "< 1s"
     },
     {
@@ -8230,7 +9574,11 @@
       "contextSize": 500,
       "priceInput": 0,
       "priceOutput": 0,
+      "priceCurrency": "CNY",
       "isFree": true,
+      "isExperienceable": false,
+      "freeKind": "permanent",
+      "trialScope": "specific",
       "capabilities": [
         "embeddings"
       ],
@@ -8257,6 +9605,8 @@
       "contextLabel": "500",
       "billingMode": "free",
       "freeTier": "full",
+      "modelFamily": "bge-large-zh-v1.5",
+      "aliases": [],
       "tier": "medium",
       "speed": "fast",
       "useCase": [
@@ -8274,7 +9624,11 @@
       "contextSize": 500,
       "priceInput": 0,
       "priceOutput": 0,
+      "priceCurrency": "CNY",
       "isFree": true,
+      "isExperienceable": false,
+      "freeKind": "permanent",
+      "trialScope": "specific",
       "capabilities": [
         "embeddings"
       ],
@@ -8301,6 +9655,8 @@
       "contextLabel": "500",
       "billingMode": "free",
       "freeTier": "full",
+      "modelFamily": "bge-small-zh-v1.5",
+      "aliases": [],
       "tier": "medium",
       "speed": "fast",
       "useCase": [
@@ -8317,7 +9673,11 @@
       "description": "ChatTTS 是一个专为对话场景设计的语音生成模型，用于对话任务，或对话相关的音视频提供语音。支持中英文，模型由约 10 万小时的中英文数据训练，能够输出自然流畅的语音合成效果。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "speech-synthesis"
       ],
@@ -8343,15 +9703,17 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "chattts",
+      "aliases": [],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "text-to-speech",
         "voice-output"
       ],
       "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -8361,7 +9723,11 @@
       "contextSize": 8000,
       "priceInput": 0,
       "priceOutput": 0,
+      "priceCurrency": "CNY",
       "isFree": true,
+      "isExperienceable": false,
+      "freeKind": "permanent",
+      "trialScope": "specific",
       "capabilities": [
         "embeddings"
       ],
@@ -8388,6 +9754,8 @@
       "contextLabel": "8K",
       "billingMode": "free",
       "freeTier": "full",
+      "modelFamily": "bge-m3",
+      "aliases": [],
       "tier": "medium",
       "speed": "fast",
       "useCase": [
@@ -8405,7 +9773,11 @@
       "contextSize": 8000,
       "priceInput": 0,
       "priceOutput": 0,
+      "priceCurrency": "CNY",
       "isFree": true,
+      "isExperienceable": false,
+      "freeKind": "permanent",
+      "trialScope": "specific",
       "capabilities": [
         "embeddings"
       ],
@@ -8432,6 +9804,9 @@
       "contextLabel": "8K",
       "billingMode": "free",
       "freeTier": "full",
+      "modelFamily": "bge-reranker-v2-m3",
+      "modelVariant": "reranker",
+      "aliases": [],
       "tier": "medium",
       "speed": "fast",
       "useCase": [
@@ -8449,7 +9824,11 @@
       "contextSize": 8000,
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation"
       ],
@@ -8475,16 +9854,19 @@
       "hasToolUse": false,
       "contextLabel": "8K",
       "billingMode": "free",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "deepseek-coder-33b",
+      "modelVariant": "coder",
+      "aliases": [],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "content-creation",
         "writing-assistance"
       ],
       "performanceLevel": "entry",
       "parameterCount": 33000000000,
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -8493,7 +9875,11 @@
       "description": "Fish Speech 由 Fish Audio 开源的文本转语音（TTS）模型，支持英语、中文和日语。经过约 15 万小时的数据训练，具有运行内存低、推理速度快、自定义性高的特点。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "speech-synthesis"
       ],
@@ -8519,15 +9905,17 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "trial",
-      "tier": "small",
-      "speed": "fast",
+      "freeTier": "none",
+      "modelFamily": "fish-speech-1.2-sft",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "standard",
       "useCase": [
         "text-to-speech",
         "voice-output"
       ],
       "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -8536,7 +9924,11 @@
       "description": "由 Black Forest Labs 开发的 120 亿参数文生图模型，采用潜在对抗扩散蒸馏技术，能够在 1 到 4 步内生成高质量图像。该模型性能媲美闭源替代品，并在 Apache-2.0 许可证下发布，适用于个人、科研和商业用途。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "image-generation"
       ],
@@ -8562,15 +9954,17 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "flux-1-schnell",
+      "aliases": [],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "creative-generation",
         "art"
       ],
       "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -8579,7 +9973,11 @@
       "description": "CosyVoice 由阿里通义实验室开源的多语言语音生成模型，支持中文、英语、日语、粤语和韩语。该模型经过超 15 万小时数据训练，具备多语言生成、零样本学习、声音克隆和情感细节调控的能力。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "speech-synthesis"
       ],
@@ -8605,15 +10003,17 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "funaudiollm-cosyvoice-300m",
+      "aliases": [],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "text-to-speech",
         "voice-output"
       ],
       "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -8623,7 +10023,11 @@
       "contextSize": 32000,
       "priceInput": 0,
       "priceOutput": 0,
+      "priceCurrency": "CNY",
       "isFree": true,
+      "isExperienceable": false,
+      "freeKind": "permanent",
+      "trialScope": "specific",
       "capabilities": [
         "text-generation"
       ],
@@ -8650,7 +10054,13 @@
       "contextLabel": "32K",
       "billingMode": "free",
       "freeTier": "full",
-      "tier": "small",
+      "modelFamily": "glm-4-9b",
+      "modelVariant": "chat",
+      "aliases": [
+        "bigmodel/glm-4-9b",
+        "GLM-4-9B-0414"
+      ],
+      "tier": "medium",
       "speed": "fast",
       "useCase": [
         "content-creation",
@@ -8667,7 +10077,11 @@
       "description": "Kolors 是由快手 Kolors 团队开发的文生图模型。由数十亿的参数训练，在视觉质量、中文语义理解和文本渲染方面有显著优势。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "image-generation"
       ],
@@ -8693,15 +10107,17 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "kolors",
+      "aliases": [],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "creative-generation",
         "art"
       ],
       "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -8709,9 +10125,13 @@
       "name": "Qwen2-72B-Instruct",
       "description": "Qwen2 是 Qwen 模型的最新系列，对比当前最优的开源模型，Qwen2-72B 在自然语言理解、知识、代码、数学及多语言等多项能力上均显著超越当前领先的模型。",
       "contextSize": 32000,
-      "priceInput": 0.000002,
-      "priceOutput": 0.000002,
-      "isFree": true,
+      "priceInput": 2,
+      "priceOutput": 2,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation"
       ],
@@ -8737,16 +10157,21 @@
       "hasToolUse": false,
       "contextLabel": "32K",
       "billingMode": "pay",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "qwen2-72b",
+      "modelVariant": "instruct",
+      "aliases": [
+        "xunfei/Qwen2-72B-Instruct"
+      ],
       "tier": "large",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "content-creation",
         "writing-assistance"
       ],
-      "performanceLevel": "entry",
+      "performanceLevel": "mid",
       "parameterCount": 72000000000,
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "3-10s"
     },
     {
       "vendor": "gitee",
@@ -8756,7 +10181,11 @@
       "contextSize": 24000,
       "priceInput": 0,
       "priceOutput": 0,
+      "priceCurrency": "CNY",
       "isFree": true,
+      "isExperienceable": false,
+      "freeKind": "permanent",
+      "trialScope": "specific",
       "capabilities": [
         "text-generation"
       ],
@@ -8783,6 +10212,9 @@
       "contextLabel": "24K",
       "billingMode": "free",
       "freeTier": "full",
+      "modelFamily": "qwen2-7b",
+      "modelVariant": "instruct",
+      "aliases": [],
       "tier": "medium",
       "speed": "fast",
       "useCase": [
@@ -8800,7 +10232,11 @@
       "description": "由 Stability AI 推出的最新文生图大模型。这一版本在继承了前代的优点上，对图像质量、文本理解和风格多样性等方面进行了显著改进，能够更准确地解读复杂的自然语言提示，并生成更为精确和多样化的图像。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "image-generation"
       ],
@@ -8826,15 +10262,17 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "trial",
-      "tier": "small",
-      "speed": "fast",
+      "freeTier": "none",
+      "modelFamily": "stable-diffusion-3-medium",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "standard",
       "useCase": [
         "creative-generation",
         "art"
       ],
       "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -8843,7 +10281,11 @@
       "description": "由 Stability AI 开发并开源的文生图大模型，其创意图像生成能力位居行业前列。具备出色的指令理解能力，能够支持反向 Prompt 定义来精确生成内容。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "image-generation"
       ],
@@ -8869,15 +10311,17 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "stable-diffusion-xl-base-1.0",
+      "aliases": [],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "creative-generation",
         "art"
       ],
       "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -8886,7 +10330,11 @@
       "description": "由 Open AI 开发并开源自动语音识别（ASR）模型。能够很好地处理各种语言、口音和背景噪音。相较于 Large 版，Base 版处理速度更快，具有较少的参数。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "speech-recognition"
       ],
@@ -8912,15 +10360,17 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "whisper-base",
+      "aliases": [],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "transcription",
         "voice-input"
       ],
       "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -8929,7 +10379,11 @@
       "description": "由 Open AI 开发并开源自动语音识别（ASR）模型。Whisper 由 68 万小时的多语言数据训练，其能够很好地处理各种语言、口音和背景噪音。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": true,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "speech-recognition"
       ],
@@ -8955,15 +10409,17 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "trial",
+      "freeTier": "none",
+      "modelFamily": "whisper-large",
+      "aliases": [],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "useCase": [
         "transcription",
         "voice-input"
       ],
       "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "estimatedLatency": "1-3s"
     }
   ]
 }

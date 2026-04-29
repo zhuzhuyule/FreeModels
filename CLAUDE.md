@@ -101,6 +101,18 @@ npm run typecheck
 - `evaluateBilling` 中 `priceInput === undefined && priceOutput === undefined` → `'unknown'`，不要当 free
 - 加新 provider 后，记得 `evaluator.ts:PROVIDER_META` 补 `displayName` / `website`
 
+## 详细文档（按需 grep）
+
+| 主题 | 路径 |
+|------|------|
+| 数据流 / 缓存 / 管线 | `docs/architecture.md` |
+| 字段定义 / taxonomy / family | `docs/fields.md` |
+| 代码约定 / 历史陷阱 | `docs/conventions.md` |
+| Provider 数据源 / 免费策略 | `docs/providers/README.md` |
+| LLM / 企业微信通知 | `docs/llm-and-notify.md` |
+| CI / Pages / CDN | `docs/deployment.md` |
+| 新增 provider 步骤 | `docs/adding-provider.md` |
+
 ## 其他 agent 的笔记
 
-`.monkeycode/` 目录是 monkeycode agent 的累积笔记，**保留不要删**——其他 agent 依赖它做上下文。本文件 (CLAUDE.md) 是 Claude Code 视角的精简版，两者并存。
+`.monkeycode/` 是 monkeycode agent 的累积开发笔记，**保留不要删**——记录历史决策与陷阱。本文件 (CLAUDE.md) + `docs/` 是当前权威。
