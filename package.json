@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "sync-models": "node --import tsx scripts/hub/aggregator.ts",
-    "generate-docs": "node --import tsx scripts/hub/docs-generator.ts",
+    "generate-docs": "node --import tsx scripts/hub/docs-generator.ts && node --import tsx scripts/hub/docs-readme-top.ts",
     "sync": "npm run sync-models && npm run generate-docs",
     "typecheck": "tsc --noEmit"
   },
