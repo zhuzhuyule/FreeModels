@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Model Hub</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Model Hub</h1>
+      <p class="subtitle">Multi-Provider AI Model Aggregation</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="stats">
+      <div class="stat">
+        <span class="stat-value" id="total-models">-</span>
+        <span class="stat-label">Total Models</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value" id="total-providers">-</span>
+        <span class="stat-label">Providers</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value" id="free-models">-</span>
+        <span class="stat-label">Free Models</span>
+      </div>
+    </div>
+
+    <div class="view-tabs">
+      <button class="tab active" data-view="all">All Models</button>
+      <button class="tab" data-view="free">Free</button>
+      <button class="tab" data-view="reasoning">Reasoning</button>
+      <button class="tab" data-view="multimodal">Multimodal</button>
+    </div>
+
+    <div class="search-bar">
+      <input type="text" id="search" placeholder="Search models...">
+    </div>
+
+    <div class="providers-filter" id="providers-filter"></div>
+
+    <div class="models-list" id="models-list">
+      <div class="loading">Loading...</div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Last updated: <span id="last-updated">-</span></p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

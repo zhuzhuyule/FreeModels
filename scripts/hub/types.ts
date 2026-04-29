@@ -17,6 +17,7 @@ export interface EnhancedModelData extends RawModelData {
   isMultimodal: boolean;
   contextLabel: string;
   billingMode: 'free' | 'pay' | 'mixed';
+  provider: string;
 }
 
 export interface CachedCapabilities {
@@ -28,6 +29,13 @@ export interface CachedCapabilities {
   updatedAt: string;
 }
 
+export interface ProviderMeta {
+  name: string;
+  displayName: string;
+  website?: string;
+  logoUrl?: string;
+}
+
 export interface ProviderOutput {
   provider: string;
   updatedAt: string;
@@ -35,10 +43,20 @@ export interface ProviderOutput {
   models: EnhancedModelData[];
 }
 
+export interface ViewOutput {
+  view: string;
+  updatedAt: string;
+  totalModels: number;
+  filters: Record<string, string | string[]>;
+  models: EnhancedModelData[];
+}
+
 export interface AggregatedOutput {
   updatedAt: string;
   totalModels: number;
   providers: string[];
+  providerMeta: Record<string, ProviderMeta>;
+  views: string[];
   models: EnhancedModelData[];
 }
 

@@ -74,6 +74,7 @@ export function enhanceModel(raw: RawModelData): EnhancedModelData {
 
   return {
     ...raw,
+    provider: raw.vendor,
     tags,
     isReasoning,
     isMultimodal,
@@ -97,6 +98,7 @@ export function getCachedOrInfer(
 
   return {
     ...raw,
+    provider: vendor,
     tags: cached?.tags ?? tags,
     isReasoning: cached?.isReasoning ?? isReasoning,
     isMultimodal: cached?.isMultimodal ?? isMultimodal,
