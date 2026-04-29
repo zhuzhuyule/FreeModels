@@ -101,7 +101,11 @@ async function fetchLongCatModels(): Promise<RawModelData[]> {
     contextSize: m.contextSize,
     priceInput: undefined,
     priceOutput: undefined,
+    priceCurrency: 'CNY',
     isFree: m.isFree,
+    freeKind: m.isFree ? 'trial-quota' : 'unknown',
+    trialScope: m.isFree ? 'specific' : 'none',
+    rateLimits: m.isFree ? { notes: m.freeQuota } : undefined,
     capabilities: m.capabilities,
     metadata: {
       originalId: m.modelId,

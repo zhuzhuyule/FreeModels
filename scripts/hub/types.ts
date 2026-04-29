@@ -8,6 +8,20 @@ export interface OpenAIModelObject {
   parent?: string | null;
 }
 
+export type FreeKind = 'permanent' | 'rate-limited' | 'trial-quota' | 'preview' | 'unknown';
+export type TrialScope = 'all' | 'flagship' | 'fast' | 'specific' | 'none';
+export type BillingMode = 'free' | 'pay' | 'mixed' | 'unknown';
+export type FreeTier = 'none' | 'trial' | 'full';
+export type PriceCurrency = 'USD' | 'CNY';
+
+export interface RateLimits {
+  rpm?: number;
+  rpd?: number;
+  tpm?: number;
+  tpd?: number;
+  notes?: string;
+}
+
 export interface ExtendedModelObject extends OpenAIModelObject {
   provider: string;
   model_id: string;
@@ -17,6 +31,8 @@ export interface ExtendedModelObject extends OpenAIModelObject {
   context_label?: string;
   price_input?: number;
   price_output?: number;
+  price_currency?: PriceCurrency;
+  price_unit?: 'per_million_tokens';
   is_free?: boolean;
   is_experienceable?: boolean;
   capabilities?: string[];
@@ -24,8 +40,15 @@ export interface ExtendedModelObject extends OpenAIModelObject {
   is_reasoning?: boolean;
   is_multimodal?: boolean;
   has_tool_use?: boolean;
-  billing_mode?: 'free' | 'pay' | 'mixed';
-  free_tier?: 'none' | 'trial' | 'full';
+  billing_mode?: BillingMode;
+  free_tier?: FreeTier;
+  free_kind?: FreeKind;
+  trial_scope?: TrialScope;
+  rate_limits?: RateLimits;
+  model_family?: string;
+  model_variant?: string;
+  quantization?: string;
+  aliases?: string[];
   parameter_count?: number;
   tier?: 'small' | 'medium' | 'large' | 'xlarge';
   speed?: 'fast' | 'standard' | 'premium';
@@ -49,11 +72,21 @@ export interface RawModelData {
   name: string;
   description?: string;
   contextSize?: number;
+  /** Price in {priceCurrency} per 1,000,000 input tokens. undefined = unknown. */
   priceInput?: number;
+  /** Price in {priceCurrency} per 1,000,000 output tokens. undefined = unknown. */
   priceOutput?: number;
+  priceCurrency?: PriceCurrency;
   isFree?: boolean;
   isExperienceable?: boolean;
   capabilities?: string[];
+  freeKind?: FreeKind;
+  trialScope?: TrialScope;
+  rateLimits?: RateLimits;
+  modelFamily?: string;
+  modelVariant?: string;
+  quantization?: string;
+  aliases?: string[];
   metadata?: Record<string, unknown>;
 }
 
@@ -63,8 +96,14 @@ export interface EnhancedModelData extends RawModelData {
   isMultimodal: boolean;
   hasToolUse: boolean;
   contextLabel: string;
-  billingMode: 'free' | 'pay' | 'mixed';
-  freeTier: 'none' | 'trial' | 'full';
+  billingMode: BillingMode;
+  freeTier: FreeTier;
+  freeKind: FreeKind;
+  trialScope: TrialScope;
+  modelFamily: string;
+  modelVariant?: string;
+  quantization?: string;
+  aliases: string[];
   provider: string;
   parameterCount?: number;
   tier: 'small' | 'medium' | 'large' | 'xlarge';
@@ -149,6 +188,8 @@ export function toOpenAICompatible(models: EnhancedModelData[]): OpenAICompatibl
         context_label: m.contextLabel,
         price_input: m.priceInput,
         price_output: m.priceOutput,
+        price_currency: m.priceCurrency,
+        price_unit: m.priceInput !== undefined || m.priceOutput !== undefined ? 'per_million_tokens' as const : undefined,
         is_free: m.isFree,
         is_experienceable: m.isExperienceable,
         capabilities: m.capabilities,
@@ -158,6 +199,13 @@ export function toOpenAICompatible(models: EnhancedModelData[]): OpenAICompatibl
         has_tool_use: m.hasToolUse,
         billing_mode: m.billingMode,
         free_tier: m.freeTier,
+        free_kind: m.freeKind,
+        trial_scope: m.trialScope,
+        rate_limits: m.rateLimits,
+        model_family: m.modelFamily,
+        model_variant: m.modelVariant,
+        quantization: m.quantization,
+        aliases: m.aliases,
         parameter_count: m.parameterCount,
         tier: m.tier,
         speed: m.speed,

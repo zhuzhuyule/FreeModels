@@ -12,6 +12,7 @@ on:
 
 permissions:
   contents: write
+  models: read
 
 jobs:
   sync:
@@ -30,6 +31,8 @@ jobs:
         run: npm ci
 
       - name: Sync models
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npm run sync-models
 
       - name: Commit and push changes

@@ -7,27 +7,27 @@ export interface ModelProfile {
 }
 
 const TIER_PATTERNS: Array<{ pattern: RegExp; tier: 'small' | 'medium' | 'large' | 'xlarge' }> = [
-  { pattern: /\b0\.5B?\b/i, tier: 'small' },
-  { pattern: /\b1\.5B?\b/i, tier: 'small' },
-  { pattern: /\b2B?\b/i, tier: 'small' },
-  { pattern: /\b3B?\b/i, tier: 'small' },
-  { pattern: /\b4B?\b/i, tier: 'small' },
-  { pattern: /\b6B?\b/i, tier: 'medium' },
-  { pattern: /\b7B?\b/i, tier: 'medium' },
-  { pattern: /\b8B?\b/i, tier: 'medium' },
-  { pattern: /\b9B?\b/i, tier: 'medium' },
-  { pattern: /\b13B?\b/i, tier: 'medium' },
-  { pattern: /\b14B?\b/i, tier: 'medium' },
-  { pattern: /\b20B?\b/i, tier: 'medium' },
-  { pattern: /\b32B?\b/i, tier: 'large' },
-  { pattern: /\b34B?\b/i, tier: 'large' },
-  { pattern: /\b40B?\b/i, tier: 'large' },
-  { pattern: /\b70B?\b/i, tier: 'large' },
-  { pattern: /\b72B?\b/i, tier: 'large' },
-  { pattern: /\b110B?\b/i, tier: 'xlarge' },
-  { pattern: /\b180B?\b/i, tier: 'xlarge' },
-  { pattern: /\b200B?\b/i, tier: 'xlarge' },
-  { pattern: /\b400B?\b/i, tier: 'xlarge' },
+  { pattern: /\b0\.5B\b/i, tier: 'small' },
+  { pattern: /\b1\.5B\b/i, tier: 'small' },
+  { pattern: /\b2B\b/i, tier: 'small' },
+  { pattern: /\b3B\b/i, tier: 'small' },
+  { pattern: /\b4B\b/i, tier: 'small' },
+  { pattern: /\b6B\b/i, tier: 'medium' },
+  { pattern: /\b7B\b/i, tier: 'medium' },
+  { pattern: /\b8B\b/i, tier: 'medium' },
+  { pattern: /\b9B\b/i, tier: 'medium' },
+  { pattern: /\b13B\b/i, tier: 'medium' },
+  { pattern: /\b14B\b/i, tier: 'medium' },
+  { pattern: /\b20B\b/i, tier: 'medium' },
+  { pattern: /\b32B\b/i, tier: 'large' },
+  { pattern: /\b34B\b/i, tier: 'large' },
+  { pattern: /\b40B\b/i, tier: 'large' },
+  { pattern: /\b70B\b/i, tier: 'large' },
+  { pattern: /\b72B\b/i, tier: 'large' },
+  { pattern: /\b110B\b/i, tier: 'xlarge' },
+  { pattern: /\b180B\b/i, tier: 'xlarge' },
+  { pattern: /\b200B\b/i, tier: 'xlarge' },
+  { pattern: /\b400B\b/i, tier: 'xlarge' },
 ];
 
 const SPEED_INDICATORS: Array<{ pattern: RegExp; speed: 'fast' | 'standard' | 'premium'; reason: string }> = [
@@ -100,9 +100,9 @@ export function inferTier(modelName: string, capabilities: string[], priceInput?
   if (capabilities.includes('vision') && !capabilities.includes('embeddings')) return 'large';
 
   if (priceInput !== undefined && priceInput > 0) {
-    if (priceInput < 0.0000005) return 'small';
-    if (priceInput < 0.000002) return 'medium';
-    if (priceInput > 0.00001) return 'large';
+    if (priceInput < 0.5) return 'small';
+    if (priceInput < 2) return 'medium';
+    if (priceInput > 10) return 'large';
   }
 
   return 'medium';
@@ -128,8 +128,8 @@ export function inferSpeed(
   if (capabilities.includes('code-generation') || capabilities.includes('code-editing')) return 'standard';
 
   if (priceInput !== undefined && priceInput > 0) {
-    if (priceInput < 0.0000005) return 'fast';
-    if (priceInput > 0.000005) return 'premium';
+    if (priceInput < 0.5) return 'fast';
+    if (priceInput > 5) return 'premium';
   }
 
   return 'standard';

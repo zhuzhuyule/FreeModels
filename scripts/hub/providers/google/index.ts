@@ -356,22 +356,28 @@ const MODEL_DATA: GoogleModel[] = [
 async function fetchGoogleModels(): Promise<RawModelData[]> {
   console.log('[google] Parsing models from pricing documentation...');
 
-  return MODEL_DATA.map((m) => ({
-    vendor: 'google',
-    modelId: `google/${m.modelId}`,
-    name: m.name,
-    description: `Google: ${m.description}`,
-    contextSize: m.contextSize,
-    priceInput: m.priceInput,
-    priceOutput: m.priceOutput !== undefined && m.priceOutput > 0 ? m.priceOutput : undefined,
-    isFree: m.isFree,
-    capabilities: m.capabilities,
-    metadata: {
-      originalId: m.modelId,
-      category: m.category,
-      provider: 'google',
-    },
-  }));
+  return MODEL_DATA.map((m) => {
+    const isFlagship = /pro|ultra/i.test(m.modelId);
+    return {
+      vendor: 'google',
+      modelId: `google/${m.modelId}`,
+      name: m.name,
+      description: `Google: ${m.description}`,
+      contextSize: m.contextSize,
+      priceInput: m.priceInput,
+      priceOutput: m.priceOutput !== undefined && m.priceOutput > 0 ? m.priceOutput : undefined,
+      priceCurrency: 'USD',
+      isFree: m.isFree,
+      freeKind: m.isFree ? 'rate-limited' : 'unknown',
+      trialScope: m.isFree ? (isFlagship ? 'flagship' : 'fast') : 'none',
+      capabilities: m.capabilities,
+      metadata: {
+        originalId: m.modelId,
+        category: m.category,
+        provider: 'google',
+      },
+    };
+  });
 }
 
 export const fetchModels: ProviderPlugin = fetchGoogleModels;

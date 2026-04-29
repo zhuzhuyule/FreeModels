@@ -153,7 +153,11 @@ async function fetchNvidiaModels(): Promise<RawModelData[]> {
       contextSize: undefined,
       priceInput: undefined,
       priceOutput: undefined,
+      priceCurrency: 'USD',
       isFree,
+      freeKind: isFree ? 'trial-quota' : 'unknown',
+      trialScope: isFree ? 'specific' : 'none',
+      rateLimits: isFree ? { notes: 'NVIDIA NIM free credits, exhaustible' } : undefined,
       capabilities,
       metadata: { ...m, is_free_endpoint: isFree },
     };

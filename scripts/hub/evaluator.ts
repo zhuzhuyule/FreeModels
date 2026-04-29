@@ -64,14 +64,15 @@ export function saveCache(cache: Record<string, CachedCapabilities>): void {
   fs.writeFileSync(CACHE_PATH, JSON.stringify(cache, null, 2));
 }
 
-export function updateCache(
+export function mutateCacheEntry(
+  cache: Record<string, CachedCapabilities>,
   vendor: string,
   modelId: string,
   model: RawModelData,
   enhanced: EnhancedModelData
 ): void {
-  const cache = loadCache();
   const key = `${vendor}/${modelId}`;
+  const now = new Date().toISOString();
 
   if (!cache[key]) {
     cache[key] = {
@@ -84,22 +85,22 @@ export function updateCache(
       tier: enhanced.tier,
       performanceLevel: enhanced.performanceLevel,
       description: model.description || enhanced.tags.join(', '),
-      updatedAt: new Date().toISOString(),
+      updatedAt: now,
     };
-    saveCache(cache);
-  } else if (model.description && !cache[key].description?.startsWith(model.description.substring(0, 20))) {
+    return;
+  }
+  if (model.description && !cache[key].description?.startsWith(model.description.substring(0, 20))) {
     cache[key].description = model.description;
-    cache[key].updatedAt = new Date().toISOString();
-    saveCache(cache);
+    cache[key].updatedAt = now;
   }
 }
 
-export function enhanceWithCache(
+export function enhanceWithCacheUsing(
+  cache: Record<string, CachedCapabilities>,
   vendor: string,
   modelId: string,
   raw: RawModelData
 ): EnhancedModelData {
-  const cache = loadCache();
   const base = getCachedOrInfer(vendor, modelId, raw, cache);
 
   const cached = cache[`${vendor}/${modelId}`];

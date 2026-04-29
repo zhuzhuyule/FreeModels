@@ -67,7 +67,10 @@ async function fetchCerebrasModels(): Promise<RawModelData[]> {
     contextSize: m.contextSize,
     priceInput: m.inputPrice,
     priceOutput: m.outputPrice,
+    priceCurrency: 'USD',
     isFree: m.isFree,
+    freeKind: m.isFree ? 'rate-limited' : (m.isPreview ? 'preview' : 'unknown'),
+    trialScope: m.isFree ? 'specific' : (m.isPreview ? 'specific' : 'none'),
     capabilities: m.capabilities,
     metadata: {
       originalId: m.modelId,

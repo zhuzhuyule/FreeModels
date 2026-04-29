@@ -80,7 +80,11 @@ async function fetchOpenRouterModels(): Promise<RawModelData[]> {
       contextSize: m.context_length || undefined,
       priceInput: 0,
       priceOutput: 0,
+      priceCurrency: 'USD',
       isFree: true,
+      freeKind: 'rate-limited',
+      trialScope: 'specific',
+      rateLimits: { rpm: 20, rpd: 50, notes: 'Free models limited to 20 req/min, 50/day on basic accounts' },
       capabilities,
       metadata: {
         originalId: m.slug,

@@ -152,8 +152,8 @@ async function fetchGiteeModels(): Promise<RawModelData[]> {
       modelIdent = service.name || 'Unknown';
     }
 
-    const priceInput = tPriceInput > 0 ? tPriceInput / 1_000_000 : (tPriceInput === 0 ? 0 : undefined);
-    const priceOutput = tPriceOutput > 0 ? tPriceOutput / 1_000_000 : (tPriceOutput === 0 ? 0 : undefined);
+    const priceInput = tPriceInput > 0 ? tPriceInput : (tPriceInput === 0 ? 0 : undefined);
+    const priceOutput = tPriceOutput > 0 ? tPriceOutput : (tPriceOutput === 0 ? 0 : undefined);
 
     models.push({
       vendor: 'gitee',
@@ -163,8 +163,11 @@ async function fetchGiteeModels(): Promise<RawModelData[]> {
       contextSize,
       priceInput,
       priceOutput,
+      priceCurrency: 'CNY',
       isFree: isFullyFree,
       isExperienceable,
+      freeKind: isFullyFree ? 'permanent' : (isExperienceable ? 'trial-quota' : 'unknown'),
+      trialScope: isFullyFree ? 'specific' : (isExperienceable ? 'all' : 'none'),
       capabilities,
       metadata: {
         originalType: rawType,

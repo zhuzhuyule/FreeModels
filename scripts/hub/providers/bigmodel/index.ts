@@ -236,7 +236,10 @@ async function fetchBigModelModels(): Promise<RawModelData[]> {
       contextSize,
       priceInput: isFree ? 0 : undefined,
       priceOutput: isFree ? 0 : undefined,
+      priceCurrency: 'CNY',
       isFree,
+      freeKind: isFree ? 'permanent' : 'unknown',
+      trialScope: isFree ? 'specific' : 'none',
       capabilities,
       metadata: {
         originalName: pm.name,

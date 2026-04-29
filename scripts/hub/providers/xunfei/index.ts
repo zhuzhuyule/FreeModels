@@ -52,6 +52,8 @@ async function fetchXunfeiModels(): Promise<RawModelData[]> {
       if (m.name.includes('Code') || m.name.includes('coder')) capabilities.push('code-generation');
       if (!capabilities.length) capabilities.push('chat', 'text-generation');
 
+      const isFree = inPrice === 0 && outPrice === 0;
+
       return {
         vendor: 'xunfei',
         modelId: `xunfei/${m.name}`,
@@ -60,7 +62,10 @@ async function fetchXunfeiModels(): Promise<RawModelData[]> {
         contextSize,
         priceInput: inPrice,
         priceOutput: outPrice,
-        isFree: inPrice === 0 && outPrice === 0,
+        priceCurrency: 'CNY',
+        isFree,
+        freeKind: isFree ? 'rate-limited' : 'unknown',
+        trialScope: isFree ? 'specific' : 'none',
         capabilities,
         metadata: {
           provider: m.userName,
