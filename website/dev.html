@@ -180,8 +180,7 @@ async function loadData() {
   document.getElementById('viewBadge').textContent = viewNames[currentView] || currentView;
   document.getElementById('viewHint').textContent = viewHints[currentView] || '';
 
-  const basePath = window.location.pathname.startsWith('/website') ? '..' : '';
-  const data = await loadJSON(`${basePath}/data/models.json`);
+  const data = await loadJSON('../data/models.json');
 
   if (!data || !data.data) {
     document.getElementById('tableBody').innerHTML =
