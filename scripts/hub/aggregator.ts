@@ -404,6 +404,7 @@ async function main(): Promise<void> {
       durationMs: Date.now() - startedAt,
       previousTotal: previous?.total,
       previousFreeCount: previous?.freeCount,
+      previousByProvider: previous?.byProvider,
     };
     await notifyWechat(payload);
   }
