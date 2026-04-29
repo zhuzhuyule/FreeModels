@@ -104,7 +104,6 @@ export function enhanceWithCache(
 
   return {
     ...base,
-    isFree: base.billingMode === 'free',
     parameterCount,
     tier: profile.tier,
     speed: profile.speed,
@@ -162,6 +161,8 @@ export function buildViews(models: EnhancedModelData[]): Array<{ view: string; f
   return [
     { view: 'all', filters: {} },
     { view: 'free', filters: { billingMode: 'free' } },
+    { view: 'free-full', filters: { freeTier: 'full' } },
+    { view: 'free-trial', filters: { freeTier: 'trial' } },
     { view: 'reasoning', filters: { tags: 'reasoning' } },
     { view: 'multimodal', filters: { tags: 'vision' } },
     { view: 'tool-use', filters: { hasToolUse: 'true' } },
@@ -200,6 +201,8 @@ function checkFilter(model: EnhancedModelData, key: string, value: string): bool
   switch (key) {
     case 'billingMode':
       return model.billingMode === value;
+    case 'freeTier':
+      return model.freeTier === value;
     case 'tags':
       return model.tags.includes(value);
     case 'provider':

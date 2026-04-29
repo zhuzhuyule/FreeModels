@@ -73,10 +73,24 @@ export function evaluateBilling(
   return 'pay';
 }
 
+export function evaluateFreeTier(
+  isFreeApi?: boolean,
+  billingMode?: 'free' | 'pay' | 'mixed'
+): 'none' | 'trial' | 'full' {
+  if (billingMode === 'free') {
+    return 'full';
+  }
+  if (isFreeApi === true) {
+    return 'trial';
+  }
+  return 'none';
+}
+
 export function enhanceModel(raw: RawModelData): EnhancedModelData {
   const { tags, isReasoning, isMultimodal, hasToolUse } = inferCapabilities(raw);
   const contextLabel = formatContextLabel(raw.contextSize);
   const billingMode = evaluateBilling(raw.priceInput, raw.priceOutput);
+  const freeTier = evaluateFreeTier(raw.isFree, billingMode);
 
   return {
     ...raw,
@@ -87,6 +101,7 @@ export function enhanceModel(raw: RawModelData): EnhancedModelData {
     hasToolUse,
     contextLabel,
     billingMode,
+    freeTier,
     tier: 'medium',
     speed: 'standard',
     useCase: [],
@@ -106,6 +121,7 @@ export function getCachedOrInfer(
   const { tags, isReasoning, isMultimodal, hasToolUse } = inferCapabilities(raw);
   const contextLabel = formatContextLabel(raw.contextSize);
   const billingMode = evaluateBilling(raw.priceInput, raw.priceOutput);
+  const freeTier = evaluateFreeTier(raw.isFree, billingMode);
 
   return {
     ...raw,
@@ -116,6 +132,7 @@ export function getCachedOrInfer(
     hasToolUse: cached?.hasToolUse ?? hasToolUse,
     contextLabel: cached?.contextSize ?? contextLabel,
     billingMode,
+    freeTier,
     tier: cached?.tier ?? 'medium',
     speed: 'standard',
     useCase: [],

@@ -18,6 +18,7 @@ export interface EnhancedModelData extends RawModelData {
   hasToolUse: boolean;
   contextLabel: string;
   billingMode: 'free' | 'pay' | 'mixed';
+  freeTier: 'none' | 'trial' | 'full';
   provider: string;
   parameterCount?: number;
   tier: 'small' | 'medium' | 'large' | 'xlarge';
