@@ -1,10 +1,15 @@
 import type { RawModelData, ProviderPlugin } from '../../types.js';
 
+interface NvidiaModel {
+  id: string;
+  object: string;
+  created: number;
+  owned_by: string;
+}
+
 async function fetchNvidiaModels(): Promise<RawModelData[]> {
-  const apiKey = process.env.NVIDIA_API_KEY || '';
   const response = await fetch('https://integrate.api.nvidia.com/v1/models', {
     headers: {
-      Authorization: `Bearer ${apiKey}`,
       Accept: 'application/json',
     },
   });
@@ -14,29 +19,35 @@ async function fetchNvidiaModels(): Promise<RawModelData[]> {
     return [];
   }
 
-  const data = (await response.json()) as Record<string, unknown>;
+  const data = (await response.json()) as { data: NvidiaModel[] };
 
-  if (!Array.isArray(data.models)) {
-    return [];
-  }
-
-  return data.models.map((m: Record<string, unknown>) => ({
+  return data.data.map((m) => ({
     vendor: 'nvidia',
-    modelId: String(m.id || ''),
-    name: String(m.name || ''),
-    description: String(m.description || ''),
-    contextSize: Number(m.context_length || m.contextWindow || 0) || undefined,
-    priceInput: (() => {
-      const p = m.pricing as Record<string, unknown> | undefined;
-      return Number(p?.input ?? 0) || undefined;
-    })(),
-    priceOutput: (() => {
-      const p = m.pricing as Record<string, unknown> | undefined;
-      return Number(p?.output ?? 0) || undefined;
-    })(),
-    capabilities: Array.isArray(m.capabilities) ? m.capabilities.map(String) : undefined,
+    modelId: m.id,
+    name: m.id.split('/').pop() || m.id,
+    description: `Model: ${m.id}`,
+    contextSize: undefined,
+    priceInput: undefined,
+    priceOutput: undefined,
+    capabilities: inferCapabilities(m.id),
     metadata: m,
   }));
+}
+
+function inferCapabilities(modelId: string): string[] {
+  const id = modelId.toLowerCase();
+  const caps: string[] = [];
+
+  if (id.includes('embed')) caps.push('embeddings');
+  if (id.includes('rerank') || id.includes('ranker')) caps.push('rerank');
+  if (id.includes('vision') || id.includes('vl') || id.includes('neva') || id.includes('phi-3-vision')) caps.push('vision');
+  if (id.includes('safety') || id.includes('guard') || id.includes('pii') || id.includes('content')) caps.push('moderation');
+  if (id.includes('translate')) caps.push('speech-synthesis');
+  if (id.includes('cosmos') || id.includes('video') || id.includes('diffusion')) caps.push('video-generation');
+  if (id.includes('starcoder') || id.includes('codellama') || id.includes('codestral') || id.includes('code')) caps.push('code-generation');
+  if (!caps.length) caps.push('chat', 'text-generation');
+
+  return caps;
 }
 
 export const fetchModels: ProviderPlugin = fetchNvidiaModels;
