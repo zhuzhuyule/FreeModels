@@ -52,6 +52,7 @@
 
   .empty{text-align:center;padding:60px 20px;color:var(--text2)}
   .loading{text-align:center;padding:60px 20px;color:var(--text2)}
+  .hint{font-size:13px;color:var(--text2);margin-left:8px}
 </style>
 </head>
 <body>
@@ -60,6 +61,7 @@
   <h1>Model Hub</h1>
   <span class="badge" id="viewBadge">all</span>
   <span class="count" id="totalCount"></span>
+  <span class="hint" id="viewHint"></span>
 </div>
 
 <div class="filter-bar">
@@ -92,6 +94,9 @@
     <option value="trial">体验免费</option>
     <option value="none">不免费</option>
   </select>
+  <select id="typeFilter">
+    <option value="">所有类别</option>
+  </select>
   <select id="reasoningFilter">
     <option value="">所有类型</option>
     <option value="true">推理模型</option>
@@ -110,6 +115,7 @@
         <th data-key="name">模型 <span class="sort">▲</span></th>
         <th data-key="provider">厂商 <span class="sort">▲</span></th>
         <th data-key="contextLabel">上下文 <span class="sort">▲</span></th>
+        <th data-key="modelType">模型类别 <span class="sort">▲</span></th>
         <th data-key="tier">规模 <span class="sort">▲</span></th>
         <th data-key="speed">速度 <span class="sort">▲</span></th>
         <th data-key="billingMode">计费 <span class="sort">▲</span></th>
@@ -145,10 +151,40 @@ async function loadJSON(url) {
 async function loadData() {
   const params = new URLSearchParams(window.location.search);
   currentView = params.get('view') || 'all';
-  document.getElementById('viewBadge').textContent = currentView;
 
-  const data = await loadJSON(`data/views/${currentView}/models.json`) ||
-               await loadJSON('data/models.json');
+  const viewNames = {
+    'all': '全部',
+    'free': '全部免费',
+    'free-full': '完全免费',
+    'free-trial': '体验免费',
+    'reasoning': '推理模型',
+    'multimodal': '多模态',
+    'tool-use': '工具调用',
+    'fast': '快速',
+    'premium': '高级',
+    'small': '小型',
+    'large': '大型'
+  };
+  const viewHints = {
+    'all': '所有模型',
+    'free': 'billingMode=free (可能包含体验免费)',
+    'free-full': '完全免费，无任何限制',
+    'free-trial': '支持体验域名访问',
+    'reasoning': '支持推理能力',
+    'multimodal': '支持多模态',
+    'tool-use': '支持工具调用',
+    'fast': '快速响应',
+    'premium': '高性能',
+    'small': '小型模型',
+    'large': '大型模型'
+  };
+
+  document.getElementById('viewBadge').textContent = viewNames[currentView] || currentView;
+  document.getElementById('viewHint').textContent = viewHints[currentView] || '';
+
+  const basePath = window.location.pathname.startsWith('/website') ? '..' : '';
+  const data = await loadJSON(`${basePath}/data/views/${currentView}/models.json`) ||
+               await loadJSON(`${basePath}/data/models.json`);
 
   if (!data || !data.models) {
     document.getElementById('tableBody').innerHTML =
@@ -168,6 +204,24 @@ function populateFilters() {
   const sel = document.getElementById('providerFilter');
   sel.innerHTML = '<option value="">所有厂商</option>' +
     providers.map(p => `<option value="${p}">${p}</option>`).join('');
+
+  const typeMap = {
+    'text-generation': '文本生成',
+    'chat': '对话',
+    'image-generation': '图片生成',
+    'embeddings': '向量表示',
+    'vision': '视觉理解',
+    'speech-recognition': '语音识别',
+    'speech-synthesis': '语音合成',
+    'video-generation': '视频生成',
+    'moderation': '内容审核',
+    'rerank': '重排序',
+    'code-generation': '代码生成'
+  };
+  const types = [...new Set(allModels.flatMap(m => m.capabilities || []))].sort();
+  const typeSel = document.getElementById('typeFilter');
+  typeSel.innerHTML = '<option value="">所有类别</option>' +
+    types.map(t => `<option value="${t}">${typeMap[t] || t}</option>`).join('');
 }
 
 function applyFilters() {
@@ -177,6 +231,7 @@ function applyFilters() {
   const speed = document.getElementById('speedFilter').value;
   const billing = document.getElementById('billingFilter').value;
   const freeTier = document.getElementById('freeTierFilter').value;
+  const modelType = document.getElementById('typeFilter').value;
   const reasoning = document.getElementById('reasoningFilter').value;
   const toolUse = document.getElementById('toolUseFilter').value;
 
@@ -189,6 +244,7 @@ function applyFilters() {
     if (speed && m.speed !== speed) return false;
     if (billing && m.billingMode !== billing) return false;
     if (freeTier && m.freeTier !== freeTier) return false;
+    if (modelType && !(m.capabilities || []).includes(modelType)) return false;
     if (reasoning && String(m.isReasoning) !== reasoning) return false;
     if (toolUse && String(m.hasToolUse) !== toolUse) return false;
     return true;
@@ -196,6 +252,19 @@ function applyFilters() {
 
   sortModels();
   renderTable();
+
+  const hasFilters = document.getElementById('searchInput').value ||
+                    document.getElementById('providerFilter').value ||
+                    document.getElementById('tierFilter').value ||
+                    document.getElementById('speedFilter').value ||
+                    document.getElementById('billingFilter').value ||
+                    document.getElementById('freeTierFilter').value ||
+                    document.getElementById('reasoningFilter').value ||
+                    document.getElementById('toolUseFilter').value;
+
+  if (hasFilters) {
+    document.getElementById('totalCount').textContent = `显示 ${filteredModels.length} / 共 ${allModels.length} 个`;
+  }
 }
 
 function sortModels() {
@@ -212,9 +281,26 @@ function sortModels() {
 function renderTable() {
   const tbody = document.getElementById('tableBody');
   if (filteredModels.length === 0) {
-    tbody.innerHTML = '<tr><td colspan="9" class="empty">未找到匹配的模型</td></tr>';
+    tbody.innerHTML = '<tr><td colspan="10" class="empty">未找到匹配的模型</td></tr>';
     return;
   }
+
+  const typeMap = {
+    'text-generation': '文本生成',
+    'chat': '对话',
+    'image-generation': '图片生成',
+    'embeddings': '向量',
+    'vision': '视觉',
+    'speech-recognition': '语音识别',
+    'speech-synthesis': '语音合成',
+    'video-generation': '视频生成',
+    'moderation': '审核',
+    'rerank': '重排序',
+    'code-generation': '代码',
+    'image-to-image': '图生图',
+    'document-processing': '文档处理'
+  };
+
   tbody.innerHTML = filteredModels.map(m => {
     const tierClass = `badge-${m.tier || 'medium'}`;
     const speedClass = `badge-${m.speed || 'standard'}`;
@@ -222,17 +308,19 @@ function renderTable() {
     const freeTierLabel = m.freeTier === 'full' ? '完全' : m.freeTier === 'trial' ? '体验' : '无';
     const freeTierClass = `badge-${m.freeTier || 'none'}`;
     const caps = (m.tags || []).slice(0, 4).map(c => `<span class="tag">${esc(c)}</span>`).join('');
+    const primaryType = m.capabilities?.[0] || 'unknown';
+    const typeLabel = typeMap[primaryType] || primaryType;
     return `<tr>
       <td style="color:var(--text2);font-weight:600">${m.idx}</td>
-      <td><div style="font-weight:600;max-width:200px;overflow:hidden;text-overflow:ellipsis">${esc(m.name)}</div>
-          <div style="font-size:11px;color:var(--text2);max-width:200px;overflow:hidden;text-overflow:ellipsis">${esc(m.description || '')}</div></td>
+      <td><div style="font-weight:600;max-width:180px;overflow:hidden;text-overflow:ellipsis">${esc(m.name)}</div>
+          <div style="font-size:11px;color:var(--text2);max-width:180px;overflow:hidden;text-overflow:ellipsis">${esc(m.description || '')}</div></td>
       <td>${esc(m.provider)}</td>
       <td>${m.contextLabel || '-'}</td>
+      <td><span style="font-size:12px;color:var(--accent)">${typeLabel}</span></td>
       <td><span class="badge ${tierClass}">${m.tier || '-'}</span></td>
       <td><span class="badge ${speedClass}">${m.speed || '-'}</span></td>
       <td><span class="badge ${billingClass}">${m.billingMode === 'free' ? '免费' : m.billingMode === 'mixed' ? '混合' : '付费'}</span></td>
       <td><span class="badge ${freeTierClass}">${freeTierLabel}</span></td>
-      <td>${m.performanceLevel || '-'}</td>
       <td>${caps}</td>
     </tr>`;
   }).join('');
@@ -258,7 +346,7 @@ document.querySelectorAll('th[data-key]').forEach(th => {
 });
 
 document.getElementById('searchInput').addEventListener('input', applyFilters);
-['providerFilter', 'tierFilter', 'speedFilter', 'billingFilter', 'freeTierFilter', 'reasoningFilter', 'toolUseFilter'].forEach(id => {
+['providerFilter', 'tierFilter', 'speedFilter', 'billingFilter', 'freeTierFilter', 'typeFilter', 'reasoningFilter', 'toolUseFilter'].forEach(id => {
   document.getElementById(id).addEventListener('change', applyFilters);
 });
 
