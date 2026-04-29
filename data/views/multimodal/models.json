@@ -1,0 +1,364 @@
+{
+  "view": "multimodal",
+  "updatedAt": "2026-04-29T02:49:12.924Z",
+  "totalModels": 11,
+  "filters": {
+    "tags": "multimodal"
+  },
+  "models": [
+    {
+      "vendor": "gitee",
+      "modelId": "Wan2_2-I2V-A14B",
+      "name": "Wan2.2-I2V-A14B",
+      "description": "Wan2.2‑I2V‑A14B 是阿里巴巴 AI 实验室团队推出的 Wan2.2 系列之一，属于图像转视频（Image-to-Video）模型，开源且采用 Apache 2.0 许可证，兼顾学术研究与商业应用",
+      "isFree": false,
+      "capabilities": [
+        "video-generation",
+        "vision"
+      ],
+      "metadata": {
+        "originalType": "image2video",
+        "isReasoning": false,
+        "isMultimodal": true,
+        "hasToolUse": false,
+        "operationsCount": 1,
+        "serviceIdent": "Wan2_2-I2V-A14B",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/async/videos/image-to-video",
+        "tags": "视频生成"
+      },
+      "provider": "gitee",
+      "tags": [
+        "multimodal",
+        "video-generation",
+        "vision"
+      ],
+      "isReasoning": false,
+      "isMultimodal": true,
+      "contextLabel": "unknown",
+      "billingMode": "free"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "Qwen-Image",
+      "name": "Qwen-Image",
+      "description": "Qwen‑Image 是一款由阿里云开发的20B参数级 MMDiT 图像生成基础模型，以其卓越的复杂文本渲染能力（尤其在英语和中文中表现出色）和高精度图像编辑功能而著称",
+      "isFree": false,
+      "capabilities": [
+        "image-generation",
+        "vision"
+      ],
+      "metadata": {
+        "originalType": "text2image",
+        "isReasoning": false,
+        "isMultimodal": true,
+        "hasToolUse": false,
+        "operationsCount": 4,
+        "serviceIdent": "Qwen-Image",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/async/images/generations",
+        "tags": "图像生成与处理, 1024*1024"
+      },
+      "provider": "gitee",
+      "tags": [
+        "multimodal",
+        "image-generation",
+        "vision"
+      ],
+      "isReasoning": false,
+      "isMultimodal": true,
+      "contextLabel": "unknown",
+      "billingMode": "free"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "Qwen-Image-Edit",
+      "name": "Qwen-Image-Edit",
+      "description": "Qwen‑Image‑Edit 是一个基于 20B 参数 Qwen‑Image 模型深度训练而成的图像编辑模型，具备中英文文字的精准增删改能力，以及语义与外观的双重编辑能力，展现专业级的图像编辑性能。",
+      "isFree": false,
+      "capabilities": [
+        "image-to-image",
+        "vision"
+      ],
+      "metadata": {
+        "originalType": "image2image",
+        "isReasoning": false,
+        "isMultimodal": true,
+        "hasToolUse": false,
+        "operationsCount": 1,
+        "serviceIdent": "Qwen-Image-Edit",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/images/edits",
+        "tags": "图像生成与处理, 1024*1024"
+      },
+      "provider": "gitee",
+      "tags": [
+        "multimodal",
+        "image-to-image",
+        "vision"
+      ],
+      "isReasoning": false,
+      "isMultimodal": true,
+      "contextLabel": "unknown",
+      "billingMode": "free"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "z-image-turbo",
+      "name": "z-image-turbo",
+      "description": "Z-Image-Turbo 是 Z-Image 系列的一员 — 一个高效、轻量级的图像生成基础模型（text-to-image），经过优化与蒸馏 (distillation) 后的 “Turbo” 版本。它旨在以较低的资源成本 (consumer-grade 单卡 < 16GB VRAM) 提供高质量、实用性强的图像生成能力。",
+      "contextSize": 2000,
+      "isFree": false,
+      "capabilities": [
+        "image-generation",
+        "vision"
+      ],
+      "metadata": {
+        "originalType": "text2image",
+        "isReasoning": false,
+        "isMultimodal": true,
+        "hasToolUse": false,
+        "operationsCount": 5,
+        "serviceIdent": "z-image-turbo",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/images/generations",
+        "tags": "图像生成与处理, 1024*1024, 2k"
+      },
+      "provider": "gitee",
+      "tags": [
+        "text-generation",
+        "multimodal",
+        "image-generation",
+        "vision"
+      ],
+      "isReasoning": false,
+      "isMultimodal": true,
+      "contextLabel": "2K",
+      "billingMode": "free"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "LongCat-Image",
+      "name": "LongCat-Image",
+      "description": "LongCat-Image 是美团 LongCat 团队开源的轻量级高质量图像生成模型，支持中英文文本生成逼真图像，并具备优秀的中文文字渲染能力。",
+      "isFree": false,
+      "capabilities": [
+        "image-generation",
+        "vision"
+      ],
+      "metadata": {
+        "originalType": "text2image",
+        "isReasoning": false,
+        "isMultimodal": true,
+        "hasToolUse": false,
+        "operationsCount": 2,
+        "serviceIdent": "LongCat-Image",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/images/generations",
+        "tags": "图像生成与处理"
+      },
+      "provider": "gitee",
+      "tags": [
+        "multimodal",
+        "image-generation",
+        "vision"
+      ],
+      "isReasoning": false,
+      "isMultimodal": true,
+      "contextLabel": "unknown",
+      "billingMode": "free"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "LongCat-Image-Edit",
+      "name": "LongCat-Image-Edit",
+      "description": "LongCat-Image-Edit 是美团开源的高精度图像编辑模型，支持文本、局部选区与参考图驱动的内容重绘，具备强语义理解、细节一致性和自然编辑效果，适用于创意设计、商品图优化与精细视觉修改。",
+      "isFree": false,
+      "capabilities": [
+        "image-to-image",
+        "vision"
+      ],
+      "metadata": {
+        "originalType": "image2image",
+        "isReasoning": false,
+        "isMultimodal": true,
+        "hasToolUse": false,
+        "operationsCount": 2,
+        "serviceIdent": "LongCat-Image-Edit",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/images/edits",
+        "tags": "图像生成与处理"
+      },
+      "provider": "gitee",
+      "tags": [
+        "multimodal",
+        "image-to-image",
+        "vision"
+      ],
+      "isReasoning": false,
+      "isMultimodal": true,
+      "contextLabel": "unknown",
+      "billingMode": "free"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "Qwen-Image-Edit-2511",
+      "name": "Qwen-Image-Edit-2511",
+      "description": "Qwen-Image-Edit-2511 是阿里通义团队在 Qwen-Image-Edit 基础上升级的开源图像编辑模型，主打提升编辑一致性、集成常用 LoRA 能力并增强人物/工业设计和几何推理表现，实现更稳定精确的 AI 图像编辑效果。",
+      "isFree": false,
+      "capabilities": [
+        "image-to-image",
+        "vision"
+      ],
+      "metadata": {
+        "originalType": "image2image",
+        "isReasoning": false,
+        "isMultimodal": true,
+        "hasToolUse": false,
+        "operationsCount": 1,
+        "serviceIdent": "Qwen-Image-Edit-2511",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/async/images/edits",
+        "tags": "Apache license 2.0, 图像生成与处理, 2048*2048"
+      },
+      "provider": "gitee",
+      "tags": [
+        "multimodal",
+        "image-to-image",
+        "vision"
+      ],
+      "isReasoning": false,
+      "isMultimodal": true,
+      "contextLabel": "unknown",
+      "billingMode": "free"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "Qwen-Image-2512",
+      "name": "Qwen-Image-2512",
+      "description": "Qwen-Image-2512 是阿里巴巴通义千问团队推出的最新一代文本生成图像大模型，在人物真实感、自然细节刻画和文字渲染能力上全面升级，可高质量地将文本描述转化为语义准确、细节丰富的图像。",
+      "isFree": false,
+      "capabilities": [
+        "image-generation",
+        "vision"
+      ],
+      "metadata": {
+        "originalType": "text2image",
+        "isReasoning": false,
+        "isMultimodal": true,
+        "hasToolUse": false,
+        "operationsCount": 4,
+        "serviceIdent": "Qwen-Image-2512",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/images/generations",
+        "tags": "Apache license 2.0, 图像生成与处理, 1024*1024, 2048*2048"
+      },
+      "provider": "gitee",
+      "tags": [
+        "multimodal",
+        "image-generation",
+        "vision"
+      ],
+      "isReasoning": false,
+      "isMultimodal": true,
+      "contextLabel": "unknown",
+      "billingMode": "free"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "GLM-Image",
+      "name": "GLM-Image",
+      "description": "GLM-Image 是智谱推出的多模态图像生成模型，擅长根据文本精准生成高质量图像，并在中文语义理解与文字渲染场景中表现突出。",
+      "isFree": false,
+      "capabilities": [
+        "image-generation",
+        "vision"
+      ],
+      "metadata": {
+        "originalType": "text2image",
+        "isReasoning": false,
+        "isMultimodal": true,
+        "hasToolUse": false,
+        "operationsCount": 1,
+        "serviceIdent": "GLM-Image",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/images/generations",
+        "tags": "图像生成与处理, 1024*1024"
+      },
+      "provider": "gitee",
+      "tags": [
+        "multimodal",
+        "image-generation",
+        "vision"
+      ],
+      "isReasoning": false,
+      "isMultimodal": true,
+      "contextLabel": "unknown",
+      "billingMode": "free"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "Qwen-Image-Layered",
+      "name": "Qwen-Image-Layered",
+      "description": "Qwen-Image-Layered 是一个由 Qwen 团队发布的 图像分层分解模型，它能将一张普通图像自动分解成多个 语义独立的 RGBA 图层，从而让每个图层可以 单独进行移动、重色、缩放、删除等编辑操作而不影响其它内容。",
+      "isFree": false,
+      "capabilities": [
+        "image-to-image",
+        "vision"
+      ],
+      "metadata": {
+        "originalType": "image2image",
+        "isReasoning": false,
+        "isMultimodal": true,
+        "hasToolUse": false,
+        "operationsCount": 1,
+        "serviceIdent": "Qwen-Image-Layered",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/images/layers",
+        "tags": "图像生成与处理, 图像分层"
+      },
+      "provider": "gitee",
+      "tags": [
+        "multimodal",
+        "image-to-image",
+        "vision"
+      ],
+      "isReasoning": false,
+      "isMultimodal": true,
+      "contextLabel": "unknown",
+      "billingMode": "free"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "Z-Image",
+      "name": "Z-Image",
+      "description": "Tongyi-MAI/Z-Image 是阿里通义实验室开发的一款高质量图像生成基础模型，基于高效的单流扩散 Transformer 架构，专注于强可控性、丰富风格覆盖和高视觉质量，适合作为图像创作、研究和下游开发的核心生成引擎。",
+      "isFree": false,
+      "capabilities": [
+        "image-generation",
+        "vision"
+      ],
+      "metadata": {
+        "originalType": "text2image",
+        "isReasoning": false,
+        "isMultimodal": true,
+        "hasToolUse": false,
+        "operationsCount": 2,
+        "serviceIdent": "Z-Image",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/images/generations",
+        "tags": "图像生成与处理, 1024*1024"
+      },
+      "provider": "gitee",
+      "tags": [
+        "multimodal",
+        "image-generation",
+        "vision"
+      ],
+      "isReasoning": false,
+      "isMultimodal": true,
+      "contextLabel": "unknown",
+      "billingMode": "free"
+    }
+  ]
+}

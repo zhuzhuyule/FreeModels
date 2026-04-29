@@ -87,9 +87,17 @@ async function runProvider(
 async function main(): Promise<void> {
   console.log('[Aggregator] Starting model aggregation...');
 
+  const args = process.argv.slice(2);
+  const targetProvider = args.find(a => a.startsWith('--provider='))?.split('=')[1];
+
   const providers = await discoverProviders();
+
+  const filteredProviders = targetProvider
+    ? providers.filter(p => p.name === targetProvider)
+    : providers;
+
   console.log(
-    `[Aggregator] Discovered ${providers.length} providers: ${providers
+    `[Aggregator] Discovered ${providers.length} providers, running: ${filteredProviders
       .map(p => p.name)
       .join(', ')}`
   );
