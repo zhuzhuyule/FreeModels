@@ -42,6 +42,11 @@ export const PROVIDER_META: Record<string, ProviderMeta> = {
     displayName: 'OpenRouter',
     website: 'https://openrouter.ai',
   },
+  bigmodel: {
+    name: 'bigmodel',
+    displayName: 'BigModel',
+    website: 'https://open.bigmodel.cn',
+  },
 };
 
 export function loadCache(): Record<string, CachedCapabilities> {

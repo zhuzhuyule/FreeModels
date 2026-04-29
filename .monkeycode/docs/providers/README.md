@@ -7,6 +7,7 @@
 | Provider | 模型数 | 数据来源 | 免费模型数 | 文档 |
 |----------|--------|----------|------------|------|
 | Gitee | 201 | ai.gitee.com API | 44 + 144 体验 | [gitee.md](./gitee.md) |
+| BigModel | 83 | open.bigmodel.cn API | 7 | [bigmodel.md](./bigmodel.md) |
 | Cerebras | 4 | inference-docs.cerebras.ai | 2 | [cerebras.md](./cerebras.md) |
 | Groq | 12 | groq.com/pricing | 0 | [groq.md](./groq.md) |
 | LongCat | 7 | longcat.chat/docs | 7 | [longcat.md](./longcat.md) |
@@ -14,7 +15,7 @@
 | Xunfei | 64 | maas.xfyun.cn | 0 | [xunfei.md](./xunfei.md) |
 | Google | 32 | ai.google.dev/pricing | 17 | [google.md](./google.md) |
 | OpenRouter | 56 | openrouter.ai API | 56 | [openrouter.md](./openrouter.md) |
-| **总计** | **515** | | **~226** | |
+| **总计** | **598** | | **~233** | |
 
 ## 数据源分类
 
@@ -26,6 +27,7 @@
 | Xunfei | `https://maas.xfyun.cn/api/v1/gpt-finetune/model/base/list-v2` | 可能需要 |
 | NVIDIA | `https://integrate.api.nvidia.com/v1/models` | API Key |
 | OpenRouter | `https://openrouter.ai/api/frontend/models/find?fmt=cards&max_price=0` | 否 |
+| BigModel | `https://open.bigmodel.cn/api/biz/operation/query?ids=...` | 否 |
 
 ### HTML/文档解析类
 
@@ -44,6 +46,7 @@
 | Provider | 模型数 | 说明 |
 |----------|--------|------|
 | Gitee | 44 | 无价格，完全免费 |
+| BigModel | 7 | Flash 系列模型 |
 | Cerebras | 2 | Llama 3.1 8B, GPT OSS 120B |
 | LongCat | 7 | 全部模型都有免费额度 |
 | NVIDIA | 50 | build.nvidia.com 列出的免费端点 |
@@ -107,6 +110,7 @@
 
 | 日期 | Provider | 更新内容 |
 |------|----------|----------|
+| 2026-04-29 | BigModel | 新增 Provider，7 个免费模型（GLM-4-Flash 等） |
 | 2026-04-29 | OpenRouter | 新增 Provider，56 个免费模型 |
 | 2026-04-29 | Gitee | 添加 is_experienceable 字段区分完全免费和允许体验 |
 | 2026-04-29 | NVIDIA | 添加 fetchWithRetry 重试机制，解析 docs 获取能力 |

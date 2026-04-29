@@ -145,14 +145,26 @@ Agent 在任务执行过程中发现的条目应遵循以下格式：
   - Provider 文件：scripts/hub/providers/openrouter/index.ts
   - 元数据配置：scripts/hub/evaluator.ts 的 PROVIDER_META
 
+[BigModel Provider 实现]
+- Date: 2026-04-29
+- Context: 添加 BigModel（智谱AI）作为新的 Provider
+- Category: 代码模式
+- Instructions:
+  - API 端点：https://open.bigmodel.cn/api/biz/operation/query?ids=1137,1122,1123,1124,1132,1125,1126
+  - API 无需认证，可直接获取定价信息
+  - 7 个免费模型：GLM-4-Flash, GLM-4-Flash-250414, GLM-Z1-Flash, GLM-4V-Flash, GLM-4.1V-Thinking-Flash, CogView-3-Flash, CogVideoX-Flash
+  - 模型数据嵌套在 content JSON 字符串中，需要先解析外层再解析 content
+  - Provider 文件：scripts/hub/providers/bigmodel/index.ts
+  - 元数据配置：scripts/hub/evaluator.ts 的 PROVIDER_META
+
 [Model Hub 项目当前状态]
 - Date: 2026-04-29
 - Context: 项目整理
 - Category: 代码结构
 - Instructions:
-  - Provider 数量：8 个（Gitee, NVIDIA, Google, Xunfei, Groq, Cerebras, LongCat, OpenRouter）
-  - 总模型数：516 个
-  - 免费模型：161 个（Gitee 44 + NVIDIA 50 + Google 17 + Cerebras 2 + LongCat 7 + OpenRouter 56）
+  - Provider 数量：9 个（Gitee, BigModel, NVIDIA, Google, Xunfei, Groq, Cerebras, LongCat, OpenRouter）
+  - 总模型数：599 个
+  - 免费模型：168 个（Gitee 44 + BigModel 7 + NVIDIA 50 + Google 17 + Cerebras 2 + LongCat 7 + OpenRouter 56）
   - 允许体验：144 个（Gitee 特有）
   - 运行命令：npm run sync-models（聚合数据）
   - 类型检查：npm run typecheck

@@ -37,6 +37,7 @@ Provider API/HTML
 | Provider | 模型数 | 数据来源 | 免费端点 | 详细文档 |
 |----------|--------|----------|----------|----------|
 | Gitee | 201 | ai.gitee.com API | 44 完全免费 + 144 体验 | [providers/gitee.md](./providers/gitee.md) |
+| BigModel | 83 | open.bigmodel.cn API | 7 个免费 | [providers/bigmodel.md](./providers/bigmodel.md) |
 | Cerebras | 4 | inference-docs.cerebras.ai | 2 个免费 | [providers/cerebras.md](./providers/cerebras.md) |
 | Groq | 12 | groq.com/pricing | 0 | [providers/groq.md](./providers/groq.md) |
 | LongCat | 7 | longcat.chat/platform/docs | 全部免费 | [providers/longcat.md](./providers/longcat.md) |
@@ -44,7 +45,7 @@ Provider API/HTML
 | Xunfei | 64 | maas.xfyun.cn | 0 | [providers/xunfei.md](./providers/xunfei.md) |
 | Google | 32 | ai.google.dev/pricing | 17 个免费 | [providers/google.md](./providers/google.md) |
 | OpenRouter | 56 | openrouter.ai API | 56 个免费 | [providers/openrouter.md](./providers/openrouter.md) |
-| **总计** | **515** | | | |
+| **总计** | **598** | | | |
 
 ## 字段设计
 
@@ -243,6 +244,7 @@ python3 -m http.server 8000
 - `scripts/hub/types.ts` - 类型定义
 - `scripts/hub/evaluator.ts` - 模型增强逻辑
 - `scripts/hub/providers/gitee/index.ts` - Gitee Provider
+- `scripts/hub/providers/bigmodel/index.ts` - BigModel Provider
 - `scripts/hub/providers/cerebras/index.ts` - Cerebras Provider
 - `scripts/hub/providers/groq/index.ts` - Groq Provider
 - `scripts/hub/providers/longcat/index.ts` - LongCat Provider
@@ -258,20 +260,25 @@ python3 -m http.server 8000
 
 ### 2026-04-29
 
-1. **新增 OpenRouter Provider**
+1. **新增 BigModel Provider**
+   - 7 个免费模型（GLM-4-Flash, GLM-Z1-Flash, GLM-4V-Flash 等）
+   - API: https://open.bigmodel.cn/api/biz/operation/query
+   - 定价 API 无需认证，可直接获取
+
+2. **新增 OpenRouter Provider**
    - 56 个免费模型，汇聚 NVIDIA、Poolside、Google 等多个提供商的免费模型
    - 使用 `max_price=0` 筛选完全免费模型
 
-2. **添加 is_experienceable 字段**
+3. **添加 is_experienceable 字段**
    - 区分"完全免费"和"允许体验"两种模式
    - Gitee 144 个模型标记为 `is_experienceable=true`
 
-3. **新增 Provider**
+4. **新增 Provider**
    - Groq: 12 个模型，高速 LPU
    - Cerebras: 4 个模型，千亿参数大模型
    - LongCat: 7 个模型，每日免费额度
 
-4. **Provider 数据源优化**
+5. **Provider 数据源优化**
    - Google: 从 HTML 解析改为定价文档解析，模型数 8→32
    - NVIDIA: 添加 fetchWithRetry 重试机制，解析 docs.api.nvidia.com 获取准确能力
    - Xunfei: 改用 MaaS API（maas.xfyun.cn）
