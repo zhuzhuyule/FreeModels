@@ -1,0 +1,1324 @@
+{
+  "view": "large",
+  "updatedAt": "2026-04-29T03:21:41.469Z",
+  "totalModels": 28,
+  "filters": {
+    "tier": "large"
+  },
+  "models": [
+    {
+      "vendor": "gitee",
+      "modelId": "Qwen2.5-72B-Instruct",
+      "name": "Qwen2.5-72B-Instruct",
+      "description": "Qwen2.5-72B-Instruct  支持 32k 上下文, 生成长文本超过 8K 。支持 function call 与外部系统无缝交互，极大提升了灵活性和扩展性。模型知识明显增加，并且大大提高了编码和数学能力, 多语言支持超过 29 种",
+      "contextSize": 32000,
+      "priceInput": 0.000004,
+      "priceOutput": 0.000004,
+      "isFree": true,
+      "capabilities": [
+        "text-generation",
+        "tool_use",
+        "function_calling"
+      ],
+      "metadata": {
+        "originalType": "text2text",
+        "isReasoning": false,
+        "isMultimodal": false,
+        "hasToolUse": true,
+        "operationsCount": 1,
+        "serviceIdent": "Qwen2.5-72B-Instruct",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/chat/completions",
+        "tags": "文本生成, Function Calling, 32K",
+        "freeUse": true,
+        "isFullyFree": false
+      },
+      "provider": "gitee",
+      "tags": [
+        "text-generation",
+        "tool_use",
+        "function_calling"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": true,
+      "contextLabel": "32K",
+      "billingMode": "pay",
+      "freeTier": "trial",
+      "tier": "large",
+      "speed": "fast",
+      "useCase": [
+        "content-creation",
+        "writing-assistance",
+        "agentic-tasks",
+        "tool-augmented",
+        "structured-output",
+        "api-integration",
+        "autonomous-agents"
+      ],
+      "performanceLevel": "mid",
+      "parameterCount": 72000000000,
+      "estimatedLatency": "< 1s"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "Qwen2.5-32B-Instruct",
+      "name": "Qwen2.5-32B-Instruct",
+      "description": "Qwen2.5-32B-Instruct 是一款 320 亿参数的大语言模型，性能表现均衡，优化中文和多语言场景，支持智能问答、内容生成等应用。",
+      "contextSize": 32000,
+      "priceInput": 0.00000126,
+      "priceOutput": 0.00000126,
+      "isFree": true,
+      "capabilities": [
+        "text-generation"
+      ],
+      "metadata": {
+        "originalType": "text2text",
+        "isReasoning": false,
+        "isMultimodal": false,
+        "hasToolUse": false,
+        "operationsCount": 2,
+        "serviceIdent": "Qwen2.5-32B-Instruct",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/chat/completions",
+        "tags": "文本生成, 32K",
+        "freeUse": true,
+        "isFullyFree": false
+      },
+      "provider": "gitee",
+      "tags": [
+        "text-generation"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "32K",
+      "billingMode": "pay",
+      "freeTier": "trial",
+      "tier": "large",
+      "speed": "fast",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 32000000000,
+      "estimatedLatency": "< 1s"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "Qwen2-VL-72B",
+      "name": "Qwen2-VL-72B-Instruct",
+      "description": "Qwen2-VL-72B-Instruct是一款强大的视觉语言模型，支持图像与文本的多模态处理，能够精确识别图像内容并生成相关描述或回答。",
+      "contextSize": 32000,
+      "priceInput": 0,
+      "priceOutput": 0,
+      "isFree": true,
+      "capabilities": [
+        "text-generation"
+      ],
+      "metadata": {
+        "originalType": "text2text",
+        "isReasoning": false,
+        "isMultimodal": false,
+        "hasToolUse": false,
+        "operationsCount": 1,
+        "serviceIdent": "Qwen2-VL-72B",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/chat/completions",
+        "tags": "视觉模型, 32K, 视觉",
+        "freeUse": true,
+        "isFullyFree": false
+      },
+      "provider": "gitee",
+      "tags": [
+        "text-generation"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "32K",
+      "billingMode": "free",
+      "freeTier": "trial",
+      "tier": "large",
+      "speed": "fast",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 72000000000,
+      "estimatedLatency": "< 1s"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "GOT-OCR2_0",
+      "name": "GOT-OCR2_0",
+      "description": "GOT-OCR2_0提供功能强大的 OCR 解决方案，能够轻松识别图表、几何图形、公式和音乐符号，并将其转换为可编辑文本。该模型基于先进的深度学习架构，针对多语言文本、复杂排版以及图像噪声进行了全面优化，提供卓越的文字识别精度。",
+      "priceInput": 0,
+      "priceOutput": 0,
+      "isFree": true,
+      "capabilities": [
+        "vision"
+      ],
+      "metadata": {
+        "originalType": "image2text",
+        "isReasoning": false,
+        "isMultimodal": false,
+        "hasToolUse": false,
+        "operationsCount": 1,
+        "serviceIdent": "GOT-OCR2_0",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/images/ocr",
+        "tags": "文档处理/OCR",
+        "freeUse": true,
+        "isFullyFree": false
+      },
+      "provider": "gitee",
+      "tags": [
+        "vision"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "unknown",
+      "billingMode": "free",
+      "freeTier": "trial",
+      "tier": "large",
+      "speed": "fast",
+      "useCase": [
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "< 1s"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "DeepSeek-R1-Distill-Qwen-32B",
+      "name": "DeepSeek-R1-Distill-Qwen-32B",
+      "description": "DeepSeek-R1 系列通过强化学习与冷启动数据优化推理性能，开源模型刷新多任务标杆，超越 OpenAI-o1-mini 水平。",
+      "contextSize": 32000,
+      "priceInput": 0.00000126,
+      "priceOutput": 0.00000126,
+      "isFree": true,
+      "capabilities": [
+        "text-generation",
+        "reasoning"
+      ],
+      "metadata": {
+        "originalType": "text2text",
+        "isReasoning": true,
+        "isMultimodal": false,
+        "hasToolUse": false,
+        "operationsCount": 4,
+        "serviceIdent": "DeepSeek-R1-Distill-Qwen-32B",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/chat/completions",
+        "tags": "文本生成, 32K",
+        "freeUse": true,
+        "isFullyFree": false
+      },
+      "provider": "gitee",
+      "tags": [
+        "reasoning",
+        "text-generation"
+      ],
+      "isReasoning": true,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "32K",
+      "billingMode": "pay",
+      "freeTier": "trial",
+      "tier": "large",
+      "speed": "fast",
+      "useCase": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performanceLevel": "mid",
+      "parameterCount": 32000000000,
+      "estimatedLatency": "< 1s"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "DeepSeek-R1",
+      "name": "DeepSeek-R1",
+      "description": "DeepSeek-R1 是一款采用强化学习技术的推理模型，凭借少量标注数据大幅提升推理能力，性能媲美 OpenAI o1。",
+      "contextSize": 64000,
+      "priceInput": 0.000004,
+      "priceOutput": 0.000016,
+      "isFree": true,
+      "capabilities": [
+        "text-generation",
+        "reasoning"
+      ],
+      "metadata": {
+        "originalType": "text2text",
+        "isReasoning": true,
+        "isMultimodal": false,
+        "hasToolUse": false,
+        "operationsCount": 3,
+        "serviceIdent": "DeepSeek-R1",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/chat/completions",
+        "tags": "文本生成, Function Calling, 满血版, 64K, 0528升级版",
+        "freeUse": true,
+        "isFullyFree": false
+      },
+      "provider": "gitee",
+      "tags": [
+        "reasoning",
+        "text-generation"
+      ],
+      "isReasoning": true,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "64K",
+      "billingMode": "pay",
+      "freeTier": "trial",
+      "tier": "large",
+      "speed": "fast",
+      "useCase": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "< 1s"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "QwQ-32B",
+      "name": "QwQ-32B",
+      "description": "QwQ-32B 是一款独具创新的自然语言处理模型，能够高效处理复杂的对话生成与上下文理解任务。",
+      "contextSize": 32000,
+      "priceInput": 0.000001,
+      "priceOutput": 0.000004,
+      "isFree": true,
+      "capabilities": [
+        "text-generation"
+      ],
+      "metadata": {
+        "originalType": "text2text",
+        "isReasoning": false,
+        "isMultimodal": false,
+        "hasToolUse": false,
+        "operationsCount": 3,
+        "serviceIdent": "QwQ-32B",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/chat/completions",
+        "tags": "文本生成, Function Calling, 32K, 深度思考, MindSpore",
+        "freeUse": true,
+        "isFullyFree": false
+      },
+      "provider": "gitee",
+      "tags": [
+        "text-generation"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "32K",
+      "billingMode": "pay",
+      "freeTier": "trial",
+      "tier": "large",
+      "speed": "fast",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 32000000000,
+      "estimatedLatency": "< 1s"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "Fin-R1",
+      "name": "Fin-R1 金融大模型",
+      "description": "Fin-R1 是一款针对金融领域复杂推理的大型语言模型，由上海财经大学统计与数据科学学院张立文教授与其领衔的金融大语言模型课题组（SUFE-AIFLM-Lab）联合财跃星辰研发并开源发布。",
+      "contextSize": 32000,
+      "priceInput": 0.000002,
+      "priceOutput": 0.000008,
+      "isFree": true,
+      "capabilities": [
+        "text-generation",
+        "reasoning"
+      ],
+      "metadata": {
+        "originalType": "text2text",
+        "isReasoning": true,
+        "isMultimodal": false,
+        "hasToolUse": false,
+        "operationsCount": 2,
+        "serviceIdent": "Fin-R1",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/chat/completions",
+        "tags": "32K, 深度思考, 金融, 行业大模型",
+        "freeUse": true,
+        "isFullyFree": false
+      },
+      "provider": "gitee",
+      "tags": [
+        "reasoning",
+        "text-generation"
+      ],
+      "isReasoning": true,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "32K",
+      "billingMode": "pay",
+      "freeTier": "trial",
+      "tier": "large",
+      "speed": "fast",
+      "useCase": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "< 1s"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "Qwen2.5-VL-32B-Instruct",
+      "name": "Qwen2.5-VL-32B-Instruct",
+      "description": "Qwen2.5-VL-32B-Instruct 是一款拥有 320 亿参数、支持多图输入与复杂图文推理的大规模多模态指令微调模型。",
+      "contextSize": 24000,
+      "priceInput": 0,
+      "priceOutput": 0,
+      "isFree": true,
+      "capabilities": [
+        "text-generation"
+      ],
+      "metadata": {
+        "originalType": "text2text",
+        "isReasoning": false,
+        "isMultimodal": false,
+        "hasToolUse": false,
+        "operationsCount": 1,
+        "serviceIdent": "Qwen2.5-VL-32B-Instruct",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/chat/completions",
+        "tags": "视觉模型, Function Calling, 24K, 视觉, MindSpore",
+        "freeUse": true,
+        "isFullyFree": false
+      },
+      "provider": "gitee",
+      "tags": [
+        "text-generation"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "24K",
+      "billingMode": "free",
+      "freeTier": "trial",
+      "tier": "large",
+      "speed": "fast",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 32000000000,
+      "estimatedLatency": "< 1s"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "DianJin-R1-32B",
+      "name": "DianJin 金融大模型",
+      "description": "DianJin-R1-32B 是一款拥有 32B 参数、专为金融场景优化的大语言模型，具备强大的金融问答和多步推理能力，能生成结构化答案并在多个金融基准测试中表现优异。",
+      "contextSize": 32000,
+      "priceInput": 0.000002,
+      "priceOutput": 0.000008,
+      "isFree": true,
+      "capabilities": [
+        "text-generation",
+        "reasoning"
+      ],
+      "metadata": {
+        "originalType": "text2text",
+        "isReasoning": true,
+        "isMultimodal": false,
+        "hasToolUse": false,
+        "operationsCount": 2,
+        "serviceIdent": "DianJin-R1-32B",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/chat/completions",
+        "tags": "MIT, 32K, 深度思考, 金融, 行业大模型",
+        "freeUse": true,
+        "isFullyFree": false
+      },
+      "provider": "gitee",
+      "tags": [
+        "reasoning",
+        "text-generation"
+      ],
+      "isReasoning": true,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "32K",
+      "billingMode": "pay",
+      "freeTier": "trial",
+      "tier": "large",
+      "speed": "fast",
+      "useCase": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "< 1s"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "Qwen3-32B",
+      "name": "Qwen3-32B",
+      "description": "Qwen3 是 Qwen 系列中的最新一代大型语言模型，提供了一系列密集型和混合专家（MoE）模型。基于在训练数据、模型架构和优化技术方面的广泛进步。",
+      "contextSize": 32000,
+      "priceInput": 0.000001,
+      "priceOutput": 0.000004,
+      "isFree": true,
+      "capabilities": [
+        "text-generation"
+      ],
+      "metadata": {
+        "originalType": "text2text",
+        "isReasoning": false,
+        "isMultimodal": false,
+        "hasToolUse": false,
+        "operationsCount": 6,
+        "serviceIdent": "Qwen3-32B",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/chat/completions",
+        "tags": "文本生成, 32K",
+        "freeUse": true,
+        "isFullyFree": false
+      },
+      "provider": "gitee",
+      "tags": [
+        "text-generation"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "32K",
+      "billingMode": "pay",
+      "freeTier": "trial",
+      "tier": "large",
+      "speed": "fast",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 32000000000,
+      "estimatedLatency": "< 1s"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "Lingshu-32B",
+      "name": "Lingshu-32B 医疗大模型",
+      "description": "Lingshu‑32B 是一款多模态医学大语言模型，通过多阶段训练大规模融合医学图像和文本知识，在医学视觉问答和报告生成任务中实现开源 SOTA 表现，甚至超过 GPT-4.1 和 Claude Sonnet 4 ",
+      "contextSize": 32000,
+      "priceInput": 0,
+      "priceOutput": 0,
+      "isFree": true,
+      "capabilities": [
+        "text-generation"
+      ],
+      "metadata": {
+        "originalType": "text2text",
+        "isReasoning": false,
+        "isMultimodal": false,
+        "hasToolUse": false,
+        "operationsCount": 1,
+        "serviceIdent": "Lingshu-32B",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/chat/completions",
+        "tags": "32K, 行业大模型, 医疗, AI for Science",
+        "freeUse": true,
+        "isFullyFree": true
+      },
+      "provider": "gitee",
+      "tags": [
+        "text-generation"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "32K",
+      "billingMode": "free",
+      "freeTier": "full",
+      "tier": "large",
+      "speed": "fast",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 32000000000,
+      "estimatedLatency": "< 1s"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "Qwen-Image",
+      "name": "Qwen-Image",
+      "description": "Qwen‑Image 是一款由阿里云开发的20B参数级 MMDiT 图像生成基础模型，以其卓越的复杂文本渲染能力（尤其在英语和中文中表现出色）和高精度图像编辑功能而著称",
+      "priceInput": 0,
+      "priceOutput": 0,
+      "isFree": true,
+      "capabilities": [
+        "image-generation",
+        "vision"
+      ],
+      "metadata": {
+        "originalType": "text2image",
+        "isReasoning": false,
+        "isMultimodal": true,
+        "hasToolUse": false,
+        "operationsCount": 4,
+        "serviceIdent": "Qwen-Image",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/async/images/generations",
+        "tags": "图像生成与处理, 1024*1024",
+        "freeUse": true,
+        "isFullyFree": false
+      },
+      "provider": "gitee",
+      "tags": [
+        "vision",
+        "multimodal",
+        "image-generation"
+      ],
+      "isReasoning": false,
+      "isMultimodal": true,
+      "hasToolUse": false,
+      "contextLabel": "unknown",
+      "billingMode": "free",
+      "freeTier": "trial",
+      "tier": "large",
+      "speed": "fast",
+      "useCase": [
+        "image-understanding",
+        "visual-q&a",
+        "creative-generation",
+        "art"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "< 1s"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "Baichuan-M2-32B",
+      "name": "百川医疗大模型 M2-32B",
+      "description": "Baichuan-M2-32B 是由百川智能推出的第二款“医疗增强推理模型”，专为真实世界的医疗推理任务设计。",
+      "contextSize": 64000,
+      "priceInput": 0,
+      "priceOutput": 0,
+      "isFree": true,
+      "capabilities": [
+        "text-generation"
+      ],
+      "metadata": {
+        "originalType": "text2text",
+        "isReasoning": false,
+        "isMultimodal": false,
+        "hasToolUse": false,
+        "operationsCount": 1,
+        "serviceIdent": "Baichuan-M2-32B",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/chat/completions",
+        "tags": "行业大模型, 医疗, 64K, AI for Science",
+        "freeUse": true,
+        "isFullyFree": true
+      },
+      "provider": "gitee",
+      "tags": [
+        "text-generation"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "64K",
+      "billingMode": "free",
+      "freeTier": "full",
+      "tier": "large",
+      "speed": "fast",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 32000000000,
+      "estimatedLatency": "< 1s"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "Qwen-Image-Edit",
+      "name": "Qwen-Image-Edit",
+      "description": "Qwen‑Image‑Edit 是一个基于 20B 参数 Qwen‑Image 模型深度训练而成的图像编辑模型，具备中英文文字的精准增删改能力，以及语义与外观的双重编辑能力，展现专业级的图像编辑性能。",
+      "priceInput": 0,
+      "priceOutput": 0,
+      "isFree": true,
+      "capabilities": [
+        "image-to-image",
+        "vision"
+      ],
+      "metadata": {
+        "originalType": "image2image",
+        "isReasoning": false,
+        "isMultimodal": true,
+        "hasToolUse": false,
+        "operationsCount": 1,
+        "serviceIdent": "Qwen-Image-Edit",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/images/edits",
+        "tags": "图像生成与处理, 1024*1024",
+        "freeUse": true,
+        "isFullyFree": false
+      },
+      "provider": "gitee",
+      "tags": [
+        "vision",
+        "multimodal",
+        "image-to-image"
+      ],
+      "isReasoning": false,
+      "isMultimodal": true,
+      "hasToolUse": false,
+      "contextLabel": "unknown",
+      "billingMode": "free",
+      "freeTier": "trial",
+      "tier": "large",
+      "speed": "fast",
+      "useCase": [
+        "image-understanding",
+        "visual-q&a",
+        "image-editing",
+        "style-transfer"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "< 1s"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "DeepSeek-OCR",
+      "name": "DeepSeek-OCR",
+      "description": "DeepSeek-OCR 是由 DeepSeek 团队 开发的高精度光学字符识别（OCR, Optical Character Recognition）系统，旨在在复杂场景下实现高效、准确的文字检测与识别。\n它支持 多语言识别、复杂版面分析、表格与公式识别 等多种任务，适用于票据、文档、截图、自然场景图片等多样化输入。",
+      "priceInput": 0,
+      "priceOutput": 0,
+      "isFree": true,
+      "capabilities": [
+        "vision"
+      ],
+      "metadata": {
+        "originalType": "image2text",
+        "isReasoning": false,
+        "isMultimodal": false,
+        "hasToolUse": false,
+        "operationsCount": 5,
+        "serviceIdent": "DeepSeek-OCR",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/async/images/ocr",
+        "tags": "文档处理/OCR",
+        "freeUse": true,
+        "isFullyFree": false
+      },
+      "provider": "gitee",
+      "tags": [
+        "vision"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "unknown",
+      "billingMode": "free",
+      "freeTier": "trial",
+      "tier": "large",
+      "speed": "fast",
+      "useCase": [
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "< 1s"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "z-image-turbo",
+      "name": "z-image-turbo",
+      "description": "Z-Image-Turbo 是 Z-Image 系列的一员 — 一个高效、轻量级的图像生成基础模型（text-to-image），经过优化与蒸馏 (distillation) 后的 “Turbo” 版本。它旨在以较低的资源成本 (consumer-grade 单卡 < 16GB VRAM) 提供高质量、实用性强的图像生成能力。",
+      "contextSize": 2000,
+      "priceInput": 0,
+      "priceOutput": 0,
+      "isFree": true,
+      "capabilities": [
+        "image-generation",
+        "vision"
+      ],
+      "metadata": {
+        "originalType": "text2image",
+        "isReasoning": false,
+        "isMultimodal": true,
+        "hasToolUse": false,
+        "operationsCount": 5,
+        "serviceIdent": "z-image-turbo",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/images/generations",
+        "tags": "图像生成与处理, 1024*1024, 2k",
+        "freeUse": true,
+        "isFullyFree": false
+      },
+      "provider": "gitee",
+      "tags": [
+        "text-generation",
+        "vision",
+        "multimodal",
+        "image-generation"
+      ],
+      "isReasoning": false,
+      "isMultimodal": true,
+      "hasToolUse": false,
+      "contextLabel": "2K",
+      "billingMode": "free",
+      "freeTier": "trial",
+      "tier": "large",
+      "speed": "fast",
+      "useCase": [
+        "content-creation",
+        "writing-assistance",
+        "image-understanding",
+        "visual-q&a",
+        "creative-generation",
+        "art"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "< 1s"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "HunyuanOCR",
+      "name": "HunyuanOCR",
+      "description": "HunyuanOCR 是腾讯混元大模型体系下的通用光学字符识别（OCR）能力，基于多模态理解模型构建，具备高精度文本提取、版面还原与复杂场景识别能力。它支持多语言识别、复杂背景下文字提取，以及对表格、票据、证照等结构化信息的解析，适用于金融、政务、电商、教育等多类场景。",
+      "priceInput": 0,
+      "priceOutput": 0,
+      "isFree": true,
+      "capabilities": [
+        "vision"
+      ],
+      "metadata": {
+        "originalType": "image2text",
+        "isReasoning": false,
+        "isMultimodal": false,
+        "hasToolUse": false,
+        "operationsCount": 1,
+        "serviceIdent": "HunyuanOCR",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/images/ocr",
+        "tags": "文档处理/OCR",
+        "freeUse": true,
+        "isFullyFree": false
+      },
+      "provider": "gitee",
+      "tags": [
+        "vision"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "unknown",
+      "billingMode": "free",
+      "freeTier": "trial",
+      "tier": "large",
+      "speed": "fast",
+      "useCase": [
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "< 1s"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "LongCat-Image",
+      "name": "LongCat-Image",
+      "description": "LongCat-Image 是美团 LongCat 团队开源的轻量级高质量图像生成模型，支持中英文文本生成逼真图像，并具备优秀的中文文字渲染能力。",
+      "priceInput": 0,
+      "priceOutput": 0,
+      "isFree": true,
+      "capabilities": [
+        "image-generation",
+        "vision"
+      ],
+      "metadata": {
+        "originalType": "text2image",
+        "isReasoning": false,
+        "isMultimodal": true,
+        "hasToolUse": false,
+        "operationsCount": 2,
+        "serviceIdent": "LongCat-Image",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/images/generations",
+        "tags": "图像生成与处理",
+        "freeUse": true,
+        "isFullyFree": false
+      },
+      "provider": "gitee",
+      "tags": [
+        "vision",
+        "multimodal",
+        "image-generation"
+      ],
+      "isReasoning": false,
+      "isMultimodal": true,
+      "hasToolUse": false,
+      "contextLabel": "unknown",
+      "billingMode": "free",
+      "freeTier": "trial",
+      "tier": "large",
+      "speed": "fast",
+      "useCase": [
+        "image-understanding",
+        "visual-q&a",
+        "creative-generation",
+        "art"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "< 1s"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "LongCat-Image-Edit",
+      "name": "LongCat-Image-Edit",
+      "description": "LongCat-Image-Edit 是美团开源的高精度图像编辑模型，支持文本、局部选区与参考图驱动的内容重绘，具备强语义理解、细节一致性和自然编辑效果，适用于创意设计、商品图优化与精细视觉修改。",
+      "priceInput": 0,
+      "priceOutput": 0,
+      "isFree": true,
+      "capabilities": [
+        "image-to-image",
+        "vision"
+      ],
+      "metadata": {
+        "originalType": "image2image",
+        "isReasoning": false,
+        "isMultimodal": true,
+        "hasToolUse": false,
+        "operationsCount": 2,
+        "serviceIdent": "LongCat-Image-Edit",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/images/edits",
+        "tags": "图像生成与处理",
+        "freeUse": true,
+        "isFullyFree": false
+      },
+      "provider": "gitee",
+      "tags": [
+        "vision",
+        "multimodal",
+        "image-to-image"
+      ],
+      "isReasoning": false,
+      "isMultimodal": true,
+      "hasToolUse": false,
+      "contextLabel": "unknown",
+      "billingMode": "free",
+      "freeTier": "trial",
+      "tier": "large",
+      "speed": "fast",
+      "useCase": [
+        "image-understanding",
+        "visual-q&a",
+        "image-editing",
+        "style-transfer"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "< 1s"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "Qwen-Image-Edit-2511",
+      "name": "Qwen-Image-Edit-2511",
+      "description": "Qwen-Image-Edit-2511 是阿里通义团队在 Qwen-Image-Edit 基础上升级的开源图像编辑模型，主打提升编辑一致性、集成常用 LoRA 能力并增强人物/工业设计和几何推理表现，实现更稳定精确的 AI 图像编辑效果。",
+      "priceInput": 0,
+      "priceOutput": 0,
+      "isFree": true,
+      "capabilities": [
+        "image-to-image",
+        "vision"
+      ],
+      "metadata": {
+        "originalType": "image2image",
+        "isReasoning": false,
+        "isMultimodal": true,
+        "hasToolUse": false,
+        "operationsCount": 1,
+        "serviceIdent": "Qwen-Image-Edit-2511",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/async/images/edits",
+        "tags": "Apache license 2.0, 图像生成与处理, 2048*2048",
+        "freeUse": true,
+        "isFullyFree": false
+      },
+      "provider": "gitee",
+      "tags": [
+        "vision",
+        "multimodal",
+        "image-to-image"
+      ],
+      "isReasoning": false,
+      "isMultimodal": true,
+      "hasToolUse": false,
+      "contextLabel": "unknown",
+      "billingMode": "free",
+      "freeTier": "trial",
+      "tier": "large",
+      "speed": "fast",
+      "useCase": [
+        "image-understanding",
+        "visual-q&a",
+        "image-editing",
+        "style-transfer"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "< 1s"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "VajraV1",
+      "name": "VajraV1",
+      "description": "VajraV1 是一个由 VayuAI 提供的、基于 YOLO 体系结构的开源实时视觉模型系列，支持目标检测、图像分割和人体关键点检测等多种计算机视觉任务，具有高效准确的性能表现。",
+      "priceInput": 0,
+      "priceOutput": 0,
+      "isFree": true,
+      "capabilities": [
+        "vision"
+      ],
+      "metadata": {
+        "originalType": "image2text",
+        "isReasoning": false,
+        "isMultimodal": false,
+        "hasToolUse": false,
+        "operationsCount": 3,
+        "serviceIdent": "VajraV1",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/images/object-detection",
+        "tags": "图像生成与处理, 物体检测, 图片切割, 人体关键点检测",
+        "freeUse": true,
+        "isFullyFree": false
+      },
+      "provider": "gitee",
+      "tags": [
+        "vision"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "unknown",
+      "billingMode": "free",
+      "freeTier": "trial",
+      "tier": "large",
+      "speed": "fast",
+      "useCase": [
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "< 1s"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "Qwen-Image-2512",
+      "name": "Qwen-Image-2512",
+      "description": "Qwen-Image-2512 是阿里巴巴通义千问团队推出的最新一代文本生成图像大模型，在人物真实感、自然细节刻画和文字渲染能力上全面升级，可高质量地将文本描述转化为语义准确、细节丰富的图像。",
+      "priceInput": 0,
+      "priceOutput": 0,
+      "isFree": true,
+      "capabilities": [
+        "image-generation",
+        "vision"
+      ],
+      "metadata": {
+        "originalType": "text2image",
+        "isReasoning": false,
+        "isMultimodal": true,
+        "hasToolUse": false,
+        "operationsCount": 4,
+        "serviceIdent": "Qwen-Image-2512",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/images/generations",
+        "tags": "Apache license 2.0, 图像生成与处理, 1024*1024, 2048*2048",
+        "freeUse": true,
+        "isFullyFree": false
+      },
+      "provider": "gitee",
+      "tags": [
+        "vision",
+        "multimodal",
+        "image-generation"
+      ],
+      "isReasoning": false,
+      "isMultimodal": true,
+      "hasToolUse": false,
+      "contextLabel": "unknown",
+      "billingMode": "free",
+      "freeTier": "trial",
+      "tier": "large",
+      "speed": "fast",
+      "useCase": [
+        "image-understanding",
+        "visual-q&a",
+        "creative-generation",
+        "art"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "< 1s"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "GLM-Image",
+      "name": "GLM-Image",
+      "description": "GLM-Image 是智谱推出的多模态图像生成模型，擅长根据文本精准生成高质量图像，并在中文语义理解与文字渲染场景中表现突出。",
+      "priceInput": 0,
+      "priceOutput": 0,
+      "isFree": true,
+      "capabilities": [
+        "image-generation",
+        "vision"
+      ],
+      "metadata": {
+        "originalType": "text2image",
+        "isReasoning": false,
+        "isMultimodal": true,
+        "hasToolUse": false,
+        "operationsCount": 1,
+        "serviceIdent": "GLM-Image",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/images/generations",
+        "tags": "图像生成与处理, 1024*1024",
+        "freeUse": true,
+        "isFullyFree": false
+      },
+      "provider": "gitee",
+      "tags": [
+        "vision",
+        "multimodal",
+        "image-generation"
+      ],
+      "isReasoning": false,
+      "isMultimodal": true,
+      "hasToolUse": false,
+      "contextLabel": "unknown",
+      "billingMode": "free",
+      "freeTier": "trial",
+      "tier": "large",
+      "speed": "fast",
+      "useCase": [
+        "image-understanding",
+        "visual-q&a",
+        "creative-generation",
+        "art"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "< 1s"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "Qwen-Image-Layered",
+      "name": "Qwen-Image-Layered",
+      "description": "Qwen-Image-Layered 是一个由 Qwen 团队发布的 图像分层分解模型，它能将一张普通图像自动分解成多个 语义独立的 RGBA 图层，从而让每个图层可以 单独进行移动、重色、缩放、删除等编辑操作而不影响其它内容。",
+      "priceInput": 0,
+      "priceOutput": 0,
+      "isFree": true,
+      "capabilities": [
+        "image-to-image",
+        "vision"
+      ],
+      "metadata": {
+        "originalType": "image2image",
+        "isReasoning": false,
+        "isMultimodal": true,
+        "hasToolUse": false,
+        "operationsCount": 1,
+        "serviceIdent": "Qwen-Image-Layered",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/images/layers",
+        "tags": "图像生成与处理, 图像分层",
+        "freeUse": true,
+        "isFullyFree": false
+      },
+      "provider": "gitee",
+      "tags": [
+        "vision",
+        "multimodal",
+        "image-to-image"
+      ],
+      "isReasoning": false,
+      "isMultimodal": true,
+      "hasToolUse": false,
+      "contextLabel": "unknown",
+      "billingMode": "free",
+      "freeTier": "trial",
+      "tier": "large",
+      "speed": "fast",
+      "useCase": [
+        "image-understanding",
+        "visual-q&a",
+        "image-editing",
+        "style-transfer"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "< 1s"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "Z-Image",
+      "name": "Z-Image",
+      "description": "Tongyi-MAI/Z-Image 是阿里通义实验室开发的一款高质量图像生成基础模型，基于高效的单流扩散 Transformer 架构，专注于强可控性、丰富风格覆盖和高视觉质量，适合作为图像创作、研究和下游开发的核心生成引擎。",
+      "priceInput": 0,
+      "priceOutput": 0,
+      "isFree": true,
+      "capabilities": [
+        "image-generation",
+        "vision"
+      ],
+      "metadata": {
+        "originalType": "text2image",
+        "isReasoning": false,
+        "isMultimodal": true,
+        "hasToolUse": false,
+        "operationsCount": 2,
+        "serviceIdent": "Z-Image",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/images/generations",
+        "tags": "图像生成与处理, 1024*1024",
+        "freeUse": true,
+        "isFullyFree": false
+      },
+      "provider": "gitee",
+      "tags": [
+        "vision",
+        "multimodal",
+        "image-generation"
+      ],
+      "isReasoning": false,
+      "isMultimodal": true,
+      "hasToolUse": false,
+      "contextLabel": "unknown",
+      "billingMode": "free",
+      "freeTier": "trial",
+      "tier": "large",
+      "speed": "fast",
+      "useCase": [
+        "image-understanding",
+        "visual-q&a",
+        "creative-generation",
+        "art"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "< 1s"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "DeepSeek-V4-Pro",
+      "name": "DeepSeek-V4-Pro",
+      "description": "旗舰级 MoE 大模型，总参1.6T、激活 49B，原生支持百万级超长上下文。依托海量高质量训练数据，具备顶尖数学逻辑、复杂推理、专业代码与长文本深度解析能力，适配高阶科研、复杂办公、深度智能代理等高难度场景。",
+      "priceInput": 0.000012,
+      "priceOutput": 0.000024,
+      "isFree": false,
+      "capabilities": [
+        "text-generation"
+      ],
+      "metadata": {
+        "originalType": "text2text",
+        "isReasoning": false,
+        "isMultimodal": false,
+        "hasToolUse": false,
+        "operationsCount": 1,
+        "serviceIdent": "DeepSeek-V4-Pro",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/chat/completions",
+        "tags": "MIT, 文本生成, AI 编程模型, Function Calling, OpenClaw 模型",
+        "freeUse": false,
+        "isFullyFree": false
+      },
+      "provider": "gitee",
+      "tags": [
+        "text-generation"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "unknown",
+      "billingMode": "pay",
+      "freeTier": "none",
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "Qwen2-72B-Instruct",
+      "name": "Qwen2-72B-Instruct",
+      "description": "Qwen2 是 Qwen 模型的最新系列，对比当前最优的开源模型，Qwen2-72B 在自然语言理解、知识、代码、数学及多语言等多项能力上均显著超越当前领先的模型。",
+      "contextSize": 32000,
+      "priceInput": 0.000002,
+      "priceOutput": 0.000002,
+      "isFree": true,
+      "capabilities": [
+        "text-generation"
+      ],
+      "metadata": {
+        "originalType": "text2text",
+        "isReasoning": false,
+        "isMultimodal": false,
+        "hasToolUse": false,
+        "operationsCount": 2,
+        "serviceIdent": "Qwen2-72B-Instruct",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/chat/completions",
+        "tags": "文本生成, 32K",
+        "freeUse": true,
+        "isFullyFree": false
+      },
+      "provider": "gitee",
+      "tags": [
+        "text-generation"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "32K",
+      "billingMode": "pay",
+      "freeTier": "trial",
+      "tier": "large",
+      "speed": "fast",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 72000000000,
+      "estimatedLatency": "< 1s"
+    }
+  ]
+}

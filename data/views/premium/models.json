@@ -1,0 +1,362 @@
+{
+  "view": "premium",
+  "updatedAt": "2026-04-29T03:21:41.468Z",
+  "totalModels": 8,
+  "filters": {
+    "speed": "premium"
+  },
+  "models": [
+    {
+      "vendor": "gitee",
+      "modelId": "Qwen3-VL-Embedding-2B",
+      "name": "Qwen3-VL-Embedding-2B",
+      "description": "Qwen3-VL-Embedding-2B 是一个支持文本、图像等多模态输入、用于生成统一高维语义向量的 2 B 参数级多模态嵌入模型，常用于跨模态检索和相似性搜索等任务。",
+      "priceInput": 9e-8,
+      "priceOutput": 9e-8,
+      "isFree": false,
+      "capabilities": [
+        "embeddings"
+      ],
+      "metadata": {
+        "originalType": "embeddings",
+        "isReasoning": false,
+        "isMultimodal": false,
+        "hasToolUse": false,
+        "operationsCount": 1,
+        "serviceIdent": "Qwen3-VL-Embedding-2B",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/embeddings",
+        "tags": "多模态, 向量化和重排, 2048 维",
+        "freeUse": false,
+        "isFullyFree": false
+      },
+      "provider": "gitee",
+      "tags": [
+        "embeddings"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "unknown",
+      "billingMode": "pay",
+      "freeTier": "none",
+      "tier": "small",
+      "speed": "premium",
+      "useCase": [
+        "semantic-search",
+        "similarity"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 2000000000,
+      "estimatedLatency": "< 1s"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "GLM-5-Turbo",
+      "name": "GLM-5-Turbo",
+      "description": "GLM-5-Turbo 是面向 OpenClaw 龙虾场景深度优化的基座模型。 其从训练阶段就针对龙虾任务的核心需求进行专项优化，增强如工具调用、指令遵循、定时与持续性任务、长链路执行等核心能力，使其在复杂、动态、长链路的任务中也真正具备可执行性。",
+      "contextSize": 200000,
+      "priceInput": 0.000007,
+      "priceOutput": 0.000026,
+      "isFree": false,
+      "capabilities": [
+        "text-generation"
+      ],
+      "metadata": {
+        "originalType": "text2text",
+        "isReasoning": false,
+        "isMultimodal": false,
+        "hasToolUse": false,
+        "operationsCount": 1,
+        "serviceIdent": "GLM-5-Turbo",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/chat/completions",
+        "tags": "文本生成, Function Calling, 200K, OpenClaw 模型",
+        "freeUse": false,
+        "isFullyFree": false
+      },
+      "provider": "gitee",
+      "tags": [
+        "text-generation"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "200K",
+      "billingMode": "pay",
+      "freeTier": "none",
+      "tier": "medium",
+      "speed": "premium",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "1-3s"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "GLM-5V-Turbo",
+      "name": "GLM-5V-Turbo",
+      "description": "GLM-5V-Turbo 是智谱首个多模态 Coding 基座模型，面向视觉编程任务打造。能够原生处理图片、视频、文本等多模态输入，同时擅长长程规划、复杂编程和动作执行；深度适配 Agent 工作流，能够与 Claude Code、OpenClaw 等 Agent 深度协同，完成”看懂环境→规划动作→执行任务”的完整闭环。",
+      "contextSize": 128000,
+      "priceInput": 0.000007,
+      "priceOutput": 0.000026,
+      "isFree": false,
+      "capabilities": [
+        "text-generation",
+        "code"
+      ],
+      "metadata": {
+        "originalType": "text2text",
+        "isReasoning": false,
+        "isMultimodal": false,
+        "hasToolUse": false,
+        "operationsCount": 1,
+        "serviceIdent": "GLM-5V-Turbo",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/chat/completions",
+        "tags": "AI 编程模型, 视觉模型, Function Calling, 128K, OpenClaw 模型",
+        "freeUse": false,
+        "isFullyFree": false
+      },
+      "provider": "gitee",
+      "tags": [
+        "text-generation",
+        "code"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "128K",
+      "billingMode": "pay",
+      "freeTier": "none",
+      "tier": "medium",
+      "speed": "premium",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "1-3s"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "GLM-5.1",
+      "name": "GLM-5.1",
+      "description": "GLM-5.1 是智谱最新旗舰模型，代码能力大大增强，长程任务显著提升，能够在单次任务中持续、自主地工作长达 8 小时，完成从规划、执行到迭代优化的完整闭环，交付工程级成果。",
+      "contextSize": 200000,
+      "priceInput": 0.000008,
+      "priceOutput": 0.000028,
+      "isFree": false,
+      "capabilities": [
+        "text-generation"
+      ],
+      "metadata": {
+        "originalType": "text2text",
+        "isReasoning": false,
+        "isMultimodal": false,
+        "hasToolUse": false,
+        "operationsCount": 2,
+        "serviceIdent": "GLM-5.1",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/chat/completions",
+        "tags": "文本生成, AI 编程模型, Function Calling, 200K, OpenClaw 模型",
+        "freeUse": false,
+        "isFullyFree": false
+      },
+      "provider": "gitee",
+      "tags": [
+        "text-generation"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "200K",
+      "billingMode": "pay",
+      "freeTier": "none",
+      "tier": "medium",
+      "speed": "premium",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "1-3s"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "Kimi-K2.6",
+      "name": "Kimi-K2.6",
+      "description": "Kimi K2.6 作为国内领先的 Coding 模型，在长程代码任务中的表现取得了突破，面对不同编程语言（如 Rust、Go、Python）和任务场景（如前端、运维、性能优化）均具备更可靠的泛化能力。",
+      "priceInput": 0.0000065,
+      "priceOutput": 0.000027,
+      "isFree": false,
+      "capabilities": [
+        "text-generation"
+      ],
+      "metadata": {
+        "originalType": "text2text",
+        "isReasoning": false,
+        "isMultimodal": false,
+        "hasToolUse": false,
+        "operationsCount": 2,
+        "serviceIdent": "Kimi-K2.6",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/chat/completions",
+        "tags": "AI 编程模型, 视觉模型, Function Calling, 视觉, OpenClaw 模型",
+        "freeUse": false,
+        "isFullyFree": false
+      },
+      "provider": "gitee",
+      "tags": [
+        "text-generation"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "unknown",
+      "billingMode": "pay",
+      "freeTier": "none",
+      "tier": "medium",
+      "speed": "premium",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "1-3s"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "Qwen3.6-Plus",
+      "name": "Qwen3.6-Plus",
+      "description": "Qwen3.6原生视觉语言系列Plus模型，展现出与当前顶尖前沿模型相媲美的卓越性能，模型效果相较3.5系列显著提升。",
+      "contextSize": 64000,
+      "priceInput": 0.000008,
+      "priceOutput": 0.000048,
+      "isFree": false,
+      "capabilities": [
+        "text-generation"
+      ],
+      "metadata": {
+        "originalType": "text2text",
+        "isReasoning": false,
+        "isMultimodal": false,
+        "hasToolUse": false,
+        "operationsCount": 1,
+        "serviceIdent": "Qwen3.6-Plus",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/chat/completions",
+        "tags": "AI 编程模型, 视觉模型, Function Calling, 视觉, 64K, OpenClaw 模型",
+        "freeUse": false,
+        "isFullyFree": false
+      },
+      "provider": "gitee",
+      "tags": [
+        "text-generation"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "64K",
+      "billingMode": "pay",
+      "freeTier": "none",
+      "tier": "medium",
+      "speed": "premium",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "1-3s"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "Qwen3.6-Max",
+      "name": "Qwen3.6-Max",
+      "description": "Qwen3.6系列中规模最大、综合能力最强的Max模型Preview版本，",
+      "contextSize": 64000,
+      "priceInput": 0.000015,
+      "priceOutput": 0.00009,
+      "isFree": false,
+      "capabilities": [
+        "text-generation"
+      ],
+      "metadata": {
+        "originalType": "text2text",
+        "isReasoning": false,
+        "isMultimodal": false,
+        "hasToolUse": false,
+        "operationsCount": 1,
+        "serviceIdent": "Qwen3.6-Max",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/chat/completions",
+        "tags": "文本生成, AI 编程模型, Function Calling, 64K, OpenClaw 模型",
+        "freeUse": false,
+        "isFullyFree": false
+      },
+      "provider": "gitee",
+      "tags": [
+        "text-generation"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "64K",
+      "billingMode": "pay",
+      "freeTier": "none",
+      "tier": "medium",
+      "speed": "premium",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "1-3s"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "DeepSeek-V4-Pro",
+      "name": "DeepSeek-V4-Pro",
+      "description": "旗舰级 MoE 大模型，总参1.6T、激活 49B，原生支持百万级超长上下文。依托海量高质量训练数据，具备顶尖数学逻辑、复杂推理、专业代码与长文本深度解析能力，适配高阶科研、复杂办公、深度智能代理等高难度场景。",
+      "priceInput": 0.000012,
+      "priceOutput": 0.000024,
+      "isFree": false,
+      "capabilities": [
+        "text-generation"
+      ],
+      "metadata": {
+        "originalType": "text2text",
+        "isReasoning": false,
+        "isMultimodal": false,
+        "hasToolUse": false,
+        "operationsCount": 1,
+        "serviceIdent": "DeepSeek-V4-Pro",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/chat/completions",
+        "tags": "MIT, 文本生成, AI 编程模型, Function Calling, OpenClaw 模型",
+        "freeUse": false,
+        "isFullyFree": false
+      },
+      "provider": "gitee",
+      "tags": [
+        "text-generation"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "unknown",
+      "billingMode": "pay",
+      "freeTier": "none",
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "3-10s"
+    }
+  ]
+}
