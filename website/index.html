@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Model Hub - 入口</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, sans-serif;
+      background: #0f172a;
+      color: #f1f5f9;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .container {
+      text-align: center;
+      padding: 2rem;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(135deg, #3b82f6, #22c55e);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .subtitle {
+      color: #94a3b8;
+      margin-bottom: 2rem;
+    }
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    .link-card {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 12px;
+      padding: 1.25rem;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.2s;
+    }
+    .link-card:hover {
+      border-color: #3b82f6;
+      transform: translateY(-2px);
+    }
+    .link-card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      color: #fff;
+    }
+    .link-card p {
+      font-size: 0.875rem;
+      color: #94a3b8;
+    }
+    .badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      margin-left: 0.5rem;
+    }
+    .badge-new { background: #22c55e; color: #fff; }
+    .badge-dev { background: #3b82f6; color: #fff; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Model Hub</h1>
+    <p class="subtitle">多供应商模型聚合中心</p>
+
+    <div class="links">
+      <a href="dev.html" class="link-card">
+        <h3>开发视图 <span class="badge badge-dev">推荐</span></h3>
+        <p>支持搜索、过滤、排序，可区分完全免费和体验免费</p>
+      </a>
+
+      <a href="dev.html?view=free-full" class="link-card">
+        <h3>完全免费模型 <span class="badge badge-new">44个</span></h3>
+        <p>所有API调用完全免费，无任何限制</p>
+      </a>
+
+      <a href="dev.html?view=free-trial" class="link-card">
+        <h3>体验免费模型 <span class="badge badge-new">144个</span></h3>
+        <p>支持体验域名访问，但有定价</p>
+      </a>
+
+      <a href="dev.html?view=reasoning" class="link-card">
+        <h3>推理模型 <span class="badge badge-new">8个</span></h3>
+        <p>支持复杂推理和思维链</p>
+      </a>
+
+      <a href="dev.html?view=all" class="link-card">
+        <h3>全部模型</h3>
+        <p>展示所有 340 个模型（Gitee + NVIDIA）</p>
+      </a>
+    </div>
+  </div>
+</body>
+</html>
