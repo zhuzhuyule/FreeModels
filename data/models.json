@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-29T02:49:12.924Z",
+  "updatedAt": "2026-04-29T02:55:14.735Z",
   "totalModels": 201,
   "providers": [
     "gitee"
@@ -15,7 +15,12 @@
     "all",
     "free",
     "reasoning",
-    "multimodal"
+    "multimodal",
+    "tool-use",
+    "fast",
+    "premium",
+    "small",
+    "large"
   ],
   "models": [
     {
@@ -45,8 +50,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "500",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "fast",
+      "useCase": [
+        "semantic-search",
+        "similarity"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -81,8 +95,23 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": true,
       "contextLabel": "32K",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "large",
+      "speed": "standard",
+      "useCase": [
+        "content-creation",
+        "writing-assistance",
+        "agentic-tasks",
+        "tool-augmented",
+        "structured-output",
+        "api-integration",
+        "autonomous-agents"
+      ],
+      "performanceLevel": "mid",
+      "parameterCount": 72000000000,
+      "estimatedLatency": "3-10s"
     },
     {
       "vendor": "gitee",
@@ -117,8 +146,23 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": true,
       "contextLabel": "32K",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "content-creation",
+        "writing-assistance",
+        "agentic-tasks",
+        "tool-augmented",
+        "structured-output",
+        "api-integration",
+        "autonomous-agents"
+      ],
+      "performanceLevel": "mid",
+      "parameterCount": 7000000000,
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -146,8 +190,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "small",
+      "speed": "standard",
+      "useCase": [
+        "creative-generation",
+        "art"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -178,8 +231,18 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "32K",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "large",
+      "speed": "standard",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "mid",
+      "parameterCount": 32000000000,
+      "estimatedLatency": "3-10s"
     },
     {
       "vendor": "gitee",
@@ -208,8 +271,18 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "32K",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 8000000000,
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -238,8 +311,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "8K",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "fast",
+      "useCase": [
+        "semantic-search",
+        "similarity"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -268,8 +350,18 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "32K",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 26000000000,
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -298,8 +390,18 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "32K",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "large",
+      "speed": "standard",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "mid",
+      "parameterCount": 72000000000,
+      "estimatedLatency": "3-10s"
     },
     {
       "vendor": "gitee",
@@ -327,8 +429,14 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "small",
+      "speed": "standard",
+      "useCase": [],
+      "performanceLevel": "entry",
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -356,8 +464,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "transcription",
+        "voice-input"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -385,8 +502,18 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "small",
+      "speed": "standard",
+      "useCase": [
+        "text-to-speech",
+        "voice-output"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 500000000,
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -414,8 +541,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "image-editing",
+        "style-transfer"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -444,8 +580,18 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "32K",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 78000000000,
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -473,8 +619,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "3-10s"
     },
     {
       "vendor": "gitee",
@@ -502,8 +657,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "fast",
+      "useCase": [
+        "content-filtering",
+        "safety"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -531,8 +695,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "fast",
+      "useCase": [
+        "transcription",
+        "voice-input"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -561,8 +734,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "32K",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "fast",
+      "useCase": [
+        "content-filtering",
+        "safety"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -591,8 +773,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "500",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "fast",
+      "useCase": [
+        "semantic-search",
+        "similarity"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -621,8 +812,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "500",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "fast",
+      "useCase": [
+        "search-improvement",
+        "relevance"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -650,8 +850,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "small",
+      "speed": "premium",
+      "useCase": [
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -684,8 +893,22 @@
       ],
       "isReasoning": true,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "32K",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performanceLevel": "high",
+      "parameterCount": 32000000000,
+      "estimatedLatency": "3-10s"
     },
     {
       "vendor": "gitee",
@@ -716,8 +939,22 @@
       ],
       "isReasoning": true,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "32K",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "small",
+      "speed": "fast",
+      "useCase": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 1500000000,
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -748,8 +985,22 @@
       ],
       "isReasoning": true,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "32K",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "fast",
+      "useCase": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performanceLevel": "mid",
+      "parameterCount": 14000000000,
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -780,8 +1031,22 @@
       ],
       "isReasoning": true,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "32K",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "fast",
+      "useCase": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performanceLevel": "mid",
+      "parameterCount": 7000000000,
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -812,8 +1077,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "32K",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -846,8 +1120,21 @@
       ],
       "isReasoning": true,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "64K",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performanceLevel": "high",
+      "estimatedLatency": "3-10s"
     },
     {
       "vendor": "gitee",
@@ -876,8 +1163,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "32K",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -905,8 +1201,18 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "small",
+      "speed": "standard",
+      "useCase": [
+        "text-to-speech",
+        "voice-output"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 3000000000,
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -934,8 +1240,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "video-creation"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 14000000000,
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -966,8 +1281,18 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "32K",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "large",
+      "speed": "standard",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "mid",
+      "parameterCount": 32000000000,
+      "estimatedLatency": "3-10s"
     },
     {
       "vendor": "gitee",
@@ -996,8 +1321,18 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "8K",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 7000000000,
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -1026,8 +1361,18 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "32K",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "fast",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 8000000000,
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -1055,8 +1400,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "pdf-processing",
+        "ocr"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -1084,8 +1438,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "transcription",
+        "voice-input"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -1118,8 +1481,21 @@
       ],
       "isReasoning": true,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "32K",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performanceLevel": "high",
+      "estimatedLatency": "3-10s"
     },
     {
       "vendor": "gitee",
@@ -1148,8 +1524,18 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "24K",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "large",
+      "speed": "standard",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "mid",
+      "parameterCount": 32000000000,
+      "estimatedLatency": "3-10s"
     },
     {
       "vendor": "gitee",
@@ -1177,8 +1563,14 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "small",
+      "speed": "standard",
+      "useCase": [],
+      "performanceLevel": "entry",
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -1206,8 +1598,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "text-to-speech",
+        "voice-output"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -1236,8 +1637,19 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "content-creation",
+        "writing-assistance",
+        "content-filtering",
+        "safety"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -1266,8 +1678,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "10K",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "fast",
+      "useCase": [
+        "search-improvement",
+        "relevance"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -1296,8 +1717,20 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "small",
+      "speed": "fast",
+      "useCase": [
+        "content-creation",
+        "writing-assistance",
+        "text-to-speech",
+        "voice-output"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 500000000,
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -1328,8 +1761,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "32K",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "fast",
+      "useCase": [
+        "semantic-search",
+        "similarity"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -1360,8 +1802,18 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "32K",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "small",
+      "speed": "standard",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 32000000000,
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -1390,8 +1842,18 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "32K",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 78000000000,
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -1420,8 +1882,18 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "32K",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 38000000000,
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -1449,8 +1921,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "fast",
+      "useCase": [
+        "semantic-search",
+        "similarity"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -1483,8 +1964,21 @@
       ],
       "isReasoning": true,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "32K",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performanceLevel": "high",
+      "estimatedLatency": "3-10s"
     },
     {
       "vendor": "gitee",
@@ -1513,8 +2007,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "32K",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "fast",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -1543,8 +2046,18 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "32K",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "fast",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 8000000000,
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -1573,8 +2086,18 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "32K",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "fast",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 600000000,
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -1605,8 +2128,18 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "32K",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "large",
+      "speed": "standard",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "mid",
+      "parameterCount": 32000000000,
+      "estimatedLatency": "3-10s"
     },
     {
       "vendor": "gitee",
@@ -1635,8 +2168,18 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "32K",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "small",
+      "speed": "fast",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 4000000000,
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -1664,8 +2207,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "creative-generation",
+        "art"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -1693,8 +2245,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "fast",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -1722,8 +2283,14 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [],
+      "performanceLevel": "entry",
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -1751,8 +2318,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "image-editing",
+        "style-transfer"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -1780,8 +2356,14 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [],
+      "performanceLevel": "entry",
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -1810,8 +2392,18 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "32K",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "small",
+      "speed": "fast",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 9000000000,
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -1839,8 +2431,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "creative-generation",
+        "art"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -1871,8 +2472,18 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "128K",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 235000000000,
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -1900,8 +2511,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "image-editing",
+        "style-transfer"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -1930,8 +2550,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "32K",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "fast",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -1959,8 +2588,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "image-editing",
+        "style-transfer"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -1988,8 +2626,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "image-editing",
+        "style-transfer"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -2018,8 +2665,18 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "32K",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "fast",
+      "useCase": [
+        "semantic-search",
+        "similarity"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 600000000,
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -2048,8 +2705,18 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "32K",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "small",
+      "speed": "fast",
+      "useCase": [
+        "semantic-search",
+        "similarity"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 4000000000,
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -2078,8 +2745,18 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "32K",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "fast",
+      "useCase": [
+        "semantic-search",
+        "similarity"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 8000000000,
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -2108,8 +2785,18 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "8K",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "fast",
+      "useCase": [
+        "search-improvement",
+        "relevance"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 600000000,
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -2138,8 +2825,18 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "8K",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "small",
+      "speed": "fast",
+      "useCase": [
+        "search-improvement",
+        "relevance"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 4000000000,
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -2168,8 +2865,18 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "8K",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "fast",
+      "useCase": [
+        "search-improvement",
+        "relevance"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 8000000000,
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -2197,8 +2904,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "image-editing",
+        "style-transfer"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -2227,8 +2943,18 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "32K",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "large",
+      "speed": "fast",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 32000000000,
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -2257,8 +2983,19 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "small",
+      "speed": "standard",
+      "useCase": [
+        "content-creation",
+        "writing-assistance",
+        "text-to-speech",
+        "voice-output"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -2289,8 +3026,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "32K",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -2321,8 +3067,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "32K",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "small",
+      "speed": "premium",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -2353,8 +3108,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "32K",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "small",
+      "speed": "standard",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -2382,8 +3146,14 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [],
+      "performanceLevel": "entry",
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -2411,8 +3181,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "image-editing",
+        "style-transfer"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -2441,8 +3220,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "32K",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "fast",
+      "useCase": [
+        "semantic-search",
+        "similarity"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -2470,8 +3258,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "image-editing",
+        "style-transfer"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -2502,8 +3299,18 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "32K",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 14000000000,
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -2533,8 +3340,18 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 7000000000,
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -2565,8 +3382,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "256K",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -2597,8 +3423,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "64K",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -2629,8 +3464,18 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "256K",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 235000000000,
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -2661,8 +3506,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "128K",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "small",
+      "speed": "standard",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -2693,8 +3547,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "128K",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "small",
+      "speed": "standard",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -2722,8 +3585,18 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "creative-generation",
+        "art"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 6000000000,
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -2748,14 +3621,25 @@
       },
       "provider": "gitee",
       "tags": [
+        "vision",
         "multimodal",
-        "video-generation",
-        "vision"
+        "video-generation"
       ],
       "isReasoning": false,
       "isMultimodal": true,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "small",
+      "speed": "premium",
+      "useCase": [
+        "image-understanding",
+        "visual-q&a",
+        "video-creation"
+      ],
+      "performanceLevel": "mid",
+      "parameterCount": 14000000000,
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -2783,8 +3667,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "creative-generation",
+        "art"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -2815,8 +3708,18 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "32K",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 30000000000,
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -2841,14 +3744,25 @@
       },
       "provider": "gitee",
       "tags": [
+        "vision",
         "multimodal",
-        "image-generation",
-        "vision"
+        "image-generation"
       ],
       "isReasoning": false,
       "isMultimodal": true,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "image-understanding",
+        "visual-q&a",
+        "creative-generation",
+        "art"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "3-10s"
     },
     {
       "vendor": "gitee",
@@ -2876,8 +3790,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "fast",
+      "useCase": [
+        "content-filtering",
+        "safety"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -2908,8 +3831,18 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "128K",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 120000000000,
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -2940,8 +3873,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "64K",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "small",
+      "speed": "standard",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -2970,8 +3912,18 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "64K",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "large",
+      "speed": "fast",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 32000000000,
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -2996,14 +3948,25 @@
       },
       "provider": "gitee",
       "tags": [
+        "vision",
         "multimodal",
-        "image-to-image",
-        "vision"
+        "image-to-image"
       ],
       "isReasoning": false,
       "isMultimodal": true,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "image-understanding",
+        "visual-q&a",
+        "image-editing",
+        "style-transfer"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "3-10s"
     },
     {
       "vendor": "gitee",
@@ -3034,8 +3997,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "16K",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -3066,8 +4038,18 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "32K",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "medium",
+      "speed": "fast",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 7000000000,
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -3095,8 +4077,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "small",
+      "speed": "standard",
+      "useCase": [
+        "text-to-speech",
+        "voice-output"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -3127,8 +4118,18 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "32K",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 80000000000,
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -3159,8 +4160,18 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "32K",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 80000000000,
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -3193,8 +4204,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "128K",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -3222,8 +4242,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "small",
+      "speed": "standard",
+      "useCase": [
+        "pdf-processing",
+        "ocr"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -3254,8 +4283,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "200K",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "small",
+      "speed": "standard",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -3286,8 +4324,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "128K",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "small",
+      "speed": "standard",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -3316,8 +4363,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "8K",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "fast",
+      "useCase": [
+        "semantic-search",
+        "similarity"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -3348,8 +4404,18 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "32K",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 8000000000,
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -3380,8 +4446,18 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "32K",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "small",
+      "speed": "standard",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 4000000000,
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -3412,8 +4488,18 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "32K",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 30000000000,
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -3442,8 +4528,18 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "32K",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 8000000000,
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -3472,8 +4568,18 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "32K",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "small",
+      "speed": "standard",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 4000000000,
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -3502,8 +4608,18 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "32K",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "fast",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 600000000,
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -3531,8 +4647,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "text-to-speech",
+        "voice-output"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -3561,8 +4686,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "16K",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "premium",
+      "useCase": [
+        "pdf-processing",
+        "ocr"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -3590,8 +4724,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "3-10s"
     },
     {
       "vendor": "gitee",
@@ -3622,8 +4765,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "32K",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -3651,8 +4803,18 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "small",
+      "speed": "standard",
+      "useCase": [
+        "image-editing",
+        "style-transfer"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 3000000000,
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -3680,8 +4842,16 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "small",
+      "speed": "standard",
+      "useCase": [
+        "video-creation"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -3712,8 +4882,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "128K",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -3740,14 +4919,27 @@
       "provider": "gitee",
       "tags": [
         "text-generation",
+        "vision",
         "multimodal",
-        "image-generation",
-        "vision"
+        "image-generation"
       ],
       "isReasoning": false,
       "isMultimodal": true,
+      "hasToolUse": false,
       "contextLabel": "2K",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "content-creation",
+        "writing-assistance",
+        "image-understanding",
+        "visual-q&a",
+        "creative-generation",
+        "art"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "3-10s"
     },
     {
       "vendor": "gitee",
@@ -3778,8 +4970,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "128K",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "small",
+      "speed": "standard",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -3807,8 +5008,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "3-10s"
     },
     {
       "vendor": "gitee",
@@ -3835,8 +5045,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "creative-generation",
+        "art"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -3861,14 +5080,25 @@
       },
       "provider": "gitee",
       "tags": [
+        "vision",
         "multimodal",
-        "image-generation",
-        "vision"
+        "image-generation"
       ],
       "isReasoning": false,
       "isMultimodal": true,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "image-understanding",
+        "visual-q&a",
+        "creative-generation",
+        "art"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "3-10s"
     },
     {
       "vendor": "gitee",
@@ -3893,14 +5123,25 @@
       },
       "provider": "gitee",
       "tags": [
+        "vision",
         "multimodal",
-        "image-to-image",
-        "vision"
+        "image-to-image"
       ],
       "isReasoning": false,
       "isMultimodal": true,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "image-understanding",
+        "visual-q&a",
+        "image-editing",
+        "style-transfer"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "3-10s"
     },
     {
       "vendor": "gitee",
@@ -3935,8 +5176,22 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": true,
       "contextLabel": "128K",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "small",
+      "speed": "premium",
+      "useCase": [
+        "content-creation",
+        "writing-assistance",
+        "agentic-tasks",
+        "tool-augmented",
+        "structured-output",
+        "api-integration",
+        "autonomous-agents"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -3965,8 +5220,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "128K",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "small",
+      "speed": "fast",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -3995,8 +5259,18 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "32K",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "fast",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 7000000000,
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -4024,8 +5298,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "fast",
+      "useCase": [
+        "transcription",
+        "voice-input"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -4056,8 +5339,18 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "32K",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "medium",
+      "speed": "fast",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 9000000000,
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -4088,8 +5381,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "32K",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -4120,8 +5422,18 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "32K",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 30000000000,
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -4149,8 +5461,16 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "video-creation"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -4178,8 +5498,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "text-to-speech",
+        "voice-output"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -4207,8 +5536,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "small",
+      "speed": "standard",
+      "useCase": [
+        "creative-generation",
+        "art"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -4239,8 +5577,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "200K",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "small",
+      "speed": "standard",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -4271,8 +5618,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "200K",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -4297,14 +5653,25 @@
       },
       "provider": "gitee",
       "tags": [
+        "vision",
         "multimodal",
-        "image-to-image",
-        "vision"
+        "image-to-image"
       ],
       "isReasoning": false,
       "isMultimodal": true,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "image-understanding",
+        "visual-q&a",
+        "image-editing",
+        "style-transfer"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "3-10s"
     },
     {
       "vendor": "gitee",
@@ -4332,8 +5699,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "transcription",
+        "voice-input"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -4361,8 +5737,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "small",
+      "speed": "premium",
+      "useCase": [
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -4390,8 +5775,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "small",
+      "speed": "standard",
+      "useCase": [
+        "text-to-speech",
+        "voice-output"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -4419,8 +5813,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "3-10s"
     },
     {
       "vendor": "gitee",
@@ -4451,8 +5854,18 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "32K",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "medium",
+      "speed": "fast",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 7000000000,
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -4483,8 +5896,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "32K",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -4509,14 +5931,25 @@
       },
       "provider": "gitee",
       "tags": [
+        "vision",
         "multimodal",
-        "image-generation",
-        "vision"
+        "image-generation"
       ],
       "isReasoning": false,
       "isMultimodal": true,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "image-understanding",
+        "visual-q&a",
+        "creative-generation",
+        "art"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "3-10s"
     },
     {
       "vendor": "gitee",
@@ -4547,8 +5980,18 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "32K",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 8000000000,
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -4573,14 +6016,25 @@
       },
       "provider": "gitee",
       "tags": [
+        "vision",
         "multimodal",
-        "image-generation",
-        "vision"
+        "image-generation"
       ],
       "isReasoning": false,
       "isMultimodal": true,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "image-understanding",
+        "visual-q&a",
+        "creative-generation",
+        "art"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "3-10s"
     },
     {
       "vendor": "gitee",
@@ -4609,8 +6063,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "200K",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "small",
+      "speed": "fast",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -4641,8 +6104,18 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "32K",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "medium",
+      "speed": "premium",
+      "useCase": [
+        "semantic-search",
+        "similarity"
+      ],
+      "performanceLevel": "mid",
+      "parameterCount": 8000000000,
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -4672,8 +6145,18 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "medium",
+      "speed": "premium",
+      "useCase": [
+        "search-improvement",
+        "relevance"
+      ],
+      "performanceLevel": "mid",
+      "parameterCount": 8000000000,
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -4701,8 +6184,18 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "small",
+      "speed": "standard",
+      "useCase": [
+        "creative-generation",
+        "art"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 9000000000,
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -4729,8 +6222,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "information-retrieval",
+        "research"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -4760,8 +6262,18 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "small",
+      "speed": "premium",
+      "useCase": [
+        "semantic-search",
+        "similarity"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 2000000000,
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -4789,8 +6301,16 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "small",
+      "speed": "standard",
+      "useCase": [
+        "video-creation"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -4820,8 +6340,18 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "small",
+      "speed": "premium",
+      "useCase": [
+        "search-improvement",
+        "relevance"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 2000000000,
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -4846,14 +6376,25 @@
       },
       "provider": "gitee",
       "tags": [
+        "vision",
         "multimodal",
-        "image-to-image",
-        "vision"
+        "image-to-image"
       ],
       "isReasoning": false,
       "isMultimodal": true,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "image-understanding",
+        "visual-q&a",
+        "image-editing",
+        "style-transfer"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "3-10s"
     },
     {
       "vendor": "gitee",
@@ -4884,8 +6425,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "256K",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -4916,8 +6466,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "16K",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "small",
+      "speed": "premium",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -4948,8 +6507,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "8K",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "small",
+      "speed": "standard",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -4980,8 +6548,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "32K",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -5009,8 +6586,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "text-to-speech",
+        "voice-output"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -5038,8 +6624,18 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "small",
+      "speed": "standard",
+      "useCase": [
+        "creative-generation",
+        "art"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 4000000000,
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -5064,14 +6660,25 @@
       },
       "provider": "gitee",
       "tags": [
+        "vision",
         "multimodal",
-        "image-generation",
-        "vision"
+        "image-generation"
       ],
       "isReasoning": false,
       "isMultimodal": true,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "image-understanding",
+        "visual-q&a",
+        "creative-generation",
+        "art"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "3-10s"
     },
     {
       "vendor": "gitee",
@@ -5102,8 +6709,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "32K",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -5134,8 +6750,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "200K",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -5163,8 +6788,18 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "transcription",
+        "voice-input"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 1700000000,
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -5195,8 +6830,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "200K",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -5227,8 +6871,18 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "64K",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "small",
+      "speed": "fast",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 35000000000,
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -5259,8 +6913,18 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "64K",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 27000000000,
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -5291,8 +6955,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "200K",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "medium",
+      "speed": "premium",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -5323,8 +6996,18 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "256K",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 122000000000,
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -5357,8 +7040,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "128K",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "medium",
+      "speed": "premium",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -5391,8 +7083,22 @@
       ],
       "isReasoning": true,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "128K",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "small",
+      "speed": "premium",
+      "useCase": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performanceLevel": "mid",
+      "parameterCount": 27000000000,
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -5423,8 +7129,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "200K",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "medium",
+      "speed": "premium",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -5455,8 +7170,18 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "128K",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "small",
+      "speed": "standard",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 26000000000,
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -5487,8 +7212,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "200K",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -5519,8 +7253,18 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "64K",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "medium",
+      "speed": "fast",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 9000000000,
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -5550,8 +7294,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "medium",
+      "speed": "premium",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -5582,8 +7335,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "64K",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "medium",
+      "speed": "premium",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -5614,8 +7376,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "64K",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "medium",
+      "speed": "premium",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -5645,8 +7416,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "3-10s"
     },
     {
       "vendor": "gitee",
@@ -5676,8 +7456,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -5706,8 +7495,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "500",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "fast",
+      "useCase": [
+        "semantic-search",
+        "similarity"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -5736,8 +7534,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "500",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "fast",
+      "useCase": [
+        "semantic-search",
+        "similarity"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -5765,8 +7572,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "text-to-speech",
+        "voice-output"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -5795,8 +7611,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "8K",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "fast",
+      "useCase": [
+        "semantic-search",
+        "similarity"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -5825,8 +7650,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "8K",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "fast",
+      "useCase": [
+        "semantic-search",
+        "similarity"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -5855,8 +7689,18 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "8K",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 33000000000,
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -5884,8 +7728,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "small",
+      "speed": "standard",
+      "useCase": [
+        "text-to-speech",
+        "voice-output"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -5913,8 +7766,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "creative-generation",
+        "art"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -5942,8 +7804,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "text-to-speech",
+        "voice-output"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -5972,8 +7843,18 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "32K",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "small",
+      "speed": "fast",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 9000000000,
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -6001,8 +7882,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "creative-generation",
+        "art"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -6033,8 +7923,18 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "32K",
-      "billingMode": "pay"
+      "billingMode": "pay",
+      "tier": "large",
+      "speed": "standard",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "mid",
+      "parameterCount": 72000000000,
+      "estimatedLatency": "3-10s"
     },
     {
       "vendor": "gitee",
@@ -6063,8 +7963,18 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "24K",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "fast",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 7000000000,
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -6092,8 +8002,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "small",
+      "speed": "standard",
+      "useCase": [
+        "creative-generation",
+        "art"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -6121,8 +8040,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "creative-generation",
+        "art"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -6150,8 +8078,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "transcription",
+        "voice-input"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "1-3s"
     },
     {
       "vendor": "gitee",
@@ -6179,8 +8116,17 @@
       ],
       "isReasoning": false,
       "isMultimodal": false,
+      "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free"
+      "billingMode": "free",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "transcription",
+        "voice-input"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "1-3s"
     }
   ]
 }

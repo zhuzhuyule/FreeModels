@@ -15,16 +15,27 @@ export interface EnhancedModelData extends RawModelData {
   tags: string[];
   isReasoning: boolean;
   isMultimodal: boolean;
+  hasToolUse: boolean;
   contextLabel: string;
   billingMode: 'free' | 'pay' | 'mixed';
   provider: string;
+  parameterCount?: number;
+  tier: 'small' | 'medium' | 'large' | 'xlarge';
+  speed: 'fast' | 'standard' | 'premium';
+  useCase: string[];
+  performanceLevel: 'entry' | 'mid' | 'high' | 'enterprise';
+  estimatedLatency?: string;
 }
 
 export interface CachedCapabilities {
   tags: string[];
   isReasoning: boolean;
   isMultimodal: boolean;
+  hasToolUse: boolean;
   contextSize: string;
+  parameterCount?: number;
+  tier: 'small' | 'medium' | 'large' | 'xlarge';
+  performanceLevel: 'entry' | 'mid' | 'high' | 'enterprise';
   description?: string;
   updatedAt: string;
 }

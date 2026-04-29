@@ -2,6 +2,7 @@ import * as fs from 'fs';
 import * as path from 'path';
 import type { CachedCapabilities, RawModelData, EnhancedModelData, ViewOutput, ProviderMeta } from './types.js';
 import { getCachedOrInfer } from './enhancer.js';
+import { profileModel, extractParameterCount } from './analyzer.js';
 
 const CACHE_PATH = path.resolve('data/capability-cache.json');
 
@@ -67,7 +68,11 @@ export function updateCache(
       tags: enhanced.tags,
       isReasoning: enhanced.isReasoning,
       isMultimodal: enhanced.isMultimodal,
+      hasToolUse: enhanced.hasToolUse,
       contextSize: enhanced.contextLabel,
+      parameterCount: enhanced.parameterCount,
+      tier: enhanced.tier,
+      performanceLevel: enhanced.performanceLevel,
       description: model.description || enhanced.tags.join(', '),
       updatedAt: new Date().toISOString(),
     };
@@ -85,7 +90,27 @@ export function enhanceWithCache(
   raw: RawModelData
 ): EnhancedModelData {
   const cache = loadCache();
-  return getCachedOrInfer(vendor, modelId, raw, cache);
+  const base = getCachedOrInfer(vendor, modelId, raw, cache);
+
+  const cached = cache[`${vendor}/${modelId}`];
+  const parameterCount = extractParameterCount(raw.name) || cached?.parameterCount;
+
+  const profile = profileModel(
+    raw.name,
+    base.tags,
+    raw.priceInput,
+    raw.isFree
+  );
+
+  return {
+    ...base,
+    parameterCount,
+    tier: profile.tier,
+    speed: profile.speed,
+    useCase: profile.useCase,
+    performanceLevel: profile.performanceLevel,
+    estimatedLatency: profile.estimatedLatency,
+  };
 }
 
 export function saveProviderOutput(
@@ -137,7 +162,12 @@ export function buildViews(models: EnhancedModelData[]): Array<{ view: string; f
     { view: 'all', filters: {} },
     { view: 'free', filters: { billingMode: 'free' } },
     { view: 'reasoning', filters: { tags: 'reasoning' } },
-    { view: 'multimodal', filters: { tags: 'multimodal' } },
+    { view: 'multimodal', filters: { tags: 'vision' } },
+    { view: 'tool-use', filters: { hasToolUse: 'true' } },
+    { view: 'fast', filters: { speed: 'fast' } },
+    { view: 'premium', filters: { speed: 'premium' } },
+    { view: 'small', filters: { tier: 'small' } },
+    { view: 'large', filters: { tier: 'large' } },
   ];
 }
 
@@ -177,6 +207,14 @@ function checkFilter(model: EnhancedModelData, key: string, value: string): bool
       return model.isReasoning === (value === 'true');
     case 'isMultimodal':
       return model.isMultimodal === (value === 'true');
+    case 'hasToolUse':
+      return model.hasToolUse === (value === 'true');
+    case 'speed':
+      return model.speed === value;
+    case 'tier':
+      return model.tier === value;
+    case 'performanceLevel':
+      return model.performanceLevel === value;
     default:
       return (model as unknown as Record<string, unknown>)[key] === value;
   }

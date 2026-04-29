@@ -3,17 +3,22 @@ import type { RawModelData, EnhancedModelData, CachedCapabilities } from './type
 const REASONING_KEYWORDS = /\b(reasoning|think|thought|r1|tot|chain.?of.?thought|problem.?solv|logical.?think)\b/i;
 const MULTIMODAL_KEYWORDS = /\b(vision|visual|multimodal|image|photo|picture|图生|图理解|视觉|多模态)\b/i;
 const TEXT_GEN_KEYWORDS = /\b(text|chat|llm|language|model|对话|文本|生成)\b/i;
+const TOOL_USE_KEYWORDS = /\b(tool|function.?call|plugin|tool.?use|actions|function_calling)\b/i;
 
 export function inferCapabilities(model: RawModelData): {
   tags: string[];
   isReasoning: boolean;
   isMultimodal: boolean;
+  hasToolUse: boolean;
 } {
   const text = `${model.modelId} ${model.name} ${model.description || ''}`.toLowerCase();
   const tags: string[] = [];
 
   const isReasoning = REASONING_KEYWORDS.test(text);
   const isMultimodal = MULTIMODAL_KEYWORDS.test(text);
+  const hasToolUse = TOOL_USE_KEYWORDS.test(text) || (model.capabilities?.some(c =>
+    c.toLowerCase().includes('tool') || c.toLowerCase().includes('function')
+  ) ?? false);
 
   if (isReasoning) {
     tags.push('reasoning');
@@ -23,6 +28,7 @@ export function inferCapabilities(model: RawModelData): {
   }
 
   if (isMultimodal) {
+    tags.push('vision');
     tags.push('multimodal');
   }
 
@@ -35,7 +41,7 @@ export function inferCapabilities(model: RawModelData): {
     });
   }
 
-  return { tags, isReasoning, isMultimodal };
+  return { tags, isReasoning, isMultimodal, hasToolUse };
 }
 
 export function formatContextLabel(contextSize?: number): string {
@@ -68,7 +74,7 @@ export function evaluateBilling(
 }
 
 export function enhanceModel(raw: RawModelData): EnhancedModelData {
-  const { tags, isReasoning, isMultimodal } = inferCapabilities(raw);
+  const { tags, isReasoning, isMultimodal, hasToolUse } = inferCapabilities(raw);
   const contextLabel = formatContextLabel(raw.contextSize);
   const billingMode = evaluateBilling(raw.priceInput, raw.priceOutput);
 
@@ -78,8 +84,13 @@ export function enhanceModel(raw: RawModelData): EnhancedModelData {
     tags,
     isReasoning,
     isMultimodal,
+    hasToolUse,
     contextLabel,
     billingMode,
+    tier: 'medium',
+    speed: 'standard',
+    useCase: [],
+    performanceLevel: 'mid',
   };
 }
 
@@ -92,7 +103,7 @@ export function getCachedOrInfer(
   const key = `${vendor}/${modelId}`;
   const cached = cache[key];
 
-  const { tags, isReasoning, isMultimodal } = inferCapabilities(raw);
+  const { tags, isReasoning, isMultimodal, hasToolUse } = inferCapabilities(raw);
   const contextLabel = formatContextLabel(raw.contextSize);
   const billingMode = evaluateBilling(raw.priceInput, raw.priceOutput);
 
@@ -102,7 +113,12 @@ export function getCachedOrInfer(
     tags: cached?.tags ?? tags,
     isReasoning: cached?.isReasoning ?? isReasoning,
     isMultimodal: cached?.isMultimodal ?? isMultimodal,
+    hasToolUse: cached?.hasToolUse ?? hasToolUse,
     contextLabel: cached?.contextSize ?? contextLabel,
     billingMode,
+    tier: cached?.tier ?? 'medium',
+    speed: 'standard',
+    useCase: [],
+    performanceLevel: cached?.performanceLevel ?? 'mid',
   };
 }

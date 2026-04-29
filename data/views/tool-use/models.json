@@ -1,0 +1,162 @@
+{
+  "view": "tool-use",
+  "updatedAt": "2026-04-29T02:55:14.731Z",
+  "totalModels": 3,
+  "filters": {
+    "hasToolUse": "true"
+  },
+  "models": [
+    {
+      "vendor": "gitee",
+      "modelId": "Qwen2.5-72B-Instruct",
+      "name": "Qwen2.5-72B-Instruct",
+      "description": "Qwen2.5-72B-Instruct  支持 32k 上下文, 生成长文本超过 8K 。支持 function call 与外部系统无缝交互，极大提升了灵活性和扩展性。模型知识明显增加，并且大大提高了编码和数学能力, 多语言支持超过 29 种",
+      "contextSize": 32000,
+      "priceInput": 0.000004,
+      "priceOutput": 0.000004,
+      "isFree": false,
+      "capabilities": [
+        "text-generation",
+        "tool_use",
+        "function_calling"
+      ],
+      "metadata": {
+        "originalType": "text2text",
+        "isReasoning": false,
+        "isMultimodal": false,
+        "hasToolUse": true,
+        "operationsCount": 1,
+        "serviceIdent": "Qwen2.5-72B-Instruct",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/chat/completions",
+        "tags": "文本生成, Function Calling, 32K"
+      },
+      "provider": "gitee",
+      "tags": [
+        "text-generation",
+        "tool_use",
+        "function_calling"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": true,
+      "contextLabel": "32K",
+      "billingMode": "pay",
+      "tier": "large",
+      "speed": "standard",
+      "useCase": [
+        "content-creation",
+        "writing-assistance",
+        "agentic-tasks",
+        "tool-augmented",
+        "structured-output",
+        "api-integration",
+        "autonomous-agents"
+      ],
+      "performanceLevel": "mid",
+      "parameterCount": 72000000000,
+      "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "Qwen2.5-7B-Instruct",
+      "name": "Qwen2.5-7B-Instruct",
+      "description": "Qwen2.5-7B-Instruct 是一款 70 亿参数的大语言模型，支持 function call 与外部系统无缝交互，极大提升了灵活性和扩展性。优化中文和多语言场景，支持智能问答、内容生成等应用。",
+      "contextSize": 32000,
+      "priceInput": 3.5e-7,
+      "priceOutput": 3.5e-7,
+      "isFree": false,
+      "capabilities": [
+        "text-generation",
+        "tool_use",
+        "function_calling"
+      ],
+      "metadata": {
+        "originalType": "text2text",
+        "isReasoning": false,
+        "isMultimodal": false,
+        "hasToolUse": true,
+        "operationsCount": 3,
+        "serviceIdent": "Qwen2.5-7B-Instruct",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/chat/completions",
+        "tags": "文本生成, Function Calling, 32K"
+      },
+      "provider": "gitee",
+      "tags": [
+        "text-generation",
+        "tool_use",
+        "function_calling"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": true,
+      "contextLabel": "32K",
+      "billingMode": "pay",
+      "tier": "medium",
+      "speed": "standard",
+      "useCase": [
+        "content-creation",
+        "writing-assistance",
+        "agentic-tasks",
+        "tool-augmented",
+        "structured-output",
+        "api-integration",
+        "autonomous-agents"
+      ],
+      "performanceLevel": "mid",
+      "parameterCount": 7000000000,
+      "estimatedLatency": "1-3s"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "GLM-4.6V",
+      "name": "GLM-4.6V",
+      "description": "GLM-4.6V 是 GLM 系列在多模态方向上的一次重要迭代，它将训练时上下文窗口提升到128k tokens，在视觉理解精度上达到同参数规模 SOTA，并首次在模型架构中将 Function Call（工具调用）能力原生融入视觉模型，打通从「视觉感知」到「可执行行动（Action）」的链路，为真实业务场景中的多模态 Agent 提供统一的技术底座。",
+      "contextSize": 128000,
+      "priceInput": 0.000002,
+      "priceOutput": 0.000006,
+      "isFree": false,
+      "capabilities": [
+        "text-generation",
+        "tool_use",
+        "function_calling"
+      ],
+      "metadata": {
+        "originalType": "text2text",
+        "isReasoning": false,
+        "isMultimodal": false,
+        "hasToolUse": true,
+        "operationsCount": 1,
+        "serviceIdent": "GLM-4.6V",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/chat/completions",
+        "tags": "MIT, 视觉模型, 128K"
+      },
+      "provider": "gitee",
+      "tags": [
+        "text-generation",
+        "tool_use",
+        "function_calling"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": true,
+      "contextLabel": "128K",
+      "billingMode": "pay",
+      "tier": "small",
+      "speed": "premium",
+      "useCase": [
+        "content-creation",
+        "writing-assistance",
+        "agentic-tasks",
+        "tool-augmented",
+        "structured-output",
+        "api-integration",
+        "autonomous-agents"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "< 1s"
+    }
+  ]
+}
