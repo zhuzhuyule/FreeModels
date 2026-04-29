@@ -122,6 +122,8 @@ Agent 在任务执行过程中发现的条目应遵循以下格式：
   - 模型数据硬编码在 provider 中（MODEL_DATA）
   - 模型类型：LLM（TTS、ASR、Chat）、企业独有模型
   - Provider 文件：scripts/hub/providers/groq/index.ts
+
+[Xunfei Provider 实现]
 - Date: 2026-04-29
 - Context: Xunfei API 404，从用户提供 HTML 源码找到正确端点
 - Category: 代码模式
@@ -130,6 +132,7 @@ Agent 在任务执行过程中发现的条目应遵循以下格式：
   - 能力字段映射：function 字段（4=OCR, 8=Embedding, 12=多模态, 15=深度推理）
   - contextLengthTag 从 categoryTree 中提取
   - 价格从 price.inferencePrice 提取（inTokensPrice/outTokensPrice）
+  - Provider 文件：scripts/hub/providers/xunfei/index.ts
 
 [OpenRouter Provider 实现]
 - Date: 2026-04-29
@@ -165,8 +168,13 @@ Agent 在任务执行过程中发现的条目应遵循以下格式：
   - Provider 数量：9 个（Gitee, BigModel, NVIDIA, Google, Xunfei, Groq, Cerebras, LongCat, OpenRouter）
   - 总模型数：599 个
   - 免费模型：168 个（Gitee 44 + BigModel 7 + NVIDIA 50 + Google 17 + Cerebras 2 + LongCat 7 + OpenRouter 56）
-  - 允许体验：144 个（Gitee 特有）
+  - 允许体验：145 个（Gitee 特有）
   - 运行命令：npm run sync-models（聚合数据）
   - 类型检查：npm run typecheck
   - 数据文件：data/models.json（唯一数据源）
   - 文档目录：.monkeycode/docs/
+  - 统计方法：
+    - 总模型数：npm run sync-models 后 data/models.json 中的 total 字段
+    - 免费模型：filter(is_free=true)
+    - 体验模型：filter(is_experienceable=true)
+    - Provider 模型数：Counter(provider) 统计

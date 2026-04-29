@@ -15,7 +15,7 @@
 | Xunfei | 64 | maas.xfyun.cn | 0 | [xunfei.md](./xunfei.md) |
 | Google | 32 | ai.google.dev/pricing | 17 | [google.md](./google.md) |
 | OpenRouter | 56 | openrouter.ai API | 56 | [openrouter.md](./openrouter.md) |
-| **总计** | **598** | | **~233** | |
+| **总计** | **599** | | **~234** | |
 
 ## 数据源分类
 

@@ -45,7 +45,7 @@ Provider API/HTML
 | Xunfei | 64 | maas.xfyun.cn | 0 | [providers/xunfei.md](./providers/xunfei.md) |
 | Google | 32 | ai.google.dev/pricing | 17 个免费 | [providers/google.md](./providers/google.md) |
 | OpenRouter | 56 | openrouter.ai API | 56 个免费 | [providers/openrouter.md](./providers/openrouter.md) |
-| **总计** | **598** | | | |
+| **总计** | **599** | | | |
 
 ## 字段设计
 
@@ -209,6 +209,66 @@ interface RawModelData {
 - `view=reasoning` - 推理模型
 - `view=multimodal` - 多模态
 - `view=tool-use` - 工具调用
+
+## 统计计算方法
+
+### 模型数量统计
+
+模型数量通过 `npm run sync-models` 命令聚合后，通过以下方式计算：
+
+```bash
+# 运行同步
+npm run sync-models
+
+# 统计数据（从 data/models.json 读取）
+python3 -c "
+import json
+with open('data/models.json') as f:
+    data = json.load(f)
+print(f'Total: {data[\"total\"]}')
+print(f'Providers: {len(data[\"providers\"])}')
+"
+```
+
+### 免费模型判断规则
+
+| 字段 | 判断逻辑 | Provider |
+|------|----------|----------|
+| `is_free = true` | 价格为零或标记为"免费" | 所有 Provider |
+| `is_experienceable = true` | 有价格但允许体验（Gitee 特有） | 仅 Gitee |
+
+### Provider 模型数量
+
+```
+总模型数 = sum(各 Provider 模型数)
+免费模型 = sum(各 Provider is_free=true 的模型数)
+体验模型 = Gitee 中 is_experienceable=true 的模型数
+```
+
+### 实时统计查询
+
+```bash
+# 统计各 Provider 模型数量
+python3 -c "
+import json
+from collections import Counter
+with open('data/models.json') as f:
+    data = json.load(f)
+counts = Counter(m.get('provider') for m in data['data'])
+for p, c in sorted(counts.items()):
+    print(f'{p}: {c}')
+"
+
+# 统计免费模型
+python3 -c "
+import json
+with open('data/models.json') as f:
+    data = json.load(f)
+free = [m for m in data['data'] if m.get('is_free')]
+exp = [m for m in data['data'] if m.get('is_experienceable')]
+print(f'Free: {len(free)}, Experienceable: {len(exp)}')
+"
+```
 
 ## 运行命令
 
