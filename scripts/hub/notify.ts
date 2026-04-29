@@ -2,73 +2,97 @@ const WECHAT_API = 'https://qyapi.weixin.qq.com/cgi-bin/webhook/send';
 
 export interface NotifyPayload {
   totalModels: number;
+  freeCount: number;
   totalFamilies: number;
   crossProviderFamilies: number;
   topFamilies: Array<{ family: string; providerCount: number }>;
   byProvider: Record<string, number>;
   failedProviders: string[];
   anomalies: string[];
+  addedIds: string[];
+  removedIds: string[];
   llmStats: { hits: number; misses: number; errors: number };
   durationMs: number;
   previousTotal?: number;
+  previousFreeCount?: number;
 }
 
-function pickEmoji(payload: NotifyPayload): string {
-  if (payload.failedProviders.length > 0) return '⚠️';
-  if (payload.anomalies.length > 0) return '⚠️';
-  return '✅';
-}
+const SEPARATOR = '─────────────────────────';
 
-function diffLine(label: string, curr: number, prev?: number): string {
-  if (prev === undefined) return `${label}: **${curr}**`;
+function diffNum(curr: number, prev?: number): string {
+  if (prev === undefined) return `${curr}`;
   const delta = curr - prev;
-  const sign = delta > 0 ? `+${delta}` : `${delta}`;
-  return `${label}: **${curr}** (${sign})`;
+  if (delta === 0) return `${curr} (持平)`;
+  const sign = delta > 0 ? '+' : '';
+  return `${curr} (${sign}${delta})`;
 }
 
-function formatMarkdown(payload: NotifyPayload): string {
-  const emoji = pickEmoji(payload);
-  const lines: string[] = [];
-  lines.push(`## ${emoji} Model Hub 同步报告`);
-  lines.push('');
-  lines.push(`> ${new Date().toISOString().replace('T', ' ').slice(0, 19)} UTC · 用时 ${(payload.durationMs / 1000).toFixed(1)}s`);
-  lines.push('');
-  lines.push('### 数据概况');
-  lines.push(`- ${diffLine('模型总数', payload.totalModels, payload.previousTotal)}`);
-  lines.push(`- 家族数：**${payload.totalFamilies}**（跨 provider **${payload.crossProviderFamilies}** 个）`);
+function trimList(items: string[], max = 5): string[] {
+  if (items.length <= max) return items;
+  return [...items.slice(0, max), `…还有 ${items.length - max} 个`];
+}
 
-  if (payload.topFamilies.length > 0) {
+export function formatNotification(p: NotifyPayload): string {
+  const hasError = p.failedProviders.length > 0 || p.anomalies.length > 0;
+  const hasChange = p.addedIds.length > 0 || p.removedIds.length > 0;
+  const headEmoji = hasError ? '⚠️' : (hasChange ? '🔄' : '✅');
+  const time = new Date().toISOString().replace('T', ' ').slice(0, 19);
+  const dur = (p.durationMs / 1000).toFixed(1);
+
+  const lines: string[] = [];
+  lines.push(`${headEmoji}  Model Hub 同步完成`);
+  lines.push(`${time} UTC · 用时 ${dur}s`);
+  lines.push(SEPARATOR);
+
+  lines.push('📊 数据统计');
+  lines.push(`  全量模型：${diffNum(p.totalModels, p.previousTotal)}`);
+  lines.push(`  免费模型：${diffNum(p.freeCount, p.previousFreeCount)}`);
+  lines.push(`  模型家族：${p.totalFamilies}（跨家 ${p.crossProviderFamilies}）`);
+
+  if (p.addedIds.length > 0) {
     lines.push('');
-    lines.push('### 跨 provider 头部家族');
-    for (const f of payload.topFamilies.slice(0, 5)) {
-      lines.push(`- \`${f.family}\` × ${f.providerCount} 家`);
+    lines.push(`🆕 新增 ${p.addedIds.length} 个`);
+    for (const id of trimList(p.addedIds, 5)) lines.push(`  · ${id}`);
+  }
+
+  if (p.removedIds.length > 0) {
+    lines.push('');
+    lines.push(`➖ 移除 ${p.removedIds.length} 个`);
+    for (const id of trimList(p.removedIds, 5)) lines.push(`  · ${id}`);
+  }
+
+  if (p.failedProviders.length > 0) {
+    lines.push('');
+    lines.push(`❌ Provider 失败：${p.failedProviders.length} 个`);
+    for (const name of p.failedProviders) lines.push(`  · ${name}`);
+  }
+
+  if (p.anomalies.length > 0) {
+    lines.push('');
+    lines.push(`⚠️ 异常告警`);
+    for (const a of p.anomalies) lines.push(`  · ${a}`);
+  }
+
+  lines.push('');
+  lines.push('📦 各 Provider 模型数');
+  const providers = Object.entries(p.byProvider).sort((a, b) => b[1] - a[1]);
+  const maxName = Math.max(...providers.map(([n]) => n.length));
+  for (const [name, count] of providers) {
+    lines.push(`  ${name.padEnd(maxName)}  ${count}`);
+  }
+
+  if (p.topFamilies.length > 0) {
+    lines.push('');
+    lines.push('🔗 跨 Provider 头部家族');
+    for (const f of p.topFamilies.slice(0, 5)) {
+      lines.push(`  · ${f.family} × ${f.providerCount} 家`);
     }
   }
 
-  lines.push('');
-  lines.push('### Provider 拉取');
-  const providers = Object.entries(payload.byProvider).sort((a, b) => b[1] - a[1]);
-  for (const [name, count] of providers) {
-    lines.push(`- ${name}: ${count}`);
-  }
-
-  if (payload.failedProviders.length > 0) {
-    lines.push('');
-    lines.push(`### ⚠️ 失败 Provider`);
-    for (const p of payload.failedProviders) lines.push(`- ${p}`);
-  }
-
-  if (payload.anomalies.length > 0) {
-    lines.push('');
-    lines.push('### ⚠️ 异常');
-    for (const a of payload.anomalies) lines.push(`- ${a}`);
-  }
-
-  const llm = payload.llmStats;
+  const llm = p.llmStats;
   if (llm.hits + llm.misses + llm.errors > 0) {
     lines.push('');
-    lines.push(`### LLM 调用 (GitHub Models)`);
-    lines.push(`- 缓存命中：${llm.hits}，新调用：${llm.misses}，失败：${llm.errors}`);
+    lines.push(`🤖 LLM 调用：缓存 ${llm.hits} · 新调 ${llm.misses} · 错误 ${llm.errors}`);
   }
 
   return lines.join('\n');
@@ -83,8 +107,8 @@ export async function notifyWechat(payload: NotifyPayload): Promise<void> {
 
   const url = `${WECHAT_API}?key=${encodeURIComponent(key)}`;
   const body = {
-    msgtype: 'markdown',
-    markdown: { content: formatMarkdown(payload) },
+    msgtype: 'text',
+    text: { content: formatNotification(payload) },
   };
 
   try {

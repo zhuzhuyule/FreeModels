@@ -230,19 +230,27 @@ function validateAndFilter(models: EnhancedModelData[]): EnhancedModelData[] {
 
 interface ProviderSnapshot {
   total: number;
+  freeCount: number;
   byProvider: Record<string, number>;
+  ids: Set<string>;
 }
 
 function snapshotPrevious(): ProviderSnapshot | null {
   if (!fs.existsSync(OUTPUT_PATH)) return null;
   try {
-    const previous = JSON.parse(fs.readFileSync(OUTPUT_PATH, 'utf-8')) as { data?: Array<{ provider: string }> };
+    const previous = JSON.parse(fs.readFileSync(OUTPUT_PATH, 'utf-8')) as {
+      data?: Array<{ id: string; provider: string; is_free?: boolean }>;
+    };
     if (!Array.isArray(previous.data)) return null;
     const byProvider: Record<string, number> = {};
+    const ids = new Set<string>();
+    let freeCount = 0;
     for (const m of previous.data) {
       byProvider[m.provider] = (byProvider[m.provider] ?? 0) + 1;
+      ids.add(m.id);
+      if (m.is_free) freeCount++;
     }
-    return { total: previous.data.length, byProvider };
+    return { total: previous.data.length, freeCount, byProvider, ids };
   } catch {
     return null;
   }
@@ -346,10 +354,26 @@ async function main(): Promise<void> {
   output.providers = providerMeta;
 
   const byProvider: Record<string, number> = {};
+  const currentIds = new Set<string>();
+  let freeCount = 0;
   for (const m of allModels) {
     byProvider[m.provider] = (byProvider[m.provider] ?? 0) + 1;
+    currentIds.add(m.modelId);
+    if (m.isFree) freeCount++;
   }
-  const current: ProviderSnapshot = { total: allModels.length, byProvider };
+  const current: ProviderSnapshot = {
+    total: allModels.length,
+    freeCount,
+    byProvider,
+    ids: currentIds,
+  };
+
+  const addedIds: string[] = [];
+  const removedIds: string[] = [];
+  if (previous) {
+    for (const id of currentIds) if (!previous.ids.has(id)) addedIds.push(id);
+    for (const id of previous.ids) if (!currentIds.has(id)) removedIds.push(id);
+  }
 
   const warnings = detectAnomalies(current, previous, failedProviders);
   if (warnings.length > 0) {
@@ -367,15 +391,19 @@ async function main(): Promise<void> {
   if (!skipNotify) {
     const payload: NotifyPayload = {
       totalModels: allModels.length,
+      freeCount,
       totalFamilies: familyStats.total,
       crossProviderFamilies: familyStats.crossProvider,
       topFamilies: familyStats.top.slice(0, 5),
       byProvider,
       failedProviders,
       anomalies: warnings,
+      addedIds,
+      removedIds,
       llmStats: getLlmStats(),
       durationMs: Date.now() - startedAt,
       previousTotal: previous?.total,
+      previousFreeCount: previous?.freeCount,
     };
     await notifyWechat(payload);
   }
