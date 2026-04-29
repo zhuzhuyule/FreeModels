@@ -1,19 +1,2158 @@
 {
   "view": "premium",
-  "updatedAt": "2026-04-29T03:21:41.468Z",
-  "totalModels": 8,
+  "updatedAt": "2026-04-29T14:00:02.997Z",
+  "totalModels": 95,
   "filters": {
     "speed": "premium"
   },
   "models": [
     {
+      "vendor": "bigmodel",
+      "modelId": "bigmodel/glm-4-plus",
+      "name": "GLM-4-Plus",
+      "description": "语言模型",
+      "contextSize": 8000,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "metadata": {
+        "originalName": "GLM-4-Plus",
+        "context": "8k-int4",
+        "category": "语言模型",
+        "provider": "bigmodel"
+      },
+      "provider": "bigmodel",
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "8K",
+      "billingMode": "unknown",
+      "freeTier": "none",
+      "modelFamily": "glm-4-plus",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "premium",
+      "useCase": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "1-3s"
+    },
+    {
+      "vendor": "bigmodel",
+      "modelId": "bigmodel/glm-4.5v",
+      "name": "GLM-4.5V",
+      "description": "视觉模型",
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision"
+      ],
+      "metadata": {
+        "originalName": "GLM-4.5V",
+        "category": "视觉模型",
+        "provider": "bigmodel"
+      },
+      "provider": "bigmodel",
+      "tags": [
+        "chat",
+        "text-generation",
+        "vision"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "16K",
+      "billingMode": "unknown",
+      "freeTier": "none",
+      "modelFamily": "glm-4.5v",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "bigmodel",
+      "modelId": "bigmodel/glm-4v",
+      "name": "GLM-4V",
+      "description": "模型训练",
+      "contextSize": 2000,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "metadata": {
+        "originalName": "GLM-4V",
+        "context": "2k",
+        "category": "模型训练",
+        "provider": "bigmodel"
+      },
+      "provider": "bigmodel",
+      "tags": [
+        "chat",
+        "text-generation",
+        "vision"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "8K",
+      "billingMode": "unknown",
+      "freeTier": "none",
+      "modelFamily": "glm-4v",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "bigmodel",
+      "modelId": "bigmodel/glm-4v-plus",
+      "name": "GLM-4V-Plus",
+      "description": "历史模型",
+      "contextSize": 8000,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision"
+      ],
+      "metadata": {
+        "originalName": "GLM-4V-Plus",
+        "context": "8K",
+        "category": "历史模型",
+        "provider": "bigmodel"
+      },
+      "provider": "bigmodel",
+      "tags": [
+        "chat",
+        "text-generation",
+        "vision"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "8K",
+      "billingMode": "unknown",
+      "freeTier": "none",
+      "modelFamily": "glm-4v-plus",
+      "aliases": [
+        "bigmodel/glm-4v-plus-0111"
+      ],
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "bigmodel",
+      "modelId": "bigmodel/glm-4v-plus-0111",
+      "name": "GLM-4V-Plus-0111",
+      "description": "视觉推理",
+      "contextSize": 16000,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision",
+        "reasoning"
+      ],
+      "metadata": {
+        "originalName": "GLM-4V-Plus-0111",
+        "context": "16K",
+        "category": "视觉理解",
+        "provider": "bigmodel"
+      },
+      "provider": "bigmodel",
+      "tags": [
+        "chat",
+        "text-generation",
+        "vision"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "8K",
+      "billingMode": "unknown",
+      "freeTier": "none",
+      "modelFamily": "glm-4v-plus",
+      "aliases": [
+        "bigmodel/glm-4v-plus"
+      ],
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "bigmodel",
+      "modelId": "bigmodel/cogview-3",
+      "name": "Cogview-3",
+      "description": "模型训练",
+      "contextSize": 1000,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "image-generation"
+      ],
+      "metadata": {
+        "originalName": "Cogview-3",
+        "context": "1k",
+        "category": "模型训练",
+        "provider": "bigmodel"
+      },
+      "provider": "bigmodel",
+      "tags": [
+        "chat",
+        "text-generation",
+        "vision",
+        "image-generation"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "16K",
+      "billingMode": "unknown",
+      "freeTier": "none",
+      "modelFamily": "cogview-3",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "image-understanding",
+        "visual-q&a",
+        "creative-generation",
+        "art"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "bigmodel",
+      "modelId": "bigmodel/cogview-3-plus",
+      "name": "CogView-3-Plus",
+      "description": "图像模型",
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision",
+        "image-generation"
+      ],
+      "metadata": {
+        "originalName": "CogView-3-Plus",
+        "category": "图像模型",
+        "provider": "bigmodel"
+      },
+      "provider": "bigmodel",
+      "tags": [
+        "chat",
+        "text-generation",
+        "vision",
+        "image-generation"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "8K",
+      "billingMode": "unknown",
+      "freeTier": "none",
+      "modelFamily": "cogview-3-plus",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "image-understanding",
+        "visual-q&a",
+        "creative-generation",
+        "art"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "bigmodel",
+      "modelId": "bigmodel/cogview-4-250304",
+      "name": "CogView-4-250304",
+      "description": "图像模型",
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision",
+        "image-generation"
+      ],
+      "metadata": {
+        "originalName": "CogView-4-250304",
+        "category": "图像模型",
+        "provider": "bigmodel"
+      },
+      "provider": "bigmodel",
+      "tags": [
+        "chat",
+        "text-generation",
+        "vision",
+        "image-generation"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "16K",
+      "billingMode": "unknown",
+      "freeTier": "none",
+      "modelFamily": "cogview-4",
+      "aliases": [
+        "bigmodel/cogview-4"
+      ],
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "image-understanding",
+        "visual-q&a",
+        "creative-generation",
+        "art"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "bigmodel",
+      "modelId": "bigmodel/glm-4-0520",
+      "name": "GLM-4-0520",
+      "description": "模型推理",
+      "contextSize": 8000,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "reasoning"
+      ],
+      "metadata": {
+        "originalName": "GLM-4-0520",
+        "context": "8k-int8",
+        "category": "模型推理",
+        "provider": "bigmodel"
+      },
+      "provider": "bigmodel",
+      "tags": [
+        "chat",
+        "text-generation",
+        "reasoning"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "8K",
+      "billingMode": "unknown",
+      "freeTier": "none",
+      "modelFamily": "glm-4",
+      "aliases": [
+        "bigmodel/glm-4"
+      ],
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performanceLevel": "high",
+      "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "bigmodel",
+      "modelId": "bigmodel/search-pro",
+      "name": "Search-Pro",
+      "description": "unknown",
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "web-search"
+      ],
+      "metadata": {
+        "originalName": "Search-Pro",
+        "category": "unknown",
+        "provider": "bigmodel"
+      },
+      "provider": "bigmodel",
+      "tags": [
+        "chat",
+        "text-generation",
+        "web-search"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "unknown",
+      "billingMode": "unknown",
+      "freeTier": "none",
+      "modelFamily": "search-pro",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "premium",
+      "useCase": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "information-retrieval",
+        "research"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "1-3s"
+    },
+    {
+      "vendor": "bigmodel",
+      "modelId": "bigmodel/search-pro-sogou",
+      "name": "Search-Pro-Sogou",
+      "description": "unknown",
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "web-search"
+      ],
+      "metadata": {
+        "originalName": "Search-Pro-Sogou",
+        "category": "unknown",
+        "provider": "bigmodel"
+      },
+      "provider": "bigmodel",
+      "tags": [
+        "chat",
+        "text-generation",
+        "web-search"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "unknown",
+      "billingMode": "unknown",
+      "freeTier": "none",
+      "modelFamily": "search-pro-sogou",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "premium",
+      "useCase": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "information-retrieval",
+        "research"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "1-3s"
+    },
+    {
+      "vendor": "bigmodel",
+      "modelId": "bigmodel/search-pro-quark",
+      "name": "Search-Pro-Quark",
+      "description": "unknown",
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "web-search"
+      ],
+      "metadata": {
+        "originalName": "Search-Pro-Quark",
+        "category": "unknown",
+        "provider": "bigmodel"
+      },
+      "provider": "bigmodel",
+      "tags": [
+        "chat",
+        "text-generation",
+        "web-search"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "unknown",
+      "billingMode": "unknown",
+      "freeTier": "none",
+      "modelFamily": "search-pro-quark",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "premium",
+      "useCase": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "information-retrieval",
+        "research"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "1-3s"
+    },
+    {
+      "vendor": "bigmodel",
+      "modelId": "bigmodel/glm-z1-air",
+      "name": "GLM-Z1-Air",
+      "description": "文本模型",
+      "contextSize": 128000,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "reasoning"
+      ],
+      "metadata": {
+        "originalName": "GLM-Z1-Air",
+        "context": "128K",
+        "category": "文本模型",
+        "provider": "bigmodel"
+      },
+      "provider": "bigmodel",
+      "tags": [
+        "chat",
+        "text-generation",
+        "reasoning"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "128K",
+      "billingMode": "unknown",
+      "freeTier": "none",
+      "modelFamily": "glm-z1-air",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performanceLevel": "high",
+      "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "bigmodel",
+      "modelId": "bigmodel/glm-z1-airx",
+      "name": "GLM-Z1-AirX",
+      "description": "文本模型",
+      "contextSize": 32000,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "reasoning"
+      ],
+      "metadata": {
+        "originalName": "GLM-Z1-AirX",
+        "context": "32K",
+        "category": "文本模型",
+        "provider": "bigmodel"
+      },
+      "provider": "bigmodel",
+      "tags": [
+        "chat",
+        "text-generation",
+        "reasoning"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "32K",
+      "billingMode": "unknown",
+      "freeTier": "none",
+      "modelFamily": "glm-z1-airx",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performanceLevel": "high",
+      "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "bigmodel",
+      "modelId": "bigmodel/glm-z1-flashx",
+      "name": "GLM-Z1-FlashX",
+      "description": "文本模型",
+      "contextSize": 128000,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "reasoning"
+      ],
+      "metadata": {
+        "originalName": "GLM-Z1-FlashX",
+        "context": "128K",
+        "category": "文本模型",
+        "provider": "bigmodel"
+      },
+      "provider": "bigmodel",
+      "tags": [
+        "chat",
+        "text-generation",
+        "reasoning"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "128K",
+      "billingMode": "unknown",
+      "freeTier": "none",
+      "modelFamily": "glm-z1-flashx",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performanceLevel": "high",
+      "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "bigmodel",
+      "modelId": "bigmodel/glm-ocr",
+      "name": "GLM-OCR",
+      "description": "视觉推理",
+      "contextSize": 32000,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision",
+        "reasoning"
+      ],
+      "metadata": {
+        "originalName": "GLM-OCR",
+        "context": "32K",
+        "category": "视觉理解",
+        "provider": "bigmodel"
+      },
+      "provider": "bigmodel",
+      "tags": [
+        "chat",
+        "text-generation",
+        "vision"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "32K",
+      "billingMode": "unknown",
+      "freeTier": "none",
+      "modelFamily": "glm-ocr",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "bigmodel",
+      "modelId": "bigmodel/glm-4.1v-thinking-flashx",
+      "name": "GLM-4.1V-Thinking-FlashX",
+      "description": "视觉推理",
+      "contextSize": 64000,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision",
+        "reasoning"
+      ],
+      "metadata": {
+        "originalName": "GLM-4.1V-Thinking-FlashX",
+        "context": "64K",
+        "category": "视觉理解",
+        "provider": "bigmodel"
+      },
+      "provider": "bigmodel",
+      "tags": [
+        "chat",
+        "text-generation",
+        "vision",
+        "reasoning"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "64K",
+      "billingMode": "unknown",
+      "freeTier": "none",
+      "modelFamily": "glm-4.1v-thinking-flashx",
+      "modelVariant": "thinking",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "image-understanding",
+        "visual-q&a",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performanceLevel": "high",
+      "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "bigmodel",
+      "modelId": "bigmodel/glm-image",
+      "name": "GLM-Image",
+      "description": "图像生成",
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision",
+        "image-generation"
+      ],
+      "metadata": {
+        "originalName": "GLM-Image",
+        "category": "多模态生成",
+        "provider": "bigmodel"
+      },
+      "provider": "bigmodel",
+      "tags": [
+        "vision",
+        "multimodal",
+        "chat",
+        "text-generation"
+      ],
+      "isReasoning": false,
+      "isMultimodal": true,
+      "hasToolUse": false,
+      "contextLabel": "unknown",
+      "billingMode": "unknown",
+      "freeTier": "none",
+      "modelFamily": "glm-image",
+      "modelVariant": "image",
+      "aliases": [
+        "GLM-Image"
+      ],
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "image-understanding",
+        "visual-q&a",
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "GOT-OCR2_0",
+      "name": "GOT-OCR2_0",
+      "description": "GOT-OCR2_0提供功能强大的 OCR 解决方案，能够轻松识别图表、几何图形、公式和音乐符号，并将其转换为可编辑文本。该模型基于先进的深度学习架构，针对多语言文本、复杂排版以及图像噪声进行了全面优化，提供卓越的文字识别精度。",
+      "priceInput": 0,
+      "priceOutput": 0,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
+      "capabilities": [
+        "vision"
+      ],
+      "metadata": {
+        "originalType": "image2text",
+        "isReasoning": false,
+        "isMultimodal": false,
+        "hasToolUse": false,
+        "operationsCount": 1,
+        "serviceIdent": "GOT-OCR2_0",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/images/ocr",
+        "tags": "文档处理/OCR",
+        "freeUse": true,
+        "isFullyFree": false
+      },
+      "provider": "gitee",
+      "tags": [
+        "vision"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "unknown",
+      "billingMode": "free",
+      "freeTier": "none",
+      "modelFamily": "got-ocr2_0",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "Florence-2-large",
+      "name": "Florence-2-large",
+      "description": "Florence-2-large 是一款多模态大模型，具备卓越的图像和文本跨模态理解与生成能力，支持精准的图像描述和视觉问答。",
+      "priceInput": 0,
+      "priceOutput": 0,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
+      "capabilities": [
+        "vision"
+      ],
+      "metadata": {
+        "originalType": "image2text",
+        "isReasoning": false,
+        "isMultimodal": false,
+        "hasToolUse": false,
+        "operationsCount": 2,
+        "serviceIdent": "Florence-2-large",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/images/object-detection",
+        "tags": "图像生成与处理, 英文, 物体检测, 图像描述",
+        "freeUse": true,
+        "isFullyFree": false
+      },
+      "provider": "gitee",
+      "tags": [
+        "vision"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "unknown",
+      "billingMode": "free",
+      "freeTier": "none",
+      "modelFamily": "florence-2-large",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "DeepSeek-R1-Distill-Qwen-32B",
+      "name": "DeepSeek-R1-Distill-Qwen-32B",
+      "description": "DeepSeek-R1 系列通过强化学习与冷启动数据优化推理性能，开源模型刷新多任务标杆，超越 OpenAI-o1-mini 水平。",
+      "contextSize": 32000,
+      "priceInput": 1.26,
+      "priceOutput": 1.26,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
+      "capabilities": [
+        "text-generation",
+        "reasoning"
+      ],
+      "metadata": {
+        "originalType": "text2text",
+        "isReasoning": true,
+        "isMultimodal": false,
+        "hasToolUse": false,
+        "operationsCount": 4,
+        "serviceIdent": "DeepSeek-R1-Distill-Qwen-32B",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/chat/completions",
+        "tags": "文本生成, 32K",
+        "freeUse": true,
+        "isFullyFree": false
+      },
+      "provider": "gitee",
+      "tags": [
+        "reasoning",
+        "text-generation"
+      ],
+      "isReasoning": true,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "32K",
+      "billingMode": "pay",
+      "freeTier": "none",
+      "modelFamily": "deepseek-r1-distill-qwen-32b",
+      "modelVariant": "r1",
+      "aliases": [
+        "xunfei/DeepSeek-R1-Distill-Qwen-32B"
+      ],
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performanceLevel": "high",
+      "parameterCount": 32000000000,
+      "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "DeepSeek-R1",
+      "name": "DeepSeek-R1",
+      "description": "DeepSeek-R1 是一款采用强化学习技术的推理模型，凭借少量标注数据大幅提升推理能力，性能媲美 OpenAI o1。",
+      "contextSize": 64000,
+      "priceInput": 4,
+      "priceOutput": 16,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
+      "capabilities": [
+        "text-generation",
+        "reasoning"
+      ],
+      "metadata": {
+        "originalType": "text2text",
+        "isReasoning": true,
+        "isMultimodal": false,
+        "hasToolUse": false,
+        "operationsCount": 3,
+        "serviceIdent": "DeepSeek-R1",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/chat/completions",
+        "tags": "文本生成, Function Calling, 满血版, 64K, 0528升级版",
+        "freeUse": true,
+        "isFullyFree": false
+      },
+      "provider": "gitee",
+      "tags": [
+        "reasoning",
+        "text-generation"
+      ],
+      "isReasoning": true,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "64K",
+      "billingMode": "pay",
+      "freeTier": "none",
+      "modelFamily": "deepseek-r1",
+      "modelVariant": "r1",
+      "aliases": [
+        "xunfei/DeepSeek-R1"
+      ],
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performanceLevel": "high",
+      "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "Fin-R1",
+      "name": "Fin-R1 金融大模型",
+      "description": "Fin-R1 是一款针对金融领域复杂推理的大型语言模型，由上海财经大学统计与数据科学学院张立文教授与其领衔的金融大语言模型课题组（SUFE-AIFLM-Lab）联合财跃星辰研发并开源发布。",
+      "contextSize": 32000,
+      "priceInput": 2,
+      "priceOutput": 8,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
+      "capabilities": [
+        "text-generation",
+        "reasoning"
+      ],
+      "metadata": {
+        "originalType": "text2text",
+        "isReasoning": true,
+        "isMultimodal": false,
+        "hasToolUse": false,
+        "operationsCount": 2,
+        "serviceIdent": "Fin-R1",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/chat/completions",
+        "tags": "32K, 深度思考, 金融, 行业大模型",
+        "freeUse": true,
+        "isFullyFree": false
+      },
+      "provider": "gitee",
+      "tags": [
+        "reasoning",
+        "text-generation"
+      ],
+      "isReasoning": true,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "32K",
+      "billingMode": "pay",
+      "freeTier": "none",
+      "modelFamily": "fin-r1",
+      "modelVariant": "r1",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performanceLevel": "high",
+      "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "DianJin-R1-32B",
+      "name": "DianJin 金融大模型",
+      "description": "DianJin-R1-32B 是一款拥有 32B 参数、专为金融场景优化的大语言模型，具备强大的金融问答和多步推理能力，能生成结构化答案并在多个金融基准测试中表现优异。",
+      "contextSize": 32000,
+      "priceInput": 2,
+      "priceOutput": 8,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
+      "capabilities": [
+        "text-generation",
+        "reasoning"
+      ],
+      "metadata": {
+        "originalType": "text2text",
+        "isReasoning": true,
+        "isMultimodal": false,
+        "hasToolUse": false,
+        "operationsCount": 2,
+        "serviceIdent": "DianJin-R1-32B",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/chat/completions",
+        "tags": "MIT, 32K, 深度思考, 金融, 行业大模型",
+        "freeUse": true,
+        "isFullyFree": false
+      },
+      "provider": "gitee",
+      "tags": [
+        "reasoning",
+        "text-generation"
+      ],
+      "isReasoning": true,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "32K",
+      "billingMode": "pay",
+      "freeTier": "none",
+      "modelFamily": "dianjin-r1-32b",
+      "modelVariant": "r1",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performanceLevel": "high",
+      "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "ERNIE-4.5-Turbo-VL",
+      "name": "ERNIE-4.5-Turbo-VL",
+      "description": "文心一言大模型全新版本，图片理解、创作、翻译、代码等能力显著提升，首次支持32K上下文长度，首Token时延显著降低。",
+      "contextSize": 32000,
+      "priceInput": 3,
+      "priceOutput": 9,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
+      "capabilities": [
+        "text-generation"
+      ],
+      "metadata": {
+        "originalType": "text2text",
+        "isReasoning": false,
+        "isMultimodal": false,
+        "hasToolUse": false,
+        "operationsCount": 1,
+        "serviceIdent": "ERNIE-4.5-Turbo-VL",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/chat/completions",
+        "tags": "视觉模型, 32K, 多模态, 视觉",
+        "freeUse": true,
+        "isFullyFree": false
+      },
+      "provider": "gitee",
+      "tags": [
+        "text-generation"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "32K",
+      "billingMode": "pay",
+      "freeTier": "none",
+      "modelFamily": "ernie-4.5-vl",
+      "modelVariant": "vl",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "premium",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "1-3s"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "Wan2_2-I2V-A14B",
+      "name": "Wan2.2-I2V-A14B",
+      "description": "Wan2.2‑I2V‑A14B 是阿里巴巴 AI 实验室团队推出的 Wan2.2 系列之一，属于图像转视频（Image-to-Video）模型，开源且采用 Apache 2.0 许可证，兼顾学术研究与商业应用",
+      "priceInput": 0,
+      "priceOutput": 0,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
+      "capabilities": [
+        "video-generation",
+        "vision"
+      ],
+      "metadata": {
+        "originalType": "image2video",
+        "isReasoning": false,
+        "isMultimodal": true,
+        "hasToolUse": false,
+        "operationsCount": 1,
+        "serviceIdent": "Wan2_2-I2V-A14B",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/async/videos/image-to-video",
+        "tags": "视频生成",
+        "freeUse": true,
+        "isFullyFree": false
+      },
+      "provider": "gitee",
+      "tags": [
+        "vision",
+        "multimodal",
+        "video-generation"
+      ],
+      "isReasoning": false,
+      "isMultimodal": true,
+      "hasToolUse": false,
+      "contextLabel": "unknown",
+      "billingMode": "free",
+      "freeTier": "none",
+      "modelFamily": "wan2_2-i2v-a14b",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "image-understanding",
+        "visual-q&a",
+        "video-creation"
+      ],
+      "performanceLevel": "mid",
+      "parameterCount": 14000000000,
+      "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "Qwen-Image",
+      "name": "Qwen-Image",
+      "description": "Qwen‑Image 是一款由阿里云开发的20B参数级 MMDiT 图像生成基础模型，以其卓越的复杂文本渲染能力（尤其在英语和中文中表现出色）和高精度图像编辑功能而著称",
+      "priceInput": 0,
+      "priceOutput": 0,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
+      "capabilities": [
+        "image-generation",
+        "vision"
+      ],
+      "metadata": {
+        "originalType": "text2image",
+        "isReasoning": false,
+        "isMultimodal": true,
+        "hasToolUse": false,
+        "operationsCount": 4,
+        "serviceIdent": "Qwen-Image",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/async/images/generations",
+        "tags": "图像生成与处理, 1024*1024",
+        "freeUse": true,
+        "isFullyFree": false
+      },
+      "provider": "gitee",
+      "tags": [
+        "vision",
+        "multimodal",
+        "image-generation"
+      ],
+      "isReasoning": false,
+      "isMultimodal": true,
+      "hasToolUse": false,
+      "contextLabel": "unknown",
+      "billingMode": "free",
+      "freeTier": "none",
+      "modelFamily": "qwen-image",
+      "modelVariant": "image",
+      "aliases": [
+        "Qwen-Image-2512",
+        "xunfei/Qwen-Image-2512"
+      ],
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "image-understanding",
+        "visual-q&a",
+        "creative-generation",
+        "art"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "Qwen-Image-Edit",
+      "name": "Qwen-Image-Edit",
+      "description": "Qwen‑Image‑Edit 是一个基于 20B 参数 Qwen‑Image 模型深度训练而成的图像编辑模型，具备中英文文字的精准增删改能力，以及语义与外观的双重编辑能力，展现专业级的图像编辑性能。",
+      "priceInput": 0,
+      "priceOutput": 0,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
+      "capabilities": [
+        "image-to-image",
+        "vision"
+      ],
+      "metadata": {
+        "originalType": "image2image",
+        "isReasoning": false,
+        "isMultimodal": true,
+        "hasToolUse": false,
+        "operationsCount": 1,
+        "serviceIdent": "Qwen-Image-Edit",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/images/edits",
+        "tags": "图像生成与处理, 1024*1024",
+        "freeUse": true,
+        "isFullyFree": false
+      },
+      "provider": "gitee",
+      "tags": [
+        "vision",
+        "multimodal",
+        "image-to-image"
+      ],
+      "isReasoning": false,
+      "isMultimodal": true,
+      "hasToolUse": false,
+      "contextLabel": "unknown",
+      "billingMode": "free",
+      "freeTier": "none",
+      "modelFamily": "qwen-image-edit",
+      "modelVariant": "image",
+      "aliases": [
+        "Qwen-Image-Edit-2511"
+      ],
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "image-understanding",
+        "visual-q&a",
+        "image-editing",
+        "style-transfer"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "PaddleOCR-VL",
+      "name": "PaddleOCR-VL",
+      "description": "PaddleOCR-VL 是轻量级多语言视觉语言模型，融合多模态解析能力，在文档理解任务中实现高性能表现。",
+      "contextSize": 16000,
+      "priceInput": 0,
+      "priceOutput": 0,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
+      "capabilities": [
+        "document-processing"
+      ],
+      "metadata": {
+        "originalType": "doc2md",
+        "isReasoning": false,
+        "isMultimodal": false,
+        "hasToolUse": false,
+        "operationsCount": 3,
+        "serviceIdent": "PaddleOCR-VL",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/async/documents/parse",
+        "tags": "16K, 多语言, 文档处理/OCR, 文字识别, 文本对话",
+        "freeUse": true,
+        "isFullyFree": false
+      },
+      "provider": "gitee",
+      "tags": [
+        "document-processing"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "16K",
+      "billingMode": "free",
+      "freeTier": "none",
+      "modelFamily": "paddleocr-vl",
+      "modelVariant": "vl",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "premium",
+      "useCase": [
+        "pdf-processing",
+        "ocr"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "1-3s"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "DeepSeek-OCR",
+      "name": "DeepSeek-OCR",
+      "description": "DeepSeek-OCR 是由 DeepSeek 团队 开发的高精度光学字符识别（OCR, Optical Character Recognition）系统，旨在在复杂场景下实现高效、准确的文字检测与识别。\n它支持 多语言识别、复杂版面分析、表格与公式识别 等多种任务，适用于票据、文档、截图、自然场景图片等多样化输入。",
+      "priceInput": 0,
+      "priceOutput": 0,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
+      "capabilities": [
+        "vision"
+      ],
+      "metadata": {
+        "originalType": "image2text",
+        "isReasoning": false,
+        "isMultimodal": false,
+        "hasToolUse": false,
+        "operationsCount": 5,
+        "serviceIdent": "DeepSeek-OCR",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/async/images/ocr",
+        "tags": "文档处理/OCR",
+        "freeUse": true,
+        "isFullyFree": false
+      },
+      "provider": "gitee",
+      "tags": [
+        "vision"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "unknown",
+      "billingMode": "free",
+      "freeTier": "none",
+      "modelFamily": "deepseek-ocr",
+      "aliases": [
+        "xunfei/DeepSeek-OCR"
+      ],
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "z-image-turbo",
+      "name": "z-image-turbo",
+      "description": "Z-Image-Turbo 是 Z-Image 系列的一员 — 一个高效、轻量级的图像生成基础模型（text-to-image），经过优化与蒸馏 (distillation) 后的 “Turbo” 版本。它旨在以较低的资源成本 (consumer-grade 单卡 < 16GB VRAM) 提供高质量、实用性强的图像生成能力。",
+      "contextSize": 2000,
+      "priceInput": 0,
+      "priceOutput": 0,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
+      "capabilities": [
+        "image-generation",
+        "vision"
+      ],
+      "metadata": {
+        "originalType": "text2image",
+        "isReasoning": false,
+        "isMultimodal": true,
+        "hasToolUse": false,
+        "operationsCount": 5,
+        "serviceIdent": "z-image-turbo",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/images/generations",
+        "tags": "图像生成与处理, 1024*1024, 2k",
+        "freeUse": true,
+        "isFullyFree": false
+      },
+      "provider": "gitee",
+      "tags": [
+        "text-generation",
+        "vision",
+        "multimodal",
+        "image-generation"
+      ],
+      "isReasoning": false,
+      "isMultimodal": true,
+      "hasToolUse": false,
+      "contextLabel": "2K",
+      "billingMode": "free",
+      "freeTier": "none",
+      "modelFamily": "z-image",
+      "modelVariant": "image",
+      "aliases": [
+        "Z-Image",
+        "xunfei/Z-Image-Turbo"
+      ],
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "content-creation",
+        "writing-assistance",
+        "image-understanding",
+        "visual-q&a",
+        "creative-generation",
+        "art"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "HunyuanOCR",
+      "name": "HunyuanOCR",
+      "description": "HunyuanOCR 是腾讯混元大模型体系下的通用光学字符识别（OCR）能力，基于多模态理解模型构建，具备高精度文本提取、版面还原与复杂场景识别能力。它支持多语言识别、复杂背景下文字提取，以及对表格、票据、证照等结构化信息的解析，适用于金融、政务、电商、教育等多类场景。",
+      "priceInput": 0,
+      "priceOutput": 0,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
+      "capabilities": [
+        "vision"
+      ],
+      "metadata": {
+        "originalType": "image2text",
+        "isReasoning": false,
+        "isMultimodal": false,
+        "hasToolUse": false,
+        "operationsCount": 1,
+        "serviceIdent": "HunyuanOCR",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/images/ocr",
+        "tags": "文档处理/OCR",
+        "freeUse": true,
+        "isFullyFree": false
+      },
+      "provider": "gitee",
+      "tags": [
+        "vision"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "unknown",
+      "billingMode": "free",
+      "freeTier": "none",
+      "modelFamily": "hunyuanocr",
+      "aliases": [
+        "xunfei/HunyuanOCR"
+      ],
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "LongCat-Image",
+      "name": "LongCat-Image",
+      "description": "LongCat-Image 是美团 LongCat 团队开源的轻量级高质量图像生成模型，支持中英文文本生成逼真图像，并具备优秀的中文文字渲染能力。",
+      "priceInput": 0,
+      "priceOutput": 0,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
+      "capabilities": [
+        "image-generation",
+        "vision"
+      ],
+      "metadata": {
+        "originalType": "text2image",
+        "isReasoning": false,
+        "isMultimodal": true,
+        "hasToolUse": false,
+        "operationsCount": 2,
+        "serviceIdent": "LongCat-Image",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/images/generations",
+        "tags": "图像生成与处理",
+        "freeUse": true,
+        "isFullyFree": false
+      },
+      "provider": "gitee",
+      "tags": [
+        "vision",
+        "multimodal",
+        "image-generation"
+      ],
+      "isReasoning": false,
+      "isMultimodal": true,
+      "hasToolUse": false,
+      "contextLabel": "unknown",
+      "billingMode": "free",
+      "freeTier": "none",
+      "modelFamily": "longcat-image",
+      "modelVariant": "image",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "image-understanding",
+        "visual-q&a",
+        "creative-generation",
+        "art"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "LongCat-Image-Edit",
+      "name": "LongCat-Image-Edit",
+      "description": "LongCat-Image-Edit 是美团开源的高精度图像编辑模型，支持文本、局部选区与参考图驱动的内容重绘，具备强语义理解、细节一致性和自然编辑效果，适用于创意设计、商品图优化与精细视觉修改。",
+      "priceInput": 0,
+      "priceOutput": 0,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
+      "capabilities": [
+        "image-to-image",
+        "vision"
+      ],
+      "metadata": {
+        "originalType": "image2image",
+        "isReasoning": false,
+        "isMultimodal": true,
+        "hasToolUse": false,
+        "operationsCount": 2,
+        "serviceIdent": "LongCat-Image-Edit",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/images/edits",
+        "tags": "图像生成与处理",
+        "freeUse": true,
+        "isFullyFree": false
+      },
+      "provider": "gitee",
+      "tags": [
+        "vision",
+        "multimodal",
+        "image-to-image"
+      ],
+      "isReasoning": false,
+      "isMultimodal": true,
+      "hasToolUse": false,
+      "contextLabel": "unknown",
+      "billingMode": "free",
+      "freeTier": "none",
+      "modelFamily": "longcat-image-edit",
+      "modelVariant": "image",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "image-understanding",
+        "visual-q&a",
+        "image-editing",
+        "style-transfer"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "Qwen-Image-Edit-2511",
+      "name": "Qwen-Image-Edit-2511",
+      "description": "Qwen-Image-Edit-2511 是阿里通义团队在 Qwen-Image-Edit 基础上升级的开源图像编辑模型，主打提升编辑一致性、集成常用 LoRA 能力并增强人物/工业设计和几何推理表现，实现更稳定精确的 AI 图像编辑效果。",
+      "priceInput": 0,
+      "priceOutput": 0,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
+      "capabilities": [
+        "image-to-image",
+        "vision"
+      ],
+      "metadata": {
+        "originalType": "image2image",
+        "isReasoning": false,
+        "isMultimodal": true,
+        "hasToolUse": false,
+        "operationsCount": 1,
+        "serviceIdent": "Qwen-Image-Edit-2511",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/async/images/edits",
+        "tags": "Apache license 2.0, 图像生成与处理, 2048*2048",
+        "freeUse": true,
+        "isFullyFree": false
+      },
+      "provider": "gitee",
+      "tags": [
+        "vision",
+        "multimodal",
+        "image-to-image"
+      ],
+      "isReasoning": false,
+      "isMultimodal": true,
+      "hasToolUse": false,
+      "contextLabel": "unknown",
+      "billingMode": "free",
+      "freeTier": "none",
+      "modelFamily": "qwen-image-edit",
+      "modelVariant": "image",
+      "aliases": [
+        "Qwen-Image-Edit"
+      ],
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "image-understanding",
+        "visual-q&a",
+        "image-editing",
+        "style-transfer"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "sam3",
+      "name": "SAM 3 图像分割模型",
+      "description": "SAM 3 是一款通用的图像分割模型，可在无需预定义类别的情况下，对图像中的任意目标进行高精度的像素级分割。",
+      "priceInput": 0,
+      "priceOutput": 0,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
+      "capabilities": [
+        "vision"
+      ],
+      "metadata": {
+        "originalType": "image2text",
+        "isReasoning": false,
+        "isMultimodal": false,
+        "hasToolUse": false,
+        "operationsCount": 2,
+        "serviceIdent": "sam3",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/images/object-detection",
+        "tags": "图像生成与处理, 物体检测, 图片切割",
+        "freeUse": true,
+        "isFullyFree": false
+      },
+      "provider": "gitee",
+      "tags": [
+        "vision"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "unknown",
+      "billingMode": "free",
+      "freeTier": "none",
+      "modelFamily": "sam3",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "VajraV1",
+      "name": "VajraV1",
+      "description": "VajraV1 是一个由 VayuAI 提供的、基于 YOLO 体系结构的开源实时视觉模型系列，支持目标检测、图像分割和人体关键点检测等多种计算机视觉任务，具有高效准确的性能表现。",
+      "priceInput": 0,
+      "priceOutput": 0,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
+      "capabilities": [
+        "vision"
+      ],
+      "metadata": {
+        "originalType": "image2text",
+        "isReasoning": false,
+        "isMultimodal": false,
+        "hasToolUse": false,
+        "operationsCount": 3,
+        "serviceIdent": "VajraV1",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/images/object-detection",
+        "tags": "图像生成与处理, 物体检测, 图片切割, 人体关键点检测",
+        "freeUse": true,
+        "isFullyFree": false
+      },
+      "provider": "gitee",
+      "tags": [
+        "vision"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "unknown",
+      "billingMode": "free",
+      "freeTier": "none",
+      "modelFamily": "vajrav1",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "Qwen-Image-2512",
+      "name": "Qwen-Image-2512",
+      "description": "Qwen-Image-2512 是阿里巴巴通义千问团队推出的最新一代文本生成图像大模型，在人物真实感、自然细节刻画和文字渲染能力上全面升级，可高质量地将文本描述转化为语义准确、细节丰富的图像。",
+      "priceInput": 0,
+      "priceOutput": 0,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
+      "capabilities": [
+        "image-generation",
+        "vision"
+      ],
+      "metadata": {
+        "originalType": "text2image",
+        "isReasoning": false,
+        "isMultimodal": true,
+        "hasToolUse": false,
+        "operationsCount": 4,
+        "serviceIdent": "Qwen-Image-2512",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/images/generations",
+        "tags": "Apache license 2.0, 图像生成与处理, 1024*1024, 2048*2048",
+        "freeUse": true,
+        "isFullyFree": false
+      },
+      "provider": "gitee",
+      "tags": [
+        "vision",
+        "multimodal",
+        "image-generation"
+      ],
+      "isReasoning": false,
+      "isMultimodal": true,
+      "hasToolUse": false,
+      "contextLabel": "unknown",
+      "billingMode": "free",
+      "freeTier": "none",
+      "modelFamily": "qwen-image",
+      "modelVariant": "image",
+      "aliases": [
+        "Qwen-Image",
+        "xunfei/Qwen-Image-2512"
+      ],
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "image-understanding",
+        "visual-q&a",
+        "creative-generation",
+        "art"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "GLM-Image",
+      "name": "GLM-Image",
+      "description": "GLM-Image 是智谱推出的多模态图像生成模型，擅长根据文本精准生成高质量图像，并在中文语义理解与文字渲染场景中表现突出。",
+      "priceInput": 0,
+      "priceOutput": 0,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
+      "capabilities": [
+        "image-generation",
+        "vision"
+      ],
+      "metadata": {
+        "originalType": "text2image",
+        "isReasoning": false,
+        "isMultimodal": true,
+        "hasToolUse": false,
+        "operationsCount": 1,
+        "serviceIdent": "GLM-Image",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/images/generations",
+        "tags": "图像生成与处理, 1024*1024",
+        "freeUse": true,
+        "isFullyFree": false
+      },
+      "provider": "gitee",
+      "tags": [
+        "vision",
+        "multimodal",
+        "image-generation"
+      ],
+      "isReasoning": false,
+      "isMultimodal": true,
+      "hasToolUse": false,
+      "contextLabel": "unknown",
+      "billingMode": "free",
+      "freeTier": "none",
+      "modelFamily": "glm-image",
+      "modelVariant": "image",
+      "aliases": [
+        "bigmodel/glm-image"
+      ],
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "image-understanding",
+        "visual-q&a",
+        "creative-generation",
+        "art"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "Qwen3-VL-Embedding-8B",
+      "name": "Qwen3-VL-Embedding-8B",
+      "description": "Qwen3-VL-Embedding-8B 是一款基于 Qwen3-VL 的 8B 参数 多模态嵌入（Embedding）模型，用于将文本、图像、截图等多种模态输入编码成语义向量，以支持高效跨模态检索、聚类和相似性计算。",
+      "contextSize": 32000,
+      "priceInput": 0.35,
+      "priceOutput": 0.35,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
+      "capabilities": [
+        "embeddings"
+      ],
+      "metadata": {
+        "originalType": "embeddings",
+        "isReasoning": false,
+        "isMultimodal": false,
+        "hasToolUse": false,
+        "operationsCount": 1,
+        "serviceIdent": "Qwen3-VL-Embedding-8B",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/embeddings",
+        "tags": "32K, 向量化和重排, 4096 维",
+        "freeUse": true,
+        "isFullyFree": false
+      },
+      "provider": "gitee",
+      "tags": [
+        "embeddings"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "32K",
+      "billingMode": "pay",
+      "freeTier": "none",
+      "modelFamily": "qwen3-vl-embedding-8b",
+      "modelVariant": "vl",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "premium",
+      "useCase": [
+        "semantic-search",
+        "similarity"
+      ],
+      "performanceLevel": "mid",
+      "parameterCount": 8000000000,
+      "estimatedLatency": "1-3s"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "Qwen3-VL-Reranker-8B",
+      "name": "Qwen3-VL-Reranker-8B",
+      "description": "Qwen3-VL-Reranker-8B 是一款基于 Qwen3-VL 的 8B 参数多模态重排序模型，用于对文本、图像等检索结果进行高精度相关性排序。",
+      "priceInput": 0.35,
+      "priceOutput": 0.35,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
+      "capabilities": [
+        "rerank"
+      ],
+      "metadata": {
+        "originalType": "rerank_multimodal",
+        "isReasoning": false,
+        "isMultimodal": false,
+        "hasToolUse": false,
+        "operationsCount": 1,
+        "serviceIdent": "Qwen3-VL-Reranker-8B",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/rerank/multimodal",
+        "tags": "向量化和重排",
+        "freeUse": true,
+        "isFullyFree": false
+      },
+      "provider": "gitee",
+      "tags": [
+        "rerank"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "unknown",
+      "billingMode": "pay",
+      "freeTier": "none",
+      "modelFamily": "qwen3-vl-reranker-8b",
+      "modelVariant": "vl",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "premium",
+      "useCase": [
+        "search-improvement",
+        "relevance"
+      ],
+      "performanceLevel": "mid",
+      "parameterCount": 8000000000,
+      "estimatedLatency": "1-3s"
+    },
+    {
       "vendor": "gitee",
       "modelId": "Qwen3-VL-Embedding-2B",
       "name": "Qwen3-VL-Embedding-2B",
       "description": "Qwen3-VL-Embedding-2B 是一个支持文本、图像等多模态输入、用于生成统一高维语义向量的 2 B 参数级多模态嵌入模型，常用于跨模态检索和相似性搜索等任务。",
-      "priceInput": 9e-8,
-      "priceOutput": 9e-8,
+      "priceInput": 0.09,
+      "priceOutput": 0.09,
+      "priceCurrency": "CNY",
       "isFree": false,
+      "isExperienceable": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
       "capabilities": [
         "embeddings"
       ],
@@ -40,6 +2179,9 @@
       "contextLabel": "unknown",
       "billingMode": "pay",
       "freeTier": "none",
+      "modelFamily": "qwen3-vl-embedding-2b",
+      "modelVariant": "vl",
+      "aliases": [],
       "tier": "small",
       "speed": "premium",
       "useCase": [
@@ -52,13 +2194,232 @@
     },
     {
       "vendor": "gitee",
+      "modelId": "Qwen3-VL-Reranker-2B",
+      "name": "Qwen3-VL-Reranker-2B",
+      "description": "Qwen3-VL-Reranker-2B 是一个基于 Qwen3-VL 多模态基础模型的 2 B 参数级别、多模态重新排序（Reranker）模型，用于对检索到的文本/图像/视频等候选结果进行精细相关性评分，从而提升多模态检索管道的准确性。",
+      "priceInput": 0.09,
+      "priceOutput": 0.09,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
+      "capabilities": [
+        "rerank"
+      ],
+      "metadata": {
+        "originalType": "rerank_multimodal",
+        "isReasoning": false,
+        "isMultimodal": false,
+        "hasToolUse": false,
+        "operationsCount": 1,
+        "serviceIdent": "Qwen3-VL-Reranker-2B",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/rerank/multimodal",
+        "tags": "多模态, 向量化和重排, 2048 维",
+        "freeUse": true,
+        "isFullyFree": false
+      },
+      "provider": "gitee",
+      "tags": [
+        "rerank"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "unknown",
+      "billingMode": "pay",
+      "freeTier": "none",
+      "modelFamily": "qwen3-vl-reranker-2b",
+      "modelVariant": "vl",
+      "aliases": [],
+      "tier": "small",
+      "speed": "premium",
+      "useCase": [
+        "search-improvement",
+        "relevance"
+      ],
+      "performanceLevel": "entry",
+      "parameterCount": 2000000000,
+      "estimatedLatency": "< 1s"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "Qwen-Image-Layered",
+      "name": "Qwen-Image-Layered",
+      "description": "Qwen-Image-Layered 是一个由 Qwen 团队发布的 图像分层分解模型，它能将一张普通图像自动分解成多个 语义独立的 RGBA 图层，从而让每个图层可以 单独进行移动、重色、缩放、删除等编辑操作而不影响其它内容。",
+      "priceInput": 0,
+      "priceOutput": 0,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
+      "capabilities": [
+        "image-to-image",
+        "vision"
+      ],
+      "metadata": {
+        "originalType": "image2image",
+        "isReasoning": false,
+        "isMultimodal": true,
+        "hasToolUse": false,
+        "operationsCount": 1,
+        "serviceIdent": "Qwen-Image-Layered",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/images/layers",
+        "tags": "图像生成与处理, 图像分层",
+        "freeUse": true,
+        "isFullyFree": false
+      },
+      "provider": "gitee",
+      "tags": [
+        "vision",
+        "multimodal",
+        "image-to-image"
+      ],
+      "isReasoning": false,
+      "isMultimodal": true,
+      "hasToolUse": false,
+      "contextLabel": "unknown",
+      "billingMode": "free",
+      "freeTier": "none",
+      "modelFamily": "qwen-image-layered",
+      "modelVariant": "image",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "image-understanding",
+        "visual-q&a",
+        "image-editing",
+        "style-transfer"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "PaddleOCR-VL-1.5",
+      "name": "PaddleOCR-VL-1.5",
+      "description": "PaddleOCR-VL-1.5 是百度 PaddlePaddle 发布的 0.9 B 参数级多任务视觉语言模型，专为复杂文档 OCR 与布局解析设计，在真实世界文档（扫描、倾斜、弯曲等）上实现了先进的识别与结构化输出性能。",
+      "contextSize": 16000,
+      "priceInput": 2.8,
+      "priceOutput": 2.8,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
+      "capabilities": [
+        "text-generation"
+      ],
+      "metadata": {
+        "originalType": "text2text",
+        "isReasoning": false,
+        "isMultimodal": false,
+        "hasToolUse": false,
+        "operationsCount": 3,
+        "serviceIdent": "PaddleOCR-VL-1.5",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/chat/completions",
+        "tags": "16K, 多语言, 文档处理/OCR, 文字识别",
+        "freeUse": true,
+        "isFullyFree": false
+      },
+      "provider": "gitee",
+      "tags": [
+        "text-generation"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "16K",
+      "billingMode": "pay",
+      "freeTier": "none",
+      "modelFamily": "paddleocr-vl-1.5",
+      "modelVariant": "vl",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "premium",
+      "useCase": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "1-3s"
+    },
+    {
+      "vendor": "gitee",
+      "modelId": "Z-Image",
+      "name": "Z-Image",
+      "description": "Tongyi-MAI/Z-Image 是阿里通义实验室开发的一款高质量图像生成基础模型，基于高效的单流扩散 Transformer 架构，专注于强可控性、丰富风格覆盖和高视觉质量，适合作为图像创作、研究和下游开发的核心生成引擎。",
+      "priceInput": 0,
+      "priceOutput": 0,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
+      "capabilities": [
+        "image-generation",
+        "vision"
+      ],
+      "metadata": {
+        "originalType": "text2image",
+        "isReasoning": false,
+        "isMultimodal": true,
+        "hasToolUse": false,
+        "operationsCount": 2,
+        "serviceIdent": "Z-Image",
+        "apiFormat": "OPEN_AI",
+        "path": "v1/images/generations",
+        "tags": "图像生成与处理, 1024*1024",
+        "freeUse": true,
+        "isFullyFree": false
+      },
+      "provider": "gitee",
+      "tags": [
+        "vision",
+        "multimodal",
+        "image-generation"
+      ],
+      "isReasoning": false,
+      "isMultimodal": true,
+      "hasToolUse": false,
+      "contextLabel": "unknown",
+      "billingMode": "free",
+      "freeTier": "none",
+      "modelFamily": "z-image",
+      "modelVariant": "image",
+      "aliases": [
+        "z-image-turbo",
+        "xunfei/Z-Image-Turbo"
+      ],
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "image-understanding",
+        "visual-q&a",
+        "creative-generation",
+        "art"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "gitee",
       "modelId": "GLM-5-Turbo",
       "name": "GLM-5-Turbo",
       "description": "GLM-5-Turbo 是面向 OpenClaw 龙虾场景深度优化的基座模型。 其从训练阶段就针对龙虾任务的核心需求进行专项优化，增强如工具调用、指令遵循、定时与持续性任务、长链路执行等核心能力，使其在复杂、动态、长链路的任务中也真正具备可执行性。",
       "contextSize": 200000,
-      "priceInput": 0.000007,
-      "priceOutput": 0.000026,
+      "priceInput": 7,
+      "priceOutput": 26,
+      "priceCurrency": "CNY",
       "isFree": false,
+      "isExperienceable": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
       "capabilities": [
         "text-generation"
       ],
@@ -85,6 +2446,12 @@
       "contextLabel": "200K",
       "billingMode": "pay",
       "freeTier": "none",
+      "modelFamily": "glm-5",
+      "modelVariant": "turbo",
+      "aliases": [
+        "GLM-5",
+        "xunfei/GLM-5"
+      ],
       "tier": "medium",
       "speed": "premium",
       "useCase": [
@@ -96,49 +2463,61 @@
     },
     {
       "vendor": "gitee",
-      "modelId": "GLM-5V-Turbo",
-      "name": "GLM-5V-Turbo",
-      "description": "GLM-5V-Turbo 是智谱首个多模态 Coding 基座模型，面向视觉编程任务打造。能够原生处理图片、视频、文本等多模态输入，同时擅长长程规划、复杂编程和动作执行；深度适配 Agent 工作流，能够与 Claude Code、OpenClaw 等 Agent 深度协同，完成”看懂环境→规划动作→执行任务”的完整闭环。",
+      "modelId": "Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled",
+      "name": "Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled",
+      "description": "基于 Qwen3.5-27B 深度蒸馏 Claude-4.6 Opus 推理能力的高性能模型，擅长结构化思考与复杂问题分解，兼顾推理深度与效率。",
       "contextSize": 128000,
-      "priceInput": 0.000007,
-      "priceOutput": 0.000026,
+      "priceInput": 0.6,
+      "priceOutput": 4.8,
+      "priceCurrency": "CNY",
       "isFree": false,
+      "isExperienceable": true,
+      "freeKind": "trial-quota",
+      "trialScope": "all",
       "capabilities": [
         "text-generation",
-        "code"
+        "reasoning"
       ],
       "metadata": {
         "originalType": "text2text",
-        "isReasoning": false,
+        "isReasoning": true,
         "isMultimodal": false,
         "hasToolUse": false,
         "operationsCount": 1,
-        "serviceIdent": "GLM-5V-Turbo",
+        "serviceIdent": "Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled",
         "apiFormat": "OPEN_AI",
         "path": "v1/chat/completions",
-        "tags": "AI 编程模型, 视觉模型, Function Calling, 128K, OpenClaw 模型",
-        "freeUse": false,
+        "tags": "文本生成, Function Calling, 128K, OpenClaw 模型",
+        "freeUse": true,
         "isFullyFree": false
       },
       "provider": "gitee",
       "tags": [
-        "text-generation",
-        "code"
+        "reasoning",
+        "text-generation"
       ],
-      "isReasoning": false,
+      "isReasoning": true,
       "isMultimodal": false,
       "hasToolUse": false,
       "contextLabel": "128K",
       "billingMode": "pay",
       "freeTier": "none",
-      "tier": "medium",
+      "modelFamily": "qwen3.5-27b-claude-4.6-opus-reasoning-distilled",
+      "modelVariant": "reasoning",
+      "aliases": [],
+      "tier": "large",
       "speed": "premium",
       "useCase": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
         "content-creation",
-        "writing-assistance"
+        "writing-assistance",
+        "complex-reasoning"
       ],
-      "performanceLevel": "mid",
-      "estimatedLatency": "1-3s"
+      "performanceLevel": "high",
+      "parameterCount": 27000000000,
+      "estimatedLatency": "3-10s"
     },
     {
       "vendor": "gitee",
@@ -146,9 +2525,13 @@
       "name": "GLM-5.1",
       "description": "GLM-5.1 是智谱最新旗舰模型，代码能力大大增强，长程任务显著提升，能够在单次任务中持续、自主地工作长达 8 小时，完成从规划、执行到迭代优化的完整闭环，交付工程级成果。",
       "contextSize": 200000,
-      "priceInput": 0.000008,
-      "priceOutput": 0.000028,
+      "priceInput": 8,
+      "priceOutput": 28,
+      "priceCurrency": "CNY",
       "isFree": false,
+      "isExperienceable": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
       "capabilities": [
         "text-generation"
       ],
@@ -175,6 +2558,11 @@
       "contextLabel": "200K",
       "billingMode": "pay",
       "freeTier": "none",
+      "modelFamily": "glm-5.1",
+      "aliases": [
+        "z-ai/glm-5.1",
+        "xunfei/GLM-5.1"
+      ],
       "tier": "medium",
       "speed": "premium",
       "useCase": [
@@ -189,9 +2577,13 @@
       "modelId": "Kimi-K2.6",
       "name": "Kimi-K2.6",
       "description": "Kimi K2.6 作为国内领先的 Coding 模型，在长程代码任务中的表现取得了突破，面对不同编程语言（如 Rust、Go、Python）和任务场景（如前端、运维、性能优化）均具备更可靠的泛化能力。",
-      "priceInput": 0.0000065,
-      "priceOutput": 0.000027,
+      "priceInput": 6.5,
+      "priceOutput": 27,
+      "priceCurrency": "CNY",
       "isFree": false,
+      "isExperienceable": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
       "capabilities": [
         "text-generation"
       ],
@@ -218,6 +2610,8 @@
       "contextLabel": "unknown",
       "billingMode": "pay",
       "freeTier": "none",
+      "modelFamily": "kimi-k2.6",
+      "aliases": [],
       "tier": "medium",
       "speed": "premium",
       "useCase": [
@@ -233,9 +2627,13 @@
       "name": "Qwen3.6-Plus",
       "description": "Qwen3.6原生视觉语言系列Plus模型，展现出与当前顶尖前沿模型相媲美的卓越性能，模型效果相较3.5系列显著提升。",
       "contextSize": 64000,
-      "priceInput": 0.000008,
-      "priceOutput": 0.000048,
+      "priceInput": 8,
+      "priceOutput": 48,
+      "priceCurrency": "CNY",
       "isFree": false,
+      "isExperienceable": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
       "capabilities": [
         "text-generation"
       ],
@@ -262,6 +2660,8 @@
       "contextLabel": "64K",
       "billingMode": "pay",
       "freeTier": "none",
+      "modelFamily": "qwen3.6-plus",
+      "aliases": [],
       "tier": "medium",
       "speed": "premium",
       "useCase": [
@@ -277,9 +2677,13 @@
       "name": "Qwen3.6-Max",
       "description": "Qwen3.6系列中规模最大、综合能力最强的Max模型Preview版本，",
       "contextSize": 64000,
-      "priceInput": 0.000015,
-      "priceOutput": 0.00009,
+      "priceInput": 15,
+      "priceOutput": 90,
+      "priceCurrency": "CNY",
       "isFree": false,
+      "isExperienceable": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
       "capabilities": [
         "text-generation"
       ],
@@ -306,23 +2710,29 @@
       "contextLabel": "64K",
       "billingMode": "pay",
       "freeTier": "none",
-      "tier": "medium",
+      "modelFamily": "qwen3.6-max",
+      "aliases": [],
+      "tier": "large",
       "speed": "premium",
       "useCase": [
         "content-creation",
         "writing-assistance"
       ],
       "performanceLevel": "mid",
-      "estimatedLatency": "1-3s"
+      "estimatedLatency": "3-10s"
     },
     {
       "vendor": "gitee",
       "modelId": "DeepSeek-V4-Pro",
       "name": "DeepSeek-V4-Pro",
       "description": "旗舰级 MoE 大模型，总参1.6T、激活 49B，原生支持百万级超长上下文。依托海量高质量训练数据，具备顶尖数学逻辑、复杂推理、专业代码与长文本深度解析能力，适配高阶科研、复杂办公、深度智能代理等高难度场景。",
-      "priceInput": 0.000012,
-      "priceOutput": 0.000024,
+      "priceInput": 12,
+      "priceOutput": 24,
+      "priceCurrency": "CNY",
       "isFree": false,
+      "isExperienceable": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
       "capabilities": [
         "text-generation"
       ],
@@ -349,6 +2759,10 @@
       "contextLabel": "unknown",
       "billingMode": "pay",
       "freeTier": "none",
+      "modelFamily": "deepseek-v4-pro",
+      "aliases": [
+        "deepseek-ai/deepseek-v4-pro"
+      ],
       "tier": "large",
       "speed": "premium",
       "useCase": [
@@ -357,6 +2771,2103 @@
       ],
       "performanceLevel": "mid",
       "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "google",
+      "modelId": "google/gemini-3.1-pro-preview",
+      "name": "Gemini 3.1 Pro Preview",
+      "description": "Google: 最新性能、智力和可用性改进，支持多模态理解、代理能力和 vibe-coding",
+      "contextSize": 2000000,
+      "priceInput": 2,
+      "priceOutput": 12,
+      "priceCurrency": "USD",
+      "isFree": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "reasoning",
+        "agentic"
+      ],
+      "metadata": {
+        "originalId": "gemini-3.1-pro-preview",
+        "category": "LLM",
+        "provider": "google"
+      },
+      "provider": "google",
+      "tags": [
+        "chat",
+        "text-generation",
+        "reasoning",
+        "agentic"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "2M",
+      "billingMode": "pay",
+      "freeTier": "none",
+      "modelFamily": "gemini-3.1-pro-preview",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performanceLevel": "high",
+      "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "google",
+      "modelId": "google/gemini-3.1-flash-image-preview",
+      "name": "Gemini 3.1 Flash Image Preview",
+      "description": "Google: 为速度和效率设计的图像生成模型",
+      "contextSize": 1000000,
+      "priceInput": 0.5,
+      "priceOutput": 3,
+      "priceCurrency": "USD",
+      "isFree": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "image-generation"
+      ],
+      "metadata": {
+        "originalId": "gemini-3.1-flash-image-preview",
+        "category": "Image",
+        "provider": "google"
+      },
+      "provider": "google",
+      "tags": [
+        "vision",
+        "multimodal",
+        "chat",
+        "text-generation",
+        "image-generation"
+      ],
+      "isReasoning": false,
+      "isMultimodal": true,
+      "hasToolUse": false,
+      "contextLabel": "1M",
+      "billingMode": "pay",
+      "freeTier": "none",
+      "modelFamily": "gemini-3.1-flash-image-preview",
+      "modelVariant": "image",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "image-understanding",
+        "visual-q&a",
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "creative-generation",
+        "art"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "google",
+      "modelId": "google/gemini-3-pro-image-preview",
+      "name": "Gemini 3 Pro Image Preview",
+      "description": "Google: 原生图像生成模型，优化速度、灵活性和上下文理解",
+      "contextSize": 2000000,
+      "priceInput": 2,
+      "priceOutput": 12,
+      "priceCurrency": "USD",
+      "isFree": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "image-generation"
+      ],
+      "metadata": {
+        "originalId": "gemini-3-pro-image-preview",
+        "category": "Image",
+        "provider": "google"
+      },
+      "provider": "google",
+      "tags": [
+        "text-generation",
+        "vision",
+        "multimodal",
+        "chat"
+      ],
+      "isReasoning": false,
+      "isMultimodal": true,
+      "hasToolUse": false,
+      "contextLabel": "unknown",
+      "billingMode": "pay",
+      "freeTier": "none",
+      "modelFamily": "gemini-3-pro-image-preview",
+      "modelVariant": "image",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "content-creation",
+        "writing-assistance",
+        "image-understanding",
+        "visual-q&a",
+        "conversation",
+        "q&a"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "google",
+      "modelId": "google/gemini-2.5-flash-image",
+      "name": "Gemini 2.5 Flash Image",
+      "description": "Google: 原生图像生成模型，优化速度、灵活性和上下文理解",
+      "contextSize": 1000000,
+      "priceInput": 0.3,
+      "priceOutput": 0.039,
+      "priceCurrency": "USD",
+      "isFree": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "image-generation"
+      ],
+      "metadata": {
+        "originalId": "gemini-2.5-flash-image",
+        "category": "Image",
+        "provider": "google"
+      },
+      "provider": "google",
+      "tags": [
+        "vision",
+        "multimodal",
+        "chat",
+        "text-generation",
+        "image-generation"
+      ],
+      "isReasoning": false,
+      "isMultimodal": true,
+      "hasToolUse": false,
+      "contextLabel": "1M",
+      "billingMode": "pay",
+      "freeTier": "none",
+      "modelFamily": "gemini-2.5-flash-image",
+      "modelVariant": "image",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "image-understanding",
+        "visual-q&a",
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "creative-generation",
+        "art"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "google",
+      "modelId": "google/gemini-2.5-pro-preview-tts",
+      "name": "Gemini 2.5 Pro Preview TTS",
+      "description": "Google: 2.5 Pro 文本转语音模型，优化强大、低延迟语音生成",
+      "priceInput": 1,
+      "priceOutput": 20,
+      "priceCurrency": "USD",
+      "isFree": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
+      "capabilities": [
+        "speech-synthesis"
+      ],
+      "metadata": {
+        "originalId": "gemini-2.5-pro-preview-tts",
+        "category": "TTS",
+        "provider": "google"
+      },
+      "provider": "google",
+      "tags": [
+        "speech-synthesis"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "unknown",
+      "billingMode": "pay",
+      "freeTier": "none",
+      "modelFamily": "gemini-2.5-pro-preview-tts",
+      "modelVariant": "tts",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "premium",
+      "useCase": [
+        "text-to-speech",
+        "voice-output"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "1-3s"
+    },
+    {
+      "vendor": "google",
+      "modelId": "google/imagen-4.0-ultra-generate-001",
+      "name": "Imagen 4 Ultra",
+      "description": "Google: 最高质量图像生成",
+      "priceInput": 0.06,
+      "priceCurrency": "USD",
+      "isFree": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
+      "capabilities": [
+        "image-generation"
+      ],
+      "metadata": {
+        "originalId": "imagen-4.0-ultra-generate-001",
+        "category": "Image",
+        "provider": "google"
+      },
+      "provider": "google",
+      "tags": [
+        "image-generation"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "unknown",
+      "billingMode": "mixed",
+      "freeTier": "none",
+      "modelFamily": "imagen-4.0-ultra-generate-001",
+      "aliases": [],
+      "tier": "small",
+      "speed": "premium",
+      "useCase": [
+        "creative-generation",
+        "art"
+      ],
+      "performanceLevel": "entry",
+      "estimatedLatency": "< 1s"
+    },
+    {
+      "vendor": "google",
+      "modelId": "google/lyria-3-pro-preview",
+      "name": "Lyria 3 Pro",
+      "description": "Google: 音乐生成模型（全曲）",
+      "priceInput": 0.08,
+      "priceCurrency": "USD",
+      "isFree": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
+      "capabilities": [
+        "audio-generation"
+      ],
+      "metadata": {
+        "originalId": "lyria-3-pro-preview",
+        "category": "Audio",
+        "provider": "google"
+      },
+      "provider": "google",
+      "tags": [],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "unknown",
+      "billingMode": "mixed",
+      "freeTier": "none",
+      "modelFamily": "lyria-3-pro-preview",
+      "aliases": [
+        "openrouter/google/lyria-3-pro-preview"
+      ],
+      "tier": "small",
+      "speed": "premium",
+      "useCase": [],
+      "performanceLevel": "entry",
+      "estimatedLatency": "< 1s"
+    },
+    {
+      "vendor": "groq",
+      "modelId": "groq/qwen/qwen3-32b",
+      "name": "Qwen3 32B",
+      "description": "Groq model: Qwen3 32B - 662 tokens/sec",
+      "contextSize": 131000,
+      "priceInput": 0.29,
+      "priceOutput": 0.59,
+      "priceCurrency": "USD",
+      "isFree": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "reasoning"
+      ],
+      "metadata": {
+        "originalId": "qwen/qwen3-32b",
+        "speed": 662,
+        "isEnterprise": false,
+        "provider": "groq"
+      },
+      "provider": "groq",
+      "tags": [
+        "text-generation",
+        "chat",
+        "reasoning"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "131K",
+      "billingMode": "pay",
+      "freeTier": "none",
+      "modelFamily": "qwen3-32b",
+      "aliases": [
+        "Qwen3-32B",
+        "xunfei/Qwen3-32B"
+      ],
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performanceLevel": "high",
+      "parameterCount": 32000000000,
+      "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "groq",
+      "modelId": "groq/canopylabs/orpheus-v1-english",
+      "name": "Orpheus English TTS",
+      "description": "Groq model: Orpheus English TTS - 100 tokens/sec",
+      "priceInput": 22,
+      "priceCurrency": "USD",
+      "isFree": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
+      "capabilities": [
+        "speech-synthesis"
+      ],
+      "metadata": {
+        "originalId": "canopylabs/orpheus-v1-english",
+        "speed": 100,
+        "isEnterprise": false,
+        "provider": "groq"
+      },
+      "provider": "groq",
+      "tags": [
+        "text-generation",
+        "speech-synthesis"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "unknown",
+      "billingMode": "mixed",
+      "freeTier": "none",
+      "modelFamily": "orpheus-v1-english",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "content-creation",
+        "writing-assistance",
+        "text-to-speech",
+        "voice-output"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "groq",
+      "modelId": "groq/canopylabs/orpheus-arabic-saudi",
+      "name": "Orpheus Arabic Saudi TTS",
+      "description": "Groq model: Orpheus Arabic Saudi TTS - 100 tokens/sec",
+      "priceInput": 40,
+      "priceCurrency": "USD",
+      "isFree": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
+      "capabilities": [
+        "speech-synthesis",
+        "translation"
+      ],
+      "metadata": {
+        "originalId": "canopylabs/orpheus-arabic-saudi",
+        "speed": 100,
+        "isEnterprise": false,
+        "provider": "groq"
+      },
+      "provider": "groq",
+      "tags": [
+        "text-generation",
+        "speech-synthesis",
+        "translation"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "unknown",
+      "billingMode": "mixed",
+      "freeTier": "none",
+      "modelFamily": "orpheus-arabic-saudi",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "content-creation",
+        "writing-assistance",
+        "text-to-speech",
+        "voice-output"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "groq",
+      "modelId": "groq/qwen/qwen3-vl-32b",
+      "name": "Qwen3-VL 32B",
+      "description": "Groq Enterprise model: Qwen3-VL 32B",
+      "priceInput": 0,
+      "priceOutput": 0,
+      "priceCurrency": "USD",
+      "isFree": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision"
+      ],
+      "metadata": {
+        "originalId": "qwen/qwen3-vl-32b",
+        "isEnterprise": true,
+        "provider": "groq"
+      },
+      "provider": "groq",
+      "tags": [
+        "text-generation",
+        "chat",
+        "vision"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "unknown",
+      "billingMode": "free",
+      "freeTier": "none",
+      "modelFamily": "qwen3-vl-32b",
+      "modelVariant": "vl",
+      "aliases": [
+        "xunfei/Qwen3-VL-32B-Instruct"
+      ],
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performanceLevel": "mid",
+      "parameterCount": 32000000000,
+      "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "nvidia",
+      "modelId": "deepseek-ai/deepseek-v4-pro",
+      "name": "deepseek-v4-pro",
+      "description": "Model: deepseek-ai/deepseek-v4-pro",
+      "priceCurrency": "USD",
+      "isFree": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "metadata": {
+        "id": "deepseek-ai/deepseek-v4-pro",
+        "object": "model",
+        "created": 735790403,
+        "owned_by": "deepseek-ai",
+        "is_free_endpoint": false
+      },
+      "provider": "nvidia",
+      "tags": [
+        "text-generation",
+        "chat"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "unknown",
+      "billingMode": "unknown",
+      "freeTier": "none",
+      "modelFamily": "deepseek-v4-pro",
+      "aliases": [
+        "DeepSeek-V4-Pro"
+      ],
+      "tier": "medium",
+      "speed": "premium",
+      "useCase": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "1-3s"
+    },
+    {
+      "vendor": "nvidia",
+      "modelId": "nvidia/llama-3.1-nemotron-nano-vl-8b-v1",
+      "name": "llama-3.1-nemotron-nano-vl-8b-v1",
+      "description": "Model: nvidia/llama-3.1-nemotron-nano-vl-8b-v1",
+      "priceCurrency": "USD",
+      "isFree": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
+      "capabilities": [
+        "vision"
+      ],
+      "metadata": {
+        "id": "nvidia/llama-3.1-nemotron-nano-vl-8b-v1",
+        "object": "model",
+        "created": 735790403,
+        "owned_by": "nvidia",
+        "is_free_endpoint": false
+      },
+      "provider": "nvidia",
+      "tags": [
+        "text-generation",
+        "vision"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "unknown",
+      "billingMode": "unknown",
+      "freeTier": "none",
+      "modelFamily": "llama-3.1-nemotron-nano-vl-8b-v1",
+      "modelVariant": "vl",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "premium",
+      "useCase": [
+        "content-creation",
+        "writing-assistance",
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performanceLevel": "mid",
+      "parameterCount": 8000000000,
+      "estimatedLatency": "1-3s"
+    },
+    {
+      "vendor": "nvidia",
+      "modelId": "nvidia/llama-3.1-nemotron-ultra-253b-v1",
+      "name": "llama-3.1-nemotron-ultra-253b-v1",
+      "description": "Model: nvidia/llama-3.1-nemotron-ultra-253b-v1",
+      "priceCurrency": "USD",
+      "isFree": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "metadata": {
+        "id": "nvidia/llama-3.1-nemotron-ultra-253b-v1",
+        "object": "model",
+        "created": 735790403,
+        "owned_by": "nvidia",
+        "is_free_endpoint": false
+      },
+      "provider": "nvidia",
+      "tags": [
+        "text-generation",
+        "chat"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "unknown",
+      "billingMode": "unknown",
+      "freeTier": "none",
+      "modelFamily": "llama-3.1-nemotron-ultra-253b-v1",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "premium",
+      "useCase": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performanceLevel": "mid",
+      "parameterCount": 253000000000,
+      "estimatedLatency": "1-3s"
+    },
+    {
+      "vendor": "nvidia",
+      "modelId": "nvidia/llama-3.2-nemoretriever-1b-vlm-embed-v1",
+      "name": "llama-3.2-nemoretriever-1b-vlm-embed-v1",
+      "description": "Model: nvidia/llama-3.2-nemoretriever-1b-vlm-embed-v1",
+      "priceCurrency": "USD",
+      "isFree": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
+      "capabilities": [
+        "embeddings",
+        "vision"
+      ],
+      "metadata": {
+        "id": "nvidia/llama-3.2-nemoretriever-1b-vlm-embed-v1",
+        "object": "model",
+        "created": 735790403,
+        "owned_by": "nvidia",
+        "is_free_endpoint": false
+      },
+      "provider": "nvidia",
+      "tags": [
+        "text-generation",
+        "embeddings",
+        "vision"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "unknown",
+      "billingMode": "unknown",
+      "freeTier": "none",
+      "modelFamily": "llama-3.2-nemoretriever-1b-vlm-embed-v1",
+      "modelVariant": "embed",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "premium",
+      "useCase": [
+        "content-creation",
+        "writing-assistance",
+        "semantic-search",
+        "similarity",
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performanceLevel": "mid",
+      "parameterCount": 1000000000,
+      "estimatedLatency": "1-3s"
+    },
+    {
+      "vendor": "nvidia",
+      "modelId": "nvidia/llama-nemotron-embed-vl-1b-v2",
+      "name": "llama-nemotron-embed-vl-1b-v2",
+      "description": "Model: nvidia/llama-nemotron-embed-vl-1b-v2",
+      "priceCurrency": "USD",
+      "isFree": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
+      "capabilities": [
+        "embeddings",
+        "vision"
+      ],
+      "metadata": {
+        "id": "nvidia/llama-nemotron-embed-vl-1b-v2",
+        "object": "model",
+        "created": 735790403,
+        "owned_by": "nvidia",
+        "is_free_endpoint": false
+      },
+      "provider": "nvidia",
+      "tags": [
+        "text-generation",
+        "embeddings",
+        "vision"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "unknown",
+      "billingMode": "unknown",
+      "freeTier": "none",
+      "modelFamily": "llama-nemotron-embed-vl-1b-v2",
+      "modelVariant": "vl",
+      "aliases": [
+        "openrouter/nvidia/llama-nemotron-embed-vl-1b-v2"
+      ],
+      "tier": "medium",
+      "speed": "premium",
+      "useCase": [
+        "content-creation",
+        "writing-assistance",
+        "semantic-search",
+        "similarity",
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performanceLevel": "mid",
+      "parameterCount": 1000000000,
+      "estimatedLatency": "1-3s"
+    },
+    {
+      "vendor": "nvidia",
+      "modelId": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "name": "nemotron-3-nano-omni-30b-a3b-reasoning",
+      "description": "Model: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "priceCurrency": "USD",
+      "isFree": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "metadata": {
+        "id": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "object": "model",
+        "created": 735790403,
+        "owned_by": "nvidia",
+        "is_free_endpoint": false
+      },
+      "provider": "nvidia",
+      "tags": [
+        "reasoning",
+        "text-generation",
+        "chat"
+      ],
+      "isReasoning": true,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "unknown",
+      "billingMode": "unknown",
+      "freeTier": "none",
+      "modelFamily": "nemotron-3-nano-omni-30b-a3b-reasoning",
+      "modelVariant": "reasoning",
+      "aliases": [
+        "openrouter/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning"
+      ],
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "complex-reasoning"
+      ],
+      "performanceLevel": "high",
+      "parameterCount": 30000000000,
+      "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "nvidia",
+      "modelId": "nvidia/nemotron-nano-12b-v2-vl",
+      "name": "nemotron-nano-12b-v2-vl",
+      "description": "Model: nvidia/nemotron-nano-12b-v2-vl",
+      "priceCurrency": "USD",
+      "isFree": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
+      "capabilities": [
+        "vision"
+      ],
+      "metadata": {
+        "id": "nvidia/nemotron-nano-12b-v2-vl",
+        "object": "model",
+        "created": 735790403,
+        "owned_by": "nvidia",
+        "is_free_endpoint": false
+      },
+      "provider": "nvidia",
+      "tags": [
+        "text-generation",
+        "vision"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "unknown",
+      "billingMode": "unknown",
+      "freeTier": "none",
+      "modelFamily": "nemotron-nano-12b-v2-vl",
+      "modelVariant": "vl",
+      "aliases": [
+        "openrouter/nvidia/nemotron-nano-12b-v2-vl"
+      ],
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "content-creation",
+        "writing-assistance",
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performanceLevel": "mid",
+      "parameterCount": 12000000000,
+      "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "nvidia",
+      "modelId": "nvidia/neva-22b",
+      "name": "neva-22b",
+      "description": "Model: nvidia/neva-22b",
+      "priceCurrency": "USD",
+      "isFree": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
+      "capabilities": [
+        "vision"
+      ],
+      "metadata": {
+        "id": "nvidia/neva-22b",
+        "object": "model",
+        "created": 735790403,
+        "owned_by": "nvidia",
+        "is_free_endpoint": false
+      },
+      "provider": "nvidia",
+      "tags": [
+        "text-generation",
+        "vision"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "unknown",
+      "billingMode": "unknown",
+      "freeTier": "none",
+      "modelFamily": "neva-22b",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "content-creation",
+        "writing-assistance",
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performanceLevel": "mid",
+      "parameterCount": 22000000000,
+      "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "xunfei",
+      "modelId": "xunfei/Spark-X2-Flash",
+      "name": "Spark-X2-Flash",
+      "description": "星火Spark-X2-Flash，面向Agent场景优化效果，输入最大长度支持192K。星火30B中等尺寸极具性价比又完全基于全国产算力训练和推理的全新模型，智能体和代码等能力显著提升，输入最大长度支持192K。",
+      "contextSize": 262144,
+      "priceInput": 1,
+      "priceOutput": 2,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision"
+      ],
+      "metadata": {
+        "provider": "科大讯飞",
+        "category": "文本生成",
+        "function": 12,
+        "contextLabel": "256k"
+      },
+      "provider": "xunfei",
+      "tags": [
+        "chat",
+        "text-generation",
+        "vision"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "262K",
+      "billingMode": "pay",
+      "freeTier": "none",
+      "modelFamily": "spark-x2-flash",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "xunfei",
+      "modelId": "xunfei/Qwen3.6-35B-A3B",
+      "name": "Qwen3.6-35B-A3B",
+      "description": "Qwen3.6-35B-A3B，以稳定性与实用性为核心，在智能体编码、思维上下文保留上显著升级，为 350 亿参数、30 亿激活参数的因果视觉语言模型，编码开发体验更高效流畅。",
+      "contextSize": 131072,
+      "priceInput": 1,
+      "priceOutput": 3.6,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision"
+      ],
+      "metadata": {
+        "provider": "阿里巴巴",
+        "category": "多模态",
+        "function": 12,
+        "contextLabel": "128k"
+      },
+      "provider": "xunfei",
+      "tags": [
+        "chat",
+        "text-generation",
+        "vision"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "131K",
+      "billingMode": "pay",
+      "freeTier": "none",
+      "modelFamily": "qwen3.6-35b-a3b",
+      "aliases": [
+        "Qwen3.6-35B-A3B"
+      ],
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performanceLevel": "mid",
+      "parameterCount": 35000000000,
+      "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "xunfei",
+      "modelId": "xunfei/GLM-5.1",
+      "name": "GLM-5.1",
+      "description": "GLM-5.1 是智谱 AI于 2026 年 3 月 27 日 发布的新一代旗舰大模型，主打超强代码能力、超长上下文与自主智能体（Agent），定位为面向专业开发者的高阶推理模型。",
+      "contextSize": 204800,
+      "priceInput": 8,
+      "priceOutput": 28,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision"
+      ],
+      "metadata": {
+        "provider": "智谱AI",
+        "category": "文本生成",
+        "function": 12,
+        "contextLabel": "200k"
+      },
+      "provider": "xunfei",
+      "tags": [
+        "chat",
+        "text-generation",
+        "vision"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "205K",
+      "billingMode": "pay",
+      "freeTier": "none",
+      "modelFamily": "glm-5.1",
+      "aliases": [
+        "GLM-5.1",
+        "z-ai/glm-5.1"
+      ],
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "xunfei",
+      "modelId": "xunfei/Spark X2",
+      "name": "Spark X2",
+      "description": "星火X2整体能力对标国际顶尖模型水平，在数学、推理、语言理解、智能体等能力上媲美国际最优；130+多语言综合能力继续提升，拉美、东盟等地区重点语种效果保持业界领先水平。输入最大长度支持64K，输出最大长度支持128K。",
+      "contextSize": 196608,
+      "priceInput": 3,
+      "priceOutput": 3,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision"
+      ],
+      "metadata": {
+        "provider": "科大讯飞",
+        "category": "文本生成",
+        "function": 12,
+        "contextLabel": "192k"
+      },
+      "provider": "xunfei",
+      "tags": [
+        "chat",
+        "text-generation",
+        "vision"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "197K",
+      "billingMode": "pay",
+      "freeTier": "none",
+      "modelFamily": "spark x2",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "xunfei",
+      "modelId": "xunfei/Qwen3.5-397B-A17B",
+      "name": "Qwen3.5-397B-A17B",
+      "description": "Qwen3.5-397B-A17B是阿里巴巴通义千问团队于2026 年 2 月 16 日正式发布并开源的新一代原生多模态智能体基础模型，定位为 \"为 Agentic AI 时代而生\"，以极致稀疏 MoE 架构、混合注意力机制和原生多模态融合三大核心创新，实现了性能与效率的突破性平衡Qwen。",
+      "contextSize": 262144,
+      "priceInput": 1.2,
+      "priceOutput": 7.2,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision"
+      ],
+      "metadata": {
+        "provider": "阿里巴巴",
+        "category": "多模态",
+        "function": 12,
+        "contextLabel": "256k"
+      },
+      "provider": "xunfei",
+      "tags": [
+        "chat",
+        "text-generation",
+        "vision"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "262K",
+      "billingMode": "pay",
+      "freeTier": "none",
+      "modelFamily": "qwen3.5-397b-a17b",
+      "aliases": [
+        "qwen/qwen3.5-397b-a17b"
+      ],
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performanceLevel": "mid",
+      "parameterCount": 397000000000,
+      "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "xunfei",
+      "modelId": "xunfei/MiniMax-M2.5",
+      "name": "MiniMax-M2.5",
+      "description": "MiniMax-M2.5是于2026 年 2 月 12 日正式发布的全球首款原生为 Agent 场景设计的生产级大模型，主打 \"更快更强更智能，为真实世界生产力而生\"，解决大模型\" 慢、贵 \" 的核心痛点。\n",
+      "contextSize": 131072,
+      "priceInput": 2.1,
+      "priceOutput": 8.4,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision"
+      ],
+      "metadata": {
+        "provider": "MiniMax",
+        "category": "文本生成",
+        "function": 12,
+        "contextLabel": "128k"
+      },
+      "provider": "xunfei",
+      "tags": [
+        "chat",
+        "text-generation",
+        "vision"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "131K",
+      "billingMode": "pay",
+      "freeTier": "none",
+      "modelFamily": "minimax-m2.5",
+      "aliases": [
+        "MiniMax-M2.5",
+        "groq/minimax-m2.5"
+      ],
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "xunfei",
+      "modelId": "xunfei/GLM-5",
+      "name": "GLM-5",
+      "description": "智谱 AI 于 2026 年 2 月 11 日发布的745B 总参数 MoE 稀疏架构旗舰基座模型，面向复杂系统工程与长程 Agent 任务，编程与智能体能力达开源 SOTA，全栈基于华为昇腾芯片训练。",
+      "contextSize": 204800,
+      "priceInput": 6,
+      "priceOutput": 22,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision"
+      ],
+      "metadata": {
+        "provider": "智谱AI",
+        "category": "文本生成",
+        "function": 12,
+        "contextLabel": "200k"
+      },
+      "provider": "xunfei",
+      "tags": [
+        "chat",
+        "text-generation",
+        "vision"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "205K",
+      "billingMode": "pay",
+      "freeTier": "none",
+      "modelFamily": "glm-5",
+      "aliases": [
+        "GLM-5",
+        "GLM-5-Turbo"
+      ],
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "xunfei",
+      "modelId": "xunfei/Kimi-K2.5",
+      "name": "Kimi-K2.5",
+      "description": "Kimi K2.5 是一个多模态智能体模型视觉和语言理解与高级智能体功能、即时模式和思考模式以及对话和智能体范式无缝集成。",
+      "contextSize": 131072,
+      "priceInput": 4,
+      "priceOutput": 21,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision"
+      ],
+      "metadata": {
+        "provider": "月之暗面",
+        "category": "多模态",
+        "function": 12,
+        "contextLabel": "128k"
+      },
+      "provider": "xunfei",
+      "tags": [
+        "chat",
+        "text-generation",
+        "vision"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "131K",
+      "billingMode": "pay",
+      "freeTier": "none",
+      "modelFamily": "kimi-k2.5",
+      "aliases": [
+        "Kimi-K2.5"
+      ],
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "xunfei",
+      "modelId": "xunfei/DeepSeek-V3.2",
+      "name": "DeepSeek-V3.2",
+      "description": "2025 年 12 月发布的正式版，面向日常及生产级应用，核心是平衡推理能力与输出效率，适配日常问答、通用智能体任务等场景",
+      "contextSize": 131072,
+      "priceInput": 1,
+      "priceOutput": 1.5,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision"
+      ],
+      "metadata": {
+        "provider": "深度求索",
+        "category": "文本生成",
+        "function": 12,
+        "contextLabel": "128k"
+      },
+      "provider": "xunfei",
+      "tags": [
+        "chat",
+        "text-generation",
+        "vision"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "131K",
+      "billingMode": "pay",
+      "freeTier": "none",
+      "modelFamily": "deepseek-v3.2",
+      "aliases": [
+        "DeepSeek-V3.2",
+        "deepseek-ai/deepseek-v3.2"
+      ],
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "xunfei",
+      "modelId": "xunfei/Qwen3-Coder-Next-FP8",
+      "name": "Qwen3-Coder-Next-FP8",
+      "description": "Qwen3-Coder-Next-FP8 是专为编码智能体和本地开发设计的开源语言模型，具备优秀的长程推理等智能体能力，256k 上下文长度可无缝集成各类 CLI/IDE 开发平台。",
+      "contextSize": 262144,
+      "priceInput": 2.5,
+      "priceOutput": 10,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
+      "capabilities": [
+        "ocr",
+        "vision",
+        "code-generation"
+      ],
+      "metadata": {
+        "provider": "阿里巴巴",
+        "category": "文本生成",
+        "function": 4,
+        "contextLabel": "256k"
+      },
+      "provider": "xunfei",
+      "tags": [
+        "vision",
+        "code-generation"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "262K",
+      "billingMode": "pay",
+      "freeTier": "none",
+      "modelFamily": "qwen3-coder-next",
+      "modelVariant": "coder",
+      "quantization": "fp8",
+      "aliases": [
+        "Qwen3-Coder-Next"
+      ],
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "image-understanding",
+        "visual-q&a",
+        "software-development",
+        "code-completion"
+      ],
+      "performanceLevel": "high",
+      "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "xunfei",
+      "modelId": "xunfei/Qwen3.5-35B-A3B",
+      "name": "Qwen3.5-35B-A3B",
+      "description": "Qwen3.5-35B-A3B 是阿里巴巴通义千问团队于2026 年 2 月 25 日开源的中型 MoE 稀疏架构大模型，隶属于 Qwen3.5 系列中型模型产品线，主打高性能与高效率平衡，被称为 \"中小团队的 AI 利器\"。核心亮点是35B 总参数仅激活 3B 进行推理，在保持旗舰级性能的同时大幅降低部署成本。",
+      "contextSize": 131072,
+      "priceInput": 0.4,
+      "priceOutput": 1.7,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision"
+      ],
+      "metadata": {
+        "provider": "阿里巴巴",
+        "category": "多模态",
+        "function": 12,
+        "contextLabel": "128k"
+      },
+      "provider": "xunfei",
+      "tags": [
+        "chat",
+        "text-generation",
+        "vision"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "131K",
+      "billingMode": "pay",
+      "freeTier": "none",
+      "modelFamily": "qwen3.5-35b-a3b",
+      "aliases": [
+        "Qwen3.5-35B-A3B"
+      ],
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performanceLevel": "mid",
+      "parameterCount": 35000000000,
+      "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "xunfei",
+      "modelId": "xunfei/GLM-4.7-Flash",
+      "name": "GLM-4.7-Flash",
+      "description": "GLM-4.7-Flash 是智谱 AI 发布并开源的30B 参数混合专家 (MoE) 模型，定位为 30B 级别SOTA 轻量级模型，主打高性能与极致部署效率的平衡，专为消费级硬件本地部署和 Agentic Coding 场景优化。",
+      "contextSize": 131072,
+      "priceInput": 1,
+      "priceOutput": 1.5,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision"
+      ],
+      "metadata": {
+        "provider": "智谱AI",
+        "category": "文本生成",
+        "function": 12,
+        "contextLabel": "128k"
+      },
+      "provider": "xunfei",
+      "tags": [
+        "chat",
+        "text-generation",
+        "vision"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "131K",
+      "billingMode": "pay",
+      "freeTier": "none",
+      "modelFamily": "glm-4.7-flash",
+      "aliases": [
+        "GLM-4.7-Flash"
+      ],
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "xunfei",
+      "modelId": "xunfei/GLM-4.7",
+      "name": "GLM-4.7",
+      "description": "智谱 AI 于 2025 年 12 月 23 日开源的 GLM-4.7，是一款基于混合专家架构、支持超长上下文的可商用旗舰大模型，主打代理式编码与复杂任务执行能力，兼顾性能与部署灵活性。",
+      "contextSize": 202752,
+      "priceInput": 4,
+      "priceOutput": 16,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision"
+      ],
+      "metadata": {
+        "provider": "智谱AI",
+        "category": "文本生成",
+        "function": 12,
+        "contextLabel": "198k"
+      },
+      "provider": "xunfei",
+      "tags": [
+        "chat",
+        "text-generation",
+        "vision"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "203K",
+      "billingMode": "pay",
+      "freeTier": "none",
+      "modelFamily": "glm-4.7",
+      "aliases": [
+        "GLM-4.7"
+      ],
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "xunfei",
+      "modelId": "xunfei/Qwen3-235B-A22B",
+      "name": "Qwen3-235B-A22B",
+      "description": "Qwen3-235B-A22B是Qwen系列新一代因果语言模型，基于混合专家（MoE）架构构建，通过预训练与后期优化，在推理能力、指令遵循、代理工具整合及多语言支持上实现前沿突破。技术层面，该模型总参数量达235B，依托MoE架构动态激活22B参数（128个专家中每次激活8个），采用94层Transformer结构，原生支持32K tokens上下文长度（通过YaRN技术可扩展至131K toke",
+      "contextSize": 32768,
+      "priceInput": 1.2,
+      "priceOutput": 12,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision"
+      ],
+      "metadata": {
+        "provider": "阿里巴巴",
+        "category": "文本生成",
+        "function": 12,
+        "contextLabel": "32k"
+      },
+      "provider": "xunfei",
+      "tags": [
+        "chat",
+        "text-generation",
+        "vision"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "33K",
+      "billingMode": "pay",
+      "freeTier": "none",
+      "modelFamily": "qwen3-235b-a22b",
+      "aliases": [
+        "Qwen3-235B-A22B",
+        "Qwen3-235B-A22B-Instruct-2507",
+        "xunfei/Qwen3-235B-A22B-Instruct-2507"
+      ],
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performanceLevel": "mid",
+      "parameterCount": 235000000000,
+      "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "xunfei",
+      "modelId": "xunfei/Qwen3-30B-A3B",
+      "name": "Qwen3-30B-A3B",
+      "description": "Qwen3-30B-A3B 是 Qwen 系列新一代因果语言模型，基于混合专家（MoE）架构，通过预训练与后期优化，实现推理能力、任务适配与多语言支持的全面突破。在推理精度上超越前代 Qwen2.5 系列，在创意写作、多轮交互中带来更自然的体验，还具备强大的外部工具整合能力与超 100 种语言的支持。该模型拥有 30.5B 总参数量（激活 3.3B），48 层 Transformer 架构，原生支",
+      "contextSize": 32768,
+      "priceInput": 0.45,
+      "priceOutput": 4.5,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision"
+      ],
+      "metadata": {
+        "provider": "阿里巴巴",
+        "category": "文本生成",
+        "function": 12,
+        "contextLabel": "32k"
+      },
+      "provider": "xunfei",
+      "tags": [
+        "chat",
+        "text-generation",
+        "vision"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "33K",
+      "billingMode": "pay",
+      "freeTier": "none",
+      "modelFamily": "qwen3-30b-a3b",
+      "aliases": [
+        "Qwen3-30B-A3B-Instruct-2507",
+        "xunfei/Qwen3-30B-A3B-Instruct-2507"
+      ],
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performanceLevel": "mid",
+      "parameterCount": 30000000000,
+      "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "xunfei",
+      "modelId": "xunfei/DeepSeek-V3",
+      "name": "DeepSeek-V3",
+      "description": "DeepSeek-V3 是一款由深度求索公司自研的MoE模型。DeepSeek-V3 多项评测成绩超越了 Qwen2.5-72B 和 Llama-3.1-405B 等其他开源模型，并在性能上和世界顶尖的闭源模型 GPT-4o 以及 Claude-3.5-Sonnet 不分伯仲。",
+      "contextSize": 32768,
+      "priceInput": 1.6,
+      "priceOutput": 6.4,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
+      "capabilities": [
+        "reasoning"
+      ],
+      "metadata": {
+        "provider": "深度求索",
+        "category": "文本生成",
+        "function": 15,
+        "contextLabel": "32k"
+      },
+      "provider": "xunfei",
+      "tags": [
+        "reasoning"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "33K",
+      "billingMode": "pay",
+      "freeTier": "none",
+      "modelFamily": "deepseek-v3",
+      "aliases": [
+        "DeepSeek-V3"
+      ],
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performanceLevel": "high",
+      "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "xunfei",
+      "modelId": "xunfei/DeepSeek-R1",
+      "name": "DeepSeek-R1",
+      "description": "该版本通过利用更多的计算资源并在后训练阶段引入算法优化机制，显著提升了其推理能力和深度推理能力。该模型在数学、编程和一般逻辑等多个基准测试中表现出色，整体性能已接近 O3 和 Gemini 2.5 Pro 等领先模型。与之前的版本相比，升级后的模型在处理复杂推理任务方面显示出显著的改进。",
+      "contextSize": 32768,
+      "priceInput": 3.2,
+      "priceOutput": 12.8,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
+      "capabilities": [
+        "reasoning"
+      ],
+      "metadata": {
+        "provider": "深度求索",
+        "category": "文本生成",
+        "function": 15,
+        "contextLabel": "32k"
+      },
+      "provider": "xunfei",
+      "tags": [
+        "reasoning",
+        "text-generation"
+      ],
+      "isReasoning": true,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "33K",
+      "billingMode": "pay",
+      "freeTier": "none",
+      "modelFamily": "deepseek-r1",
+      "modelVariant": "r1",
+      "aliases": [
+        "DeepSeek-R1"
+      ],
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performanceLevel": "high",
+      "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "xunfei",
+      "modelId": "xunfei/DeepSeek-R1-Distill-Qwen-32B",
+      "name": "DeepSeek-R1-Distill-Qwen-32B",
+      "description": "DeepSeek-R1-Distill-Qwen-32B 是基于 DeepSeek-R1推理数据蒸馏训练的模型，基础模型为Qwen2.5-32B。在数学推理、代码生成等复杂任务中表现卓越，尤其擅长多步推导和跨领域问题解决。",
+      "contextSize": 8192,
+      "priceInput": 1.6,
+      "priceOutput": 4.8,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "metadata": {
+        "provider": "深度求索",
+        "category": "文本生成",
+        "function": 13,
+        "contextLabel": "8k"
+      },
+      "provider": "xunfei",
+      "tags": [
+        "reasoning",
+        "text-generation",
+        "chat"
+      ],
+      "isReasoning": true,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "8K",
+      "billingMode": "pay",
+      "freeTier": "none",
+      "modelFamily": "deepseek-r1-distill-qwen-32b",
+      "modelVariant": "r1",
+      "aliases": [
+        "DeepSeek-R1-Distill-Qwen-32B"
+      ],
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "complex-reasoning"
+      ],
+      "performanceLevel": "high",
+      "parameterCount": 32000000000,
+      "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "xunfei",
+      "modelId": "xunfei/Kimi-K2-thinking",
+      "name": "Kimi-K2-thinking",
+      "description": "kimi-k2-thinking模型是月之暗面提供的具有通用 Agentic能力和推理能力的思考模型，它擅长深度推理，并可通过多步工具调用，帮助解决各类难题。",
+      "contextSize": 262144,
+      "priceInput": 4,
+      "priceOutput": 16,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision"
+      ],
+      "metadata": {
+        "provider": "月之暗面",
+        "category": "文本生成",
+        "function": 12,
+        "contextLabel": "256k"
+      },
+      "provider": "xunfei",
+      "tags": [
+        "chat",
+        "text-generation",
+        "vision"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "262K",
+      "billingMode": "pay",
+      "freeTier": "none",
+      "modelFamily": "kimi-k2-thinking",
+      "modelVariant": "thinking",
+      "aliases": [
+        "Kimi-K2-Thinking"
+      ],
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "xunfei",
+      "modelId": "xunfei/QwQ-32B",
+      "name": "QwQ-32B",
+      "description": "QwQ是Qwen系列的推理模型。与传统的指令调优模型相比，具备思考和推理能力的QwQ能够在下游任务中实现显著增强的性能表现，尤其是在解决复杂难题方面。开源协议详情见：https://huggingface.co/Qwen/QwQ-32B",
+      "contextSize": 32768,
+      "priceInput": 2,
+      "priceOutput": 6,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision"
+      ],
+      "metadata": {
+        "provider": "阿里巴巴",
+        "category": "文本生成",
+        "function": 12,
+        "contextLabel": "32k"
+      },
+      "provider": "xunfei",
+      "tags": [
+        "chat",
+        "text-generation",
+        "vision"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "33K",
+      "billingMode": "pay",
+      "freeTier": "none",
+      "modelFamily": "qwq-32b",
+      "aliases": [
+        "QwQ-32B"
+      ],
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performanceLevel": "mid",
+      "parameterCount": 32000000000,
+      "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "xunfei",
+      "modelId": "xunfei/Spark Max",
+      "name": "Spark Max",
+      "description": "讯飞自研的专业级大语言模型，在内容创作和知识处理相关场景中表现卓越。在大型新闻机构的新闻创作、学术机构的知识总结等场景中，能够提供高质量的回答，适用于对内容质量和知识专业性要求高的业务场景，如高端内容创作、专业知识服务等。",
+      "contextSize": 8192,
+      "priceInput": 8,
+      "priceOutput": 40,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "metadata": {
+        "provider": "科大讯飞",
+        "category": "文本生成",
+        "function": 13,
+        "contextLabel": "8k"
+      },
+      "provider": "xunfei",
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "8K",
+      "billingMode": "pay",
+      "freeTier": "none",
+      "modelFamily": "spark max",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "premium",
+      "useCase": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "1-3s"
+    },
+    {
+      "vendor": "xunfei",
+      "modelId": "xunfei/星火角色扮演",
+      "name": "星火角色扮演",
+      "description": "本模型专长于角色扮演和拟人回复方向。可多轮稳定保持一个用户自定义的角色人设，迁移性好，设定理解能力强。同时可在依照该角色的三观和语言风格基础上进行思考回复，回复语气和长度也倾向于真人风格。 适用于各种交互，闲聊及娱乐场景，可用于玩具，客服，娱乐软件等内容。",
+      "contextSize": 32768,
+      "priceInput": 7,
+      "priceOutput": 15.8,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision"
+      ],
+      "metadata": {
+        "provider": "科大讯飞",
+        "category": "文本生成",
+        "function": 12,
+        "contextLabel": "32k"
+      },
+      "provider": "xunfei",
+      "tags": [
+        "chat",
+        "text-generation",
+        "vision"
+      ],
+      "isReasoning": false,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "33K",
+      "billingMode": "pay",
+      "freeTier": "none",
+      "modelFamily": "星火角色扮演",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "useCase": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performanceLevel": "mid",
+      "estimatedLatency": "3-10s"
+    },
+    {
+      "vendor": "xunfei",
+      "modelId": "xunfei/DeepSeek-R1-Distill-Llama-8B",
+      "name": "DeepSeek-R1-Distill-Llama-8B",
+      "description": "DeepSeek-R1-Distill-Llama-8B 是基于 DeepSeek-R1推理数据蒸馏训练的模型，基础模型为Llama-3.1-8B。在数学推理、代码生成等任务中表现卓越。",
+      "contextSize": 8192,
+      "priceInput": 1,
+      "priceOutput": 2,
+      "priceCurrency": "CNY",
+      "isFree": false,
+      "freeKind": "unknown",
+      "trialScope": "none",
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "metadata": {
+        "provider": "深度求索",
+        "category": "文本生成",
+        "function": 2,
+        "contextLabel": "8k"
+      },
+      "provider": "xunfei",
+      "tags": [
+        "reasoning",
+        "text-generation",
+        "chat"
+      ],
+      "isReasoning": true,
+      "isMultimodal": false,
+      "hasToolUse": false,
+      "contextLabel": "8K",
+      "billingMode": "pay",
+      "freeTier": "none",
+      "modelFamily": "deepseek-r1-distill-llama-8b",
+      "modelVariant": "r1",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "premium",
+      "useCase": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "complex-reasoning"
+      ],
+      "performanceLevel": "mid",
+      "parameterCount": 8000000000,
+      "estimatedLatency": "1-3s"
     }
   ]
 }
