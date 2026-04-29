@@ -39,9 +39,13 @@ async function loadData() {
   };
 
   allModels = mainData.data || [];
-  viewData = { all: allModels, free: allModels.filter(m => m.billing_mode === 'free') };
+  viewData = {
+    all: allModels,
+    free: allModels.filter(m => m.is_free),
+    experienceable: allModels.filter(m => m.is_experienceable),
+  };
 
-  const freeCount = allModels.filter(m => m.billing_mode === 'free').length;
+  const freeCount = allModels.filter(m => m.is_free).length;
   elements.totalModels.textContent = mainData.total || 0;
   elements.totalProviders.textContent = Object.keys(metaData.providers).length;
   elements.freeModels.textContent = freeCount;
@@ -86,7 +90,9 @@ function getFilteredModels() {
   }
 
   if (currentView === 'free') {
-    models = models.filter(m => m.billing_mode === 'free');
+    models = models.filter(m => m.is_free);
+  } else if (currentView === 'experienceable') {
+    models = models.filter(m => m.is_experienceable);
   }
 
   if (searchQuery) {
@@ -113,9 +119,10 @@ function renderModels() {
 
   elements.modelsList.innerHTML = models.map(model => `
     <div class="model-card">
-      <div class="model-header">
+        <div class="model-header">
         <div class="model-name">${escapeHtml(model.name)}</div>
         <div>
+          ${model.is_experienceable ? '<span class="billing-badge experienceable">体验</span>' : ''}
           <span class="billing-badge ${model.billing_mode}">${model.billing_mode}</span>
           <span class="model-provider">${escapeHtml(model.provider)}</span>
         </div>

@@ -30,27 +30,54 @@ const CAPABILITY_MAP: Record<string, string[]> = {
   'parse': ['document-processing'],
 };
 
+async function fetchWithRetry(
+  url: string,
+  retries = 2,
+  delayMs = 1000
+): Promise<string | null> {
+  for (let i = 0; i <= retries; i++) {
+    try {
+      const response = await fetch(url, {
+        headers: {
+          'User-Agent': 'Mozilla/5.0 (compatible; ModelHubBot/1.0)',
+          Accept: 'text/html,application/xhtml+xml',
+        },
+      });
+      if (response.ok) {
+        return await response.text();
+      }
+      console.warn(`[nvidia] HTTP ${response.status} for ${url}`);
+    } catch (err) {
+      console.warn(`[nvidia] Attempt ${i + 1} failed for ${url}:`, err instanceof Error ? err.message : err);
+    }
+    if (i < retries) {
+      await new Promise(resolve => setTimeout(resolve, delayMs * (i + 1)));
+    }
+  }
+  console.error(`[nvidia] All retries exhausted for ${url}`);
+  return null;
+}
+
 async function fetchFreeModelIds(): Promise<Set<string>> {
   const freeModels = new Set<string>();
 
   for (let page = 1; page <= 3; page++) {
     const url = page === 1 ? FREE_ENDPOINT_URL : `${FREE_ENDPOINT_URL}&page=${page}`;
-    try {
-      const response = await fetch(url);
-      if (!response.ok) break;
+    const html = await fetchWithRetry(url);
 
-      const html = await response.text();
-      const regex = /href="\/([a-zA-Z0-9_-]+\/[a-zA-Z0-9_.-]+)"/g;
-      let match;
+    if (!html) {
+      console.warn(`[nvidia] Failed to fetch free models page ${page}`);
+      continue;
+    }
 
-      while ((match = regex.exec(html)) !== null) {
-        const path = match[1];
-        if (!path.includes('explore') && !path.includes('models/community')) {
-          freeModels.add(path);
-        }
+    const regex = /href="\/([a-zA-Z0-9_-]+\/[a-zA-Z0-9_.-]+)"/g;
+    let match;
+
+    while ((match = regex.exec(html)) !== null) {
+      const path = match[1];
+      if (!path.includes('explore') && !path.includes('models/community')) {
+        freeModels.add(path);
       }
-    } catch {
-      break;
     }
   }
 
@@ -60,46 +87,54 @@ async function fetchFreeModelIds(): Promise<Set<string>> {
 async function fetchNvidiaCapabilities(): Promise<Map<string, string[]>> {
   const capabilities = new Map<string, string[]>();
 
-  try {
-    const response = await fetch(DOCS_API_URL);
-    if (!response.ok) return capabilities;
+  const docsPages = [
+    { url: DOCS_API_URL, defaultCaps: ['chat', 'text-generation'] },
+    { url: 'https://docs.api.nvidia.com/nim/reference/retrieval-apis', defaultCaps: ['embeddings'] },
+    { url: 'https://docs.api.nvidia.com/nim/reference/visual-models-apis', defaultCaps: ['vision'] },
+    { url: 'https://docs.api.nvidia.com/nim/reference/healthcare-apis', defaultCaps: ['protein'] },
+  ];
 
-    const html = await response.text();
+  for (const page of docsPages) {
+    const html = await fetchWithRetry(page.url);
+    if (!html) continue;
 
-    const sectionRegex = /##\s+(Retrieval|Visual Models|multimodAl|Healthcare|route optimization|climate simulation|LLM APIs)([\s\S]*?)(?=##\s|$)/gi;
-    let sectionMatch;
+    try {
+      const modelRegex = /\[([^\]]+)\]\(ref:([^)]+)\)/g;
+      let match;
 
-    while ((sectionMatch = sectionRegex.exec(html)) !== null) {
-      const sectionName = sectionMatch[1].toLowerCase();
-      const sectionContent = sectionMatch[2];
-
-      const modelRegex = /\[([^\]]+)\]\(\/nim\/reference\/[^\)]+\)/g;
-      let modelMatch;
-
-      while ((modelMatch = modelRegex.exec(sectionContent)) !== null) {
-        const modelPath = modelMatch[1];
-        const caps = CAPABILITY_MAP[sectionName] || ['chat', 'text-generation'];
-        capabilities.set(modelPath, caps);
+      while ((match = modelRegex.exec(html)) !== null) {
+        const modelId = match[1].trim();
+        if (modelId && modelId.includes('/')) {
+          capabilities.set(modelId, page.defaultCaps);
+        }
       }
+    } catch (err) {
+      console.warn(`[nvidia] Error parsing ${page.url}:`, err instanceof Error ? err.message : err);
     }
-  } catch {
-    // fallback to empty map
   }
 
+  console.log(`[nvidia] Parsed ${capabilities.size} model capabilities from docs`);
   return capabilities;
 }
 
 async function fetchNvidiaModels(): Promise<RawModelData[]> {
-  const [modelsResponse, freeModelIds, nvidiaCaps] = await Promise.all([
-    fetch('https://integrate.api.nvidia.com/v1/models'),
+  console.log(`[nvidia] Fetching models from integrate.api.nvidia.com...`);
+
+  const modelsResponse = await fetch('https://integrate.api.nvidia.com/v1/models', {
+    headers: { Accept: 'application/json' },
+  });
+
+  if (!modelsResponse.ok) {
+    console.error(`[nvidia] API responded with ${modelsResponse.status}`);
+    return [];
+  }
+
+  const [freeModelIds, nvidiaCaps] = await Promise.all([
     fetchFreeModelIds(),
     fetchNvidiaCapabilities(),
   ]);
 
-  if (!modelsResponse.ok) {
-    console.warn(`[nvidia] API responded with ${modelsResponse.status}`);
-    return [];
-  }
+  console.log(`[nvidia] Found ${freeModelIds.size} free endpoint models`);
 
   const data = (await modelsResponse.json()) as { data: NvidiaModel[] };
 
@@ -108,7 +143,7 @@ async function fetchNvidiaModels(): Promise<RawModelData[]> {
     const isFree = freeModelIds.has(modelId);
     const inferredCaps = inferCapabilities(modelId);
     const docCaps = nvidiaCaps.get(modelId);
-    const capabilities = docCaps || inferredCaps;
+    const capabilities = docCaps?.length ? docCaps : inferredCaps;
 
     return {
       vendor: 'nvidia',

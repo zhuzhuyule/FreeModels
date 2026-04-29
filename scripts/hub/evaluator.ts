@@ -37,6 +37,11 @@ export const PROVIDER_META: Record<string, ProviderMeta> = {
     displayName: 'Cloudflare Workers AI',
     website: 'https://developers.cloudflare.com/workers-ai',
   },
+  openrouter: {
+    name: 'openrouter',
+    displayName: 'OpenRouter',
+    website: 'https://openrouter.ai',
+  },
 };
 
 export function loadCache(): Record<string, CachedCapabilities> {

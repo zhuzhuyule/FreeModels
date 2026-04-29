@@ -18,6 +18,7 @@ export interface ExtendedModelObject extends OpenAIModelObject {
   price_input?: number;
   price_output?: number;
   is_free?: boolean;
+  is_experienceable?: boolean;
   capabilities?: string[];
   tags?: string[];
   is_reasoning?: boolean;
@@ -51,6 +52,7 @@ export interface RawModelData {
   priceInput?: number;
   priceOutput?: number;
   isFree?: boolean;
+  isExperienceable?: boolean;
   capabilities?: string[];
   metadata?: Record<string, unknown>;
 }
@@ -148,6 +150,7 @@ export function toOpenAICompatible(models: EnhancedModelData[]): OpenAICompatibl
         price_input: m.priceInput,
         price_output: m.priceOutput,
         is_free: m.isFree,
+        is_experienceable: m.isExperienceable,
         capabilities: m.capabilities,
         tags: m.tags,
         is_reasoning: m.isReasoning,

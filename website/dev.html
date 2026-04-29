@@ -91,7 +91,7 @@
   <select id="freeTierFilter">
     <option value="">免费层级</option>
     <option value="full">完全免费</option>
-    <option value="trial">体验免费</option>
+    <option value="experienceable">允许体验</option>
     <option value="none">不免费</option>
   </select>
   <select id="typeFilter">
@@ -154,7 +154,7 @@ async function loadData() {
     'all': '全部',
     'free': '全部免费',
     'free-full': '完全免费',
-    'free-trial': '体验免费',
+    'experienceable': '允许体验',
     'reasoning': '推理模型',
     'multimodal': '多模态',
     'tool-use': '工具调用',
@@ -165,9 +165,9 @@ async function loadData() {
   };
   const viewHints = {
     'all': '所有模型',
-    'free': 'billing_mode=free',
+    'free': 'is_free=true',
     'free-full': '完全免费，无任何限制',
-    'free-trial': '支持体验域名访问',
+    'experienceable': '允许体验，但有定价（Gitee 特有）',
     'reasoning': '支持推理能力',
     'multimodal': '支持多模态',
     'tool-use': '支持工具调用',
@@ -191,11 +191,11 @@ async function loadData() {
 
   let models = data.data;
   if (currentView === 'free') {
-    models = models.filter(m => m.billing_mode === 'free');
+    models = models.filter(m => m.is_free);
   } else if (currentView === 'free-full') {
-    models = models.filter(m => m.free_tier === 'full');
-  } else if (currentView === 'free-trial') {
-    models = models.filter(m => m.free_tier === 'trial');
+    models = models.filter(m => m.is_free);
+  } else if (currentView === 'experienceable') {
+    models = models.filter(m => m.is_experienceable);
   } else if (currentView === 'reasoning') {
     models = models.filter(m => m.is_reasoning);
   } else if (currentView === 'multimodal') {
@@ -263,7 +263,9 @@ function applyFilters() {
     if (tier && m.tier !== tier) return false;
     if (speed && m.speed !== speed) return false;
     if (billing && m.billing_mode !== billing) return false;
-    if (freeTier && m.free_tier !== freeTier) return false;
+    if (freeTier === 'full') return !m.is_free ? false : true;
+    if (freeTier === 'experienceable') return !m.is_experienceable ? false : true;
+    if (freeTier === 'none') return (m.is_free || m.is_experienceable) ? false : true;
     if (modelType && !(m.capabilities || []).includes(modelType)) return false;
     if (reasoning && String(m.is_reasoning) !== reasoning) return false;
     if (toolUse && String(m.has_tool_use) !== toolUse) return false;
@@ -325,15 +327,16 @@ function renderTable() {
     const tierClass = `badge-${m.tier || 'medium'}`;
     const speedClass = `badge-${m.speed || 'standard'}`;
     const billingClass = m.billing_mode === 'free' ? 'badge-free' : 'badge-pay';
-    const freeTierLabel = m.free_tier === 'full' ? '完全' : m.free_tier === 'trial' ? '体验' : '无';
-    const freeTierClass = `badge-${m.free_tier || 'none'}`;
+    const freeTierLabel = m.is_free ? '完全' : m.is_experienceable ? '体验' : '无';
+    const freeTierClass = m.is_free ? 'badge-free' : m.is_experienceable ? 'badge-trial' : 'badge-none';
     const caps = (m.tags || []).slice(0, 4).map(c => `<span class="tag">${esc(c)}</span>`).join('');
     const primaryType = m.capabilities?.[0] || 'unknown';
     const typeLabel = typeMap[primaryType] || primaryType;
+    const expBadge = m.is_experienceable ? '<span class="badge badge-trial" style="margin-right:4px">体验</span>' : '';
     return `<tr>
       <td style="color:var(--text2);font-weight:600">${m.idx}</td>
       <td><div style="font-weight:600;max-width:180px;overflow:hidden;text-overflow:ellipsis">${esc(m.name)}</div>
-          <div style="font-size:11px;color:var(--text2);max-width:180px;overflow:hidden;text-overflow:ellipsis">${esc(m.description || '')}</div></td>
+          ${expBadge}<div style="font-size:11px;color:var(--text2);max-width:180px;overflow:hidden;text-overflow:ellipsis">${esc(m.description || '')}</div></td>
       <td>${esc(m.provider)}</td>
       <td>${m.context_label || '-'}</td>
       <td><span style="font-size:12px;color:var(--accent)">${typeLabel}</span></td>
