@@ -33,6 +33,7 @@ jobs:
       - name: Sync models
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          WECHAT_QYAPI_ID: ${{ secrets.WECHAT_QYAPI_ID }}
         run: npm run sync-models
 
       - name: Commit and push changes

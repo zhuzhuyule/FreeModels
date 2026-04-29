@@ -17,6 +17,7 @@ import type {
 import { toOpenAICompatible } from './types.js';
 import { groupByFamily } from './family.js';
 import { classifyFamilyWithLlm, getLlmStats, isLlmEnabled } from './llm.js';
+import { notifyWechat, type NotifyPayload } from './notify.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -155,6 +156,9 @@ async function refineFamiliesWithLlm(
     if (!family || family.length < 2) return true;
     if (/[\/\\]/.test(family)) return true;
     if (family.length > 60) return true;
+    // Non-ASCII (Chinese / Japanese / etc.) — likely needs LLM canonicalization
+    // eslint-disable-next-line no-control-regex
+    if (/[^\x00-\x7F]/.test(family)) return true;
     return false;
   });
 
@@ -184,23 +188,26 @@ function fillAliases(models: EnhancedModelData[]): void {
   }
 }
 
-function reportFamilyStats(models: EnhancedModelData[]): void {
+function reportFamilyStats(
+  models: EnhancedModelData[]
+): { total: number; crossProvider: number; top: Array<{ family: string; providerCount: number }> } {
   const groups = groupByFamily(models);
   let multiProvider = 0;
-  const top: Array<[string, number]> = [];
+  const top: Array<{ family: string; providerCount: number }> = [];
   for (const [family, group] of groups) {
     const providers = new Set(group.map(m => m.provider));
     if (providers.size >= 2) {
       multiProvider++;
-      top.push([family, providers.size]);
+      top.push({ family, providerCount: providers.size });
     }
   }
-  top.sort((a, b) => b[1] - a[1]);
+  top.sort((a, b) => b.providerCount - a.providerCount);
   console.log(`[Aggregator] Family groups: ${groups.size} (${multiProvider} cross-provider).`);
   if (top.length > 0) {
-    const preview = top.slice(0, 5).map(([f, n]) => `${f}(${n}p)`).join(', ');
+    const preview = top.slice(0, 5).map(t => `${t.family}(${t.providerCount}p)`).join(', ');
     console.log(`[Aggregator] Top cross-provider families: ${preview}`);
   }
+  return { total: groups.size, crossProvider: multiProvider, top };
 }
 
 function validateAndFilter(models: EnhancedModelData[]): EnhancedModelData[] {
@@ -276,11 +283,13 @@ function detectAnomalies(
 }
 
 async function main(): Promise<void> {
+  const startedAt = Date.now();
   console.log('[Aggregator] Starting model aggregation...');
 
   const args = process.argv.slice(2);
   const targetProvider = args.find(a => a.startsWith('--provider='))?.split('=')[1];
   const strictMode = args.includes('--strict');
+  const skipNotify = args.includes('--no-notify') || !!targetProvider;
 
   const providers = await discoverProviders();
 
@@ -307,7 +316,7 @@ async function main(): Promise<void> {
 
   await refineFamiliesWithLlm(allModels);
   fillAliases(allModels);
-  reportFamilyStats(allModels);
+  const familyStats = reportFamilyStats(allModels);
 
   if (isLlmEnabled()) {
     const s = getLlmStats();
@@ -354,6 +363,22 @@ async function main(): Promise<void> {
 
   fs.writeFileSync(OUTPUT_PATH, JSON.stringify(output, null, 2));
   console.log(`[Aggregator] Saved ${allModels.length} models to ${OUTPUT_PATH}`);
+
+  if (!skipNotify) {
+    const payload: NotifyPayload = {
+      totalModels: allModels.length,
+      totalFamilies: familyStats.total,
+      crossProviderFamilies: familyStats.crossProvider,
+      topFamilies: familyStats.top.slice(0, 5),
+      byProvider,
+      failedProviders,
+      anomalies: warnings,
+      llmStats: getLlmStats(),
+      durationMs: Date.now() - startedAt,
+      previousTotal: previous?.total,
+    };
+    await notifyWechat(payload);
+  }
 }
 
 main().catch(error => {
