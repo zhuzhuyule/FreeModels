@@ -4,19 +4,15 @@ import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import {
   enhanceWithCache,
-  saveProviderOutput,
-  saveViewOutput,
   updateCache,
-  buildViews,
-  filterModels,
   PROVIDER_META,
 } from './evaluator.js';
 import type {
   RawModelData,
   EnhancedModelData,
-  AggregatedOutput,
   ProviderPlugin,
 } from './types.js';
+import { toOpenAICompatible } from './types.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -103,26 +99,7 @@ async function main(): Promise<void> {
   );
 
   const results = await Promise.all(providers.map(runProvider));
-
-  for (const result of results) {
-    if (result.models.length > 0) {
-      const outputPath = saveProviderOutput(result.provider, result.models);
-      console.log(
-        `[Aggregator] Saved ${result.models.length} models to ${outputPath}`
-      );
-    }
-  }
-
   const allModels: EnhancedModelData[] = results.flatMap(r => r.models);
-
-  const viewDefs = buildViews(allModels);
-  for (const viewDef of viewDefs) {
-    const filteredModels = filterModels(allModels, viewDef.filters);
-    const outputPath = saveViewOutput(viewDef.view, filteredModels, viewDef.filters);
-    console.log(
-      `[Aggregator] Saved view "${viewDef.view}": ${filteredModels.length} models to ${outputPath}`
-    );
-  }
 
   const availableProviders = results
     .filter(r => r.models.length > 0)
@@ -140,20 +117,12 @@ async function main(): Promise<void> {
     }
   }
 
-  const output: AggregatedOutput = {
-    updatedAt: new Date().toISOString(),
-    totalModels: allModels.length,
-    providers: availableProviders,
-    providerMeta,
-    views: viewDefs.map(v => v.view),
-    models: allModels,
-  };
+  const output = toOpenAICompatible(allModels);
+  output.providers = providerMeta;
 
   const outputPath = path.resolve('data/models.json');
   fs.writeFileSync(outputPath, JSON.stringify(output, null, 2));
-  console.log(
-    `[Aggregator] Saved ${allModels.length} total models to ${outputPath}`
-  );
+  console.log(`[Aggregator] Saved ${allModels.length} models to ${outputPath}`);
 }
 
 main().catch(error => {

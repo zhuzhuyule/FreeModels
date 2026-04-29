@@ -114,18 +114,17 @@
         <th data-key="idx" class="sorted"># <span class="sort">▲</span></th>
         <th data-key="name">模型 <span class="sort">▲</span></th>
         <th data-key="provider">厂商 <span class="sort">▲</span></th>
-        <th data-key="contextLabel">上下文 <span class="sort">▲</span></th>
+        <th data-key="context_label">上下文 <span class="sort">▲</span></th>
         <th data-key="modelType">模型类别 <span class="sort">▲</span></th>
         <th data-key="tier">规模 <span class="sort">▲</span></th>
         <th data-key="speed">速度 <span class="sort">▲</span></th>
-        <th data-key="billingMode">计费 <span class="sort">▲</span></th>
-        <th data-key="freeTier">免费层 <span class="sort">▲</span></th>
-        <th data-key="performanceLevel">等级 <span class="sort">▲</span></th>
+        <th data-key="billing_mode">计费 <span class="sort">▲</span></th>
+        <th data-key="free_tier">免费层 <span class="sort">▲</span></th>
         <th>能力标签</th>
       </tr>
     </thead>
     <tbody id="tableBody">
-      <tr><td colspan="9" class="loading">加载中...</td></tr>
+      <tr><td colspan="10" class="loading">加载中...</td></tr>
     </tbody>
   </table>
 </div>
@@ -135,7 +134,6 @@ let allModels = [];
 let filteredModels = [];
 let sortKey = 'idx';
 let sortAsc = true;
-let currentView = 'all';
 
 async function loadJSON(url) {
   try {
@@ -150,7 +148,7 @@ async function loadJSON(url) {
 
 async function loadData() {
   const params = new URLSearchParams(window.location.search);
-  currentView = params.get('view') || 'all';
+  const currentView = params.get('view') || 'all';
 
   const viewNames = {
     'all': '全部',
@@ -167,7 +165,7 @@ async function loadData() {
   };
   const viewHints = {
     'all': '所有模型',
-    'free': 'billingMode=free (可能包含体验免费)',
+    'free': 'billing_mode=free',
     'free-full': '完全免费，无任何限制',
     'free-trial': '支持体验域名访问',
     'reasoning': '支持推理能力',
@@ -183,16 +181,38 @@ async function loadData() {
   document.getElementById('viewHint').textContent = viewHints[currentView] || '';
 
   const basePath = window.location.pathname.startsWith('/website') ? '..' : '';
-  const data = await loadJSON(`${basePath}/data/views/${currentView}/models.json`) ||
-               await loadJSON(`${basePath}/data/models.json`);
+  const data = await loadJSON(`${basePath}/data/models.json`);
 
-  if (!data || !data.models) {
+  if (!data || !data.data) {
     document.getElementById('tableBody').innerHTML =
-      '<tr><td colspan="9" class="empty">加载失败，请确保先运行 npm run sync-models</td></tr>';
+      '<tr><td colspan="10" class="empty">加载失败，请确保先运行 npm run sync-models</td></tr>';
     return;
   }
 
-  allModels = data.models.map((m, i) => ({ ...m, idx: i + 1 }));
+  let models = data.data;
+  if (currentView === 'free') {
+    models = models.filter(m => m.billing_mode === 'free');
+  } else if (currentView === 'free-full') {
+    models = models.filter(m => m.free_tier === 'full');
+  } else if (currentView === 'free-trial') {
+    models = models.filter(m => m.free_tier === 'trial');
+  } else if (currentView === 'reasoning') {
+    models = models.filter(m => m.is_reasoning);
+  } else if (currentView === 'multimodal') {
+    models = models.filter(m => m.is_multimodal);
+  } else if (currentView === 'tool-use') {
+    models = models.filter(m => m.has_tool_use);
+  } else if (currentView === 'fast') {
+    models = models.filter(m => m.speed === 'fast');
+  } else if (currentView === 'premium') {
+    models = models.filter(m => m.speed === 'premium');
+  } else if (currentView === 'small') {
+    models = models.filter(m => m.tier === 'small');
+  } else if (currentView === 'large') {
+    models = models.filter(m => m.tier === 'large');
+  }
+
+  allModels = models.map((m, i) => ({ ...m, idx: i + 1 }));
   document.getElementById('totalCount').textContent = `共 ${allModels.length} 个模型`;
 
   populateFilters();
@@ -238,15 +258,15 @@ function applyFilters() {
   filteredModels = allModels.filter(m => {
     if (q && !m.name?.toLowerCase().includes(q) &&
         !m.description?.toLowerCase().includes(q) &&
-        !m.modelId?.toLowerCase().includes(q)) return false;
+        !m.model_id?.toLowerCase().includes(q)) return false;
     if (provider && m.provider !== provider) return false;
     if (tier && m.tier !== tier) return false;
     if (speed && m.speed !== speed) return false;
-    if (billing && m.billingMode !== billing) return false;
-    if (freeTier && m.freeTier !== freeTier) return false;
+    if (billing && m.billing_mode !== billing) return false;
+    if (freeTier && m.free_tier !== freeTier) return false;
     if (modelType && !(m.capabilities || []).includes(modelType)) return false;
-    if (reasoning && String(m.isReasoning) !== reasoning) return false;
-    if (toolUse && String(m.hasToolUse) !== toolUse) return false;
+    if (reasoning && String(m.is_reasoning) !== reasoning) return false;
+    if (toolUse && String(m.has_tool_use) !== toolUse) return false;
     return true;
   });
 
@@ -304,9 +324,9 @@ function renderTable() {
   tbody.innerHTML = filteredModels.map(m => {
     const tierClass = `badge-${m.tier || 'medium'}`;
     const speedClass = `badge-${m.speed || 'standard'}`;
-    const billingClass = m.billingMode === 'free' ? 'badge-free' : 'badge-pay';
-    const freeTierLabel = m.freeTier === 'full' ? '完全' : m.freeTier === 'trial' ? '体验' : '无';
-    const freeTierClass = `badge-${m.freeTier || 'none'}`;
+    const billingClass = m.billing_mode === 'free' ? 'badge-free' : 'badge-pay';
+    const freeTierLabel = m.free_tier === 'full' ? '完全' : m.free_tier === 'trial' ? '体验' : '无';
+    const freeTierClass = `badge-${m.free_tier || 'none'}`;
     const caps = (m.tags || []).slice(0, 4).map(c => `<span class="tag">${esc(c)}</span>`).join('');
     const primaryType = m.capabilities?.[0] || 'unknown';
     const typeLabel = typeMap[primaryType] || primaryType;
@@ -315,11 +335,11 @@ function renderTable() {
       <td><div style="font-weight:600;max-width:180px;overflow:hidden;text-overflow:ellipsis">${esc(m.name)}</div>
           <div style="font-size:11px;color:var(--text2);max-width:180px;overflow:hidden;text-overflow:ellipsis">${esc(m.description || '')}</div></td>
       <td>${esc(m.provider)}</td>
-      <td>${m.contextLabel || '-'}</td>
+      <td>${m.context_label || '-'}</td>
       <td><span style="font-size:12px;color:var(--accent)">${typeLabel}</span></td>
       <td><span class="badge ${tierClass}">${m.tier || '-'}</span></td>
       <td><span class="badge ${speedClass}">${m.speed || '-'}</span></td>
-      <td><span class="badge ${billingClass}">${m.billingMode === 'free' ? '免费' : m.billingMode === 'mixed' ? '混合' : '付费'}</span></td>
+      <td><span class="badge ${billingClass}">${m.billing_mode === 'free' ? '免费' : m.billing_mode === 'mixed' ? '混合' : '付费'}</span></td>
       <td><span class="badge ${freeTierClass}">${freeTierLabel}</span></td>
       <td>${caps}</td>
     </tr>`;

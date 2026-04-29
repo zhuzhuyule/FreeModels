@@ -5,6 +5,7 @@ let currentView = 'all';
 let currentProvider = null;
 let searchQuery = '';
 let viewData = {};
+let metaData = {};
 
 const elements = {
   totalModels: document.getElementById('total-models'),
@@ -28,37 +29,29 @@ async function loadJSON(path) {
 }
 
 async function loadData() {
-  const [mainData, freeData] = await Promise.all([
-    loadJSON(`${API_BASE}/models.json`),
-    loadJSON(`${API_BASE}/views/free/models.json`),
-  ]);
-
+  const mainData = await loadJSON(`${API_BASE}/models.json`);
   if (!mainData) return;
 
-  viewData = { all: mainData };
-  if (freeData) {
-    viewData.free = freeData;
-  }
+  metaData = {
+    providers: mainData.providers || {},
+    views: mainData.views || [],
+    updatedAt: mainData.updated_at,
+  };
 
-  for (const view of ['reasoning', 'multimodal']) {
-    const data = await loadJSON(`${API_BASE}/views/${view}/models.json`);
-    if (data) {
-      viewData[view] = data;
-    }
-  }
+  allModels = mainData.data || [];
+  viewData = { all: allModels, free: allModels.filter(m => m.billing_mode === 'free') };
 
-  allModels = mainData.models || [];
+  const freeCount = allModels.filter(m => m.billing_mode === 'free').length;
+  elements.totalModels.textContent = mainData.total || 0;
+  elements.totalProviders.textContent = Object.keys(metaData.providers).length;
+  elements.freeModels.textContent = freeCount;
+  elements.lastUpdated.textContent = new Date(metaData.updatedAt).toLocaleString();
 
-  elements.totalModels.textContent = mainData.totalModels || 0;
-  elements.totalProviders.textContent = mainData.providers?.length || 0;
-  elements.freeModels.textContent = freeData?.totalModels || 0;
-  elements.lastUpdated.textContent = new Date(mainData.updatedAt).toLocaleString();
-
-  renderProviderFilter(mainData.providers || [], mainData.providerMeta || {});
+  renderProviderFilter(Object.keys(metaData.providers), metaData.providers);
   renderModels();
 }
 
-function renderProviderFilter(providers, providerMeta) {
+function renderProviderFilter(providerNames, providerMeta) {
   elements.providersFilter.innerHTML = '';
 
   const allChip = document.createElement('button');
@@ -67,11 +60,11 @@ function renderProviderFilter(providers, providerMeta) {
   allChip.onclick = () => setProvider(null);
   elements.providersFilter.appendChild(allChip);
 
-  for (const name of providers) {
+  for (const name of providerNames) {
     const meta = providerMeta[name] || { displayName: name };
     const chip = document.createElement('button');
     chip.className = 'provider-chip' + (currentProvider === name ? ' active' : '');
-    chip.textContent = meta.displayName;
+    chip.textContent = meta.displayName || name;
     chip.onclick = () => setProvider(name);
     elements.providersFilter.appendChild(chip);
   }
@@ -80,7 +73,7 @@ function renderProviderFilter(providers, providerMeta) {
 function setProvider(provider) {
   currentProvider = provider;
   document.querySelectorAll('.provider-chip').forEach(chip => {
-    chip.classList.toggle('active', chip.textContent === 'All Providers' ? provider === null : chip.textContent === (viewData[currentView]?.providerMeta?.[provider]?.displayName || provider));
+    chip.classList.toggle('active', chip.textContent === 'All Providers' ? provider === null : chip.textContent === (metaData.providers[provider]?.displayName || provider));
   });
   renderModels();
 }
@@ -92,14 +85,18 @@ function getFilteredModels() {
     models = models.filter(m => m.provider === currentProvider);
   }
 
+  if (currentView === 'free') {
+    models = models.filter(m => m.billing_mode === 'free');
+  }
+
   if (searchQuery) {
     const q = searchQuery.toLowerCase();
     models = models.filter(
       m =>
         m.name.toLowerCase().includes(q) ||
-        m.modelId.toLowerCase().includes(q) ||
+        m.model_id.toLowerCase().includes(q) ||
         (m.description && m.description.toLowerCase().includes(q)) ||
-        m.tags.some(t => t.toLowerCase().includes(q))
+        (m.tags && m.tags.some(t => t.toLowerCase().includes(q)))
     );
   }
 
@@ -119,7 +116,7 @@ function renderModels() {
       <div class="model-header">
         <div class="model-name">${escapeHtml(model.name)}</div>
         <div>
-          <span class="billing-badge ${model.billingMode}">${model.billingMode}</span>
+          <span class="billing-badge ${model.billing_mode}">${model.billing_mode}</span>
           <span class="model-provider">${escapeHtml(model.provider)}</span>
         </div>
       </div>
@@ -127,25 +124,25 @@ function renderModels() {
       <div class="model-meta">
         <div class="model-meta-item">
           <span class="label">Context:</span>
-          <span class="value">${model.contextLabel}</span>
+          <span class="value">${model.context_label || '-'}</span>
         </div>
-        ${model.priceInput ? `
+        ${model.price_input ? `
         <div class="model-meta-item">
           <span class="label">Input:</span>
-          <span class="value">$${model.priceInput}/1K tokens</span>
+          <span class="value">$${model.price_input}/1K tokens</span>
         </div>
         ` : ''}
-        ${model.priceOutput ? `
+        ${model.price_output ? `
         <div class="model-meta-item">
           <span class="label">Output:</span>
-          <span class="value">$${model.priceOutput}/1K tokens</span>
+          <span class="value">$${model.price_output}/1K tokens</span>
         </div>
         ` : ''}
       </div>
       <div class="model-tags">
-        ${model.isReasoning ? '<span class="tag reasoning">Reasoning</span>' : ''}
-        ${model.isMultimodal ? '<span class="tag multimodal">Multimodal</span>' : ''}
-        ${model.tags.filter(t => t !== 'text-generation').map(t => `<span class="tag">${escapeHtml(t)}</span>`).join('')}
+        ${model.is_reasoning ? '<span class="tag reasoning">Reasoning</span>' : ''}
+        ${model.is_multimodal ? '<span class="tag multimodal">Multimodal</span>' : ''}
+        ${(model.tags || []).filter(t => t !== 'text-generation').map(t => `<span class="tag">${escapeHtml(t)}</span>`).join('')}
       </div>
     </div>
   `).join('');
@@ -163,13 +160,7 @@ function setView(view) {
     tab.classList.toggle('active', tab.dataset.view === view);
   });
 
-  if (viewData[view]) {
-    allModels = viewData[view].models || [];
-    if (view === 'free') {
-      allModels = allModels.filter(m => m.billingMode === 'free');
-    }
-  }
-
+  allModels = viewData[view] || viewData.all;
   renderModels();
 }
 
