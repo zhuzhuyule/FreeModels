@@ -75,9 +75,9 @@ export function evaluateBilling(
 
 export function evaluateFreeTier(
   isFreeApi?: boolean,
-  billingMode?: 'free' | 'pay' | 'mixed'
+  isFullyFree?: boolean
 ): 'none' | 'trial' | 'full' {
-  if (billingMode === 'free') {
+  if (isFullyFree === true) {
     return 'full';
   }
   if (isFreeApi === true) {
@@ -90,7 +90,7 @@ export function enhanceModel(raw: RawModelData): EnhancedModelData {
   const { tags, isReasoning, isMultimodal, hasToolUse } = inferCapabilities(raw);
   const contextLabel = formatContextLabel(raw.contextSize);
   const billingMode = evaluateBilling(raw.priceInput, raw.priceOutput);
-  const freeTier = evaluateFreeTier(raw.isFree, billingMode);
+  const freeTier = evaluateFreeTier(raw.isFree, (raw.metadata as any)?.isFullyFree);
 
   return {
     ...raw,
@@ -121,7 +121,7 @@ export function getCachedOrInfer(
   const { tags, isReasoning, isMultimodal, hasToolUse } = inferCapabilities(raw);
   const contextLabel = formatContextLabel(raw.contextSize);
   const billingMode = evaluateBilling(raw.priceInput, raw.priceOutput);
-  const freeTier = evaluateFreeTier(raw.isFree, billingMode);
+  const freeTier = evaluateFreeTier(raw.isFree, (raw.metadata as any)?.isFullyFree);
 
   return {
     ...raw,

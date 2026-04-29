@@ -127,7 +127,8 @@ async function fetchGiteeModels(): Promise<RawModelData[]> {
     const opPrice = Number(firstOp.price || 0);
     const tPriceInput = Number(firstOp.input_million_tokens_price || 0);
     const tPriceOutput = Number(firstOp.output_million_tokens_price || 0);
-    const isFreeOp = firstOp.free_use === true && opPrice === 0 && tPriceInput === 0 && tPriceOutput === 0;
+    const freeUse = firstOp.free_use === true;
+    const isFullyFree = freeUse && opPrice === 0 && tPriceInput === 0 && tPriceOutput === 0;
 
     const rawType = String(firstOp.type || service.type || 'unknown').toLowerCase();
 
@@ -160,7 +161,7 @@ async function fetchGiteeModels(): Promise<RawModelData[]> {
       contextSize,
       priceInput,
       priceOutput,
-      isFree: isFreeOp,
+      isFree: freeUse,
       capabilities,
       metadata: {
         originalType: rawType,
@@ -172,6 +173,8 @@ async function fetchGiteeModels(): Promise<RawModelData[]> {
         apiFormat: firstOp.api_format,
         path: firstOp.path,
         tags: service.tags?.map((t: any) => t.name).join(', '),
+        freeUse,
+        isFullyFree,
       },
     });
   }

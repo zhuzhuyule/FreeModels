@@ -1,6 +1,6 @@
 {
   "view": "small",
-  "updatedAt": "2026-04-29T03:05:02.306Z",
+  "updatedAt": "2026-04-29T03:21:41.468Z",
   "totalModels": 49,
   "filters": {
     "tier": "small"
@@ -13,7 +13,7 @@
       "description": "Stable Diffusion 3.5 Large Turbo 专注于高质量图像生成，具备强大的细节表现力和场景还原能力。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": false,
+      "isFree": true,
       "capabilities": [
         "image-generation"
       ],
@@ -26,7 +26,9 @@
         "serviceIdent": "stable-diffusion-3.5-large-turbo",
         "apiFormat": "OPEN_AI",
         "path": "v1/images/generations",
-        "tags": "图像生成与处理, 1024*1024"
+        "tags": "图像生成与处理, 1024*1024",
+        "freeUse": true,
+        "isFullyFree": false
       },
       "provider": "gitee",
       "tags": [
@@ -37,9 +39,9 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "full",
+      "freeTier": "trial",
       "tier": "small",
-      "speed": "standard",
+      "speed": "fast",
       "useCase": [
         "creative-generation",
         "art"
@@ -54,7 +56,7 @@
       "description": "RMBG-2.0 是一款基于深度学习的智能背景移除模型，具有高精度、快速处理和广泛场景适应能力。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": false,
+      "isFree": true,
       "capabilities": [
         "image-processing"
       ],
@@ -67,7 +69,9 @@
         "serviceIdent": "RMBG-2.0",
         "apiFormat": "OPEN_AI",
         "path": "v1/images/mattings",
-        "tags": "图像生成与处理, 1024*1024, 抠图"
+        "tags": "图像生成与处理, 1024*1024, 抠图",
+        "freeUse": true,
+        "isFullyFree": false
       },
       "provider": "gitee",
       "tags": [
@@ -78,9 +82,9 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "full",
+      "freeTier": "trial",
       "tier": "small",
-      "speed": "standard",
+      "speed": "fast",
       "useCase": [],
       "performanceLevel": "entry",
       "estimatedLatency": "< 1s"
@@ -92,7 +96,7 @@
       "description": "CosyVoice2 是一款升级版语音生成模型，提供更高精准度的多语种支持、情感调节与自然流畅的语音合成，适用于智能客服、语音助手等多个场景。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": false,
+      "isFree": true,
       "capabilities": [
         "speech-synthesis"
       ],
@@ -105,7 +109,9 @@
         "serviceIdent": "CosyVoice2",
         "apiFormat": "OPEN_AI",
         "path": "v1/audio/speech",
-        "tags": "语音和音频合成, 多语言"
+        "tags": "语音和音频合成, 多语言",
+        "freeUse": true,
+        "isFullyFree": false
       },
       "provider": "gitee",
       "tags": [
@@ -116,9 +122,9 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "full",
+      "freeTier": "trial",
       "tier": "small",
-      "speed": "standard",
+      "speed": "fast",
       "useCase": [
         "text-to-speech",
         "voice-output"
@@ -134,7 +140,7 @@
       "description": "Florence-2-large 是一款多模态大模型，具备卓越的图像和文本跨模态理解与生成能力，支持精准的图像描述和视觉问答。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": false,
+      "isFree": true,
       "capabilities": [
         "vision"
       ],
@@ -147,7 +153,9 @@
         "serviceIdent": "Florence-2-large",
         "apiFormat": "OPEN_AI",
         "path": "v1/images/object-detection",
-        "tags": "图像生成与处理, 英文, 物体检测, 图像描述"
+        "tags": "图像生成与处理, 英文, 物体检测, 图像描述",
+        "freeUse": true,
+        "isFullyFree": false
       },
       "provider": "gitee",
       "tags": [
@@ -158,14 +166,14 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "full",
+      "freeTier": "trial",
       "tier": "small",
-      "speed": "premium",
+      "speed": "fast",
       "useCase": [
         "image-understanding",
         "visual-q&a"
       ],
-      "performanceLevel": "mid",
+      "performanceLevel": "entry",
       "estimatedLatency": "< 1s"
     },
     {
@@ -190,7 +198,9 @@
         "serviceIdent": "DeepSeek-R1-Distill-Qwen-1.5B",
         "apiFormat": "OPEN_AI",
         "path": "v1/chat/completions",
-        "tags": "文本生成, 32K"
+        "tags": "文本生成, 32K",
+        "freeUse": true,
+        "isFullyFree": true
       },
       "provider": "gitee",
       "tags": [
@@ -224,7 +234,7 @@
       "description": "Step-Audio-TTS-3B 是一款高精度文本转语音模型，能生成自然、流畅且富有情感的语音，支持多种语音风格和口音。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": false,
+      "isFree": true,
       "capabilities": [
         "speech-synthesis"
       ],
@@ -237,7 +247,9 @@
         "serviceIdent": "Step-Audio-TTS-3B",
         "apiFormat": "OPEN_AI",
         "path": "v1/audio/speech",
-        "tags": "语音和音频合成, 多语言"
+        "tags": "语音和音频合成, 多语言",
+        "freeUse": true,
+        "isFullyFree": false
       },
       "provider": "gitee",
       "tags": [
@@ -248,9 +260,9 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "full",
+      "freeTier": "trial",
       "tier": "small",
-      "speed": "standard",
+      "speed": "fast",
       "useCase": [
         "text-to-speech",
         "voice-output"
@@ -266,7 +278,7 @@
       "description": "Hunyuan3D-2 是腾讯混元团队推出的高质量 3D 生成模型，具备高保真度、细节丰富和高效生成的特点，可快速将文本或图像转换为逼真的 3D 物体。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": false,
+      "isFree": true,
       "capabilities": [
         "3d-generation"
       ],
@@ -279,7 +291,9 @@
         "serviceIdent": "Hunyuan3D-2",
         "apiFormat": "OPEN_AI",
         "path": "v1/async/image-to-3d",
-        "tags": "3D生成"
+        "tags": "3D生成",
+        "freeUse": true,
+        "isFullyFree": false
       },
       "provider": "gitee",
       "tags": [
@@ -290,9 +304,9 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "full",
+      "freeTier": "trial",
       "tier": "small",
-      "speed": "standard",
+      "speed": "fast",
       "useCase": [],
       "performanceLevel": "entry",
       "estimatedLatency": "< 1s"
@@ -317,7 +331,9 @@
         "serviceIdent": "Spark-TTS-0.5B",
         "apiFormat": "OPEN_AI",
         "path": "v1/async/audio/speech",
-        "tags": "CC BY-NC-SA 4.0, 语音和音频合成, 多语言, MindSpore"
+        "tags": "CC BY-NC-SA 4.0, 语音和音频合成, 多语言, MindSpore",
+        "freeUse": true,
+        "isFullyFree": true
       },
       "provider": "gitee",
       "tags": [
@@ -350,7 +366,7 @@
       "contextSize": 32000,
       "priceInput": 0.00000189,
       "priceOutput": 0.00000189,
-      "isFree": false,
+      "isFree": true,
       "capabilities": [
         "text-generation"
       ],
@@ -363,7 +379,9 @@
         "serviceIdent": "GLM-4-32B",
         "apiFormat": "OPEN_AI",
         "path": "v1/chat/completions",
-        "tags": "文本生成, 32K, MindSpore"
+        "tags": "文本生成, 32K, MindSpore",
+        "freeUse": true,
+        "isFullyFree": false
       },
       "provider": "gitee",
       "tags": [
@@ -374,9 +392,9 @@
       "hasToolUse": false,
       "contextLabel": "32K",
       "billingMode": "pay",
-      "freeTier": "none",
+      "freeTier": "trial",
       "tier": "small",
-      "speed": "standard",
+      "speed": "fast",
       "useCase": [
         "content-creation",
         "writing-assistance"
@@ -406,7 +424,9 @@
         "serviceIdent": "Qwen3-4B",
         "apiFormat": "OPEN_AI",
         "path": "v1/chat/completions",
-        "tags": "文本生成, 32K, 深度思考, MindSpore"
+        "tags": "文本生成, 32K, 深度思考, MindSpore",
+        "freeUse": true,
+        "isFullyFree": true
       },
       "provider": "gitee",
       "tags": [
@@ -449,7 +469,9 @@
         "serviceIdent": "GLM-4-9B-0414",
         "apiFormat": "OPEN_AI",
         "path": "v1/chat/completions",
-        "tags": "文本生成, 32K"
+        "tags": "文本生成, 32K",
+        "freeUse": true,
+        "isFullyFree": true
       },
       "provider": "gitee",
       "tags": [
@@ -492,7 +514,9 @@
         "serviceIdent": "Qwen3-Embedding-4B",
         "apiFormat": "OPEN_AI",
         "path": "v1/embeddings",
-        "tags": "32K, 向量化和重排, 2560 维"
+        "tags": "32K, 向量化和重排, 2560 维",
+        "freeUse": true,
+        "isFullyFree": true
       },
       "provider": "gitee",
       "tags": [
@@ -535,7 +559,9 @@
         "serviceIdent": "Qwen3-Reranker-4B",
         "apiFormat": "OPEN_AI",
         "path": "v1/rerank",
-        "tags": "8K, 向量化和重排"
+        "tags": "8K, 向量化和重排",
+        "freeUse": true,
+        "isFullyFree": true
       },
       "provider": "gitee",
       "tags": [
@@ -564,7 +590,7 @@
       "description": "IndexTTS-1.5 是一款先进的文本转语音（Text-to-Speech, TTS）模型，专为生成高自然度、富有表现力的人类语音而设计。它基于现代神经网络架构，在语音合成的质量、速度和可控性方面均实现了大幅提升。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": false,
+      "isFree": true,
       "capabilities": [
         "speech-synthesis"
       ],
@@ -577,7 +603,9 @@
         "serviceIdent": "IndexTTS-1.5",
         "apiFormat": "OPEN_AI",
         "path": "v1/audio/speech",
-        "tags": "语音和音频合成, 多语言"
+        "tags": "语音和音频合成, 多语言",
+        "freeUse": true,
+        "isFullyFree": false
       },
       "provider": "gitee",
       "tags": [
@@ -589,9 +617,9 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "full",
+      "freeTier": "trial",
       "tier": "small",
-      "speed": "standard",
+      "speed": "fast",
       "useCase": [
         "content-creation",
         "writing-assistance",
@@ -609,7 +637,7 @@
       "contextSize": 32000,
       "priceInput": 0.000003,
       "priceOutput": 0.000009,
-      "isFree": false,
+      "isFree": true,
       "capabilities": [
         "text-generation"
       ],
@@ -622,7 +650,9 @@
         "serviceIdent": "ERNIE-4.5-Turbo-VL",
         "apiFormat": "OPEN_AI",
         "path": "v1/chat/completions",
-        "tags": "视觉模型, 32K, 多模态, 视觉"
+        "tags": "视觉模型, 32K, 多模态, 视觉",
+        "freeUse": true,
+        "isFullyFree": false
       },
       "provider": "gitee",
       "tags": [
@@ -633,9 +663,9 @@
       "hasToolUse": false,
       "contextLabel": "32K",
       "billingMode": "pay",
-      "freeTier": "none",
+      "freeTier": "trial",
       "tier": "small",
-      "speed": "premium",
+      "speed": "fast",
       "useCase": [
         "content-creation",
         "writing-assistance"
@@ -651,7 +681,7 @@
       "contextSize": 32000,
       "priceInput": 8.000000000000001e-7,
       "priceOutput": 0.0000032000000000000003,
-      "isFree": false,
+      "isFree": true,
       "capabilities": [
         "text-generation"
       ],
@@ -664,7 +694,9 @@
         "serviceIdent": "ERNIE-4.5-Turbo",
         "apiFormat": "OPEN_AI",
         "path": "v1/chat/completions",
-        "tags": "文本生成, Function Calling, 32K, 多语言"
+        "tags": "文本生成, Function Calling, 32K, 多语言",
+        "freeUse": true,
+        "isFullyFree": false
       },
       "provider": "gitee",
       "tags": [
@@ -675,9 +707,9 @@
       "hasToolUse": false,
       "contextLabel": "32K",
       "billingMode": "pay",
-      "freeTier": "none",
+      "freeTier": "trial",
       "tier": "small",
-      "speed": "standard",
+      "speed": "fast",
       "useCase": [
         "content-creation",
         "writing-assistance"
@@ -693,7 +725,7 @@
       "contextSize": 128000,
       "priceInput": 0.0000035,
       "priceOutput": 0.000014,
-      "isFree": false,
+      "isFree": true,
       "capabilities": [
         "text-generation"
       ],
@@ -706,7 +738,9 @@
         "serviceIdent": "GLM-4_5",
         "apiFormat": "OPEN_AI",
         "path": "v1/chat/completions",
-        "tags": "文本生成, AI 编程模型, Function Calling, 128K"
+        "tags": "文本生成, AI 编程模型, Function Calling, 128K",
+        "freeUse": true,
+        "isFullyFree": false
       },
       "provider": "gitee",
       "tags": [
@@ -717,9 +751,9 @@
       "hasToolUse": false,
       "contextLabel": "128K",
       "billingMode": "pay",
-      "freeTier": "none",
+      "freeTier": "trial",
       "tier": "small",
-      "speed": "standard",
+      "speed": "fast",
       "useCase": [
         "content-creation",
         "writing-assistance"
@@ -735,7 +769,7 @@
       "contextSize": 128000,
       "priceInput": 0.000001,
       "priceOutput": 0.000006,
-      "isFree": false,
+      "isFree": true,
       "capabilities": [
         "text-generation"
       ],
@@ -748,7 +782,9 @@
         "serviceIdent": "GLM-4_5-Air",
         "apiFormat": "OPEN_AI",
         "path": "v1/chat/completions",
-        "tags": "MIT, 文本生成, Function Calling, 128K"
+        "tags": "MIT, 文本生成, Function Calling, 128K",
+        "freeUse": true,
+        "isFullyFree": false
       },
       "provider": "gitee",
       "tags": [
@@ -759,9 +795,9 @@
       "hasToolUse": false,
       "contextLabel": "128K",
       "billingMode": "pay",
-      "freeTier": "none",
+      "freeTier": "trial",
       "tier": "small",
-      "speed": "standard",
+      "speed": "fast",
       "useCase": [
         "content-creation",
         "writing-assistance"
@@ -776,7 +812,7 @@
       "description": "Wan2.2‑I2V‑A14B 是阿里巴巴 AI 实验室团队推出的 Wan2.2 系列之一，属于图像转视频（Image-to-Video）模型，开源且采用 Apache 2.0 许可证，兼顾学术研究与商业应用",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": false,
+      "isFree": true,
       "capabilities": [
         "video-generation",
         "vision"
@@ -790,7 +826,9 @@
         "serviceIdent": "Wan2_2-I2V-A14B",
         "apiFormat": "OPEN_AI",
         "path": "v1/async/videos/image-to-video",
-        "tags": "视频生成"
+        "tags": "视频生成",
+        "freeUse": true,
+        "isFullyFree": false
       },
       "provider": "gitee",
       "tags": [
@@ -803,15 +841,15 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "full",
+      "freeTier": "trial",
       "tier": "small",
-      "speed": "premium",
+      "speed": "fast",
       "useCase": [
         "image-understanding",
         "visual-q&a",
         "video-creation"
       ],
-      "performanceLevel": "mid",
+      "performanceLevel": "entry",
       "parameterCount": 14000000000,
       "estimatedLatency": "< 1s"
     },
@@ -823,7 +861,7 @@
       "contextSize": 64000,
       "priceInput": 0.000004,
       "priceOutput": 0.000012,
-      "isFree": false,
+      "isFree": true,
       "capabilities": [
         "text-generation"
       ],
@@ -836,7 +874,9 @@
         "serviceIdent": "GLM-4_5V",
         "apiFormat": "OPEN_AI",
         "path": "v1/chat/completions",
-        "tags": "视觉模型, 64K"
+        "tags": "视觉模型, 64K",
+        "freeUse": true,
+        "isFullyFree": false
       },
       "provider": "gitee",
       "tags": [
@@ -847,9 +887,9 @@
       "hasToolUse": false,
       "contextLabel": "64K",
       "billingMode": "pay",
-      "freeTier": "none",
+      "freeTier": "trial",
       "tier": "small",
-      "speed": "standard",
+      "speed": "fast",
       "useCase": [
         "content-creation",
         "writing-assistance"
@@ -864,7 +904,7 @@
       "description": "IndexTTS 是一个零样本文本到语音系统，支持高质量语音合成并可通过音色、情感和语气进行多维度控制。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": false,
+      "isFree": true,
       "capabilities": [
         "speech-synthesis"
       ],
@@ -877,7 +917,9 @@
         "serviceIdent": "IndexTTS-2",
         "apiFormat": "OPEN_AI",
         "path": "v1/audio/speech",
-        "tags": "语音和音频合成"
+        "tags": "语音和音频合成",
+        "freeUse": true,
+        "isFullyFree": false
       },
       "provider": "gitee",
       "tags": [
@@ -888,9 +930,9 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "full",
+      "freeTier": "trial",
       "tier": "small",
-      "speed": "standard",
+      "speed": "fast",
       "useCase": [
         "text-to-speech",
         "voice-output"
@@ -905,7 +947,7 @@
       "description": "MinerU 2.5-2509-1.2B 是一款约 11 亿参数的开源视觉语言模型，采用 AGPL-3.0 许可，专注于 OCR 与复杂文档解析，能够高效提取图像中的文字和结构化信息，适用于发票、合同等多样化文档的自动化处理。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": false,
+      "isFree": true,
       "capabilities": [
         "document-processing"
       ],
@@ -918,7 +960,9 @@
         "serviceIdent": "MinerU2.5",
         "apiFormat": "OPEN_AI",
         "path": "v1/async/documents/parse",
-        "tags": "多语言, 文档处理/OCR, 文字识别"
+        "tags": "多语言, 文档处理/OCR, 文字识别",
+        "freeUse": true,
+        "isFullyFree": false
       },
       "provider": "gitee",
       "tags": [
@@ -929,9 +973,9 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "full",
+      "freeTier": "trial",
       "tier": "small",
-      "speed": "standard",
+      "speed": "fast",
       "useCase": [
         "pdf-processing",
         "ocr"
@@ -947,7 +991,7 @@
       "contextSize": 200000,
       "priceInput": 0.0000035,
       "priceOutput": 0.000014,
-      "isFree": false,
+      "isFree": true,
       "capabilities": [
         "text-generation"
       ],
@@ -960,7 +1004,9 @@
         "serviceIdent": "GLM-4.6",
         "apiFormat": "OPEN_AI",
         "path": "v1/chat/completions",
-        "tags": "文本生成, AI 编程模型, Function Calling, 200K"
+        "tags": "文本生成, AI 编程模型, Function Calling, 200K",
+        "freeUse": true,
+        "isFullyFree": false
       },
       "provider": "gitee",
       "tags": [
@@ -971,9 +1017,9 @@
       "hasToolUse": false,
       "contextLabel": "200K",
       "billingMode": "pay",
-      "freeTier": "none",
+      "freeTier": "trial",
       "tier": "small",
-      "speed": "standard",
+      "speed": "fast",
       "useCase": [
         "content-creation",
         "writing-assistance"
@@ -989,7 +1035,7 @@
       "contextSize": 128000,
       "priceInput": 0.000002,
       "priceOutput": 0.000003,
-      "isFree": false,
+      "isFree": true,
       "capabilities": [
         "text-generation"
       ],
@@ -1002,7 +1048,9 @@
         "serviceIdent": "DeepSeek-V3.2-Exp",
         "apiFormat": "OPEN_AI",
         "path": "v1/chat/completions",
-        "tags": "MIT, 文本生成, Function Calling, 128K, 64K"
+        "tags": "MIT, 文本生成, Function Calling, 128K, 64K",
+        "freeUse": true,
+        "isFullyFree": false
       },
       "provider": "gitee",
       "tags": [
@@ -1013,9 +1061,9 @@
       "hasToolUse": false,
       "contextLabel": "128K",
       "billingMode": "pay",
-      "freeTier": "none",
+      "freeTier": "trial",
       "tier": "small",
-      "speed": "standard",
+      "speed": "fast",
       "useCase": [
         "content-creation",
         "writing-assistance"
@@ -1031,7 +1079,7 @@
       "contextSize": 32000,
       "priceInput": 1.75e-7,
       "priceOutput": 7e-7,
-      "isFree": false,
+      "isFree": true,
       "capabilities": [
         "text-generation"
       ],
@@ -1044,7 +1092,9 @@
         "serviceIdent": "Qwen3-VL-4B-Instruct",
         "apiFormat": "OPEN_AI",
         "path": "v1/chat/completions",
-        "tags": "视觉模型, Function Calling, 32K, 视觉"
+        "tags": "视觉模型, Function Calling, 32K, 视觉",
+        "freeUse": true,
+        "isFullyFree": false
       },
       "provider": "gitee",
       "tags": [
@@ -1055,9 +1105,9 @@
       "hasToolUse": false,
       "contextLabel": "32K",
       "billingMode": "pay",
-      "freeTier": "none",
+      "freeTier": "trial",
       "tier": "small",
-      "speed": "standard",
+      "speed": "fast",
       "useCase": [
         "content-creation",
         "writing-assistance"
@@ -1074,7 +1124,7 @@
       "contextSize": 32000,
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": false,
+      "isFree": true,
       "capabilities": [
         "text-generation"
       ],
@@ -1087,7 +1137,9 @@
         "serviceIdent": "Qwen3Guard-Gen-4B",
         "apiFormat": "OPEN_AI",
         "path": "v1/chat/completions",
-        "tags": "Apache license 2.0, 32K, 风控识别"
+        "tags": "Apache license 2.0, 32K, 风控识别",
+        "freeUse": true,
+        "isFullyFree": false
       },
       "provider": "gitee",
       "tags": [
@@ -1098,9 +1150,9 @@
       "hasToolUse": false,
       "contextLabel": "32K",
       "billingMode": "free",
-      "freeTier": "full",
+      "freeTier": "trial",
       "tier": "small",
-      "speed": "standard",
+      "speed": "fast",
       "useCase": [
         "content-creation",
         "writing-assistance"
@@ -1116,7 +1168,7 @@
       "description": "SeedVR2‑3B 是由 ByteDance‑Seed 提出的一个 3B 参数级别的一步式扩散对抗后训练模型，专为高分辨率图片修复设计。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": false,
+      "isFree": true,
       "capabilities": [
         "image-to-image"
       ],
@@ -1129,7 +1181,9 @@
         "serviceIdent": "SeedVR2-3B",
         "apiFormat": "OPEN_AI",
         "path": "v1/images/upscaling",
-        "tags": "图像生成与处理"
+        "tags": "图像生成与处理",
+        "freeUse": true,
+        "isFullyFree": false
       },
       "provider": "gitee",
       "tags": [
@@ -1140,9 +1194,9 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "full",
+      "freeTier": "trial",
       "tier": "small",
-      "speed": "standard",
+      "speed": "fast",
       "useCase": [
         "image-editing",
         "style-transfer"
@@ -1158,7 +1212,7 @@
       "description": "HunyuanVideo-1.5 是腾讯开源的一款轻量视频生成模型，能生成高质量、连贯、风格多样的短视频。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": false,
+      "isFree": true,
       "capabilities": [
         "video-generation"
       ],
@@ -1171,7 +1225,9 @@
         "serviceIdent": "HunyuanVideo-1.5",
         "apiFormat": "OPEN_AI",
         "path": "v1/async/videos/generations",
-        "tags": "视频生成"
+        "tags": "视频生成",
+        "freeUse": true,
+        "isFullyFree": false
       },
       "provider": "gitee",
       "tags": [
@@ -1182,9 +1238,9 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "full",
+      "freeTier": "trial",
       "tier": "small",
-      "speed": "standard",
+      "speed": "fast",
       "useCase": [
         "video-creation"
       ],
@@ -1199,7 +1255,7 @@
       "contextSize": 128000,
       "priceInput": 0.000002,
       "priceOutput": 0.000003,
-      "isFree": false,
+      "isFree": true,
       "capabilities": [
         "text-generation"
       ],
@@ -1212,7 +1268,9 @@
         "serviceIdent": "DeepSeek-V3.2",
         "apiFormat": "OPEN_AI",
         "path": "v1/chat/completions",
-        "tags": "文本生成, AI 编程模型, Function Calling, 128K, 8K, OpenClaw 模型"
+        "tags": "文本生成, AI 编程模型, Function Calling, 128K, 8K, OpenClaw 模型",
+        "freeUse": true,
+        "isFullyFree": false
       },
       "provider": "gitee",
       "tags": [
@@ -1223,9 +1281,9 @@
       "hasToolUse": false,
       "contextLabel": "128K",
       "billingMode": "pay",
-      "freeTier": "none",
+      "freeTier": "trial",
       "tier": "small",
-      "speed": "standard",
+      "speed": "fast",
       "useCase": [
         "content-creation",
         "writing-assistance"
@@ -1241,7 +1299,7 @@
       "contextSize": 128000,
       "priceInput": 0.000002,
       "priceOutput": 0.000006,
-      "isFree": false,
+      "isFree": true,
       "capabilities": [
         "text-generation",
         "tool_use",
@@ -1256,7 +1314,9 @@
         "serviceIdent": "GLM-4.6V",
         "apiFormat": "OPEN_AI",
         "path": "v1/chat/completions",
-        "tags": "MIT, 视觉模型, 128K"
+        "tags": "MIT, 视觉模型, 128K",
+        "freeUse": true,
+        "isFullyFree": false
       },
       "provider": "gitee",
       "tags": [
@@ -1269,9 +1329,9 @@
       "hasToolUse": true,
       "contextLabel": "128K",
       "billingMode": "pay",
-      "freeTier": "none",
+      "freeTier": "trial",
       "tier": "small",
-      "speed": "premium",
+      "speed": "fast",
       "useCase": [
         "content-creation",
         "writing-assistance",
@@ -1281,7 +1341,7 @@
         "api-integration",
         "autonomous-agents"
       ],
-      "performanceLevel": "mid",
+      "performanceLevel": "entry",
       "estimatedLatency": "< 1s"
     },
     {
@@ -1305,7 +1365,9 @@
         "serviceIdent": "GLM-4.6V-Flash",
         "apiFormat": "OPEN_AI",
         "path": "v1/chat/completions",
-        "tags": "MIT, 视觉模型, 128K"
+        "tags": "MIT, 视觉模型, 128K",
+        "freeUse": true,
+        "isFullyFree": true
       },
       "provider": "gitee",
       "tags": [
@@ -1333,7 +1395,7 @@
       "description": "FLUX.2-dev 是 Black Forest Labs 推出的新一代高质量文生图模型，兼顾强文本理解与细节表现，适合专业级图像生成与创意设计场景。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": false,
+      "isFree": true,
       "capabilities": [
         "image-generation"
       ],
@@ -1346,7 +1408,9 @@
         "serviceIdent": "FLUX.2-dev",
         "apiFormat": "OPEN_AI",
         "path": "v1/images/generations",
-        "tags": "图像生成与处理, 1024*1024"
+        "tags": "图像生成与处理, 1024*1024",
+        "freeUse": true,
+        "isFullyFree": false
       },
       "provider": "gitee",
       "tags": [
@@ -1357,9 +1421,9 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "full",
+      "freeTier": "trial",
       "tier": "small",
-      "speed": "standard",
+      "speed": "fast",
       "useCase": [
         "creative-generation",
         "art"
@@ -1375,7 +1439,7 @@
       "contextSize": 200000,
       "priceInput": 0.0000035,
       "priceOutput": 0.000014,
-      "isFree": false,
+      "isFree": true,
       "capabilities": [
         "text-generation"
       ],
@@ -1388,7 +1452,9 @@
         "serviceIdent": "GLM-4.7",
         "apiFormat": "OPEN_AI",
         "path": "v1/chat/completions",
-        "tags": "文本生成, AI 编程模型, Function Calling, 200K"
+        "tags": "文本生成, AI 编程模型, Function Calling, 200K",
+        "freeUse": true,
+        "isFullyFree": false
       },
       "provider": "gitee",
       "tags": [
@@ -1399,9 +1465,9 @@
       "hasToolUse": false,
       "contextLabel": "200K",
       "billingMode": "pay",
-      "freeTier": "none",
+      "freeTier": "trial",
       "tier": "small",
-      "speed": "standard",
+      "speed": "fast",
       "useCase": [
         "content-creation",
         "writing-assistance"
@@ -1416,7 +1482,7 @@
       "description": "SAM 3 是一款通用的图像分割模型，可在无需预定义类别的情况下，对图像中的任意目标进行高精度的像素级分割。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": false,
+      "isFree": true,
       "capabilities": [
         "vision"
       ],
@@ -1429,7 +1495,9 @@
         "serviceIdent": "sam3",
         "apiFormat": "OPEN_AI",
         "path": "v1/images/object-detection",
-        "tags": "图像生成与处理, 物体检测, 图片切割"
+        "tags": "图像生成与处理, 物体检测, 图片切割",
+        "freeUse": true,
+        "isFullyFree": false
       },
       "provider": "gitee",
       "tags": [
@@ -1440,14 +1508,14 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "full",
+      "freeTier": "trial",
       "tier": "small",
-      "speed": "premium",
+      "speed": "fast",
       "useCase": [
         "image-understanding",
         "visual-q&a"
       ],
-      "performanceLevel": "mid",
+      "performanceLevel": "entry",
       "estimatedLatency": "< 1s"
     },
     {
@@ -1457,7 +1525,7 @@
       "description": "CosyVoice 3.0 是一个基于大语言模型的 先进多语言零样本文本转语音（TTS）系统，在内容一致性、说话人相似度和韵律自然度上超越前代 CosyVoice2，同时支持 9 种主流语言、多种中文方言、发音填充、低延迟流式输出和丰富的控制指令（如情绪、语速等）。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": false,
+      "isFree": true,
       "capabilities": [
         "speech-synthesis"
       ],
@@ -1470,7 +1538,9 @@
         "serviceIdent": "CosyVoice3",
         "apiFormat": "OPEN_AI",
         "path": "v1/async/audio/speech",
-        "tags": "Apache license 2.0, 语音和音频合成, 多语言"
+        "tags": "Apache license 2.0, 语音和音频合成, 多语言",
+        "freeUse": true,
+        "isFullyFree": false
       },
       "provider": "gitee",
       "tags": [
@@ -1481,9 +1551,9 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "full",
+      "freeTier": "trial",
       "tier": "small",
-      "speed": "standard",
+      "speed": "fast",
       "useCase": [
         "text-to-speech",
         "voice-output"
@@ -1512,7 +1582,9 @@
         "serviceIdent": "GLM-4.7-Flash",
         "apiFormat": "OPEN_AI",
         "path": "v1/chat/completions",
-        "tags": "文本生成, Function Calling, 200K, 128K, OpenClaw 模型"
+        "tags": "文本生成, Function Calling, 200K, 128K, OpenClaw 模型",
+        "freeUse": true,
+        "isFullyFree": true
       },
       "provider": "gitee",
       "tags": [
@@ -1540,7 +1612,7 @@
       "description": "FLUX.2-klein-9B 是 Black Forest Labs 推出的 9B 参数高效图像生成与编辑模型，主打极速推理与高质量输出。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": false,
+      "isFree": true,
       "capabilities": [
         "image-generation"
       ],
@@ -1553,7 +1625,9 @@
         "serviceIdent": "FLUX.2-klein-9B",
         "apiFormat": "OPEN_AI",
         "path": "v1/images/generations",
-        "tags": "图像生成与处理"
+        "tags": "图像生成与处理",
+        "freeUse": true,
+        "isFullyFree": false
       },
       "provider": "gitee",
       "tags": [
@@ -1564,9 +1638,9 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "full",
+      "freeTier": "trial",
       "tier": "small",
-      "speed": "standard",
+      "speed": "fast",
       "useCase": [
         "creative-generation",
         "art"
@@ -1595,7 +1669,9 @@
         "serviceIdent": "Qwen3-VL-Embedding-2B",
         "apiFormat": "OPEN_AI",
         "path": "v1/embeddings",
-        "tags": "多模态, 向量化和重排, 2048 维"
+        "tags": "多模态, 向量化和重排, 2048 维",
+        "freeUse": false,
+        "isFullyFree": false
       },
       "provider": "gitee",
       "tags": [
@@ -1624,7 +1700,7 @@
       "description": "LTX-2 是首个基于 DiT 的音视频基础模型，集成了现代视频生成的所有核心能力：同步音视频、高保真度、多种性能模式、生产就绪输出、API 访问和开放访问。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": false,
+      "isFree": true,
       "capabilities": [
         "video-generation"
       ],
@@ -1637,7 +1713,9 @@
         "serviceIdent": "LTX-2",
         "apiFormat": "OPEN_AI",
         "path": "v1/async/videos/image-to-video",
-        "tags": "其他, 视频生成"
+        "tags": "其他, 视频生成",
+        "freeUse": true,
+        "isFullyFree": false
       },
       "provider": "gitee",
       "tags": [
@@ -1648,9 +1726,9 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "full",
+      "freeTier": "trial",
       "tier": "small",
-      "speed": "standard",
+      "speed": "fast",
       "useCase": [
         "video-creation"
       ],
@@ -1664,7 +1742,7 @@
       "description": "Qwen3-VL-Reranker-2B 是一个基于 Qwen3-VL 多模态基础模型的 2 B 参数级别、多模态重新排序（Reranker）模型，用于对检索到的文本/图像/视频等候选结果进行精细相关性评分，从而提升多模态检索管道的准确性。",
       "priceInput": 9e-8,
       "priceOutput": 9e-8,
-      "isFree": false,
+      "isFree": true,
       "capabilities": [
         "rerank"
       ],
@@ -1677,7 +1755,9 @@
         "serviceIdent": "Qwen3-VL-Reranker-2B",
         "apiFormat": "OPEN_AI",
         "path": "v1/rerank/multimodal",
-        "tags": "多模态, 向量化和重排, 2048 维"
+        "tags": "多模态, 向量化和重排, 2048 维",
+        "freeUse": true,
+        "isFullyFree": false
       },
       "provider": "gitee",
       "tags": [
@@ -1688,9 +1768,9 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "pay",
-      "freeTier": "none",
+      "freeTier": "trial",
       "tier": "small",
-      "speed": "premium",
+      "speed": "fast",
       "useCase": [
         "search-improvement",
         "relevance"
@@ -1707,7 +1787,7 @@
       "contextSize": 16000,
       "priceInput": 0.0000028,
       "priceOutput": 0.0000028,
-      "isFree": false,
+      "isFree": true,
       "capabilities": [
         "text-generation"
       ],
@@ -1720,7 +1800,9 @@
         "serviceIdent": "PaddleOCR-VL-1.5",
         "apiFormat": "OPEN_AI",
         "path": "v1/chat/completions",
-        "tags": "16K, 多语言, 文档处理/OCR, 文字识别"
+        "tags": "16K, 多语言, 文档处理/OCR, 文字识别",
+        "freeUse": true,
+        "isFullyFree": false
       },
       "provider": "gitee",
       "tags": [
@@ -1731,9 +1813,9 @@
       "hasToolUse": false,
       "contextLabel": "16K",
       "billingMode": "pay",
-      "freeTier": "none",
+      "freeTier": "trial",
       "tier": "small",
-      "speed": "premium",
+      "speed": "fast",
       "useCase": [
         "content-creation",
         "writing-assistance"
@@ -1749,7 +1831,7 @@
       "contextSize": 8000,
       "priceInput": 0.0000028,
       "priceOutput": 0.0000028,
-      "isFree": false,
+      "isFree": true,
       "capabilities": [
         "text-generation"
       ],
@@ -1762,7 +1844,9 @@
         "serviceIdent": "DeepSeek-OCR-2",
         "apiFormat": "OPEN_AI",
         "path": "v1/chat/completions",
-        "tags": "8K, 文档处理/OCR"
+        "tags": "8K, 文档处理/OCR",
+        "freeUse": true,
+        "isFullyFree": false
       },
       "provider": "gitee",
       "tags": [
@@ -1773,9 +1857,9 @@
       "hasToolUse": false,
       "contextLabel": "8K",
       "billingMode": "pay",
-      "freeTier": "none",
+      "freeTier": "trial",
       "tier": "small",
-      "speed": "standard",
+      "speed": "fast",
       "useCase": [
         "content-creation",
         "writing-assistance"
@@ -1790,7 +1874,7 @@
       "description": "FLUX.2-klein-4B 是 Black Forest Labs 发布的一款 轻量级、高速推理的图像生成 AI 模型。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": false,
+      "isFree": true,
       "capabilities": [
         "image-generation"
       ],
@@ -1803,7 +1887,9 @@
         "serviceIdent": "FLUX.2-klein-4B",
         "apiFormat": "OPEN_AI",
         "path": "v1/images/generations",
-        "tags": "图像生成与处理"
+        "tags": "图像生成与处理",
+        "freeUse": true,
+        "isFullyFree": false
       },
       "provider": "gitee",
       "tags": [
@@ -1814,9 +1900,9 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "full",
+      "freeTier": "trial",
       "tier": "small",
-      "speed": "standard",
+      "speed": "fast",
       "useCase": [
         "creative-generation",
         "art"
@@ -1833,7 +1919,7 @@
       "contextSize": 64000,
       "priceInput": 4.0000000000000003e-7,
       "priceOutput": 0.0000032000000000000003,
-      "isFree": false,
+      "isFree": true,
       "capabilities": [
         "text-generation"
       ],
@@ -1846,7 +1932,9 @@
         "serviceIdent": "Qwen3.5-35B-A3B",
         "apiFormat": "OPEN_AI",
         "path": "v1/chat/completions",
-        "tags": "视觉模型, Function Calling, 视觉, 64K, OpenClaw 模型"
+        "tags": "视觉模型, Function Calling, 视觉, 64K, OpenClaw 模型",
+        "freeUse": true,
+        "isFullyFree": false
       },
       "provider": "gitee",
       "tags": [
@@ -1857,7 +1945,7 @@
       "hasToolUse": false,
       "contextLabel": "64K",
       "billingMode": "pay",
-      "freeTier": "none",
+      "freeTier": "trial",
       "tier": "small",
       "speed": "fast",
       "useCase": [
@@ -1876,7 +1964,7 @@
       "contextSize": 128000,
       "priceInput": 6e-7,
       "priceOutput": 0.0000048,
-      "isFree": false,
+      "isFree": true,
       "capabilities": [
         "text-generation",
         "reasoning"
@@ -1890,7 +1978,9 @@
         "serviceIdent": "Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled",
         "apiFormat": "OPEN_AI",
         "path": "v1/chat/completions",
-        "tags": "文本生成, Function Calling, 128K, OpenClaw 模型"
+        "tags": "文本生成, Function Calling, 128K, OpenClaw 模型",
+        "freeUse": true,
+        "isFullyFree": false
       },
       "provider": "gitee",
       "tags": [
@@ -1902,9 +1992,9 @@
       "hasToolUse": false,
       "contextLabel": "128K",
       "billingMode": "pay",
-      "freeTier": "none",
+      "freeTier": "trial",
       "tier": "small",
-      "speed": "premium",
+      "speed": "fast",
       "useCase": [
         "problem-solving",
         "logical-analysis",
@@ -1913,7 +2003,7 @@
         "writing-assistance",
         "complex-reasoning"
       ],
-      "performanceLevel": "mid",
+      "performanceLevel": "entry",
       "parameterCount": 27000000000,
       "estimatedLatency": "< 1s"
     },
@@ -1925,7 +2015,7 @@
       "contextSize": 128000,
       "priceInput": 0.0000035,
       "priceOutput": 0.0000035,
-      "isFree": false,
+      "isFree": true,
       "capabilities": [
         "text-generation"
       ],
@@ -1938,7 +2028,9 @@
         "serviceIdent": "gemma-4-26B-A4B-it",
         "apiFormat": "OPEN_AI",
         "path": "v1/chat/completions",
-        "tags": "视觉模型, Function Calling, 多模态, 128K"
+        "tags": "视觉模型, Function Calling, 多模态, 128K",
+        "freeUse": true,
+        "isFullyFree": false
       },
       "provider": "gitee",
       "tags": [
@@ -1949,9 +2041,9 @@
       "hasToolUse": false,
       "contextLabel": "128K",
       "billingMode": "pay",
-      "freeTier": "none",
+      "freeTier": "trial",
       "tier": "small",
-      "speed": "standard",
+      "speed": "fast",
       "useCase": [
         "content-creation",
         "writing-assistance"
@@ -1967,7 +2059,7 @@
       "description": "Fish Speech 由 Fish Audio 开源的文本转语音（TTS）模型，支持英语、中文和日语。经过约 15 万小时的数据训练，具有运行内存低、推理速度快、自定义性高的特点。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": false,
+      "isFree": true,
       "capabilities": [
         "speech-synthesis"
       ],
@@ -1980,7 +2072,9 @@
         "serviceIdent": "fish-speech-1.2-sft",
         "apiFormat": "OPEN_AI",
         "path": "v1/audio/speech",
-        "tags": "语音和音频合成, 多语言"
+        "tags": "语音和音频合成, 多语言",
+        "freeUse": true,
+        "isFullyFree": false
       },
       "provider": "gitee",
       "tags": [
@@ -1991,9 +2085,9 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "full",
+      "freeTier": "trial",
       "tier": "small",
-      "speed": "standard",
+      "speed": "fast",
       "useCase": [
         "text-to-speech",
         "voice-output"
@@ -2022,7 +2116,9 @@
         "serviceIdent": "glm-4-9b-chat",
         "apiFormat": "OPEN_AI",
         "path": "v1/completions",
-        "tags": "文本生成, 32K"
+        "tags": "文本生成, 32K",
+        "freeUse": true,
+        "isFullyFree": true
       },
       "provider": "gitee",
       "tags": [
@@ -2051,7 +2147,7 @@
       "description": "由 Stability AI 推出的最新文生图大模型。这一版本在继承了前代的优点上，对图像质量、文本理解和风格多样性等方面进行了显著改进，能够更准确地解读复杂的自然语言提示，并生成更为精确和多样化的图像。",
       "priceInput": 0,
       "priceOutput": 0,
-      "isFree": false,
+      "isFree": true,
       "capabilities": [
         "image-generation"
       ],
@@ -2064,7 +2160,9 @@
         "serviceIdent": "stable-diffusion-3-medium",
         "apiFormat": "OPEN_AI",
         "path": "v1/images/generations",
-        "tags": "图像生成与处理, 1024*1024"
+        "tags": "图像生成与处理, 1024*1024",
+        "freeUse": true,
+        "isFullyFree": false
       },
       "provider": "gitee",
       "tags": [
@@ -2075,9 +2173,9 @@
       "hasToolUse": false,
       "contextLabel": "unknown",
       "billingMode": "free",
-      "freeTier": "full",
+      "freeTier": "trial",
       "tier": "small",
-      "speed": "standard",
+      "speed": "fast",
       "useCase": [
         "creative-generation",
         "art"
