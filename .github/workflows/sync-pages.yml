@@ -1,0 +1,50 @@
+name: Sync to GitHub Pages
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout gh-pages
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: gh-pages
+          sparse-checkout: |
+            index.html
+            website
+            data
+          sparse-checkout-cone-mode: false
+
+      - name: Checkout master
+        uses: actions/checkout@v4
+        with:
+          ref: master
+          path: master
+          sparse-checkout: |
+            index.html
+            website
+            data
+          sparse-checkout-cone-mode: false
+
+      - name: Sync files
+        run: |
+          rm -rf gh-pages/index.html gh-pages/website gh-pages/data
+          cp -r master/index.html gh-pages/
+          cp -r master/website gh-pages/
+          cp -r master/data gh-pages/
+
+      - name: Commit and push
+        run: |
+          cd gh-pages
+          git add -A
+          git -c user.name="github-actions[bot]" -c user.email="github-actions[bot]@users.noreply.github.com" commit -m "chore: sync from master $(date -u +%Y-%m-%dT%H:%M:%SZ)" || exit 0
+          git push origin gh-pages --force
