@@ -2,11 +2,15 @@ import type { RawModelData, ProviderPlugin } from '../../types.js';
 
 const MAAS_API = 'https://maas.xfyun.cn/api/v1/gpt-finetune/model/base/list-v2?page=1&size=9999';
 
-const CAPABILITY_MAP: Record<number, string[]> = {
-  4: ['ocr', 'vision'],
-  8: ['embeddings'],
-  12: ['chat', 'text-generation', 'vision'],
-  15: ['reasoning'],
+// 基于 categoryTree.modelCategory 的实测映射（比 function 字段更准确）
+const CATEGORY_CAPABILITIES: Record<string, string[]> = {
+  '文本生成': ['chat', 'text-generation'],
+  '多模态':   ['chat', 'text-generation', 'vision'],
+  '图像理解': ['chat', 'text-generation', 'vision'],
+  '文生图':   ['image-generation'],
+  '重排序':   ['rerank'],
+  '向量表示': ['embeddings'],
+  '文本分类': ['chat', 'text-generation'],
 };
 
 async function fetchXunfeiModels(): Promise<RawModelData[]> {
@@ -36,26 +40,23 @@ async function fetchXunfeiModels(): Promise<RawModelData[]> {
       // 跳过空 serviceId（未上线）和测试条目
       if (!serviceId || /^test[_-]/i.test(serviceId)) continue;
 
-      const price = m.price?.inferencePrice || {};
-      const inPrice = Number(price.inTokensPrice ?? price.inTokensOrigPrice ?? 0);
-      const outPrice = Number(price.outTokensPrice ?? price.outTokensOrigPrice ?? 0);
+      const inferPrice = m.price?.inferencePrice ?? {};
+      const inPrice = Number(inferPrice.inTokensPrice ?? 0);
+      const outPrice = Number(inferPrice.outTokensPrice ?? 0);
 
       const contextNode = m.categoryTree?.find((c) => c.key === 'contextLengthTag')?.children?.[0];
       const contextSize = parseContextLabel(contextNode?.name);
 
       const categoryNode = m.categoryTree?.find((c) => c.key === 'modelCategory')?.children?.[0];
-      const category = categoryNode?.name || '文本生成';
+      const category = categoryNode?.name ?? '文本生成';
 
-      const capabilities: string[] = [];
-      if (m.function) {
-        const mapped = CAPABILITY_MAP[m.function];
-        if (mapped) capabilities.push(...mapped);
-      }
-      if (m.name.includes('Reranker') || m.name.includes('重排序')) capabilities.push('rerank');
-      if (m.name.includes('Embedding') || m.name.includes('向量')) capabilities.push('embeddings');
-      if (m.name.includes('VL') || m.name.includes('OCR')) capabilities.push('vision');
-      if (m.name.includes('Code') || m.name.includes('coder')) capabilities.push('code-generation');
-      if (!capabilities.length) capabilities.push('chat', 'text-generation');
+      // 从 categoryTree 推断能力，再用名称补充
+      const caps = new Set<string>(CATEGORY_CAPABILITIES[category] ?? ['chat', 'text-generation']);
+      if (/\bR1\b|Reasoner|\bthink(ing)?\b|QwQ/i.test(m.name)) caps.add('reasoning');
+      if (/Coder|Code\b/i.test(m.name)) caps.add('code-generation');
+      if (/OCR/i.test(m.name)) { caps.add('vision'); caps.add('ocr'); }
+      if (/Reranker|重排/i.test(m.name)) caps.add('rerank');
+      if (/Embed|向量/i.test(m.name)) caps.add('embeddings');
 
       const isFree = inPrice === 0 && outPrice === 0;
 
@@ -71,14 +72,11 @@ async function fetchXunfeiModels(): Promise<RawModelData[]> {
         isFree,
         freeMechanism: isFree ? 'rate-limited' : null,
         trialScope: isFree ? 'specific' : 'none',
-        capabilities,
+        capabilities: [...caps],
         metadata: {
           provider: m.userName,
           category,
-          function: m.function,
           contextLabel: contextNode?.name,
-          displayName: m.name,
-          pretrainedModel: m.pretrainedModel,
           serviceId,
         },
       });
@@ -102,15 +100,11 @@ interface XunfeiModel {
   name: string;
   userName: string;
   desc?: string;
-  function?: number;
   serviceId?: string;
-  pretrainedModel?: string;
   price?: {
     inferencePrice?: {
       inTokensPrice?: number;
       outTokensPrice?: number;
-      inTokensOrigPrice?: number;
-      outTokensOrigPrice?: number;
     };
   };
   categoryTree?: Array<{
