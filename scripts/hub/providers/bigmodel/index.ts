@@ -1,8 +1,8 @@
 import type { RawModelData, ProviderPlugin } from '../../types.js';
 
 const LLMS_TXT_URL = 'https://docs.bigmodel.cn/llms.txt';
-const FREE_DOC_PREFIX = '/cn/guide/models/free/';
 const DOC_BASE = 'https://docs.bigmodel.cn';
+const PRICING_API = 'https://open.bigmodel.cn/api/biz/operation/query?ids=1137,1122,1123,1124,1132,1125,1126';
 
 interface BigModelDoc {
   url: string;
@@ -242,22 +242,8 @@ function deriveCapabilities(doc: BigModelDoc): string[] {
   return Array.from(caps);
 }
 
-async function fetchBigModelModels(): Promise<RawModelData[]> {
-  console.log('[bigmodel] Fetching free model list from docs...');
-
-  const urls = await fetchFreeModelUrls();
-  if (urls.length === 0) {
-    console.warn('[bigmodel] No free model URLs found in llms.txt');
-    return [];
-  }
-  console.log(`[bigmodel] Found ${urls.length} free model docs`);
-
-  const docs = (await Promise.all(urls.map(fetchAndParseDoc))).filter(
-    (d): d is BigModelDoc => d !== null
-  );
-  console.log(`[bigmodel] Parsed ${docs.length}/${urls.length} doc(s)`);
-
-  return docs.map(doc => ({
+function docToRaw(doc: BigModelDoc): RawModelData {
+  return {
     vendor: 'bigmodel',
     modelId: `bigmodel/${doc.modelId}`,
     name: doc.title,
@@ -265,10 +251,10 @@ async function fetchBigModelModels(): Promise<RawModelData[]> {
     contextSize: doc.contextWindow,
     priceInput: 0,
     priceOutput: 0,
-    priceCurrency: 'CNY' as const,
+    priceCurrency: 'CNY',
     isFree: true,
-    freeMechanism: 'permanent' as const,
-    trialScope: 'specific' as const,
+    freeMechanism: 'permanent',
+    trialScope: 'specific',
     capabilities: deriveCapabilities(doc),
     metadata: {
       docUrl: doc.url,
@@ -283,8 +269,222 @@ async function fetchBigModelModels(): Promise<RawModelData[]> {
       supportsContextCache: doc.capabilities.contextCache,
       supportsStreaming: doc.capabilities.streaming,
       provider: 'bigmodel',
+      source: 'docs',
     },
-  }));
+  };
+}
+
+// ============= 从 pricing API 抓全量模型（含付费） =============
+
+interface PricingResponse {
+  code: number;
+  msg: string;
+  data: Array<{ id: number; operationId: string; content: string }>;
+}
+
+interface PricingParsedModel {
+  name: string;
+  context?: string;
+  price?: string;
+  description?: string;
+  category: string;
+}
+
+const MODEL_NAME_PATTERNS = [
+  /^GLM-[\w.-]+$/i,
+  /^CogView[\w-]*$/i,
+  /^CogVideo[\w-]*$/i,
+  /^Embedding-[\w]+$/i,
+  /^ChatGLM[\w-]*$/i,
+  /^CharGLM[\w-]*$/i,
+  /^Emohaa$/i,
+  /^CodeGeeX[\w-]*$/i,
+  /^Rerank$/i,
+  /^GLM-TTS$/i,
+  /^GLM-ASR$/i,
+  /^Search-[\w]+$/i,
+];
+
+function isModelName(value: string): boolean {
+  const v = value.trim();
+  return MODEL_NAME_PATTERNS.some(p => p.test(v)) ||
+    /^(glm|cog|embedding|chatglm|charglm|emohaa|codegeex|rerank|search|glm-tts|glm-asr)/i.test(v);
+}
+
+function isFreeFromPrice(price?: string): boolean {
+  if (!price) return false;
+  const p = price.toLowerCase();
+  return p.includes('免费') || p === 'free';
+}
+
+function parseContextSize(context?: string): number | undefined {
+  if (!context) return undefined;
+  const match = context.match(/(\d+)([kKmMgG])?/);
+  if (!match) return undefined;
+  const num = parseInt(match[1]);
+  const unit = (match[2] || '').toLowerCase();
+  if (unit === 'k') return num * 1000;
+  if (unit === 'm') return num * 1_000_000;
+  if (unit === 'g') return num * 1_000_000_000;
+  if (context.includes('1M')) return 1_000_000;
+  return num < 1000 ? num * 1000 : num;
+}
+
+function inferCapabilitiesFromPricing(model: PricingParsedModel): string[] {
+  const caps: string[] = ['chat', 'text-generation'];
+  const text = `${model.name} ${model.description || ''} ${model.category}`.toLowerCase();
+  if (/(视觉|vision|image|图像|v-)/.test(text)) caps.push('vision');
+  if (/(视频|video|cogvideo)/.test(text)) caps.push('video-generation');
+  if (/(图像生成|image generation|cogview)/.test(text)) caps.push('image-generation');
+  if (/(语音|speech|tts|glm-tts)/.test(text)) caps.push('speech-synthesis');
+  if (/(识别|asr|glm-asr)/.test(text)) caps.push('speech-recognition');
+  if (/(embedding|向量)/.test(text)) caps.push('embeddings');
+  if (/(rerank|重排序)/.test(text)) caps.push('rerank');
+  if (/(reasoning|推理|thinking|z1)/.test(text)) caps.push('reasoning');
+  if (/(code|代码|codegee)/.test(text)) caps.push('code-generation');
+  if (/(search|搜索)/.test(text)) caps.push('web-search');
+  return Array.from(new Set(caps));
+}
+
+function extractFromPricingList(list: any[]): PricingParsedModel[] {
+  const out: PricingParsedModel[] = [];
+  for (const listItem of list) {
+    const groupName = listItem.modelName || 'unknown';
+    if (!Array.isArray(listItem.modelList)) continue;
+    for (const model of listItem.modelList) {
+      let name: string | null = null;
+      let price: string | undefined;
+      let context: string | undefined;
+      let description: string | undefined;
+      for (const v of Object.values(model)) {
+        if (typeof v !== 'string') continue;
+        const text = v.trim();
+        if (!name && isModelName(text)) name = text;
+      }
+      if (!name) continue;
+      for (const v of Object.values(model)) {
+        if (typeof v !== 'string') continue;
+        const text = v.trim();
+        const lower = text.toLowerCase();
+        if (!price && (lower === '免费' || lower === 'free' || lower.includes('免费'))) price = '免费';
+        else if (!price && (lower.includes('元') || lower.includes('¥') || /^\d+(\.\d+)?\s*$/.test(text))) {
+          const clean = lower.replace(/[^0-9.]/g, '');
+          if (clean && parseFloat(clean) === 0) price = '免费';
+        }
+        if (!context && (/\d+[kKmMgG]/.test(text) || text === '1M' || text.match(/^\d+K$/i))) context = text;
+        if (!description && /^(语言模型|视觉理解|图像理解|视觉推理|图像生成|视频生成|语音生成|语音识别|推理模型|图像\/视频理解)$/.test(lower)) description = text;
+      }
+      out.push({ name, context, price, description, category: groupName });
+    }
+  }
+  return out;
+}
+
+async function fetchFromPricingApi(): Promise<RawModelData[]> {
+  try {
+    const response = await fetch(PRICING_API, { headers: { Accept: 'application/json' } });
+    if (!response.ok) {
+      console.warn(`[bigmodel] Pricing API HTTP ${response.status}`);
+      return [];
+    }
+    const data = (await response.json()) as PricingResponse;
+    if (data.code !== 200) {
+      console.warn(`[bigmodel] Pricing API code=${data.code} msg=${data.msg}`);
+      return [];
+    }
+
+    const parsed: PricingParsedModel[] = [];
+    for (const item of data.data) {
+      try {
+        const content = JSON.parse(item.content);
+        if (Array.isArray(content.list)) parsed.push(...extractFromPricingList(content.list));
+      } catch {
+        // ignore
+      }
+    }
+
+    const seen = new Set<string>();
+    const result: RawModelData[] = [];
+    for (const pm of parsed) {
+      const dedupKey = `${pm.name}|${pm.context || ''}|${pm.price || ''}`;
+      if (seen.has(dedupKey)) continue;
+      seen.add(dedupKey);
+      const isFree = isFreeFromPrice(pm.price);
+      const slug = pm.name.toLowerCase().replace(/\s+/g, '-');
+      result.push({
+        vendor: 'bigmodel',
+        modelId: `bigmodel/${slug}`,
+        name: pm.name,
+        description: pm.description || pm.category,
+        contextSize: parseContextSize(pm.context),
+        priceInput: isFree ? 0 : undefined,
+        priceOutput: isFree ? 0 : undefined,
+        priceCurrency: 'CNY',
+        isFree,
+        freeMechanism: isFree ? 'permanent' : null,
+        trialScope: isFree ? 'specific' : 'none',
+        capabilities: inferCapabilitiesFromPricing(pm),
+        metadata: {
+          originalName: pm.name,
+          context: pm.context,
+          price: pm.price,
+          category: pm.category,
+          provider: 'bigmodel',
+          source: 'pricing-api',
+        },
+      });
+    }
+    console.log(`[bigmodel] Pricing API: ${result.length} models (${result.filter(m => m.isFree).length} free)`);
+    return result;
+  } catch (err) {
+    console.warn('[bigmodel] Pricing API failed:', err instanceof Error ? err.message : err);
+    return [];
+  }
+}
+
+async function fetchFromDocs(): Promise<RawModelData[]> {
+  const urls = await fetchFreeModelUrls();
+  if (urls.length === 0) return [];
+  const docs = (await Promise.all(urls.map(fetchAndParseDoc))).filter(
+    (d): d is BigModelDoc => d !== null
+  );
+  console.log(`[bigmodel] Docs: ${docs.length}/${urls.length} free model(s) parsed`);
+  return docs.map(docToRaw);
+}
+
+function mergeModels(fromList: RawModelData[], fromDocs: RawModelData[]): RawModelData[] {
+  const byId = new Map<string, RawModelData>();
+  // 1. 先放 list 数据（全量、含付费）
+  for (const m of fromList) byId.set(m.modelId, m);
+  // 2. docs 数据覆盖（重名时以 docs 为准，因为它来自官方专门的免费模型文档）
+  let overlap = 0;
+  for (const m of fromDocs) {
+    if (byId.has(m.modelId)) {
+      overlap++;
+      const existing = byId.get(m.modelId)!;
+      // docs 字段优先；缺失字段从 list 兜底
+      byId.set(m.modelId, {
+        ...existing,
+        ...m,
+        contextSize: m.contextSize ?? existing.contextSize,
+        description: m.description ?? existing.description,
+        metadata: { ...existing.metadata, ...m.metadata, source: 'docs+pricing-api' },
+      });
+    } else {
+      byId.set(m.modelId, m);
+    }
+  }
+  console.log(`[bigmodel] Merged: ${fromList.length} list + ${fromDocs.length} docs = ${byId.size} unique (${overlap} overlap, docs-priority)`);
+  return Array.from(byId.values());
+}
+
+async function fetchBigModelModels(): Promise<RawModelData[]> {
+  console.log('[bigmodel] Fetching from pricing API + docs...');
+  const [fromList, fromDocs] = await Promise.all([
+    fetchFromPricingApi(),
+    fetchFromDocs(),
+  ]);
+  return mergeModels(fromList, fromDocs);
 }
 
 export const fetchModels: ProviderPlugin = fetchBigModelModels;

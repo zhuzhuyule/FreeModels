@@ -11,7 +11,7 @@
 <!-- AUTO-GENERATED:PROVIDER_INDEX_START -->
 | Provider | 内部 ID | 总模型 | 免费 | 付费可试用 | 免费策略 | 注册 | API Key | 文档 | 数据 |
 |---|---|---:|---:|---:|---|---|---|---|---|
-| [BigModel / 智谱 AI](https://open.bigmodel.cn)  | `bigmodel` | 6 | 6 | 0 | GLM Flash 等部分模型可免费使用，具体以官方价格页和控制台为准。 | [注册](https://open.bigmodel.cn) | [API Key](https://open.bigmodel.cn/usercenter/proj-mgmt/apikeys) | [文档](https://docs.bigmodel.cn) | [JSON](https://ofind.cn/FreeModels/data/providers/bigmodel/models.json) |
+| [BigModel / 智谱 AI](https://open.bigmodel.cn)  | `bigmodel` | 56 | 9 | 0 | GLM Flash 等部分模型可免费使用，具体以官方价格页和控制台为准。 | [注册](https://open.bigmodel.cn) | [API Key](https://open.bigmodel.cn/usercenter/proj-mgmt/apikeys) | [文档](https://docs.bigmodel.cn) | [JSON](https://ofind.cn/FreeModels/data/providers/bigmodel/models.json) |
 | [Cerebras](https://www.cerebras.ai)  | `cerebras` | 4 | 4 | 0 | 部分模型提供免费或限速使用，额度以官方控制台为准。 | [注册](https://cloud.cerebras.ai) | [API Key](https://cloud.cerebras.ai/platform/api-keys) | [文档](https://inference-docs.cerebras.ai) | [JSON](https://ofind.cn/FreeModels/data/providers/cerebras/models.json) |
 | [Gitee AI](https://ai.gitee.com)  | `gitee` | 202 | 44 | 145 | 部分模型完全免费，另有一批模型允许体验。 | [注册](https://ai.gitee.com) | — | [文档](https://ai.gitee.com/docs) | [JSON](https://ofind.cn/FreeModels/data/providers/gitee/models.json) |
 | [Google AI](https://ai.google.dev)  | `google` | 32 | 17 | 0 | Gemini API 部分模型提供免费层，通常带有 RPM / RPD / TPM 限制。 | [注册](https://aistudio.google.com) | [API Key](https://aistudio.google.com/app/apikey) | [文档](https://ai.google.dev/gemini-api/docs) | [JSON](https://ofind.cn/FreeModels/data/providers/google/models.json) |
@@ -30,13 +30,13 @@
 | 维度 | 数量 |
 |------|-----:|
 | Provider | 9 |
-| 模型总数 | 519 |
-| 免费模型 (`is_free=true`) | 172 |
+| 模型总数 | 569 |
+| 免费模型 (`is_free=true`) | 175 |
 | 付费可试用 (Gitee 体验等) | 145 |
-| 模型家族 | 434 |
-| 跨 Provider 家族 | 59 |
+| 模型家族 | 473 |
+| 跨 Provider 家族 | 65 |
 | · 限速免费 | 87 |
-| · 永久免费 | 50 |
+| · 永久免费 | 53 |
 | · 试用 credits | 26 |
 | · 日 token 配额 | 7 |
 | · 预览版 | 2 |
@@ -51,10 +51,13 @@
 |---|---|---|---:|---|---|
 | bigmodel  | `bigmodel/cogvideox-flash` | CogVideoX-Flash | unknown | 永久免费 | — |
 | bigmodel  | `bigmodel/cogview-3-flash` | Cogview-3-Flash | unknown | 永久免费 | — |
+| bigmodel  | `bigmodel/glm-4-flash` | GLM-4-Flash | 128K | 永久免费 | — |
 | bigmodel  | `bigmodel/glm-4-flash-250414` | GLM-4-Flash-250414 | 128K | 永久免费 | — |
+| bigmodel  | `bigmodel/glm-4.1v-thinking-flash` | GLM-4.1V-Thinking-Flash | 64K | 永久免费 | — |
 | bigmodel  | `bigmodel/glm-4.6v-flash` | GLM-4.6V-Flash | 128K | 永久免费 | — |
 | bigmodel  | `bigmodel/glm-4.7-flash` | GLM-4.7-Flash | 200K | 永久免费 | — |
-| bigmodel  | `bigmodel/glm-4v-flash` | GLM-4V-Flash | unknown | 永久免费 | — |
+| bigmodel  | `bigmodel/glm-4v-flash` | GLM-4V-Flash | 4K | 永久免费 | — |
+| bigmodel  | `bigmodel/glm-z1-flash` | GLM-Z1-Flash | 128K | 永久免费 | — |
 | cerebras  | `cerebras/gpt-oss-120b` | OpenAI GPT OSS | unknown | 限速免费 | — |
 | cerebras  | `cerebras/llama3.1-8b` | Llama 3.1 8B | 8K | 限速免费 | — |
 | cerebras  | `cerebras/qwen-3-235b-a22b-instruct-2507` | Qwen 3 235B Instruct | 66K | 预览版 | — |
