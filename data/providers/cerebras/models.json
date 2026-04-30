@@ -1,86 +1,83 @@
 {
+  "object": "list",
   "provider": "cerebras",
-  "updatedAt": "2026-04-30T01:00:41.592Z",
-  "totalModels": 4,
-  "models": [
+  "updated_at": "2026-04-30T02:21:08.773Z",
+  "total": 4,
+  "data": [
     {
-      "vendor": "cerebras",
-      "modelId": "cerebras/llama3.1-8b",
+      "id": "cerebras/llama3.1-8b",
+      "object": "model",
+      "created": 1777515664,
+      "owned_by": "cerebras",
+      "provider": "cerebras",
+      "model_id": "cerebras/llama3.1-8b",
       "name": "Llama 3.1 8B",
       "description": "Cerebras model: Llama 3.1 8B - 8B parameters - 2200 tokens/sec",
-      "contextSize": 8192,
-      "priceInput": 0,
-      "priceOutput": 0,
-      "priceCurrency": "USD",
-      "isFree": true,
-      "freeMechanism": "rate-limited",
-      "trialScope": "specific",
+      "context_size": 8192,
+      "context_label": "8K",
+      "price_input": 0,
+      "price_output": 0,
+      "price_currency": "USD",
+      "price_unit": "per_million_tokens",
+      "is_free": true,
       "capabilities": [
         "chat",
         "text-generation"
       ],
-      "metadata": {
-        "originalId": "llama3.1-8b",
-        "parameters": 8000000000,
-        "speed": 2200,
-        "provider": "cerebras"
-      },
-      "provider": "cerebras",
       "tags": [
         "text-generation",
         "chat"
       ],
-      "isReasoning": false,
-      "isMultimodal": false,
-      "hasToolUse": false,
-      "contextLabel": "8K",
-      "freeQuota": null,
-      "modelFamily": "llama3.1-8b",
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": null,
+      "trial_scope": "specific",
+      "model_family": "llama3.1-8b",
       "aliases": [],
+      "parameter_count": 8000000000,
       "tier": "medium",
       "speed": "fast",
-      "useCase": [
+      "use_case": [
         "content-creation",
         "writing-assistance",
         "conversation",
         "q&a"
       ],
-      "performanceLevel": "entry",
-      "parameterCount": 8000000000,
-      "estimatedLatency": "< 1s"
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
     },
     {
-      "vendor": "cerebras",
-      "modelId": "cerebras/gpt-oss-120b",
+      "id": "cerebras/gpt-oss-120b",
+      "object": "model",
+      "created": 1777515665,
+      "owned_by": "cerebras",
+      "provider": "cerebras",
+      "model_id": "cerebras/gpt-oss-120b",
       "name": "OpenAI GPT OSS",
       "description": "Cerebras model: OpenAI GPT OSS - 120B parameters - 3000 tokens/sec",
-      "priceInput": 0,
-      "priceOutput": 0,
-      "priceCurrency": "USD",
-      "isFree": true,
-      "freeMechanism": "rate-limited",
-      "trialScope": "specific",
+      "context_label": "unknown",
+      "price_input": 0,
+      "price_output": 0,
+      "price_currency": "USD",
+      "price_unit": "per_million_tokens",
+      "is_free": true,
       "capabilities": [
         "chat",
         "text-generation"
       ],
-      "metadata": {
-        "originalId": "gpt-oss-120b",
-        "parameters": 120000000000,
-        "speed": 3000,
-        "provider": "cerebras"
-      },
-      "provider": "cerebras",
       "tags": [
         "text-generation",
         "chat"
       ],
-      "isReasoning": false,
-      "isMultimodal": false,
-      "hasToolUse": false,
-      "contextLabel": "unknown",
-      "freeQuota": null,
-      "modelFamily": "gpt-oss-120b",
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": null,
+      "trial_scope": "specific",
+      "model_family": "gpt-oss-120b",
       "aliases": [
         "gpt-oss-120b",
         "groq/openai/gpt-oss-120b",
@@ -89,54 +86,51 @@
       ],
       "tier": "medium",
       "speed": "fast",
-      "useCase": [
+      "use_case": [
         "content-creation",
         "writing-assistance",
         "conversation",
         "q&a"
       ],
-      "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
     },
     {
-      "vendor": "cerebras",
-      "modelId": "cerebras/qwen-3-235b-a22b-instruct-2507",
+      "id": "cerebras/qwen-3-235b-a22b-instruct-2507",
+      "object": "model",
+      "created": 1777515666,
+      "owned_by": "cerebras",
+      "provider": "cerebras",
+      "model_id": "cerebras/qwen-3-235b-a22b-instruct-2507",
       "name": "Qwen 3 235B Instruct",
       "description": "Cerebras Preview model: Qwen 3 235B Instruct - 235B parameters - 1400 tokens/sec",
-      "contextSize": 65536,
-      "priceCurrency": "USD",
-      "isFree": true,
-      "freeMechanism": "preview",
-      "trialScope": "specific",
+      "context_size": 65536,
+      "context_label": "66K",
+      "price_currency": "USD",
+      "is_free": true,
       "capabilities": [
         "chat",
         "text-generation",
         "reasoning"
       ],
-      "metadata": {
-        "originalId": "qwen-3-235b-a22b-instruct-2507",
-        "parameters": 235000000000,
-        "speed": 1400,
-        "isPreview": true,
-        "provider": "cerebras"
-      },
-      "provider": "cerebras",
       "tags": [
         "text-generation",
         "chat",
         "reasoning"
       ],
-      "isReasoning": false,
-      "isMultimodal": false,
-      "hasToolUse": false,
-      "contextLabel": "66K",
-      "freeQuota": null,
-      "modelFamily": "qwen-3-235b-a22b",
-      "modelVariant": "instruct",
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "preview",
+      "free_quota": null,
+      "trial_scope": "specific",
+      "model_family": "qwen-3-235b-a22b",
+      "model_variant": "instruct",
       "aliases": [],
+      "parameter_count": 235000000000,
       "tier": "large",
       "speed": "fast",
-      "useCase": [
+      "use_case": [
         "content-creation",
         "writing-assistance",
         "conversation",
@@ -146,52 +140,47 @@
         "math",
         "complex-reasoning"
       ],
-      "performanceLevel": "mid",
-      "parameterCount": 235000000000,
-      "estimatedLatency": "< 1s"
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
     },
     {
-      "vendor": "cerebras",
-      "modelId": "cerebras/zai-glm-4.7",
+      "id": "cerebras/zai-glm-4.7",
+      "object": "model",
+      "created": 1777515667,
+      "owned_by": "cerebras",
+      "provider": "cerebras",
+      "model_id": "cerebras/zai-glm-4.7",
       "name": "Z.ai GLM 4.7",
       "description": "Cerebras Preview model: Z.ai GLM 4.7 - 355B parameters - 1000 tokens/sec",
-      "priceCurrency": "USD",
-      "isFree": true,
-      "freeMechanism": "preview",
-      "trialScope": "specific",
+      "context_label": "unknown",
+      "price_currency": "USD",
+      "is_free": true,
       "capabilities": [
         "chat",
         "text-generation"
       ],
-      "metadata": {
-        "originalId": "zai-glm-4.7",
-        "parameters": 355000000000,
-        "speed": 1000,
-        "isPreview": true,
-        "provider": "cerebras"
-      },
-      "provider": "cerebras",
       "tags": [
         "text-generation",
         "chat"
       ],
-      "isReasoning": false,
-      "isMultimodal": false,
-      "hasToolUse": false,
-      "contextLabel": "unknown",
-      "freeQuota": null,
-      "modelFamily": "zai-glm-4.7",
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "preview",
+      "free_quota": null,
+      "trial_scope": "specific",
+      "model_family": "zai-glm-4.7",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
-      "useCase": [
+      "use_case": [
         "content-creation",
         "writing-assistance",
         "conversation",
         "q&a"
       ],
-      "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
     }
   ]
 }
