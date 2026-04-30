@@ -2,9 +2,8 @@ import type {
   RawModelData,
   EnhancedModelData,
   CachedCapabilities,
-  BillingMode,
-  FreeTier,
-  FreeKind,
+  FreeMechanism,
+  FreeQuota,
   TrialScope,
 } from './types.js';
 import { normalizeCapabilities, deriveDerivedTags, type CapabilityTag } from './taxonomy.js';
@@ -45,51 +44,30 @@ export function inferCapabilities(model: RawModelData): {
 }
 
 export function formatContextLabel(contextSize?: number): string {
-  if (!contextSize || contextSize === 0) {
-    return 'unknown';
-  }
-  if (contextSize >= 1_000_000) {
-    return `${Math.round(contextSize / 1_000_000)}M`;
-  }
-  if (contextSize >= 1_000) {
-    return `${Math.round(contextSize / 1_000)}K`;
-  }
+  if (!contextSize || contextSize === 0) return 'unknown';
+  if (contextSize >= 1_000_000) return `${Math.round(contextSize / 1_000_000)}M`;
+  if (contextSize >= 1_000) return `${Math.round(contextSize / 1_000)}K`;
   return `${contextSize}`;
 }
 
-export function evaluateBilling(
-  priceInput?: number,
-  priceOutput?: number,
-  isFree?: boolean
-): BillingMode {
-  if (priceInput === undefined && priceOutput === undefined) {
-    return isFree ? 'free' : 'unknown';
-  }
-  const input = priceInput ?? 0;
-  const output = priceOutput ?? 0;
-  if (input === 0 && output === 0) return 'free';
-  if (input === 0 || output === 0) return 'mixed';
-  return 'pay';
-}
-
-export function evaluateFreeTier(
-  isFreeApi?: boolean,
-  isFullyFree?: boolean
-): FreeTier {
-  if (isFullyFree === true) return 'full';
-  if (isFreeApi === true) return 'trial';
-  return 'none';
-}
-
-export function inferFreeKind(raw: RawModelData, billingMode: BillingMode): FreeKind {
-  if (raw.freeKind) return raw.freeKind;
-  if (billingMode !== 'free' && !raw.isFree) return 'unknown';
-  if (raw.isExperienceable) return 'trial-quota';
+/**
+ * 推断免费机制：
+ * - 优先使用 provider 显式提供的 freeMechanism
+ * - 否则根据 isFree + 名字提示推断 (preview / unknown 默认)
+ * - is_free=false 时返回 null
+ */
+export function inferFreeMechanism(raw: RawModelData): FreeMechanism | null {
+  if (!raw.isFree) return null;
+  if (raw.freeMechanism) return raw.freeMechanism;
   const id = `${raw.modelId} ${raw.name}`.toLowerCase();
   if (id.includes('preview') || id.includes('beta') || id.includes('experimental')) {
     return 'preview';
   }
   return 'rate-limited';
+}
+
+export function inferFreeQuota(raw: RawModelData): FreeQuota | null {
+  return raw.freeQuota ?? null;
 }
 
 export function inferTrialScope(raw: RawModelData): TrialScope {
@@ -109,9 +87,8 @@ export function getCachedOrInfer(
 
   const inferred = inferCapabilities(raw);
   const contextLabel = formatContextLabel(raw.contextSize);
-  const billingMode = evaluateBilling(raw.priceInput, raw.priceOutput, raw.isFree);
-  const freeTier = evaluateFreeTier(raw.isFree, (raw.metadata as any)?.isFullyFree);
-  const freeKind = inferFreeKind(raw, billingMode);
+  const freeMechanism = inferFreeMechanism(raw);
+  const freeQuota = inferFreeQuota(raw);
   const trialScope = inferTrialScope(raw);
 
   const tags = (cached?.tags && cached.tags.length > 0
@@ -128,9 +105,8 @@ export function getCachedOrInfer(
     isMultimodal: cached?.isMultimodal ?? inferred.isMultimodal,
     hasToolUse: cached?.hasToolUse ?? inferred.hasToolUse,
     contextLabel: cached?.contextSize ?? contextLabel,
-    billingMode,
-    freeTier,
-    freeKind,
+    freeMechanism,
+    freeQuota,
     trialScope,
     modelFamily: raw.modelFamily ?? familyResult.family,
     modelVariant: raw.modelVariant ?? familyResult.variant,

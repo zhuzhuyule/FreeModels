@@ -165,8 +165,7 @@ async function fetchGiteeModels(): Promise<RawModelData[]> {
       priceOutput,
       priceCurrency: 'CNY',
       isFree: isFullyFree,
-      isExperienceable,
-      freeKind: isFullyFree ? 'permanent' : (isExperienceable ? 'trial-quota' : 'unknown'),
+      freeMechanism: isFullyFree ? 'permanent' : null,
       trialScope: isFullyFree ? 'specific' : (isExperienceable ? 'all' : 'none'),
       capabilities,
       metadata: {

@@ -1,6 +1,6 @@
 {
   "provider": "cerebras",
-  "updatedAt": "2026-04-29T14:00:02.962Z",
+  "updatedAt": "2026-04-30T01:00:41.592Z",
   "totalModels": 4,
   "models": [
     {
@@ -13,7 +13,7 @@
       "priceOutput": 0,
       "priceCurrency": "USD",
       "isFree": true,
-      "freeKind": "rate-limited",
+      "freeMechanism": "rate-limited",
       "trialScope": "specific",
       "capabilities": [
         "chat",
@@ -34,8 +34,7 @@
       "isMultimodal": false,
       "hasToolUse": false,
       "contextLabel": "8K",
-      "billingMode": "free",
-      "freeTier": "trial",
+      "freeQuota": null,
       "modelFamily": "llama3.1-8b",
       "aliases": [],
       "tier": "medium",
@@ -59,7 +58,7 @@
       "priceOutput": 0,
       "priceCurrency": "USD",
       "isFree": true,
-      "freeKind": "rate-limited",
+      "freeMechanism": "rate-limited",
       "trialScope": "specific",
       "capabilities": [
         "chat",
@@ -80,8 +79,7 @@
       "isMultimodal": false,
       "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free",
-      "freeTier": "trial",
+      "freeQuota": null,
       "modelFamily": "gpt-oss-120b",
       "aliases": [
         "gpt-oss-120b",
@@ -107,8 +105,8 @@
       "description": "Cerebras Preview model: Qwen 3 235B Instruct - 235B parameters - 1400 tokens/sec",
       "contextSize": 65536,
       "priceCurrency": "USD",
-      "isFree": false,
-      "freeKind": "preview",
+      "isFree": true,
+      "freeMechanism": "preview",
       "trialScope": "specific",
       "capabilities": [
         "chat",
@@ -132,13 +130,12 @@
       "isMultimodal": false,
       "hasToolUse": false,
       "contextLabel": "66K",
-      "billingMode": "unknown",
-      "freeTier": "none",
+      "freeQuota": null,
       "modelFamily": "qwen-3-235b-a22b",
       "modelVariant": "instruct",
       "aliases": [],
       "tier": "large",
-      "speed": "standard",
+      "speed": "fast",
       "useCase": [
         "content-creation",
         "writing-assistance",
@@ -151,7 +148,7 @@
       ],
       "performanceLevel": "mid",
       "parameterCount": 235000000000,
-      "estimatedLatency": "3-10s"
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "cerebras",
@@ -159,8 +156,8 @@
       "name": "Z.ai GLM 4.7",
       "description": "Cerebras Preview model: Z.ai GLM 4.7 - 355B parameters - 1000 tokens/sec",
       "priceCurrency": "USD",
-      "isFree": false,
-      "freeKind": "preview",
+      "isFree": true,
+      "freeMechanism": "preview",
       "trialScope": "specific",
       "capabilities": [
         "chat",
@@ -182,12 +179,11 @@
       "isMultimodal": false,
       "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "unknown",
-      "freeTier": "none",
+      "freeQuota": null,
       "modelFamily": "zai-glm-4.7",
       "aliases": [],
       "tier": "medium",
-      "speed": "standard",
+      "speed": "fast",
       "useCase": [
         "content-creation",
         "writing-assistance",
@@ -195,7 +191,7 @@
         "q&a"
       ],
       "performanceLevel": "entry",
-      "estimatedLatency": "1-3s"
+      "estimatedLatency": "< 1s"
     }
   ]
 }

@@ -64,7 +64,7 @@ async function fetchXunfeiModels(): Promise<RawModelData[]> {
         priceOutput: outPrice,
         priceCurrency: 'CNY',
         isFree,
-        freeKind: isFree ? 'rate-limited' : 'unknown',
+        freeMechanism: isFree ? 'rate-limited' : null,
         trialScope: isFree ? 'specific' : 'none',
         capabilities,
         metadata: {

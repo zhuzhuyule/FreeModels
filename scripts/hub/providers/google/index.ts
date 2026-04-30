@@ -368,7 +368,7 @@ async function fetchGoogleModels(): Promise<RawModelData[]> {
       priceOutput: m.priceOutput !== undefined && m.priceOutput > 0 ? m.priceOutput : undefined,
       priceCurrency: 'USD',
       isFree: m.isFree,
-      freeKind: m.isFree ? 'rate-limited' : 'unknown',
+      freeMechanism: m.isFree ? 'rate-limited' : null,
       trialScope: m.isFree ? (isFlagship ? 'flagship' : 'fast') : 'none',
       capabilities: m.capabilities,
       metadata: {

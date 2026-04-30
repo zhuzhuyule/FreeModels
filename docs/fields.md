@@ -25,19 +25,48 @@ JSON 输出使用 `snake_case`，TS 内部使用 `camelCase`，映射在 `script
 
 | 字段 | 类型 | 说明 |
 |------|------|------|
-| `price_input` | number? | 输入价格，**单位见 `price_unit`** |
+| `price_input` | number? | 输入价格（超出免费配额后的单价），**单位见 `price_unit`** |
 | `price_output` | number? | 输出价格 |
 | `price_currency` | `'USD' \| 'CNY'` | 货币 |
 | `price_unit` | `'per_million_tokens'` | 单位（统一） |
-| `is_free` | boolean | 是否完全免费 |
-| `is_experienceable` | boolean | 是否允许体验（仅 Gitee） |
-| `billing_mode` | `'free' \| 'pay' \| 'mixed' \| 'unknown'` | 计费模式 |
-| `free_tier` | `'none' \| 'trial' \| 'full'` | 免费层级 |
-| `free_kind` | `'permanent' \| 'rate-limited' \| 'trial-quota' \| 'preview' \| 'unknown'` | 免费性质 |
-| `trial_scope` | `'all' \| 'flagship' \| 'fast' \| 'specific' \| 'none'` | 试用覆盖范围 |
-| `rate_limits` | `{rpm?, rpd?, tpm?, tpd?, notes?}` | 速率限制 |
+| `is_free` | boolean | 在某种限制条件下，**不付费**就能调用 |
+| `free_mechanism` | `FreeMechanism \| null` | 免费机制（见下表） |
+| `free_quota` | `FreeQuota \| null` | 具体配额数值 |
+| `trial_scope` | `'all' \| 'flagship' \| 'fast' \| 'specific' \| 'none'` | Provider 试用策略覆盖范围 |
 
-**约定**：`undefined` 表示未知，**不要**当 0 处理。Provider 不知道价格时应留 `undefined`。
+### 免费定义
+
+> **`is_free = true`**：在某种条件下（速率限制 / 配额 / 试用 credits）可以**不付费**调用 API。
+
+无论是「永久免费」还是「每日 100万 tokens 免费、超出收费」，只要存在不付费可用的窗口，都算 `is_free=true`。`free_mechanism` 描述具体机制。
+
+### `free_mechanism` 取值
+
+| 值 | 含义 | 例子 |
+|---|---|---|
+| `permanent` | 无任何限制，永久免费 | bigmodel GLM-4-Flash |
+| `rate-limited` | 有 RPM/RPD 速率限制，但调用免费 | OpenRouter `:free`、Google Flash 层 |
+| `daily-tokens` | 每日 token 配额内免费 | LongCat 500K-50M tokens/天 |
+| `monthly-tokens` | 每月 token 配额内免费 | （某些 provider） |
+| `trial-credits` | 一次性试用 credits（用完即停） | NVIDIA NIM credits |
+| `preview` | 预览/Beta 期免费（可能下线） | Cerebras Qwen 3 235B Preview |
+| `null` | `is_free=false` 时为 null（必须付费） | — |
+
+### `free_quota` 结构
+
+```typescript
+{
+  rpm?: number              // 每分钟请求数
+  rpd?: number              // 每天请求数
+  tpm?: number              // 每分钟 token 数
+  tokens_per_day?: number   // 每天 token 配额
+  tokens_per_month?: number // 每月 token 配额
+  total_credits?: number    // 试用总额度
+  notes?: string            // 文字补充（"500,000 tokens/天" 等）
+}
+```
+
+**约定**：`undefined` / `null` 表示未知或不适用，**不要**当 0 处理。
 
 ## 能力
 

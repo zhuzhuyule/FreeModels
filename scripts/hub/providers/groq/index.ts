@@ -131,7 +131,7 @@ async function fetchGroqModels(): Promise<RawModelData[]> {
       priceOutput: baseData.outputPrice,
       priceCurrency: 'USD',
       isFree: baseData.isFree ?? false,
-      freeKind: baseData.isFree ? 'rate-limited' : 'unknown',
+      freeMechanism: baseData.isFree ? 'rate-limited' : null,
       trialScope: baseData.isFree ? 'specific' : 'none',
       capabilities,
       metadata: {

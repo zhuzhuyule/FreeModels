@@ -34,9 +34,9 @@ async function fetch(): Promise<RawModelData[]> {
     priceCurrency: 'USD',                              // 或 'CNY'
 
     isFree: m.free === true,
-    freeKind: m.free ? 'rate-limited' : 'unknown',     // permanent / rate-limited / trial-quota / preview / unknown
+    freeMechanism: m.free ? 'rate-limited' : null,     // permanent / rate-limited / daily-tokens / monthly-tokens / trial-credits / preview / null
+    freeQuota: m.free ? { rpm: 60, notes: '...' } : null,
     trialScope: m.free ? 'specific' : 'none',          // all / flagship / fast / specific / none
-    rateLimits: m.free ? { rpm: 60, notes: '...' } : undefined,
 
     capabilities: m.modalities ?? ['chat', 'text-generation'],
 
@@ -72,12 +72,18 @@ export const PROVIDER_META: Record<string, ProviderMeta> = {
 - **务必**用 `vendor/` 前缀的 modelId
 - 加 retry 策略：参考 `scripts/hub/providers/nvidia/index.ts:fetchWithRetry`
 
-## 常见 free_kind 判断
+## 判断 `free_mechanism`
 
-| 性质 | `free_kind` | 例子 |
-|------|-------------|------|
-| 永久免费、无任何限制 | `permanent` | bigmodel GLM-4-Flash、gitee 完全免费 |
+> 核心定义：`is_free=true` 表示用户在某种限制条件下**不付费**就能调用。
+
+| 性质 | `free_mechanism` | 例子 |
+|------|------------------|------|
+| 永久免费、无任何限制 | `permanent` | bigmodel GLM-4-Flash、Gitee 完全免费 |
 | 免费但有 RPM/RPD 限制 | `rate-limited` | OpenRouter `:free`、Google Flash 层 |
-| 免费配额（用完即停） | `trial-quota` | NVIDIA NIM credits、LongCat 每日 tokens |
+| 每日 token 配额内免费 | `daily-tokens` | LongCat 500K-50M tokens/天 |
+| 每月 token 配额内免费 | `monthly-tokens` | （部分 provider） |
+| 一次性试用 credits（用完即停） | `trial-credits` | NVIDIA NIM credits |
 | 预览版免费（可能下线） | `preview` | Cerebras Qwen 3 235B Preview |
-| Provider 没明确说明 | `unknown` | 缺乏文档时的默认值 |
+| **不免费**（必须付费） | `null` | Gitee 体验、所有付费模型 |
+
+`free_quota` 字段补充具体配额数值（rpm、tokens_per_day、total_credits 等）。

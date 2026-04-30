@@ -171,9 +171,10 @@ export function saveViewOutput(
 export function buildViews(models: EnhancedModelData[]): Array<{ view: string; filters: Record<string, string | string[]> }> {
   return [
     { view: 'all', filters: {} },
-    { view: 'free', filters: { billingMode: 'free' } },
-    { view: 'free-full', filters: { freeTier: 'full' } },
-    { view: 'free-trial', filters: { freeTier: 'trial' } },
+    { view: 'free', filters: { isFree: 'true' } },
+    { view: 'free-permanent', filters: { freeMechanism: 'permanent' } },
+    { view: 'free-rate-limited', filters: { freeMechanism: 'rate-limited' } },
+    { view: 'free-quota', filters: { freeMechanism: ['daily-tokens', 'monthly-tokens', 'trial-credits'] } },
     { view: 'reasoning', filters: { tags: 'reasoning' } },
     { view: 'multimodal', filters: { tags: 'vision' } },
     { view: 'tool-use', filters: { hasToolUse: 'true' } },
@@ -210,10 +211,10 @@ export function filterModels(
 
 function checkFilter(model: EnhancedModelData, key: string, value: string): boolean {
   switch (key) {
-    case 'billingMode':
-      return model.billingMode === value;
-    case 'freeTier':
-      return model.freeTier === value;
+    case 'isFree':
+      return model.isFree === (value === 'true');
+    case 'freeMechanism':
+      return model.freeMechanism === value;
     case 'tags':
       return model.tags.includes(value);
     case 'provider':

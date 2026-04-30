@@ -8,17 +8,24 @@ export interface OpenAIModelObject {
   parent?: string | null;
 }
 
-export type FreeKind = 'permanent' | 'rate-limited' | 'trial-quota' | 'preview' | 'unknown';
+export type FreeMechanism =
+  | 'permanent'        // 无任何限制，永久免费
+  | 'rate-limited'     // 仅有 RPM/RPD 速率限制
+  | 'daily-tokens'     // 每日 token 配额内免费
+  | 'monthly-tokens'   // 每月 token 配额内免费
+  | 'trial-credits'    // 一次性试用 credits（用完即停）
+  | 'preview';         // 预览/Beta 期免费（可能下线）
+
 export type TrialScope = 'all' | 'flagship' | 'fast' | 'specific' | 'none';
-export type BillingMode = 'free' | 'pay' | 'mixed' | 'unknown';
-export type FreeTier = 'none' | 'trial' | 'full';
 export type PriceCurrency = 'USD' | 'CNY';
 
-export interface RateLimits {
+export interface FreeQuota {
   rpm?: number;
   rpd?: number;
   tpm?: number;
-  tpd?: number;
+  tokens_per_day?: number;
+  tokens_per_month?: number;
+  total_credits?: number;
   notes?: string;
 }
 
@@ -34,17 +41,14 @@ export interface ExtendedModelObject extends OpenAIModelObject {
   price_currency?: PriceCurrency;
   price_unit?: 'per_million_tokens';
   is_free?: boolean;
-  is_experienceable?: boolean;
   capabilities?: string[];
   tags?: string[];
   is_reasoning?: boolean;
   is_multimodal?: boolean;
   has_tool_use?: boolean;
-  billing_mode?: BillingMode;
-  free_tier?: FreeTier;
-  free_kind?: FreeKind;
+  free_mechanism?: FreeMechanism | null;
+  free_quota?: FreeQuota | null;
   trial_scope?: TrialScope;
-  rate_limits?: RateLimits;
   model_family?: string;
   model_variant?: string;
   quantization?: string;
@@ -78,11 +82,10 @@ export interface RawModelData {
   priceOutput?: number;
   priceCurrency?: PriceCurrency;
   isFree?: boolean;
-  isExperienceable?: boolean;
   capabilities?: string[];
-  freeKind?: FreeKind;
+  freeMechanism?: FreeMechanism | null;
+  freeQuota?: FreeQuota | null;
   trialScope?: TrialScope;
-  rateLimits?: RateLimits;
   modelFamily?: string;
   modelVariant?: string;
   quantization?: string;
@@ -96,9 +99,8 @@ export interface EnhancedModelData extends RawModelData {
   isMultimodal: boolean;
   hasToolUse: boolean;
   contextLabel: string;
-  billingMode: BillingMode;
-  freeTier: FreeTier;
-  freeKind: FreeKind;
+  freeMechanism: FreeMechanism | null;
+  freeQuota: FreeQuota | null;
   trialScope: TrialScope;
   modelFamily: string;
   modelVariant?: string;
@@ -191,17 +193,14 @@ export function toOpenAICompatible(models: EnhancedModelData[]): OpenAICompatibl
         price_currency: m.priceCurrency,
         price_unit: m.priceInput !== undefined || m.priceOutput !== undefined ? 'per_million_tokens' as const : undefined,
         is_free: m.isFree,
-        is_experienceable: m.isExperienceable,
         capabilities: m.capabilities,
         tags: m.tags,
         is_reasoning: m.isReasoning,
         is_multimodal: m.isMultimodal,
         has_tool_use: m.hasToolUse,
-        billing_mode: m.billingMode,
-        free_tier: m.freeTier,
-        free_kind: m.freeKind,
+        free_mechanism: m.freeMechanism,
+        free_quota: m.freeQuota,
         trial_scope: m.trialScope,
-        rate_limits: m.rateLimits,
         model_family: m.modelFamily,
         model_variant: m.modelVariant,
         quantization: m.quantization,

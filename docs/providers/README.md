@@ -47,26 +47,28 @@
 
 > 硬编码 provider 的 LLM 接管是 P2 计划，当前未实施。
 
-## 免费模型策略
+## 免费定义
 
-### 完全免费（`is_free=true`, `free_kind=permanent` 或 `rate-limited`）
+> **`is_free = true`**：在某种限制条件下（速率 / 配额 / 试用 credits）可以**不付费**调用 API。
 
-| Provider | 模型数 | 性质 |
-|----------|-------:|------|
-| OpenRouter | 56 | rate-limited（20 RPM / 50 RPD） |
-| Gitee | 44 | permanent（部分模型完全免费无价格） |
-| NVIDIA | 25 | trial-quota（NIM 免费 credits，可耗尽） |
-| Google | 17 | rate-limited（Flash 系列免费层） |
-| Xunfei | 10 | rate-limited |
-| BigModel | 7 | permanent（GLM-4-Flash 系列） |
-| LongCat | 7 | trial-quota（每天 500K~50M tokens） |
-| Cerebras | 2 | rate-limited（Llama 3.1 8B / GPT OSS 120B） |
+Gitee 的「体验」（原 `is_experienceable=true`）= 付费但开放调用入口，按 token 收费 → 映射为 `is_free=false`。
 
-### 允许体验（`is_experienceable=true`，仅 Gitee）
+## 各 Provider 免费分布（`free_mechanism`）
 
-| Provider | 模型数 | 规则 |
-|----------|-------:|------|
-| Gitee | 145 | `free_use=true` 但有价格，开放体验 |
+| Provider | 永久 | 限速 | 日配额 | 月配额 | 试用 credits | 预览 | 必付费 |
+|----------|-----:|-----:|-------:|-------:|-------------:|-----:|-------:|
+| Gitee | 44 | 0 | 0 | 0 | 0 | 0 | 158 |
+| NVIDIA | 0 | 0 | 0 | 0 | 26 | 0 | 108 |
+| Xunfei | 0 | 10 | 0 | 0 | 0 | 0 | 54 |
+| OpenRouter | 0 | 56 | 0 | 0 | 0 | 0 | 0 |
+| BigModel | 7 | 0 | 0 | 0 | 0 | 0 | 47 |
+| Google | 0 | 17 | 0 | 0 | 0 | 0 | 15 |
+| Groq | 0 | 0 | 0 | 0 | 0 | 0 | 12 |
+| LongCat | 0 | 0 | 7 | 0 | 0 | 0 | 0 |
+| Cerebras | 0 | 0 | 0 | 0 | 0 | 2 | 2 |
+| **总计** | **51** | **83** | **7** | **0** | **26** | **2** | **396** |
+
+> 数据基于最新 sync。Gitee 145 个原"可体验"现归为必付费（按 token 收费）。
 
 ### 按家族跨 provider 分布
 

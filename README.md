@@ -35,9 +35,10 @@ https://ofind.cn/FreeModels/data/views/<view>/models.json
 | 视图 | 内容 |
 |------|------|
 | `all` | 全部模型 |
-| `free` | 计费模式为 free（含限速 / 配额） |
-| `free-full` | 仅 `free_tier=full`（完全免费） |
-| `free-trial` | 仅 `free_tier=trial`（试用） |
+| `free` | `is_free=true`（含所有免费机制） |
+| `free-permanent` | `free_mechanism=permanent`（永久免费） |
+| `free-rate-limited` | `free_mechanism=rate-limited`（限速免费） |
+| `free-quota` | `free_mechanism` ∈ `daily-tokens` / `monthly-tokens` / `trial-credits`（配额免费） |
 | `reasoning` | 推理模型 |
 | `multimodal` | 多模态 |
 | `tool-use` | 支持工具调用 |
@@ -93,10 +94,9 @@ console.log(`${reasoning.length} 个免费推理模型`);
   "price_currency": "USD",
   "price_unit": "per_million_tokens",
   "is_free": true,
-  "billing_mode": "free",
-  "free_kind": "rate-limited",
+  "free_mechanism": "rate-limited",
+  "free_quota": { "rpm": 20, "rpd": 50, "notes": "Free models limited to 20/min" },
   "trial_scope": "specific",
-  "rate_limits": { "rpm": 20, "rpd": 50, "notes": "Free models limited to 20/min" },
   "model_family": "llama-3.3-70b",
   "model_variant": "instruct",
   "aliases": ["groq/llama-3.3-70b-versatile", "nvidia/meta/llama-3.3-70b-instruct"],
@@ -105,6 +105,14 @@ console.log(`${reasoning.length} 个免费推理模型`);
   "performance_level": "high"
 }
 ```
+
+### 免费定义
+
+> **`is_free = true`** = 在某种限制下（速率 / 配额 / 试用 credits）可以**不付费**调用。
+
+`free_mechanism` 描述具体机制：`permanent` / `rate-limited` / `daily-tokens` / `monthly-tokens` / `trial-credits` / `preview`。
+
+`free_quota` 给出具体数值（rpm、tokens_per_day、total_credits 等）。
 
 完整字段定义：[docs/fields.md](./docs/fields.md)
 

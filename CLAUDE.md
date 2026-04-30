@@ -25,19 +25,24 @@ website/dev.html                         ← 前端视图（相对路径 ../data
 
 ## 业务规则
 
-### Gitee 免费三态（特殊）
-仅 Gitee 区分 `is_free` vs `is_experienceable`：
-- `free_use=true && !hasPrice` → `is_free=true`（完全免费，permanent）
-- `free_use=true && hasPrice` → `is_experienceable=true`（有价但开放体验，trial-quota）
-- 其他 → 收费
+### 免费定义（统一）
 
-其他 provider 只有 `is_free` 一种。
+> **`is_free = true`**：在某种条件下（速率限制 / 配额 / 试用 credits）可以**不付费**调用 API。
 
-### `free_kind` / `trial_scope`
-P1 加的字段，描述"试用规则"而非简单 free/pay：
-- `free_kind`: `permanent | rate-limited | trial-quota | preview | unknown`
-- `trial_scope`: `flagship | fast | specific | all | none`（覆盖范围）
-- `rate_limits: { rpm?, rpd?, tpm?, tpd?, notes? }`
+无论永久免费还是配额内免费都算 free。**`is_free=false`** 表示必须付费。
+
+### 描述免费机制的字段
+
+- `free_mechanism`: `permanent | rate-limited | daily-tokens | monthly-tokens | trial-credits | preview | null`
+- `free_quota`: `{ rpm?, rpd?, tpm?, tokens_per_day?, tokens_per_month?, total_credits?, notes? }`
+- `trial_scope`: `flagship | fast | specific | all | none`（provider 试用策略覆盖范围）
+
+### Gitee 体验
+Gitee `free_use=true && hasPrice=true` 的 145 个模型 = 「**付费**但开放调用入口」 → 映射为 `is_free=false`。如未来确认有月度免费配额，再升级为 `is_free=true, free_mechanism='monthly-tokens'`。
+
+### 已删除字段（不要再使用）
+
+`billing_mode`、`free_tier`、`is_experienceable`、`free_kind`、`rate_limits` 已全部移除。统一为 `is_free` + `free_mechanism` + `free_quota`。
 
 ## Provider 数据源备忘
 
