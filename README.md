@@ -1,19 +1,35 @@
-# Model Hub
+# FreeModels
 
-聚合 9 家 AI provider 的免费 / 试用模型清单，统一为 OpenAI 兼容 JSON。每天自动同步、跨 provider 模型识别、企业微信变更通知。
+聚合多家 AI provider 的免费 / 试用模型清单，统一为 OpenAI 兼容 JSON。每天自动同步、跨 provider 模型识别、自动生成文档索引、企业微信变更通知。
 
 🌐 **在线访问**：<https://ofind.cn/FreeModels/>
 
+## Provider 支持情况
+
+> 该表由 `npm run generate-docs` 根据 `data/models.json` 自动更新。
+
+<!-- AUTO-GENERATED:PROVIDER_INDEX_START -->
+| Provider | 内部 ID | 总模型 | 免费 | 体验/试用 | 免费策略 | 注册 | API Key | 文档 | 数据 |
+|---|---|---:|---:|---:|---|---|---|---|---|
+<!-- AUTO-GENERATED:PROVIDER_INDEX_END -->
+
 ## 数据规模
 
+> 该表由 `npm run generate-docs` 自动更新。
+
+<!-- AUTO-GENERATED:STATS_START -->
 | 维度 | 数量 |
 |------|-----:|
-| Provider | 9 |
-| 模型总数 | 565 |
-| 完全免费 | 168 |
-| 允许体验（Gitee） | 145 |
-| 模型家族 | 472 |
-| 跨 provider 家族 | 63 |
+<!-- AUTO-GENERATED:STATS_END -->
+
+## 免费模型列表
+
+> 该表由 `npm run generate-docs` 自动更新，展示 `is_free=true` 的模型。完整机器可读数据请使用 `data/views/free-full/models.json` 或 `data/views/free/models.json`。
+
+<!-- AUTO-GENERATED:FREE_MODELS_START -->
+| Provider | Model ID | 名称 | 上下文 | 免费类型 | 限制 |
+|---|---|---|---:|---|---|
+<!-- AUTO-GENERATED:FREE_MODELS_END -->
 
 ## 直接使用预编译 JSON（推荐 API 消费方）
 
@@ -125,7 +141,7 @@ console.log(`${reasoning.length} 个免费推理模型`);
 | [docs/architecture.md](./docs/architecture.md) | 数据流、聚合管线、缓存策略 |
 | [docs/fields.md](./docs/fields.md) | 字段定义、taxonomy、family 规范化 |
 | [docs/conventions.md](./docs/conventions.md) | 代码约定（价格单位、命名、缓存 IO） |
-| [docs/providers/README.md](./docs/providers/README.md) | Provider 数据源与免费策略 |
+| [docs/providers/README.md](./docs/providers/README.md) | Provider 接入索引、免费策略与详细文档 |
 | [docs/llm-and-notify.md](./docs/llm-and-notify.md) | GitHub Models 与企业微信通知 |
 | [docs/deployment.md](./docs/deployment.md) | CI workflows、Pages、CDN |
 | [docs/adding-provider.md](./docs/adding-provider.md) | 新增 Provider 步骤与模板 |
@@ -135,8 +151,10 @@ console.log(`${reasoning.length} 个免费推理模型`);
 
 ```bash
 npm install
-npm run sync-models                       # 全量同步
-npm run sync-models -- --provider=gitee   # 仅跑某个
+npm run sync-models                       # 全量同步模型 JSON
+npm run generate-docs                     # 根据 data/models.json 生成 README / Provider 文档
+npm run sync                              # 同步模型 JSON 并生成文档
+npm run sync-models -- --provider=gitee   # 仅跑某个 provider
 npm run sync-models -- --strict           # 异常时退出码 2
 npm run sync-models -- --no-notify        # 跳过通知
 SKIP_LLM=1 npm run sync-models            # 跳过 LLM
@@ -161,6 +179,7 @@ npx serve .
 .
 ├── scripts/hub/                  # 聚合脚本
 │   ├── aggregator.ts             # 入口
+│   ├── docs-generator.ts         # README / Provider 文档生成器
 │   ├── providers/                # Provider 插件（自动发现）
 │   ├── enhancer.ts               # 能力推断
 │   ├── analyzer.ts               # tier/speed 推断
@@ -179,7 +198,7 @@ npx serve .
 │   └── llm-budget.json
 ├── website/                      # 前端
 ├── docs/                         # 技术文档
-├── .github/workflows/            # 三个同步 workflow
+├── .github/workflows/            # 同步 workflow
 └── CLAUDE.md                     # Agent 上下文
 ```
 

@@ -24,14 +24,14 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Sync models
+      - name: Sync models and docs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           WECHAT_QYAPI_ID: ${{ secrets.WECHAT_QYAPI_ID }}
-        run: npm run sync-models
+        run: npm run sync
 
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: 'chore: sync models and update capability cache'
-          file_pattern: 'data/models.json data/capability-cache.json'
+          commit_message: 'chore: sync models and generated docs'
+          file_pattern: 'data/**/*.json README.md docs/providers/**/*.md'
