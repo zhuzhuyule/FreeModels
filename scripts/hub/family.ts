@@ -19,11 +19,28 @@ const PROVIDER_PREFIXES = [
   'gitee', 'bigmodel', 'xunfei', 'longcat',
 ];
 
-const OWNER_PREFIXES = [
-  'meta', 'meta-llama', 'openai', 'qwen', 'qwen2', 'qwen3',
-  'microsoft', 'mistral-ai', 'mistralai', 'deepseek-ai', 'deepseek',
-  'anthropic', 'google', 'nvidia', 'cohere', 'ai21', 'thudm',
-  'baichuan', 'internlm', 'xai', 'x-ai', 'z-ai', 'zai',
+// 只用 `prefix/` 形式剥离的 owner 前缀。这些字符串本身也常作为模型家族前缀
+// （例如 qwen3-32b、deepseek-v3.2、mistral-7b），不能用 hyphen 剥离。
+const OWNER_PREFIXES_SLASH_ONLY = [
+  'qwen', 'qwen2', 'qwen3',
+  'deepseek',
+  'mistral',
+  'gemma',
+  'phi',
+  'cohere',
+];
+
+// 既能 `prefix/` 也能 `prefix-` 剥离的纯 owner 前缀。这些字符串通常不会
+// 作为模型家族名出现，可以放心剥掉。
+const OWNER_PREFIXES_BOTH = [
+  'meta', 'meta-llama',
+  'openai', 'anthropic',
+  'microsoft', 'google', 'nvidia',
+  'mistral-ai', 'mistralai',
+  'deepseek-ai',
+  'ai21', 'thudm',
+  'baichuan', 'internlm',
+  'xai', 'x-ai', 'z-ai', 'zai',
   'canopylabs', 'huggingfaceh4', 'shenzhou-ai',
 ];
 
@@ -60,8 +77,30 @@ function loadOverrides(): OverridesFile {
   return cachedOverrides;
 }
 
-function stripPrefix(id: string, prefixes: string[]): string {
-  for (const prefix of prefixes) {
+function stripProviderPrefix(id: string): string {
+  for (const prefix of PROVIDER_PREFIXES) {
+    const re = new RegExp(`^${prefix}/`, 'i');
+    if (re.test(id)) {
+      return id.replace(re, '');
+    }
+  }
+  return id;
+}
+
+// 长度倒序，避免 "meta" 抢先匹配 "meta-llama"
+const OWNER_BOTH_SORTED = [...OWNER_PREFIXES_BOTH].sort((a, b) => b.length - a.length);
+const OWNER_SLASH_SORTED = [...OWNER_PREFIXES_SLASH_ONLY].sort((a, b) => b.length - a.length);
+
+function stripOwnerPrefix(id: string): string {
+  // 先试 owner-with-hyphen-allowed 列表（更激进）
+  for (const prefix of OWNER_BOTH_SORTED) {
+    const re = new RegExp(`^${prefix}[-/]`, 'i');
+    if (re.test(id)) {
+      return id.replace(re, '');
+    }
+  }
+  // 再试 slash-only 列表（保守）
+  for (const prefix of OWNER_SLASH_SORTED) {
     const re = new RegExp(`^${prefix}/`, 'i');
     if (re.test(id)) {
       return id.replace(re, '');
@@ -75,7 +114,7 @@ function stripAllOwnerPrefixes(id: string): string {
   let curr = id;
   while (prev !== curr) {
     prev = curr;
-    curr = stripPrefix(curr, OWNER_PREFIXES);
+    curr = stripOwnerPrefix(curr);
   }
   return curr;
 }
@@ -90,7 +129,7 @@ export function canonicalizeFamily(modelId: string, name?: string): FamilyResult
   const lower = modelId.toLowerCase();
   let id = lower;
 
-  id = stripPrefix(id, PROVIDER_PREFIXES);
+  id = stripProviderPrefix(id);
   id = stripAllOwnerPrefixes(id);
 
   if (overrides.patterns) {
