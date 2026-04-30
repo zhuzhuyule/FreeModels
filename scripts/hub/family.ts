@@ -119,31 +119,19 @@ function stripAllOwnerPrefixes(id: string): string {
   return curr;
 }
 
-export function canonicalizeFamily(modelId: string, name?: string): FamilyResult {
-  const overrides = loadOverrides();
+// 评分越高表示 family 越"可读"（有版本号、有分隔符），越低说明越像不透明 slug
+function familyScore(family: string): number {
+  let score = 0;
+  if (/\d+\.\d+/.test(family)) score += 3;   // 版本号带点（glm-5.1, llama-3.1）
+  if (/-/.test(family)) score += 1;            // 含连字符
+  if (/^[a-z0-9]+$/.test(family)) score -= 2; // 纯字母数字无分隔符（opaque slug）
+  return score;
+}
 
-  if (overrides.exact?.[modelId]) {
-    return overrides.exact[modelId];
-  }
-
-  const lower = modelId.toLowerCase();
-  let id = lower;
-
+function deriveFamilyFromSlug(slug: string): FamilyResult {
+  let id = slug;
   id = stripProviderPrefix(id);
   id = stripAllOwnerPrefixes(id);
-
-  if (overrides.patterns) {
-    for (const p of overrides.patterns) {
-      try {
-        const re = new RegExp(p.match, 'i');
-        if (re.test(modelId) || re.test(name ?? '')) {
-          return { family: p.family, variant: p.variant };
-        }
-      } catch {
-        // ignore bad regex
-      }
-    }
-  }
 
   let quantization: string | undefined;
   const quantMatch = id.match(QUANTIZATION_PATTERN);
@@ -177,18 +165,53 @@ export function canonicalizeFamily(modelId: string, name?: string): FamilyResult
     id = id.replace(new RegExp(`-${v}\\b`, 'gi'), '');
   }
 
-  id = id.replace(/-(\d{4})$/, '');           // -2507 trailing date
-  id = id.replace(/-(\d{8})$/, '');           // -20240101 date
+  id = id.replace(/-(\d{4})$/, '');
+  id = id.replace(/-(\d{8})$/, '');
   id = id.replace(/-(\d{6})$/, '');
   id = id.replace(/[\/\\]+/g, '-');
   id = id.replace(/--+/g, '-');
   id = id.replace(/^-|-$/g, '');
 
-  return {
-    family: id || lower,
-    variant,
-    quantization,
-  };
+  return { family: id || slug, variant, quantization };
+}
+
+export function canonicalizeFamily(modelId: string, name?: string): FamilyResult {
+  const overrides = loadOverrides();
+
+  if (overrides.exact?.[modelId]) {
+    return overrides.exact[modelId];
+  }
+
+  if (overrides.patterns) {
+    for (const p of overrides.patterns) {
+      try {
+        const re = new RegExp(p.match, 'i');
+        if (re.test(modelId) || re.test(name ?? '')) {
+          return { family: p.family, variant: p.variant };
+        }
+      } catch {
+        // ignore bad regex
+      }
+    }
+  }
+
+  const idSlug = modelId.toLowerCase();
+  const idResult = deriveFamilyFromSlug(idSlug);
+
+  // 当 name 存在时，也尝试从 name 派生，选分更高的（解决 xunfei serviceId 不可读问题）
+  if (name) {
+    const nameSlug = name.toLowerCase().replace(/\s+/g, '-');
+    const nameResult = deriveFamilyFromSlug(nameSlug);
+    if (familyScore(nameResult.family) > familyScore(idResult.family)) {
+      return {
+        family: nameResult.family,
+        variant: idResult.variant ?? nameResult.variant,
+        quantization: idResult.quantization ?? nameResult.quantization,
+      };
+    }
+  }
+
+  return idResult;
 }
 
 export function groupByFamily<T extends { modelFamily: string }>(

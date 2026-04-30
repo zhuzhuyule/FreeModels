@@ -30,7 +30,12 @@ async function fetchXunfeiModels(): Promise<RawModelData[]> {
       return [];
     }
 
-    return json.data.rows.map((m) => {
+    const out: RawModelData[] = [];
+    for (const m of json.data.rows) {
+      const serviceId = (m.serviceId ?? '').trim();
+      // 跳过空 serviceId（未上线）和测试条目
+      if (!serviceId || /^test[_-]/i.test(serviceId)) continue;
+
       const price = m.price?.inferencePrice || {};
       const inPrice = Number(price.inTokensPrice ?? price.inTokensOrigPrice ?? 0);
       const outPrice = Number(price.outTokensPrice ?? price.outTokensOrigPrice ?? 0);
@@ -54,9 +59,9 @@ async function fetchXunfeiModels(): Promise<RawModelData[]> {
 
       const isFree = inPrice === 0 && outPrice === 0;
 
-      return {
+      out.push({
         vendor: 'xunfei',
-        modelId: `xunfei/${m.name}`,
+        modelId: `xunfei/${serviceId}`,
         name: m.name,
         description: m.desc?.replace(/<[^>]*>/g, '')?.substring(0, 200) || `Xunfei model: ${m.name}`,
         contextSize,
@@ -72,9 +77,13 @@ async function fetchXunfeiModels(): Promise<RawModelData[]> {
           category,
           function: m.function,
           contextLabel: contextNode?.name,
+          displayName: m.name,
+          pretrainedModel: m.pretrainedModel,
+          serviceId,
         },
-      };
-    });
+      });
+    }
+    return out;
   } catch (err) {
     console.error('[xunfei] Fetch error:', err instanceof Error ? err.message : err);
     return [];
@@ -94,6 +103,8 @@ interface XunfeiModel {
   userName: string;
   desc?: string;
   function?: number;
+  serviceId?: string;
+  pretrainedModel?: string;
   price?: {
     inferencePrice?: {
       inTokensPrice?: number;
