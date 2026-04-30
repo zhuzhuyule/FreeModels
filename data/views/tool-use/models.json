@@ -1,6 +1,6 @@
 {
   "view": "tool-use",
-  "updatedAt": "2026-04-29T14:00:02.993Z",
+  "updatedAt": "2026-04-30T01:00:41.610Z",
   "totalModels": 11,
   "filters": {
     "hasToolUse": "true"
@@ -16,8 +16,7 @@
       "priceOutput": 4,
       "priceCurrency": "CNY",
       "isFree": false,
-      "isExperienceable": true,
-      "freeKind": "trial-quota",
+      "freeMechanism": null,
       "trialScope": "all",
       "capabilities": [
         "text-generation",
@@ -47,8 +46,7 @@
       "isMultimodal": false,
       "hasToolUse": true,
       "contextLabel": "32K",
-      "billingMode": "pay",
-      "freeTier": "none",
+      "freeQuota": null,
       "modelFamily": "qwen2.5-72b",
       "modelVariant": "instruct",
       "aliases": [],
@@ -72,8 +70,7 @@
       "priceOutput": 0.35,
       "priceCurrency": "CNY",
       "isFree": false,
-      "isExperienceable": true,
-      "freeKind": "trial-quota",
+      "freeMechanism": null,
       "trialScope": "all",
       "capabilities": [
         "text-generation",
@@ -103,8 +100,7 @@
       "isMultimodal": false,
       "hasToolUse": true,
       "contextLabel": "32K",
-      "billingMode": "pay",
-      "freeTier": "none",
+      "freeQuota": null,
       "modelFamily": "qwen2.5-7b",
       "modelVariant": "instruct",
       "aliases": [],
@@ -128,8 +124,7 @@
       "priceOutput": 6,
       "priceCurrency": "CNY",
       "isFree": false,
-      "isExperienceable": true,
-      "freeKind": "trial-quota",
+      "freeMechanism": null,
       "trialScope": "all",
       "capabilities": [
         "text-generation",
@@ -159,8 +154,7 @@
       "isMultimodal": false,
       "hasToolUse": true,
       "contextLabel": "128K",
-      "billingMode": "pay",
-      "freeTier": "none",
+      "freeQuota": null,
       "modelFamily": "glm-4.6v",
       "aliases": [],
       "tier": "medium",
@@ -176,19 +170,19 @@
       "vendor": "openrouter",
       "modelId": "openrouter/poolside/laguna-xs.2",
       "name": "Poolside: Laguna XS.2 (free)",
-      "description": "Laguna XS.2 is the second-generation model in the XS size class from [Poolside](https://poolside.ai), their efficient coding agent series. It combines tool calling and reasoning capabilities with a compact footprint, offering a 128K context window and up to 8K output tokens. Quantized to fp8 for fast, cost-efficient agentic coding workflows. By using this model, you agree to Poolside’s [End User License Agreement](https://poolside.ai/legal/eula)",
+      "description": "Laguna XS.2 is the second-generation model in the XS size class from [Poolside](https://poolside.ai), their efficient coding agent series. It combines tool calling and reasoning capabilities with a compact footprint, offering a 128K context window and up to 8K output tokens. Quantized to fp8 for fast, cost-efficient agentic coding workflows.\n\n\nLaguna XS.2 is designed for software engineering and agentic coding use cases, and you are responsible for confirming that it is appropriate for your inte",
       "contextSize": 131072,
       "priceInput": 0,
       "priceOutput": 0,
       "priceCurrency": "USD",
       "isFree": true,
-      "freeKind": "rate-limited",
-      "trialScope": "specific",
-      "rateLimits": {
+      "freeMechanism": "rate-limited",
+      "freeQuota": {
         "rpm": 20,
         "rpd": 50,
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
+      "trialScope": "specific",
       "capabilities": [
         "chat",
         "text-generation",
@@ -228,8 +222,6 @@
       "isMultimodal": false,
       "hasToolUse": true,
       "contextLabel": "131K",
-      "billingMode": "free",
-      "freeTier": "trial",
       "modelFamily": "poolside-laguna-xs.2",
       "aliases": [],
       "tier": "large",
@@ -257,13 +249,13 @@
       "priceOutput": 0,
       "priceCurrency": "USD",
       "isFree": true,
-      "freeKind": "rate-limited",
-      "trialScope": "specific",
-      "rateLimits": {
+      "freeMechanism": "rate-limited",
+      "freeQuota": {
         "rpm": 20,
         "rpd": 50,
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
+      "trialScope": "specific",
       "capabilities": [
         "chat",
         "text-generation",
@@ -303,8 +295,6 @@
       "isMultimodal": false,
       "hasToolUse": true,
       "contextLabel": "131K",
-      "billingMode": "free",
-      "freeTier": "trial",
       "modelFamily": "poolside-laguna-m.1",
       "aliases": [],
       "tier": "large",
@@ -332,13 +322,13 @@
       "priceOutput": 0,
       "priceCurrency": "USD",
       "isFree": true,
-      "freeKind": "rate-limited",
-      "trialScope": "specific",
-      "rateLimits": {
+      "freeMechanism": "rate-limited",
+      "freeQuota": {
         "rpm": 20,
         "rpd": 50,
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
+      "trialScope": "specific",
       "capabilities": [
         "chat",
         "text-generation"
@@ -373,8 +363,6 @@
       "isMultimodal": false,
       "hasToolUse": true,
       "contextLabel": "262K",
-      "billingMode": "free",
-      "freeTier": "trial",
       "modelFamily": "qwen3-next-80b-a3b",
       "modelVariant": "instruct",
       "aliases": [
@@ -408,13 +396,13 @@
       "priceOutput": 0,
       "priceCurrency": "USD",
       "isFree": true,
-      "freeKind": "rate-limited",
-      "trialScope": "specific",
-      "rateLimits": {
+      "freeMechanism": "rate-limited",
+      "freeQuota": {
         "rpm": 20,
         "rpd": 50,
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
+      "trialScope": "specific",
       "capabilities": [
         "chat",
         "text-generation",
@@ -458,8 +446,6 @@
       "isMultimodal": false,
       "hasToolUse": true,
       "contextLabel": "131K",
-      "billingMode": "free",
-      "freeTier": "trial",
       "modelFamily": "gpt-oss-120b",
       "aliases": [
         "cerebras/gpt-oss-120b",
@@ -493,13 +479,13 @@
       "priceOutput": 0,
       "priceCurrency": "USD",
       "isFree": true,
-      "freeKind": "rate-limited",
-      "trialScope": "specific",
-      "rateLimits": {
+      "freeMechanism": "rate-limited",
+      "freeQuota": {
         "rpm": 20,
         "rpd": 50,
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
+      "trialScope": "specific",
       "capabilities": [
         "chat",
         "text-generation",
@@ -544,8 +530,6 @@
       "isMultimodal": false,
       "hasToolUse": true,
       "contextLabel": "131K",
-      "billingMode": "free",
-      "freeTier": "trial",
       "modelFamily": "gpt-oss-20b",
       "aliases": [
         "groq/openai/gpt-oss-20b",
@@ -577,13 +561,13 @@
       "priceOutput": 0,
       "priceCurrency": "USD",
       "isFree": true,
-      "freeKind": "rate-limited",
-      "trialScope": "specific",
-      "rateLimits": {
+      "freeMechanism": "rate-limited",
+      "freeQuota": {
         "rpm": 20,
         "rpd": 50,
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
+      "trialScope": "specific",
       "capabilities": [
         "chat",
         "text-generation",
@@ -619,8 +603,6 @@
       "isMultimodal": false,
       "hasToolUse": true,
       "contextLabel": "131K",
-      "billingMode": "free",
-      "freeTier": "trial",
       "modelFamily": "glm-4.5-air",
       "aliases": [
         "bigmodel/glm-4.5-air"
@@ -650,13 +632,13 @@
       "priceOutput": 0,
       "priceCurrency": "USD",
       "isFree": true,
-      "freeKind": "rate-limited",
-      "trialScope": "specific",
-      "rateLimits": {
+      "freeMechanism": "rate-limited",
+      "freeQuota": {
         "rpm": 20,
         "rpd": 50,
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
+      "trialScope": "specific",
       "capabilities": [
         "chat",
         "text-generation",
@@ -693,8 +675,6 @@
       "isMultimodal": false,
       "hasToolUse": true,
       "contextLabel": "262K",
-      "billingMode": "free",
-      "freeTier": "trial",
       "modelFamily": "qwen3-coder",
       "modelVariant": "coder",
       "aliases": [],
@@ -726,13 +706,13 @@
       "priceOutput": 0,
       "priceCurrency": "USD",
       "isFree": true,
-      "freeKind": "rate-limited",
-      "trialScope": "specific",
-      "rateLimits": {
+      "freeMechanism": "rate-limited",
+      "freeQuota": {
         "rpm": 20,
         "rpd": 50,
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
+      "trialScope": "specific",
       "capabilities": [
         "chat",
         "text-generation"
@@ -763,8 +743,6 @@
       "isMultimodal": false,
       "hasToolUse": true,
       "contextLabel": "131K",
-      "billingMode": "free",
-      "freeTier": "trial",
       "modelFamily": "llama-3.2-3b",
       "modelVariant": "instruct",
       "aliases": [

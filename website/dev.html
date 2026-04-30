@@ -83,16 +83,19 @@
     <option value="standard">Standard</option>
     <option value="premium">Premium</option>
   </select>
-  <select id="billingFilter">
+  <select id="freeFilter">
     <option value="">所有计费</option>
-    <option value="free">免费</option>
-    <option value="pay">付费</option>
+    <option value="true">免费</option>
+    <option value="false">付费</option>
   </select>
-  <select id="freeTierFilter">
-    <option value="">免费层级</option>
-    <option value="full">完全免费</option>
-    <option value="experienceable">允许体验</option>
-    <option value="none">不免费</option>
+  <select id="mechanismFilter">
+    <option value="">所有免费机制</option>
+    <option value="permanent">永久免费</option>
+    <option value="rate-limited">限速免费</option>
+    <option value="daily-tokens">每日配额</option>
+    <option value="monthly-tokens">每月配额</option>
+    <option value="trial-credits">试用 credits</option>
+    <option value="preview">预览版</option>
   </select>
   <select id="typeFilter">
     <option value="">所有类别</option>
@@ -118,8 +121,8 @@
         <th data-key="modelType">模型类别 <span class="sort">▲</span></th>
         <th data-key="tier">规模 <span class="sort">▲</span></th>
         <th data-key="speed">速度 <span class="sort">▲</span></th>
-        <th data-key="billing_mode">计费 <span class="sort">▲</span></th>
-        <th data-key="free_tier">免费层 <span class="sort">▲</span></th>
+        <th data-key="is_free">免费 <span class="sort">▲</span></th>
+        <th data-key="free_mechanism">免费机制 <span class="sort">▲</span></th>
         <th>能力标签</th>
       </tr>
     </thead>
@@ -153,8 +156,9 @@ async function loadData() {
   const viewNames = {
     'all': '全部',
     'free': '全部免费',
-    'free-full': '完全免费',
-    'experienceable': '允许体验',
+    'free-permanent': '永久免费',
+    'free-rate-limited': '限速免费',
+    'free-quota': '配额免费',
     'reasoning': '推理模型',
     'multimodal': '多模态',
     'tool-use': '工具调用',
@@ -165,9 +169,10 @@ async function loadData() {
   };
   const viewHints = {
     'all': '所有模型',
-    'free': 'is_free=true',
-    'free-full': '完全免费，无任何限制',
-    'experienceable': '允许体验，但有定价（Gitee 特有）',
+    'free': '在某种条件下不付费可用（is_free=true）',
+    'free-permanent': '无任何限制，永久免费',
+    'free-rate-limited': '有 RPM/RPD 限制但免费',
+    'free-quota': '每日 / 每月 token 配额或一次性 credits',
     'reasoning': '支持推理能力',
     'multimodal': '支持多模态',
     'tool-use': '支持工具调用',
@@ -248,8 +253,8 @@ function applyFilters() {
   const provider = document.getElementById('providerFilter').value;
   const tier = document.getElementById('tierFilter').value;
   const speed = document.getElementById('speedFilter').value;
-  const billing = document.getElementById('billingFilter').value;
-  const freeTier = document.getElementById('freeTierFilter').value;
+  const isFree = document.getElementById('freeFilter').value;
+  const mechanism = document.getElementById('mechanismFilter').value;
   const modelType = document.getElementById('typeFilter').value;
   const reasoning = document.getElementById('reasoningFilter').value;
   const toolUse = document.getElementById('toolUseFilter').value;
@@ -261,10 +266,8 @@ function applyFilters() {
     if (provider && m.provider !== provider) return false;
     if (tier && m.tier !== tier) return false;
     if (speed && m.speed !== speed) return false;
-    if (billing && m.billing_mode !== billing) return false;
-    if (freeTier === 'full') return !m.is_free ? false : true;
-    if (freeTier === 'experienceable') return !m.is_experienceable ? false : true;
-    if (freeTier === 'none') return (m.is_free || m.is_experienceable) ? false : true;
+    if (isFree && String(!!m.is_free) !== isFree) return false;
+    if (mechanism && m.free_mechanism !== mechanism) return false;
     if (modelType && !(m.capabilities || []).includes(modelType)) return false;
     if (reasoning && String(m.is_reasoning) !== reasoning) return false;
     if (toolUse && String(m.has_tool_use) !== toolUse) return false;
@@ -278,8 +281,8 @@ function applyFilters() {
                     document.getElementById('providerFilter').value ||
                     document.getElementById('tierFilter').value ||
                     document.getElementById('speedFilter').value ||
-                    document.getElementById('billingFilter').value ||
-                    document.getElementById('freeTierFilter').value ||
+                    document.getElementById('freeFilter').value ||
+                    document.getElementById('mechanismFilter').value ||
                     document.getElementById('reasoningFilter').value ||
                     document.getElementById('toolUseFilter').value;
 
@@ -322,27 +325,37 @@ function renderTable() {
     'document-processing': '文档处理'
   };
 
+  const mechanismLabel = {
+    'permanent': '永久',
+    'rate-limited': '限速',
+    'daily-tokens': '日配额',
+    'monthly-tokens': '月配额',
+    'trial-credits': '试用',
+    'preview': '预览',
+  };
+
   tbody.innerHTML = filteredModels.map(m => {
     const tierClass = `badge-${m.tier || 'medium'}`;
     const speedClass = `badge-${m.speed || 'standard'}`;
-    const billingClass = m.billing_mode === 'free' ? 'badge-free' : 'badge-pay';
-    const freeTierLabel = m.is_free ? '完全' : m.is_experienceable ? '体验' : '无';
-    const freeTierClass = m.is_free ? 'badge-free' : m.is_experienceable ? 'badge-trial' : 'badge-none';
+    const freeLabel = m.is_free ? '免费' : '付费';
+    const freeClass = m.is_free ? 'badge-free' : 'badge-pay';
+    const mechClass = m.free_mechanism ? `badge-${m.free_mechanism}` : 'badge-none';
+    const mechLabel = m.free_mechanism ? (mechanismLabel[m.free_mechanism] || m.free_mechanism) : '—';
     const caps = (m.tags || []).slice(0, 4).map(c => `<span class="tag">${esc(c)}</span>`).join('');
     const primaryType = m.capabilities?.[0] || 'unknown';
     const typeLabel = typeMap[primaryType] || primaryType;
-    const expBadge = m.is_experienceable ? '<span class="badge badge-trial" style="margin-right:4px">体验</span>' : '';
+    const quotaTip = m.free_quota?.notes ? ` title="${esc(m.free_quota.notes)}"` : '';
     return `<tr>
       <td style="color:var(--text2);font-weight:600">${m.idx}</td>
       <td><div style="font-weight:600;max-width:180px;overflow:hidden;text-overflow:ellipsis">${esc(m.name)}</div>
-          ${expBadge}<div style="font-size:11px;color:var(--text2);max-width:180px;overflow:hidden;text-overflow:ellipsis">${esc(m.description || '')}</div></td>
+          <div style="font-size:11px;color:var(--text2);max-width:180px;overflow:hidden;text-overflow:ellipsis">${esc(m.description || '')}</div></td>
       <td>${esc(m.provider)}</td>
       <td>${m.context_label || '-'}</td>
       <td><span style="font-size:12px;color:var(--accent)">${typeLabel}</span></td>
       <td><span class="badge ${tierClass}">${m.tier || '-'}</span></td>
       <td><span class="badge ${speedClass}">${m.speed || '-'}</span></td>
-      <td><span class="badge ${billingClass}">${m.billing_mode === 'free' ? '免费' : m.billing_mode === 'mixed' ? '混合' : '付费'}</span></td>
-      <td><span class="badge ${freeTierClass}">${freeTierLabel}</span></td>
+      <td><span class="badge ${freeClass}">${freeLabel}</span></td>
+      <td><span class="badge ${mechClass}"${quotaTip}>${mechLabel}</span></td>
       <td>${caps}</td>
     </tr>`;
   }).join('');
@@ -368,7 +381,7 @@ document.querySelectorAll('th[data-key]').forEach(th => {
 });
 
 document.getElementById('searchInput').addEventListener('input', applyFilters);
-['providerFilter', 'tierFilter', 'speedFilter', 'billingFilter', 'freeTierFilter', 'typeFilter', 'reasoningFilter', 'toolUseFilter'].forEach(id => {
+['providerFilter', 'tierFilter', 'speedFilter', 'freeFilter', 'mechanismFilter', 'typeFilter', 'reasoningFilter', 'toolUseFilter'].forEach(id => {
   document.getElementById(id).addEventListener('change', applyFilters);
 });
 

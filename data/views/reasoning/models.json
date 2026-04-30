@@ -1,6 +1,6 @@
 {
   "view": "reasoning",
-  "updatedAt": "2026-04-29T14:00:02.986Z",
+  "updatedAt": "2026-04-30T01:00:41.608Z",
   "totalModels": 56,
   "filters": {
     "tags": "reasoning"
@@ -16,7 +16,7 @@
       "priceOutput": 0,
       "priceCurrency": "CNY",
       "isFree": true,
-      "freeKind": "permanent",
+      "freeMechanism": "permanent",
       "trialScope": "specific",
       "capabilities": [
         "chat",
@@ -42,8 +42,7 @@
       "isMultimodal": false,
       "hasToolUse": false,
       "contextLabel": "8K",
-      "billingMode": "free",
-      "freeTier": "trial",
+      "freeQuota": null,
       "modelFamily": "glm-4.1v-thinking-flash",
       "modelVariant": "thinking",
       "aliases": [],
@@ -72,7 +71,7 @@
       "contextSize": 8000,
       "priceCurrency": "CNY",
       "isFree": false,
-      "freeKind": "unknown",
+      "freeMechanism": null,
       "trialScope": "none",
       "capabilities": [
         "chat",
@@ -95,8 +94,7 @@
       "isMultimodal": false,
       "hasToolUse": false,
       "contextLabel": "8K",
-      "billingMode": "unknown",
-      "freeTier": "none",
+      "freeQuota": null,
       "modelFamily": "glm-4",
       "aliases": [
         "bigmodel/glm-4"
@@ -124,7 +122,7 @@
       "contextSize": 128000,
       "priceCurrency": "CNY",
       "isFree": false,
-      "freeKind": "unknown",
+      "freeMechanism": null,
       "trialScope": "none",
       "capabilities": [
         "chat",
@@ -147,8 +145,7 @@
       "isMultimodal": false,
       "hasToolUse": false,
       "contextLabel": "128K",
-      "billingMode": "unknown",
-      "freeTier": "none",
+      "freeQuota": null,
       "modelFamily": "glm-z1-air",
       "aliases": [],
       "tier": "large",
@@ -174,7 +171,7 @@
       "contextSize": 32000,
       "priceCurrency": "CNY",
       "isFree": false,
-      "freeKind": "unknown",
+      "freeMechanism": null,
       "trialScope": "none",
       "capabilities": [
         "chat",
@@ -197,8 +194,7 @@
       "isMultimodal": false,
       "hasToolUse": false,
       "contextLabel": "32K",
-      "billingMode": "unknown",
-      "freeTier": "none",
+      "freeQuota": null,
       "modelFamily": "glm-z1-airx",
       "aliases": [],
       "tier": "large",
@@ -224,7 +220,7 @@
       "contextSize": 128000,
       "priceCurrency": "CNY",
       "isFree": false,
-      "freeKind": "unknown",
+      "freeMechanism": null,
       "trialScope": "none",
       "capabilities": [
         "chat",
@@ -247,8 +243,7 @@
       "isMultimodal": false,
       "hasToolUse": false,
       "contextLabel": "128K",
-      "billingMode": "unknown",
-      "freeTier": "none",
+      "freeQuota": null,
       "modelFamily": "glm-z1-flashx",
       "aliases": [],
       "tier": "large",
@@ -276,7 +271,7 @@
       "priceOutput": 0,
       "priceCurrency": "CNY",
       "isFree": true,
-      "freeKind": "permanent",
+      "freeMechanism": "permanent",
       "trialScope": "specific",
       "capabilities": [
         "chat",
@@ -300,8 +295,7 @@
       "isMultimodal": false,
       "hasToolUse": false,
       "contextLabel": "128K",
-      "billingMode": "free",
-      "freeTier": "trial",
+      "freeQuota": null,
       "modelFamily": "glm-z1-flash",
       "aliases": [],
       "tier": "large",
@@ -327,7 +321,7 @@
       "contextSize": 64000,
       "priceCurrency": "CNY",
       "isFree": false,
-      "freeKind": "unknown",
+      "freeMechanism": null,
       "trialScope": "none",
       "capabilities": [
         "chat",
@@ -352,8 +346,7 @@
       "isMultimodal": false,
       "hasToolUse": false,
       "contextLabel": "64K",
-      "billingMode": "unknown",
-      "freeTier": "none",
+      "freeQuota": null,
       "modelFamily": "glm-4.1v-thinking-flashx",
       "modelVariant": "thinking",
       "aliases": [],
@@ -381,8 +374,8 @@
       "description": "Cerebras Preview model: Qwen 3 235B Instruct - 235B parameters - 1400 tokens/sec",
       "contextSize": 65536,
       "priceCurrency": "USD",
-      "isFree": false,
-      "freeKind": "preview",
+      "isFree": true,
+      "freeMechanism": "preview",
       "trialScope": "specific",
       "capabilities": [
         "chat",
@@ -406,13 +399,12 @@
       "isMultimodal": false,
       "hasToolUse": false,
       "contextLabel": "66K",
-      "billingMode": "unknown",
-      "freeTier": "none",
+      "freeQuota": null,
       "modelFamily": "qwen-3-235b-a22b",
       "modelVariant": "instruct",
       "aliases": [],
       "tier": "large",
-      "speed": "standard",
+      "speed": "fast",
       "useCase": [
         "content-creation",
         "writing-assistance",
@@ -425,7 +417,7 @@
       ],
       "performanceLevel": "mid",
       "parameterCount": 235000000000,
-      "estimatedLatency": "3-10s"
+      "estimatedLatency": "< 1s"
     },
     {
       "vendor": "gitee",
@@ -437,8 +429,7 @@
       "priceOutput": 1.26,
       "priceCurrency": "CNY",
       "isFree": false,
-      "isExperienceable": true,
-      "freeKind": "trial-quota",
+      "freeMechanism": null,
       "trialScope": "all",
       "capabilities": [
         "text-generation",
@@ -466,8 +457,7 @@
       "isMultimodal": false,
       "hasToolUse": false,
       "contextLabel": "32K",
-      "billingMode": "pay",
-      "freeTier": "none",
+      "freeQuota": null,
       "modelFamily": "deepseek-r1-distill-qwen-32b",
       "modelVariant": "r1",
       "aliases": [
@@ -497,8 +487,7 @@
       "priceOutput": 0,
       "priceCurrency": "CNY",
       "isFree": true,
-      "isExperienceable": false,
-      "freeKind": "permanent",
+      "freeMechanism": "permanent",
       "trialScope": "specific",
       "capabilities": [
         "text-generation",
@@ -526,8 +515,7 @@
       "isMultimodal": false,
       "hasToolUse": false,
       "contextLabel": "32K",
-      "billingMode": "free",
-      "freeTier": "full",
+      "freeQuota": null,
       "modelFamily": "deepseek-r1-distill-qwen-1.5b",
       "modelVariant": "r1",
       "aliases": [],
@@ -555,8 +543,7 @@
       "priceOutput": 0,
       "priceCurrency": "CNY",
       "isFree": true,
-      "isExperienceable": false,
-      "freeKind": "permanent",
+      "freeMechanism": "permanent",
       "trialScope": "specific",
       "capabilities": [
         "text-generation",
@@ -584,8 +571,7 @@
       "isMultimodal": false,
       "hasToolUse": false,
       "contextLabel": "32K",
-      "billingMode": "free",
-      "freeTier": "full",
+      "freeQuota": null,
       "modelFamily": "deepseek-r1-distill-qwen-14b",
       "modelVariant": "r1",
       "aliases": [],
@@ -613,8 +599,7 @@
       "priceOutput": 0,
       "priceCurrency": "CNY",
       "isFree": true,
-      "isExperienceable": false,
-      "freeKind": "permanent",
+      "freeMechanism": "permanent",
       "trialScope": "specific",
       "capabilities": [
         "text-generation",
@@ -642,8 +627,7 @@
       "isMultimodal": false,
       "hasToolUse": false,
       "contextLabel": "32K",
-      "billingMode": "free",
-      "freeTier": "full",
+      "freeQuota": null,
       "modelFamily": "deepseek-r1-distill-qwen-7b",
       "modelVariant": "r1",
       "aliases": [],
@@ -671,8 +655,7 @@
       "priceOutput": 16,
       "priceCurrency": "CNY",
       "isFree": false,
-      "isExperienceable": true,
-      "freeKind": "trial-quota",
+      "freeMechanism": null,
       "trialScope": "all",
       "capabilities": [
         "text-generation",
@@ -700,8 +683,7 @@
       "isMultimodal": false,
       "hasToolUse": false,
       "contextLabel": "64K",
-      "billingMode": "pay",
-      "freeTier": "none",
+      "freeQuota": null,
       "modelFamily": "deepseek-r1",
       "modelVariant": "r1",
       "aliases": [
@@ -730,8 +712,7 @@
       "priceOutput": 8,
       "priceCurrency": "CNY",
       "isFree": false,
-      "isExperienceable": true,
-      "freeKind": "trial-quota",
+      "freeMechanism": null,
       "trialScope": "all",
       "capabilities": [
         "text-generation",
@@ -759,8 +740,7 @@
       "isMultimodal": false,
       "hasToolUse": false,
       "contextLabel": "32K",
-      "billingMode": "pay",
-      "freeTier": "none",
+      "freeQuota": null,
       "modelFamily": "fin-r1",
       "modelVariant": "r1",
       "aliases": [],
@@ -787,8 +767,7 @@
       "priceOutput": 8,
       "priceCurrency": "CNY",
       "isFree": false,
-      "isExperienceable": true,
-      "freeKind": "trial-quota",
+      "freeMechanism": null,
       "trialScope": "all",
       "capabilities": [
         "text-generation",
@@ -816,8 +795,7 @@
       "isMultimodal": false,
       "hasToolUse": false,
       "contextLabel": "32K",
-      "billingMode": "pay",
-      "freeTier": "none",
+      "freeQuota": null,
       "modelFamily": "dianjin-r1-32b",
       "modelVariant": "r1",
       "aliases": [],
@@ -844,8 +822,7 @@
       "priceOutput": 4.8,
       "priceCurrency": "CNY",
       "isFree": false,
-      "isExperienceable": true,
-      "freeKind": "trial-quota",
+      "freeMechanism": null,
       "trialScope": "all",
       "capabilities": [
         "text-generation",
@@ -873,8 +850,7 @@
       "isMultimodal": false,
       "hasToolUse": false,
       "contextLabel": "128K",
-      "billingMode": "pay",
-      "freeTier": "none",
+      "freeQuota": null,
       "modelFamily": "qwen3.5-27b-claude-4.6-opus-reasoning-distilled",
       "modelVariant": "reasoning",
       "aliases": [],
@@ -902,7 +878,7 @@
       "priceOutput": 12,
       "priceCurrency": "USD",
       "isFree": false,
-      "freeKind": "unknown",
+      "freeMechanism": null,
       "trialScope": "none",
       "capabilities": [
         "chat",
@@ -926,8 +902,7 @@
       "isMultimodal": false,
       "hasToolUse": false,
       "contextLabel": "2M",
-      "billingMode": "pay",
-      "freeTier": "none",
+      "freeQuota": null,
       "modelFamily": "gemini-3.1-pro-preview",
       "aliases": [],
       "tier": "large",
@@ -955,7 +930,7 @@
       "priceOutput": 10,
       "priceCurrency": "USD",
       "isFree": true,
-      "freeKind": "rate-limited",
+      "freeMechanism": "rate-limited",
       "trialScope": "flagship",
       "capabilities": [
         "chat",
@@ -978,8 +953,7 @@
       "isMultimodal": false,
       "hasToolUse": false,
       "contextLabel": "1M",
-      "billingMode": "pay",
-      "freeTier": "trial",
+      "freeQuota": null,
       "modelFamily": "gemini-2.5-pro",
       "aliases": [],
       "tier": "large",
@@ -1007,7 +981,7 @@
       "priceOutput": 2.5,
       "priceCurrency": "USD",
       "isFree": true,
-      "freeKind": "rate-limited",
+      "freeMechanism": "rate-limited",
       "trialScope": "fast",
       "capabilities": [
         "chat",
@@ -1029,8 +1003,7 @@
       "isMultimodal": false,
       "hasToolUse": false,
       "contextLabel": "1M",
-      "billingMode": "pay",
-      "freeTier": "trial",
+      "freeQuota": null,
       "modelFamily": "gemini-2.5-flash",
       "aliases": [],
       "tier": "large",
@@ -1058,7 +1031,7 @@
       "priceOutput": 0.59,
       "priceCurrency": "USD",
       "isFree": false,
-      "freeKind": "unknown",
+      "freeMechanism": null,
       "trialScope": "none",
       "capabilities": [
         "chat",
@@ -1081,8 +1054,7 @@
       "isMultimodal": false,
       "hasToolUse": false,
       "contextLabel": "131K",
-      "billingMode": "pay",
-      "freeTier": "none",
+      "freeQuota": null,
       "modelFamily": "qwen3-32b",
       "aliases": [
         "Qwen3-32B",
@@ -1112,11 +1084,11 @@
       "contextSize": 256000,
       "priceCurrency": "CNY",
       "isFree": true,
-      "freeKind": "trial-quota",
-      "trialScope": "specific",
-      "rateLimits": {
+      "freeMechanism": "daily-tokens",
+      "freeQuota": {
         "notes": "500,000 tokens/天"
       },
+      "trialScope": "specific",
       "capabilities": [
         "chat",
         "text-generation",
@@ -1142,8 +1114,6 @@
       "isMultimodal": false,
       "hasToolUse": false,
       "contextLabel": "256K",
-      "billingMode": "free",
-      "freeTier": "trial",
       "modelFamily": "longcat-flash-thinking",
       "modelVariant": "thinking",
       "aliases": [
@@ -1172,11 +1142,11 @@
       "contextSize": 256000,
       "priceCurrency": "CNY",
       "isFree": true,
-      "freeKind": "trial-quota",
-      "trialScope": "specific",
-      "rateLimits": {
+      "freeMechanism": "daily-tokens",
+      "freeQuota": {
         "notes": "500,000 tokens/天"
       },
+      "trialScope": "specific",
       "capabilities": [
         "chat",
         "text-generation",
@@ -1202,8 +1172,6 @@
       "isMultimodal": false,
       "hasToolUse": false,
       "contextLabel": "256K",
-      "billingMode": "free",
-      "freeTier": "trial",
       "modelFamily": "longcat-flash-thinking",
       "modelVariant": "thinking",
       "aliases": [
@@ -1231,7 +1199,8 @@
       "description": "Model: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
       "priceCurrency": "USD",
       "isFree": false,
-      "freeKind": "unknown",
+      "freeMechanism": null,
+      "freeQuota": null,
       "trialScope": "none",
       "capabilities": [
         "chat",
@@ -1254,8 +1223,6 @@
       "isMultimodal": false,
       "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "unknown",
-      "freeTier": "none",
       "modelFamily": "nemotron-3-nano-omni-30b-a3b-reasoning",
       "modelVariant": "reasoning",
       "aliases": [
@@ -1284,11 +1251,11 @@
       "description": "Model: nvidia/nemotron-content-safety-reasoning-4b",
       "priceCurrency": "USD",
       "isFree": true,
-      "freeKind": "trial-quota",
-      "trialScope": "specific",
-      "rateLimits": {
+      "freeMechanism": "trial-credits",
+      "freeQuota": {
         "notes": "NVIDIA NIM free credits, exhaustible"
       },
+      "trialScope": "specific",
       "capabilities": [
         "moderation"
       ],
@@ -1309,8 +1276,6 @@
       "isMultimodal": false,
       "hasToolUse": false,
       "contextLabel": "unknown",
-      "billingMode": "free",
-      "freeTier": "trial",
       "modelFamily": "nemotron-content-safety-reasoning-4b",
       "modelVariant": "reasoning",
       "aliases": [],
@@ -1340,13 +1305,13 @@
       "priceOutput": 0,
       "priceCurrency": "USD",
       "isFree": true,
-      "freeKind": "rate-limited",
-      "trialScope": "specific",
-      "rateLimits": {
+      "freeMechanism": "rate-limited",
+      "freeQuota": {
         "rpm": 20,
         "rpd": 50,
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
+      "trialScope": "specific",
       "capabilities": [
         "chat",
         "text-generation",
@@ -1394,8 +1359,6 @@
       "isMultimodal": true,
       "hasToolUse": false,
       "contextLabel": "256K",
-      "billingMode": "free",
-      "freeTier": "trial",
       "modelFamily": "nemotron-3-nano-omni-30b-a3b-reasoning",
       "modelVariant": "reasoning",
       "aliases": [
@@ -1425,19 +1388,19 @@
       "vendor": "openrouter",
       "modelId": "openrouter/poolside/laguna-xs.2",
       "name": "Poolside: Laguna XS.2 (free)",
-      "description": "Laguna XS.2 is the second-generation model in the XS size class from [Poolside](https://poolside.ai), their efficient coding agent series. It combines tool calling and reasoning capabilities with a compact footprint, offering a 128K context window and up to 8K output tokens. Quantized to fp8 for fast, cost-efficient agentic coding workflows. By using this model, you agree to Poolside’s [End User License Agreement](https://poolside.ai/legal/eula)",
+      "description": "Laguna XS.2 is the second-generation model in the XS size class from [Poolside](https://poolside.ai), their efficient coding agent series. It combines tool calling and reasoning capabilities with a compact footprint, offering a 128K context window and up to 8K output tokens. Quantized to fp8 for fast, cost-efficient agentic coding workflows.\n\n\nLaguna XS.2 is designed for software engineering and agentic coding use cases, and you are responsible for confirming that it is appropriate for your inte",
       "contextSize": 131072,
       "priceInput": 0,
       "priceOutput": 0,
       "priceCurrency": "USD",
       "isFree": true,
-      "freeKind": "rate-limited",
-      "trialScope": "specific",
-      "rateLimits": {
+      "freeMechanism": "rate-limited",
+      "freeQuota": {
         "rpm": 20,
         "rpd": 50,
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
+      "trialScope": "specific",
       "capabilities": [
         "chat",
         "text-generation",
@@ -1477,8 +1440,6 @@
       "isMultimodal": false,
       "hasToolUse": true,
       "contextLabel": "131K",
-      "billingMode": "free",
-      "freeTier": "trial",
       "modelFamily": "poolside-laguna-xs.2",
       "aliases": [],
       "tier": "large",
@@ -1506,13 +1467,13 @@
       "priceOutput": 0,
       "priceCurrency": "USD",
       "isFree": true,
-      "freeKind": "rate-limited",
-      "trialScope": "specific",
-      "rateLimits": {
+      "freeMechanism": "rate-limited",
+      "freeQuota": {
         "rpm": 20,
         "rpd": 50,
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
+      "trialScope": "specific",
       "capabilities": [
         "chat",
         "text-generation",
@@ -1552,8 +1513,6 @@
       "isMultimodal": false,
       "hasToolUse": true,
       "contextLabel": "131K",
-      "billingMode": "free",
-      "freeTier": "trial",
       "modelFamily": "poolside-laguna-m.1",
       "aliases": [],
       "tier": "large",
@@ -1581,13 +1540,13 @@
       "priceOutput": 0,
       "priceCurrency": "USD",
       "isFree": true,
-      "freeKind": "rate-limited",
-      "trialScope": "specific",
-      "rateLimits": {
+      "freeMechanism": "rate-limited",
+      "freeQuota": {
         "rpm": 20,
         "rpd": 50,
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
+      "trialScope": "specific",
       "capabilities": [
         "chat",
         "text-generation"
@@ -1621,8 +1580,6 @@
       "isMultimodal": false,
       "hasToolUse": false,
       "contextLabel": "262K",
-      "billingMode": "free",
-      "freeTier": "trial",
       "modelFamily": "inclusionai-ling-2.6-1t",
       "aliases": [],
       "tier": "large",
@@ -1650,13 +1607,13 @@
       "priceOutput": 0,
       "priceCurrency": "USD",
       "isFree": true,
-      "freeKind": "rate-limited",
-      "trialScope": "specific",
-      "rateLimits": {
+      "freeMechanism": "rate-limited",
+      "freeQuota": {
         "rpm": 20,
         "rpd": 50,
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
+      "trialScope": "specific",
       "capabilities": [
         "chat",
         "text-generation",
@@ -1701,8 +1658,6 @@
       "isMultimodal": false,
       "hasToolUse": false,
       "contextLabel": "262K",
-      "billingMode": "free",
-      "freeTier": "trial",
       "modelFamily": "tencent-hy3-preview",
       "aliases": [],
       "tier": "large",
@@ -1730,13 +1685,13 @@
       "priceOutput": 0,
       "priceCurrency": "USD",
       "isFree": true,
-      "freeKind": "rate-limited",
-      "trialScope": "specific",
-      "rateLimits": {
+      "freeMechanism": "rate-limited",
+      "freeQuota": {
         "rpm": 20,
         "rpd": 50,
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
+      "trialScope": "specific",
       "capabilities": [
         "chat",
         "text-generation",
@@ -1775,8 +1730,6 @@
       "isMultimodal": true,
       "hasToolUse": false,
       "contextLabel": "66K",
-      "billingMode": "free",
-      "freeTier": "trial",
       "modelFamily": "baidu-qianfan-ocr-fast",
       "aliases": [],
       "tier": "large",
@@ -1806,13 +1759,13 @@
       "priceOutput": 0,
       "priceCurrency": "USD",
       "isFree": true,
-      "freeKind": "rate-limited",
-      "trialScope": "specific",
-      "rateLimits": {
+      "freeMechanism": "rate-limited",
+      "freeQuota": {
         "rpm": 20,
         "rpd": 50,
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
+      "trialScope": "specific",
       "capabilities": [
         "chat",
         "text-generation",
@@ -1857,8 +1810,6 @@
       "isMultimodal": true,
       "hasToolUse": false,
       "contextLabel": "262K",
-      "billingMode": "free",
-      "freeTier": "trial",
       "modelFamily": "gemma-4-26b-a4b",
       "modelVariant": "it",
       "aliases": [
@@ -1893,13 +1844,13 @@
       "priceOutput": 0,
       "priceCurrency": "USD",
       "isFree": true,
-      "freeKind": "rate-limited",
-      "trialScope": "specific",
-      "rateLimits": {
+      "freeMechanism": "rate-limited",
+      "freeQuota": {
         "rpm": 20,
         "rpd": 50,
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
+      "trialScope": "specific",
       "capabilities": [
         "chat",
         "text-generation",
@@ -1944,8 +1895,6 @@
       "isMultimodal": true,
       "hasToolUse": false,
       "contextLabel": "262K",
-      "billingMode": "free",
-      "freeTier": "trial",
       "modelFamily": "gemma-4-31b",
       "modelVariant": "it",
       "aliases": [
@@ -1980,13 +1929,13 @@
       "priceOutput": 0,
       "priceCurrency": "USD",
       "isFree": true,
-      "freeKind": "rate-limited",
-      "trialScope": "specific",
-      "rateLimits": {
+      "freeMechanism": "rate-limited",
+      "freeQuota": {
         "rpm": 20,
         "rpd": 50,
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
+      "trialScope": "specific",
       "capabilities": [
         "chat",
         "text-generation",
@@ -2024,8 +1973,6 @@
       "isMultimodal": false,
       "hasToolUse": false,
       "contextLabel": "262K",
-      "billingMode": "free",
-      "freeTier": "trial",
       "modelFamily": "nemotron-3-super-120b-a12b",
       "aliases": [
         "nvidia/nemotron-3-super-120b-a12b"
@@ -2055,13 +2002,13 @@
       "priceOutput": 0,
       "priceCurrency": "USD",
       "isFree": true,
-      "freeKind": "rate-limited",
-      "trialScope": "specific",
-      "rateLimits": {
+      "freeMechanism": "rate-limited",
+      "freeQuota": {
         "rpm": 20,
         "rpd": 50,
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
+      "trialScope": "specific",
       "capabilities": [
         "chat",
         "text-generation",
@@ -2098,8 +2045,6 @@
       "isMultimodal": false,
       "hasToolUse": false,
       "contextLabel": "197K",
-      "billingMode": "free",
-      "freeTier": "trial",
       "modelFamily": "minimax-minimax-m2.5",
       "aliases": [],
       "tier": "large",
@@ -2127,13 +2072,13 @@
       "priceOutput": 0,
       "priceCurrency": "USD",
       "isFree": true,
-      "freeKind": "rate-limited",
-      "trialScope": "specific",
-      "rateLimits": {
+      "freeMechanism": "rate-limited",
+      "freeQuota": {
         "rpm": 20,
         "rpd": 50,
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
+      "trialScope": "specific",
       "capabilities": [
         "chat",
         "text-generation",
@@ -2171,8 +2116,6 @@
       "isMultimodal": true,
       "hasToolUse": false,
       "contextLabel": "8K",
-      "billingMode": "free",
-      "freeTier": "trial",
       "modelFamily": "sourceful-riverflow-v2-pro",
       "aliases": [],
       "tier": "large",
@@ -2202,13 +2145,13 @@
       "priceOutput": 0,
       "priceCurrency": "USD",
       "isFree": true,
-      "freeKind": "rate-limited",
-      "trialScope": "specific",
-      "rateLimits": {
+      "freeMechanism": "rate-limited",
+      "freeQuota": {
         "rpm": 20,
         "rpd": 50,
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
+      "trialScope": "specific",
       "capabilities": [
         "chat",
         "text-generation",
@@ -2246,8 +2189,6 @@
       "isMultimodal": true,
       "hasToolUse": false,
       "contextLabel": "8K",
-      "billingMode": "free",
-      "freeTier": "trial",
       "modelFamily": "sourceful-riverflow-v2-fast",
       "aliases": [],
       "tier": "large",
@@ -2277,13 +2218,13 @@
       "priceOutput": 0,
       "priceCurrency": "USD",
       "isFree": true,
-      "freeKind": "rate-limited",
-      "trialScope": "specific",
-      "rateLimits": {
+      "freeMechanism": "rate-limited",
+      "freeQuota": {
         "rpm": 20,
         "rpd": 50,
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
+      "trialScope": "specific",
       "capabilities": [
         "chat",
         "text-generation",
@@ -2320,8 +2261,6 @@
       "isMultimodal": false,
       "hasToolUse": false,
       "contextLabel": "33K",
-      "billingMode": "free",
-      "freeTier": "trial",
       "modelFamily": "liquid-lfm-2.5-1.2b-thinking",
       "modelVariant": "thinking",
       "aliases": [],
@@ -2351,13 +2290,13 @@
       "priceOutput": 0,
       "priceCurrency": "USD",
       "isFree": true,
-      "freeKind": "rate-limited",
-      "trialScope": "specific",
-      "rateLimits": {
+      "freeMechanism": "rate-limited",
+      "freeQuota": {
         "rpm": 20,
         "rpd": 50,
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
+      "trialScope": "specific",
       "capabilities": [
         "chat",
         "text-generation",
@@ -2400,8 +2339,6 @@
       "isMultimodal": true,
       "hasToolUse": false,
       "contextLabel": "4K",
-      "billingMode": "free",
-      "freeTier": "trial",
       "modelFamily": "bytedance-seed-seedream-4.5",
       "aliases": [],
       "tier": "large",
@@ -2431,13 +2368,13 @@
       "priceOutput": 0,
       "priceCurrency": "USD",
       "isFree": true,
-      "freeKind": "rate-limited",
-      "trialScope": "specific",
-      "rateLimits": {
+      "freeMechanism": "rate-limited",
+      "freeQuota": {
         "rpm": 20,
         "rpd": 50,
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
+      "trialScope": "specific",
       "capabilities": [
         "chat",
         "text-generation",
@@ -2473,8 +2410,6 @@
       "isMultimodal": false,
       "hasToolUse": false,
       "contextLabel": "256K",
-      "billingMode": "free",
-      "freeTier": "trial",
       "modelFamily": "nemotron-3-nano-30b-a3b",
       "aliases": [
         "nvidia/nemotron-3-nano-30b-a3b"
@@ -2505,13 +2440,13 @@
       "priceOutput": 0,
       "priceCurrency": "USD",
       "isFree": true,
-      "freeKind": "rate-limited",
-      "trialScope": "specific",
-      "rateLimits": {
+      "freeMechanism": "rate-limited",
+      "freeQuota": {
         "rpm": 20,
         "rpd": 50,
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
+      "trialScope": "specific",
       "capabilities": [
         "chat",
         "text-generation",
@@ -2554,8 +2489,6 @@
       "isMultimodal": true,
       "hasToolUse": false,
       "contextLabel": "128K",
-      "billingMode": "free",
-      "freeTier": "trial",
       "modelFamily": "nemotron-nano-12b-v2-vl",
       "modelVariant": "vl",
       "aliases": [
@@ -2590,13 +2523,13 @@
       "priceOutput": 0,
       "priceCurrency": "USD",
       "isFree": true,
-      "freeKind": "rate-limited",
-      "trialScope": "specific",
-      "rateLimits": {
+      "freeMechanism": "rate-limited",
+      "freeQuota": {
         "rpm": 20,
         "rpd": 50,
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
+      "trialScope": "specific",
       "capabilities": [
         "chat",
         "text-generation"
@@ -2631,8 +2564,6 @@
       "isMultimodal": false,
       "hasToolUse": true,
       "contextLabel": "262K",
-      "billingMode": "free",
-      "freeTier": "trial",
       "modelFamily": "qwen3-next-80b-a3b",
       "modelVariant": "instruct",
       "aliases": [
@@ -2666,13 +2597,13 @@
       "priceOutput": 0,
       "priceCurrency": "USD",
       "isFree": true,
-      "freeKind": "rate-limited",
-      "trialScope": "specific",
-      "rateLimits": {
+      "freeMechanism": "rate-limited",
+      "freeQuota": {
         "rpm": 20,
         "rpd": 50,
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
+      "trialScope": "specific",
       "capabilities": [
         "chat",
         "text-generation",
@@ -2708,8 +2639,6 @@
       "isMultimodal": false,
       "hasToolUse": false,
       "contextLabel": "128K",
-      "billingMode": "free",
-      "freeTier": "trial",
       "modelFamily": "nemotron-nano-9b-v2",
       "aliases": [],
       "tier": "medium",
@@ -2738,13 +2667,13 @@
       "priceOutput": 0,
       "priceCurrency": "USD",
       "isFree": true,
-      "freeKind": "rate-limited",
-      "trialScope": "specific",
-      "rateLimits": {
+      "freeMechanism": "rate-limited",
+      "freeQuota": {
         "rpm": 20,
         "rpd": 50,
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
+      "trialScope": "specific",
       "capabilities": [
         "chat",
         "text-generation",
@@ -2788,8 +2717,6 @@
       "isMultimodal": false,
       "hasToolUse": true,
       "contextLabel": "131K",
-      "billingMode": "free",
-      "freeTier": "trial",
       "modelFamily": "gpt-oss-120b",
       "aliases": [
         "cerebras/gpt-oss-120b",
@@ -2823,13 +2750,13 @@
       "priceOutput": 0,
       "priceCurrency": "USD",
       "isFree": true,
-      "freeKind": "rate-limited",
-      "trialScope": "specific",
-      "rateLimits": {
+      "freeMechanism": "rate-limited",
+      "freeQuota": {
         "rpm": 20,
         "rpd": 50,
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
+      "trialScope": "specific",
       "capabilities": [
         "chat",
         "text-generation",
@@ -2874,8 +2801,6 @@
       "isMultimodal": false,
       "hasToolUse": true,
       "contextLabel": "131K",
-      "billingMode": "free",
-      "freeTier": "trial",
       "modelFamily": "gpt-oss-20b",
       "aliases": [
         "groq/openai/gpt-oss-20b",
@@ -2907,13 +2832,13 @@
       "priceOutput": 0,
       "priceCurrency": "USD",
       "isFree": true,
-      "freeKind": "rate-limited",
-      "trialScope": "specific",
-      "rateLimits": {
+      "freeMechanism": "rate-limited",
+      "freeQuota": {
         "rpm": 20,
         "rpd": 50,
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
+      "trialScope": "specific",
       "capabilities": [
         "chat",
         "text-generation",
@@ -2949,8 +2874,6 @@
       "isMultimodal": false,
       "hasToolUse": true,
       "contextLabel": "131K",
-      "billingMode": "free",
-      "freeTier": "trial",
       "modelFamily": "glm-4.5-air",
       "aliases": [
         "bigmodel/glm-4.5-air"
@@ -2980,13 +2903,13 @@
       "priceOutput": 0,
       "priceCurrency": "USD",
       "isFree": true,
-      "freeKind": "rate-limited",
-      "trialScope": "specific",
-      "rateLimits": {
+      "freeMechanism": "rate-limited",
+      "freeQuota": {
         "rpm": 20,
         "rpd": 50,
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
+      "trialScope": "specific",
       "capabilities": [
         "chat",
         "text-generation",
@@ -3023,8 +2946,6 @@
       "isMultimodal": false,
       "hasToolUse": true,
       "contextLabel": "262K",
-      "billingMode": "free",
-      "freeTier": "trial",
       "modelFamily": "qwen3-coder",
       "modelVariant": "coder",
       "aliases": [],
@@ -3056,13 +2977,13 @@
       "priceOutput": 0,
       "priceCurrency": "USD",
       "isFree": true,
-      "freeKind": "rate-limited",
-      "trialScope": "specific",
-      "rateLimits": {
+      "freeMechanism": "rate-limited",
+      "freeQuota": {
         "rpm": 20,
         "rpd": 50,
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
+      "trialScope": "specific",
       "capabilities": [
         "chat",
         "text-generation"
@@ -3099,8 +3020,6 @@
       "isMultimodal": true,
       "hasToolUse": false,
       "contextLabel": "8K",
-      "billingMode": "free",
-      "freeTier": "trial",
       "modelFamily": "gemma-3n-e2b",
       "modelVariant": "it",
       "aliases": [
@@ -3134,13 +3053,13 @@
       "priceOutput": 0,
       "priceCurrency": "USD",
       "isFree": true,
-      "freeKind": "rate-limited",
-      "trialScope": "specific",
-      "rateLimits": {
+      "freeMechanism": "rate-limited",
+      "freeQuota": {
         "rpm": 20,
         "rpd": 50,
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
+      "trialScope": "specific",
       "capabilities": [
         "chat",
         "text-generation",
@@ -3175,8 +3094,6 @@
       "isMultimodal": true,
       "hasToolUse": false,
       "contextLabel": "33K",
-      "billingMode": "free",
-      "freeTier": "trial",
       "modelFamily": "gemma-3-4b",
       "modelVariant": "it",
       "aliases": [
@@ -3210,13 +3127,13 @@
       "priceOutput": 0,
       "priceCurrency": "USD",
       "isFree": true,
-      "freeKind": "rate-limited",
-      "trialScope": "specific",
-      "rateLimits": {
+      "freeMechanism": "rate-limited",
+      "freeQuota": {
         "rpm": 20,
         "rpd": 50,
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
+      "trialScope": "specific",
       "capabilities": [
         "chat",
         "text-generation",
@@ -3251,8 +3168,6 @@
       "isMultimodal": true,
       "hasToolUse": false,
       "contextLabel": "33K",
-      "billingMode": "free",
-      "freeTier": "trial",
       "modelFamily": "gemma-3-12b",
       "modelVariant": "it",
       "aliases": [
@@ -3286,13 +3201,13 @@
       "priceOutput": 0,
       "priceCurrency": "USD",
       "isFree": true,
-      "freeKind": "rate-limited",
-      "trialScope": "specific",
-      "rateLimits": {
+      "freeMechanism": "rate-limited",
+      "freeQuota": {
         "rpm": 20,
         "rpd": 50,
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
+      "trialScope": "specific",
       "capabilities": [
         "chat",
         "text-generation",
@@ -3331,8 +3246,6 @@
       "isMultimodal": true,
       "hasToolUse": false,
       "contextLabel": "131K",
-      "billingMode": "free",
-      "freeTier": "trial",
       "modelFamily": "gemma-3-27b",
       "modelVariant": "it",
       "aliases": [
@@ -3366,13 +3279,13 @@
       "priceOutput": 0,
       "priceCurrency": "USD",
       "isFree": true,
-      "freeKind": "rate-limited",
-      "trialScope": "specific",
-      "rateLimits": {
+      "freeMechanism": "rate-limited",
+      "freeQuota": {
         "rpm": 20,
         "rpd": 50,
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
+      "trialScope": "specific",
       "capabilities": [
         "chat",
         "text-generation"
@@ -3403,8 +3316,6 @@
       "isMultimodal": false,
       "hasToolUse": true,
       "contextLabel": "131K",
-      "billingMode": "free",
-      "freeTier": "trial",
       "modelFamily": "llama-3.2-3b",
       "modelVariant": "instruct",
       "aliases": [
@@ -3436,13 +3347,13 @@
       "priceOutput": 0,
       "priceCurrency": "USD",
       "isFree": true,
-      "freeKind": "rate-limited",
-      "trialScope": "specific",
-      "rateLimits": {
+      "freeMechanism": "rate-limited",
+      "freeQuota": {
         "rpm": 20,
         "rpd": 50,
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
+      "trialScope": "specific",
       "capabilities": [
         "chat",
         "text-generation"
@@ -3473,8 +3384,6 @@
       "isMultimodal": false,
       "hasToolUse": false,
       "contextLabel": "131K",
-      "billingMode": "free",
-      "freeTier": "trial",
       "modelFamily": "nousresearch-hermes-3-llama-3.1-405b",
       "aliases": [],
       "tier": "large",
@@ -3503,7 +3412,7 @@
       "priceOutput": 6.4,
       "priceCurrency": "CNY",
       "isFree": false,
-      "freeKind": "unknown",
+      "freeMechanism": null,
       "trialScope": "none",
       "capabilities": [
         "reasoning"
@@ -3522,8 +3431,7 @@
       "isMultimodal": false,
       "hasToolUse": false,
       "contextLabel": "33K",
-      "billingMode": "pay",
-      "freeTier": "none",
+      "freeQuota": null,
       "modelFamily": "deepseek-v3",
       "aliases": [
         "DeepSeek-V3"
@@ -3549,7 +3457,7 @@
       "priceOutput": 12.8,
       "priceCurrency": "CNY",
       "isFree": false,
-      "freeKind": "unknown",
+      "freeMechanism": null,
       "trialScope": "none",
       "capabilities": [
         "reasoning"
@@ -3569,8 +3477,7 @@
       "isMultimodal": false,
       "hasToolUse": false,
       "contextLabel": "33K",
-      "billingMode": "pay",
-      "freeTier": "none",
+      "freeQuota": null,
       "modelFamily": "deepseek-r1",
       "modelVariant": "r1",
       "aliases": [
@@ -3599,7 +3506,7 @@
       "priceOutput": 4.8,
       "priceCurrency": "CNY",
       "isFree": false,
-      "freeKind": "unknown",
+      "freeMechanism": null,
       "trialScope": "none",
       "capabilities": [
         "chat",
@@ -3621,8 +3528,7 @@
       "isMultimodal": false,
       "hasToolUse": false,
       "contextLabel": "8K",
-      "billingMode": "pay",
-      "freeTier": "none",
+      "freeQuota": null,
       "modelFamily": "deepseek-r1-distill-qwen-32b",
       "modelVariant": "r1",
       "aliases": [
@@ -3654,7 +3560,7 @@
       "priceOutput": 2,
       "priceCurrency": "CNY",
       "isFree": false,
-      "freeKind": "unknown",
+      "freeMechanism": null,
       "trialScope": "none",
       "capabilities": [
         "chat",
@@ -3676,8 +3582,7 @@
       "isMultimodal": false,
       "hasToolUse": false,
       "contextLabel": "8K",
-      "billingMode": "pay",
-      "freeTier": "none",
+      "freeQuota": null,
       "modelFamily": "deepseek-r1-distill-llama-8b",
       "modelVariant": "r1",
       "aliases": [],
