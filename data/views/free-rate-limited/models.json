@@ -1,7 +1,7 @@
 {
   "object": "list",
   "view": "free-rate-limited",
-  "updated_at": "2026-04-30T05:33:06.004Z",
+  "updated_at": "2026-04-30T15:52:48.477Z",
   "total": 87,
   "filters": {
     "freeMechanism": "rate-limited"
@@ -10,7 +10,7 @@
     {
       "id": "cerebras/llama3.1-8b",
       "object": "model",
-      "created": 1777527099,
+      "created": 1777564281,
       "owned_by": "cerebras",
       "provider": "cerebras",
       "model_id": "cerebras/llama3.1-8b",
@@ -37,8 +37,10 @@
       "free_mechanism": "rate-limited",
       "free_quota": null,
       "trial_scope": "specific",
-      "model_family": "llama3.1-8b",
-      "aliases": [],
+      "model_family": "llama-3.1-8b",
+      "aliases": [
+        "meta/llama-3.1-8b-instruct"
+      ],
       "parameter_count": 8000000000,
       "tier": "medium",
       "speed": "fast",
@@ -54,7 +56,7 @@
     {
       "id": "cerebras/gpt-oss-120b",
       "object": "model",
-      "created": 1777527100,
+      "created": 1777564282,
       "owned_by": "cerebras",
       "provider": "cerebras",
       "model_id": "cerebras/gpt-oss-120b",
@@ -80,13 +82,8 @@
       "free_mechanism": "rate-limited",
       "free_quota": null,
       "trial_scope": "specific",
-      "model_family": "gpt-oss-120b",
-      "aliases": [
-        "gpt-oss-120b",
-        "groq/openai/gpt-oss-120b",
-        "openai/gpt-oss-120b",
-        "openrouter/openai/gpt-oss-120b"
-      ],
+      "model_family": "gpt-oss",
+      "aliases": [],
       "tier": "medium",
       "speed": "fast",
       "use_case": [
@@ -101,7 +98,7 @@
     {
       "id": "google/gemini-3.1-flash-lite-preview",
       "object": "model",
-      "created": 1777527101,
+      "created": 1777564283,
       "owned_by": "google",
       "provider": "google",
       "model_id": "google/gemini-3.1-flash-lite-preview",
@@ -144,7 +141,7 @@
     {
       "id": "google/gemini-3.1-flash-live-preview",
       "object": "model",
-      "created": 1777527102,
+      "created": 1777564284,
       "owned_by": "google",
       "provider": "google",
       "model_id": "google/gemini-3.1-flash-live-preview",
@@ -191,7 +188,7 @@
     {
       "id": "google/gemini-3.1-flash-tts-preview",
       "object": "model",
-      "created": 1777527103,
+      "created": 1777564285,
       "owned_by": "google",
       "provider": "google",
       "model_id": "google/gemini-3.1-flash-tts-preview",
@@ -230,7 +227,7 @@
     {
       "id": "google/gemini-3-flash-preview",
       "object": "model",
-      "created": 1777527104,
+      "created": 1777564286,
       "owned_by": "google",
       "provider": "google",
       "model_id": "google/gemini-3-flash-preview",
@@ -274,7 +271,7 @@
     {
       "id": "google/gemini-2.5-pro",
       "object": "model",
-      "created": 1777527105,
+      "created": 1777564287,
       "owned_by": "google",
       "provider": "google",
       "model_id": "google/gemini-2.5-pro",
@@ -324,7 +321,7 @@
     {
       "id": "google/gemini-2.5-flash",
       "object": "model",
-      "created": 1777527106,
+      "created": 1777564288,
       "owned_by": "google",
       "provider": "google",
       "model_id": "google/gemini-2.5-flash",
@@ -373,7 +370,7 @@
     {
       "id": "google/gemini-2.5-flash-lite",
       "object": "model",
-      "created": 1777527107,
+      "created": 1777564289,
       "owned_by": "google",
       "provider": "google",
       "model_id": "google/gemini-2.5-flash-lite",
@@ -416,7 +413,7 @@
     {
       "id": "google/gemini-2.5-flash-lite-preview-09-2025",
       "object": "model",
-      "created": 1777527108,
+      "created": 1777564290,
       "owned_by": "google",
       "provider": "google",
       "model_id": "google/gemini-2.5-flash-lite-preview-09-2025",
@@ -443,7 +440,7 @@
       "free_mechanism": "rate-limited",
       "free_quota": null,
       "trial_scope": "fast",
-      "model_family": "gemini-2.5-flash-lite-preview-09",
+      "model_family": "gemini-2.5-flash-lite-preview",
       "aliases": [],
       "tier": "small",
       "speed": "fast",
@@ -459,7 +456,7 @@
     {
       "id": "google/gemini-2.5-flash-native-audio-preview-12-2025",
       "object": "model",
-      "created": 1777527109,
+      "created": 1777564291,
       "owned_by": "google",
       "provider": "google",
       "model_id": "google/gemini-2.5-flash-native-audio-preview-12-2025",
@@ -488,7 +485,7 @@
       "free_mechanism": "rate-limited",
       "free_quota": null,
       "trial_scope": "fast",
-      "model_family": "gemini-2.5-flash-native-audio-preview-12",
+      "model_family": "gemini-2.5-flash-native-audio",
       "model_variant": "audio",
       "aliases": [],
       "tier": "medium",
@@ -507,7 +504,7 @@
     {
       "id": "google/gemini-2.5-flash-preview-tts",
       "object": "model",
-      "created": 1777527110,
+      "created": 1777564292,
       "owned_by": "google",
       "provider": "google",
       "model_id": "google/gemini-2.5-flash-preview-tts",
@@ -546,7 +543,7 @@
     {
       "id": "google/gemini-2.0-flash",
       "object": "model",
-      "created": 1777527111,
+      "created": 1777564293,
       "owned_by": "google",
       "provider": "google",
       "model_id": "google/gemini-2.0-flash",
@@ -589,7 +586,7 @@
     {
       "id": "google/gemini-2.0-flash-lite",
       "object": "model",
-      "created": 1777527112,
+      "created": 1777564294,
       "owned_by": "google",
       "provider": "google",
       "model_id": "google/gemini-2.0-flash-lite",
@@ -632,7 +629,7 @@
     {
       "id": "google/gemini-embedding-2",
       "object": "model",
-      "created": 1777527113,
+      "created": 1777564295,
       "owned_by": "google",
       "provider": "google",
       "model_id": "google/gemini-embedding-2",
@@ -673,7 +670,7 @@
     {
       "id": "google/gemini-embedding-001",
       "object": "model",
-      "created": 1777527114,
+      "created": 1777564296,
       "owned_by": "google",
       "provider": "google",
       "model_id": "google/gemini-embedding-001",
@@ -697,7 +694,7 @@
       "free_mechanism": "rate-limited",
       "free_quota": null,
       "trial_scope": "fast",
-      "model_family": "gemini-embedding-001",
+      "model_family": "gemini-embedding",
       "model_variant": "embedding",
       "aliases": [],
       "tier": "small",
@@ -714,7 +711,7 @@
     {
       "id": "google/gemini-robotics-er-1.6-preview",
       "object": "model",
-      "created": 1777527115,
+      "created": 1777564297,
       "owned_by": "google",
       "provider": "google",
       "model_id": "google/gemini-robotics-er-1.6-preview",
@@ -758,7 +755,7 @@
     {
       "id": "google/gemini-robotics-er-1.5-preview",
       "object": "model",
-      "created": 1777527116,
+      "created": 1777564298,
       "owned_by": "google",
       "provider": "google",
       "model_id": "google/gemini-robotics-er-1.5-preview",
@@ -802,7 +799,7 @@
     {
       "id": "google/gemma-4",
       "object": "model",
-      "created": 1777527117,
+      "created": 1777564299,
       "owned_by": "google",
       "provider": "google",
       "model_id": "google/gemma-4",
@@ -842,7 +839,7 @@
     {
       "id": "openrouter/kwaivgi/kling-v3.0-pro",
       "object": "model",
-      "created": 1777527118,
+      "created": 1777564300,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/kwaivgi/kling-v3.0-pro",
@@ -875,7 +872,8 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "kwaivgi-kling-v3.0-pro",
+      "model_family": "kling:-video-v3.0-pro",
+      "model_variant": "video",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -893,7 +891,7 @@
     {
       "id": "openrouter/kwaivgi/kling-v3.0-std",
       "object": "model",
-      "created": 1777527119,
+      "created": 1777564301,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/kwaivgi/kling-v3.0-std",
@@ -926,7 +924,8 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "kwaivgi-kling-v3.0-std",
+      "model_family": "kling:-video-v3.0-standard",
+      "model_variant": "video",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -942,9 +941,57 @@
       "estimated_latency": "< 1s"
     },
     {
+      "id": "openrouter/openrouter/owl-alpha",
+      "object": "model",
+      "created": 1777564302,
+      "owned_by": "openrouter",
+      "provider": "openrouter",
+      "model_id": "openrouter/openrouter/owl-alpha",
+      "name": "Owl Alpha",
+      "description": "Owl Alpha is a high-performance foundation model designed for agentic workloads. Natively supports tool use, and long-context tasks, with strong performance in code generation, automated workflows, and complex instruction execution. Compatible with Claude Code, OpenClaw, and other mainstream productivity tools.\n\nNote: Prompts and completions may be logged by the provider and used to improve the model.",
+      "context_size": 1048756,
+      "context_label": "1M",
+      "price_input": 0,
+      "price_output": 0,
+      "price_currency": "USD",
+      "price_unit": "per_million_tokens",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation",
+        "tool-use",
+        "chat"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "rpd": 50,
+        "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
+      },
+      "trial_scope": "specific",
+      "model_family": "owl-alpha",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
       "id": "openrouter/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
       "object": "model",
-      "created": 1777527120,
+      "created": 1777564303,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
@@ -984,11 +1031,9 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "nemotron-3-nano-omni-30b-a3b-reasoning",
+      "model_family": "nvidia:-nemotron-3-nano-omni-(free)",
       "model_variant": "reasoning",
-      "aliases": [
-        "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning"
-      ],
+      "aliases": [],
       "tier": "large",
       "speed": "fast",
       "use_case": [
@@ -1012,7 +1057,7 @@
     {
       "id": "openrouter/poolside/laguna-xs.2",
       "object": "model",
-      "created": 1777527121,
+      "created": 1777564304,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/poolside/laguna-xs.2",
@@ -1045,7 +1090,7 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "poolside-laguna-xs.2",
+      "model_family": "poolside:-laguna-xs.2-(free)",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -1065,7 +1110,7 @@
     {
       "id": "openrouter/poolside/laguna-m.1",
       "object": "model",
-      "created": 1777527122,
+      "created": 1777564305,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/poolside/laguna-m.1",
@@ -1098,7 +1143,7 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "poolside-laguna-m.1",
+      "model_family": "poolside:-laguna-m.1-(free)",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -1118,7 +1163,7 @@
     {
       "id": "openrouter/google/veo-3.1-fast",
       "object": "model",
-      "created": 1777527123,
+      "created": 1777564306,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/google/veo-3.1-fast",
@@ -1151,7 +1196,7 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "veo-3.1-fast",
+      "model_family": "google:-veo-3.1-fast",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -1169,7 +1214,7 @@
     {
       "id": "openrouter/google/veo-3.1-lite",
       "object": "model",
-      "created": 1777527124,
+      "created": 1777564307,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/google/veo-3.1-lite",
@@ -1202,7 +1247,7 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "veo-3.1-lite",
+      "model_family": "google:-veo-3.1-lite",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -1220,7 +1265,7 @@
     {
       "id": "openrouter/inclusionai/ling-2.6-1t",
       "object": "model",
-      "created": 1777527125,
+      "created": 1777564308,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/inclusionai/ling-2.6-1t",
@@ -1252,7 +1297,7 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "inclusionai-ling-2.6-1t",
+      "model_family": "inclusionai:-ling-2.6-1t-(free)",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -1272,7 +1317,7 @@
     {
       "id": "openrouter/tencent/hy3-preview",
       "object": "model",
-      "created": 1777527126,
+      "created": 1777564309,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/tencent/hy3-preview",
@@ -1305,7 +1350,7 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "tencent-hy3-preview",
+      "model_family": "tencent:-hy3-preview-(free)",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -1325,7 +1370,7 @@
     {
       "id": "openrouter/baidu/qianfan-ocr-fast",
       "object": "model",
-      "created": 1777527127,
+      "created": 1777564310,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/baidu/qianfan-ocr-fast",
@@ -1361,7 +1406,7 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "baidu-qianfan-ocr-fast",
+      "model_family": "baidu:-qianfan-ocr-fast-(free)",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -1383,7 +1428,7 @@
     {
       "id": "openrouter/kwaivgi/kling-video-o1",
       "object": "model",
-      "created": 1777527128,
+      "created": 1777564311,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/kwaivgi/kling-video-o1",
@@ -1416,7 +1461,7 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "kwaivgi-kling-video-o1",
+      "model_family": "kling:-video-o1",
       "model_variant": "video",
       "aliases": [],
       "tier": "large",
@@ -1435,7 +1480,7 @@
     {
       "id": "openrouter/minimax/hailuo-2.3",
       "object": "model",
-      "created": 1777527129,
+      "created": 1777564312,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/minimax/hailuo-2.3",
@@ -1468,7 +1513,7 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "minimax-hailuo-2.3",
+      "model_family": "minimax:-hailuo-2.3",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -1486,7 +1531,7 @@
     {
       "id": "openrouter/bytedance/seedance-2.0",
       "object": "model",
-      "created": 1777527130,
+      "created": 1777564313,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/bytedance/seedance-2.0",
@@ -1519,7 +1564,7 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "bytedance-seedance-2.0",
+      "model_family": "bytedance:-seedance-2.0",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -1537,7 +1582,7 @@
     {
       "id": "openrouter/bytedance/seedance-2.0-fast",
       "object": "model",
-      "created": 1777527131,
+      "created": 1777564314,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/bytedance/seedance-2.0-fast",
@@ -1570,7 +1615,7 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "bytedance-seedance-2.0-fast",
+      "model_family": "bytedance:-seedance-2.0-fast",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -1588,7 +1633,7 @@
     {
       "id": "openrouter/alibaba/wan-2.7",
       "object": "model",
-      "created": 1777527132,
+      "created": 1777564315,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/alibaba/wan-2.7",
@@ -1621,7 +1666,7 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "alibaba-wan-2.7",
+      "model_family": "alibaba:-wan-2.7",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -1639,7 +1684,7 @@
     {
       "id": "openrouter/cohere/rerank-4-pro",
       "object": "model",
-      "created": 1777527133,
+      "created": 1777564316,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/cohere/rerank-4-pro",
@@ -1672,7 +1717,8 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "rerank-4-pro",
+      "model_family": "cohere:-rerank-4-pro",
+      "model_variant": "rerank",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
@@ -1690,7 +1736,7 @@
     {
       "id": "openrouter/cohere/rerank-4-fast",
       "object": "model",
-      "created": 1777527134,
+      "created": 1777564317,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/cohere/rerank-4-fast",
@@ -1723,7 +1769,8 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "rerank-4-fast",
+      "model_family": "cohere:-rerank-4-fast",
+      "model_variant": "rerank",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
@@ -1741,7 +1788,7 @@
     {
       "id": "openrouter/cohere/rerank-v3.5",
       "object": "model",
-      "created": 1777527135,
+      "created": 1777564318,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/cohere/rerank-v3.5",
@@ -1774,7 +1821,8 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "rerank-v3.5",
+      "model_family": "cohere:-rerank-v3.5",
+      "model_variant": "rerank",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
@@ -1792,7 +1840,7 @@
     {
       "id": "openrouter/google/gemma-4-26b-a4b-it",
       "object": "model",
-      "created": 1777527136,
+      "created": 1777564319,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/google/gemma-4-26b-a4b-it",
@@ -1830,11 +1878,9 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "gemma-4-26b-a4b",
+      "model_family": "google:-gemma-4-26b-a4b-(free)",
       "model_variant": "it",
-      "aliases": [
-        "gemma-4-26B-A4B-it"
-      ],
+      "aliases": [],
       "parameter_count": 26000000000,
       "tier": "large",
       "speed": "fast",
@@ -1857,7 +1903,7 @@
     {
       "id": "openrouter/google/gemma-4-31b-it",
       "object": "model",
-      "created": 1777527137,
+      "created": 1777564320,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/google/gemma-4-31b-it",
@@ -1895,11 +1941,9 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "gemma-4-31b",
+      "model_family": "google:-gemma-4-31b-(free)",
       "model_variant": "it",
-      "aliases": [
-        "google/gemma-4-31b-it"
-      ],
+      "aliases": [],
       "parameter_count": 31000000000,
       "tier": "large",
       "speed": "fast",
@@ -1922,7 +1966,7 @@
     {
       "id": "openrouter/google/lyria-3-pro-preview",
       "object": "model",
-      "created": 1777527138,
+      "created": 1777564321,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/google/lyria-3-pro-preview",
@@ -1955,10 +1999,8 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "lyria-3-pro-preview",
-      "aliases": [
-        "google/lyria-3-pro-preview"
-      ],
+      "model_family": "google:-lyria-3-pro-preview",
+      "aliases": [],
       "tier": "large",
       "speed": "fast",
       "use_case": [
@@ -1975,7 +2017,7 @@
     {
       "id": "openrouter/google/lyria-3-clip-preview",
       "object": "model",
-      "created": 1777527139,
+      "created": 1777564322,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/google/lyria-3-clip-preview",
@@ -2008,10 +2050,8 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "lyria-3-clip-preview",
-      "aliases": [
-        "google/lyria-3-clip-preview"
-      ],
+      "model_family": "google:-lyria-3-clip-preview",
+      "aliases": [],
       "tier": "large",
       "speed": "fast",
       "use_case": [
@@ -2028,7 +2068,7 @@
     {
       "id": "openrouter/alibaba/wan-2.6",
       "object": "model",
-      "created": 1777527140,
+      "created": 1777564323,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/alibaba/wan-2.6",
@@ -2061,7 +2101,7 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "alibaba-wan-2.6",
+      "model_family": "alibaba:-wan-2.6",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -2079,7 +2119,7 @@
     {
       "id": "openrouter/bytedance/seedance-1-5-pro",
       "object": "model",
-      "created": 1777527141,
+      "created": 1777564324,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/bytedance/seedance-1-5-pro",
@@ -2112,7 +2152,7 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "bytedance-seedance-1-5-pro",
+      "model_family": "bytedance:-seedance-1.5-pro",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -2130,7 +2170,7 @@
     {
       "id": "openrouter/openai/sora-2-pro",
       "object": "model",
-      "created": 1777527142,
+      "created": 1777564325,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/openai/sora-2-pro",
@@ -2163,7 +2203,7 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "sora-2-pro",
+      "model_family": "openai:-sora-2-pro",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -2181,7 +2221,7 @@
     {
       "id": "openrouter/google/veo-3.1",
       "object": "model",
-      "created": 1777527143,
+      "created": 1777564326,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/google/veo-3.1",
@@ -2214,7 +2254,7 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "veo-3.1",
+      "model_family": "google:-veo-3.1",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -2232,7 +2272,7 @@
     {
       "id": "openrouter/nvidia/nemotron-3-super-120b-a12b",
       "object": "model",
-      "created": 1777527144,
+      "created": 1777564327,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/nvidia/nemotron-3-super-120b-a12b",
@@ -2265,10 +2305,8 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "nemotron-3-super-120b-a12b",
-      "aliases": [
-        "nvidia/nemotron-3-super-120b-a12b"
-      ],
+      "model_family": "nvidia:-nemotron-3-super-(free)",
+      "aliases": [],
       "tier": "large",
       "speed": "fast",
       "use_case": [
@@ -2287,7 +2325,7 @@
     {
       "id": "openrouter/nvidia/llama-nemotron-embed-vl-1b-v2",
       "object": "model",
-      "created": 1777527145,
+      "created": 1777564328,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/nvidia/llama-nemotron-embed-vl-1b-v2",
@@ -2323,11 +2361,9 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "llama-nemotron-embed-vl-1b-v2",
+      "model_family": "nvidia:-llama-nemotron-embed-vl-1b-v2-(free)",
       "model_variant": "vl",
-      "aliases": [
-        "nvidia/llama-nemotron-embed-vl-1b-v2"
-      ],
+      "aliases": [],
       "parameter_count": 1000000000,
       "tier": "medium",
       "speed": "fast",
@@ -2347,7 +2383,7 @@
     {
       "id": "openrouter/minimax/minimax-m2.5",
       "object": "model",
-      "created": 1777527146,
+      "created": 1777564329,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/minimax/minimax-m2.5",
@@ -2380,7 +2416,7 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "minimax-minimax-m2.5",
+      "model_family": "minimax:-minimax-m2.5-(free)",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -2400,7 +2436,7 @@
     {
       "id": "openrouter/sourceful/riverflow-v2-pro",
       "object": "model",
-      "created": 1777527147,
+      "created": 1777564330,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/sourceful/riverflow-v2-pro",
@@ -2435,7 +2471,7 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "sourceful-riverflow-v2-pro",
+      "model_family": "sourceful:-riverflow-v2-pro",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -2457,7 +2493,7 @@
     {
       "id": "openrouter/sourceful/riverflow-v2-fast",
       "object": "model",
-      "created": 1777527148,
+      "created": 1777564331,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/sourceful/riverflow-v2-fast",
@@ -2492,7 +2528,7 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "sourceful-riverflow-v2-fast",
+      "model_family": "sourceful:-riverflow-v2-fast",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -2514,7 +2550,7 @@
     {
       "id": "openrouter/liquid/lfm-2.5-1.2b-thinking",
       "object": "model",
-      "created": 1777527149,
+      "created": 1777564332,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/liquid/lfm-2.5-1.2b-thinking",
@@ -2547,7 +2583,7 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "liquid-lfm-2.5-1.2b-thinking",
+      "model_family": "liquidai:-lfm2.5-1.2b-thinking-(free)",
       "model_variant": "thinking",
       "aliases": [],
       "parameter_count": 1200000000,
@@ -2569,7 +2605,7 @@
     {
       "id": "openrouter/liquid/lfm-2.5-1.2b-instruct",
       "object": "model",
-      "created": 1777527150,
+      "created": 1777564333,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/liquid/lfm-2.5-1.2b-instruct",
@@ -2600,7 +2636,7 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "liquid-lfm-2.5-1.2b",
+      "model_family": "liquidai:-lfm2.5-1.2b-(free)",
       "model_variant": "instruct",
       "aliases": [],
       "parameter_count": 1200000000,
@@ -2618,7 +2654,7 @@
     {
       "id": "openrouter/black-forest-labs/flux.2-klein-4b",
       "object": "model",
-      "created": 1777527151,
+      "created": 1777564334,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/black-forest-labs/flux.2-klein-4b",
@@ -2652,7 +2688,7 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "black-forest-labs-flux.2-klein-4b",
+      "model_family": "black-forest-labs:-flux.2-klein-4b",
       "aliases": [],
       "parameter_count": 4000000000,
       "tier": "small",
@@ -2671,7 +2707,7 @@
     {
       "id": "openrouter/bytedance-seed/seedream-4.5",
       "object": "model",
-      "created": 1777527152,
+      "created": 1777564335,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/bytedance-seed/seedream-4.5",
@@ -2706,7 +2742,7 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "bytedance-seed-seedream-4.5",
+      "model_family": "bytedance-seed:-seedream-4.5",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -2728,7 +2764,7 @@
     {
       "id": "openrouter/black-forest-labs/flux.2-max",
       "object": "model",
-      "created": 1777527153,
+      "created": 1777564336,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/black-forest-labs/flux.2-max",
@@ -2762,7 +2798,7 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "black-forest-labs-flux.2-max",
+      "model_family": "black-forest-labs:-flux.2-max",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -2780,7 +2816,7 @@
     {
       "id": "openrouter/nvidia/nemotron-3-nano-30b-a3b",
       "object": "model",
-      "created": 1777527154,
+      "created": 1777564337,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/nvidia/nemotron-3-nano-30b-a3b",
@@ -2813,10 +2849,8 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "nemotron-3-nano-30b-a3b",
-      "aliases": [
-        "nvidia/nemotron-3-nano-30b-a3b"
-      ],
+      "model_family": "nvidia:-nemotron-3-nano-30b-a3b-(free)",
+      "aliases": [],
       "parameter_count": 30000000000,
       "tier": "large",
       "speed": "fast",
@@ -2836,7 +2870,7 @@
     {
       "id": "openrouter/sourceful/riverflow-v2-max-preview",
       "object": "model",
-      "created": 1777527155,
+      "created": 1777564338,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/sourceful/riverflow-v2-max-preview",
@@ -2870,7 +2904,7 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "sourceful-riverflow-v2-max-preview",
+      "model_family": "sourceful:-riverflow-v2-max-preview",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -2888,7 +2922,7 @@
     {
       "id": "openrouter/sourceful/riverflow-v2-standard-preview",
       "object": "model",
-      "created": 1777527156,
+      "created": 1777564339,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/sourceful/riverflow-v2-standard-preview",
@@ -2922,7 +2956,7 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "sourceful-riverflow-v2-standard-preview",
+      "model_family": "sourceful:-riverflow-v2-standard-preview",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -2940,7 +2974,7 @@
     {
       "id": "openrouter/sourceful/riverflow-v2-fast-preview",
       "object": "model",
-      "created": 1777527157,
+      "created": 1777564340,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/sourceful/riverflow-v2-fast-preview",
@@ -2974,7 +3008,7 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "sourceful-riverflow-v2-fast-preview",
+      "model_family": "sourceful:-riverflow-v2-fast-preview",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -2992,7 +3026,7 @@
     {
       "id": "openrouter/black-forest-labs/flux.2-flex",
       "object": "model",
-      "created": 1777527158,
+      "created": 1777564341,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/black-forest-labs/flux.2-flex",
@@ -3025,7 +3059,7 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "black-forest-labs-flux.2-flex",
+      "model_family": "black-forest-labs:-flux.2-flex",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -3043,7 +3077,7 @@
     {
       "id": "openrouter/black-forest-labs/flux.2-pro",
       "object": "model",
-      "created": 1777527159,
+      "created": 1777564342,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/black-forest-labs/flux.2-pro",
@@ -3077,7 +3111,7 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "black-forest-labs-flux.2-pro",
+      "model_family": "black-forest-labs:-flux.2-pro",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -3095,7 +3129,7 @@
     {
       "id": "openrouter/nvidia/nemotron-nano-12b-v2-vl",
       "object": "model",
-      "created": 1777527160,
+      "created": 1777564343,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/nvidia/nemotron-nano-12b-v2-vl",
@@ -3133,11 +3167,9 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "nemotron-nano-12b-v2-vl",
+      "model_family": "nvidia:-nemotron-nano-12b-2-vl-(free)",
       "model_variant": "vl",
-      "aliases": [
-        "nvidia/nemotron-nano-12b-v2-vl"
-      ],
+      "aliases": [],
       "parameter_count": 12000000000,
       "tier": "large",
       "speed": "fast",
@@ -3160,7 +3192,7 @@
     {
       "id": "openrouter/qwen/qwen3-next-80b-a3b-instruct",
       "object": "model",
-      "created": 1777527161,
+      "created": 1777564344,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/qwen/qwen3-next-80b-a3b-instruct",
@@ -3192,13 +3224,9 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "qwen3-next-80b-a3b",
+      "model_family": "qwen:-qwen3-next-80b-a3b-(free)",
       "model_variant": "instruct",
-      "aliases": [
-        "Qwen3-Next-80B-A3B-Instruct",
-        "qwen/qwen3-next-80b-a3b-instruct",
-        "xunfei/Qwen3-Next-80B-A3B-Instruct"
-      ],
+      "aliases": [],
       "parameter_count": 80000000000,
       "tier": "large",
       "speed": "fast",
@@ -3218,7 +3246,7 @@
     {
       "id": "openrouter/nvidia/nemotron-nano-9b-v2",
       "object": "model",
-      "created": 1777527162,
+      "created": 1777564345,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/nvidia/nemotron-nano-9b-v2",
@@ -3251,10 +3279,8 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "nemotron-nano-9b-v2",
-      "aliases": [
-        "nvidia/nvidia-nemotron-nano-9b-v2"
-      ],
+      "model_family": "nvidia:-nemotron-nano-9b-v2-(free)",
+      "aliases": [],
       "parameter_count": 9000000000,
       "tier": "medium",
       "speed": "fast",
@@ -3274,7 +3300,7 @@
     {
       "id": "openrouter/openai/gpt-oss-120b",
       "object": "model",
-      "created": 1777527163,
+      "created": 1777564346,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/openai/gpt-oss-120b",
@@ -3307,13 +3333,8 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "gpt-oss-120b",
-      "aliases": [
-        "cerebras/gpt-oss-120b",
-        "gpt-oss-120b",
-        "groq/openai/gpt-oss-120b",
-        "openai/gpt-oss-120b"
-      ],
+      "model_family": "openai:-gpt-oss-120b-(free)",
+      "aliases": [],
       "parameter_count": 120000000000,
       "tier": "large",
       "speed": "fast",
@@ -3333,7 +3354,7 @@
     {
       "id": "openrouter/openai/gpt-oss-20b",
       "object": "model",
-      "created": 1777527164,
+      "created": 1777564347,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/openai/gpt-oss-20b",
@@ -3366,11 +3387,8 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "gpt-oss-20b",
-      "aliases": [
-        "groq/openai/gpt-oss-20b",
-        "openai/gpt-oss-20b"
-      ],
+      "model_family": "openai:-gpt-oss-20b-(free)",
+      "aliases": [],
       "parameter_count": 20000000000,
       "tier": "medium",
       "speed": "fast",
@@ -3390,7 +3408,7 @@
     {
       "id": "openrouter/z-ai/glm-4.5-air",
       "object": "model",
-      "created": 1777527165,
+      "created": 1777564348,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/z-ai/glm-4.5-air",
@@ -3423,10 +3441,8 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "glm-4.5-air",
-      "aliases": [
-        "bigmodel/glm-4.5-air"
-      ],
+      "model_family": "z.ai:-glm-4.5-air-(free)",
+      "aliases": [],
       "tier": "large",
       "speed": "fast",
       "use_case": [
@@ -3445,7 +3461,7 @@
     {
       "id": "openrouter/qwen/qwen3-coder",
       "object": "model",
-      "created": 1777527166,
+      "created": 1777564349,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/qwen/qwen3-coder",
@@ -3479,7 +3495,7 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "qwen3-coder",
+      "model_family": "qwen:-qwen3-coder-480b-a35b-(free)",
       "model_variant": "coder",
       "aliases": [],
       "parameter_count": 480000000000,
@@ -3503,7 +3519,7 @@
     {
       "id": "openrouter/cognitivecomputations/dolphin-mistral-24b-venice-edition",
       "object": "model",
-      "created": 1777527167,
+      "created": 1777564350,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/cognitivecomputations/dolphin-mistral-24b-venice-edition",
@@ -3534,7 +3550,7 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "cognitivecomputations-dolphin-mistral-24b-venice-edition",
+      "model_family": "venice:-uncensored-(free)",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
@@ -3550,7 +3566,7 @@
     {
       "id": "openrouter/google/gemma-3n-e2b-it",
       "object": "model",
-      "created": 1777527168,
+      "created": 1777564351,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/google/gemma-3n-e2b-it",
@@ -3584,11 +3600,9 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "gemma-3n-e2b",
+      "model_family": "google:-gemma-3n-2b-(free)",
       "model_variant": "it",
-      "aliases": [
-        "google/gemma-3n-e2b-it"
-      ],
+      "aliases": [],
       "parameter_count": 2000000000,
       "tier": "small",
       "speed": "fast",
@@ -3610,7 +3624,7 @@
     {
       "id": "openrouter/google/gemma-3n-e4b-it",
       "object": "model",
-      "created": 1777527169,
+      "created": 1777564352,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/google/gemma-3n-e4b-it",
@@ -3643,11 +3657,9 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "gemma-3n-e4b",
+      "model_family": "google:-gemma-3n-4b-(free)",
       "model_variant": "it",
-      "aliases": [
-        "google/gemma-3n-e4b-it"
-      ],
+      "aliases": [],
       "parameter_count": 4000000000,
       "tier": "small",
       "speed": "fast",
@@ -3665,7 +3677,7 @@
     {
       "id": "openrouter/google/gemma-3-4b-it",
       "object": "model",
-      "created": 1777527170,
+      "created": 1777564353,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/google/gemma-3-4b-it",
@@ -3700,11 +3712,9 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "gemma-3-4b",
+      "model_family": "google:-gemma-3-4b-(free)",
       "model_variant": "it",
-      "aliases": [
-        "google/gemma-3-4b-it"
-      ],
+      "aliases": [],
       "parameter_count": 4000000000,
       "tier": "small",
       "speed": "fast",
@@ -3726,7 +3736,7 @@
     {
       "id": "openrouter/google/gemma-3-12b-it",
       "object": "model",
-      "created": 1777527171,
+      "created": 1777564354,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/google/gemma-3-12b-it",
@@ -3761,11 +3771,9 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "gemma-3-12b",
+      "model_family": "google:-gemma-3-12b-(free)",
       "model_variant": "it",
-      "aliases": [
-        "google/gemma-3-12b-it"
-      ],
+      "aliases": [],
       "parameter_count": 12000000000,
       "tier": "large",
       "speed": "fast",
@@ -3787,7 +3795,7 @@
     {
       "id": "openrouter/google/gemma-3-27b-it",
       "object": "model",
-      "created": 1777527172,
+      "created": 1777564355,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/google/gemma-3-27b-it",
@@ -3822,11 +3830,9 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "gemma-3-27b",
+      "model_family": "google:-gemma-3-27b-(free)",
       "model_variant": "it",
-      "aliases": [
-        "google/gemma-3-27b-it"
-      ],
+      "aliases": [],
       "parameter_count": 27000000000,
       "tier": "large",
       "speed": "fast",
@@ -3848,7 +3854,7 @@
     {
       "id": "openrouter/meta-llama/llama-3.3-70b-instruct",
       "object": "model",
-      "created": 1777527173,
+      "created": 1777564356,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/meta-llama/llama-3.3-70b-instruct",
@@ -3879,12 +3885,9 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "llama-3.3-70b",
+      "model_family": "meta:-llama-3.3-70b-(free)",
       "model_variant": "instruct",
-      "aliases": [
-        "groq/llama-3.3-70b-versatile",
-        "meta/llama-3.3-70b-instruct"
-      ],
+      "aliases": [],
       "parameter_count": 70000000000,
       "tier": "large",
       "speed": "fast",
@@ -3900,7 +3903,7 @@
     {
       "id": "openrouter/meta-llama/llama-3.2-3b-instruct",
       "object": "model",
-      "created": 1777527174,
+      "created": 1777564357,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/meta-llama/llama-3.2-3b-instruct",
@@ -3932,11 +3935,9 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "llama-3.2-3b",
+      "model_family": "meta:-llama-3.2-3b-(free)",
       "model_variant": "instruct",
-      "aliases": [
-        "meta/llama-3.2-3b-instruct"
-      ],
+      "aliases": [],
       "parameter_count": 3000000000,
       "tier": "small",
       "speed": "fast",
@@ -3956,7 +3957,7 @@
     {
       "id": "openrouter/nousresearch/hermes-3-llama-3.1-405b",
       "object": "model",
-      "created": 1777527175,
+      "created": 1777564358,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/nousresearch/hermes-3-llama-3.1-405b",
@@ -4007,12 +4008,12 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "xunfei/Qwen3.5-2B",
+      "id": "xunfei/xop35qwen2b",
       "object": "model",
-      "created": 1777527176,
+      "created": 1777564359,
       "owned_by": "xunfei",
       "provider": "xunfei",
-      "model_id": "xunfei/Qwen3.5-2B",
+      "model_id": "xunfei/xop35qwen2b",
       "name": "Qwen3.5-2B",
       "description": "Qwen3.5-2B是阿里云开源的20亿参数轻量大模型，兼顾小体积与强性能，可在手机、笔记本等端侧设备本地运行，在对话、轻量代码等场景表现均衡。",
       "context_size": 32768,
@@ -4030,10 +4031,11 @@
       "tags": [
         "chat",
         "text-generation",
-        "vision"
+        "vision",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
       "free_quota": null,
@@ -4055,12 +4057,12 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "xunfei/Qwen-Image-2512",
+      "id": "xunfei/xopqwentti20b",
       "object": "model",
-      "created": 1777527177,
+      "created": 1777564360,
       "owned_by": "xunfei",
       "provider": "xunfei",
-      "model_id": "xunfei/Qwen-Image-2512",
+      "model_id": "xunfei/xopqwentti20b",
       "name": "Qwen-Image-2512",
       "description": "Qwen-Image-2512 是阿里云通义千问推出的 12 月更新版文本到图像基础模型，相较 8 月版本大幅提升了人物真实感、自然细节精细度与文字渲染质量，在 AI Arena 超 1 万轮盲评中成为当前最强的开源文本生成图像模型，且在闭源模型阵营中也具备较强竞争力。\n",
       "context_label": "unknown",
@@ -4076,9 +4078,9 @@
       ],
       "tags": [
         "vision",
-        "multimodal",
         "chat",
-        "text-generation"
+        "text-generation",
+        "multimodal"
       ],
       "is_reasoning": false,
       "is_multimodal": true,
@@ -4106,12 +4108,12 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "xunfei/DeepSeek-OCR",
+      "id": "xunfei/xopdeepseekocr",
       "object": "model",
-      "created": 1777527178,
+      "created": 1777564361,
       "owned_by": "xunfei",
       "provider": "xunfei",
-      "model_id": "xunfei/DeepSeek-OCR",
+      "model_id": "xunfei/xopdeepseekocr",
       "name": "DeepSeek-OCR",
       "description": "DeepSeek-OCR 是深度求索（DeepSeek）推出的高性能光学字符识别（OCR）模型，作为面向通用与垂直场景的 OCR 解决方案，DeepSeek-OCR 具备 “全模态识别 + 结构化输出” 的核心能力，覆盖从文本提取到信息解析的全流程。",
       "context_size": 8192,
@@ -4127,10 +4129,11 @@
         "vision"
       ],
       "tags": [
-        "vision"
+        "vision",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
       "free_quota": null,
@@ -4149,12 +4152,12 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "xunfei/HunyuanOCR",
+      "id": "xunfei/xophunyuanocr",
       "object": "model",
-      "created": 1777527179,
+      "created": 1777564362,
       "owned_by": "xunfei",
       "provider": "xunfei",
-      "model_id": "xunfei/HunyuanOCR",
+      "model_id": "xunfei/xophunyuanocr",
       "name": "HunyuanOCR",
       "description": "HunyuanOCR 是腾讯混元于 2025 年 11 月 25 日开源的一款商业级轻量 OCR 专用视觉语言模型，凭借端到端架构设计，兼顾了识别性能与部署便捷性，适配多场景多语种 OCR 相关需求。",
       "context_size": 32768,
@@ -4173,10 +4176,11 @@
       "tags": [
         "chat",
         "text-generation",
-        "vision"
+        "vision",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
       "free_quota": null,
@@ -4199,12 +4203,12 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "xunfei/Hunyuan-MT-7B",
+      "id": "xunfei/xophunyuan7bmt",
       "object": "model",
-      "created": 1777527180,
+      "created": 1777564363,
       "owned_by": "xunfei",
       "provider": "xunfei",
-      "model_id": "xunfei/Hunyuan-MT-7B",
+      "model_id": "xunfei/xophunyuan7bmt",
       "name": "Hunyuan-MT-7B",
       "description": "文档翻译、跨语言内容生成、多语言客服对话等，支持 “中文与其他语言互译”“非中文语言间互译” 两类模式。7B 参数规模的核心翻译模型，负责将源语言文本精准转换为目标语言，支持 33 种语言互译（含中文、英语、法语等主流语言，以及藏语、哈萨克语等 5 种中国少数民族语言），在同规模模型中性能达行业领先水平。",
       "context_size": 32768,
@@ -4243,56 +4247,12 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "xunfei/Qwen3-1.7B",
+      "id": "xunfei/xopzimageturbo",
       "object": "model",
-      "created": 1777527181,
+      "created": 1777564364,
       "owned_by": "xunfei",
       "provider": "xunfei",
-      "model_id": "xunfei/Qwen3-1.7B",
-      "name": "Qwen3-1.7B",
-      "description": "Qwen3-1.7B 是 Qwen 系列轻量级因果语言模型，经预训练与后期优化，具备 17 亿参数规模，采用 28 层 Transformer 架构，原生支持 32,768 tokens 长上下文，兼顾高效推理与长文本处理能力，适合中小算力场景快速部署及多轮对话、短文本生成等任务。",
-      "context_size": 32768,
-      "context_label": "33K",
-      "price_input": 0,
-      "price_output": 0,
-      "price_currency": "CNY",
-      "price_unit": "per_million_tokens",
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "chat",
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": null,
-      "trial_scope": "specific",
-      "model_family": "qwen3-1.7b",
-      "aliases": [],
-      "parameter_count": 1700000000,
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "xunfei/Z-Image-Turbo",
-      "object": "model",
-      "created": 1777527182,
-      "owned_by": "xunfei",
-      "provider": "xunfei",
-      "model_id": "xunfei/Z-Image-Turbo",
+      "model_id": "xunfei/xopzimageturbo",
       "name": "Z-Image-Turbo",
       "description": "Z-Image 是一款开源、免费的高效图像生成基础模型，参数量为 6B，1秒出图。无需依赖顶级算力和参数堆砌，即可在 16GB 显存的消费级显卡上，生成品质可与顶级商业模型相媲美的超真实图像，尤其在中英双语文本渲染方面效果突出。",
       "context_size": 512,
@@ -4309,9 +4269,9 @@
       ],
       "tags": [
         "vision",
-        "multimodal",
         "chat",
-        "text-generation"
+        "text-generation",
+        "multimodal"
       ],
       "is_reasoning": false,
       "is_multimodal": true,
@@ -4339,12 +4299,12 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "xunfei/Qwen3-Reranker-8B",
+      "id": "xunfei/xop3qwen8breranker",
       "object": "model",
-      "created": 1777527183,
+      "created": 1777564365,
       "owned_by": "xunfei",
       "provider": "xunfei",
-      "model_id": "xunfei/Qwen3-Reranker-8B",
+      "model_id": "xunfei/xop3qwen8breranker",
       "name": "Qwen3-Reranker-8B",
       "description": "Qwen3-Reranker-8B 是 Qwen3 系列专为文本嵌入与重排序设计的 80 亿参数模型，支持 100 + 语言及长上下文，继承 Qwen3 基础模型的多语言理解与推理能力，在 MTEB-R、CMTEB-R 等多语言检索评测中表现突出（如 MTEB-R 得分 69.76），具备指令感知特性（自定义指令可提升 1%-5% 性能），适用于文本检索、代码检索、文本分类等场景。",
       "context_size": 32768,
@@ -4386,12 +4346,12 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "xunfei/Qwen3-Embedding-8B",
+      "id": "xunfei/xop3qwen8bembedding",
       "object": "model",
-      "created": 1777527184,
+      "created": 1777564366,
       "owned_by": "xunfei",
       "provider": "xunfei",
-      "model_id": "xunfei/Qwen3-Embedding-8B",
+      "model_id": "xunfei/xop3qwen8bembedding",
       "name": "Qwen3-Embedding-8B",
       "description": "Qwen3-Embedding-8B 是阿里巴巴 2025 年 6 月开源的轻量级文本嵌入模型，专为文本嵌入和排序任务设计，继承基础模型多语言、长文本理解与推理能力，在文本检索、代码检索等任务中进步显著，8B 模型居 MTEB 多语言排行榜首位，支持超 100 种语言及用户自定义指令，兼具多功能性与灵活性。",
       "context_size": 32768,
@@ -4430,12 +4390,12 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "xunfei/StableDiffusion_XL_Base_1",
+      "id": "xunfei/xssdxl",
       "object": "model",
-      "created": 1777527185,
+      "created": 1777564367,
       "owned_by": "xunfei",
       "provider": "xunfei",
-      "model_id": "xunfei/StableDiffusion_XL_Base_1",
+      "model_id": "xunfei/xssdxl",
       "name": "StableDiffusion_XL_Base_1",
       "description": "【可商用】SD XL 1.0由Stability AI研发并开源的文生图模型。",
       "context_label": "unknown",
@@ -4458,7 +4418,7 @@
       "free_mechanism": "rate-limited",
       "free_quota": null,
       "trial_scope": "specific",
-      "model_family": "stablediffusion_xl_base_1",
+      "model_family": "stablediffusion-xl-base-1",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",

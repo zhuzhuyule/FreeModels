@@ -1,13 +1,13 @@
 {
   "object": "list",
   "provider": "cerebras",
-  "updated_at": "2026-04-30T05:33:05.987Z",
+  "updated_at": "2026-04-30T15:52:48.470Z",
   "total": 4,
   "data": [
     {
       "id": "cerebras/llama3.1-8b",
       "object": "model",
-      "created": 1777527181,
+      "created": 1777564364,
       "owned_by": "cerebras",
       "provider": "cerebras",
       "model_id": "cerebras/llama3.1-8b",
@@ -34,8 +34,10 @@
       "free_mechanism": "rate-limited",
       "free_quota": null,
       "trial_scope": "specific",
-      "model_family": "llama3.1-8b",
-      "aliases": [],
+      "model_family": "llama-3.1-8b",
+      "aliases": [
+        "meta/llama-3.1-8b-instruct"
+      ],
       "parameter_count": 8000000000,
       "tier": "medium",
       "speed": "fast",
@@ -51,7 +53,7 @@
     {
       "id": "cerebras/gpt-oss-120b",
       "object": "model",
-      "created": 1777527182,
+      "created": 1777564365,
       "owned_by": "cerebras",
       "provider": "cerebras",
       "model_id": "cerebras/gpt-oss-120b",
@@ -77,13 +79,8 @@
       "free_mechanism": "rate-limited",
       "free_quota": null,
       "trial_scope": "specific",
-      "model_family": "gpt-oss-120b",
-      "aliases": [
-        "gpt-oss-120b",
-        "groq/openai/gpt-oss-120b",
-        "openai/gpt-oss-120b",
-        "openrouter/openai/gpt-oss-120b"
-      ],
+      "model_family": "gpt-oss",
+      "aliases": [],
       "tier": "medium",
       "speed": "fast",
       "use_case": [
@@ -98,7 +95,7 @@
     {
       "id": "cerebras/qwen-3-235b-a22b-instruct-2507",
       "object": "model",
-      "created": 1777527183,
+      "created": 1777564366,
       "owned_by": "cerebras",
       "provider": "cerebras",
       "model_id": "cerebras/qwen-3-235b-a22b-instruct-2507",
@@ -124,7 +121,7 @@
       "free_mechanism": "preview",
       "free_quota": null,
       "trial_scope": "specific",
-      "model_family": "qwen-3-235b-a22b",
+      "model_family": "qwen-3-235b",
       "model_variant": "instruct",
       "aliases": [],
       "parameter_count": 235000000000,
@@ -146,7 +143,7 @@
     {
       "id": "cerebras/zai-glm-4.7",
       "object": "model",
-      "created": 1777527184,
+      "created": 1777564367,
       "owned_by": "cerebras",
       "provider": "cerebras",
       "model_id": "cerebras/zai-glm-4.7",
@@ -169,11 +166,8 @@
       "free_mechanism": "preview",
       "free_quota": null,
       "trial_scope": "specific",
-      "model_family": "glm-4.7",
-      "aliases": [
-        "GLM-4.7",
-        "xunfei/GLM-4.7"
-      ],
+      "model_family": "z.ai-glm-4.7",
+      "aliases": [],
       "tier": "medium",
       "speed": "fast",
       "use_case": [
