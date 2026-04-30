@@ -1,21 +1,96 @@
 {
   "object": "list",
   "view": "free-permanent",
-  "updated_at": "2026-04-30T04:02:53.383Z",
+  "updated_at": "2026-04-30T04:23:36.929Z",
   "total": 51,
   "filters": {
     "freeMechanism": "permanent"
   },
   "data": [
     {
+      "id": "bigmodel/cogvideox-flash",
+      "object": "model",
+      "created": 1777522965,
+      "owned_by": "bigmodel",
+      "provider": "bigmodel",
+      "model_id": "bigmodel/cogvideox-flash",
+      "name": "CogVideoX-Flash",
+      "description": "CogVideoX-Flash 是智谱推出的免费视频生成模型，能够根据用户指令生成符合要求且美学评分更高的视频。",
+      "context_label": "unknown",
+      "price_input": 0,
+      "price_output": 0,
+      "price_currency": "CNY",
+      "price_unit": "per_million_tokens",
+      "is_free": true,
+      "capabilities": [
+        "video-generation"
+      ],
+      "tags": [
+        "video-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "permanent",
+      "free_quota": null,
+      "trial_scope": "specific",
+      "model_family": "cogvideox-flash",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "video-creation"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "bigmodel/cogview-3-flash",
+      "object": "model",
+      "created": 1777522966,
+      "owned_by": "bigmodel",
+      "provider": "bigmodel",
+      "model_id": "bigmodel/cogview-3-flash",
+      "name": "Cogview-3-Flash",
+      "description": "CogView-3-Flash 是智谱推出的免费图像生成模型，能够根据用户指令生成符合要求且美学评分更高的图像。CogView-3-Flash 主要应用于艺术创作、设计参考、游戏开发、虚拟现实等领域，帮助用户快速实现从文本到图像的转换需求。",
+      "context_label": "unknown",
+      "price_input": 0,
+      "price_output": 0,
+      "price_currency": "CNY",
+      "price_unit": "per_million_tokens",
+      "is_free": true,
+      "capabilities": [
+        "image-generation"
+      ],
+      "tags": [
+        "image-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "permanent",
+      "free_quota": null,
+      "trial_scope": "specific",
+      "model_family": "cogview-3-flash",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "creative-generation",
+        "art"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
       "id": "bigmodel/glm-4-flash-250414",
       "object": "model",
-      "created": 1777521722,
+      "created": 1777522967,
       "owned_by": "bigmodel",
       "provider": "bigmodel",
       "model_id": "bigmodel/glm-4-flash-250414",
       "name": "GLM-4-Flash-250414",
-      "description": "语言模型",
+      "description": "GLM-4-Flash-250414 语言模型是 智谱AI 首个免费的大模型 API，它在实时网页检索、长上下文处理、多语言支持等方面表现出色，适用于智能问答、摘要生成和文本数据处理等多种应用场景。",
       "context_size": 128000,
       "context_label": "128K",
       "price_input": 0,
@@ -25,67 +100,24 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "tool-use",
+        "function-calling"
       ],
       "tags": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "tool-use",
+        "function-calling"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
-      "has_tool_use": false,
+      "has_tool_use": true,
       "free_mechanism": "permanent",
       "free_quota": null,
       "trial_scope": "specific",
       "model_family": "glm-4-flash",
-      "aliases": [
-        "bigmodel/glm-4-flash"
-      ],
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "bigmodel/glm-4-flash",
-      "object": "model",
-      "created": 1777521723,
-      "owned_by": "bigmodel",
-      "provider": "bigmodel",
-      "model_id": "bigmodel/glm-4-flash",
-      "name": "GLM-4-Flash",
-      "description": "历史模型",
-      "context_size": 128000,
-      "context_label": "8K",
-      "price_input": 0,
-      "price_output": 0,
-      "price_currency": "CNY",
-      "price_unit": "per_million_tokens",
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "chat",
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "permanent",
-      "free_quota": null,
-      "trial_scope": "specific",
-      "model_family": "glm-4-flash",
-      "aliases": [
-        "bigmodel/glm-4-flash-250414"
-      ],
+      "aliases": [],
       "tier": "medium",
       "speed": "fast",
       "use_case": [
@@ -100,14 +132,13 @@
     {
       "id": "bigmodel/glm-4.1v-thinking-flash",
       "object": "model",
-      "created": 1777521724,
+      "created": 1777522968,
       "owned_by": "bigmodel",
       "provider": "bigmodel",
       "model_id": "bigmodel/glm-4.1v-thinking-flash",
       "name": "GLM-4.1V-Thinking-Flash",
-      "description": "视觉推理",
-      "context_size": 64000,
-      "context_label": "8K",
+      "description": "GLM-4.1V-Thinking-Flash 是智谱推出的免费视觉推理模型。它在图表/视频理解、前端 Coding、GUI 任务等场景表现出色，核心能力达到全面新 SOTA。模型引入思维链推理机制，显著提升了复杂场景中的回答精准度与可解释性。",
+      "context_label": "unknown",
       "price_input": 0,
       "price_output": 0,
       "price_currency": "CNY",
@@ -123,10 +154,11 @@
         "chat",
         "text-generation",
         "vision",
-        "reasoning"
+        "reasoning",
+        "multimodal"
       ],
-      "is_reasoning": false,
-      "is_multimodal": false,
+      "is_reasoning": true,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": "permanent",
       "free_quota": null,
@@ -152,16 +184,131 @@
       "estimated_latency": "< 1s"
     },
     {
+      "id": "bigmodel/glm-4.6v-flash",
+      "object": "model",
+      "created": 1777522969,
+      "owned_by": "bigmodel",
+      "provider": "bigmodel",
+      "model_id": "bigmodel/glm-4.6v-flash",
+      "name": "GLM-4.6V-Flash",
+      "description": "GLM-4.6V-Flash 是 GLM-4.6V 的免费版本，是 GLM 系列在多模态方向上的一次重要迭代，支持开启或关闭思考模式。它将训练时上下文窗口提升到128k tokens，在 视觉理解精度上达到同参数规模 SOTA，并首次在模型架构中将 Function Call（工具调用）能力原生融入视觉模型，打通从「视觉感知」到「可执行行动（Action）」的链路，为真实业务场景中的多模态 Agent 提供统一的技术底座。",
+      "context_size": 128000,
+      "context_label": "128K",
+      "price_input": 0,
+      "price_output": 0,
+      "price_currency": "CNY",
+      "price_unit": "per_million_tokens",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision",
+        "reasoning",
+        "tool-use",
+        "function-calling"
+      ],
+      "tags": [
+        "tool-use",
+        "chat",
+        "text-generation",
+        "vision",
+        "reasoning",
+        "function-calling",
+        "multimodal"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": true,
+      "free_mechanism": "permanent",
+      "free_quota": null,
+      "trial_scope": "specific",
+      "model_family": "glm-4.6v-flash",
+      "aliases": [
+        "GLM-4.6V-Flash"
+      ],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "image-understanding",
+        "visual-q&a",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "bigmodel/glm-4.7-flash",
+      "object": "model",
+      "created": 1777522970,
+      "owned_by": "bigmodel",
+      "provider": "bigmodel",
+      "model_id": "bigmodel/glm-4.7-flash",
+      "name": "GLM-4.7-Flash",
+      "description": "GLM-4.7-Flash 作为 30B 级 SOTA 模型，提供了一个兼顾性能与效率的新选择。面向 Agentic Coding 场景强化了编码能力、长程任务规划与工具协同，并在多个公开基准的当期榜单中取得同尺寸开源模型中的出色表现。在执行复杂智能体任务，在工具调用时指令遵循更强，Artifacts 与 Agentic Coding 的前端美感和长程任务完成效率进一步提升。",
+      "context_size": 200000,
+      "context_label": "200K",
+      "price_input": 0,
+      "price_output": 0,
+      "price_currency": "CNY",
+      "price_unit": "per_million_tokens",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "reasoning",
+        "tool-use",
+        "function-calling"
+      ],
+      "tags": [
+        "chat",
+        "text-generation",
+        "reasoning",
+        "tool-use",
+        "function-calling"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "permanent",
+      "free_quota": null,
+      "trial_scope": "specific",
+      "model_family": "glm-4.7-flash",
+      "aliases": [
+        "GLM-4.7-Flash",
+        "xunfei/GLM-4.7-Flash"
+      ],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
       "id": "bigmodel/glm-4v-flash",
       "object": "model",
-      "created": 1777521725,
+      "created": 1777522971,
       "owned_by": "bigmodel",
       "provider": "bigmodel",
       "model_id": "bigmodel/glm-4v-flash",
       "name": "GLM-4V-Flash",
-      "description": "图像理解",
-      "context_size": 4000,
-      "context_label": "8K",
+      "description": "GLM-4V-Flash 是智谱推出的首个完全免费的图像理解模型。在图像识别、图像问答、图像推理等多项任务中展现出卓越的性能。在企业应用场景中，GLM-4V-Flash 表现突出，不仅能够帮助企业实现高效图像处理，还能紧密贴合不同垂直领域的实际需求，适配多样化应用场景。",
+      "context_label": "unknown",
       "price_input": 0,
       "price_output": 0,
       "price_currency": "CNY",
@@ -175,10 +322,11 @@
       "tags": [
         "chat",
         "text-generation",
-        "vision"
+        "vision",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": "permanent",
       "free_quota": null,
@@ -199,150 +347,9 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "bigmodel/glm-z1-flash",
-      "object": "model",
-      "created": 1777521726,
-      "owned_by": "bigmodel",
-      "provider": "bigmodel",
-      "model_id": "bigmodel/glm-z1-flash",
-      "name": "GLM-Z1-Flash",
-      "description": "推理模型",
-      "context_size": 128000,
-      "context_label": "128K",
-      "price_input": 0,
-      "price_output": 0,
-      "price_currency": "CNY",
-      "price_unit": "per_million_tokens",
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "reasoning"
-      ],
-      "tags": [
-        "chat",
-        "text-generation",
-        "reasoning"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "permanent",
-      "free_quota": null,
-      "trial_scope": "specific",
-      "model_family": "glm-z1-flash",
-      "aliases": [],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance",
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "bigmodel/cogview-3-flash",
-      "object": "model",
-      "created": 1777521727,
-      "owned_by": "bigmodel",
-      "provider": "bigmodel",
-      "model_id": "bigmodel/cogview-3-flash",
-      "name": "CogView-3-Flash",
-      "description": "图像生成",
-      "context_label": "unknown",
-      "price_input": 0,
-      "price_output": 0,
-      "price_currency": "CNY",
-      "price_unit": "per_million_tokens",
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "vision",
-        "image-generation"
-      ],
-      "tags": [
-        "chat",
-        "text-generation",
-        "image-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "permanent",
-      "free_quota": null,
-      "trial_scope": "specific",
-      "model_family": "cogview-3-flash",
-      "aliases": [],
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance",
-        "creative-generation",
-        "art"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "bigmodel/cogvideox-flash",
-      "object": "model",
-      "created": 1777521728,
-      "owned_by": "bigmodel",
-      "provider": "bigmodel",
-      "model_id": "bigmodel/cogvideox-flash",
-      "name": "CogVideoX-Flash",
-      "description": "视频生成",
-      "context_label": "unknown",
-      "price_input": 0,
-      "price_output": 0,
-      "price_currency": "CNY",
-      "price_unit": "per_million_tokens",
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "video-generation"
-      ],
-      "tags": [
-        "chat",
-        "text-generation",
-        "video-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "permanent",
-      "free_quota": null,
-      "trial_scope": "specific",
-      "model_family": "cogvideox-flash",
-      "aliases": [],
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance",
-        "video-creation"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
       "id": "jina-clip-v1",
       "object": "model",
-      "created": 1777521729,
+      "created": 1777522972,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "jina-clip-v1",
@@ -381,7 +388,7 @@
     {
       "id": "jina-clip-v2",
       "object": "model",
-      "created": 1777521730,
+      "created": 1777522973,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "jina-clip-v2",
@@ -420,7 +427,7 @@
     {
       "id": "nsfw-classifier",
       "object": "model",
-      "created": 1777521731,
+      "created": 1777522974,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "nsfw-classifier",
@@ -458,7 +465,7 @@
     {
       "id": "SenseVoiceSmall",
       "object": "model",
-      "created": 1777521732,
+      "created": 1777522975,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "SenseVoiceSmall",
@@ -496,7 +503,7 @@
     {
       "id": "Security-semantic-filtering",
       "object": "model",
-      "created": 1777521733,
+      "created": 1777522976,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "Security-semantic-filtering",
@@ -535,7 +542,7 @@
     {
       "id": "bce-embedding-base_v1",
       "object": "model",
-      "created": 1777521734,
+      "created": 1777522977,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "bce-embedding-base_v1",
@@ -575,7 +582,7 @@
     {
       "id": "bce-reranker-base_v1",
       "object": "model",
-      "created": 1777521735,
+      "created": 1777522978,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "bce-reranker-base_v1",
@@ -615,7 +622,7 @@
     {
       "id": "DeepSeek-R1-Distill-Qwen-1.5B",
       "object": "model",
-      "created": 1777521736,
+      "created": 1777522979,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "DeepSeek-R1-Distill-Qwen-1.5B",
@@ -662,7 +669,7 @@
     {
       "id": "DeepSeek-R1-Distill-Qwen-14B",
       "object": "model",
-      "created": 1777521737,
+      "created": 1777522980,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "DeepSeek-R1-Distill-Qwen-14B",
@@ -709,7 +716,7 @@
     {
       "id": "DeepSeek-R1-Distill-Qwen-7B",
       "object": "model",
-      "created": 1777521738,
+      "created": 1777522981,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "DeepSeek-R1-Distill-Qwen-7B",
@@ -756,7 +763,7 @@
     {
       "id": "internlm3-8b-instruct",
       "object": "model",
-      "created": 1777521739,
+      "created": 1777522982,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "internlm3-8b-instruct",
@@ -797,7 +804,7 @@
     {
       "id": "jina-reranker-m0",
       "object": "model",
-      "created": 1777521740,
+      "created": 1777522983,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "jina-reranker-m0",
@@ -837,7 +844,7 @@
     {
       "id": "Spark-TTS-0.5B",
       "object": "model",
-      "created": 1777521741,
+      "created": 1777522984,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "Spark-TTS-0.5B",
@@ -880,7 +887,7 @@
     {
       "id": "nomic-embed-code",
       "object": "model",
-      "created": 1777521742,
+      "created": 1777522985,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "nomic-embed-code",
@@ -924,7 +931,7 @@
     {
       "id": "all-mpnet-base-v2",
       "object": "model",
-      "created": 1777521743,
+      "created": 1777522986,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "all-mpnet-base-v2",
@@ -962,7 +969,7 @@
     {
       "id": "HealthGPT-L14",
       "object": "model",
-      "created": 1777521744,
+      "created": 1777522987,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "HealthGPT-L14",
@@ -1001,7 +1008,7 @@
     {
       "id": "Qwen3-8B",
       "object": "model",
-      "created": 1777521745,
+      "created": 1777522988,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "Qwen3-8B",
@@ -1043,7 +1050,7 @@
     {
       "id": "Qwen3-0.6B",
       "object": "model",
-      "created": 1777521746,
+      "created": 1777522989,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "Qwen3-0.6B",
@@ -1085,7 +1092,7 @@
     {
       "id": "Qwen3-4B",
       "object": "model",
-      "created": 1777521747,
+      "created": 1777522990,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "Qwen3-4B",
@@ -1127,7 +1134,7 @@
     {
       "id": "DeepSeek-Prover-V2-7B",
       "object": "model",
-      "created": 1777521748,
+      "created": 1777522991,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "DeepSeek-Prover-V2-7B",
@@ -1165,7 +1172,7 @@
     {
       "id": "GLM-4-9B-0414",
       "object": "model",
-      "created": 1777521749,
+      "created": 1777522992,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "GLM-4-9B-0414",
@@ -1192,7 +1199,6 @@
       "trial_scope": "specific",
       "model_family": "glm-4-9b",
       "aliases": [
-        "bigmodel/glm-4-9b",
         "glm-4-9b-chat"
       ],
       "parameter_count": 9000000000,
@@ -1208,7 +1214,7 @@
     {
       "id": "medgemma-4b-it",
       "object": "model",
-      "created": 1777521750,
+      "created": 1777522993,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "medgemma-4b-it",
@@ -1248,7 +1254,7 @@
     {
       "id": "Qwen3-Embedding-0.6B",
       "object": "model",
-      "created": 1777521751,
+      "created": 1777522994,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "Qwen3-Embedding-0.6B",
@@ -1289,7 +1295,7 @@
     {
       "id": "Qwen3-Embedding-4B",
       "object": "model",
-      "created": 1777521752,
+      "created": 1777522995,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "Qwen3-Embedding-4B",
@@ -1330,7 +1336,7 @@
     {
       "id": "Qwen3-Embedding-8B",
       "object": "model",
-      "created": 1777521753,
+      "created": 1777522996,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "Qwen3-Embedding-8B",
@@ -1373,7 +1379,7 @@
     {
       "id": "Qwen3-Reranker-0.6B",
       "object": "model",
-      "created": 1777521754,
+      "created": 1777522997,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "Qwen3-Reranker-0.6B",
@@ -1414,7 +1420,7 @@
     {
       "id": "Qwen3-Reranker-4B",
       "object": "model",
-      "created": 1777521755,
+      "created": 1777522998,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "Qwen3-Reranker-4B",
@@ -1455,7 +1461,7 @@
     {
       "id": "Qwen3-Reranker-8B",
       "object": "model",
-      "created": 1777521756,
+      "created": 1777522999,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "Qwen3-Reranker-8B",
@@ -1498,7 +1504,7 @@
     {
       "id": "Lingshu-32B",
       "object": "model",
-      "created": 1777521757,
+      "created": 1777523000,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "Lingshu-32B",
@@ -1538,7 +1544,7 @@
     {
       "id": "jina-embeddings-v4",
       "object": "model",
-      "created": 1777521758,
+      "created": 1777523001,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "jina-embeddings-v4",
@@ -1577,7 +1583,7 @@
     {
       "id": "nonescape-v0",
       "object": "model",
-      "created": 1777521759,
+      "created": 1777523002,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "nonescape-v0",
@@ -1615,7 +1621,7 @@
     {
       "id": "Baichuan-M2-32B",
       "object": "model",
-      "created": 1777521760,
+      "created": 1777523003,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "Baichuan-M2-32B",
@@ -1655,7 +1661,7 @@
     {
       "id": "Youtu-Embedding",
       "object": "model",
-      "created": 1777521761,
+      "created": 1777523004,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "Youtu-Embedding",
@@ -1695,7 +1701,7 @@
     {
       "id": "Qwen3Guard-Gen-0.6B",
       "object": "model",
-      "created": 1777521762,
+      "created": 1777523005,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "Qwen3Guard-Gen-0.6B",
@@ -1735,7 +1741,7 @@
     {
       "id": "GLM-4.6V-Flash",
       "object": "model",
-      "created": 1777521763,
+      "created": 1777523006,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "GLM-4.6V-Flash",
@@ -1761,7 +1767,9 @@
       "free_quota": null,
       "trial_scope": "specific",
       "model_family": "glm-4.6v-flash",
-      "aliases": [],
+      "aliases": [
+        "bigmodel/glm-4.6v-flash"
+      ],
       "tier": "medium",
       "speed": "fast",
       "use_case": [
@@ -1774,7 +1782,7 @@
     {
       "id": "HuatuoGPT-o1-7B",
       "object": "model",
-      "created": 1777521764,
+      "created": 1777523007,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "HuatuoGPT-o1-7B",
@@ -1814,7 +1822,7 @@
     {
       "id": "GLM-ASR",
       "object": "model",
-      "created": 1777521765,
+      "created": 1777523008,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "GLM-ASR",
@@ -1840,9 +1848,7 @@
       "trial_scope": "specific",
       "model_family": "glm-asr",
       "model_variant": "asr",
-      "aliases": [
-        "bigmodel/glm-asr-2512"
-      ],
+      "aliases": [],
       "tier": "medium",
       "speed": "fast",
       "use_case": [
@@ -1855,7 +1861,7 @@
     {
       "id": "GLM-4.7-Flash",
       "object": "model",
-      "created": 1777521766,
+      "created": 1777523009,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "GLM-4.7-Flash",
@@ -1882,6 +1888,7 @@
       "trial_scope": "specific",
       "model_family": "glm-4.7-flash",
       "aliases": [
+        "bigmodel/glm-4.7-flash",
         "xunfei/GLM-4.7-Flash"
       ],
       "tier": "medium",
@@ -1896,7 +1903,7 @@
     {
       "id": "bge-large-zh-v1.5",
       "object": "model",
-      "created": 1777521767,
+      "created": 1777523010,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "bge-large-zh-v1.5",
@@ -1935,7 +1942,7 @@
     {
       "id": "bge-small-zh-v1.5",
       "object": "model",
-      "created": 1777521768,
+      "created": 1777523011,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "bge-small-zh-v1.5",
@@ -1974,7 +1981,7 @@
     {
       "id": "bge-m3",
       "object": "model",
-      "created": 1777521769,
+      "created": 1777523012,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "bge-m3",
@@ -2013,7 +2020,7 @@
     {
       "id": "bge-reranker-v2-m3",
       "object": "model",
-      "created": 1777521770,
+      "created": 1777523013,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "bge-reranker-v2-m3",
@@ -2053,7 +2060,7 @@
     {
       "id": "glm-4-9b-chat",
       "object": "model",
-      "created": 1777521771,
+      "created": 1777523014,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "glm-4-9b-chat",
@@ -2081,7 +2088,6 @@
       "model_family": "glm-4-9b",
       "model_variant": "chat",
       "aliases": [
-        "bigmodel/glm-4-9b",
         "GLM-4-9B-0414"
       ],
       "parameter_count": 9000000000,
@@ -2097,7 +2103,7 @@
     {
       "id": "Qwen2-7B-Instruct",
       "object": "model",
-      "created": 1777521772,
+      "created": 1777523015,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "Qwen2-7B-Instruct",
