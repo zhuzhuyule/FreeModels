@@ -151,17 +151,27 @@ export function formatNotification(p: NotifyPayload): string {
 }
 
 export async function notifyWechat(payload: NotifyPayload): Promise<void> {
-  const key = process.env.WECHAT_QYAPI_ID;
+  const rawKey = process.env.WECHAT_QYAPI_ID;
+  const key = rawKey?.trim();
+
   if (!key) {
-    console.log('[Notify] WECHAT_QYAPI_ID not set, skipping notification.');
+    console.warn(
+      `[Notify] ⚠ WECHAT_QYAPI_ID is ${rawKey === undefined ? 'undefined' : 'empty'} — notification skipped.\n` +
+      `        Check: (1) repo secret name spelled exactly 'WECHAT_QYAPI_ID',\n` +
+      `        (2) workflow yaml has 'WECHAT_QYAPI_ID: \${{ secrets.WECHAT_QYAPI_ID }}',\n` +
+      `        (3) secret value is non-empty (paste only the key= value, not the full URL).`
+    );
     return;
   }
 
+  const preview = formatNotification(payload);
+  console.log('[Notify] Sending WeChat message:');
+  console.log('---8<---');
+  console.log(preview);
+  console.log('--->8---');
+
   const url = `${WECHAT_API}?key=${encodeURIComponent(key)}`;
-  const body = {
-    msgtype: 'text',
-    text: { content: formatNotification(payload) },
-  };
+  const body = { msgtype: 'text', text: { content: preview } };
 
   try {
     const res = await fetch(url, {
@@ -169,13 +179,20 @@ export async function notifyWechat(payload: NotifyPayload): Promise<void> {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(body),
     });
-    const json = (await res.json()) as { errcode?: number; errmsg?: string };
+    const text = await res.text();
+    let json: { errcode?: number; errmsg?: string } = {};
+    try {
+      json = JSON.parse(text);
+    } catch {
+      console.warn(`[Notify] non-JSON response (HTTP ${res.status}): ${text.slice(0, 200)}`);
+      return;
+    }
     if (json.errcode === 0) {
-      console.log('[Notify] WeChat notification sent.');
+      console.log('[Notify] ✓ WeChat notification sent.');
     } else {
-      console.warn(`[Notify] WeChat returned errcode=${json.errcode} errmsg=${json.errmsg}`);
+      console.warn(`[Notify] ⚠ WeChat errcode=${json.errcode} errmsg=${json.errmsg ?? '(none)'}`);
     }
   } catch (err) {
-    console.warn('[Notify] WeChat send failed:', err instanceof Error ? err.message : err);
+    console.warn('[Notify] ✗ WeChat fetch failed:', err instanceof Error ? err.message : err);
   }
 }
