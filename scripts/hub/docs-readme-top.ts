@@ -7,7 +7,7 @@ const TARGET_HEADING = '## 直接使用预编译 JSON（推荐 API 消费方）'
 const SECTIONS = [
   { key: 'PROVIDER_INDEX', heading: '## Provider 支持情况', note: '> 该表由 `npm run generate-docs` 根据 `data/models.json` 自动更新。' },
   { key: 'STATS', heading: '## 数据规模', note: '> 该表由 `npm run generate-docs` 自动更新。' },
-  { key: 'FREE_MODELS', heading: '## 免费模型列表', note: '> 该表由 `npm run generate-docs` 自动更新，展示 `is_free=true` 的模型。完整数据请用 `data/views/free/models.json`，或按机制查 `free-permanent` / `free-rate-limited` / `free-quota` / `paid-trial`。' },
+  { key: 'FREE_MODELS', heading: '## 免费模型', note: '> 该区块由 `npm run generate-docs` 自动更新。' },
 ] as const;
 
 function escapeRegex(s: string): string {

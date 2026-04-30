@@ -1,7 +1,7 @@
 {
   "object": "list",
   "view": "fast",
-  "updated_at": "2026-04-30T15:40:39.982Z",
+  "updated_at": "2026-04-30T15:52:48.481Z",
   "total": 199,
   "filters": {
     "speed": "fast"
@@ -10,7 +10,7 @@
     {
       "id": "bigmodel/glm-4-flash-250414",
       "object": "model",
-      "created": 1777563440,
+      "created": 1777564169,
       "owned_by": "bigmodel",
       "provider": "bigmodel",
       "model_id": "bigmodel/glm-4-flash-250414",
@@ -59,7 +59,7 @@
     {
       "id": "bigmodel/glm-4-flash",
       "object": "model",
-      "created": 1777563441,
+      "created": 1777564170,
       "owned_by": "bigmodel",
       "provider": "bigmodel",
       "model_id": "bigmodel/glm-4-flash",
@@ -104,7 +104,7 @@
     {
       "id": "bigmodel/glm-4.1v-thinking-flash",
       "object": "model",
-      "created": 1777563442,
+      "created": 1777564171,
       "owned_by": "bigmodel",
       "provider": "bigmodel",
       "model_id": "bigmodel/glm-4.1v-thinking-flash",
@@ -159,7 +159,7 @@
     {
       "id": "bigmodel/glm-4v-flash",
       "object": "model",
-      "created": 1777563443,
+      "created": 1777564172,
       "owned_by": "bigmodel",
       "provider": "bigmodel",
       "model_id": "bigmodel/glm-4v-flash",
@@ -207,7 +207,7 @@
     {
       "id": "bigmodel/glm-z1-flash",
       "object": "model",
-      "created": 1777563444,
+      "created": 1777564173,
       "owned_by": "bigmodel",
       "provider": "bigmodel",
       "model_id": "bigmodel/glm-z1-flash",
@@ -256,7 +256,7 @@
     {
       "id": "bigmodel/cogview-3-flash",
       "object": "model",
-      "created": 1777563445,
+      "created": 1777564174,
       "owned_by": "bigmodel",
       "provider": "bigmodel",
       "model_id": "bigmodel/cogview-3-flash",
@@ -294,7 +294,7 @@
     {
       "id": "bigmodel/cogvideox-flash",
       "object": "model",
-      "created": 1777563446,
+      "created": 1777564175,
       "owned_by": "bigmodel",
       "provider": "bigmodel",
       "model_id": "bigmodel/cogvideox-flash",
@@ -331,7 +331,7 @@
     {
       "id": "bigmodel/glm-4.6v-flash",
       "object": "model",
-      "created": 1777563447,
+      "created": 1777564176,
       "owned_by": "bigmodel",
       "provider": "bigmodel",
       "model_id": "bigmodel/glm-4.6v-flash",
@@ -391,7 +391,7 @@
     {
       "id": "bigmodel/glm-4.7-flash",
       "object": "model",
-      "created": 1777563448,
+      "created": 1777564177,
       "owned_by": "bigmodel",
       "provider": "bigmodel",
       "model_id": "bigmodel/glm-4.7-flash",
@@ -447,7 +447,7 @@
     {
       "id": "cerebras/llama3.1-8b",
       "object": "model",
-      "created": 1777563449,
+      "created": 1777564178,
       "owned_by": "cerebras",
       "provider": "cerebras",
       "model_id": "cerebras/llama3.1-8b",
@@ -474,8 +474,10 @@
       "free_mechanism": "rate-limited",
       "free_quota": null,
       "trial_scope": "specific",
-      "model_family": "llama3.1-8b",
-      "aliases": [],
+      "model_family": "llama-3.1-8b",
+      "aliases": [
+        "meta/llama-3.1-8b-instruct"
+      ],
       "parameter_count": 8000000000,
       "tier": "medium",
       "speed": "fast",
@@ -491,7 +493,7 @@
     {
       "id": "cerebras/gpt-oss-120b",
       "object": "model",
-      "created": 1777563450,
+      "created": 1777564179,
       "owned_by": "cerebras",
       "provider": "cerebras",
       "model_id": "cerebras/gpt-oss-120b",
@@ -517,13 +519,8 @@
       "free_mechanism": "rate-limited",
       "free_quota": null,
       "trial_scope": "specific",
-      "model_family": "gpt-oss-120b",
-      "aliases": [
-        "gpt-oss-120b",
-        "groq/openai/gpt-oss-120b",
-        "openai/gpt-oss-120b",
-        "openrouter/openai/gpt-oss-120b"
-      ],
+      "model_family": "gpt-oss",
+      "aliases": [],
       "tier": "medium",
       "speed": "fast",
       "use_case": [
@@ -538,7 +535,7 @@
     {
       "id": "cerebras/qwen-3-235b-a22b-instruct-2507",
       "object": "model",
-      "created": 1777563451,
+      "created": 1777564180,
       "owned_by": "cerebras",
       "provider": "cerebras",
       "model_id": "cerebras/qwen-3-235b-a22b-instruct-2507",
@@ -564,7 +561,7 @@
       "free_mechanism": "preview",
       "free_quota": null,
       "trial_scope": "specific",
-      "model_family": "qwen-3-235b-a22b",
+      "model_family": "qwen-3-235b",
       "model_variant": "instruct",
       "aliases": [],
       "parameter_count": 235000000000,
@@ -586,7 +583,7 @@
     {
       "id": "cerebras/zai-glm-4.7",
       "object": "model",
-      "created": 1777563452,
+      "created": 1777564181,
       "owned_by": "cerebras",
       "provider": "cerebras",
       "model_id": "cerebras/zai-glm-4.7",
@@ -609,11 +606,8 @@
       "free_mechanism": "preview",
       "free_quota": null,
       "trial_scope": "specific",
-      "model_family": "glm-4.7",
-      "aliases": [
-        "GLM-4.7",
-        "xunfei/xopglm47blth2"
-      ],
+      "model_family": "z.ai-glm-4.7",
+      "aliases": [],
       "tier": "medium",
       "speed": "fast",
       "use_case": [
@@ -628,7 +622,7 @@
     {
       "id": "jina-clip-v1",
       "object": "model",
-      "created": 1777563453,
+      "created": 1777564182,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "jina-clip-v1",
@@ -667,7 +661,7 @@
     {
       "id": "jina-clip-v2",
       "object": "model",
-      "created": 1777563454,
+      "created": 1777564183,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "jina-clip-v2",
@@ -706,7 +700,7 @@
     {
       "id": "nsfw-classifier",
       "object": "model",
-      "created": 1777563455,
+      "created": 1777564184,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "nsfw-classifier",
@@ -744,7 +738,7 @@
     {
       "id": "SenseVoiceSmall",
       "object": "model",
-      "created": 1777563456,
+      "created": 1777564185,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "SenseVoiceSmall",
@@ -782,7 +776,7 @@
     {
       "id": "Security-semantic-filtering",
       "object": "model",
-      "created": 1777563457,
+      "created": 1777564186,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "Security-semantic-filtering",
@@ -821,7 +815,7 @@
     {
       "id": "bce-embedding-base_v1",
       "object": "model",
-      "created": 1777563458,
+      "created": 1777564187,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "bce-embedding-base_v1",
@@ -846,7 +840,7 @@
       "free_mechanism": "permanent",
       "free_quota": null,
       "trial_scope": "specific",
-      "model_family": "bce-embedding-base_v1",
+      "model_family": "bce-embedding-base-v1",
       "model_variant": "embedding",
       "aliases": [],
       "tier": "medium",
@@ -861,7 +855,7 @@
     {
       "id": "bce-reranker-base_v1",
       "object": "model",
-      "created": 1777563459,
+      "created": 1777564188,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "bce-reranker-base_v1",
@@ -886,7 +880,7 @@
       "free_mechanism": "permanent",
       "free_quota": null,
       "trial_scope": "specific",
-      "model_family": "bce-reranker-base_v1",
+      "model_family": "bce-reranker-base-v1",
       "model_variant": "reranker",
       "aliases": [],
       "tier": "medium",
@@ -901,7 +895,7 @@
     {
       "id": "DeepSeek-R1-Distill-Qwen-1.5B",
       "object": "model",
-      "created": 1777563460,
+      "created": 1777564189,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "DeepSeek-R1-Distill-Qwen-1.5B",
@@ -948,7 +942,7 @@
     {
       "id": "DeepSeek-R1-Distill-Qwen-14B",
       "object": "model",
-      "created": 1777563461,
+      "created": 1777564190,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "DeepSeek-R1-Distill-Qwen-14B",
@@ -995,7 +989,7 @@
     {
       "id": "DeepSeek-R1-Distill-Qwen-7B",
       "object": "model",
-      "created": 1777563462,
+      "created": 1777564191,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "DeepSeek-R1-Distill-Qwen-7B",
@@ -1042,7 +1036,7 @@
     {
       "id": "internlm3-8b-instruct",
       "object": "model",
-      "created": 1777563463,
+      "created": 1777564192,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "internlm3-8b-instruct",
@@ -1083,7 +1077,7 @@
     {
       "id": "jina-reranker-m0",
       "object": "model",
-      "created": 1777563464,
+      "created": 1777564193,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "jina-reranker-m0",
@@ -1123,7 +1117,7 @@
     {
       "id": "Spark-TTS-0.5B",
       "object": "model",
-      "created": 1777563465,
+      "created": 1777564194,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "Spark-TTS-0.5B",
@@ -1166,7 +1160,7 @@
     {
       "id": "nomic-embed-code",
       "object": "model",
-      "created": 1777563466,
+      "created": 1777564195,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "nomic-embed-code",
@@ -1210,7 +1204,7 @@
     {
       "id": "all-mpnet-base-v2",
       "object": "model",
-      "created": 1777563467,
+      "created": 1777564196,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "all-mpnet-base-v2",
@@ -1248,7 +1242,7 @@
     {
       "id": "HealthGPT-L14",
       "object": "model",
-      "created": 1777563468,
+      "created": 1777564197,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "HealthGPT-L14",
@@ -1273,7 +1267,7 @@
       "free_mechanism": "permanent",
       "free_quota": null,
       "trial_scope": "specific",
-      "model_family": "healthgpt-l14",
+      "model_family": "healthgpt-医疗大模型",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
@@ -1287,7 +1281,7 @@
     {
       "id": "Qwen3-8B",
       "object": "model",
-      "created": 1777563469,
+      "created": 1777564198,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "Qwen3-8B",
@@ -1329,7 +1323,7 @@
     {
       "id": "Qwen3-0.6B",
       "object": "model",
-      "created": 1777563470,
+      "created": 1777564199,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "Qwen3-0.6B",
@@ -1371,7 +1365,7 @@
     {
       "id": "Qwen3-4B",
       "object": "model",
-      "created": 1777563471,
+      "created": 1777564200,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "Qwen3-4B",
@@ -1413,7 +1407,7 @@
     {
       "id": "DeepSeek-Prover-V2-7B",
       "object": "model",
-      "created": 1777563472,
+      "created": 1777564201,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "DeepSeek-Prover-V2-7B",
@@ -1437,7 +1431,7 @@
       "free_mechanism": "permanent",
       "free_quota": null,
       "trial_scope": "specific",
-      "model_family": "deepseek-prover-v2-7b",
+      "model_family": "deepseek-prover-数学定理证明",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
@@ -1451,7 +1445,7 @@
     {
       "id": "GLM-4-9B-0414",
       "object": "model",
-      "created": 1777563473,
+      "created": 1777564202,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "GLM-4-9B-0414",
@@ -1494,7 +1488,7 @@
     {
       "id": "medgemma-4b-it",
       "object": "model",
-      "created": 1777563474,
+      "created": 1777564203,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "medgemma-4b-it",
@@ -1519,7 +1513,7 @@
       "free_mechanism": "permanent",
       "free_quota": null,
       "trial_scope": "specific",
-      "model_family": "medgemma-4b",
+      "model_family": "medgemma-医疗大模型",
       "model_variant": "it",
       "aliases": [],
       "tier": "medium",
@@ -1534,7 +1528,7 @@
     {
       "id": "Qwen3-Embedding-0.6B",
       "object": "model",
-      "created": 1777563475,
+      "created": 1777564204,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "Qwen3-Embedding-0.6B",
@@ -1575,7 +1569,7 @@
     {
       "id": "Qwen3-Embedding-4B",
       "object": "model",
-      "created": 1777563476,
+      "created": 1777564205,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "Qwen3-Embedding-4B",
@@ -1616,7 +1610,7 @@
     {
       "id": "Qwen3-Embedding-8B",
       "object": "model",
-      "created": 1777563477,
+      "created": 1777564206,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "Qwen3-Embedding-8B",
@@ -1659,7 +1653,7 @@
     {
       "id": "Qwen3-Reranker-0.6B",
       "object": "model",
-      "created": 1777563478,
+      "created": 1777564207,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "Qwen3-Reranker-0.6B",
@@ -1700,7 +1694,7 @@
     {
       "id": "Qwen3-Reranker-4B",
       "object": "model",
-      "created": 1777563479,
+      "created": 1777564208,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "Qwen3-Reranker-4B",
@@ -1741,7 +1735,7 @@
     {
       "id": "Qwen3-Reranker-8B",
       "object": "model",
-      "created": 1777563480,
+      "created": 1777564209,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "Qwen3-Reranker-8B",
@@ -1784,7 +1778,7 @@
     {
       "id": "Lingshu-32B",
       "object": "model",
-      "created": 1777563481,
+      "created": 1777564210,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "Lingshu-32B",
@@ -1809,7 +1803,7 @@
       "free_mechanism": "permanent",
       "free_quota": null,
       "trial_scope": "specific",
-      "model_family": "lingshu-32b",
+      "model_family": "lingshu-32b-医疗大模型",
       "aliases": [],
       "parameter_count": 32000000000,
       "tier": "large",
@@ -1824,7 +1818,7 @@
     {
       "id": "jina-embeddings-v4",
       "object": "model",
-      "created": 1777563482,
+      "created": 1777564211,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "jina-embeddings-v4",
@@ -1863,7 +1857,7 @@
     {
       "id": "nonescape-v0",
       "object": "model",
-      "created": 1777563483,
+      "created": 1777564212,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "nonescape-v0",
@@ -1887,7 +1881,7 @@
       "free_mechanism": "permanent",
       "free_quota": null,
       "trial_scope": "specific",
-      "model_family": "nonescape-v0",
+      "model_family": "ai-图片检测",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
@@ -1901,7 +1895,7 @@
     {
       "id": "Baichuan-M2-32B",
       "object": "model",
-      "created": 1777563484,
+      "created": 1777564213,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "Baichuan-M2-32B",
@@ -1926,7 +1920,7 @@
       "free_mechanism": "permanent",
       "free_quota": null,
       "trial_scope": "specific",
-      "model_family": "m2-32b",
+      "model_family": "百川医疗大模型-m2-32b",
       "aliases": [],
       "parameter_count": 32000000000,
       "tier": "large",
@@ -1941,7 +1935,7 @@
     {
       "id": "Hunyuan-MT-Chimera-7B",
       "object": "model",
-      "created": 1777563485,
+      "created": 1777564214,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "Hunyuan-MT-Chimera-7B",
@@ -1966,7 +1960,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "all",
-      "model_family": "hunyuan-mt-chimera-7b",
+      "model_family": "hunyuan-mt-chimera-7b-翻译大模型",
       "aliases": [],
       "parameter_count": 7000000000,
       "tier": "medium",
@@ -1981,7 +1975,7 @@
     {
       "id": "Youtu-Embedding",
       "object": "model",
-      "created": 1777563486,
+      "created": 1777564215,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "Youtu-Embedding",
@@ -2021,7 +2015,7 @@
     {
       "id": "Qwen3Guard-Gen-0.6B",
       "object": "model",
-      "created": 1777563487,
+      "created": 1777564216,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "Qwen3Guard-Gen-0.6B",
@@ -2061,7 +2055,7 @@
     {
       "id": "GLM-4.6V-Flash",
       "object": "model",
-      "created": 1777563488,
+      "created": 1777564217,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "GLM-4.6V-Flash",
@@ -2102,7 +2096,7 @@
     {
       "id": "HuatuoGPT-o1-7B",
       "object": "model",
-      "created": 1777563489,
+      "created": 1777564218,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "HuatuoGPT-o1-7B",
@@ -2127,7 +2121,7 @@
       "free_mechanism": "permanent",
       "free_quota": null,
       "trial_scope": "specific",
-      "model_family": "huatuogpt-o1-7b",
+      "model_family": "huatuogpt-o1-7b-医疗大模型",
       "aliases": [],
       "parameter_count": 7000000000,
       "tier": "medium",
@@ -2142,7 +2136,7 @@
     {
       "id": "GLM-ASR",
       "object": "model",
-      "created": 1777563490,
+      "created": 1777564219,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "GLM-ASR",
@@ -2183,7 +2177,7 @@
     {
       "id": "AutoGLM-Phone-9B-Multilingual",
       "object": "model",
-      "created": 1777563491,
+      "created": 1777564220,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "AutoGLM-Phone-9B-Multilingual",
@@ -2223,7 +2217,7 @@
     {
       "id": "HY-MT1.5-7B",
       "object": "model",
-      "created": 1777563492,
+      "created": 1777564221,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "HY-MT1.5-7B",
@@ -2248,7 +2242,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "all",
-      "model_family": "hy-mt1.5-7b",
+      "model_family": "hy-mt1.5-7b-翻译大模型",
       "aliases": [],
       "parameter_count": 7000000000,
       "tier": "medium",
@@ -2263,7 +2257,7 @@
     {
       "id": "GLM-4.7-Flash",
       "object": "model",
-      "created": 1777563493,
+      "created": 1777564222,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "GLM-4.7-Flash",
@@ -2305,7 +2299,7 @@
     {
       "id": "Qwen3.5-35B-A3B",
       "object": "model",
-      "created": 1777563494,
+      "created": 1777564223,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "Qwen3.5-35B-A3B",
@@ -2347,7 +2341,7 @@
     {
       "id": "Qwen3.5-9B",
       "object": "model",
-      "created": 1777563495,
+      "created": 1777564224,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "Qwen3.5-9B",
@@ -2387,7 +2381,7 @@
     {
       "id": "Qwen3.6-35B-A3B",
       "object": "model",
-      "created": 1777563496,
+      "created": 1777564225,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "Qwen3.6-35B-A3B",
@@ -2429,7 +2423,7 @@
     {
       "id": "bge-large-zh-v1.5",
       "object": "model",
-      "created": 1777563497,
+      "created": 1777564226,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "bge-large-zh-v1.5",
@@ -2468,7 +2462,7 @@
     {
       "id": "bge-small-zh-v1.5",
       "object": "model",
-      "created": 1777563498,
+      "created": 1777564227,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "bge-small-zh-v1.5",
@@ -2507,7 +2501,7 @@
     {
       "id": "bge-m3",
       "object": "model",
-      "created": 1777563499,
+      "created": 1777564228,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "bge-m3",
@@ -2533,7 +2527,9 @@
       "free_quota": null,
       "trial_scope": "specific",
       "model_family": "bge-m3",
-      "aliases": [],
+      "aliases": [
+        "baai/bge-m3"
+      ],
       "tier": "medium",
       "speed": "fast",
       "use_case": [
@@ -2546,7 +2542,7 @@
     {
       "id": "bge-reranker-v2-m3",
       "object": "model",
-      "created": 1777563500,
+      "created": 1777564229,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "bge-reranker-v2-m3",
@@ -2586,7 +2582,7 @@
     {
       "id": "glm-4-9b-chat",
       "object": "model",
-      "created": 1777563501,
+      "created": 1777564230,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "glm-4-9b-chat",
@@ -2630,7 +2626,7 @@
     {
       "id": "Qwen2-7B-Instruct",
       "object": "model",
-      "created": 1777563502,
+      "created": 1777564231,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "Qwen2-7B-Instruct",
@@ -2671,7 +2667,7 @@
     {
       "id": "google/gemini-3.1-flash-lite-preview",
       "object": "model",
-      "created": 1777563503,
+      "created": 1777564232,
       "owned_by": "google",
       "provider": "google",
       "model_id": "google/gemini-3.1-flash-lite-preview",
@@ -2714,7 +2710,7 @@
     {
       "id": "google/gemini-3.1-flash-live-preview",
       "object": "model",
-      "created": 1777563504,
+      "created": 1777564233,
       "owned_by": "google",
       "provider": "google",
       "model_id": "google/gemini-3.1-flash-live-preview",
@@ -2761,7 +2757,7 @@
     {
       "id": "google/gemini-3.1-flash-tts-preview",
       "object": "model",
-      "created": 1777563505,
+      "created": 1777564234,
       "owned_by": "google",
       "provider": "google",
       "model_id": "google/gemini-3.1-flash-tts-preview",
@@ -2800,7 +2796,7 @@
     {
       "id": "google/gemini-3-flash-preview",
       "object": "model",
-      "created": 1777563506,
+      "created": 1777564235,
       "owned_by": "google",
       "provider": "google",
       "model_id": "google/gemini-3-flash-preview",
@@ -2844,7 +2840,7 @@
     {
       "id": "google/gemini-2.5-pro",
       "object": "model",
-      "created": 1777563507,
+      "created": 1777564236,
       "owned_by": "google",
       "provider": "google",
       "model_id": "google/gemini-2.5-pro",
@@ -2894,7 +2890,7 @@
     {
       "id": "google/gemini-2.5-flash",
       "object": "model",
-      "created": 1777563508,
+      "created": 1777564237,
       "owned_by": "google",
       "provider": "google",
       "model_id": "google/gemini-2.5-flash",
@@ -2943,7 +2939,7 @@
     {
       "id": "google/gemini-2.5-flash-lite",
       "object": "model",
-      "created": 1777563509,
+      "created": 1777564238,
       "owned_by": "google",
       "provider": "google",
       "model_id": "google/gemini-2.5-flash-lite",
@@ -2986,7 +2982,7 @@
     {
       "id": "google/gemini-2.5-flash-lite-preview-09-2025",
       "object": "model",
-      "created": 1777563510,
+      "created": 1777564239,
       "owned_by": "google",
       "provider": "google",
       "model_id": "google/gemini-2.5-flash-lite-preview-09-2025",
@@ -3013,7 +3009,7 @@
       "free_mechanism": "rate-limited",
       "free_quota": null,
       "trial_scope": "fast",
-      "model_family": "gemini-2.5-flash-lite-preview-09",
+      "model_family": "gemini-2.5-flash-lite-preview",
       "aliases": [],
       "tier": "small",
       "speed": "fast",
@@ -3029,7 +3025,7 @@
     {
       "id": "google/gemini-2.5-flash-native-audio-preview-12-2025",
       "object": "model",
-      "created": 1777563511,
+      "created": 1777564240,
       "owned_by": "google",
       "provider": "google",
       "model_id": "google/gemini-2.5-flash-native-audio-preview-12-2025",
@@ -3058,7 +3054,7 @@
       "free_mechanism": "rate-limited",
       "free_quota": null,
       "trial_scope": "fast",
-      "model_family": "gemini-2.5-flash-native-audio-preview-12",
+      "model_family": "gemini-2.5-flash-native-audio",
       "model_variant": "audio",
       "aliases": [],
       "tier": "medium",
@@ -3077,7 +3073,7 @@
     {
       "id": "google/gemini-2.5-flash-preview-tts",
       "object": "model",
-      "created": 1777563512,
+      "created": 1777564241,
       "owned_by": "google",
       "provider": "google",
       "model_id": "google/gemini-2.5-flash-preview-tts",
@@ -3116,7 +3112,7 @@
     {
       "id": "google/gemini-2.0-flash",
       "object": "model",
-      "created": 1777563513,
+      "created": 1777564242,
       "owned_by": "google",
       "provider": "google",
       "model_id": "google/gemini-2.0-flash",
@@ -3159,7 +3155,7 @@
     {
       "id": "google/gemini-2.0-flash-lite",
       "object": "model",
-      "created": 1777563514,
+      "created": 1777564243,
       "owned_by": "google",
       "provider": "google",
       "model_id": "google/gemini-2.0-flash-lite",
@@ -3202,7 +3198,7 @@
     {
       "id": "google/imagen-4.0-generate-001",
       "object": "model",
-      "created": 1777563515,
+      "created": 1777564244,
       "owned_by": "google",
       "provider": "google",
       "model_id": "google/imagen-4.0-generate-001",
@@ -3239,7 +3235,7 @@
     {
       "id": "google/imagen-4.0-fast-generate-001",
       "object": "model",
-      "created": 1777563516,
+      "created": 1777564245,
       "owned_by": "google",
       "provider": "google",
       "model_id": "google/imagen-4.0-fast-generate-001",
@@ -3276,7 +3272,7 @@
     {
       "id": "google/veo-3.1-generate-preview",
       "object": "model",
-      "created": 1777563517,
+      "created": 1777564246,
       "owned_by": "google",
       "provider": "google",
       "model_id": "google/veo-3.1-generate-preview",
@@ -3299,7 +3295,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "veo-3.1-generate-preview",
+      "model_family": "veo-3.1",
       "aliases": [],
       "tier": "small",
       "speed": "fast",
@@ -3312,7 +3308,7 @@
     {
       "id": "google/veo-3.1-fast-generate-preview",
       "object": "model",
-      "created": 1777563518,
+      "created": 1777564247,
       "owned_by": "google",
       "provider": "google",
       "model_id": "google/veo-3.1-fast-generate-preview",
@@ -3335,7 +3331,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "veo-3.1-fast-generate-preview",
+      "model_family": "veo-3.1-fast",
       "aliases": [],
       "tier": "small",
       "speed": "fast",
@@ -3348,7 +3344,7 @@
     {
       "id": "google/veo-3.0-generate-001",
       "object": "model",
-      "created": 1777563519,
+      "created": 1777564248,
       "owned_by": "google",
       "provider": "google",
       "model_id": "google/veo-3.0-generate-001",
@@ -3371,7 +3367,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "veo-3.0-generate-001",
+      "model_family": "veo-3.0",
       "aliases": [],
       "tier": "small",
       "speed": "fast",
@@ -3384,7 +3380,7 @@
     {
       "id": "google/veo-2.0-generate-001",
       "object": "model",
-      "created": 1777563520,
+      "created": 1777564249,
       "owned_by": "google",
       "provider": "google",
       "model_id": "google/veo-2.0-generate-001",
@@ -3407,7 +3403,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "veo-2.0-generate-001",
+      "model_family": "veo-2.0",
       "aliases": [],
       "tier": "small",
       "speed": "fast",
@@ -3420,7 +3416,7 @@
     {
       "id": "google/lyria-3-clip-preview",
       "object": "model",
-      "created": 1777563521,
+      "created": 1777564250,
       "owned_by": "google",
       "provider": "google",
       "model_id": "google/lyria-3-clip-preview",
@@ -3441,10 +3437,8 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "lyria-3-clip-preview",
-      "aliases": [
-        "openrouter/google/lyria-3-clip-preview"
-      ],
+      "model_family": "lyria-3-clip",
+      "aliases": [],
       "tier": "small",
       "speed": "fast",
       "use_case": [],
@@ -3454,7 +3448,7 @@
     {
       "id": "google/gemini-embedding-2",
       "object": "model",
-      "created": 1777563522,
+      "created": 1777564251,
       "owned_by": "google",
       "provider": "google",
       "model_id": "google/gemini-embedding-2",
@@ -3495,7 +3489,7 @@
     {
       "id": "google/gemini-embedding-001",
       "object": "model",
-      "created": 1777563523,
+      "created": 1777564252,
       "owned_by": "google",
       "provider": "google",
       "model_id": "google/gemini-embedding-001",
@@ -3519,7 +3513,7 @@
       "free_mechanism": "rate-limited",
       "free_quota": null,
       "trial_scope": "fast",
-      "model_family": "gemini-embedding-001",
+      "model_family": "gemini-embedding",
       "model_variant": "embedding",
       "aliases": [],
       "tier": "small",
@@ -3536,7 +3530,7 @@
     {
       "id": "google/gemini-robotics-er-1.6-preview",
       "object": "model",
-      "created": 1777563524,
+      "created": 1777564253,
       "owned_by": "google",
       "provider": "google",
       "model_id": "google/gemini-robotics-er-1.6-preview",
@@ -3580,7 +3574,7 @@
     {
       "id": "google/gemini-robotics-er-1.5-preview",
       "object": "model",
-      "created": 1777563525,
+      "created": 1777564254,
       "owned_by": "google",
       "provider": "google",
       "model_id": "google/gemini-robotics-er-1.5-preview",
@@ -3624,7 +3618,7 @@
     {
       "id": "google/gemma-4",
       "object": "model",
-      "created": 1777563526,
+      "created": 1777564255,
       "owned_by": "google",
       "provider": "google",
       "model_id": "google/gemma-4",
@@ -3664,7 +3658,7 @@
     {
       "id": "groq/llama-3.1-8b-instant",
       "object": "model",
-      "created": 1777563527,
+      "created": 1777564256,
       "owned_by": "groq",
       "provider": "groq",
       "model_id": "groq/llama-3.1-8b-instant",
@@ -3708,7 +3702,7 @@
     {
       "id": "groq/meta-llama/llama-4-scout-17b-16e-instruct",
       "object": "model",
-      "created": 1777563528,
+      "created": 1777564257,
       "owned_by": "groq",
       "provider": "groq",
       "model_id": "groq/meta-llama/llama-4-scout-17b-16e-instruct",
@@ -3735,7 +3729,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "llama-4-scout-17b-16e",
+      "model_family": "llama-4-scout-(17bx16e)",
       "model_variant": "instruct",
       "aliases": [],
       "tier": "small",
@@ -3752,7 +3746,7 @@
     {
       "id": "groq/openai/gpt-oss-20b",
       "object": "model",
-      "created": 1777563529,
+      "created": 1777564258,
       "owned_by": "groq",
       "provider": "groq",
       "model_id": "groq/openai/gpt-oss-20b",
@@ -3781,8 +3775,7 @@
       "trial_scope": "none",
       "model_family": "gpt-oss-20b",
       "aliases": [
-        "openai/gpt-oss-20b",
-        "openrouter/openai/gpt-oss-20b"
+        "openai/gpt-oss-20b"
       ],
       "parameter_count": 20000000000,
       "tier": "medium",
@@ -3799,7 +3792,7 @@
     {
       "id": "groq/openai/gpt-oss-120b",
       "object": "model",
-      "created": 1777563530,
+      "created": 1777564259,
       "owned_by": "groq",
       "provider": "groq",
       "model_id": "groq/openai/gpt-oss-120b",
@@ -3828,10 +3821,8 @@
       "trial_scope": "none",
       "model_family": "gpt-oss-120b",
       "aliases": [
-        "cerebras/gpt-oss-120b",
         "gpt-oss-120b",
-        "openai/gpt-oss-120b",
-        "openrouter/openai/gpt-oss-120b"
+        "openai/gpt-oss-120b"
       ],
       "parameter_count": 120000000000,
       "tier": "small",
@@ -3848,7 +3839,7 @@
     {
       "id": "groq/whisper-large-v3",
       "object": "model",
-      "created": 1777563531,
+      "created": 1777564260,
       "owned_by": "groq",
       "provider": "groq",
       "model_id": "groq/whisper-large-v3",
@@ -3872,12 +3863,8 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "whisper-large-v3",
-      "aliases": [
-        "whisper-large-v3-turbo",
-        "whisper-large-v3",
-        "groq/whisper-large-v3-turbo"
-      ],
+      "model_family": "whisper-v3-large",
+      "aliases": [],
       "tier": "small",
       "speed": "fast",
       "use_case": [
@@ -3892,7 +3879,7 @@
     {
       "id": "groq/whisper-large-v3-turbo",
       "object": "model",
-      "created": 1777563532,
+      "created": 1777564261,
       "owned_by": "groq",
       "provider": "groq",
       "model_id": "groq/whisper-large-v3-turbo",
@@ -3920,8 +3907,7 @@
       "model_variant": "turbo",
       "aliases": [
         "whisper-large-v3-turbo",
-        "whisper-large-v3",
-        "groq/whisper-large-v3"
+        "whisper-large-v3"
       ],
       "tier": "small",
       "speed": "fast",
@@ -3937,7 +3923,7 @@
     {
       "id": "longcat/LongCat-Flash-Chat",
       "object": "model",
-      "created": 1777563533,
+      "created": 1777564262,
       "owned_by": "longcat",
       "provider": "longcat",
       "model_id": "longcat/LongCat-Flash-Chat",
@@ -3980,7 +3966,7 @@
     {
       "id": "longcat/LongCat-Flash-Thinking",
       "object": "model",
-      "created": 1777563534,
+      "created": 1777564263,
       "owned_by": "longcat",
       "provider": "longcat",
       "model_id": "longcat/LongCat-Flash-Thinking",
@@ -4031,7 +4017,7 @@
     {
       "id": "longcat/LongCat-Flash-Thinking-2601",
       "object": "model",
-      "created": 1777563535,
+      "created": 1777564264,
       "owned_by": "longcat",
       "provider": "longcat",
       "model_id": "longcat/LongCat-Flash-Thinking-2601",
@@ -4082,7 +4068,7 @@
     {
       "id": "longcat/LongCat-Flash-Lite",
       "object": "model",
-      "created": 1777563536,
+      "created": 1777564265,
       "owned_by": "longcat",
       "provider": "longcat",
       "model_id": "longcat/LongCat-Flash-Lite",
@@ -4124,7 +4110,7 @@
     {
       "id": "longcat/LongCat-Flash-Omni-2603",
       "object": "model",
-      "created": 1777563537,
+      "created": 1777564266,
       "owned_by": "longcat",
       "provider": "longcat",
       "model_id": "longcat/LongCat-Flash-Omni-2603",
@@ -4170,7 +4156,7 @@
     {
       "id": "longcat/LongCat-Flash-Chat-2602-Exp",
       "object": "model",
-      "created": 1777563538,
+      "created": 1777564267,
       "owned_by": "longcat",
       "provider": "longcat",
       "model_id": "longcat/LongCat-Flash-Chat-2602-Exp",
@@ -4213,7 +4199,7 @@
     {
       "id": "longcat/LongCat-2.0-Preview",
       "object": "model",
-      "created": 1777563539,
+      "created": 1777564268,
       "owned_by": "longcat",
       "provider": "longcat",
       "model_id": "longcat/LongCat-2.0-Preview",
@@ -4257,7 +4243,7 @@
     {
       "id": "bytedance/seed-oss-36b-instruct",
       "object": "model",
-      "created": 1777563540,
+      "created": 1777564269,
       "owned_by": "nvidia",
       "provider": "nvidia",
       "model_id": "bytedance/seed-oss-36b-instruct",
@@ -4282,7 +4268,7 @@
         "notes": "NVIDIA NIM free credits, exhaustible"
       },
       "trial_scope": "specific",
-      "model_family": "bytedance-seed-oss-36b",
+      "model_family": "seed-oss-36b",
       "model_variant": "instruct",
       "aliases": [],
       "parameter_count": 36000000000,
@@ -4300,7 +4286,7 @@
     {
       "id": "google/gemma-2-2b-it",
       "object": "model",
-      "created": 1777563541,
+      "created": 1777564270,
       "owned_by": "nvidia",
       "provider": "nvidia",
       "model_id": "google/gemma-2-2b-it",
@@ -4343,7 +4329,7 @@
     {
       "id": "google/gemma-3-27b-it",
       "object": "model",
-      "created": 1777563542,
+      "created": 1777564271,
       "owned_by": "nvidia",
       "provider": "nvidia",
       "model_id": "google/gemma-3-27b-it",
@@ -4370,9 +4356,7 @@
       "trial_scope": "specific",
       "model_family": "gemma-3-27b",
       "model_variant": "it",
-      "aliases": [
-        "openrouter/google/gemma-3-27b-it"
-      ],
+      "aliases": [],
       "parameter_count": 27000000000,
       "tier": "medium",
       "speed": "fast",
@@ -4388,7 +4372,7 @@
     {
       "id": "google/gemma-3n-e2b-it",
       "object": "model",
-      "created": 1777563543,
+      "created": 1777564272,
       "owned_by": "nvidia",
       "provider": "nvidia",
       "model_id": "google/gemma-3n-e2b-it",
@@ -4415,9 +4399,7 @@
       "trial_scope": "specific",
       "model_family": "gemma-3n-e2b",
       "model_variant": "it",
-      "aliases": [
-        "openrouter/google/gemma-3n-e2b-it"
-      ],
+      "aliases": [],
       "parameter_count": 2000000000,
       "tier": "medium",
       "speed": "fast",
@@ -4433,7 +4415,7 @@
     {
       "id": "google/gemma-3n-e4b-it",
       "object": "model",
-      "created": 1777563544,
+      "created": 1777564273,
       "owned_by": "nvidia",
       "provider": "nvidia",
       "model_id": "google/gemma-3n-e4b-it",
@@ -4460,9 +4442,7 @@
       "trial_scope": "specific",
       "model_family": "gemma-3n-e4b",
       "model_variant": "it",
-      "aliases": [
-        "openrouter/google/gemma-3n-e4b-it"
-      ],
+      "aliases": [],
       "parameter_count": 4000000000,
       "tier": "medium",
       "speed": "fast",
@@ -4478,7 +4458,7 @@
     {
       "id": "meta/llama-4-maverick-17b-128e-instruct",
       "object": "model",
-      "created": 1777563545,
+      "created": 1777564274,
       "owned_by": "nvidia",
       "provider": "nvidia",
       "model_id": "meta/llama-4-maverick-17b-128e-instruct",
@@ -4521,7 +4501,7 @@
     {
       "id": "meta/llama-guard-4-12b",
       "object": "model",
-      "created": 1777563546,
+      "created": 1777564275,
       "owned_by": "nvidia",
       "provider": "nvidia",
       "model_id": "meta/llama-guard-4-12b",
@@ -4563,7 +4543,7 @@
     {
       "id": "microsoft/phi-4-mini-instruct",
       "object": "model",
-      "created": 1777563547,
+      "created": 1777564276,
       "owned_by": "nvidia",
       "provider": "nvidia",
       "model_id": "microsoft/phi-4-mini-instruct",
@@ -4603,7 +4583,7 @@
     {
       "id": "microsoft/phi-4-multimodal-instruct",
       "object": "model",
-      "created": 1777563548,
+      "created": 1777564277,
       "owned_by": "nvidia",
       "provider": "nvidia",
       "model_id": "microsoft/phi-4-multimodal-instruct",
@@ -4648,7 +4628,7 @@
     {
       "id": "minimaxai/minimax-m2.7",
       "object": "model",
-      "created": 1777563549,
+      "created": 1777564278,
       "owned_by": "nvidia",
       "provider": "nvidia",
       "model_id": "minimaxai/minimax-m2.7",
@@ -4673,8 +4653,10 @@
         "notes": "NVIDIA NIM free credits, exhaustible"
       },
       "trial_scope": "specific",
-      "model_family": "minimaxai-minimax-m2.7",
-      "aliases": [],
+      "model_family": "minimax-m2.7",
+      "aliases": [
+        "MiniMax-M2.7"
+      ],
       "tier": "medium",
       "speed": "fast",
       "use_case": [
@@ -4689,7 +4671,7 @@
     {
       "id": "mistralai/devstral-2-123b-instruct-2512",
       "object": "model",
-      "created": 1777563550,
+      "created": 1777564279,
       "owned_by": "nvidia",
       "provider": "nvidia",
       "model_id": "mistralai/devstral-2-123b-instruct-2512",
@@ -4732,7 +4714,7 @@
     {
       "id": "mistralai/magistral-small-2506",
       "object": "model",
-      "created": 1777563551,
+      "created": 1777564280,
       "owned_by": "nvidia",
       "provider": "nvidia",
       "model_id": "mistralai/magistral-small-2506",
@@ -4773,7 +4755,7 @@
     {
       "id": "mistralai/mistral-large-3-675b-instruct-2512",
       "object": "model",
-      "created": 1777563552,
+      "created": 1777564281,
       "owned_by": "nvidia",
       "provider": "nvidia",
       "model_id": "mistralai/mistral-large-3-675b-instruct-2512",
@@ -4816,7 +4798,7 @@
     {
       "id": "mistralai/mistral-medium-3-instruct",
       "object": "model",
-      "created": 1777563553,
+      "created": 1777564282,
       "owned_by": "nvidia",
       "provider": "nvidia",
       "model_id": "mistralai/mistral-medium-3-instruct",
@@ -4858,7 +4840,7 @@
     {
       "id": "mistralai/mistral-medium-3.5-128b",
       "object": "model",
-      "created": 1777563554,
+      "created": 1777564283,
       "owned_by": "nvidia",
       "provider": "nvidia",
       "model_id": "mistralai/mistral-medium-3.5-128b",
@@ -4900,7 +4882,7 @@
     {
       "id": "mistralai/mistral-nemotron",
       "object": "model",
-      "created": 1777563555,
+      "created": 1777564284,
       "owned_by": "nvidia",
       "provider": "nvidia",
       "model_id": "mistralai/mistral-nemotron",
@@ -4941,7 +4923,7 @@
     {
       "id": "mistralai/mistral-small-4-119b-2603",
       "object": "model",
-      "created": 1777563556,
+      "created": 1777564285,
       "owned_by": "nvidia",
       "provider": "nvidia",
       "model_id": "mistralai/mistral-small-4-119b-2603",
@@ -4981,7 +4963,7 @@
     {
       "id": "moonshotai/kimi-k2-instruct",
       "object": "model",
-      "created": 1777563557,
+      "created": 1777564286,
       "owned_by": "nvidia",
       "provider": "nvidia",
       "model_id": "moonshotai/kimi-k2-instruct",
@@ -5006,10 +4988,12 @@
         "notes": "NVIDIA NIM free credits, exhaustible"
       },
       "trial_scope": "specific",
-      "model_family": "moonshotai-kimi-k2",
+      "model_family": "kimi-k2",
       "model_variant": "instruct",
       "aliases": [
-        "moonshotai/kimi-k2-instruct-0905"
+        "kimi-k2-instruct",
+        "moonshotai/kimi-k2-instruct-0905",
+        "xunfei/xopkimik2blins"
       ],
       "tier": "medium",
       "speed": "fast",
@@ -5025,7 +5009,7 @@
     {
       "id": "moonshotai/kimi-k2-instruct-0905",
       "object": "model",
-      "created": 1777563558,
+      "created": 1777564287,
       "owned_by": "nvidia",
       "provider": "nvidia",
       "model_id": "moonshotai/kimi-k2-instruct-0905",
@@ -5050,10 +5034,12 @@
         "notes": "NVIDIA NIM free credits, exhaustible"
       },
       "trial_scope": "specific",
-      "model_family": "moonshotai-kimi-k2",
+      "model_family": "kimi-k2",
       "model_variant": "instruct",
       "aliases": [
-        "moonshotai/kimi-k2-instruct"
+        "kimi-k2-instruct",
+        "moonshotai/kimi-k2-instruct",
+        "xunfei/xopkimik2blins"
       ],
       "tier": "medium",
       "speed": "fast",
@@ -5069,7 +5055,7 @@
     {
       "id": "moonshotai/kimi-k2-thinking",
       "object": "model",
-      "created": 1777563559,
+      "created": 1777564288,
       "owned_by": "nvidia",
       "provider": "nvidia",
       "model_id": "moonshotai/kimi-k2-thinking",
@@ -5094,9 +5080,12 @@
         "notes": "NVIDIA NIM free credits, exhaustible"
       },
       "trial_scope": "specific",
-      "model_family": "moonshotai-kimi-k2-thinking",
+      "model_family": "kimi-k2-thinking",
       "model_variant": "thinking",
-      "aliases": [],
+      "aliases": [
+        "Kimi-K2-Thinking",
+        "xunfei/xopkimik2blth"
+      ],
       "tier": "medium",
       "speed": "fast",
       "use_case": [
@@ -5111,7 +5100,7 @@
     {
       "id": "nvidia/gliner-pii",
       "object": "model",
-      "created": 1777563560,
+      "created": 1777564289,
       "owned_by": "nvidia",
       "provider": "nvidia",
       "model_id": "nvidia/gliner-pii",
@@ -5151,7 +5140,7 @@
     {
       "id": "nvidia/nemotron-3-content-safety",
       "object": "model",
-      "created": 1777563561,
+      "created": 1777564290,
       "owned_by": "nvidia",
       "provider": "nvidia",
       "model_id": "nvidia/nemotron-3-content-safety",
@@ -5192,7 +5181,7 @@
     {
       "id": "nvidia/nemotron-content-safety-reasoning-4b",
       "object": "model",
-      "created": 1777563562,
+      "created": 1777564291,
       "owned_by": "nvidia",
       "provider": "nvidia",
       "model_id": "nvidia/nemotron-content-safety-reasoning-4b",
@@ -5239,7 +5228,7 @@
     {
       "id": "nvidia/nemotron-mini-4b-instruct",
       "object": "model",
-      "created": 1777563563,
+      "created": 1777564292,
       "owned_by": "nvidia",
       "provider": "nvidia",
       "model_id": "nvidia/nemotron-mini-4b-instruct",
@@ -5282,7 +5271,7 @@
     {
       "id": "nvidia/nv-embed-v1",
       "object": "model",
-      "created": 1777563564,
+      "created": 1777564293,
       "owned_by": "nvidia",
       "provider": "nvidia",
       "model_id": "nvidia/nv-embed-v1",
@@ -5323,7 +5312,7 @@
     {
       "id": "nvidia/nv-embedcode-7b-v1",
       "object": "model",
-      "created": 1777563565,
+      "created": 1777564294,
       "owned_by": "nvidia",
       "provider": "nvidia",
       "model_id": "nvidia/nv-embedcode-7b-v1",
@@ -5367,7 +5356,7 @@
     {
       "id": "qwen/qwen3-coder-480b-a35b-instruct",
       "object": "model",
-      "created": 1777563566,
+      "created": 1777564295,
       "owned_by": "nvidia",
       "provider": "nvidia",
       "model_id": "qwen/qwen3-coder-480b-a35b-instruct",
@@ -5394,9 +5383,7 @@
       "trial_scope": "specific",
       "model_family": "qwen3-coder-480b-a35b",
       "model_variant": "coder",
-      "aliases": [
-        "qwen3-coder-480b-a35b-instruct"
-      ],
+      "aliases": [],
       "parameter_count": 480000000000,
       "tier": "medium",
       "speed": "fast",
@@ -5412,7 +5399,7 @@
     {
       "id": "stepfun-ai/step-3.5-flash",
       "object": "model",
-      "created": 1777563567,
+      "created": 1777564296,
       "owned_by": "nvidia",
       "provider": "nvidia",
       "model_id": "stepfun-ai/step-3.5-flash",
@@ -5437,7 +5424,7 @@
         "notes": "NVIDIA NIM free credits, exhaustible"
       },
       "trial_scope": "specific",
-      "model_family": "stepfun-ai-step-3.5-flash",
+      "model_family": "step-3.5-flash",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
@@ -5453,7 +5440,7 @@
     {
       "id": "openrouter/kwaivgi/kling-v3.0-pro",
       "object": "model",
-      "created": 1777563568,
+      "created": 1777564297,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/kwaivgi/kling-v3.0-pro",
@@ -5486,7 +5473,8 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "kwaivgi-kling-v3.0-pro",
+      "model_family": "kling:-video-v3.0-pro",
+      "model_variant": "video",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -5504,7 +5492,7 @@
     {
       "id": "openrouter/kwaivgi/kling-v3.0-std",
       "object": "model",
-      "created": 1777563569,
+      "created": 1777564298,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/kwaivgi/kling-v3.0-std",
@@ -5537,7 +5525,8 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "kwaivgi-kling-v3.0-std",
+      "model_family": "kling:-video-v3.0-standard",
+      "model_variant": "video",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -5555,7 +5544,7 @@
     {
       "id": "openrouter/openrouter/owl-alpha",
       "object": "model",
-      "created": 1777563570,
+      "created": 1777564299,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/openrouter/owl-alpha",
@@ -5587,7 +5576,7 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "openrouter-owl-alpha",
+      "model_family": "owl-alpha",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
@@ -5603,7 +5592,7 @@
     {
       "id": "openrouter/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
       "object": "model",
-      "created": 1777563571,
+      "created": 1777564300,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
@@ -5643,11 +5632,9 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "nemotron-3-nano-omni-30b-a3b-reasoning",
+      "model_family": "nvidia:-nemotron-3-nano-omni-(free)",
       "model_variant": "reasoning",
-      "aliases": [
-        "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning"
-      ],
+      "aliases": [],
       "tier": "large",
       "speed": "fast",
       "use_case": [
@@ -5671,7 +5658,7 @@
     {
       "id": "openrouter/poolside/laguna-xs.2",
       "object": "model",
-      "created": 1777563572,
+      "created": 1777564301,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/poolside/laguna-xs.2",
@@ -5704,7 +5691,7 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "poolside-laguna-xs.2",
+      "model_family": "poolside:-laguna-xs.2-(free)",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -5724,7 +5711,7 @@
     {
       "id": "openrouter/poolside/laguna-m.1",
       "object": "model",
-      "created": 1777563573,
+      "created": 1777564302,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/poolside/laguna-m.1",
@@ -5757,7 +5744,7 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "poolside-laguna-m.1",
+      "model_family": "poolside:-laguna-m.1-(free)",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -5777,7 +5764,7 @@
     {
       "id": "openrouter/google/veo-3.1-fast",
       "object": "model",
-      "created": 1777563574,
+      "created": 1777564303,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/google/veo-3.1-fast",
@@ -5810,7 +5797,7 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "veo-3.1-fast",
+      "model_family": "google:-veo-3.1-fast",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -5828,7 +5815,7 @@
     {
       "id": "openrouter/google/veo-3.1-lite",
       "object": "model",
-      "created": 1777563575,
+      "created": 1777564304,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/google/veo-3.1-lite",
@@ -5861,7 +5848,7 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "veo-3.1-lite",
+      "model_family": "google:-veo-3.1-lite",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -5879,7 +5866,7 @@
     {
       "id": "openrouter/inclusionai/ling-2.6-1t",
       "object": "model",
-      "created": 1777563576,
+      "created": 1777564305,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/inclusionai/ling-2.6-1t",
@@ -5911,7 +5898,7 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "inclusionai-ling-2.6-1t",
+      "model_family": "inclusionai:-ling-2.6-1t-(free)",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -5931,7 +5918,7 @@
     {
       "id": "openrouter/tencent/hy3-preview",
       "object": "model",
-      "created": 1777563577,
+      "created": 1777564306,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/tencent/hy3-preview",
@@ -5964,7 +5951,7 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "tencent-hy3-preview",
+      "model_family": "tencent:-hy3-preview-(free)",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -5984,7 +5971,7 @@
     {
       "id": "openrouter/baidu/qianfan-ocr-fast",
       "object": "model",
-      "created": 1777563578,
+      "created": 1777564307,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/baidu/qianfan-ocr-fast",
@@ -6020,7 +6007,7 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "baidu-qianfan-ocr-fast",
+      "model_family": "baidu:-qianfan-ocr-fast-(free)",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -6042,7 +6029,7 @@
     {
       "id": "openrouter/kwaivgi/kling-video-o1",
       "object": "model",
-      "created": 1777563579,
+      "created": 1777564308,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/kwaivgi/kling-video-o1",
@@ -6075,7 +6062,7 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "kwaivgi-kling-video-o1",
+      "model_family": "kling:-video-o1",
       "model_variant": "video",
       "aliases": [],
       "tier": "large",
@@ -6094,7 +6081,7 @@
     {
       "id": "openrouter/minimax/hailuo-2.3",
       "object": "model",
-      "created": 1777563580,
+      "created": 1777564309,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/minimax/hailuo-2.3",
@@ -6127,109 +6114,7 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "minimax-hailuo-2.3",
-      "aliases": [],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "image-understanding",
-        "visual-q&a",
-        "conversation",
-        "q&a"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "openrouter/alibaba/wan-2.7",
-      "object": "model",
-      "created": 1777563581,
-      "owned_by": "openrouter",
-      "provider": "openrouter",
-      "model_id": "openrouter/alibaba/wan-2.7",
-      "name": "Alibaba: Wan 2.7",
-      "description": "Wan 2.7 is a video generation model from Alibaba. It supports text-to-video, image-to-video with first and last frame control, and reference-to-video, where multiple reference images guide the style and content of the generated scene.",
-      "context_label": "unknown",
-      "price_input": 0,
-      "price_output": 0,
-      "price_currency": "USD",
-      "price_unit": "per_million_tokens",
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "vision"
-      ],
-      "tags": [
-        "text-generation",
-        "vision",
-        "multimodal",
-        "chat"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "rpm": 20,
-        "rpd": 50,
-        "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
-      },
-      "trial_scope": "specific",
-      "model_family": "alibaba-wan-2.7",
-      "aliases": [],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "image-understanding",
-        "visual-q&a",
-        "conversation",
-        "q&a"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "openrouter/bytedance/seedance-2.0-fast",
-      "object": "model",
-      "created": 1777563582,
-      "owned_by": "openrouter",
-      "provider": "openrouter",
-      "model_id": "openrouter/bytedance/seedance-2.0-fast",
-      "name": "ByteDance: Seedance 2.0 Fast",
-      "description": "Seedance 2.0 Fast is a video generation model from ByteDance. It supports text-to-video, image-to-video with first and last frame control, and multimodal reference-to-video. It prioritizes generation speed and lower cost over maximum output quality. The number of tokens is given by (height of output video * width of output video * duration * 24) / 1024",
-      "context_label": "unknown",
-      "price_input": 0,
-      "price_output": 0,
-      "price_currency": "USD",
-      "price_unit": "per_million_tokens",
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "vision"
-      ],
-      "tags": [
-        "text-generation",
-        "vision",
-        "multimodal",
-        "chat"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "rpm": 20,
-        "rpd": 50,
-        "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
-      },
-      "trial_scope": "specific",
-      "model_family": "bytedance-seedance-2.0-fast",
+      "model_family": "minimax:-hailuo-2.3",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -6247,7 +6132,7 @@
     {
       "id": "openrouter/bytedance/seedance-2.0",
       "object": "model",
-      "created": 1777563583,
+      "created": 1777564310,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/bytedance/seedance-2.0",
@@ -6280,7 +6165,109 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "bytedance-seedance-2.0",
+      "model_family": "bytedance:-seedance-2.0",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "image-understanding",
+        "visual-q&a",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "openrouter/bytedance/seedance-2.0-fast",
+      "object": "model",
+      "created": 1777564311,
+      "owned_by": "openrouter",
+      "provider": "openrouter",
+      "model_id": "openrouter/bytedance/seedance-2.0-fast",
+      "name": "ByteDance: Seedance 2.0 Fast",
+      "description": "Seedance 2.0 Fast is a video generation model from ByteDance. It supports text-to-video, image-to-video with first and last frame control, and multimodal reference-to-video. It prioritizes generation speed and lower cost over maximum output quality. The number of tokens is given by (height of output video * width of output video * duration * 24) / 1024",
+      "context_label": "unknown",
+      "price_input": 0,
+      "price_output": 0,
+      "price_currency": "USD",
+      "price_unit": "per_million_tokens",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision"
+      ],
+      "tags": [
+        "text-generation",
+        "vision",
+        "multimodal",
+        "chat"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "rpd": 50,
+        "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
+      },
+      "trial_scope": "specific",
+      "model_family": "bytedance:-seedance-2.0-fast",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "image-understanding",
+        "visual-q&a",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "openrouter/alibaba/wan-2.7",
+      "object": "model",
+      "created": 1777564312,
+      "owned_by": "openrouter",
+      "provider": "openrouter",
+      "model_id": "openrouter/alibaba/wan-2.7",
+      "name": "Alibaba: Wan 2.7",
+      "description": "Wan 2.7 is a video generation model from Alibaba. It supports text-to-video, image-to-video with first and last frame control, and reference-to-video, where multiple reference images guide the style and content of the generated scene.",
+      "context_label": "unknown",
+      "price_input": 0,
+      "price_output": 0,
+      "price_currency": "USD",
+      "price_unit": "per_million_tokens",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision"
+      ],
+      "tags": [
+        "text-generation",
+        "vision",
+        "multimodal",
+        "chat"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "rpd": 50,
+        "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
+      },
+      "trial_scope": "specific",
+      "model_family": "alibaba:-wan-2.7",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -6298,7 +6285,7 @@
     {
       "id": "openrouter/cohere/rerank-4-pro",
       "object": "model",
-      "created": 1777563584,
+      "created": 1777564313,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/cohere/rerank-4-pro",
@@ -6331,7 +6318,8 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "rerank-4-pro",
+      "model_family": "cohere:-rerank-4-pro",
+      "model_variant": "rerank",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
@@ -6349,7 +6337,7 @@
     {
       "id": "openrouter/cohere/rerank-4-fast",
       "object": "model",
-      "created": 1777563585,
+      "created": 1777564314,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/cohere/rerank-4-fast",
@@ -6382,7 +6370,8 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "rerank-4-fast",
+      "model_family": "cohere:-rerank-4-fast",
+      "model_variant": "rerank",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
@@ -6400,7 +6389,7 @@
     {
       "id": "openrouter/cohere/rerank-v3.5",
       "object": "model",
-      "created": 1777563586,
+      "created": 1777564315,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/cohere/rerank-v3.5",
@@ -6433,7 +6422,8 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "rerank-v3.5",
+      "model_family": "cohere:-rerank-v3.5",
+      "model_variant": "rerank",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
@@ -6451,7 +6441,7 @@
     {
       "id": "openrouter/google/gemma-4-26b-a4b-it",
       "object": "model",
-      "created": 1777563587,
+      "created": 1777564316,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/google/gemma-4-26b-a4b-it",
@@ -6489,11 +6479,9 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "gemma-4-26b-a4b",
+      "model_family": "google:-gemma-4-26b-a4b-(free)",
       "model_variant": "it",
-      "aliases": [
-        "gemma-4-26B-A4B-it"
-      ],
+      "aliases": [],
       "parameter_count": 26000000000,
       "tier": "large",
       "speed": "fast",
@@ -6516,7 +6504,7 @@
     {
       "id": "openrouter/google/gemma-4-31b-it",
       "object": "model",
-      "created": 1777563588,
+      "created": 1777564317,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/google/gemma-4-31b-it",
@@ -6554,11 +6542,9 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "gemma-4-31b",
+      "model_family": "google:-gemma-4-31b-(free)",
       "model_variant": "it",
-      "aliases": [
-        "google/gemma-4-31b-it"
-      ],
+      "aliases": [],
       "parameter_count": 31000000000,
       "tier": "large",
       "speed": "fast",
@@ -6581,7 +6567,7 @@
     {
       "id": "openrouter/google/lyria-3-pro-preview",
       "object": "model",
-      "created": 1777563589,
+      "created": 1777564318,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/google/lyria-3-pro-preview",
@@ -6614,10 +6600,8 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "lyria-3-pro-preview",
-      "aliases": [
-        "google/lyria-3-pro-preview"
-      ],
+      "model_family": "google:-lyria-3-pro-preview",
+      "aliases": [],
       "tier": "large",
       "speed": "fast",
       "use_case": [
@@ -6634,7 +6618,7 @@
     {
       "id": "openrouter/google/lyria-3-clip-preview",
       "object": "model",
-      "created": 1777563590,
+      "created": 1777564319,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/google/lyria-3-clip-preview",
@@ -6667,10 +6651,8 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "lyria-3-clip-preview",
-      "aliases": [
-        "google/lyria-3-clip-preview"
-      ],
+      "model_family": "google:-lyria-3-clip-preview",
+      "aliases": [],
       "tier": "large",
       "speed": "fast",
       "use_case": [
@@ -6687,7 +6669,7 @@
     {
       "id": "openrouter/alibaba/wan-2.6",
       "object": "model",
-      "created": 1777563591,
+      "created": 1777564320,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/alibaba/wan-2.6",
@@ -6720,7 +6702,7 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "alibaba-wan-2.6",
+      "model_family": "alibaba:-wan-2.6",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -6738,7 +6720,7 @@
     {
       "id": "openrouter/bytedance/seedance-1-5-pro",
       "object": "model",
-      "created": 1777563592,
+      "created": 1777564321,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/bytedance/seedance-1-5-pro",
@@ -6789,7 +6771,7 @@
     {
       "id": "openrouter/openai/sora-2-pro",
       "object": "model",
-      "created": 1777563593,
+      "created": 1777564322,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/openai/sora-2-pro",
@@ -6822,7 +6804,7 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "sora-2-pro",
+      "model_family": "openai:-sora-2-pro",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -6840,7 +6822,7 @@
     {
       "id": "openrouter/google/veo-3.1",
       "object": "model",
-      "created": 1777563594,
+      "created": 1777564323,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/google/veo-3.1",
@@ -6873,7 +6855,7 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "veo-3.1",
+      "model_family": "google:-veo-3.1",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -6891,7 +6873,7 @@
     {
       "id": "openrouter/nvidia/nemotron-3-super-120b-a12b",
       "object": "model",
-      "created": 1777563595,
+      "created": 1777564324,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/nvidia/nemotron-3-super-120b-a12b",
@@ -6924,10 +6906,8 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "nemotron-3-super-120b-a12b",
-      "aliases": [
-        "nvidia/nemotron-3-super-120b-a12b"
-      ],
+      "model_family": "nvidia:-nemotron-3-super-(free)",
+      "aliases": [],
       "tier": "large",
       "speed": "fast",
       "use_case": [
@@ -6946,7 +6926,7 @@
     {
       "id": "openrouter/nvidia/llama-nemotron-embed-vl-1b-v2",
       "object": "model",
-      "created": 1777563596,
+      "created": 1777564325,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/nvidia/llama-nemotron-embed-vl-1b-v2",
@@ -6982,11 +6962,9 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "llama-nemotron-embed-vl-1b-v2",
+      "model_family": "nvidia:-llama-nemotron-embed-vl-1b-v2-(free)",
       "model_variant": "vl",
-      "aliases": [
-        "nvidia/llama-nemotron-embed-vl-1b-v2"
-      ],
+      "aliases": [],
       "parameter_count": 1000000000,
       "tier": "medium",
       "speed": "fast",
@@ -7006,7 +6984,7 @@
     {
       "id": "openrouter/minimax/minimax-m2.5",
       "object": "model",
-      "created": 1777563597,
+      "created": 1777564326,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/minimax/minimax-m2.5",
@@ -7039,7 +7017,7 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "minimax-minimax-m2.5",
+      "model_family": "minimax:-minimax-m2.5-(free)",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -7059,7 +7037,7 @@
     {
       "id": "openrouter/sourceful/riverflow-v2-pro",
       "object": "model",
-      "created": 1777563598,
+      "created": 1777564327,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/sourceful/riverflow-v2-pro",
@@ -7094,7 +7072,7 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "sourceful-riverflow-v2-pro",
+      "model_family": "sourceful:-riverflow-v2-pro",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -7116,7 +7094,7 @@
     {
       "id": "openrouter/sourceful/riverflow-v2-fast",
       "object": "model",
-      "created": 1777563599,
+      "created": 1777564328,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/sourceful/riverflow-v2-fast",
@@ -7151,7 +7129,7 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "sourceful-riverflow-v2-fast",
+      "model_family": "sourceful:-riverflow-v2-fast",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -7173,7 +7151,7 @@
     {
       "id": "openrouter/liquid/lfm-2.5-1.2b-thinking",
       "object": "model",
-      "created": 1777563600,
+      "created": 1777564329,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/liquid/lfm-2.5-1.2b-thinking",
@@ -7206,7 +7184,7 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "liquid-lfm-2.5-1.2b-thinking",
+      "model_family": "liquidai:-lfm2.5-1.2b-thinking-(free)",
       "model_variant": "thinking",
       "aliases": [],
       "parameter_count": 1200000000,
@@ -7228,7 +7206,7 @@
     {
       "id": "openrouter/liquid/lfm-2.5-1.2b-instruct",
       "object": "model",
-      "created": 1777563601,
+      "created": 1777564330,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/liquid/lfm-2.5-1.2b-instruct",
@@ -7259,7 +7237,7 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "liquid-lfm-2.5-1.2b",
+      "model_family": "liquidai:-lfm2.5-1.2b-(free)",
       "model_variant": "instruct",
       "aliases": [],
       "parameter_count": 1200000000,
@@ -7277,7 +7255,7 @@
     {
       "id": "openrouter/black-forest-labs/flux.2-klein-4b",
       "object": "model",
-      "created": 1777563602,
+      "created": 1777564331,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/black-forest-labs/flux.2-klein-4b",
@@ -7311,7 +7289,7 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "black-forest-labs-flux.2-klein-4b",
+      "model_family": "black-forest-labs:-flux.2-klein-4b",
       "aliases": [],
       "parameter_count": 4000000000,
       "tier": "small",
@@ -7330,7 +7308,7 @@
     {
       "id": "openrouter/bytedance-seed/seedream-4.5",
       "object": "model",
-      "created": 1777563603,
+      "created": 1777564332,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/bytedance-seed/seedream-4.5",
@@ -7365,7 +7343,7 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "bytedance-seed-seedream-4.5",
+      "model_family": "bytedance-seed:-seedream-4.5",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -7387,7 +7365,7 @@
     {
       "id": "openrouter/black-forest-labs/flux.2-max",
       "object": "model",
-      "created": 1777563604,
+      "created": 1777564333,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/black-forest-labs/flux.2-max",
@@ -7421,7 +7399,7 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "black-forest-labs-flux.2-max",
+      "model_family": "black-forest-labs:-flux.2-max",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -7439,7 +7417,7 @@
     {
       "id": "openrouter/nvidia/nemotron-3-nano-30b-a3b",
       "object": "model",
-      "created": 1777563605,
+      "created": 1777564334,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/nvidia/nemotron-3-nano-30b-a3b",
@@ -7472,10 +7450,8 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "nemotron-3-nano-30b-a3b",
-      "aliases": [
-        "nvidia/nemotron-3-nano-30b-a3b"
-      ],
+      "model_family": "nvidia:-nemotron-3-nano-30b-a3b-(free)",
+      "aliases": [],
       "parameter_count": 30000000000,
       "tier": "large",
       "speed": "fast",
@@ -7495,7 +7471,7 @@
     {
       "id": "openrouter/sourceful/riverflow-v2-max-preview",
       "object": "model",
-      "created": 1777563606,
+      "created": 1777564335,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/sourceful/riverflow-v2-max-preview",
@@ -7529,7 +7505,7 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "sourceful-riverflow-v2-max-preview",
+      "model_family": "sourceful:-riverflow-v2-max-preview",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -7547,7 +7523,7 @@
     {
       "id": "openrouter/sourceful/riverflow-v2-standard-preview",
       "object": "model",
-      "created": 1777563607,
+      "created": 1777564336,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/sourceful/riverflow-v2-standard-preview",
@@ -7581,7 +7557,7 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "sourceful-riverflow-v2-standard-preview",
+      "model_family": "sourceful:-riverflow-v2-standard-preview",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -7599,7 +7575,7 @@
     {
       "id": "openrouter/sourceful/riverflow-v2-fast-preview",
       "object": "model",
-      "created": 1777563608,
+      "created": 1777564337,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/sourceful/riverflow-v2-fast-preview",
@@ -7633,7 +7609,7 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "sourceful-riverflow-v2-fast-preview",
+      "model_family": "sourceful:-riverflow-v2-fast-preview",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -7651,7 +7627,7 @@
     {
       "id": "openrouter/black-forest-labs/flux.2-flex",
       "object": "model",
-      "created": 1777563609,
+      "created": 1777564338,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/black-forest-labs/flux.2-flex",
@@ -7684,7 +7660,7 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "black-forest-labs-flux.2-flex",
+      "model_family": "black-forest-labs:-flux.2-flex",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -7702,7 +7678,7 @@
     {
       "id": "openrouter/black-forest-labs/flux.2-pro",
       "object": "model",
-      "created": 1777563610,
+      "created": 1777564339,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/black-forest-labs/flux.2-pro",
@@ -7736,7 +7712,7 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "black-forest-labs-flux.2-pro",
+      "model_family": "black-forest-labs:-flux.2-pro",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -7754,7 +7730,7 @@
     {
       "id": "openrouter/nvidia/nemotron-nano-12b-v2-vl",
       "object": "model",
-      "created": 1777563611,
+      "created": 1777564340,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/nvidia/nemotron-nano-12b-v2-vl",
@@ -7792,11 +7768,9 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "nemotron-nano-12b-v2-vl",
+      "model_family": "nvidia:-nemotron-nano-12b-2-vl-(free)",
       "model_variant": "vl",
-      "aliases": [
-        "nvidia/nemotron-nano-12b-v2-vl"
-      ],
+      "aliases": [],
       "parameter_count": 12000000000,
       "tier": "large",
       "speed": "fast",
@@ -7819,7 +7793,7 @@
     {
       "id": "openrouter/qwen/qwen3-next-80b-a3b-instruct",
       "object": "model",
-      "created": 1777563612,
+      "created": 1777564341,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/qwen/qwen3-next-80b-a3b-instruct",
@@ -7851,13 +7825,9 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "qwen3-next-80b-a3b",
+      "model_family": "qwen:-qwen3-next-80b-a3b-(free)",
       "model_variant": "instruct",
-      "aliases": [
-        "Qwen3-Next-80B-A3B-Instruct",
-        "qwen/qwen3-next-80b-a3b-instruct",
-        "xunfei/xop3qwen80bnext"
-      ],
+      "aliases": [],
       "parameter_count": 80000000000,
       "tier": "large",
       "speed": "fast",
@@ -7877,7 +7847,7 @@
     {
       "id": "openrouter/nvidia/nemotron-nano-9b-v2",
       "object": "model",
-      "created": 1777563613,
+      "created": 1777564342,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/nvidia/nemotron-nano-9b-v2",
@@ -7910,10 +7880,8 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "nemotron-nano-9b-v2",
-      "aliases": [
-        "nvidia/nvidia-nemotron-nano-9b-v2"
-      ],
+      "model_family": "nvidia:-nemotron-nano-9b-v2-(free)",
+      "aliases": [],
       "parameter_count": 9000000000,
       "tier": "medium",
       "speed": "fast",
@@ -7933,7 +7901,7 @@
     {
       "id": "openrouter/openai/gpt-oss-120b",
       "object": "model",
-      "created": 1777563614,
+      "created": 1777564343,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/openai/gpt-oss-120b",
@@ -7966,13 +7934,8 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "gpt-oss-120b",
-      "aliases": [
-        "cerebras/gpt-oss-120b",
-        "gpt-oss-120b",
-        "groq/openai/gpt-oss-120b",
-        "openai/gpt-oss-120b"
-      ],
+      "model_family": "openai:-gpt-oss-120b-(free)",
+      "aliases": [],
       "parameter_count": 120000000000,
       "tier": "large",
       "speed": "fast",
@@ -7992,7 +7955,7 @@
     {
       "id": "openrouter/openai/gpt-oss-20b",
       "object": "model",
-      "created": 1777563615,
+      "created": 1777564344,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/openai/gpt-oss-20b",
@@ -8025,11 +7988,8 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "gpt-oss-20b",
-      "aliases": [
-        "groq/openai/gpt-oss-20b",
-        "openai/gpt-oss-20b"
-      ],
+      "model_family": "openai:-gpt-oss-20b-(free)",
+      "aliases": [],
       "parameter_count": 20000000000,
       "tier": "medium",
       "speed": "fast",
@@ -8049,7 +8009,7 @@
     {
       "id": "openrouter/z-ai/glm-4.5-air",
       "object": "model",
-      "created": 1777563616,
+      "created": 1777564345,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/z-ai/glm-4.5-air",
@@ -8082,11 +8042,8 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "glm-4.5-air",
-      "aliases": [
-        "bigmodel/glm-4.5-air",
-        "GLM-4_5-Air"
-      ],
+      "model_family": "z.ai:-glm-4.5-air-(free)",
+      "aliases": [],
       "tier": "large",
       "speed": "fast",
       "use_case": [
@@ -8105,7 +8062,7 @@
     {
       "id": "openrouter/qwen/qwen3-coder",
       "object": "model",
-      "created": 1777563617,
+      "created": 1777564346,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/qwen/qwen3-coder",
@@ -8139,7 +8096,7 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "qwen3-coder",
+      "model_family": "qwen:-qwen3-coder-480b-a35b-(free)",
       "model_variant": "coder",
       "aliases": [],
       "parameter_count": 480000000000,
@@ -8163,7 +8120,7 @@
     {
       "id": "openrouter/cognitivecomputations/dolphin-mistral-24b-venice-edition",
       "object": "model",
-      "created": 1777563618,
+      "created": 1777564347,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/cognitivecomputations/dolphin-mistral-24b-venice-edition",
@@ -8194,7 +8151,7 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "cognitivecomputations-dolphin-mistral-24b-venice-edition",
+      "model_family": "venice:-uncensored-(free)",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
@@ -8210,7 +8167,7 @@
     {
       "id": "openrouter/google/gemma-3n-e2b-it",
       "object": "model",
-      "created": 1777563619,
+      "created": 1777564348,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/google/gemma-3n-e2b-it",
@@ -8244,11 +8201,9 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "gemma-3n-e2b",
+      "model_family": "google:-gemma-3n-2b-(free)",
       "model_variant": "it",
-      "aliases": [
-        "google/gemma-3n-e2b-it"
-      ],
+      "aliases": [],
       "parameter_count": 2000000000,
       "tier": "small",
       "speed": "fast",
@@ -8270,7 +8225,7 @@
     {
       "id": "openrouter/google/gemma-3n-e4b-it",
       "object": "model",
-      "created": 1777563620,
+      "created": 1777564349,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/google/gemma-3n-e4b-it",
@@ -8303,11 +8258,9 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "gemma-3n-e4b",
+      "model_family": "google:-gemma-3n-4b-(free)",
       "model_variant": "it",
-      "aliases": [
-        "google/gemma-3n-e4b-it"
-      ],
+      "aliases": [],
       "parameter_count": 4000000000,
       "tier": "small",
       "speed": "fast",
@@ -8325,7 +8278,7 @@
     {
       "id": "openrouter/google/gemma-3-4b-it",
       "object": "model",
-      "created": 1777563621,
+      "created": 1777564350,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/google/gemma-3-4b-it",
@@ -8360,11 +8313,9 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "gemma-3-4b",
+      "model_family": "google:-gemma-3-4b-(free)",
       "model_variant": "it",
-      "aliases": [
-        "google/gemma-3-4b-it"
-      ],
+      "aliases": [],
       "parameter_count": 4000000000,
       "tier": "small",
       "speed": "fast",
@@ -8386,7 +8337,7 @@
     {
       "id": "openrouter/google/gemma-3-12b-it",
       "object": "model",
-      "created": 1777563622,
+      "created": 1777564351,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/google/gemma-3-12b-it",
@@ -8421,11 +8372,9 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "gemma-3-12b",
+      "model_family": "google:-gemma-3-12b-(free)",
       "model_variant": "it",
-      "aliases": [
-        "google/gemma-3-12b-it"
-      ],
+      "aliases": [],
       "parameter_count": 12000000000,
       "tier": "large",
       "speed": "fast",
@@ -8447,7 +8396,7 @@
     {
       "id": "openrouter/google/gemma-3-27b-it",
       "object": "model",
-      "created": 1777563623,
+      "created": 1777564352,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/google/gemma-3-27b-it",
@@ -8482,11 +8431,9 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "gemma-3-27b",
+      "model_family": "google:-gemma-3-27b-(free)",
       "model_variant": "it",
-      "aliases": [
-        "google/gemma-3-27b-it"
-      ],
+      "aliases": [],
       "parameter_count": 27000000000,
       "tier": "large",
       "speed": "fast",
@@ -8508,7 +8455,7 @@
     {
       "id": "openrouter/meta-llama/llama-3.3-70b-instruct",
       "object": "model",
-      "created": 1777563624,
+      "created": 1777564353,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/meta-llama/llama-3.3-70b-instruct",
@@ -8539,12 +8486,9 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "llama-3.3-70b",
+      "model_family": "meta:-llama-3.3-70b-(free)",
       "model_variant": "instruct",
-      "aliases": [
-        "groq/llama-3.3-70b-versatile",
-        "meta/llama-3.3-70b-instruct"
-      ],
+      "aliases": [],
       "parameter_count": 70000000000,
       "tier": "large",
       "speed": "fast",
@@ -8560,7 +8504,7 @@
     {
       "id": "openrouter/meta-llama/llama-3.2-3b-instruct",
       "object": "model",
-      "created": 1777563625,
+      "created": 1777564354,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/meta-llama/llama-3.2-3b-instruct",
@@ -8592,11 +8536,9 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "llama-3.2-3b",
+      "model_family": "meta:-llama-3.2-3b-(free)",
       "model_variant": "instruct",
-      "aliases": [
-        "meta/llama-3.2-3b-instruct"
-      ],
+      "aliases": [],
       "parameter_count": 3000000000,
       "tier": "small",
       "speed": "fast",
@@ -8616,7 +8558,7 @@
     {
       "id": "openrouter/nousresearch/hermes-3-llama-3.1-405b",
       "object": "model",
-      "created": 1777563626,
+      "created": 1777564355,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/nousresearch/hermes-3-llama-3.1-405b",
@@ -8669,7 +8611,7 @@
     {
       "id": "xunfei/xop35qwen2b",
       "object": "model",
-      "created": 1777563627,
+      "created": 1777564356,
       "owned_by": "xunfei",
       "provider": "xunfei",
       "model_id": "xunfei/xop35qwen2b",
@@ -8718,7 +8660,7 @@
     {
       "id": "xunfei/xopqwentti20b",
       "object": "model",
-      "created": 1777563628,
+      "created": 1777564357,
       "owned_by": "xunfei",
       "provider": "xunfei",
       "model_id": "xunfei/xopqwentti20b",
@@ -8769,7 +8711,7 @@
     {
       "id": "xunfei/xopdeepseekocr",
       "object": "model",
-      "created": 1777563629,
+      "created": 1777564358,
       "owned_by": "xunfei",
       "provider": "xunfei",
       "model_id": "xunfei/xopdeepseekocr",
@@ -8813,7 +8755,7 @@
     {
       "id": "xunfei/xophunyuanocr",
       "object": "model",
-      "created": 1777563630,
+      "created": 1777564359,
       "owned_by": "xunfei",
       "provider": "xunfei",
       "model_id": "xunfei/xophunyuanocr",
@@ -8844,8 +8786,10 @@
       "free_mechanism": "rate-limited",
       "free_quota": null,
       "trial_scope": "specific",
-      "model_family": "xophunyuanocr",
-      "aliases": [],
+      "model_family": "hunyuanocr",
+      "aliases": [
+        "HunyuanOCR"
+      ],
       "tier": "large",
       "speed": "fast",
       "use_case": [
@@ -8862,7 +8806,7 @@
     {
       "id": "xunfei/xophunyuan7bmt",
       "object": "model",
-      "created": 1777563631,
+      "created": 1777564360,
       "owned_by": "xunfei",
       "provider": "xunfei",
       "model_id": "xunfei/xophunyuan7bmt",
@@ -8906,7 +8850,7 @@
     {
       "id": "xunfei/xopzimageturbo",
       "object": "model",
-      "created": 1777563632,
+      "created": 1777564361,
       "owned_by": "xunfei",
       "provider": "xunfei",
       "model_id": "xunfei/xopzimageturbo",
@@ -8958,7 +8902,7 @@
     {
       "id": "xunfei/xop3qwen8breranker",
       "object": "model",
-      "created": 1777563633,
+      "created": 1777564362,
       "owned_by": "xunfei",
       "provider": "xunfei",
       "model_id": "xunfei/xop3qwen8breranker",
@@ -9005,7 +8949,7 @@
     {
       "id": "xunfei/xop3qwen8bembedding",
       "object": "model",
-      "created": 1777563634,
+      "created": 1777564363,
       "owned_by": "xunfei",
       "provider": "xunfei",
       "model_id": "xunfei/xop3qwen8bembedding",
@@ -9049,7 +8993,7 @@
     {
       "id": "xunfei/xop3qwen0b6",
       "object": "model",
-      "created": 1777563635,
+      "created": 1777564364,
       "owned_by": "xunfei",
       "provider": "xunfei",
       "model_id": "xunfei/xop3qwen0b6",
@@ -9095,7 +9039,7 @@
     {
       "id": "xunfei/xop3qwen4b",
       "object": "model",
-      "created": 1777563636,
+      "created": 1777564365,
       "owned_by": "xunfei",
       "provider": "xunfei",
       "model_id": "xunfei/xop3qwen4b",
@@ -9141,7 +9085,7 @@
     {
       "id": "xunfei/xspark13b6k",
       "object": "model",
-      "created": 1777563637,
+      "created": 1777564366,
       "owned_by": "xunfei",
       "provider": "xunfei",
       "model_id": "xunfei/xspark13b6k",
@@ -9184,7 +9128,7 @@
     {
       "id": "xunfei/xssdxl",
       "object": "model",
-      "created": 1777563638,
+      "created": 1777564367,
       "owned_by": "xunfei",
       "provider": "xunfei",
       "model_id": "xunfei/xssdxl",
@@ -9210,7 +9154,7 @@
       "free_mechanism": "rate-limited",
       "free_quota": null,
       "trial_scope": "specific",
-      "model_family": "stablediffusion_xl_base_1",
+      "model_family": "stablediffusion-xl-base-1",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",

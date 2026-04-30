@@ -1,7 +1,7 @@
 {
   "object": "list",
   "view": "tool-use",
-  "updated_at": "2026-04-30T15:40:39.981Z",
+  "updated_at": "2026-04-30T15:52:48.481Z",
   "total": 15,
   "filters": {
     "hasToolUse": "true"
@@ -10,7 +10,7 @@
     {
       "id": "bigmodel/glm-4-flash-250414",
       "object": "model",
-      "created": 1777563624,
+      "created": 1777564353,
       "owned_by": "bigmodel",
       "provider": "bigmodel",
       "model_id": "bigmodel/glm-4-flash-250414",
@@ -59,7 +59,7 @@
     {
       "id": "bigmodel/glm-4.6v-flash",
       "object": "model",
-      "created": 1777563625,
+      "created": 1777564354,
       "owned_by": "bigmodel",
       "provider": "bigmodel",
       "model_id": "bigmodel/glm-4.6v-flash",
@@ -119,7 +119,7 @@
     {
       "id": "bigmodel/glm-4.7-flash",
       "object": "model",
-      "created": 1777563626,
+      "created": 1777564355,
       "owned_by": "bigmodel",
       "provider": "bigmodel",
       "model_id": "bigmodel/glm-4.7-flash",
@@ -175,7 +175,7 @@
     {
       "id": "Qwen2.5-72B-Instruct",
       "object": "model",
-      "created": 1777563627,
+      "created": 1777564356,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "Qwen2.5-72B-Instruct",
@@ -220,7 +220,7 @@
     {
       "id": "Qwen2.5-7B-Instruct",
       "object": "model",
-      "created": 1777563628,
+      "created": 1777564357,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "Qwen2.5-7B-Instruct",
@@ -265,7 +265,7 @@
     {
       "id": "GLM-4.6V",
       "object": "model",
-      "created": 1777563629,
+      "created": 1777564358,
       "owned_by": "gitee",
       "provider": "gitee",
       "model_id": "GLM-4.6V",
@@ -308,7 +308,7 @@
     {
       "id": "openrouter/openrouter/owl-alpha",
       "object": "model",
-      "created": 1777563630,
+      "created": 1777564359,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/openrouter/owl-alpha",
@@ -340,7 +340,7 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "openrouter-owl-alpha",
+      "model_family": "owl-alpha",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
@@ -356,7 +356,7 @@
     {
       "id": "openrouter/poolside/laguna-xs.2",
       "object": "model",
-      "created": 1777563631,
+      "created": 1777564360,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/poolside/laguna-xs.2",
@@ -389,7 +389,7 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "poolside-laguna-xs.2",
+      "model_family": "poolside:-laguna-xs.2-(free)",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -409,7 +409,7 @@
     {
       "id": "openrouter/poolside/laguna-m.1",
       "object": "model",
-      "created": 1777563632,
+      "created": 1777564361,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/poolside/laguna-m.1",
@@ -442,7 +442,7 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "poolside-laguna-m.1",
+      "model_family": "poolside:-laguna-m.1-(free)",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -462,7 +462,7 @@
     {
       "id": "openrouter/qwen/qwen3-next-80b-a3b-instruct",
       "object": "model",
-      "created": 1777563633,
+      "created": 1777564362,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/qwen/qwen3-next-80b-a3b-instruct",
@@ -494,13 +494,9 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "qwen3-next-80b-a3b",
+      "model_family": "qwen:-qwen3-next-80b-a3b-(free)",
       "model_variant": "instruct",
-      "aliases": [
-        "Qwen3-Next-80B-A3B-Instruct",
-        "qwen/qwen3-next-80b-a3b-instruct",
-        "xunfei/xop3qwen80bnext"
-      ],
+      "aliases": [],
       "parameter_count": 80000000000,
       "tier": "large",
       "speed": "fast",
@@ -520,7 +516,7 @@
     {
       "id": "openrouter/openai/gpt-oss-120b",
       "object": "model",
-      "created": 1777563634,
+      "created": 1777564363,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/openai/gpt-oss-120b",
@@ -553,13 +549,8 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "gpt-oss-120b",
-      "aliases": [
-        "cerebras/gpt-oss-120b",
-        "gpt-oss-120b",
-        "groq/openai/gpt-oss-120b",
-        "openai/gpt-oss-120b"
-      ],
+      "model_family": "openai:-gpt-oss-120b-(free)",
+      "aliases": [],
       "parameter_count": 120000000000,
       "tier": "large",
       "speed": "fast",
@@ -579,7 +570,7 @@
     {
       "id": "openrouter/openai/gpt-oss-20b",
       "object": "model",
-      "created": 1777563635,
+      "created": 1777564364,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/openai/gpt-oss-20b",
@@ -612,11 +603,8 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "gpt-oss-20b",
-      "aliases": [
-        "groq/openai/gpt-oss-20b",
-        "openai/gpt-oss-20b"
-      ],
+      "model_family": "openai:-gpt-oss-20b-(free)",
+      "aliases": [],
       "parameter_count": 20000000000,
       "tier": "medium",
       "speed": "fast",
@@ -636,7 +624,7 @@
     {
       "id": "openrouter/z-ai/glm-4.5-air",
       "object": "model",
-      "created": 1777563636,
+      "created": 1777564365,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/z-ai/glm-4.5-air",
@@ -669,11 +657,8 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "glm-4.5-air",
-      "aliases": [
-        "bigmodel/glm-4.5-air",
-        "GLM-4_5-Air"
-      ],
+      "model_family": "z.ai:-glm-4.5-air-(free)",
+      "aliases": [],
       "tier": "large",
       "speed": "fast",
       "use_case": [
@@ -692,7 +677,7 @@
     {
       "id": "openrouter/qwen/qwen3-coder",
       "object": "model",
-      "created": 1777563637,
+      "created": 1777564366,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/qwen/qwen3-coder",
@@ -726,7 +711,7 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "qwen3-coder",
+      "model_family": "qwen:-qwen3-coder-480b-a35b-(free)",
       "model_variant": "coder",
       "aliases": [],
       "parameter_count": 480000000000,
@@ -750,7 +735,7 @@
     {
       "id": "openrouter/meta-llama/llama-3.2-3b-instruct",
       "object": "model",
-      "created": 1777563638,
+      "created": 1777564367,
       "owned_by": "openrouter",
       "provider": "openrouter",
       "model_id": "openrouter/meta-llama/llama-3.2-3b-instruct",
@@ -782,11 +767,9 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "llama-3.2-3b",
+      "model_family": "meta:-llama-3.2-3b-(free)",
       "model_variant": "instruct",
-      "aliases": [
-        "meta/llama-3.2-3b-instruct"
-      ],
+      "aliases": [],
       "parameter_count": 3000000000,
       "tier": "small",
       "speed": "fast",

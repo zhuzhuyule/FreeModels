@@ -298,6 +298,30 @@ function buildStats(models: ModelRecord[]): string {
   return rows.join('\n');
 }
 
+function buildFreeModelsSummary(models: ModelRecord[]): string {
+  const free = models.filter(m => m.is_free);
+  const byMech: Record<string, number> = {};
+  for (const m of free) {
+    const k = m.free_mechanism ?? 'unknown';
+    byMech[k] = (byMech[k] ?? 0) + 1;
+  }
+  const mechParts = Object.entries(byMech)
+    .sort((a, b) => b[1] - a[1])
+    .map(([k, n]) => `${mechanismLabel(k as FreeMechanism)} ${n} 个`)
+    .join('、');
+
+  return [
+    `共 **${free.length}** 个免费模型（${mechParts}）。`,
+    ``,
+    `完整列表及按机制筛选：`,
+    `- [全部免费模型](https://ofind.cn/FreeModels/data/views/free/models.json)`,
+    `- [永久免费](https://ofind.cn/FreeModels/data/views/free-permanent/models.json)`,
+    `- [限速免费](https://ofind.cn/FreeModels/data/views/free-rate-limited/models.json)`,
+    `- [配额免费](https://ofind.cn/FreeModels/data/views/free-quota/models.json)`,
+    `- [付费可试用](https://ofind.cn/FreeModels/data/views/paid-trial/models.json)`,
+  ].join('\n');
+}
+
 function buildFreeModelsTable(models: ModelRecord[], provider?: string): string {
   const freeModels = models
     .filter(m => m.is_free && (!provider || m.provider === provider))
@@ -335,7 +359,7 @@ function writeReadme(models: ModelRecord[]): void {
   content = content.replace('# Model Hub', '# FreeModels');
   content = replaceSection(content, 'PROVIDER_INDEX', buildProviderIndex(models));
   content = replaceSection(content, 'STATS', buildStats(models));
-  content = replaceSection(content, 'FREE_MODELS', buildFreeModelsTable(models));
+  content = replaceSection(content, 'FREE_MODELS', buildFreeModelsSummary(models));
   fs.writeFileSync(README_PATH, content.endsWith('\n') ? content : `${content}\n`);
 }
 

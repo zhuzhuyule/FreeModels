@@ -200,9 +200,9 @@ export function canonicalizeFamily(modelId: string, name?: string): FamilyResult
 
   // 当 name 存在时，也尝试从 name 派生，选分更高的（解决 xunfei serviceId 不可读问题）
   if (name) {
-    const nameSlug = name.toLowerCase().replace(/\s+/g, '-');
+    const nameSlug = name.toLowerCase().replace(/[\s_]+/g, '-');
     const nameResult = deriveFamilyFromSlug(nameSlug);
-    if (familyScore(nameResult.family) > familyScore(idResult.family)) {
+    if (familyScore(nameResult.family) >= familyScore(idResult.family)) {
       return {
         family: nameResult.family,
         variant: idResult.variant ?? nameResult.variant,
