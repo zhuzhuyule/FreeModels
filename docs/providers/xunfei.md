@@ -21,8 +21,8 @@
 
 | 指标 | 数量 |
 |---|---:|
-| 总模型 | 49 |
-| 免费模型 | 9 |
+| 总模型 | 55 |
+| 免费模型 | 10 |
 | 付费可试用 | 0 |
 
 ## 免费策略
@@ -33,6 +33,7 @@
 
 | Provider | Model ID | 名称 | 上下文 | 免费类型 | 限制 |
 |---|---|---|---:|---|---|
+| xunfei  | `xunfei/lite` | Spark Lite | 4K | 限速免费 | 5 并发上限 |
 | xunfei  | `xunfei/xop35qwen2b` | Qwen3.5-2B | 33K | 限速免费 | — |
 | xunfei  | `xunfei/xop3qwen8bembedding` | Qwen3-Embedding-8B | 33K | 限速免费 | — |
 | xunfei  | `xunfei/xop3qwen8breranker` | Qwen3-Reranker-8B | 33K | 限速免费 | — |
