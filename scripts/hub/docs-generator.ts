@@ -1,13 +1,17 @@
 import * as fs from 'fs';
 import * as path from 'path';
 
-interface RateLimits {
+interface FreeQuota {
   rpm?: number;
   rpd?: number;
   tpm?: number;
-  tpd?: number;
+  tokens_per_day?: number;
+  tokens_per_month?: number;
+  total_credits?: number;
   notes?: string;
 }
+
+type FreeMechanism = 'permanent' | 'rate-limited' | 'daily-tokens' | 'monthly-tokens' | 'trial-credits' | 'preview' | null;
 
 interface ModelRecord {
   id?: string;
@@ -16,13 +20,20 @@ interface ModelRecord {
   name: string;
   context_label?: string;
   is_free?: boolean;
-  is_experienceable?: boolean;
-  free_tier?: 'none' | 'trial' | 'full';
-  free_kind?: string;
+  free_mechanism?: FreeMechanism;
+  free_quota?: FreeQuota | null;
   trial_scope?: string;
-  rate_limits?: RateLimits;
   model_family?: string;
 }
+
+const MECHANISM_LABEL: Record<string, string> = {
+  permanent: '永久免费',
+  'rate-limited': '限速免费',
+  'daily-tokens': '日 token 配额',
+  'monthly-tokens': '月 token 配额',
+  'trial-credits': '试用 credits',
+  preview: '预览版',
+};
 
 interface ModelsJson {
   updated_at?: string;
@@ -187,26 +198,33 @@ function mdLink(label: string, url?: string): string {
   return url ? `[${label}](${url})` : '—';
 }
 
-function rateLimitText(limits?: RateLimits): string {
-  if (!limits) return '—';
+function quotaText(quota?: FreeQuota | null): string {
+  if (!quota) return '—';
   const parts = [
-    limits.rpm ? `${limits.rpm} RPM` : undefined,
-    limits.rpd ? `${limits.rpd} RPD` : undefined,
-    limits.tpm ? `${limits.tpm} TPM` : undefined,
-    limits.tpd ? `${limits.tpd} TPD` : undefined,
-    limits.notes,
+    quota.rpm ? `${quota.rpm} RPM` : undefined,
+    quota.rpd ? `${quota.rpd} RPD` : undefined,
+    quota.tpm ? `${quota.tpm} TPM` : undefined,
+    quota.tokens_per_day ? `${quota.tokens_per_day.toLocaleString()} tokens/天` : undefined,
+    quota.tokens_per_month ? `${quota.tokens_per_month.toLocaleString()} tokens/月` : undefined,
+    quota.total_credits ? `${quota.total_credits} credits` : undefined,
+    quota.notes,
   ].filter(Boolean);
   return parts.length ? parts.join(' / ') : '—';
 }
 
+function mechanismLabel(mech?: FreeMechanism): string {
+  if (!mech) return '—';
+  return MECHANISM_LABEL[mech] ?? mech;
+}
+
 function providerStats(models: ModelRecord[]) {
-  const map = new Map<string, { total: number; free: number; experience: number; trial: number }>();
+  const map = new Map<string, { total: number; free: number; paidTrial: number }>();
   for (const model of models) {
-    const item = map.get(model.provider) ?? { total: 0, free: 0, experience: 0, trial: 0 };
+    const item = map.get(model.provider) ?? { total: 0, free: 0, paidTrial: 0 };
     item.total += 1;
     if (model.is_free) item.free += 1;
-    if (model.is_experienceable) item.experience += 1;
-    if (model.free_tier === 'trial') item.trial += 1;
+    // 付费但开放试用调用（如 Gitee 体验）
+    if (!model.is_free && model.trial_scope === 'all') item.paidTrial += 1;
     map.set(model.provider, item);
   }
   return map;
@@ -238,7 +256,7 @@ function buildProviderIndex(models: ModelRecord[]): string {
       `\`${provider}\``,
       String(s.total),
       String(s.free),
-      String(s.experience + s.trial),
+      String(s.paidTrial),
       meta.freePolicy ?? '—',
       mdLink('注册', meta.signupUrl),
       mdLink('API Key', meta.apiKeyUrl),
@@ -247,7 +265,7 @@ function buildProviderIndex(models: ModelRecord[]): string {
     ].join(' | ') + ' |';
   });
   return [
-    '| Provider | 内部 ID | 总模型 | 免费 | 体验/试用 | 免费策略 | 注册 | API Key | 文档 | 数据 |',
+    '| Provider | 内部 ID | 总模型 | 免费 | 付费可试用 | 免费策略 | 注册 | API Key | 文档 | 数据 |',
     '|---|---|---:|---:|---:|---|---|---|---|---|',
     ...rows,
   ].join('\n');
@@ -257,17 +275,27 @@ function buildStats(models: ModelRecord[]): string {
   const families = uniqueFamilies(models);
   const providers = new Set(models.map(m => m.provider));
   const free = models.filter(m => m.is_free).length;
-  const experience = models.filter(m => m.is_experienceable || m.free_tier === 'trial').length;
-  return [
+  const paidTrial = models.filter(m => !m.is_free && m.trial_scope === 'all').length;
+  const byMech: Record<string, number> = {};
+  for (const m of models) {
+    if (m.is_free && m.free_mechanism) {
+      byMech[m.free_mechanism] = (byMech[m.free_mechanism] ?? 0) + 1;
+    }
+  }
+  const rows = [
     '| 维度 | 数量 |',
     '|------|-----:|',
     `| Provider | ${providers.size} |`,
     `| 模型总数 | ${models.length} |`,
-    `| 完全免费 | ${free} |`,
-    `| 允许体验/试用 | ${experience} |`,
+    `| 免费模型 (\`is_free=true\`) | ${free} |`,
+    `| 付费可试用 (Gitee 体验等) | ${paidTrial} |`,
     `| 模型家族 | ${families.total} |`,
     `| 跨 Provider 家族 | ${families.crossProvider} |`,
-  ].join('\n');
+  ];
+  for (const [mech, count] of Object.entries(byMech).sort((a, b) => b[1] - a[1])) {
+    rows.push(`| · ${mechanismLabel(mech as FreeMechanism)} | ${count} |`);
+  }
+  return rows.join('\n');
 }
 
 function buildFreeModelsTable(models: ModelRecord[], provider?: string): string {
@@ -282,8 +310,8 @@ function buildFreeModelsTable(models: ModelRecord[], provider?: string): string 
     `\`${model.model_id ?? model.id ?? ''}\``,
     model.name.replace(/\|/g, '\\|'),
     model.context_label ?? '—',
-    model.free_kind ?? model.free_tier ?? '—',
-    rateLimitText(model.rate_limits).replace(/\|/g, '\\|'),
+    mechanismLabel(model.free_mechanism),
+    quotaText(model.free_quota).replace(/\|/g, '\\|'),
   ].join(' | ') + ' |');
 
   return [
@@ -313,7 +341,7 @@ function writeReadme(models: ModelRecord[]): void {
 
 function providerDoc(provider: string, models: ModelRecord[]): string {
   const meta = PROVIDER_LINKS[provider] ?? { name: provider, displayName: provider, website: '' };
-  const stats = providerStats(models).get(provider) ?? { total: 0, free: 0, experience: 0, trial: 0 };
+  const stats = providerStats(models).get(provider) ?? { total: 0, free: 0, paidTrial: 0 };
   return `# ${meta.displayName}\n\n` +
     `> 本文档由 \`npm run generate-docs\` 根据 \`data/models.json\` 自动生成。\n\n` +
     `## 接入信息\n\n` +
@@ -332,7 +360,7 @@ function providerDoc(provider: string, models: ModelRecord[]): string {
     `| 指标 | 数量 |\n|---|---:|\n` +
     `| 总模型 | ${stats.total} |\n` +
     `| 免费模型 | ${stats.free} |\n` +
-    `| 体验/试用 | ${stats.experience + stats.trial} |\n\n` +
+    `| 付费可试用 | ${stats.paidTrial} |\n\n` +
     `## 免费策略\n\n${meta.freePolicy ?? '以官方文档和控制台为准。'}\n\n` +
     `## 当前免费模型\n\n${buildFreeModelsTable(models, provider)}\n`;
 }

@@ -12,7 +12,7 @@
 
 | 层 | 风格 | 示例 |
 |----|------|------|
-| JSON 输出 | `snake_case` | `is_free`、`free_kind`、`model_family` |
+| JSON 输出 | `snake_case` | `is_free`、`free_mechanism`、`model_family` |
 | TypeScript 内部 | `camelCase` | `isFree`、`freeKind`、`modelFamily` |
 
 映射函数：`scripts/hub/types.ts:toOpenAICompatible`
