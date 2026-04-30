@@ -1,232 +1,186 @@
 {
+  "object": "list",
   "view": "tool-use",
-  "updatedAt": "2026-04-30T01:00:41.610Z",
-  "totalModels": 11,
+  "updated_at": "2026-04-30T02:21:08.782Z",
+  "total": 11,
   "filters": {
     "hasToolUse": "true"
   },
-  "models": [
+  "data": [
     {
-      "vendor": "gitee",
-      "modelId": "Qwen2.5-72B-Instruct",
+      "id": "Qwen2.5-72B-Instruct",
+      "object": "model",
+      "created": 1777515657,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "model_id": "Qwen2.5-72B-Instruct",
       "name": "Qwen2.5-72B-Instruct",
       "description": "Qwen2.5-72B-Instruct  支持 32k 上下文, 生成长文本超过 8K 。支持 function call 与外部系统无缝交互，极大提升了灵活性和扩展性。模型知识明显增加，并且大大提高了编码和数学能力, 多语言支持超过 29 种",
-      "contextSize": 32000,
-      "priceInput": 4,
-      "priceOutput": 4,
-      "priceCurrency": "CNY",
-      "isFree": false,
-      "freeMechanism": null,
-      "trialScope": "all",
+      "context_size": 32000,
+      "context_label": "32K",
+      "price_input": 4,
+      "price_output": 4,
+      "price_currency": "CNY",
+      "price_unit": "per_million_tokens",
+      "is_free": false,
       "capabilities": [
         "text-generation",
         "tool_use",
         "function_calling"
       ],
-      "metadata": {
-        "originalType": "text2text",
-        "isReasoning": false,
-        "isMultimodal": false,
-        "hasToolUse": true,
-        "operationsCount": 1,
-        "serviceIdent": "Qwen2.5-72B-Instruct",
-        "apiFormat": "OPEN_AI",
-        "path": "v1/chat/completions",
-        "tags": "文本生成, Function Calling, 32K",
-        "freeUse": true,
-        "isFullyFree": false
-      },
-      "provider": "gitee",
       "tags": [
         "text-generation",
         "tool-use",
         "function-calling"
       ],
-      "isReasoning": false,
-      "isMultimodal": false,
-      "hasToolUse": true,
-      "contextLabel": "32K",
-      "freeQuota": null,
-      "modelFamily": "qwen2.5-72b",
-      "modelVariant": "instruct",
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "all",
+      "model_family": "qwen2.5-72b",
+      "model_variant": "instruct",
       "aliases": [],
+      "parameter_count": 72000000000,
       "tier": "large",
       "speed": "standard",
-      "useCase": [
+      "use_case": [
         "content-creation",
         "writing-assistance"
       ],
-      "performanceLevel": "mid",
-      "parameterCount": 72000000000,
-      "estimatedLatency": "3-10s"
+      "performance_level": "mid",
+      "estimated_latency": "3-10s"
     },
     {
-      "vendor": "gitee",
-      "modelId": "Qwen2.5-7B-Instruct",
+      "id": "Qwen2.5-7B-Instruct",
+      "object": "model",
+      "created": 1777515658,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "model_id": "Qwen2.5-7B-Instruct",
       "name": "Qwen2.5-7B-Instruct",
       "description": "Qwen2.5-7B-Instruct 是一款 70 亿参数的大语言模型，支持 function call 与外部系统无缝交互，极大提升了灵活性和扩展性。优化中文和多语言场景，支持智能问答、内容生成等应用。",
-      "contextSize": 32000,
-      "priceInput": 0.35,
-      "priceOutput": 0.35,
-      "priceCurrency": "CNY",
-      "isFree": false,
-      "freeMechanism": null,
-      "trialScope": "all",
+      "context_size": 32000,
+      "context_label": "32K",
+      "price_input": 0.35,
+      "price_output": 0.35,
+      "price_currency": "CNY",
+      "price_unit": "per_million_tokens",
+      "is_free": false,
       "capabilities": [
         "text-generation",
         "tool_use",
         "function_calling"
       ],
-      "metadata": {
-        "originalType": "text2text",
-        "isReasoning": false,
-        "isMultimodal": false,
-        "hasToolUse": true,
-        "operationsCount": 3,
-        "serviceIdent": "Qwen2.5-7B-Instruct",
-        "apiFormat": "OPEN_AI",
-        "path": "v1/chat/completions",
-        "tags": "文本生成, Function Calling, 32K",
-        "freeUse": true,
-        "isFullyFree": false
-      },
-      "provider": "gitee",
       "tags": [
         "text-generation",
         "tool-use",
         "function-calling"
       ],
-      "isReasoning": false,
-      "isMultimodal": false,
-      "hasToolUse": true,
-      "contextLabel": "32K",
-      "freeQuota": null,
-      "modelFamily": "qwen2.5-7b",
-      "modelVariant": "instruct",
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "all",
+      "model_family": "qwen2.5-7b",
+      "model_variant": "instruct",
       "aliases": [],
+      "parameter_count": 7000000000,
       "tier": "medium",
       "speed": "standard",
-      "useCase": [
+      "use_case": [
         "content-creation",
         "writing-assistance"
       ],
-      "performanceLevel": "entry",
-      "parameterCount": 7000000000,
-      "estimatedLatency": "1-3s"
+      "performance_level": "entry",
+      "estimated_latency": "1-3s"
     },
     {
-      "vendor": "gitee",
-      "modelId": "GLM-4.6V",
+      "id": "GLM-4.6V",
+      "object": "model",
+      "created": 1777515659,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "model_id": "GLM-4.6V",
       "name": "GLM-4.6V",
       "description": "GLM-4.6V 是 GLM 系列在多模态方向上的一次重要迭代，它将训练时上下文窗口提升到128k tokens，在视觉理解精度上达到同参数规模 SOTA，并首次在模型架构中将 Function Call（工具调用）能力原生融入视觉模型，打通从「视觉感知」到「可执行行动（Action）」的链路，为真实业务场景中的多模态 Agent 提供统一的技术底座。",
-      "contextSize": 128000,
-      "priceInput": 2,
-      "priceOutput": 6,
-      "priceCurrency": "CNY",
-      "isFree": false,
-      "freeMechanism": null,
-      "trialScope": "all",
+      "context_size": 128000,
+      "context_label": "128K",
+      "price_input": 2,
+      "price_output": 6,
+      "price_currency": "CNY",
+      "price_unit": "per_million_tokens",
+      "is_free": false,
       "capabilities": [
         "text-generation",
         "tool_use",
         "function_calling"
       ],
-      "metadata": {
-        "originalType": "text2text",
-        "isReasoning": false,
-        "isMultimodal": false,
-        "hasToolUse": true,
-        "operationsCount": 1,
-        "serviceIdent": "GLM-4.6V",
-        "apiFormat": "OPEN_AI",
-        "path": "v1/chat/completions",
-        "tags": "MIT, 视觉模型, 128K",
-        "freeUse": true,
-        "isFullyFree": false
-      },
-      "provider": "gitee",
       "tags": [
         "text-generation",
         "tool-use",
         "function-calling"
       ],
-      "isReasoning": false,
-      "isMultimodal": false,
-      "hasToolUse": true,
-      "contextLabel": "128K",
-      "freeQuota": null,
-      "modelFamily": "glm-4.6v",
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "all",
+      "model_family": "glm-4.6v",
       "aliases": [],
       "tier": "medium",
       "speed": "standard",
-      "useCase": [
+      "use_case": [
         "content-creation",
         "writing-assistance"
       ],
-      "performanceLevel": "entry",
-      "estimatedLatency": "1-3s"
+      "performance_level": "entry",
+      "estimated_latency": "1-3s"
     },
     {
-      "vendor": "openrouter",
-      "modelId": "openrouter/poolside/laguna-xs.2",
+      "id": "openrouter/poolside/laguna-xs.2",
+      "object": "model",
+      "created": 1777515660,
+      "owned_by": "openrouter",
+      "provider": "openrouter",
+      "model_id": "openrouter/poolside/laguna-xs.2",
       "name": "Poolside: Laguna XS.2 (free)",
       "description": "Laguna XS.2 is the second-generation model in the XS size class from [Poolside](https://poolside.ai), their efficient coding agent series. It combines tool calling and reasoning capabilities with a compact footprint, offering a 128K context window and up to 8K output tokens. Quantized to fp8 for fast, cost-efficient agentic coding workflows.\n\n\nLaguna XS.2 is designed for software engineering and agentic coding use cases, and you are responsible for confirming that it is appropriate for your inte",
-      "contextSize": 131072,
-      "priceInput": 0,
-      "priceOutput": 0,
-      "priceCurrency": "USD",
-      "isFree": true,
-      "freeMechanism": "rate-limited",
-      "freeQuota": {
-        "rpm": 20,
-        "rpd": 50,
-        "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
-      },
-      "trialScope": "specific",
+      "context_size": 131072,
+      "context_label": "131K",
+      "price_input": 0,
+      "price_output": 0,
+      "price_currency": "USD",
+      "price_unit": "per_million_tokens",
+      "is_free": true,
       "capabilities": [
         "chat",
         "text-generation",
         "reasoning"
       ],
-      "metadata": {
-        "originalId": "poolside/laguna-xs.2",
-        "author": "poolside",
-        "author_display_name": "poolside",
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "supports_reasoning": true,
-        "reasoning_config": {
-          "start_token": null,
-          "end_token": null,
-          "is_mandatory_reasoning": false,
-          "supports_reasoning_effort": false,
-          "supports_reasoning_max_tokens": false,
-          "default_reasoning_enabled": true,
-          "reasoning_return_mechanism": "reasoning-content"
-        },
-        "group": "Other",
-        "is_multimodal": false,
-        "provider": "openrouter"
-      },
-      "provider": "openrouter",
       "tags": [
         "reasoning",
         "text-generation",
         "chat"
       ],
-      "isReasoning": true,
-      "isMultimodal": false,
-      "hasToolUse": true,
-      "contextLabel": "131K",
-      "modelFamily": "poolside-laguna-xs.2",
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "rpd": 50,
+        "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
+      },
+      "trial_scope": "specific",
+      "model_family": "poolside-laguna-xs.2",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
-      "useCase": [
+      "use_case": [
         "problem-solving",
         "logical-analysis",
         "math",
@@ -236,70 +190,50 @@
         "q&a",
         "complex-reasoning"
       ],
-      "performanceLevel": "mid",
-      "estimatedLatency": "< 1s"
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
     },
     {
-      "vendor": "openrouter",
-      "modelId": "openrouter/poolside/laguna-m.1",
+      "id": "openrouter/poolside/laguna-m.1",
+      "object": "model",
+      "created": 1777515661,
+      "owned_by": "openrouter",
+      "provider": "openrouter",
+      "model_id": "openrouter/poolside/laguna-m.1",
       "name": "Poolside: Laguna M.1 (free)",
       "description": "Laguna M.1 is the flagship coding agent model from [Poolside](https://poolside.ai), optimized for complex software engineering tasks. Designed for agentic coding workflows, it supports tool calling and reasoning, with a 128K context window and up to 8K output tokens. Quantized to fp8 for efficient inference. By using this model, you agree to Poolside’s [End User License Agreement](https://poolside.ai/legal/eula)",
-      "contextSize": 131072,
-      "priceInput": 0,
-      "priceOutput": 0,
-      "priceCurrency": "USD",
-      "isFree": true,
-      "freeMechanism": "rate-limited",
-      "freeQuota": {
-        "rpm": 20,
-        "rpd": 50,
-        "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
-      },
-      "trialScope": "specific",
+      "context_size": 131072,
+      "context_label": "131K",
+      "price_input": 0,
+      "price_output": 0,
+      "price_currency": "USD",
+      "price_unit": "per_million_tokens",
+      "is_free": true,
       "capabilities": [
         "chat",
         "text-generation",
         "reasoning"
       ],
-      "metadata": {
-        "originalId": "poolside/laguna-m.1",
-        "author": "poolside",
-        "author_display_name": "poolside",
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "supports_reasoning": true,
-        "reasoning_config": {
-          "start_token": null,
-          "end_token": null,
-          "is_mandatory_reasoning": false,
-          "supports_reasoning_effort": false,
-          "supports_reasoning_max_tokens": false,
-          "default_reasoning_enabled": true,
-          "reasoning_return_mechanism": "reasoning-content"
-        },
-        "group": "Other",
-        "is_multimodal": false,
-        "provider": "openrouter"
-      },
-      "provider": "openrouter",
       "tags": [
         "reasoning",
         "text-generation",
         "chat"
       ],
-      "isReasoning": true,
-      "isMultimodal": false,
-      "hasToolUse": true,
-      "contextLabel": "131K",
-      "modelFamily": "poolside-laguna-m.1",
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "rpd": 50,
+        "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
+      },
+      "trial_scope": "specific",
+      "model_family": "poolside-laguna-m.1",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
-      "useCase": [
+      "use_case": [
         "problem-solving",
         "logical-analysis",
         "math",
@@ -309,70 +243,55 @@
         "q&a",
         "complex-reasoning"
       ],
-      "performanceLevel": "mid",
-      "estimatedLatency": "< 1s"
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
     },
     {
-      "vendor": "openrouter",
-      "modelId": "openrouter/qwen/qwen3-next-80b-a3b-instruct",
+      "id": "openrouter/qwen/qwen3-next-80b-a3b-instruct",
+      "object": "model",
+      "created": 1777515662,
+      "owned_by": "openrouter",
+      "provider": "openrouter",
+      "model_id": "openrouter/qwen/qwen3-next-80b-a3b-instruct",
       "name": "Qwen: Qwen3 Next 80B A3B Instruct (free)",
       "description": "Qwen3-Next-80B-A3B-Instruct is an instruction-tuned chat model in the Qwen3-Next series optimized for fast, stable responses without “thinking” traces. It targets complex tasks across reasoning, code generation, knowledge QA, and multilingual use, while remaining robust on alignment and formatting. Compared with prior Qwen3 instruct variants, it focuses on higher throughput and stability on ultra-long inputs and multi-turn dialogues, making it well-suited for RAG, tool use, and agentic workflows",
-      "contextSize": 262144,
-      "priceInput": 0,
-      "priceOutput": 0,
-      "priceCurrency": "USD",
-      "isFree": true,
-      "freeMechanism": "rate-limited",
-      "freeQuota": {
-        "rpm": 20,
-        "rpd": 50,
-        "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
-      },
-      "trialScope": "specific",
+      "context_size": 262144,
+      "context_label": "262K",
+      "price_input": 0,
+      "price_output": 0,
+      "price_currency": "USD",
+      "price_unit": "per_million_tokens",
+      "is_free": true,
       "capabilities": [
         "chat",
         "text-generation"
       ],
-      "metadata": {
-        "originalId": "qwen/qwen3-next-80b-a3b-instruct",
-        "author": "qwen",
-        "author_display_name": "Qwen",
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "supports_reasoning": false,
-        "reasoning_config": {
-          "start_token": null,
-          "end_token": null,
-          "system_prompt": null
-        },
-        "group": "Qwen3",
-        "is_multimodal": false,
-        "provider": "openrouter"
-      },
-      "provider": "openrouter",
       "tags": [
         "reasoning",
         "text-generation",
         "chat"
       ],
-      "isReasoning": true,
-      "isMultimodal": false,
-      "hasToolUse": true,
-      "contextLabel": "262K",
-      "modelFamily": "qwen3-next-80b-a3b",
-      "modelVariant": "instruct",
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "rpd": 50,
+        "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
+      },
+      "trial_scope": "specific",
+      "model_family": "qwen3-next-80b-a3b",
+      "model_variant": "instruct",
       "aliases": [
         "Qwen3-Next-80B-A3B-Instruct",
         "qwen/qwen3-next-80b-a3b-instruct",
         "xunfei/Qwen3-Next-80B-A3B-Instruct"
       ],
+      "parameter_count": 80000000000,
       "tier": "large",
       "speed": "fast",
-      "useCase": [
+      "use_case": [
         "problem-solving",
         "logical-analysis",
         "math",
@@ -382,80 +301,56 @@
         "q&a",
         "complex-reasoning"
       ],
-      "performanceLevel": "mid",
-      "parameterCount": 80000000000,
-      "estimatedLatency": "< 1s"
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
     },
     {
-      "vendor": "openrouter",
-      "modelId": "openrouter/openai/gpt-oss-120b",
+      "id": "openrouter/openai/gpt-oss-120b",
+      "object": "model",
+      "created": 1777515663,
+      "owned_by": "openrouter",
+      "provider": "openrouter",
+      "model_id": "openrouter/openai/gpt-oss-120b",
       "name": "OpenAI: gpt-oss-120b (free)",
       "description": "gpt-oss-120b is an open-weight, 117B-parameter Mixture-of-Experts (MoE) language model from OpenAI designed for high-reasoning, agentic, and general-purpose production use cases. It activates 5.1B parameters per forward pass and is optimized to run on a single H100 GPU with native MXFP4 quantization. The model supports configurable reasoning depth, full chain-of-thought access, and native tool use, including function calling, browsing, and structured output generation.",
-      "contextSize": 131072,
-      "priceInput": 0,
-      "priceOutput": 0,
-      "priceCurrency": "USD",
-      "isFree": true,
-      "freeMechanism": "rate-limited",
-      "freeQuota": {
-        "rpm": 20,
-        "rpd": 50,
-        "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
-      },
-      "trialScope": "specific",
+      "context_size": 131072,
+      "context_label": "131K",
+      "price_input": 0,
+      "price_output": 0,
+      "price_currency": "USD",
+      "price_unit": "per_million_tokens",
+      "is_free": true,
       "capabilities": [
         "chat",
         "text-generation",
         "reasoning"
       ],
-      "metadata": {
-        "originalId": "openai/gpt-oss-120b",
-        "author": "openai",
-        "author_display_name": "OpenAI",
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "supports_reasoning": true,
-        "reasoning_config": {
-          "start_token": "<think>",
-          "end_token": "</think>",
-          "system_prompt": null,
-          "is_mandatory_reasoning": true,
-          "supports_reasoning_effort": true,
-          "supported_reasoning_efforts": [
-            "low",
-            "medium",
-            "high"
-          ],
-          "default_reasoning_effort": "medium"
-        },
-        "group": "GPT",
-        "is_multimodal": false,
-        "provider": "openrouter"
-      },
-      "provider": "openrouter",
       "tags": [
         "reasoning",
         "text-generation",
         "chat"
       ],
-      "isReasoning": true,
-      "isMultimodal": false,
-      "hasToolUse": true,
-      "contextLabel": "131K",
-      "modelFamily": "gpt-oss-120b",
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "rpd": 50,
+        "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
+      },
+      "trial_scope": "specific",
+      "model_family": "gpt-oss-120b",
       "aliases": [
         "cerebras/gpt-oss-120b",
         "gpt-oss-120b",
         "groq/openai/gpt-oss-120b",
         "openai/gpt-oss-120b"
       ],
+      "parameter_count": 120000000000,
       "tier": "large",
       "speed": "fast",
-      "useCase": [
+      "use_case": [
         "problem-solving",
         "logical-analysis",
         "math",
@@ -465,79 +360,54 @@
         "q&a",
         "complex-reasoning"
       ],
-      "performanceLevel": "mid",
-      "parameterCount": 120000000000,
-      "estimatedLatency": "< 1s"
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
     },
     {
-      "vendor": "openrouter",
-      "modelId": "openrouter/openai/gpt-oss-20b",
+      "id": "openrouter/openai/gpt-oss-20b",
+      "object": "model",
+      "created": 1777515664,
+      "owned_by": "openrouter",
+      "provider": "openrouter",
+      "model_id": "openrouter/openai/gpt-oss-20b",
       "name": "OpenAI: gpt-oss-20b (free)",
       "description": "gpt-oss-20b is an open-weight 21B parameter model released by OpenAI under the Apache 2.0 license. It uses a Mixture-of-Experts (MoE) architecture with 3.6B active parameters per forward pass, optimized for lower-latency inference and deployability on consumer or single-GPU hardware. The model is trained in OpenAI’s Harmony response format and supports reasoning level configuration, fine-tuning, and agentic capabilities including function calling, tool use, and structured outputs.",
-      "contextSize": 131072,
-      "priceInput": 0,
-      "priceOutput": 0,
-      "priceCurrency": "USD",
-      "isFree": true,
-      "freeMechanism": "rate-limited",
-      "freeQuota": {
-        "rpm": 20,
-        "rpd": 50,
-        "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
-      },
-      "trialScope": "specific",
+      "context_size": 131072,
+      "context_label": "131K",
+      "price_input": 0,
+      "price_output": 0,
+      "price_currency": "USD",
+      "price_unit": "per_million_tokens",
+      "is_free": true,
       "capabilities": [
         "chat",
         "text-generation",
         "reasoning"
       ],
-      "metadata": {
-        "originalId": "openai/gpt-oss-20b",
-        "author": "openai",
-        "author_display_name": "OpenAI",
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "supports_reasoning": true,
-        "reasoning_config": {
-          "start_token": null,
-          "end_token": null,
-          "system_prompt": null,
-          "is_mandatory_reasoning": true,
-          "supports_reasoning_effort": true,
-          "supports_reasoning_max_tokens": null,
-          "supported_reasoning_efforts": [
-            "low",
-            "medium",
-            "high"
-          ],
-          "default_reasoning_effort": "medium"
-        },
-        "group": "GPT",
-        "is_multimodal": false,
-        "provider": "openrouter"
-      },
-      "provider": "openrouter",
       "tags": [
         "reasoning",
         "text-generation",
         "chat"
       ],
-      "isReasoning": true,
-      "isMultimodal": false,
-      "hasToolUse": true,
-      "contextLabel": "131K",
-      "modelFamily": "gpt-oss-20b",
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "rpd": 50,
+        "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
+      },
+      "trial_scope": "specific",
+      "model_family": "gpt-oss-20b",
       "aliases": [
         "groq/openai/gpt-oss-20b",
         "openai/gpt-oss-20b"
       ],
+      "parameter_count": 20000000000,
       "tier": "medium",
       "speed": "fast",
-      "useCase": [
+      "use_case": [
         "problem-solving",
         "logical-analysis",
         "math",
@@ -547,69 +417,52 @@
         "q&a",
         "complex-reasoning"
       ],
-      "performanceLevel": "mid",
-      "parameterCount": 20000000000,
-      "estimatedLatency": "< 1s"
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
     },
     {
-      "vendor": "openrouter",
-      "modelId": "openrouter/z-ai/glm-4.5-air",
+      "id": "openrouter/z-ai/glm-4.5-air",
+      "object": "model",
+      "created": 1777515665,
+      "owned_by": "openrouter",
+      "provider": "openrouter",
+      "model_id": "openrouter/z-ai/glm-4.5-air",
       "name": "Z.ai: GLM 4.5 Air (free)",
       "description": "GLM-4.5-Air is the lightweight variant of our latest flagship model family, also purpose-built for agent-centric applications. Like GLM-4.5, it adopts the Mixture-of-Experts (MoE) architecture but with a more compact parameter size. GLM-4.5-Air also supports hybrid inference modes, offering a \"thinking mode\" for advanced reasoning and tool use, and a \"non-thinking mode\" for real-time interaction. Users can control the reasoning behaviour with the `reasoning` `enabled` boolean. [Learn more in our",
-      "contextSize": 131072,
-      "priceInput": 0,
-      "priceOutput": 0,
-      "priceCurrency": "USD",
-      "isFree": true,
-      "freeMechanism": "rate-limited",
-      "freeQuota": {
-        "rpm": 20,
-        "rpd": 50,
-        "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
-      },
-      "trialScope": "specific",
+      "context_size": 131072,
+      "context_label": "131K",
+      "price_input": 0,
+      "price_output": 0,
+      "price_currency": "USD",
+      "price_unit": "per_million_tokens",
+      "is_free": true,
       "capabilities": [
         "chat",
         "text-generation",
         "reasoning"
       ],
-      "metadata": {
-        "originalId": "z-ai/glm-4.5-air",
-        "author": "z-ai",
-        "author_display_name": "Z.ai",
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "supports_reasoning": true,
-        "reasoning_config": {
-          "start_token": "<think>",
-          "end_token": "</think>",
-          "system_prompt": null
-        },
-        "group": "Other",
-        "is_multimodal": false,
-        "provider": "openrouter"
-      },
-      "provider": "openrouter",
       "tags": [
         "reasoning",
         "text-generation",
         "chat"
       ],
-      "isReasoning": true,
-      "isMultimodal": false,
-      "hasToolUse": true,
-      "contextLabel": "131K",
-      "modelFamily": "glm-4.5-air",
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "rpd": 50,
+        "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
+      },
+      "trial_scope": "specific",
+      "model_family": "glm-4.5-air",
       "aliases": [
         "bigmodel/glm-4.5-air"
       ],
       "tier": "large",
       "speed": "fast",
-      "useCase": [
+      "use_case": [
         "problem-solving",
         "logical-analysis",
         "math",
@@ -619,68 +472,53 @@
         "q&a",
         "complex-reasoning"
       ],
-      "performanceLevel": "mid",
-      "estimatedLatency": "< 1s"
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
     },
     {
-      "vendor": "openrouter",
-      "modelId": "openrouter/qwen/qwen3-coder",
+      "id": "openrouter/qwen/qwen3-coder",
+      "object": "model",
+      "created": 1777515666,
+      "owned_by": "openrouter",
+      "provider": "openrouter",
+      "model_id": "openrouter/qwen/qwen3-coder",
       "name": "Qwen: Qwen3 Coder 480B A35B (free)",
       "description": "Qwen3-Coder-480B-A35B-Instruct is a Mixture-of-Experts (MoE) code generation model developed by the Qwen team. It is optimized for agentic coding tasks such as function calling, tool use, and long-context reasoning over repositories. The model features 480 billion total parameters, with 35 billion active per forward pass (8 out of 160 experts).\n\nPricing for the Alibaba endpoints varies by context length. Once a request is greater than 128k input tokens, the higher pricing is used.",
-      "contextSize": 262000,
-      "priceInput": 0,
-      "priceOutput": 0,
-      "priceCurrency": "USD",
-      "isFree": true,
-      "freeMechanism": "rate-limited",
-      "freeQuota": {
-        "rpm": 20,
-        "rpd": 50,
-        "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
-      },
-      "trialScope": "specific",
+      "context_size": 262000,
+      "context_label": "262K",
+      "price_input": 0,
+      "price_output": 0,
+      "price_currency": "USD",
+      "price_unit": "per_million_tokens",
+      "is_free": true,
       "capabilities": [
         "chat",
         "text-generation",
         "code-generation"
       ],
-      "metadata": {
-        "originalId": "qwen/qwen3-coder",
-        "author": "qwen",
-        "author_display_name": "Qwen",
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "supports_reasoning": false,
-        "reasoning_config": {
-          "start_token": null,
-          "end_token": null,
-          "system_prompt": null
-        },
-        "group": "Qwen3",
-        "is_multimodal": false,
-        "provider": "openrouter"
-      },
-      "provider": "openrouter",
       "tags": [
         "reasoning",
         "text-generation",
         "chat",
         "code-generation"
       ],
-      "isReasoning": true,
-      "isMultimodal": false,
-      "hasToolUse": true,
-      "contextLabel": "262K",
-      "modelFamily": "qwen3-coder",
-      "modelVariant": "coder",
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "rpd": 50,
+        "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
+      },
+      "trial_scope": "specific",
+      "model_family": "qwen3-coder",
+      "model_variant": "coder",
       "aliases": [],
+      "parameter_count": 480000000000,
       "tier": "large",
       "speed": "fast",
-      "useCase": [
+      "use_case": [
         "problem-solving",
         "logical-analysis",
         "math",
@@ -692,65 +530,53 @@
         "code-completion",
         "complex-reasoning"
       ],
-      "performanceLevel": "mid",
-      "parameterCount": 480000000000,
-      "estimatedLatency": "< 1s"
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
     },
     {
-      "vendor": "openrouter",
-      "modelId": "openrouter/meta-llama/llama-3.2-3b-instruct",
+      "id": "openrouter/meta-llama/llama-3.2-3b-instruct",
+      "object": "model",
+      "created": 1777515667,
+      "owned_by": "openrouter",
+      "provider": "openrouter",
+      "model_id": "openrouter/meta-llama/llama-3.2-3b-instruct",
       "name": "Meta: Llama 3.2 3B Instruct (free)",
       "description": "Llama 3.2 3B is a 3-billion-parameter multilingual large language model, optimized for advanced natural language processing tasks like dialogue generation, reasoning, and summarization. Designed with the latest transformer architecture, it supports eight languages, including English, Spanish, and Hindi, and is adaptable for additional languages.\n\nTrained on 9 trillion tokens, the Llama 3.2 3B model excels in instruction-following, complex reasoning, and tool use. Its balanced performance makes i",
-      "contextSize": 131072,
-      "priceInput": 0,
-      "priceOutput": 0,
-      "priceCurrency": "USD",
-      "isFree": true,
-      "freeMechanism": "rate-limited",
-      "freeQuota": {
-        "rpm": 20,
-        "rpd": 50,
-        "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
-      },
-      "trialScope": "specific",
+      "context_size": 131072,
+      "context_label": "131K",
+      "price_input": 0,
+      "price_output": 0,
+      "price_currency": "USD",
+      "price_unit": "per_million_tokens",
+      "is_free": true,
       "capabilities": [
         "chat",
         "text-generation"
       ],
-      "metadata": {
-        "originalId": "meta-llama/llama-3.2-3b-instruct",
-        "author": "meta-llama",
-        "author_display_name": "Meta Llama",
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "supports_reasoning": false,
-        "reasoning_config": null,
-        "group": "Llama3",
-        "is_multimodal": false,
-        "provider": "openrouter"
-      },
-      "provider": "openrouter",
       "tags": [
         "reasoning",
         "text-generation",
         "chat"
       ],
-      "isReasoning": true,
-      "isMultimodal": false,
-      "hasToolUse": true,
-      "contextLabel": "131K",
-      "modelFamily": "llama-3.2-3b",
-      "modelVariant": "instruct",
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "rpd": 50,
+        "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
+      },
+      "trial_scope": "specific",
+      "model_family": "llama-3.2-3b",
+      "model_variant": "instruct",
       "aliases": [
         "meta/llama-3.2-3b-instruct"
       ],
+      "parameter_count": 3000000000,
       "tier": "small",
       "speed": "fast",
-      "useCase": [
+      "use_case": [
         "problem-solving",
         "logical-analysis",
         "math",
@@ -760,9 +586,8 @@
         "q&a",
         "complex-reasoning"
       ],
-      "performanceLevel": "entry",
-      "parameterCount": 3000000000,
-      "estimatedLatency": "< 1s"
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
     }
   ]
 }

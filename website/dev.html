@@ -86,6 +86,7 @@
   <select id="freeFilter">
     <option value="">所有计费</option>
     <option value="true">免费</option>
+    <option value="paid-trial">付费可试用</option>
     <option value="false">付费</option>
   </select>
   <select id="mechanismFilter">
@@ -159,6 +160,7 @@ async function loadData() {
     'free-permanent': '永久免费',
     'free-rate-limited': '限速免费',
     'free-quota': '配额免费',
+    'paid-trial': '付费可试用',
     'reasoning': '推理模型',
     'multimodal': '多模态',
     'tool-use': '工具调用',
@@ -173,6 +175,7 @@ async function loadData() {
     'free-permanent': '无任何限制，永久免费',
     'free-rate-limited': '有 RPM/RPD 限制但免费',
     'free-quota': '每日 / 每月 token 配额或一次性 credits',
+    'paid-trial': '付费模型，但可通过试用入口调用（如 Gitee 体验）',
     'reasoning': '支持推理能力',
     'multimodal': '支持多模态',
     'tool-use': '支持工具调用',
@@ -266,7 +269,9 @@ function applyFilters() {
     if (provider && m.provider !== provider) return false;
     if (tier && m.tier !== tier) return false;
     if (speed && m.speed !== speed) return false;
-    if (isFree && String(!!m.is_free) !== isFree) return false;
+    if (isFree === 'true' && !m.is_free) return false;
+    if (isFree === 'false' && (m.is_free || m.trial_scope === 'all')) return false;
+    if (isFree === 'paid-trial' && (m.is_free || m.trial_scope !== 'all')) return false;
     if (mechanism && m.free_mechanism !== mechanism) return false;
     if (modelType && !(m.capabilities || []).includes(modelType)) return false;
     if (reasoning && String(m.is_reasoning) !== reasoning) return false;

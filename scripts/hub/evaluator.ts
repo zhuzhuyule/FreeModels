@@ -1,6 +1,7 @@
 import * as fs from 'fs';
 import * as path from 'path';
-import type { CachedCapabilities, RawModelData, EnhancedModelData, ViewOutput, ProviderMeta } from './types.js';
+import type { CachedCapabilities, RawModelData, EnhancedModelData, ProviderMeta } from './types.js';
+import { toOpenAICompatible } from './types.js';
 import { getCachedOrInfer } from './enhancer.js';
 import { profileModel, extractParameterCount } from './analyzer.js';
 
@@ -133,11 +134,13 @@ export function saveProviderOutput(
     fs.mkdirSync(outputDir, { recursive: true });
   }
 
+  const compatible = toOpenAICompatible(models);
   const output = {
+    object: 'list' as const,
     provider,
-    updatedAt: new Date().toISOString(),
-    totalModels: models.length,
-    models,
+    updated_at: compatible.updated_at,
+    total: models.length,
+    data: compatible.data,
   };
 
   const outputPath = path.join(outputDir, 'models.json');
@@ -155,12 +158,14 @@ export function saveViewOutput(
     fs.mkdirSync(outputDir, { recursive: true });
   }
 
-  const output: ViewOutput = {
+  const compatible = toOpenAICompatible(models);
+  const output = {
+    object: 'list' as const,
     view,
-    updatedAt: new Date().toISOString(),
-    totalModels: models.length,
+    updated_at: compatible.updated_at,
+    total: models.length,
     filters,
-    models,
+    data: compatible.data,
   };
 
   const outputPath = path.join(outputDir, 'models.json');
@@ -175,6 +180,7 @@ export function buildViews(models: EnhancedModelData[]): Array<{ view: string; f
     { view: 'free-permanent', filters: { freeMechanism: 'permanent' } },
     { view: 'free-rate-limited', filters: { freeMechanism: 'rate-limited' } },
     { view: 'free-quota', filters: { freeMechanism: ['daily-tokens', 'monthly-tokens', 'trial-credits'] } },
+    { view: 'paid-trial', filters: { isFree: 'false', trialScope: 'all' } },
     { view: 'reasoning', filters: { tags: 'reasoning' } },
     { view: 'multimodal', filters: { tags: 'vision' } },
     { view: 'tool-use', filters: { hasToolUse: 'true' } },
@@ -215,6 +221,8 @@ function checkFilter(model: EnhancedModelData, key: string, value: string): bool
       return model.isFree === (value === 'true');
     case 'freeMechanism':
       return model.freeMechanism === value;
+    case 'trialScope':
+      return model.trialScope === value;
     case 'tags':
       return model.tags.includes(value);
     case 'provider':

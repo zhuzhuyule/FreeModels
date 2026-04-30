@@ -1,7 +1,8 @@
 {
+  "object": "list",
   "view": "free-quota",
-  "updatedAt": "2026-04-30T01:00:41.607Z",
-  "totalModels": 33,
+  "updated_at": "2026-04-30T02:21:08.780Z",
+  "total": 33,
   "filters": {
     "freeMechanism": [
       "daily-tokens",
@@ -9,103 +10,89 @@
       "trial-credits"
     ]
   },
-  "models": [
+  "data": [
     {
-      "vendor": "longcat",
-      "modelId": "longcat/LongCat-Flash-Chat",
+      "id": "longcat/LongCat-Flash-Chat",
+      "object": "model",
+      "created": 1777515635,
+      "owned_by": "longcat",
+      "provider": "longcat",
+      "model_id": "longcat/LongCat-Flash-Chat",
       "name": "LongCat Flash Chat",
       "description": "LongCat: 高性能通用对话模型",
-      "contextSize": 256000,
-      "priceCurrency": "CNY",
-      "isFree": true,
-      "freeMechanism": "daily-tokens",
-      "freeQuota": {
-        "notes": "500,000 tokens/天"
-      },
-      "trialScope": "specific",
+      "context_size": 256000,
+      "context_label": "256K",
+      "price_currency": "CNY",
+      "is_free": true,
       "capabilities": [
         "chat",
         "text-generation"
       ],
-      "metadata": {
-        "originalId": "LongCat-Flash-Chat",
-        "contextSize": 256000,
-        "freeQuota": "500,000 tokens/天",
-        "apiFormats": [
-          "OpenAI",
-          "Anthropic"
-        ],
-        "provider": "longcat"
-      },
-      "provider": "longcat",
       "tags": [
         "text-generation",
         "chat"
       ],
-      "isReasoning": false,
-      "isMultimodal": false,
-      "hasToolUse": false,
-      "contextLabel": "256K",
-      "modelFamily": "longcat-flash",
-      "modelVariant": "chat",
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "500,000 tokens/天"
+      },
+      "trial_scope": "specific",
+      "model_family": "longcat-flash",
+      "model_variant": "chat",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
-      "useCase": [
+      "use_case": [
         "content-creation",
         "writing-assistance",
         "conversation",
         "q&a"
       ],
-      "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
     },
     {
-      "vendor": "longcat",
-      "modelId": "longcat/LongCat-Flash-Thinking",
+      "id": "longcat/LongCat-Flash-Thinking",
+      "object": "model",
+      "created": 1777515636,
+      "owned_by": "longcat",
+      "provider": "longcat",
+      "model_id": "longcat/LongCat-Flash-Thinking",
       "name": "LongCat Flash Thinking",
       "description": "LongCat: 深度思考模型",
-      "contextSize": 256000,
-      "priceCurrency": "CNY",
-      "isFree": true,
-      "freeMechanism": "daily-tokens",
-      "freeQuota": {
-        "notes": "500,000 tokens/天"
-      },
-      "trialScope": "specific",
+      "context_size": 256000,
+      "context_label": "256K",
+      "price_currency": "CNY",
+      "is_free": true,
       "capabilities": [
         "chat",
         "text-generation",
         "reasoning"
       ],
-      "metadata": {
-        "originalId": "LongCat-Flash-Thinking",
-        "contextSize": 256000,
-        "freeQuota": "500,000 tokens/天",
-        "apiFormats": [
-          "OpenAI",
-          "Anthropic"
-        ],
-        "provider": "longcat"
-      },
-      "provider": "longcat",
       "tags": [
         "chat",
         "text-generation",
         "reasoning"
       ],
-      "isReasoning": false,
-      "isMultimodal": false,
-      "hasToolUse": false,
-      "contextLabel": "256K",
-      "modelFamily": "longcat-flash-thinking",
-      "modelVariant": "thinking",
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "500,000 tokens/天"
+      },
+      "trial_scope": "specific",
+      "model_family": "longcat-flash-thinking",
+      "model_variant": "thinking",
       "aliases": [
         "longcat/LongCat-Flash-Thinking-2601"
       ],
       "tier": "large",
       "speed": "fast",
-      "useCase": [
+      "use_case": [
         "conversation",
         "q&a",
         "content-creation",
@@ -115,55 +102,48 @@
         "math",
         "complex-reasoning"
       ],
-      "performanceLevel": "mid",
-      "estimatedLatency": "< 1s"
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
     },
     {
-      "vendor": "longcat",
-      "modelId": "longcat/LongCat-Flash-Thinking-2601",
+      "id": "longcat/LongCat-Flash-Thinking-2601",
+      "object": "model",
+      "created": 1777515637,
+      "owned_by": "longcat",
+      "provider": "longcat",
+      "model_id": "longcat/LongCat-Flash-Thinking-2601",
       "name": "LongCat Flash Thinking 2601",
       "description": "LongCat: 升级版深度思考模型",
-      "contextSize": 256000,
-      "priceCurrency": "CNY",
-      "isFree": true,
-      "freeMechanism": "daily-tokens",
-      "freeQuota": {
-        "notes": "500,000 tokens/天"
-      },
-      "trialScope": "specific",
+      "context_size": 256000,
+      "context_label": "256K",
+      "price_currency": "CNY",
+      "is_free": true,
       "capabilities": [
         "chat",
         "text-generation",
         "reasoning"
       ],
-      "metadata": {
-        "originalId": "LongCat-Flash-Thinking-2601",
-        "contextSize": 256000,
-        "freeQuota": "500,000 tokens/天",
-        "apiFormats": [
-          "OpenAI",
-          "Anthropic"
-        ],
-        "provider": "longcat"
-      },
-      "provider": "longcat",
       "tags": [
         "chat",
         "text-generation",
         "reasoning"
       ],
-      "isReasoning": false,
-      "isMultimodal": false,
-      "hasToolUse": false,
-      "contextLabel": "256K",
-      "modelFamily": "longcat-flash-thinking",
-      "modelVariant": "thinking",
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "500,000 tokens/天"
+      },
+      "trial_scope": "specific",
+      "model_family": "longcat-flash-thinking",
+      "model_variant": "thinking",
       "aliases": [
         "longcat/LongCat-Flash-Thinking"
       ],
       "tier": "large",
       "speed": "fast",
-      "useCase": [
+      "use_case": [
         "conversation",
         "q&a",
         "content-creation",
@@ -173,101 +153,87 @@
         "math",
         "complex-reasoning"
       ],
-      "performanceLevel": "mid",
-      "estimatedLatency": "< 1s"
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
     },
     {
-      "vendor": "longcat",
-      "modelId": "longcat/LongCat-Flash-Lite",
+      "id": "longcat/LongCat-Flash-Lite",
+      "object": "model",
+      "created": 1777515638,
+      "owned_by": "longcat",
+      "provider": "longcat",
+      "model_id": "longcat/LongCat-Flash-Lite",
       "name": "LongCat Flash Lite",
       "description": "LongCat: 高效轻量化MoE模型",
-      "contextSize": 256000,
-      "priceCurrency": "CNY",
-      "isFree": true,
-      "freeMechanism": "daily-tokens",
-      "freeQuota": {
-        "notes": "50,000,000 tokens/天"
-      },
-      "trialScope": "specific",
+      "context_size": 256000,
+      "context_label": "256K",
+      "price_currency": "CNY",
+      "is_free": true,
       "capabilities": [
         "chat",
         "text-generation"
       ],
-      "metadata": {
-        "originalId": "LongCat-Flash-Lite",
-        "contextSize": 256000,
-        "freeQuota": "50,000,000 tokens/天",
-        "apiFormats": [
-          "OpenAI",
-          "Anthropic"
-        ],
-        "provider": "longcat"
-      },
-      "provider": "longcat",
       "tags": [
         "chat",
         "text-generation"
       ],
-      "isReasoning": false,
-      "isMultimodal": false,
-      "hasToolUse": false,
-      "contextLabel": "256K",
-      "modelFamily": "longcat-flash-lite",
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "50,000,000 tokens/天"
+      },
+      "trial_scope": "specific",
+      "model_family": "longcat-flash-lite",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
-      "useCase": [
+      "use_case": [
         "conversation",
         "q&a",
         "content-creation",
         "writing-assistance"
       ],
-      "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
     },
     {
-      "vendor": "longcat",
-      "modelId": "longcat/LongCat-Flash-Omni-2603",
+      "id": "longcat/LongCat-Flash-Omni-2603",
+      "object": "model",
+      "created": 1777515639,
+      "owned_by": "longcat",
+      "provider": "longcat",
+      "model_id": "longcat/LongCat-Flash-Omni-2603",
       "name": "LongCat Flash Omni 2603",
       "description": "LongCat: 多模态模型",
-      "contextSize": 128000,
-      "priceCurrency": "CNY",
-      "isFree": true,
-      "freeMechanism": "daily-tokens",
-      "freeQuota": {
-        "notes": "500,000 tokens/天"
-      },
-      "trialScope": "specific",
+      "context_size": 128000,
+      "context_label": "128K",
+      "price_currency": "CNY",
+      "is_free": true,
       "capabilities": [
         "chat",
         "text-generation",
         "vision"
       ],
-      "metadata": {
-        "originalId": "LongCat-Flash-Omni-2603",
-        "contextSize": 128000,
-        "freeQuota": "500,000 tokens/天",
-        "apiFormats": [
-          "OpenAI"
-        ],
-        "isMultimodal": true,
-        "provider": "longcat"
-      },
-      "provider": "longcat",
       "tags": [
         "chat",
         "text-generation",
         "vision"
       ],
-      "isReasoning": false,
-      "isMultimodal": false,
-      "hasToolUse": false,
-      "contextLabel": "128K",
-      "modelFamily": "longcat-flash-omni",
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "500,000 tokens/天"
+      },
+      "trial_scope": "specific",
+      "model_family": "longcat-flash-omni",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
-      "useCase": [
+      "use_case": [
         "conversation",
         "q&a",
         "content-creation",
@@ -275,483 +241,437 @@
         "image-understanding",
         "visual-q&a"
       ],
-      "performanceLevel": "mid",
-      "estimatedLatency": "< 1s"
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
     },
     {
-      "vendor": "longcat",
-      "modelId": "longcat/LongCat-Flash-Chat-2602-Exp",
+      "id": "longcat/LongCat-Flash-Chat-2602-Exp",
+      "object": "model",
+      "created": 1777515640,
+      "owned_by": "longcat",
+      "provider": "longcat",
+      "model_id": "longcat/LongCat-Flash-Chat-2602-Exp",
       "name": "LongCat Flash Chat 2602 Exp",
       "description": "LongCat: 高性能通用对话模型（实验版）",
-      "contextSize": 256000,
-      "priceCurrency": "CNY",
-      "isFree": true,
-      "freeMechanism": "daily-tokens",
-      "freeQuota": {
-        "notes": "500,000 tokens/天"
-      },
-      "trialScope": "specific",
+      "context_size": 256000,
+      "context_label": "256K",
+      "price_currency": "CNY",
+      "is_free": true,
       "capabilities": [
         "chat",
         "text-generation"
       ],
-      "metadata": {
-        "originalId": "LongCat-Flash-Chat-2602-Exp",
-        "contextSize": 256000,
-        "freeQuota": "500,000 tokens/天",
-        "apiFormats": [
-          "OpenAI"
-        ],
-        "provider": "longcat"
-      },
-      "provider": "longcat",
       "tags": [
         "text-generation",
         "chat"
       ],
-      "isReasoning": false,
-      "isMultimodal": false,
-      "hasToolUse": false,
-      "contextLabel": "256K",
-      "modelFamily": "longcat-flash-2602-exp",
-      "modelVariant": "chat",
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "500,000 tokens/天"
+      },
+      "trial_scope": "specific",
+      "model_family": "longcat-flash-2602-exp",
+      "model_variant": "chat",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
-      "useCase": [
+      "use_case": [
         "content-creation",
         "writing-assistance",
         "conversation",
         "q&a"
       ],
-      "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
     },
     {
-      "vendor": "longcat",
-      "modelId": "longcat/LongCat-2.0-Preview",
+      "id": "longcat/LongCat-2.0-Preview",
+      "object": "model",
+      "created": 1777515641,
+      "owned_by": "longcat",
+      "provider": "longcat",
+      "model_id": "longcat/LongCat-2.0-Preview",
       "name": "LongCat 2.0 Preview",
       "description": "LongCat: 高性能Agentic模型（内测）",
-      "contextSize": 1024000,
-      "priceCurrency": "CNY",
-      "isFree": true,
-      "freeMechanism": "daily-tokens",
-      "freeQuota": {
-        "notes": "10,000,000 tokens/2小时"
-      },
-      "trialScope": "specific",
+      "context_size": 1024000,
+      "context_label": "1M",
+      "price_currency": "CNY",
+      "is_free": true,
       "capabilities": [
         "chat",
         "text-generation",
         "agentic"
       ],
-      "metadata": {
-        "originalId": "LongCat-2.0-Preview",
-        "contextSize": 1024000,
-        "freeQuota": "10,000,000 tokens/2小时",
-        "apiFormats": [
-          "OpenAI",
-          "Anthropic"
-        ],
-        "isAgentic": true,
-        "provider": "longcat"
-      },
-      "provider": "longcat",
       "tags": [
         "chat",
         "text-generation",
         "agentic"
       ],
-      "isReasoning": false,
-      "isMultimodal": false,
-      "hasToolUse": false,
-      "contextLabel": "1M",
-      "modelFamily": "longcat-2.0-preview",
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000,000 tokens/2小时"
+      },
+      "trial_scope": "specific",
+      "model_family": "longcat-2.0-preview",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
-      "useCase": [
+      "use_case": [
         "conversation",
         "q&a",
         "content-creation",
         "writing-assistance"
       ],
-      "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
     },
     {
-      "vendor": "nvidia",
-      "modelId": "bytedance/seed-oss-36b-instruct",
+      "id": "bytedance/seed-oss-36b-instruct",
+      "object": "model",
+      "created": 1777515642,
+      "owned_by": "nvidia",
+      "provider": "nvidia",
+      "model_id": "bytedance/seed-oss-36b-instruct",
       "name": "seed-oss-36b-instruct",
       "description": "Model: bytedance/seed-oss-36b-instruct",
-      "priceCurrency": "USD",
-      "isFree": true,
-      "freeMechanism": "trial-credits",
-      "freeQuota": {
-        "notes": "NVIDIA NIM free credits, exhaustible"
-      },
-      "trialScope": "specific",
+      "context_label": "unknown",
+      "price_currency": "USD",
+      "is_free": true,
       "capabilities": [
         "chat",
         "text-generation"
       ],
-      "metadata": {
-        "id": "bytedance/seed-oss-36b-instruct",
-        "object": "model",
-        "created": 735790403,
-        "owned_by": "bytedance",
-        "is_free_endpoint": true
-      },
-      "provider": "nvidia",
       "tags": [
         "text-generation",
         "chat"
       ],
-      "isReasoning": false,
-      "isMultimodal": false,
-      "hasToolUse": false,
-      "contextLabel": "unknown",
-      "modelFamily": "bytedance-seed-oss-36b",
-      "modelVariant": "instruct",
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
+      "model_family": "bytedance-seed-oss-36b",
+      "model_variant": "instruct",
       "aliases": [],
+      "parameter_count": 36000000000,
       "tier": "medium",
       "speed": "fast",
-      "useCase": [
+      "use_case": [
         "content-creation",
         "writing-assistance",
         "conversation",
         "q&a"
       ],
-      "performanceLevel": "entry",
-      "parameterCount": 36000000000,
-      "estimatedLatency": "< 1s"
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
     },
     {
-      "vendor": "nvidia",
-      "modelId": "google/gemma-2-2b-it",
+      "id": "google/gemma-2-2b-it",
+      "object": "model",
+      "created": 1777515643,
+      "owned_by": "nvidia",
+      "provider": "nvidia",
+      "model_id": "google/gemma-2-2b-it",
       "name": "gemma-2-2b-it",
       "description": "Model: google/gemma-2-2b-it",
-      "priceCurrency": "USD",
-      "isFree": true,
-      "freeMechanism": "trial-credits",
-      "freeQuota": {
-        "notes": "NVIDIA NIM free credits, exhaustible"
-      },
-      "trialScope": "specific",
+      "context_label": "unknown",
+      "price_currency": "USD",
+      "is_free": true,
       "capabilities": [
         "chat",
         "text-generation"
       ],
-      "metadata": {
-        "id": "google/gemma-2-2b-it",
-        "object": "model",
-        "created": 735790403,
-        "owned_by": "google",
-        "is_free_endpoint": true
-      },
-      "provider": "nvidia",
       "tags": [
         "text-generation",
         "chat"
       ],
-      "isReasoning": false,
-      "isMultimodal": false,
-      "hasToolUse": false,
-      "contextLabel": "unknown",
-      "modelFamily": "gemma-2-2b",
-      "modelVariant": "it",
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
+      "model_family": "gemma-2-2b",
+      "model_variant": "it",
       "aliases": [],
+      "parameter_count": 2000000000,
       "tier": "small",
       "speed": "fast",
-      "useCase": [
+      "use_case": [
         "content-creation",
         "writing-assistance",
         "conversation",
         "q&a"
       ],
-      "performanceLevel": "entry",
-      "parameterCount": 2000000000,
-      "estimatedLatency": "< 1s"
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
     },
     {
-      "vendor": "nvidia",
-      "modelId": "google/gemma-3-27b-it",
+      "id": "google/gemma-3-27b-it",
+      "object": "model",
+      "created": 1777515644,
+      "owned_by": "nvidia",
+      "provider": "nvidia",
+      "model_id": "google/gemma-3-27b-it",
       "name": "gemma-3-27b-it",
       "description": "Model: google/gemma-3-27b-it",
-      "priceCurrency": "USD",
-      "isFree": true,
-      "freeMechanism": "trial-credits",
-      "freeQuota": {
-        "notes": "NVIDIA NIM free credits, exhaustible"
-      },
-      "trialScope": "specific",
+      "context_label": "unknown",
+      "price_currency": "USD",
+      "is_free": true,
       "capabilities": [
         "chat",
         "text-generation"
       ],
-      "metadata": {
-        "id": "google/gemma-3-27b-it",
-        "object": "model",
-        "created": 735790403,
-        "owned_by": "google",
-        "is_free_endpoint": true
-      },
-      "provider": "nvidia",
       "tags": [
         "text-generation",
         "chat"
       ],
-      "isReasoning": false,
-      "isMultimodal": false,
-      "hasToolUse": false,
-      "contextLabel": "unknown",
-      "modelFamily": "gemma-3-27b",
-      "modelVariant": "it",
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
+      "model_family": "gemma-3-27b",
+      "model_variant": "it",
       "aliases": [
         "openrouter/google/gemma-3-27b-it"
       ],
+      "parameter_count": 27000000000,
       "tier": "medium",
       "speed": "fast",
-      "useCase": [
+      "use_case": [
         "content-creation",
         "writing-assistance",
         "conversation",
         "q&a"
       ],
-      "performanceLevel": "entry",
-      "parameterCount": 27000000000,
-      "estimatedLatency": "< 1s"
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
     },
     {
-      "vendor": "nvidia",
-      "modelId": "google/gemma-3n-e2b-it",
+      "id": "google/gemma-3n-e2b-it",
+      "object": "model",
+      "created": 1777515645,
+      "owned_by": "nvidia",
+      "provider": "nvidia",
+      "model_id": "google/gemma-3n-e2b-it",
       "name": "gemma-3n-e2b-it",
       "description": "Model: google/gemma-3n-e2b-it",
-      "priceCurrency": "USD",
-      "isFree": true,
-      "freeMechanism": "trial-credits",
-      "freeQuota": {
-        "notes": "NVIDIA NIM free credits, exhaustible"
-      },
-      "trialScope": "specific",
+      "context_label": "unknown",
+      "price_currency": "USD",
+      "is_free": true,
       "capabilities": [
         "chat",
         "text-generation"
       ],
-      "metadata": {
-        "id": "google/gemma-3n-e2b-it",
-        "object": "model",
-        "created": 735790403,
-        "owned_by": "google",
-        "is_free_endpoint": true
-      },
-      "provider": "nvidia",
       "tags": [
         "text-generation",
         "chat"
       ],
-      "isReasoning": false,
-      "isMultimodal": false,
-      "hasToolUse": false,
-      "contextLabel": "unknown",
-      "modelFamily": "gemma-3n-e2b",
-      "modelVariant": "it",
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
+      "model_family": "gemma-3n-e2b",
+      "model_variant": "it",
       "aliases": [
         "openrouter/google/gemma-3n-e2b-it"
       ],
+      "parameter_count": 2000000000,
       "tier": "medium",
       "speed": "fast",
-      "useCase": [
+      "use_case": [
         "content-creation",
         "writing-assistance",
         "conversation",
         "q&a"
       ],
-      "performanceLevel": "entry",
-      "parameterCount": 2000000000,
-      "estimatedLatency": "< 1s"
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
     },
     {
-      "vendor": "nvidia",
-      "modelId": "google/gemma-3n-e4b-it",
+      "id": "google/gemma-3n-e4b-it",
+      "object": "model",
+      "created": 1777515646,
+      "owned_by": "nvidia",
+      "provider": "nvidia",
+      "model_id": "google/gemma-3n-e4b-it",
       "name": "gemma-3n-e4b-it",
       "description": "Model: google/gemma-3n-e4b-it",
-      "priceCurrency": "USD",
-      "isFree": true,
-      "freeMechanism": "trial-credits",
-      "freeQuota": {
-        "notes": "NVIDIA NIM free credits, exhaustible"
-      },
-      "trialScope": "specific",
+      "context_label": "unknown",
+      "price_currency": "USD",
+      "is_free": true,
       "capabilities": [
         "chat",
         "text-generation"
       ],
-      "metadata": {
-        "id": "google/gemma-3n-e4b-it",
-        "object": "model",
-        "created": 735790403,
-        "owned_by": "google",
-        "is_free_endpoint": true
-      },
-      "provider": "nvidia",
       "tags": [
         "text-generation",
         "chat"
       ],
-      "isReasoning": false,
-      "isMultimodal": false,
-      "hasToolUse": false,
-      "contextLabel": "unknown",
-      "modelFamily": "gemma-3n-e4b",
-      "modelVariant": "it",
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
+      "model_family": "gemma-3n-e4b",
+      "model_variant": "it",
       "aliases": [
         "openrouter/google/gemma-3n-e4b-it"
       ],
+      "parameter_count": 4000000000,
       "tier": "medium",
       "speed": "fast",
-      "useCase": [
+      "use_case": [
         "content-creation",
         "writing-assistance",
         "conversation",
         "q&a"
       ],
-      "performanceLevel": "entry",
-      "parameterCount": 4000000000,
-      "estimatedLatency": "< 1s"
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
     },
     {
-      "vendor": "nvidia",
-      "modelId": "meta/llama-4-maverick-17b-128e-instruct",
+      "id": "meta/llama-4-maverick-17b-128e-instruct",
+      "object": "model",
+      "created": 1777515647,
+      "owned_by": "nvidia",
+      "provider": "nvidia",
+      "model_id": "meta/llama-4-maverick-17b-128e-instruct",
       "name": "llama-4-maverick-17b-128e-instruct",
       "description": "Model: meta/llama-4-maverick-17b-128e-instruct",
-      "priceCurrency": "USD",
-      "isFree": true,
-      "freeMechanism": "trial-credits",
-      "freeQuota": {
-        "notes": "NVIDIA NIM free credits, exhaustible"
-      },
-      "trialScope": "specific",
+      "context_label": "unknown",
+      "price_currency": "USD",
+      "is_free": true,
       "capabilities": [
         "chat",
         "text-generation"
       ],
-      "metadata": {
-        "id": "meta/llama-4-maverick-17b-128e-instruct",
-        "object": "model",
-        "created": 735790403,
-        "owned_by": "meta",
-        "is_free_endpoint": true
-      },
-      "provider": "nvidia",
       "tags": [
         "text-generation",
         "chat"
       ],
-      "isReasoning": false,
-      "isMultimodal": false,
-      "hasToolUse": false,
-      "contextLabel": "unknown",
-      "modelFamily": "llama-4-maverick-17b-128e",
-      "modelVariant": "instruct",
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
+      "model_family": "llama-4-maverick-17b-128e",
+      "model_variant": "instruct",
       "aliases": [],
+      "parameter_count": 17000000000,
       "tier": "medium",
       "speed": "fast",
-      "useCase": [
+      "use_case": [
         "content-creation",
         "writing-assistance",
         "conversation",
         "q&a"
       ],
-      "performanceLevel": "entry",
-      "parameterCount": 17000000000,
-      "estimatedLatency": "< 1s"
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
     },
     {
-      "vendor": "nvidia",
-      "modelId": "meta/llama-guard-4-12b",
+      "id": "meta/llama-guard-4-12b",
+      "object": "model",
+      "created": 1777515648,
+      "owned_by": "nvidia",
+      "provider": "nvidia",
+      "model_id": "meta/llama-guard-4-12b",
       "name": "llama-guard-4-12b",
       "description": "Model: meta/llama-guard-4-12b",
-      "priceCurrency": "USD",
-      "isFree": true,
-      "freeMechanism": "trial-credits",
-      "freeQuota": {
-        "notes": "NVIDIA NIM free credits, exhaustible"
-      },
-      "trialScope": "specific",
+      "context_label": "unknown",
+      "price_currency": "USD",
+      "is_free": true,
       "capabilities": [
         "moderation"
       ],
-      "metadata": {
-        "id": "meta/llama-guard-4-12b",
-        "object": "model",
-        "created": 735790403,
-        "owned_by": "meta",
-        "is_free_endpoint": true
-      },
-      "provider": "nvidia",
       "tags": [
         "text-generation",
         "moderation"
       ],
-      "isReasoning": false,
-      "isMultimodal": false,
-      "hasToolUse": false,
-      "contextLabel": "unknown",
-      "modelFamily": "llama-guard-4-12b",
-      "modelVariant": "guard",
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
+      "model_family": "llama-guard-4-12b",
+      "model_variant": "guard",
       "aliases": [],
+      "parameter_count": 12000000000,
       "tier": "medium",
       "speed": "fast",
-      "useCase": [
+      "use_case": [
         "content-creation",
         "writing-assistance",
         "content-filtering",
         "safety"
       ],
-      "performanceLevel": "entry",
-      "parameterCount": 12000000000,
-      "estimatedLatency": "< 1s"
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
     },
     {
-      "vendor": "nvidia",
-      "modelId": "microsoft/phi-4-multimodal-instruct",
+      "id": "microsoft/phi-4-multimodal-instruct",
+      "object": "model",
+      "created": 1777515649,
+      "owned_by": "nvidia",
+      "provider": "nvidia",
+      "model_id": "microsoft/phi-4-multimodal-instruct",
       "name": "phi-4-multimodal-instruct",
       "description": "Model: microsoft/phi-4-multimodal-instruct",
-      "priceCurrency": "USD",
-      "isFree": true,
-      "freeMechanism": "trial-credits",
-      "freeQuota": {
-        "notes": "NVIDIA NIM free credits, exhaustible"
-      },
-      "trialScope": "specific",
+      "context_label": "unknown",
+      "price_currency": "USD",
+      "is_free": true,
       "capabilities": [
         "vision"
       ],
-      "metadata": {
-        "id": "microsoft/phi-4-multimodal-instruct",
-        "object": "model",
-        "created": 735790403,
-        "owned_by": "microsoft",
-        "is_free_endpoint": true
-      },
-      "provider": "nvidia",
       "tags": [
         "text-generation",
         "vision",
         "multimodal",
         "chat"
       ],
-      "isReasoning": false,
-      "isMultimodal": true,
-      "hasToolUse": false,
-      "contextLabel": "unknown",
-      "modelFamily": "phi-4-multimodal",
-      "modelVariant": "multimodal",
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
+      "model_family": "phi-4-multimodal",
+      "model_variant": "multimodal",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
-      "useCase": [
+      "use_case": [
         "content-creation",
         "writing-assistance",
         "image-understanding",
@@ -759,599 +679,548 @@
         "conversation",
         "q&a"
       ],
-      "performanceLevel": "mid",
-      "estimatedLatency": "< 1s"
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
     },
     {
-      "vendor": "nvidia",
-      "modelId": "minimaxai/minimax-m2.7",
+      "id": "minimaxai/minimax-m2.7",
+      "object": "model",
+      "created": 1777515650,
+      "owned_by": "nvidia",
+      "provider": "nvidia",
+      "model_id": "minimaxai/minimax-m2.7",
       "name": "minimax-m2.7",
       "description": "Model: minimaxai/minimax-m2.7",
-      "priceCurrency": "USD",
-      "isFree": true,
-      "freeMechanism": "trial-credits",
-      "freeQuota": {
-        "notes": "NVIDIA NIM free credits, exhaustible"
-      },
-      "trialScope": "specific",
+      "context_label": "unknown",
+      "price_currency": "USD",
+      "is_free": true,
       "capabilities": [
         "chat",
         "text-generation"
       ],
-      "metadata": {
-        "id": "minimaxai/minimax-m2.7",
-        "object": "model",
-        "created": 735790403,
-        "owned_by": "minimaxai",
-        "is_free_endpoint": true
-      },
-      "provider": "nvidia",
       "tags": [
         "text-generation",
         "chat"
       ],
-      "isReasoning": false,
-      "isMultimodal": false,
-      "hasToolUse": false,
-      "contextLabel": "unknown",
-      "modelFamily": "minimaxai-minimax-m2.7",
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
+      "model_family": "minimaxai-minimax-m2.7",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
-      "useCase": [
+      "use_case": [
         "content-creation",
         "writing-assistance",
         "conversation",
         "q&a"
       ],
-      "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
     },
     {
-      "vendor": "nvidia",
-      "modelId": "mistralai/devstral-2-123b-instruct-2512",
+      "id": "mistralai/devstral-2-123b-instruct-2512",
+      "object": "model",
+      "created": 1777515651,
+      "owned_by": "nvidia",
+      "provider": "nvidia",
+      "model_id": "mistralai/devstral-2-123b-instruct-2512",
       "name": "devstral-2-123b-instruct-2512",
       "description": "Model: mistralai/devstral-2-123b-instruct-2512",
-      "priceCurrency": "USD",
-      "isFree": true,
-      "freeMechanism": "trial-credits",
-      "freeQuota": {
-        "notes": "NVIDIA NIM free credits, exhaustible"
-      },
-      "trialScope": "specific",
+      "context_label": "unknown",
+      "price_currency": "USD",
+      "is_free": true,
       "capabilities": [
         "chat",
         "text-generation"
       ],
-      "metadata": {
-        "id": "mistralai/devstral-2-123b-instruct-2512",
-        "object": "model",
-        "created": 735790403,
-        "owned_by": "mistralai",
-        "is_free_endpoint": true
-      },
-      "provider": "nvidia",
       "tags": [
         "text-generation",
         "chat"
       ],
-      "isReasoning": false,
-      "isMultimodal": false,
-      "hasToolUse": false,
-      "contextLabel": "unknown",
-      "modelFamily": "devstral-2-123b",
-      "modelVariant": "instruct",
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
+      "model_family": "devstral-2-123b",
+      "model_variant": "instruct",
       "aliases": [],
+      "parameter_count": 123000000000,
       "tier": "medium",
       "speed": "fast",
-      "useCase": [
+      "use_case": [
         "content-creation",
         "writing-assistance",
         "conversation",
         "q&a"
       ],
-      "performanceLevel": "entry",
-      "parameterCount": 123000000000,
-      "estimatedLatency": "< 1s"
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
     },
     {
-      "vendor": "nvidia",
-      "modelId": "mistralai/magistral-small-2506",
+      "id": "mistralai/magistral-small-2506",
+      "object": "model",
+      "created": 1777515652,
+      "owned_by": "nvidia",
+      "provider": "nvidia",
+      "model_id": "mistralai/magistral-small-2506",
       "name": "magistral-small-2506",
       "description": "Model: mistralai/magistral-small-2506",
-      "priceCurrency": "USD",
-      "isFree": true,
-      "freeMechanism": "trial-credits",
-      "freeQuota": {
-        "notes": "NVIDIA NIM free credits, exhaustible"
-      },
-      "trialScope": "specific",
+      "context_label": "unknown",
+      "price_currency": "USD",
+      "is_free": true,
       "capabilities": [
         "chat",
         "text-generation"
       ],
-      "metadata": {
-        "id": "mistralai/magistral-small-2506",
-        "object": "model",
-        "created": 735790403,
-        "owned_by": "mistralai",
-        "is_free_endpoint": true
-      },
-      "provider": "nvidia",
       "tags": [
         "text-generation",
         "chat"
       ],
-      "isReasoning": false,
-      "isMultimodal": false,
-      "hasToolUse": false,
-      "contextLabel": "unknown",
-      "modelFamily": "magistral-small",
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
+      "model_family": "magistral-small",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
-      "useCase": [
+      "use_case": [
         "content-creation",
         "writing-assistance",
         "conversation",
         "q&a"
       ],
-      "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
     },
     {
-      "vendor": "nvidia",
-      "modelId": "mistralai/mistral-large-3-675b-instruct-2512",
+      "id": "mistralai/mistral-large-3-675b-instruct-2512",
+      "object": "model",
+      "created": 1777515653,
+      "owned_by": "nvidia",
+      "provider": "nvidia",
+      "model_id": "mistralai/mistral-large-3-675b-instruct-2512",
       "name": "mistral-large-3-675b-instruct-2512",
       "description": "Model: mistralai/mistral-large-3-675b-instruct-2512",
-      "priceCurrency": "USD",
-      "isFree": true,
-      "freeMechanism": "trial-credits",
-      "freeQuota": {
-        "notes": "NVIDIA NIM free credits, exhaustible"
-      },
-      "trialScope": "specific",
+      "context_label": "unknown",
+      "price_currency": "USD",
+      "is_free": true,
       "capabilities": [
         "chat",
         "text-generation"
       ],
-      "metadata": {
-        "id": "mistralai/mistral-large-3-675b-instruct-2512",
-        "object": "model",
-        "created": 735790403,
-        "owned_by": "mistralai",
-        "is_free_endpoint": true
-      },
-      "provider": "nvidia",
       "tags": [
         "text-generation",
         "chat"
       ],
-      "isReasoning": false,
-      "isMultimodal": false,
-      "hasToolUse": false,
-      "contextLabel": "unknown",
-      "modelFamily": "mistral-large-3-675b",
-      "modelVariant": "instruct",
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
+      "model_family": "mistral-large-3-675b",
+      "model_variant": "instruct",
       "aliases": [],
+      "parameter_count": 675000000000,
       "tier": "medium",
       "speed": "fast",
-      "useCase": [
+      "use_case": [
         "content-creation",
         "writing-assistance",
         "conversation",
         "q&a"
       ],
-      "performanceLevel": "entry",
-      "parameterCount": 675000000000,
-      "estimatedLatency": "< 1s"
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
     },
     {
-      "vendor": "nvidia",
-      "modelId": "mistralai/mistral-medium-3-instruct",
+      "id": "mistralai/mistral-medium-3-instruct",
+      "object": "model",
+      "created": 1777515654,
+      "owned_by": "nvidia",
+      "provider": "nvidia",
+      "model_id": "mistralai/mistral-medium-3-instruct",
       "name": "mistral-medium-3-instruct",
       "description": "Model: mistralai/mistral-medium-3-instruct",
-      "priceCurrency": "USD",
-      "isFree": true,
-      "freeMechanism": "trial-credits",
-      "freeQuota": {
-        "notes": "NVIDIA NIM free credits, exhaustible"
-      },
-      "trialScope": "specific",
+      "context_label": "unknown",
+      "price_currency": "USD",
+      "is_free": true,
       "capabilities": [
         "chat",
         "text-generation"
       ],
-      "metadata": {
-        "id": "mistralai/mistral-medium-3-instruct",
-        "object": "model",
-        "created": 735790403,
-        "owned_by": "mistralai",
-        "is_free_endpoint": true
-      },
-      "provider": "nvidia",
       "tags": [
         "text-generation",
         "chat"
       ],
-      "isReasoning": false,
-      "isMultimodal": false,
-      "hasToolUse": false,
-      "contextLabel": "unknown",
-      "modelFamily": "mistral-medium-3",
-      "modelVariant": "instruct",
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
+      "model_family": "mistral-medium-3",
+      "model_variant": "instruct",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
-      "useCase": [
+      "use_case": [
         "content-creation",
         "writing-assistance",
         "conversation",
         "q&a"
       ],
-      "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
     },
     {
-      "vendor": "nvidia",
-      "modelId": "mistralai/mistral-medium-3.5-128b",
+      "id": "mistralai/mistral-medium-3.5-128b",
+      "object": "model",
+      "created": 1777515655,
+      "owned_by": "nvidia",
+      "provider": "nvidia",
+      "model_id": "mistralai/mistral-medium-3.5-128b",
       "name": "mistral-medium-3.5-128b",
       "description": "Model: mistralai/mistral-medium-3.5-128b",
-      "priceCurrency": "USD",
-      "isFree": true,
-      "freeMechanism": "trial-credits",
-      "freeQuota": {
-        "notes": "NVIDIA NIM free credits, exhaustible"
-      },
-      "trialScope": "specific",
+      "context_label": "unknown",
+      "price_currency": "USD",
+      "is_free": true,
       "capabilities": [
         "chat",
         "text-generation"
       ],
-      "metadata": {
-        "id": "mistralai/mistral-medium-3.5-128b",
-        "object": "model",
-        "created": 735790403,
-        "owned_by": "mistralai",
-        "is_free_endpoint": true
-      },
-      "provider": "nvidia",
       "tags": [
         "text-generation",
         "chat"
       ],
-      "isReasoning": false,
-      "isMultimodal": false,
-      "hasToolUse": false,
-      "contextLabel": "unknown",
-      "modelFamily": "mistral-medium-3.5-128b",
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
+      "model_family": "mistral-medium-3.5-128b",
       "aliases": [],
+      "parameter_count": 128000000000,
       "tier": "medium",
       "speed": "fast",
-      "useCase": [
+      "use_case": [
         "content-creation",
         "writing-assistance",
         "conversation",
         "q&a"
       ],
-      "performanceLevel": "entry",
-      "parameterCount": 128000000000,
-      "estimatedLatency": "< 1s"
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
     },
     {
-      "vendor": "nvidia",
-      "modelId": "mistralai/mistral-nemotron",
+      "id": "mistralai/mistral-nemotron",
+      "object": "model",
+      "created": 1777515656,
+      "owned_by": "nvidia",
+      "provider": "nvidia",
+      "model_id": "mistralai/mistral-nemotron",
       "name": "mistral-nemotron",
       "description": "Model: mistralai/mistral-nemotron",
-      "priceCurrency": "USD",
-      "isFree": true,
-      "freeMechanism": "trial-credits",
-      "freeQuota": {
-        "notes": "NVIDIA NIM free credits, exhaustible"
-      },
-      "trialScope": "specific",
+      "context_label": "unknown",
+      "price_currency": "USD",
+      "is_free": true,
       "capabilities": [
         "chat",
         "text-generation"
       ],
-      "metadata": {
-        "id": "mistralai/mistral-nemotron",
-        "object": "model",
-        "created": 735790403,
-        "owned_by": "mistralai",
-        "is_free_endpoint": true
-      },
-      "provider": "nvidia",
       "tags": [
         "text-generation",
         "chat"
       ],
-      "isReasoning": false,
-      "isMultimodal": false,
-      "hasToolUse": false,
-      "contextLabel": "unknown",
-      "modelFamily": "mistral-nemotron",
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
+      "model_family": "mistral-nemotron",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
-      "useCase": [
+      "use_case": [
         "content-creation",
         "writing-assistance",
         "conversation",
         "q&a"
       ],
-      "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
     },
     {
-      "vendor": "nvidia",
-      "modelId": "moonshotai/kimi-k2-instruct",
+      "id": "moonshotai/kimi-k2-instruct",
+      "object": "model",
+      "created": 1777515657,
+      "owned_by": "nvidia",
+      "provider": "nvidia",
+      "model_id": "moonshotai/kimi-k2-instruct",
       "name": "kimi-k2-instruct",
       "description": "Model: moonshotai/kimi-k2-instruct",
-      "priceCurrency": "USD",
-      "isFree": true,
-      "freeMechanism": "trial-credits",
-      "freeQuota": {
-        "notes": "NVIDIA NIM free credits, exhaustible"
-      },
-      "trialScope": "specific",
+      "context_label": "unknown",
+      "price_currency": "USD",
+      "is_free": true,
       "capabilities": [
         "chat",
         "text-generation"
       ],
-      "metadata": {
-        "id": "moonshotai/kimi-k2-instruct",
-        "object": "model",
-        "created": 735790403,
-        "owned_by": "moonshotai",
-        "is_free_endpoint": true
-      },
-      "provider": "nvidia",
       "tags": [
         "text-generation",
         "chat"
       ],
-      "isReasoning": false,
-      "isMultimodal": false,
-      "hasToolUse": false,
-      "contextLabel": "unknown",
-      "modelFamily": "moonshotai-kimi-k2",
-      "modelVariant": "instruct",
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
+      "model_family": "moonshotai-kimi-k2",
+      "model_variant": "instruct",
       "aliases": [
         "moonshotai/kimi-k2-instruct-0905"
       ],
       "tier": "medium",
       "speed": "fast",
-      "useCase": [
+      "use_case": [
         "content-creation",
         "writing-assistance",
         "conversation",
         "q&a"
       ],
-      "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
     },
     {
-      "vendor": "nvidia",
-      "modelId": "moonshotai/kimi-k2-instruct-0905",
+      "id": "moonshotai/kimi-k2-instruct-0905",
+      "object": "model",
+      "created": 1777515658,
+      "owned_by": "nvidia",
+      "provider": "nvidia",
+      "model_id": "moonshotai/kimi-k2-instruct-0905",
       "name": "kimi-k2-instruct-0905",
       "description": "Model: moonshotai/kimi-k2-instruct-0905",
-      "priceCurrency": "USD",
-      "isFree": true,
-      "freeMechanism": "trial-credits",
-      "freeQuota": {
-        "notes": "NVIDIA NIM free credits, exhaustible"
-      },
-      "trialScope": "specific",
+      "context_label": "unknown",
+      "price_currency": "USD",
+      "is_free": true,
       "capabilities": [
         "chat",
         "text-generation"
       ],
-      "metadata": {
-        "id": "moonshotai/kimi-k2-instruct-0905",
-        "object": "model",
-        "created": 735790403,
-        "owned_by": "moonshotai",
-        "is_free_endpoint": true
-      },
-      "provider": "nvidia",
       "tags": [
         "text-generation",
         "chat"
       ],
-      "isReasoning": false,
-      "isMultimodal": false,
-      "hasToolUse": false,
-      "contextLabel": "unknown",
-      "modelFamily": "moonshotai-kimi-k2",
-      "modelVariant": "instruct",
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
+      "model_family": "moonshotai-kimi-k2",
+      "model_variant": "instruct",
       "aliases": [
         "moonshotai/kimi-k2-instruct"
       ],
       "tier": "medium",
       "speed": "fast",
-      "useCase": [
+      "use_case": [
         "content-creation",
         "writing-assistance",
         "conversation",
         "q&a"
       ],
-      "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
     },
     {
-      "vendor": "nvidia",
-      "modelId": "moonshotai/kimi-k2-thinking",
+      "id": "moonshotai/kimi-k2-thinking",
+      "object": "model",
+      "created": 1777515659,
+      "owned_by": "nvidia",
+      "provider": "nvidia",
+      "model_id": "moonshotai/kimi-k2-thinking",
       "name": "kimi-k2-thinking",
       "description": "Model: moonshotai/kimi-k2-thinking",
-      "priceCurrency": "USD",
-      "isFree": true,
-      "freeMechanism": "trial-credits",
-      "freeQuota": {
-        "notes": "NVIDIA NIM free credits, exhaustible"
-      },
-      "trialScope": "specific",
+      "context_label": "unknown",
+      "price_currency": "USD",
+      "is_free": true,
       "capabilities": [
         "chat",
         "text-generation"
       ],
-      "metadata": {
-        "id": "moonshotai/kimi-k2-thinking",
-        "object": "model",
-        "created": 735790403,
-        "owned_by": "moonshotai",
-        "is_free_endpoint": true
-      },
-      "provider": "nvidia",
       "tags": [
         "text-generation",
         "chat"
       ],
-      "isReasoning": false,
-      "isMultimodal": false,
-      "hasToolUse": false,
-      "contextLabel": "unknown",
-      "modelFamily": "moonshotai-kimi-k2-thinking",
-      "modelVariant": "thinking",
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
+      "model_family": "moonshotai-kimi-k2-thinking",
+      "model_variant": "thinking",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
-      "useCase": [
+      "use_case": [
         "content-creation",
         "writing-assistance",
         "conversation",
         "q&a"
       ],
-      "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
     },
     {
-      "vendor": "nvidia",
-      "modelId": "nvidia/gliner-pii",
+      "id": "nvidia/gliner-pii",
+      "object": "model",
+      "created": 1777515660,
+      "owned_by": "nvidia",
+      "provider": "nvidia",
+      "model_id": "nvidia/gliner-pii",
       "name": "gliner-pii",
       "description": "Model: nvidia/gliner-pii",
-      "priceCurrency": "USD",
-      "isFree": true,
-      "freeMechanism": "trial-credits",
-      "freeQuota": {
-        "notes": "NVIDIA NIM free credits, exhaustible"
-      },
-      "trialScope": "specific",
+      "context_label": "unknown",
+      "price_currency": "USD",
+      "is_free": true,
       "capabilities": [
         "moderation"
       ],
-      "metadata": {
-        "id": "nvidia/gliner-pii",
-        "object": "model",
-        "created": 735790403,
-        "owned_by": "nvidia",
-        "is_free_endpoint": true
-      },
-      "provider": "nvidia",
       "tags": [
         "text-generation",
         "moderation"
       ],
-      "isReasoning": false,
-      "isMultimodal": false,
-      "hasToolUse": false,
-      "contextLabel": "unknown",
-      "modelFamily": "gliner-pii",
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
+      "model_family": "gliner-pii",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
-      "useCase": [
+      "use_case": [
         "content-creation",
         "writing-assistance",
         "content-filtering",
         "safety"
       ],
-      "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
     },
     {
-      "vendor": "nvidia",
-      "modelId": "nvidia/nemotron-3-content-safety",
+      "id": "nvidia/nemotron-3-content-safety",
+      "object": "model",
+      "created": 1777515661,
+      "owned_by": "nvidia",
+      "provider": "nvidia",
+      "model_id": "nvidia/nemotron-3-content-safety",
       "name": "nemotron-3-content-safety",
       "description": "Model: nvidia/nemotron-3-content-safety",
-      "priceCurrency": "USD",
-      "isFree": true,
-      "freeMechanism": "trial-credits",
-      "freeQuota": {
-        "notes": "NVIDIA NIM free credits, exhaustible"
-      },
-      "trialScope": "specific",
+      "context_label": "unknown",
+      "price_currency": "USD",
+      "is_free": true,
       "capabilities": [
         "moderation"
       ],
-      "metadata": {
-        "id": "nvidia/nemotron-3-content-safety",
-        "object": "model",
-        "created": 735790403,
-        "owned_by": "nvidia",
-        "is_free_endpoint": true
-      },
-      "provider": "nvidia",
       "tags": [
         "text-generation",
         "moderation"
       ],
-      "isReasoning": false,
-      "isMultimodal": false,
-      "hasToolUse": false,
-      "contextLabel": "unknown",
-      "modelFamily": "nemotron-3-content-safety",
-      "modelVariant": "safety",
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
+      "model_family": "nemotron-3-content-safety",
+      "model_variant": "safety",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
-      "useCase": [
+      "use_case": [
         "content-creation",
         "writing-assistance",
         "content-filtering",
         "safety"
       ],
-      "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
     },
     {
-      "vendor": "nvidia",
-      "modelId": "nvidia/nemotron-content-safety-reasoning-4b",
+      "id": "nvidia/nemotron-content-safety-reasoning-4b",
+      "object": "model",
+      "created": 1777515662,
+      "owned_by": "nvidia",
+      "provider": "nvidia",
+      "model_id": "nvidia/nemotron-content-safety-reasoning-4b",
       "name": "nemotron-content-safety-reasoning-4b",
       "description": "Model: nvidia/nemotron-content-safety-reasoning-4b",
-      "priceCurrency": "USD",
-      "isFree": true,
-      "freeMechanism": "trial-credits",
-      "freeQuota": {
-        "notes": "NVIDIA NIM free credits, exhaustible"
-      },
-      "trialScope": "specific",
+      "context_label": "unknown",
+      "price_currency": "USD",
+      "is_free": true,
       "capabilities": [
         "moderation"
       ],
-      "metadata": {
-        "id": "nvidia/nemotron-content-safety-reasoning-4b",
-        "object": "model",
-        "created": 735790403,
-        "owned_by": "nvidia",
-        "is_free_endpoint": true
-      },
-      "provider": "nvidia",
       "tags": [
         "reasoning",
         "text-generation",
         "moderation"
       ],
-      "isReasoning": true,
-      "isMultimodal": false,
-      "hasToolUse": false,
-      "contextLabel": "unknown",
-      "modelFamily": "nemotron-content-safety-reasoning-4b",
-      "modelVariant": "reasoning",
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
+      "model_family": "nemotron-content-safety-reasoning-4b",
+      "model_variant": "reasoning",
       "aliases": [],
+      "parameter_count": 4000000000,
       "tier": "small",
       "speed": "fast",
-      "useCase": [
+      "use_case": [
         "problem-solving",
         "logical-analysis",
         "math",
@@ -1361,139 +1230,127 @@
         "safety",
         "complex-reasoning"
       ],
-      "performanceLevel": "entry",
-      "parameterCount": 4000000000,
-      "estimatedLatency": "< 1s"
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
     },
     {
-      "vendor": "nvidia",
-      "modelId": "nvidia/nemotron-mini-4b-instruct",
+      "id": "nvidia/nemotron-mini-4b-instruct",
+      "object": "model",
+      "created": 1777515663,
+      "owned_by": "nvidia",
+      "provider": "nvidia",
+      "model_id": "nvidia/nemotron-mini-4b-instruct",
       "name": "nemotron-mini-4b-instruct",
       "description": "Model: nvidia/nemotron-mini-4b-instruct",
-      "priceCurrency": "USD",
-      "isFree": true,
-      "freeMechanism": "trial-credits",
-      "freeQuota": {
-        "notes": "NVIDIA NIM free credits, exhaustible"
-      },
-      "trialScope": "specific",
+      "context_label": "unknown",
+      "price_currency": "USD",
+      "is_free": true,
       "capabilities": [
         "chat",
         "text-generation"
       ],
-      "metadata": {
-        "id": "nvidia/nemotron-mini-4b-instruct",
-        "object": "model",
-        "created": 735790403,
-        "owned_by": "nvidia",
-        "is_free_endpoint": true
-      },
-      "provider": "nvidia",
       "tags": [
         "text-generation",
         "chat"
       ],
-      "isReasoning": false,
-      "isMultimodal": false,
-      "hasToolUse": false,
-      "contextLabel": "unknown",
-      "modelFamily": "nemotron-mini-4b",
-      "modelVariant": "instruct",
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
+      "model_family": "nemotron-mini-4b",
+      "model_variant": "instruct",
       "aliases": [],
+      "parameter_count": 4000000000,
       "tier": "small",
       "speed": "fast",
-      "useCase": [
+      "use_case": [
         "content-creation",
         "writing-assistance",
         "conversation",
         "q&a"
       ],
-      "performanceLevel": "entry",
-      "parameterCount": 4000000000,
-      "estimatedLatency": "< 1s"
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
     },
     {
-      "vendor": "nvidia",
-      "modelId": "nvidia/nv-embed-v1",
+      "id": "nvidia/nv-embed-v1",
+      "object": "model",
+      "created": 1777515664,
+      "owned_by": "nvidia",
+      "provider": "nvidia",
+      "model_id": "nvidia/nv-embed-v1",
       "name": "nv-embed-v1",
       "description": "Model: nvidia/nv-embed-v1",
-      "priceCurrency": "USD",
-      "isFree": true,
-      "freeMechanism": "trial-credits",
-      "freeQuota": {
-        "notes": "NVIDIA NIM free credits, exhaustible"
-      },
-      "trialScope": "specific",
+      "context_label": "unknown",
+      "price_currency": "USD",
+      "is_free": true,
       "capabilities": [
         "embeddings"
       ],
-      "metadata": {
-        "id": "nvidia/nv-embed-v1",
-        "object": "model",
-        "created": 735790403,
-        "owned_by": "nvidia",
-        "is_free_endpoint": true
-      },
-      "provider": "nvidia",
       "tags": [
         "text-generation",
         "embeddings"
       ],
-      "isReasoning": false,
-      "isMultimodal": false,
-      "hasToolUse": false,
-      "contextLabel": "unknown",
-      "modelFamily": "nv-embed-v1",
-      "modelVariant": "embed",
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
+      "model_family": "nv-embed-v1",
+      "model_variant": "embed",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
-      "useCase": [
+      "use_case": [
         "content-creation",
         "writing-assistance",
         "semantic-search",
         "similarity"
       ],
-      "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
     },
     {
-      "vendor": "nvidia",
-      "modelId": "nvidia/nv-embedcode-7b-v1",
+      "id": "nvidia/nv-embedcode-7b-v1",
+      "object": "model",
+      "created": 1777515665,
+      "owned_by": "nvidia",
+      "provider": "nvidia",
+      "model_id": "nvidia/nv-embedcode-7b-v1",
       "name": "nv-embedcode-7b-v1",
       "description": "Model: nvidia/nv-embedcode-7b-v1",
-      "priceCurrency": "USD",
-      "isFree": true,
-      "freeMechanism": "trial-credits",
-      "freeQuota": {
-        "notes": "NVIDIA NIM free credits, exhaustible"
-      },
-      "trialScope": "specific",
+      "context_label": "unknown",
+      "price_currency": "USD",
+      "is_free": true,
       "capabilities": [
         "embeddings"
       ],
-      "metadata": {
-        "id": "nvidia/nv-embedcode-7b-v1",
-        "object": "model",
-        "created": 735790403,
-        "owned_by": "nvidia",
-        "is_free_endpoint": true
-      },
-      "provider": "nvidia",
       "tags": [
         "text-generation",
         "embeddings",
         "code-generation"
       ],
-      "isReasoning": false,
-      "isMultimodal": false,
-      "hasToolUse": false,
-      "contextLabel": "unknown",
-      "modelFamily": "nv-embedcode-7b-v1",
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
+      "model_family": "nv-embedcode-7b-v1",
       "aliases": [],
+      "parameter_count": 7000000000,
       "tier": "medium",
       "speed": "fast",
-      "useCase": [
+      "use_case": [
         "content-creation",
         "writing-assistance",
         "semantic-search",
@@ -1501,103 +1358,94 @@
         "software-development",
         "code-completion"
       ],
-      "performanceLevel": "entry",
-      "parameterCount": 7000000000,
-      "estimatedLatency": "< 1s"
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
     },
     {
-      "vendor": "nvidia",
-      "modelId": "qwen/qwen3-coder-480b-a35b-instruct",
+      "id": "qwen/qwen3-coder-480b-a35b-instruct",
+      "object": "model",
+      "created": 1777515666,
+      "owned_by": "nvidia",
+      "provider": "nvidia",
+      "model_id": "qwen/qwen3-coder-480b-a35b-instruct",
       "name": "qwen3-coder-480b-a35b-instruct",
       "description": "Model: qwen/qwen3-coder-480b-a35b-instruct",
-      "priceCurrency": "USD",
-      "isFree": true,
-      "freeMechanism": "trial-credits",
-      "freeQuota": {
-        "notes": "NVIDIA NIM free credits, exhaustible"
-      },
-      "trialScope": "specific",
+      "context_label": "unknown",
+      "price_currency": "USD",
+      "is_free": true,
       "capabilities": [
         "chat",
         "text-generation"
       ],
-      "metadata": {
-        "id": "qwen/qwen3-coder-480b-a35b-instruct",
-        "object": "model",
-        "created": 735790403,
-        "owned_by": "qwen",
-        "is_free_endpoint": true
-      },
-      "provider": "nvidia",
       "tags": [
         "text-generation",
         "code-generation"
       ],
-      "isReasoning": false,
-      "isMultimodal": false,
-      "hasToolUse": false,
-      "contextLabel": "unknown",
-      "modelFamily": "qwen3-coder-480b-a35b",
-      "modelVariant": "coder",
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
+      "model_family": "qwen3-coder-480b-a35b",
+      "model_variant": "coder",
       "aliases": [
         "qwen3-coder-480b-a35b-instruct"
       ],
+      "parameter_count": 480000000000,
       "tier": "medium",
       "speed": "fast",
-      "useCase": [
+      "use_case": [
         "content-creation",
         "writing-assistance",
         "software-development",
         "code-completion"
       ],
-      "performanceLevel": "entry",
-      "parameterCount": 480000000000,
-      "estimatedLatency": "< 1s"
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
     },
     {
-      "vendor": "nvidia",
-      "modelId": "stepfun-ai/step-3.5-flash",
+      "id": "stepfun-ai/step-3.5-flash",
+      "object": "model",
+      "created": 1777515667,
+      "owned_by": "nvidia",
+      "provider": "nvidia",
+      "model_id": "stepfun-ai/step-3.5-flash",
       "name": "step-3.5-flash",
       "description": "Model: stepfun-ai/step-3.5-flash",
-      "priceCurrency": "USD",
-      "isFree": true,
-      "freeMechanism": "trial-credits",
-      "freeQuota": {
-        "notes": "NVIDIA NIM free credits, exhaustible"
-      },
-      "trialScope": "specific",
+      "context_label": "unknown",
+      "price_currency": "USD",
+      "is_free": true,
       "capabilities": [
         "chat",
         "text-generation"
       ],
-      "metadata": {
-        "id": "stepfun-ai/step-3.5-flash",
-        "object": "model",
-        "created": 735790403,
-        "owned_by": "stepfun-ai",
-        "is_free_endpoint": true
-      },
-      "provider": "nvidia",
       "tags": [
         "text-generation",
         "chat"
       ],
-      "isReasoning": false,
-      "isMultimodal": false,
-      "hasToolUse": false,
-      "contextLabel": "unknown",
-      "modelFamily": "stepfun-ai-step-3.5-flash",
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
+      "model_family": "stepfun-ai-step-3.5-flash",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
-      "useCase": [
+      "use_case": [
         "content-creation",
         "writing-assistance",
         "conversation",
         "q&a"
       ],
-      "performanceLevel": "entry",
-      "estimatedLatency": "< 1s"
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
     }
   ]
 }

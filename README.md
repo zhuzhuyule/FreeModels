@@ -39,6 +39,7 @@ https://ofind.cn/FreeModels/data/views/<view>/models.json
 | `free-permanent` | `free_mechanism=permanent`（永久免费） |
 | `free-rate-limited` | `free_mechanism=rate-limited`（限速免费） |
 | `free-quota` | `free_mechanism` ∈ `daily-tokens` / `monthly-tokens` / `trial-credits`（配额免费） |
+| `paid-trial` | 付费但可试用调用（`is_free=false && trial_scope=all`，如 Gitee 体验） |
 | `reasoning` | 推理模型 |
 | `multimodal` | 多模态 |
 | `tool-use` | 支持工具调用 |
