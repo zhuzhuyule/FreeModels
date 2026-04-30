@@ -21,8 +21,8 @@
 
 | 指标 | 数量 |
 |---|---:|
-| 总模型 | 64 |
-| 免费模型 | 10 |
+| 总模型 | 49 |
+| 免费模型 | 9 |
 | 付费可试用 | 0 |
 
 ## 免费策略
@@ -33,13 +33,12 @@
 
 | Provider | Model ID | 名称 | 上下文 | 免费类型 | 限制 |
 |---|---|---|---:|---|---|
-| xunfei  | `xunfei/DeepSeek-OCR` | DeepSeek-OCR | 8K | 限速免费 | — |
-| xunfei  | `xunfei/Hunyuan-MT-7B` | Hunyuan-MT-7B | 33K | 限速免费 | — |
-| xunfei  | `xunfei/HunyuanOCR` | HunyuanOCR | 33K | 限速免费 | — |
-| xunfei  | `xunfei/Qwen-Image-2512` | Qwen-Image-2512 | unknown | 限速免费 | — |
-| xunfei  | `xunfei/Qwen3-1.7B` | Qwen3-1.7B | 33K | 限速免费 | — |
-| xunfei  | `xunfei/Qwen3-Embedding-8B` | Qwen3-Embedding-8B | 33K | 限速免费 | — |
-| xunfei  | `xunfei/Qwen3-Reranker-8B` | Qwen3-Reranker-8B | 33K | 限速免费 | — |
-| xunfei  | `xunfei/Qwen3.5-2B` | Qwen3.5-2B | 33K | 限速免费 | — |
-| xunfei  | `xunfei/StableDiffusion_XL_Base_1` | StableDiffusion_XL_Base_1 | unknown | 限速免费 | — |
-| xunfei  | `xunfei/Z-Image-Turbo` | Z-Image-Turbo | 512 | 限速免费 | — |
+| xunfei  | `xunfei/xop35qwen2b` | Qwen3.5-2B | 33K | 限速免费 | — |
+| xunfei  | `xunfei/xop3qwen8bembedding` | Qwen3-Embedding-8B | 33K | 限速免费 | — |
+| xunfei  | `xunfei/xop3qwen8breranker` | Qwen3-Reranker-8B | 33K | 限速免费 | — |
+| xunfei  | `xunfei/xopdeepseekocr` | DeepSeek-OCR | 8K | 限速免费 | — |
+| xunfei  | `xunfei/xophunyuan7bmt` | Hunyuan-MT-7B | 33K | 限速免费 | — |
+| xunfei  | `xunfei/xophunyuanocr` | HunyuanOCR | 33K | 限速免费 | — |
+| xunfei  | `xunfei/xopqwentti20b` | Qwen-Image-2512 | unknown | 限速免费 | — |
+| xunfei  | `xunfei/xopzimageturbo` | Z-Image-Turbo | 512 | 限速免费 | — |
+| xunfei  | `xunfei/xssdxl` | StableDiffusion_XL_Base_1 | unknown | 限速免费 | — |

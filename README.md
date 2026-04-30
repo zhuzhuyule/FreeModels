@@ -13,13 +13,13 @@
 |---|---|---:|---:|---:|---|---|---|---|---|
 | [BigModel / 智谱 AI](https://open.bigmodel.cn)  | `bigmodel` | 56 | 9 | 0 | GLM Flash 等部分模型可免费使用，具体以官方价格页和控制台为准。 | [注册](https://open.bigmodel.cn) | [API Key](https://open.bigmodel.cn/usercenter/proj-mgmt/apikeys) | [文档](https://docs.bigmodel.cn) | [JSON](https://ofind.cn/FreeModels/data/providers/bigmodel/models.json) |
 | [Cerebras](https://www.cerebras.ai)  | `cerebras` | 4 | 4 | 0 | 部分模型提供免费或限速使用，额度以官方控制台为准。 | [注册](https://cloud.cerebras.ai) | [API Key](https://cloud.cerebras.ai/platform/api-keys) | [文档](https://inference-docs.cerebras.ai) | [JSON](https://ofind.cn/FreeModels/data/providers/cerebras/models.json) |
-| [Gitee AI](https://ai.gitee.com)  | `gitee` | 202 | 44 | 145 | 部分模型完全免费，另有一批模型允许体验。 | [注册](https://ai.gitee.com) | — | [文档](https://ai.gitee.com/docs) | [JSON](https://ofind.cn/FreeModels/data/providers/gitee/models.json) |
+| [Gitee AI](https://ai.gitee.com)  | `gitee` | 203 | 44 | 146 | 部分模型完全免费，另有一批模型允许体验。 | [注册](https://ai.gitee.com) | — | [文档](https://ai.gitee.com/docs) | [JSON](https://ofind.cn/FreeModels/data/providers/gitee/models.json) |
 | [Google AI](https://ai.google.dev)  | `google` | 32 | 17 | 0 | Gemini API 部分模型提供免费层，通常带有 RPM / RPD / TPM 限制。 | [注册](https://aistudio.google.com) | [API Key](https://aistudio.google.com/app/apikey) | [文档](https://ai.google.dev/gemini-api/docs) | [JSON](https://ofind.cn/FreeModels/data/providers/google/models.json) |
 | [Groq](https://groq.com)  | `groq` | 12 | 0 | 0 | 常见为开发者免费额度或限速体验，具体以官方控制台和价格页为准。 | [注册](https://console.groq.com) | [API Key](https://console.groq.com/keys) | [文档](https://console.groq.com/docs) | [JSON](https://ofind.cn/FreeModels/data/providers/groq/models.json) |
 | [LongCat](https://longcat.chat)  | `longcat` | 7 | 7 | 0 | 提供每日 token 免费额度，额度和模型范围以官方文档为准。 | [注册](https://longcat.chat) | [API Key](https://longcat.chat/platform/api-keys) | [文档](https://longcat.chat/platform/docs) | [JSON](https://ofind.cn/FreeModels/data/providers/longcat/models.json) |
 | [NVIDIA AI](https://developer.nvidia.com/ai)  | `nvidia` | 134 | 26 | 0 | NIM / build.nvidia.com 通常提供开发体验 credits 或试用额度。 | [注册](https://build.nvidia.com) | [API Key](https://build.nvidia.com/explore/discover) | [文档](https://docs.api.nvidia.com/nim) | [JSON](https://ofind.cn/FreeModels/data/providers/nvidia/models.json) |
-| [OpenRouter](https://openrouter.ai)  | `openrouter` | 58 | 58 | 0 | 免费模型通常带有请求频率或每日请求限制。 | [注册](https://openrouter.ai) | [API Key](https://openrouter.ai/settings/keys) | [文档](https://openrouter.ai/docs) | [JSON](https://ofind.cn/FreeModels/data/providers/openrouter/models.json) |
-| [iFlytek Spark / 讯飞星火](https://xinghuo.xfyun.cn)  | `xunfei` | 64 | 10 | 0 | 部分模型或套餐提供免费额度 / 限速体验，具体以 MaaS 控制台为准。 | [注册](https://xinghuo.xfyun.cn) | [API Key](https://maas.xfyun.cn) | [文档](https://www.xfyun.cn/doc/spark) | [JSON](https://ofind.cn/FreeModels/data/providers/xunfei/models.json) |
+| [OpenRouter](https://openrouter.ai)  | `openrouter` | 59 | 59 | 0 | 免费模型通常带有请求频率或每日请求限制。 | [注册](https://openrouter.ai) | [API Key](https://openrouter.ai/settings/keys) | [文档](https://openrouter.ai/docs) | [JSON](https://ofind.cn/FreeModels/data/providers/openrouter/models.json) |
+| [iFlytek Spark / 讯飞星火](https://xinghuo.xfyun.cn)  | `xunfei` | 49 | 9 | 0 | 部分模型或套餐提供免费额度 / 限速体验，具体以 MaaS 控制台为准。 | [注册](https://xinghuo.xfyun.cn) | [API Key](https://maas.xfyun.cn) | [文档](https://www.xfyun.cn/doc/spark) | [JSON](https://ofind.cn/FreeModels/data/providers/xunfei/models.json) |
 <!-- AUTO-GENERATED:PROVIDER_INDEX_END -->
 
 ## 数据规模
@@ -30,11 +30,11 @@
 | 维度 | 数量 |
 |------|-----:|
 | Provider | 9 |
-| 模型总数 | 569 |
+| 模型总数 | 556 |
 | 免费模型 (`is_free=true`) | 175 |
-| 付费可试用 (Gitee 体验等) | 145 |
-| 模型家族 | 473 |
-| 跨 Provider 家族 | 65 |
+| 付费可试用 (Gitee 体验等) | 146 |
+| 模型家族 | 457 |
+| 跨 Provider 家族 | 67 |
 | · 限速免费 | 87 |
 | · 永久免费 | 53 |
 | · 试用 credits | 26 |
@@ -203,6 +203,7 @@
 | openrouter  | `openrouter/openai/gpt-oss-120b` | OpenAI: gpt-oss-120b (free) | 131K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/openai/gpt-oss-20b` | OpenAI: gpt-oss-20b (free) | 131K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/openai/sora-2-pro` | OpenAI: Sora 2 Pro | unknown | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
+| openrouter  | `openrouter/openrouter/owl-alpha` | Owl Alpha | 1M | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/poolside/laguna-m.1` | Poolside: Laguna M.1 (free) | 131K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/poolside/laguna-xs.2` | Poolside: Laguna XS.2 (free) | 131K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/qwen/qwen3-coder` | Qwen: Qwen3 Coder 480B A35B (free) | 262K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
@@ -214,16 +215,15 @@
 | openrouter  | `openrouter/sourceful/riverflow-v2-standard-preview` | Sourceful: Riverflow V2 Standard Preview | 8K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/tencent/hy3-preview` | Tencent: Hy3 preview (free) | 262K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/z-ai/glm-4.5-air` | Z.ai: GLM 4.5 Air (free) | 131K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
-| xunfei  | `xunfei/DeepSeek-OCR` | DeepSeek-OCR | 8K | 限速免费 | — |
-| xunfei  | `xunfei/Hunyuan-MT-7B` | Hunyuan-MT-7B | 33K | 限速免费 | — |
-| xunfei  | `xunfei/HunyuanOCR` | HunyuanOCR | 33K | 限速免费 | — |
-| xunfei  | `xunfei/Qwen-Image-2512` | Qwen-Image-2512 | unknown | 限速免费 | — |
-| xunfei  | `xunfei/Qwen3-1.7B` | Qwen3-1.7B | 33K | 限速免费 | — |
-| xunfei  | `xunfei/Qwen3-Embedding-8B` | Qwen3-Embedding-8B | 33K | 限速免费 | — |
-| xunfei  | `xunfei/Qwen3-Reranker-8B` | Qwen3-Reranker-8B | 33K | 限速免费 | — |
-| xunfei  | `xunfei/Qwen3.5-2B` | Qwen3.5-2B | 33K | 限速免费 | — |
-| xunfei  | `xunfei/StableDiffusion_XL_Base_1` | StableDiffusion_XL_Base_1 | unknown | 限速免费 | — |
-| xunfei  | `xunfei/Z-Image-Turbo` | Z-Image-Turbo | 512 | 限速免费 | — |
+| xunfei  | `xunfei/xop35qwen2b` | Qwen3.5-2B | 33K | 限速免费 | — |
+| xunfei  | `xunfei/xop3qwen8bembedding` | Qwen3-Embedding-8B | 33K | 限速免费 | — |
+| xunfei  | `xunfei/xop3qwen8breranker` | Qwen3-Reranker-8B | 33K | 限速免费 | — |
+| xunfei  | `xunfei/xopdeepseekocr` | DeepSeek-OCR | 8K | 限速免费 | — |
+| xunfei  | `xunfei/xophunyuan7bmt` | Hunyuan-MT-7B | 33K | 限速免费 | — |
+| xunfei  | `xunfei/xophunyuanocr` | HunyuanOCR | 33K | 限速免费 | — |
+| xunfei  | `xunfei/xopqwentti20b` | Qwen-Image-2512 | unknown | 限速免费 | — |
+| xunfei  | `xunfei/xopzimageturbo` | Z-Image-Turbo | 512 | 限速免费 | — |
+| xunfei  | `xunfei/xssdxl` | StableDiffusion_XL_Base_1 | unknown | 限速免费 | — |
 <!-- AUTO-GENERATED:FREE_MODELS_END -->
 
 ## 直接使用预编译 JSON（推荐 API 消费方）

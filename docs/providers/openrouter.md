@@ -21,8 +21,8 @@
 
 | 指标 | 数量 |
 |---|---:|
-| 总模型 | 58 |
-| 免费模型 | 58 |
+| 总模型 | 59 |
+| 免费模型 | 59 |
 | 付费可试用 | 0 |
 
 ## 免费策略
@@ -80,6 +80,7 @@
 | openrouter  | `openrouter/openai/gpt-oss-120b` | OpenAI: gpt-oss-120b (free) | 131K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/openai/gpt-oss-20b` | OpenAI: gpt-oss-20b (free) | 131K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/openai/sora-2-pro` | OpenAI: Sora 2 Pro | unknown | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
+| openrouter  | `openrouter/openrouter/owl-alpha` | Owl Alpha | 1M | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/poolside/laguna-m.1` | Poolside: Laguna M.1 (free) | 131K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/poolside/laguna-xs.2` | Poolside: Laguna XS.2 (free) | 131K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/qwen/qwen3-coder` | Qwen: Qwen3 Coder 480B A35B (free) | 262K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
