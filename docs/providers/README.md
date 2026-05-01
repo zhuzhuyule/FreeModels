@@ -14,7 +14,8 @@
 | [LongCat](https://longcat.chat)  | `longcat` | 7 | 7 | 0 | 提供每日 token 免费额度，额度和模型范围以官方文档为准。 | [注册](https://longcat.chat) | [API Key](https://longcat.chat/platform/api-keys) | [文档](https://longcat.chat/platform/docs) | [JSON](https://ofind.cn/FreeModels/data/providers/longcat/models.json) |
 | [NVIDIA AI](https://developer.nvidia.com/ai)  | `nvidia` | 135 | 25 | 0 | NIM / build.nvidia.com 通常提供开发体验 credits 或试用额度。 | [注册](https://build.nvidia.com) | [API Key](https://build.nvidia.com/explore/discover) | [文档](https://docs.api.nvidia.com/nim) | [JSON](https://ofind.cn/FreeModels/data/providers/nvidia/models.json) |
 | [OpenRouter](https://openrouter.ai)  | `openrouter` | 59 | 59 | 0 | 免费模型通常带有请求频率或每日请求限制。 | [注册](https://openrouter.ai) | [API Key](https://openrouter.ai/settings/keys) | [文档](https://openrouter.ai/docs) | [JSON](https://ofind.cn/FreeModels/data/providers/openrouter/models.json) |
-| [iFlytek Spark / 讯飞星火](https://xinghuo.xfyun.cn)  | `xunfei` | 55 | 10 | 0 | 部分模型或套餐提供免费额度 / 限速体验，具体以 MaaS 控制台为准。 | [注册](https://xinghuo.xfyun.cn) | [API Key](https://maas.xfyun.cn) | [文档](https://www.xfyun.cn/doc/spark) | [JSON](https://ofind.cn/FreeModels/data/providers/xunfei/models.json) |
+| [iFlytek MaaS / 讯飞星辰](https://maas.xfyun.cn)  | `xingchen` | 49 | 9 | 0 | 第三方模型聚合（GLM/Qwen/DeepSeek 等）；部分模型 0 元开放，具体以控制台为准。 | [注册](https://maas.xfyun.cn) | [API Key](https://maas.xfyun.cn) | [文档](https://maas.xfyun.cn/docs) | [JSON](https://ofind.cn/FreeModels/data/providers/xingchen/models.json) |
+| [iFlytek Spark / 讯飞星火](https://xinghuo.xfyun.cn)  | `xinghuo` | 6 | 1 | 0 | Spark Lite 永久免费但限速（5 并发）；其他 Spark 系列按 token 计费。 | [注册](https://xinghuo.xfyun.cn) | [API Key](https://console.xfyun.cn/services/cbm) | [文档](https://www.xfyun.cn/doc/spark) | [JSON](https://ofind.cn/FreeModels/data/providers/xinghuo/models.json) |
 
 ## 各 Provider 详细文档
 
@@ -26,4 +27,5 @@
 - [LongCat](./longcat.md)
 - [NVIDIA AI](./nvidia.md)
 - [OpenRouter](./openrouter.md)
-- [iFlytek Spark / 讯飞星火](./xunfei.md)
+- [iFlytek MaaS / 讯飞星辰](./xingchen.md)
+- [iFlytek Spark / 讯飞星火](./xinghuo.md)
