@@ -21,8 +21,8 @@
 
 | 指标 | 数量 |
 |---|---:|
-| 总模型 | 133 |
-| 免费模型 | 26 |
+| 总模型 | 134 |
+| 免费模型 | 25 |
 | 付费可试用 | 0 |
 
 ## 免费策略
@@ -46,7 +46,6 @@ NIM / build.nvidia.com 通常提供开发体验 credits 或试用额度。
 | nvidia  | `mistralai/magistral-small-2506` | magistral-small-2506 | unknown | 试用 credits | NVIDIA NIM free credits, exhaustible |
 | nvidia  | `mistralai/mistral-large-3-675b-instruct-2512` | mistral-large-3-675b-instruct-2512 | unknown | 试用 credits | NVIDIA NIM free credits, exhaustible |
 | nvidia  | `mistralai/mistral-medium-3-instruct` | mistral-medium-3-instruct | unknown | 试用 credits | NVIDIA NIM free credits, exhaustible |
-| nvidia  | `mistralai/mistral-medium-3.5-128b` | mistral-medium-3.5-128b | unknown | 试用 credits | NVIDIA NIM free credits, exhaustible |
 | nvidia  | `mistralai/mistral-nemotron` | mistral-nemotron | unknown | 试用 credits | NVIDIA NIM free credits, exhaustible |
 | nvidia  | `moonshotai/kimi-k2-instruct` | kimi-k2-instruct | unknown | 试用 credits | NVIDIA NIM free credits, exhaustible |
 | nvidia  | `moonshotai/kimi-k2-instruct-0905` | kimi-k2-instruct-0905 | unknown | 试用 credits | NVIDIA NIM free credits, exhaustible |
