@@ -16,7 +16,7 @@ export interface FamilyResult {
 
 const PROVIDER_PREFIXES = [
   'groq', 'openrouter', 'cerebras', 'nvidia', 'google',
-  'gitee', 'bigmodel', 'xunfei', 'longcat',
+  'gitee', 'bigmodel', 'xinghuo', 'xingchen', 'longcat',
 ];
 
 // 只用 `prefix/` 形式剥离的 owner 前缀。这些字符串本身也常作为模型家族前缀

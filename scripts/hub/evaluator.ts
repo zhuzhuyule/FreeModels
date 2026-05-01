@@ -17,10 +17,19 @@ export const PROVIDER_META: Record<string, ProviderMeta> = {
     priceCurrency: 'CNY',
     priceUnit: 'per_million_tokens',
   },
-  xunfei: {
-    name: 'xunfei',
-    displayName: 'iFlytek Spark',
+  xinghuo: {
+    name: 'xinghuo',
+    displayName: 'iFlytek Spark / 讯飞星火',
     website: 'https://xinghuo.xfyun.cn',
+    apiBaseUrl: 'https://spark-api-open.xf-yun.com/v1',
+    channelType: 'openai',
+    priceCurrency: 'CNY',
+    priceUnit: 'per_million_tokens',
+  },
+  xingchen: {
+    name: 'xingchen',
+    displayName: 'iFlytek MaaS / 讯飞星辰',
+    website: 'https://maas.xfyun.cn',
     apiBaseUrl: 'https://maas-api.cn-huabei-1.xf-yun.com/v1',
     channelType: 'openai',
     priceCurrency: 'CNY',
