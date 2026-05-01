@@ -1,8 +1,13 @@
+/**
+ * 历史上参考 OpenAI /v1/models 响应保留的字段集合.
+ * `object` / `owned_by` 两个字段已从输出中移除:
+ *   - `object` 一直是常量 "model", 无信息
+ *   - `owned_by` 一直 ≡ `provider`, 是冗余
+ * permission/root/parent 是 OpenAI 规范定义但消费方都没用过, 保留可选.
+ */
 export interface OpenAIModelObject {
   id: string;
-  object: 'model';
   created: number;
-  owned_by: string;
   permission?: unknown[];
   root?: string;
   parent?: string | null;
@@ -31,15 +36,13 @@ export interface FreeQuota {
 
 export interface ExtendedModelObject extends OpenAIModelObject {
   provider: string;
-  model_id: string;
   name: string;
   description?: string;
   context_size?: number;
   context_label?: string;
   price_input?: number;
   price_output?: number;
-  price_currency?: PriceCurrency;
-  price_unit?: 'per_million_tokens';
+  // price_currency / price_unit 已上提到 ProviderMeta (per-provider 唯一)
   is_free?: boolean;
   capabilities?: string[];
   tags?: string[];
@@ -133,6 +136,23 @@ export interface ProviderMeta {
   displayName: string;
   website?: string;
   logoUrl?: string;
+  /**
+   * 推荐的 API base URL (含路径), 例如 "https://api.groq.com/openai/v1".
+   * 下游消费方 (如 api-center 网关) 可由此派生 host 做反查关联,
+   * 也可作为新建分组时的默认上游填充值.
+   */
+  apiBaseUrl?: string;
+  /** API 协议族, 决定下游网关用哪种 channel 适配. */
+  channelType?: 'openai' | 'anthropic' | 'gemini';
+  /**
+   * Per-provider 统一的定价货币. 上提自 EnhancedModelData.priceCurrency
+   * (单 provider 内 100% 同值, 放在每条 model 上是冗余).
+   */
+  priceCurrency?: 'USD' | 'CNY';
+  /**
+   * Per-provider 统一的定价单位. 同上, 上提以瘦身 model 数据.
+   */
+  priceUnit?: 'per_million_tokens';
 }
 
 export interface ProviderOutput {
@@ -177,21 +197,21 @@ export function toOpenAICompatible(models: EnhancedModelData[]): OpenAICompatibl
     views,
     data: models.map((m, idx) => {
       seenProviders[m.provider] = true;
+      // 已删除字段 (上提到 providerMeta 或与其他字段 100% 等价):
+      //   object        — 全局常量 "model", 无信息
+      //   model_id      — 100% ≡ id
+      //   owned_by      — 100% ≡ provider
+      //   price_currency, price_unit — per-provider 唯一, 上提到 providerMeta
       return {
         id: m.modelId,
-        object: 'model' as const,
         created: Math.floor(Date.now() / 1000) - (models.length - idx),
-        owned_by: m.provider,
         provider: m.provider,
-        model_id: m.modelId,
         name: m.name,
         description: m.description,
         context_size: m.contextSize,
         context_label: m.contextLabel,
         price_input: m.priceInput,
         price_output: m.priceOutput,
-        price_currency: m.priceCurrency,
-        price_unit: m.priceInput !== undefined || m.priceOutput !== undefined ? 'per_million_tokens' as const : undefined,
         is_free: m.isFree,
         capabilities: m.capabilities,
         tags: m.tags,
