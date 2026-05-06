@@ -18,7 +18,7 @@
 | [Groq](https://groq.com)  | `groq` | 12 | 0 | 0 | 常见为开发者免费额度或限速体验，具体以官方控制台和价格页为准。 | [注册](https://console.groq.com) | [API Key](https://console.groq.com/keys) | [文档](https://console.groq.com/docs) | [JSON](https://ofind.cn/FreeModels/data/providers/groq/models.json) |
 | [LongCat](https://longcat.chat)  | `longcat` | 7 | 7 | 0 | 提供每日 token 免费额度，额度和模型范围以官方文档为准。 | [注册](https://longcat.chat) | [API Key](https://longcat.chat/platform/api-keys) | [文档](https://longcat.chat/platform/docs) | [JSON](https://ofind.cn/FreeModels/data/providers/longcat/models.json) |
 | [NVIDIA AI](https://developer.nvidia.com/ai)  | `nvidia` | 132 | 25 | 0 | NIM / build.nvidia.com 通常提供开发体验 credits 或试用额度。 | [注册](https://build.nvidia.com) | [API Key](https://build.nvidia.com/explore/discover) | [文档](https://docs.api.nvidia.com/nim) | [JSON](https://ofind.cn/FreeModels/data/providers/nvidia/models.json) |
-| [OpenRouter](https://openrouter.ai)  | `openrouter` | 59 | 59 | 0 | 免费模型通常带有请求频率或每日请求限制。 | [注册](https://openrouter.ai) | [API Key](https://openrouter.ai/settings/keys) | [文档](https://openrouter.ai/docs) | [JSON](https://ofind.cn/FreeModels/data/providers/openrouter/models.json) |
+| [OpenRouter](https://openrouter.ai)  | `openrouter` | 55 | 55 | 0 | 免费模型通常带有请求频率或每日请求限制。 | [注册](https://openrouter.ai) | [API Key](https://openrouter.ai/settings/keys) | [文档](https://openrouter.ai/docs) | [JSON](https://ofind.cn/FreeModels/data/providers/openrouter/models.json) |
 | [iFlytek MaaS / 讯飞星辰](https://maas.xfyun.cn)  | `xingchen` | 49 | 9 | 0 | 第三方模型聚合（GLM/Qwen/DeepSeek 等）；部分模型 0 元开放，具体以控制台为准。 | [注册](https://maas.xfyun.cn) | [API Key](https://maas.xfyun.cn) | [文档](https://maas.xfyun.cn/docs) | [JSON](https://ofind.cn/FreeModels/data/providers/xingchen/models.json) |
 | [iFlytek Spark / 讯飞星火](https://xinghuo.xfyun.cn)  | `xinghuo` | 6 | 1 | 0 | Spark Lite 永久免费但限速（5 并发）；其他 Spark 系列按 token 计费。 | [注册](https://xinghuo.xfyun.cn) | [API Key](https://console.xfyun.cn/services/cbm) | [文档](https://www.xfyun.cn/doc/spark) | [JSON](https://ofind.cn/FreeModels/data/providers/xinghuo/models.json) |
 <!-- AUTO-GENERATED:PROVIDER_INDEX_END -->
@@ -31,12 +31,12 @@
 | 维度 | 数量 |
 |------|-----:|
 | Provider | 10 |
-| 模型总数 | 560 |
-| 免费模型 (`is_free=true`) | 175 |
+| 模型总数 | 556 |
+| 免费模型 (`is_free=true`) | 171 |
 | 付费可试用 (Gitee 体验等) | 146 |
-| 模型家族 | 479 |
+| 模型家族 | 475 |
 | 跨 Provider 家族 | 55 |
-| · 限速免费 | 88 |
+| · 限速免费 | 84 |
 | · 永久免费 | 53 |
 | · 试用 credits | 25 |
 | · 日 token 配额 | 7 |
@@ -48,7 +48,7 @@
 > 该区块由 `npm run generate-docs` 自动更新。
 
 <!-- AUTO-GENERATED:FREE_MODELS_START -->
-共 **175** 个免费模型（限速免费 88 个、永久免费 53 个、试用 credits 25 个、日 token 配额 7 个、预览版 2 个）。
+共 **171** 个免费模型（限速免费 84 个、永久免费 53 个、试用 credits 25 个、日 token 配额 7 个、预览版 2 个）。
 
 完整列表及按机制筛选：
 - [全部免费模型](https://ofind.cn/FreeModels/data/views/free/models.json)

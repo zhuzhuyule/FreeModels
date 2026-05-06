@@ -21,8 +21,8 @@
 
 | 指标 | 数量 |
 |---|---:|
-| 总模型 | 59 |
-| 免费模型 | 59 |
+| 总模型 | 55 |
+| 免费模型 | 55 |
 | 付费可试用 | 0 |
 
 ## 免费策略
@@ -35,6 +35,7 @@
 |---|---|---|---:|---|---|
 | openrouter  | `openrouter/alibaba/wan-2.6` | Alibaba: Wan 2.6 | unknown | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/alibaba/wan-2.7` | Alibaba: Wan 2.7 | unknown | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
+| openrouter  | `openrouter/baidu/cobuddy` | Baidu Qianfan: CoBuddy (free) | 131K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/baidu/qianfan-ocr-fast` | Baidu: Qianfan-OCR-Fast (free) | 66K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/black-forest-labs/flux.2-flex` | Black Forest Labs: FLUX.2 Flex | 67K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/black-forest-labs/flux.2-klein-4b` | Black Forest Labs: FLUX.2 Klein 4B | 41K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
@@ -48,11 +49,6 @@
 | openrouter  | `openrouter/cohere/rerank-4-fast` | Cohere: Rerank 4 Fast | 33K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/cohere/rerank-4-pro` | Cohere: Rerank 4 Pro | 33K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/cohere/rerank-v3.5` | Cohere: Rerank v3.5 | 4K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
-| openrouter  | `openrouter/google/gemma-3-12b-it` | Google: Gemma 3 12B (free) | 33K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
-| openrouter  | `openrouter/google/gemma-3-27b-it` | Google: Gemma 3 27B (free) | 131K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
-| openrouter  | `openrouter/google/gemma-3-4b-it` | Google: Gemma 3 4B (free) | 33K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
-| openrouter  | `openrouter/google/gemma-3n-e2b-it` | Google: Gemma 3n 2B (free) | 8K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
-| openrouter  | `openrouter/google/gemma-3n-e4b-it` | Google: Gemma 3n 4B (free) | 8K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/google/gemma-4-26b-a4b-it` | Google: Gemma 4 26B A4B  (free) | 262K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/google/gemma-4-31b-it` | Google: Gemma 4 31B (free) | 262K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/google/lyria-3-clip-preview` | Google: Lyria 3 Clip Preview | 1M | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
