@@ -21,8 +21,8 @@
 
 | 指标 | 数量 |
 |---|---:|
-| 总模型 | 132 |
-| 免费模型 | 25 |
+| 总模型 | 131 |
+| 免费模型 | 24 |
 | 付费可试用 | 0 |
 
 ## 免费策略
@@ -48,7 +48,6 @@ NIM / build.nvidia.com 通常提供开发体验 credits 或试用额度。
 | nvidia  | `mistralai/mistral-medium-3-instruct` | mistral-medium-3-instruct | unknown | 试用 credits | NVIDIA NIM free credits, exhaustible |
 | nvidia  | `mistralai/mistral-nemotron` | mistral-nemotron | unknown | 试用 credits | NVIDIA NIM free credits, exhaustible |
 | nvidia  | `moonshotai/kimi-k2-instruct` | kimi-k2-instruct | unknown | 试用 credits | NVIDIA NIM free credits, exhaustible |
-| nvidia  | `moonshotai/kimi-k2-instruct-0905` | kimi-k2-instruct-0905 | unknown | 试用 credits | NVIDIA NIM free credits, exhaustible |
 | nvidia  | `moonshotai/kimi-k2-thinking` | kimi-k2-thinking | unknown | 试用 credits | NVIDIA NIM free credits, exhaustible |
 | nvidia  | `nvidia/gliner-pii` | gliner-pii | unknown | 试用 credits | NVIDIA NIM free credits, exhaustible |
 | nvidia  | `nvidia/nemotron-3-content-safety` | nemotron-3-content-safety | unknown | 试用 credits | NVIDIA NIM free credits, exhaustible |
