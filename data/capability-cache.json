@@ -10040,5 +10040,66 @@
     "performanceLevel": "mid",
     "description": "CoBuddy is a code generation model from Baidu, optimized for coding tasks and AI Agent workflows. It features high inference throughput and low end-to-end latency, with native support for tool calling and reasoning. The model runs on fp8 quantization with a 131K token context window and up to 65K output tokens.",
     "updatedAt": "2026-05-06T05:31:46.158Z"
+  },
+  "openrouter/openrouter/recraft/recraft-v4-pro": {
+    "tags": [
+      "vision",
+      "text-generation",
+      "chat",
+      "multimodal"
+    ],
+    "isReasoning": false,
+    "isMultimodal": true,
+    "hasToolUse": false,
+    "contextSize": "66K",
+    "tier": "large",
+    "performanceLevel": "mid",
+    "description": "Recraft V4 Pro is an image generation model from Recraft. It supports text and image inputs with image output at ~2K resolution across multiple aspect ratios, double the resolution of V4. It offers higher fidelity and detail density than V4, suited for production use cases where image quality is a priority.\n\nSupports the following `image_config` parameters: `strength` (controls how much the output deviates from the source image), `rgb_colors` (sets a color palette), and `background_rgb_color` (s",
+    "updatedAt": "2026-05-08T04:54:55.282Z"
+  },
+  "openrouter/openrouter/recraft/recraft-v4": {
+    "tags": [
+      "vision",
+      "text-generation",
+      "chat",
+      "multimodal"
+    ],
+    "isReasoning": false,
+    "isMultimodal": true,
+    "hasToolUse": false,
+    "contextSize": "66K",
+    "tier": "large",
+    "performanceLevel": "mid",
+    "description": "Recraft V4 is an image generation model from Recraft. It supports text and image inputs with image output at ~1K resolution across multiple aspect ratios. It delivers stronger compositional judgment, color coherence, and legible embedded text compared to V3, making it suited for infographics, signage, and packaging.\n\nSupports the following `image_config` parameters: `strength` (controls how much the output deviates from the source image), `rgb_colors` (sets a color palette), and `background_rgb_",
+    "updatedAt": "2026-05-08T04:54:55.282Z"
+  },
+  "openrouter/openrouter/recraft/recraft-v3": {
+    "tags": [
+      "vision",
+      "text-generation",
+      "chat",
+      "multimodal"
+    ],
+    "isReasoning": false,
+    "isMultimodal": true,
+    "hasToolUse": false,
+    "contextSize": "66K",
+    "tier": "large",
+    "performanceLevel": "mid",
+    "description": "Recraft V3 is an image generation model from Recraft. It supports text and image inputs with image output at ~1K resolution across multiple aspect ratios.\n\nSupports the following `image_config` parameters: `strength` (controls how much the output deviates from the source image), `style` (applies an artistic style), `text_layout` (places text at specific positions), `rgb_colors` (sets a color palette), and `background_rgb_color` (sets the background color). See the image generation docs for detai",
+    "updatedAt": "2026-05-08T04:54:55.282Z"
+  },
+  "gitee/HappyHorse-1.0": {
+    "tags": [
+      "video-generation"
+    ],
+    "isReasoning": false,
+    "isMultimodal": false,
+    "hasToolUse": false,
+    "contextSize": "unknown",
+    "tier": "medium",
+    "performanceLevel": "entry",
+    "description": "HappyHorse-1.0-I2V支持图生视频，具备高度还原的动态画面生成能力，能够精准理解文本语义，输出流畅自然、细节丰富的高质量视频。",
+    "updatedAt": "2026-05-08T04:55:02.475Z"
   }
 }

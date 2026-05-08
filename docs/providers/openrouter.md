@@ -21,8 +21,8 @@
 
 | 指标 | 数量 |
 |---|---:|
-| 总模型 | 55 |
-| 免费模型 | 55 |
+| 总模型 | 57 |
+| 免费模型 | 57 |
 | 付费可试用 | 0 |
 
 ## 免费策略
@@ -56,7 +56,6 @@
 | openrouter  | `openrouter/google/veo-3.1` | Google: Veo 3.1 | unknown | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/google/veo-3.1-fast` | Google: Veo 3.1 Fast | unknown | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/google/veo-3.1-lite` | Google: Veo 3.1 Lite | unknown | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
-| openrouter  | `openrouter/inclusionai/ling-2.6-1t` | inclusionAI: Ling-2.6-1T (free) | 262K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/kwaivgi/kling-v3.0-pro` | Kling: Video v3.0 Pro | unknown | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/kwaivgi/kling-v3.0-std` | Kling: Video v3.0 Standard | unknown | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/kwaivgi/kling-video-o1` | Kling: Video O1 | unknown | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
@@ -81,6 +80,9 @@
 | openrouter  | `openrouter/poolside/laguna-xs.2` | Poolside: Laguna XS.2 (free) | 131K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/qwen/qwen3-coder` | Qwen: Qwen3 Coder 480B A35B (free) | 262K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/qwen/qwen3-next-80b-a3b-instruct` | Qwen: Qwen3 Next 80B A3B Instruct (free) | 262K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
+| openrouter  | `openrouter/recraft/recraft-v3` | Recraft: Recraft V3 | 66K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
+| openrouter  | `openrouter/recraft/recraft-v4` | Recraft: Recraft V4 | 66K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
+| openrouter  | `openrouter/recraft/recraft-v4-pro` | Recraft: Recraft V4 Pro | 66K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/sourceful/riverflow-v2-fast` | Sourceful: Riverflow V2 Fast | 8K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/sourceful/riverflow-v2-fast-preview` | Sourceful: Riverflow V2 Fast Preview | 8K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/sourceful/riverflow-v2-max-preview` | Sourceful: Riverflow V2 Max Preview | 8K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
