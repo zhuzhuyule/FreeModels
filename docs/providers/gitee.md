@@ -22,8 +22,8 @@
 | 指标 | 数量 |
 |---|---:|
 | 总模型 | 204 |
-| 免费模型 | 44 |
-| 付费可试用 | 146 |
+| 免费模型 | 43 |
+| 付费可试用 | 147 |
 
 ## 免费策略
 
@@ -34,7 +34,6 @@
 | Provider | Model ID | 名称 | 上下文 | 免费类型 | 限制 |
 |---|---|---|---:|---|---|
 | gitee  | `all-mpnet-base-v2` | all-mpnet-base-v2 | unknown | 永久免费 | — |
-| gitee  | `Baichuan-M2-32B` | 百川医疗大模型 M2-32B | 64K | 永久免费 | — |
 | gitee  | `bce-embedding-base_v1` | bce-embedding-base_v1 | 500 | 永久免费 | — |
 | gitee  | `bce-reranker-base_v1` | bce-reranker-base_v1 | 500 | 永久免费 | — |
 | gitee  | `bge-large-zh-v1.5` | bge-large-zh-v1.5 | 500 | 永久免费 | — |

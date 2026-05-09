@@ -56,6 +56,7 @@
 | openrouter  | `openrouter/google/veo-3.1` | Google: Veo 3.1 | unknown | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/google/veo-3.1-fast` | Google: Veo 3.1 Fast | unknown | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/google/veo-3.1-lite` | Google: Veo 3.1 Lite | unknown | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
+| openrouter  | `openrouter/inclusionai/ring-2.6-1t` | inclusionAI: Ring-2.6-1T (free) | 262K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/kwaivgi/kling-v3.0-pro` | Kling: Video v3.0 Pro | unknown | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/kwaivgi/kling-v3.0-std` | Kling: Video v3.0 Standard | unknown | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/kwaivgi/kling-video-o1` | Kling: Video O1 | unknown | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
@@ -88,5 +89,4 @@
 | openrouter  | `openrouter/sourceful/riverflow-v2-max-preview` | Sourceful: Riverflow V2 Max Preview | 8K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/sourceful/riverflow-v2-pro` | Sourceful: Riverflow V2 Pro | 8K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/sourceful/riverflow-v2-standard-preview` | Sourceful: Riverflow V2 Standard Preview | 8K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
-| openrouter  | `openrouter/tencent/hy3-preview` | Tencent: Hy3 preview (free) | 262K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/z-ai/glm-4.5-air` | Z.ai: GLM 4.5 Air (free) | 131K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
