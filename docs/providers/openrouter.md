@@ -21,8 +21,8 @@
 
 | 指标 | 数量 |
 |---|---:|
-| 总模型 | 57 |
-| 免费模型 | 57 |
+| 总模型 | 58 |
+| 免费模型 | 58 |
 | 付费可试用 | 0 |
 
 ## 免费策略
@@ -35,6 +35,7 @@
 |---|---|---|---:|---|---|
 | openrouter  | `openrouter/alibaba/wan-2.6` | Alibaba: Wan 2.6 | unknown | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/alibaba/wan-2.7` | Alibaba: Wan 2.7 | unknown | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
+| openrouter  | `openrouter/arcee-ai/trinity-large-thinking` | Arcee AI: Trinity Large Thinking (free) | 262K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/baidu/cobuddy` | Baidu Qianfan: CoBuddy (free) | 131K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/baidu/qianfan-ocr-fast` | Baidu: Qianfan-OCR-Fast (free) | 66K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/black-forest-labs/flux.2-flex` | Black Forest Labs: FLUX.2 Flex | 67K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |

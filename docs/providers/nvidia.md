@@ -21,8 +21,8 @@
 
 | 指标 | 数量 |
 |---|---:|
-| 总模型 | 128 |
-| 免费模型 | 21 |
+| 总模型 | 122 |
+| 免费模型 | 18 |
 | 付费可试用 | 0 |
 
 ## 免费策略
@@ -35,7 +35,6 @@ NIM / build.nvidia.com 通常提供开发体验 credits 或试用额度。
 |---|---|---|---:|---|---|
 | nvidia  | `bytedance/seed-oss-36b-instruct` | seed-oss-36b-instruct | unknown | 试用 credits | NVIDIA NIM free credits, exhaustible |
 | nvidia  | `google/gemma-2-2b-it` | gemma-2-2b-it | unknown | 试用 credits | NVIDIA NIM free credits, exhaustible |
-| nvidia  | `google/gemma-3-27b-it` | gemma-3-27b-it | unknown | 试用 credits | NVIDIA NIM free credits, exhaustible |
 | nvidia  | `google/gemma-3n-e2b-it` | gemma-3n-e2b-it | unknown | 试用 credits | NVIDIA NIM free credits, exhaustible |
 | nvidia  | `google/gemma-3n-e4b-it` | gemma-3n-e4b-it | unknown | 试用 credits | NVIDIA NIM free credits, exhaustible |
 | nvidia  | `meta/llama-4-maverick-17b-128e-instruct` | llama-4-maverick-17b-128e-instruct | unknown | 试用 credits | NVIDIA NIM free credits, exhaustible |
@@ -44,8 +43,6 @@ NIM / build.nvidia.com 通常提供开发体验 credits 或试用额度。
 | nvidia  | `minimaxai/minimax-m2.7` | minimax-m2.7 | unknown | 试用 credits | NVIDIA NIM free credits, exhaustible |
 | nvidia  | `mistralai/mistral-large-3-675b-instruct-2512` | mistral-large-3-675b-instruct-2512 | unknown | 试用 credits | NVIDIA NIM free credits, exhaustible |
 | nvidia  | `mistralai/mistral-nemotron` | mistral-nemotron | unknown | 试用 credits | NVIDIA NIM free credits, exhaustible |
-| nvidia  | `moonshotai/kimi-k2-instruct` | kimi-k2-instruct | unknown | 试用 credits | NVIDIA NIM free credits, exhaustible |
-| nvidia  | `moonshotai/kimi-k2-thinking` | kimi-k2-thinking | unknown | 试用 credits | NVIDIA NIM free credits, exhaustible |
 | nvidia  | `nvidia/gliner-pii` | gliner-pii | unknown | 试用 credits | NVIDIA NIM free credits, exhaustible |
 | nvidia  | `nvidia/nemotron-3-content-safety` | nemotron-3-content-safety | unknown | 试用 credits | NVIDIA NIM free credits, exhaustible |
 | nvidia  | `nvidia/nemotron-content-safety-reasoning-4b` | nemotron-content-safety-reasoning-4b | unknown | 试用 credits | NVIDIA NIM free credits, exhaustible |
