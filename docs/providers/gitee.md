@@ -21,9 +21,9 @@
 
 | 指标 | 数量 |
 |---|---:|
-| 总模型 | 203 |
-| 免费模型 | 43 |
-| 付费可试用 | 145 |
+| 总模型 | 192 |
+| 免费模型 | 39 |
+| 付费可试用 | 138 |
 
 ## 免费策略
 
@@ -55,10 +55,7 @@
 | gitee  | `jina-clip-v1` | jina-clip-v1 | 500 | 永久免费 | — |
 | gitee  | `jina-clip-v2` | jina-clip-v2 | 8K | 永久免费 | — |
 | gitee  | `jina-embeddings-v4` | jina-embeddings-v4 | 32K | 永久免费 | — |
-| gitee  | `jina-reranker-m0` | jina-reranker-m0 | 10K | 永久免费 | — |
 | gitee  | `Lingshu-32B` | Lingshu-32B 医疗大模型 | 32K | 永久免费 | — |
-| gitee  | `medgemma-4b-it` | MedGemma 医疗大模型 | 32K | 永久免费 | — |
-| gitee  | `nomic-embed-code` | nomic-embed-code | 32K | 永久免费 | — |
 | gitee  | `nonescape-v0` | AI 图片检测 | unknown | 永久免费 | — |
 | gitee  | `nsfw-classifier` | 色情图片检测 | unknown | 永久免费 | — |
 | gitee  | `Qwen2-7B-Instruct` | Qwen2-7B-Instruct | 24K | 永久免费 | — |
@@ -75,4 +72,3 @@
 | gitee  | `Security-semantic-filtering` | 违规文本检测 | 32K | 永久免费 | — |
 | gitee  | `SenseVoiceSmall` | SenseVoiceSmall | unknown | 永久免费 | — |
 | gitee  | `Spark-TTS-0.5B` | Spark-TTS-0.5B | unknown | 永久免费 | — |
-| gitee  | `Youtu-Embedding` | Youtu-Embedding | 8K | 永久免费 | — |

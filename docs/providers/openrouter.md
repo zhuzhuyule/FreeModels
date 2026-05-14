@@ -21,8 +21,8 @@
 
 | 指标 | 数量 |
 |---|---:|
-| 总模型 | 58 |
-| 免费模型 | 58 |
+| 总模型 | 59 |
+| 免费模型 | 59 |
 | 付费可试用 | 0 |
 
 ## 免费策略
@@ -50,6 +50,7 @@
 | openrouter  | `openrouter/cohere/rerank-4-fast` | Cohere: Rerank 4 Fast | 33K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/cohere/rerank-4-pro` | Cohere: Rerank 4 Pro | 33K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/cohere/rerank-v3.5` | Cohere: Rerank v3.5 | 4K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
+| openrouter  | `openrouter/deepseek/deepseek-v4-flash` | DeepSeek: DeepSeek V4 Flash (free) | 256K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/google/gemma-4-26b-a4b-it` | Google: Gemma 4 26B A4B  (free) | 262K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/google/gemma-4-31b-it` | Google: Gemma 4 31B (free) | 262K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/google/lyria-3-clip-preview` | Google: Lyria 3 Clip Preview | 1M | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
