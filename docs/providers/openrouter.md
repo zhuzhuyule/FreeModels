@@ -21,8 +21,8 @@
 
 | 指标 | 数量 |
 |---|---:|
-| 总模型 | 59 |
-| 免费模型 | 59 |
+| 总模型 | 66 |
+| 免费模型 | 66 |
 | 付费可试用 | 0 |
 
 ## 免费策略
@@ -37,7 +37,6 @@
 | openrouter  | `openrouter/alibaba/wan-2.7` | Alibaba: Wan 2.7 | unknown | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/arcee-ai/trinity-large-thinking` | Arcee AI: Trinity Large Thinking (free) | 262K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/baidu/cobuddy` | Baidu Qianfan: CoBuddy (free) | 131K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
-| openrouter  | `openrouter/baidu/qianfan-ocr-fast` | Baidu: Qianfan-OCR-Fast (free) | 66K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/black-forest-labs/flux.2-flex` | Black Forest Labs: FLUX.2 Flex | 67K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/black-forest-labs/flux.2-klein-4b` | Black Forest Labs: FLUX.2 Klein 4B | 41K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/black-forest-labs/flux.2-max` | Black Forest Labs: FLUX.2 Max | 47K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
@@ -86,6 +85,14 @@
 | openrouter  | `openrouter/recraft/recraft-v3` | Recraft: Recraft V3 | 66K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/recraft/recraft-v4` | Recraft: Recraft V4 | 66K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/recraft/recraft-v4-pro` | Recraft: Recraft V4 Pro | 66K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
+| openrouter  | `openrouter/recraft/recraft-v4-pro-vector` | Recraft: Recraft V4 Pro Vector | 66K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
+| openrouter  | `openrouter/recraft/recraft-v4-vector` | Recraft: Recraft V4 Vector | 66K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
+| openrouter  | `openrouter/recraft/recraft-v4.1` | Recraft: Recraft V4.1 | 66K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
+| openrouter  | `openrouter/recraft/recraft-v4.1-pro` | Recraft: Recraft V4.1 Pro | 66K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
+| openrouter  | `openrouter/recraft/recraft-v4.1-pro-vector` | Recraft: Recraft V4.1 Pro Vector | 66K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
+| openrouter  | `openrouter/recraft/recraft-v4.1-utility` | Recraft: Recraft V4.1 Utility | 66K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
+| openrouter  | `openrouter/recraft/recraft-v4.1-utility-pro` | Recraft: Recraft V4.1 Utility Pro | 66K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
+| openrouter  | `openrouter/recraft/recraft-v4.1-vector` | Recraft: Recraft V4.1 Vector | 66K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/sourceful/riverflow-v2-fast` | Sourceful: Riverflow V2 Fast | 8K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/sourceful/riverflow-v2-fast-preview` | Sourceful: Riverflow V2 Fast Preview | 8K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/sourceful/riverflow-v2-max-preview` | Sourceful: Riverflow V2 Max Preview | 8K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
