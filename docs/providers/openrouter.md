@@ -21,8 +21,8 @@
 
 | 指标 | 数量 |
 |---|---:|
-| 总模型 | 66 |
-| 免费模型 | 66 |
+| 总模型 | 65 |
+| 免费模型 | 65 |
 | 付费可试用 | 0 |
 
 ## 免费策略
@@ -57,7 +57,6 @@
 | openrouter  | `openrouter/google/veo-3.1` | Google: Veo 3.1 | unknown | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/google/veo-3.1-fast` | Google: Veo 3.1 Fast | unknown | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/google/veo-3.1-lite` | Google: Veo 3.1 Lite | unknown | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
-| openrouter  | `openrouter/inclusionai/ring-2.6-1t` | inclusionAI: Ring-2.6-1T (free) | 262K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/kwaivgi/kling-v3.0-pro` | Kling: Video v3.0 Pro | unknown | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/kwaivgi/kling-v3.0-std` | Kling: Video v3.0 Standard | unknown | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/kwaivgi/kling-video-o1` | Kling: Video O1 | unknown | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
