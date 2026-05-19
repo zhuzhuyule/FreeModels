@@ -181,6 +181,21 @@ export interface AggregatedOutput {
 
 export type ProviderPlugin = () => Promise<RawModelData[]>;
 
+/**
+ * `created` 字段: OpenAI 规范要求 unix timestamp, 但本项目无法得到模型真实创建时间.
+ * 使用 modelId 的 SHA1 前 32 bit 作为稳定哈希 (mod 2_000_000_000 保证不溢出 32-bit signed).
+ * 好处: 相同 modelId 每次输出相同 created, 避免 models.json 因每次跑都生成新时间戳
+ * 导致 CI 每天产生 noise commit.
+ */
+function stableCreated(modelId: string): number {
+  // 简单 djb2 哈希 (不需要 crypto, 也不需要 import).
+  let hash = 5381;
+  for (let i = 0; i < modelId.length; i++) {
+    hash = ((hash << 5) + hash + modelId.charCodeAt(i)) | 0;
+  }
+  return Math.abs(hash);
+}
+
 export function toOpenAICompatible(models: EnhancedModelData[]): OpenAICompatibleOutput {
   const seenProviders: Record<string, boolean> = {};
   const views = [
@@ -195,7 +210,7 @@ export function toOpenAICompatible(models: EnhancedModelData[]): OpenAICompatibl
     total: models.length,
     providers: {},
     views,
-    data: models.map((m, idx) => {
+    data: models.map((m) => {
       seenProviders[m.provider] = true;
       // 已删除字段 (上提到 providerMeta 或与其他字段 100% 等价):
       //   object        — 全局常量 "model", 无信息
@@ -204,7 +219,7 @@ export function toOpenAICompatible(models: EnhancedModelData[]): OpenAICompatibl
       //   price_currency, price_unit — per-provider 唯一, 上提到 providerMeta
       return {
         id: m.modelId,
-        created: Math.floor(Date.now() / 1000) - (models.length - idx),
+        created: stableCreated(m.modelId),
         provider: m.provider,
         name: m.name,
         description: m.description,

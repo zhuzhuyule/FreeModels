@@ -20,7 +20,7 @@ import type {
 } from './types.js';
 import { toOpenAICompatible } from './types.js';
 import { groupByFamily } from './family.js';
-import { classifyFamilyWithLlm, getLlmStats, isLlmEnabled } from './llm.js';
+import { classifyFamilyWithLlm, getLlmStats, isLlmEnabled, initLlmContext, flushLlmContext } from './llm.js';
 import { notifyWechat, type NotifyPayload } from './notify.js';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -101,12 +101,23 @@ function dedupeByModelId(models: EnhancedModelData[]): EnhancedModelData[] {
   const map = new Map<string, EnhancedModelData>();
   const conflicts: Record<string, number> = {};
 
-  const score = (m: EnhancedModelData): number =>
-    (m.description?.length ?? 0) +
-    (m.contextSize && m.contextSize > 0 ? 1000 : 0) +
-    (m.capabilities?.length ?? 0) * 10 +
-    (m.priceInput !== undefined ? 5 : 0) +
-    (m.priceOutput !== undefined ? 5 : 0);
+  // 分级比较, 字典序: 能力数 > context > 价格完整度 > description 长度.
+  // 避免老逻辑里 description 长 200 字符压过 capabilities 多 20 个的赢家.
+  const features = (m: EnhancedModelData): [number, number, number, number] => [
+    m.capabilities?.length ?? 0,
+    m.contextSize && m.contextSize > 0 ? 1 : 0,
+    (m.priceInput !== undefined ? 1 : 0) + (m.priceOutput !== undefined ? 1 : 0),
+    m.description?.length ?? 0,
+  ];
+
+  const isBetter = (a: EnhancedModelData, b: EnhancedModelData): boolean => {
+    const fa = features(a);
+    const fb = features(b);
+    for (let i = 0; i < fa.length; i++) {
+      if (fa[i] !== fb[i]) return fa[i] > fb[i];
+    }
+    return false;
+  };
 
   for (const m of models) {
     const existing = map.get(m.modelId);
@@ -115,7 +126,7 @@ function dedupeByModelId(models: EnhancedModelData[]): EnhancedModelData[] {
       continue;
     }
     conflicts[m.modelId] = (conflicts[m.modelId] ?? 1) + 1;
-    if (score(m) > score(existing)) {
+    if (isBetter(m, existing)) {
       map.set(m.modelId, m);
     }
   }
@@ -148,12 +159,10 @@ function validateModel(m: EnhancedModelData): string[] {
 
 async function refineFamiliesWithLlm(
   models: EnhancedModelData[],
-  maxCalls = 30
+  maxCalls = 30,
+  concurrency = 5
 ): Promise<void> {
   if (!isLlmEnabled()) return;
-
-  const counts = new Map<string, number>();
-  for (const m of models) counts.set(m.modelFamily, (counts.get(m.modelFamily) ?? 0) + 1);
 
   const candidates = models.filter(m => {
     const family = m.modelFamily;
@@ -169,16 +178,23 @@ async function refineFamiliesWithLlm(
   const limited = candidates.slice(0, maxCalls);
   if (limited.length === 0) return;
 
-  console.log(`[Aggregator] LLM refining ${limited.length} family outlier(s)...`);
+  console.log(`[Aggregator] LLM refining ${limited.length} family outlier(s) with concurrency=${concurrency}...`);
 
-  for (const m of limited) {
-    const result = await classifyFamilyWithLlm(m.modelId, m.name);
-    if (result?.family) {
-      m.modelFamily = result.family;
-      if (result.variant) m.modelVariant = result.variant;
-      if (result.quantization) m.quantization = result.quantization;
+  let cursor = 0;
+  async function worker(): Promise<void> {
+    while (true) {
+      const idx = cursor++;
+      if (idx >= limited.length) return;
+      const m = limited[idx];
+      const result = await classifyFamilyWithLlm(m.modelId, m.name);
+      if (result?.family) {
+        m.modelFamily = result.family;
+        if (result.variant) m.modelVariant = result.variant;
+        if (result.quantization) m.quantization = result.quantization;
+      }
     }
   }
+  await Promise.all(Array.from({ length: Math.min(concurrency, limited.length) }, () => worker()));
 }
 
 function fillAliases(models: EnhancedModelData[]): void {
@@ -245,7 +261,10 @@ function snapshotPrevious(): ProviderSnapshot | null {
     const previous = JSON.parse(fs.readFileSync(OUTPUT_PATH, 'utf-8')) as {
       data?: Array<{ id: string; provider: string; is_free?: boolean }>;
     };
-    if (!Array.isArray(previous.data)) return null;
+    if (!Array.isArray(previous.data)) {
+      console.warn(`[Aggregator] ⚠ Previous models.json has no .data array — anomaly detection disabled.`);
+      return null;
+    }
     const byProvider: Record<string, number> = {};
     const ids = new Set<string>();
     let freeCount = 0;
@@ -255,7 +274,10 @@ function snapshotPrevious(): ProviderSnapshot | null {
       if (m.is_free) freeCount++;
     }
     return { total: previous.data.length, freeCount, byProvider, ids };
-  } catch {
+  } catch (err) {
+    console.warn(
+      `[Aggregator] ⚠ Failed to parse previous models.json (${err instanceof Error ? err.message : err}) — anomaly detection disabled.`
+    );
     return null;
   }
 }
@@ -326,7 +348,9 @@ async function main(): Promise<void> {
     dedupeByModelId(results.flatMap(r => r.models))
   );
 
+  if (isLlmEnabled()) initLlmContext();
   await refineFamiliesWithLlm(allModels);
+  if (isLlmEnabled()) flushLlmContext();
   fillAliases(allModels);
   const familyStats = reportFamilyStats(allModels);
 
@@ -338,9 +362,16 @@ async function main(): Promise<void> {
   const availableProviders = results
     .filter(r => r.models.length > 0)
     .map(r => r.provider);
+  // 失败 = provider 抛错; 合法返回空数组不算失败 (provider 可能临时没数据).
   const failedProviders = results
-    .filter(r => r.error || r.models.length === 0)
+    .filter(r => r.error)
     .map(r => r.provider);
+  const emptyProviders = results
+    .filter(r => !r.error && r.models.length === 0)
+    .map(r => r.provider);
+  if (emptyProviders.length > 0) {
+    console.warn(`[Aggregator] Provider(s) returned 0 models (not treated as failure): ${emptyProviders.join(', ')}`);
+  }
 
   const providerMeta: Record<string, typeof PROVIDER_META[string]> = {};
   for (const name of availableProviders) {

@@ -70,11 +70,12 @@ const CAPABILITY_USE_CASE: Record<string, string[]> = {
 };
 
 export function extractParameterCount(modelName: string): number | null {
+  // \b 词边界防止误命中 `b3-large`、`xb12` 之类 token.
+  // 之前的两条 pattern 其实是冗余的 (\s* 允许 0 空格), 合并为一条带词边界的.
   const patterns = [
-    /(\d+(?:\.\d+)?)\s*[bB](?:\s|$|-)/,
-    /(\d+(?:\.\d+)?)[bB](?:\s|$|-)/,
+    /\b(\d+(?:\.\d+)?)\s*[bB](?=\s|$|-)/,
     /(\d+(?:\.\d+)?)\s*参数/,
-    /(\d+(?:\.\d+)?)\s*parameters/,
+    /(\d+(?:\.\d+)?)\s*parameters/i,
   ];
 
   for (const pattern of patterns) {

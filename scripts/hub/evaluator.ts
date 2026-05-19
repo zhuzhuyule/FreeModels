@@ -66,6 +66,25 @@ export const PROVIDER_META: Record<string, ProviderMeta> = {
     name: 'cloudflare',
     displayName: 'Cloudflare Workers AI',
     website: 'https://developers.cloudflare.com/workers-ai',
+    apiBaseUrl: 'https://api.cloudflare.com/client/v4/accounts/{account_id}/ai/v1',
+    channelType: 'openai',
+    priceCurrency: 'USD',
+    priceUnit: 'per_million_tokens',
+  },
+  cohere: {
+    name: 'cohere',
+    displayName: 'Cohere',
+    website: 'https://cohere.com',
+    apiBaseUrl: 'https://api.cohere.com/v1',
+    channelType: 'openai',
+    priceCurrency: 'USD',
+    priceUnit: 'per_million_tokens',
+  },
+  sambanova: {
+    name: 'sambanova',
+    displayName: 'SambaNova Cloud',
+    website: 'https://cloud.sambanova.ai',
+    apiBaseUrl: 'https://api.sambanova.ai/v1',
     channelType: 'openai',
     priceCurrency: 'USD',
     priceUnit: 'per_million_tokens',
@@ -140,27 +159,18 @@ export function mutateCacheEntry(
   enhanced: EnhancedModelData
 ): void {
   const key = `${vendor}/${modelId}`;
-  const now = new Date().toISOString();
-
-  if (!cache[key]) {
-    cache[key] = {
-      tags: enhanced.tags,
-      isReasoning: enhanced.isReasoning,
-      isMultimodal: enhanced.isMultimodal,
-      hasToolUse: enhanced.hasToolUse,
-      contextSize: enhanced.contextLabel,
-      parameterCount: enhanced.parameterCount,
-      tier: enhanced.tier,
-      performanceLevel: enhanced.performanceLevel,
-      description: model.description || enhanced.tags.join(', '),
-      updatedAt: now,
-    };
-    return;
-  }
-  if (model.description && !cache[key].description?.startsWith(model.description.substring(0, 20))) {
-    cache[key].description = model.description;
-    cache[key].updatedAt = now;
-  }
+  cache[key] = {
+    tags: enhanced.tags,
+    isReasoning: enhanced.isReasoning,
+    isMultimodal: enhanced.isMultimodal,
+    hasToolUse: enhanced.hasToolUse,
+    contextSize: enhanced.contextLabel,
+    parameterCount: enhanced.parameterCount,
+    tier: enhanced.tier,
+    performanceLevel: enhanced.performanceLevel,
+    description: model.description || enhanced.tags.join(', '),
+    updatedAt: new Date().toISOString(),
+  };
 }
 
 export function enhanceWithCacheUsing(

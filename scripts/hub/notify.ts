@@ -83,7 +83,7 @@ function renderProviderDelta(
   const lines: string[] = [];
   lines.push('');
   lines.push('📈 Provider 变化');
-  const maxName = Math.max(...deltas.map(d => d.name.length));
+  const maxName = deltas.reduce((acc, d) => Math.max(acc, d.name.length), 0);
   for (const d of deltas) {
     const sign = d.delta > 0 ? `+${d.delta}` : `${d.delta}`;
     const tag = d.delta > 0 ? '🆕' : '➖';
@@ -125,12 +125,15 @@ export function formatNotification(p: NotifyPayload): string {
     for (const a of p.anomalies) lines.push(`  · ${a}`);
   }
 
-  lines.push('');
-  lines.push('📦 各 Provider 模型数');
   const providers = Object.entries(p.byProvider).sort((a, b) => b[1] - a[1]);
-  const maxName = Math.max(...providers.map(([n]) => n.length));
-  for (const [name, count] of providers) {
-    lines.push(`  ${name.padEnd(maxName)}  ${count}`);
+  if (providers.length > 0) {
+    lines.push('');
+    lines.push('📦 各 Provider 模型数');
+    // 防 Math.max(...[]) → -Infinity 传给 padEnd 抛 RangeError.
+    const maxName = providers.reduce((acc, [n]) => Math.max(acc, n.length), 0);
+    for (const [name, count] of providers) {
+      lines.push(`  ${name.padEnd(maxName)}  ${count}`);
+    }
   }
 
   if (p.topFamilies.length > 0) {

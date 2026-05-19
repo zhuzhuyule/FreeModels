@@ -30,14 +30,6 @@ const TYPE_MAP: Record<string, string> = {
   text2speech: 'speech-synthesis',
 };
 
-const CAPABILITY_KEYWORDS: Record<string, RegExp[]> = {
-  reasoning: [/\b(reasoning|think|thought|r1|chain.?of.?thought|problem.?solv)\b/i],
-  vision: [/\b(vision|visual|image|photo|picture|multimodal|图生|图理解)\b/i],
-  tool_use: [/\b(tool|function.?call|plugin|tool.?use|actions)\b/i],
-  code: [/\b(code|programming|codegen|script)\b/i],
-  function_calling: [/\b(function.?call|tool.?call|tools?)\b/i],
-};
-
 const CONTEXT_PATTERNS: RegExp[] = [
   /(\d+(?:\.\d+)?)\s*[kKmMgG]\b/i,
   /context[:\s]*(\d+)/i,
@@ -62,38 +54,11 @@ function parseContextSize(tags: Array<{ name: string; slug?: string }>): number 
   return undefined;
 }
 
-function inferCapabilities(
-  name: string,
-  description: string,
-  type: string,
-  modelId: string
-): { capabilities: string[]; isReasoning: boolean; isMultimodal: boolean; hasToolUse: boolean } {
-  const text = `${name} ${description} ${type} ${modelId}`.toLowerCase();
-  const capabilities: string[] = [];
-
-  const mappedType = TYPE_MAP[type] || TYPE_MAP[type.replace(/-/g, '')] || type;
-  if (!capabilities.includes(mappedType)) {
-    capabilities.push(mappedType);
-  }
-
-  let isReasoning = false;
-  let isMultimodal = false;
-  let hasToolUse = false;
-
-  for (const [cap, patterns] of Object.entries(CAPABILITY_KEYWORDS)) {
-    if (patterns.some(p => p.test(text))) {
-      if (cap === 'reasoning') isReasoning = true;
-      if (cap === 'vision') isMultimodal = true;
-      if (cap === 'tool_use' || cap === 'function_calling') hasToolUse = true;
-      if (!capabilities.includes(cap)) capabilities.push(cap);
-    }
-  }
-
-  if (isReasoning && !capabilities.includes('text-generation')) {
-    capabilities.push('text-generation');
-  }
-
-  return { capabilities, isReasoning, isMultimodal, hasToolUse };
+// 只做来自 API `type` 字段的能力映射. 关键词推断 (reasoning/vision/tool_use/code/function_calling)
+// 由 enhancer.ts 统一处理, 避免 provider 各自实现导致 taxonomy 漂移.
+function mapTypeToCapabilities(type: string): string[] {
+  const mapped = TYPE_MAP[type] || TYPE_MAP[type.replace(/-/g, '')] || type;
+  return [mapped];
 }
 
 async function fetchGiteeModels(): Promise<RawModelData[]> {
@@ -133,13 +98,7 @@ async function fetchGiteeModels(): Promise<RawModelData[]> {
     const isExperienceable = freeUse && hasPrice;
 
     const rawType = String(firstOp.type || service.type || 'unknown').toLowerCase();
-
-    const { capabilities, isReasoning, isMultimodal, hasToolUse } = inferCapabilities(
-      service.name || '',
-      service.remark || '',
-      rawType,
-      String(service.ident || service.name || '')
-    );
+    const capabilities = mapTypeToCapabilities(rawType);
 
     const description = String(service.remark || '')
       .replace(/<[^>]*>/g, '')
@@ -170,9 +129,6 @@ async function fetchGiteeModels(): Promise<RawModelData[]> {
       capabilities,
       metadata: {
         originalType: rawType,
-        isReasoning,
-        isMultimodal,
-        hasToolUse,
         operationsCount: operations.length,
         serviceIdent: service.ident,
         apiFormat: firstOp.api_format,

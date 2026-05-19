@@ -80,31 +80,25 @@ export function getCachedOrInfer(
   vendor: string,
   modelId: string,
   raw: RawModelData,
-  cache: Record<string, CachedCapabilities>
+  _cache: Record<string, CachedCapabilities>
 ): EnhancedModelData {
-  const key = `${vendor}/${modelId}`;
-  const cached = cache[key];
-
+  // 注意: 不再用 cache 覆盖能力字段. cache 是 write-once 快照, 旧数据会让模型升级
+  // (context 变大、新增 tool-use 等) 永远反映不到输出. 推断是纯函数, 每次重算即可.
   const inferred = inferCapabilities(raw);
   const contextLabel = formatContextLabel(raw.contextSize);
   const freeMechanism = inferFreeMechanism(raw);
   const freeQuota = inferFreeQuota(raw);
   const trialScope = inferTrialScope(raw);
-
-  const tags = (cached?.tags && cached.tags.length > 0
-    ? normalizeCapabilities(cached.tags)
-    : inferred.tags);
-
   const familyResult = canonicalizeFamily(raw.modelId, raw.name);
 
   return {
     ...raw,
     provider: vendor,
-    tags,
-    isReasoning: cached?.isReasoning ?? inferred.isReasoning,
-    isMultimodal: cached?.isMultimodal ?? inferred.isMultimodal,
-    hasToolUse: cached?.hasToolUse ?? inferred.hasToolUse,
-    contextLabel: cached?.contextSize ?? contextLabel,
+    tags: inferred.tags,
+    isReasoning: inferred.isReasoning,
+    isMultimodal: inferred.isMultimodal,
+    hasToolUse: inferred.hasToolUse,
+    contextLabel,
     freeMechanism,
     freeQuota,
     trialScope,
@@ -112,9 +106,9 @@ export function getCachedOrInfer(
     modelVariant: raw.modelVariant ?? familyResult.variant,
     quantization: raw.quantization ?? familyResult.quantization,
     aliases: raw.aliases ?? [],
-    tier: cached?.tier ?? 'medium',
+    tier: 'medium',
     speed: 'standard',
     useCase: [],
-    performanceLevel: cached?.performanceLevel ?? 'mid',
+    performanceLevel: 'mid',
   };
 }

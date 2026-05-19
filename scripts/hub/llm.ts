@@ -60,14 +60,37 @@ function loadBudget(): BudgetFile {
   return saved;
 }
 
-function recordUsage(budget: BudgetFile, model: string): void {
-  budget.used[model] = (budget.used[model] ?? 0) + 1;
-  saveJson(BUDGET_PATH, budget);
-}
-
 export function isLlmEnabled(): boolean {
   if (process.env.SKIP_LLM === '1') return false;
   return !!process.env.GITHUB_TOKEN;
+}
+
+/**
+ * 进程级 LLM 上下文: 在 aggregator 启动时 init 一次, 结束时 flush 一次.
+ * 避免 callLlm 每次都同步读写整个 cache/budget 文件 (O(N) 调用 = O(2N) IO).
+ */
+interface LlmContext {
+  cache: LlmCache;
+  budget: BudgetFile;
+  dirty: boolean;
+}
+
+let ctx: LlmContext | null = null;
+
+export function initLlmContext(): void {
+  if (ctx) return;
+  ctx = {
+    cache: loadJsonOr<LlmCache>(CACHE_PATH, {}),
+    budget: loadBudget(),
+    dirty: false,
+  };
+}
+
+export function flushLlmContext(): void {
+  if (!ctx || !ctx.dirty) return;
+  saveJson(CACHE_PATH, ctx.cache);
+  saveJson(BUDGET_PATH, ctx.budget);
+  ctx.dirty = false;
 }
 
 export interface LlmCallOptions {
@@ -144,21 +167,20 @@ export async function callLlm(opts: LlmCallOptions): Promise<string | null> {
     stats.skipped++;
     return null;
   }
+  if (!ctx) initLlmContext();
+  const c = ctx!;
 
-  const cache = loadJsonOr<LlmCache>(CACHE_PATH, {});
   const cacheKey = `${opts.task}:${hashInput(opts.systemPrompt + opts.input)}`;
-
-  if (cache[cacheKey]) {
+  if (c.cache[cacheKey]) {
     stats.hits++;
-    return cache[cacheKey].output;
+    return c.cache[cacheKey].output;
   }
 
-  const budget = loadBudget();
   const candidates = [opts.model ?? 'openai/gpt-4o-mini', ...(opts.fallbackModels ?? [])];
 
   for (const model of candidates) {
     const limit = DEFAULT_BUDGET[model] ?? 50;
-    if ((budget.used[model] ?? 0) >= limit) {
+    if ((c.budget.used[model] ?? 0) >= limit) {
       console.warn(`[llm] ${model} budget exhausted (${limit}/day)`);
       continue;
     }
@@ -171,16 +193,16 @@ export async function callLlm(opts: LlmCallOptions): Promise<string | null> {
       opts.maxTokens ?? 1024
     );
 
-    recordUsage(budget, model);
+    c.budget.used[model] = (c.budget.used[model] ?? 0) + 1;
+    c.dirty = true;
 
     if (output) {
       stats.misses++;
-      cache[cacheKey] = {
+      c.cache[cacheKey] = {
         output,
         model,
         cachedAt: new Date().toISOString(),
       };
-      saveJson(CACHE_PATH, cache);
       return output;
     }
   }
