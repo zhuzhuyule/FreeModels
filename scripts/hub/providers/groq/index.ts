@@ -1,149 +1,153 @@
-import type { RawModelData, ProviderPlugin } from '../../types.js';
+import type { RawModelData, ProviderPlugin, FreeQuota } from '../../types.js';
 
-const PRICING_PAGE = 'https://groq.com/pricing';
+const API_BASE = 'https://api.groq.com/openai/v1';
 
-interface GroqModel {
-  modelId: string;
-  name: string;
-  contextSize?: number;
-  inputPrice?: number;
-  outputPrice?: number;
-  speed?: number;
-  capabilities: string[];
-  isFree?: boolean;
-}
-
-const MODEL_DATA: Record<string, Omit<GroqModel, 'modelId' | 'name' | 'capabilities'>> = {
-  'llama-3.1-8b-instant': {
-    contextSize: 128000,
-    inputPrice: 0.05,
-    outputPrice: 0.08,
-    speed: 840,
-  },
-  'llama-3.3-70b-versatile': {
-    contextSize: 128000,
-    inputPrice: 0.59,
-    outputPrice: 0.79,
-    speed: 394,
-  },
-  'meta-llama/llama-4-scout-17b-16e-instruct': {
-    contextSize: 128000,
-    inputPrice: 0.11,
-    outputPrice: 0.34,
-    speed: 594,
-  },
-  'qwen/qwen3-32b': {
-    contextSize: 131000,
-    inputPrice: 0.29,
-    outputPrice: 0.59,
-    speed: 662,
-  },
-  'openai/gpt-oss-20b': {
-    contextSize: 128000,
-    inputPrice: 0.075,
-    outputPrice: 0.30,
-    speed: 1000,
-  },
-  'openai/gpt-oss-120b': {
-    contextSize: 128000,
-    inputPrice: 0.15,
-    outputPrice: 0.60,
-    speed: 500,
-  },
-  'canopylabs/orpheus-v1-english': {
-    inputPrice: 22,
-    speed: 100,
-  },
-  'canopylabs/orpheus-arabic-saudi': {
-    inputPrice: 40,
-    speed: 100,
-  },
-  'whisper-large-v3': {
-    inputPrice: 0.111,
-    speed: 217,
-  },
-  'whisper-large-v3-turbo': {
-    inputPrice: 0.04,
-    speed: 228,
-  },
-  'minimax-m2.5': {
-    inputPrice: 0,
-    outputPrice: 0,
-    isFree: false,
-  },
-  'qwen/qwen3-vl-32b': {
-    inputPrice: 0,
-    outputPrice: 0,
-    isFree: false,
-  },
+// 价格表 (USD per 1M tokens) - Groq API 不返回价格, 手工维护. 不在表里的留 undefined.
+const PRICE_TABLE: Record<string, { input?: number; output?: number; speed?: number }> = {
+  'llama-3.1-8b-instant': { input: 0.05, output: 0.08, speed: 840 },
+  'llama-3.3-70b-versatile': { input: 0.59, output: 0.79, speed: 394 },
+  'meta-llama/llama-4-scout-17b-16e-instruct': { input: 0.11, output: 0.34, speed: 594 },
+  'qwen/qwen3-32b': { input: 0.29, output: 0.59, speed: 662 },
+  'openai/gpt-oss-20b': { input: 0.075, output: 0.30, speed: 1000 },
+  'openai/gpt-oss-120b': { input: 0.15, output: 0.60, speed: 500 },
+  'openai/gpt-oss-safeguard-20b': { input: 0.075, output: 0.30 },
+  'canopylabs/orpheus-v1-english': { input: 22, speed: 100 },
+  'canopylabs/orpheus-arabic-saudi': { input: 40, speed: 100 },
+  'whisper-large-v3': { input: 0.111, speed: 217 },
+  'whisper-large-v3-turbo': { input: 0.04, speed: 228 },
+  'allam-2-7b': {},
+  'groq/compound': {},
+  'groq/compound-mini': {},
 };
 
-const CAPABILITY_MAP: Record<string, string[]> = {
-  'llama-3.1-8b-instant': ['chat', 'text-generation'],
-  'llama-3.3-70b-versatile': ['chat', 'text-generation'],
-  'meta-llama/llama-4-scout-17b-16e-instruct': ['chat', 'text-generation'],
+const CAPABILITY_OVERRIDES: Record<string, string[]> = {
   'qwen/qwen3-32b': ['chat', 'text-generation', 'reasoning'],
-  'openai/gpt-oss-20b': ['chat', 'text-generation'],
-  'openai/gpt-oss-120b': ['chat', 'text-generation'],
   'canopylabs/orpheus-v1-english': ['speech-synthesis'],
   'canopylabs/orpheus-arabic-saudi': ['speech-synthesis', 'translation'],
   'whisper-large-v3': ['speech-recognition'],
   'whisper-large-v3-turbo': ['speech-recognition'],
-  'minimax-m2.5': ['chat', 'text-generation'],
-  'qwen/qwen3-vl-32b': ['chat', 'text-generation', 'vision'],
+  'meta-llama/llama-prompt-guard-2-22m': ['moderation'],
+  'meta-llama/llama-prompt-guard-2-86m': ['moderation'],
 };
 
-function getDisplayName(modelId: string): string {
-  const names: Record<string, string> = {
-    'llama-3.1-8b-instant': 'Llama 3.1 8B Instant',
-    'llama-3.3-70b-versatile': 'Llama 3.3 70B Versatile',
-    'meta-llama/llama-4-scout-17b-16e-instruct': 'Llama 4 Scout (17Bx16E)',
-    'qwen/qwen3-32b': 'Qwen3 32B',
-    'openai/gpt-oss-20b': 'GPT OSS 20B',
-    'openai/gpt-oss-120b': 'GPT OSS 120B',
-    'canopylabs/orpheus-v1-english': 'Orpheus English TTS',
-    'canopylabs/orpheus-arabic-saudi': 'Orpheus Arabic Saudi TTS',
-    'whisper-large-v3': 'Whisper V3 Large',
-    'whisper-large-v3-turbo': 'Whisper Large v3 Turbo',
-    'minimax-m2.5': 'Minimax M2.5',
-    'qwen/qwen3-vl-32b': 'Qwen3-VL 32B',
-  };
-  return names[modelId] || modelId;
+interface GroqApiModel {
+  id: string;
+  owned_by?: string;
+  active?: boolean;
+  context_window?: number;
+  max_completion_tokens?: number;
+}
+
+function detectCapabilities(id: string): string[] {
+  if (CAPABILITY_OVERRIDES[id]) return CAPABILITY_OVERRIDES[id];
+  if (id.includes('whisper')) return ['speech-recognition'];
+  if (id.includes('orpheus') || id.includes('tts')) return ['speech-synthesis'];
+  if (id.includes('prompt-guard') || id.includes('guard')) return ['moderation'];
+  return ['chat', 'text-generation'];
+}
+
+async function fetchModelList(apiKey: string): Promise<GroqApiModel[]> {
+  const res = await fetch(`${API_BASE}/models`, {
+    headers: { Authorization: `Bearer ${apiKey}` },
+  });
+  if (!res.ok) {
+    console.warn(`[groq] /models responded with ${res.status}`);
+    return [];
+  }
+  const json = (await res.json()) as { data?: GroqApiModel[] };
+  return (json.data ?? []).filter(m => m.active !== false);
+}
+
+async function fetchRateLimits(modelId: string, apiKey: string): Promise<FreeQuota | null> {
+  // 跳过 whisper/tts/guard 类: chat/completions 端点不接受这些模型.
+  if (modelId.includes('whisper') || modelId.includes('orpheus') || modelId.includes('guard') || modelId.includes('tts')) {
+    return null;
+  }
+
+  try {
+    const res = await fetch(`${API_BASE}/chat/completions`, {
+      method: 'POST',
+      headers: { Authorization: `Bearer ${apiKey}`, 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        model: modelId,
+        messages: [{ role: 'user', content: 'Hi' }],
+        max_tokens: 1,
+        stream: true,
+      }),
+    });
+    // 立刻 cancel body 避免读完, 我们只要 header.
+    await res.body?.cancel();
+    if (!res.ok) return null;
+
+    const rpd = res.headers.get('x-ratelimit-limit-requests');
+    const tpm = res.headers.get('x-ratelimit-limit-tokens');
+    const quota: FreeQuota = {};
+    if (rpd) quota.rpd = parseInt(rpd, 10);
+    if (tpm) quota.tpm = parseInt(tpm, 10);
+    return Object.keys(quota).length > 0 ? quota : null;
+  } catch (err) {
+    console.warn(`[groq] rate-limit probe failed for ${modelId}: ${err instanceof Error ? err.message : err}`);
+    return null;
+  }
+}
+
+async function withConcurrency<T, R>(items: T[], limit: number, fn: (item: T) => Promise<R>): Promise<R[]> {
+  const results: R[] = new Array(items.length);
+  let cursor = 0;
+  async function worker(): Promise<void> {
+    while (true) {
+      const idx = cursor++;
+      if (idx >= items.length) return;
+      results[idx] = await fn(items[idx]);
+    }
+  }
+  await Promise.all(Array.from({ length: Math.min(limit, items.length) }, () => worker()));
+  return results;
 }
 
 async function fetchGroqModels(): Promise<RawModelData[]> {
-  console.log('[groq] Parsing models from pricing page...');
+  const apiKey = process.env.GROQ_API_KEY;
+  if (!apiKey) {
+    console.warn('[groq] GROQ_API_KEY missing, skipping.');
+    return [];
+  }
+
+  const apiModels = await fetchModelList(apiKey);
+  console.log(`[groq] Discovered ${apiModels.length} active models via /v1/models`);
+
+  // 并发 5 个探 rate-limit header.
+  const quotas = await withConcurrency(apiModels, 5, m => fetchRateLimits(m.id, apiKey));
 
   const models: RawModelData[] = [];
-
-  for (const [modelId, baseData] of Object.entries(MODEL_DATA)) {
-    const displayName = getDisplayName(modelId);
-    const capabilities = CAPABILITY_MAP[modelId] || ['chat', 'text-generation'];
-    const isEnterprise = modelId === 'minimax-m2.5' || modelId === 'qwen/qwen3-vl-32b';
+  for (let i = 0; i < apiModels.length; i++) {
+    const m = apiModels[i];
+    const price = PRICE_TABLE[m.id] ?? {};
+    const quota = quotas[i] ?? undefined;
 
     models.push({
       vendor: 'groq',
-      modelId: `groq/${modelId}`,
-      name: displayName,
-      description: `Groq ${isEnterprise ? 'Enterprise ' : ''}model: ${displayName}${baseData.speed ? ` - ${baseData.speed} tokens/sec` : ''}`,
-      contextSize: baseData.contextSize,
-      priceInput: baseData.inputPrice,
-      priceOutput: baseData.outputPrice,
+      modelId: `groq/${m.id}`,
+      name: m.id,
+      contextSize: m.context_window,
+      priceInput: price.input,
+      priceOutput: price.output,
       priceCurrency: 'USD',
-      isFree: baseData.isFree ?? false,
-      freeMechanism: baseData.isFree ? 'rate-limited' : null,
-      trialScope: baseData.isFree ? 'specific' : 'none',
-      capabilities,
+      // Groq 全部模型都在免费层内可用, 按 rate-limit 限流.
+      isFree: true,
+      freeMechanism: 'rate-limited',
+      freeQuota: quota ?? { notes: 'Rate-limited free tier' },
+      trialScope: 'all',
+      capabilities: detectCapabilities(m.id),
       metadata: {
-        originalId: modelId,
-        speed: baseData.speed,
-        isEnterprise,
-        provider: 'groq',
+        originalId: m.id,
+        owner: m.owned_by,
+        speed: price.speed,
+        maxCompletionTokens: m.max_completion_tokens,
       },
     });
   }
 
-  console.log(`[groq] Parsed ${models.length} models from pricing page`);
+  console.log(`[groq] Built ${models.length} models with rate-limit data`);
   return models;
 }
 
