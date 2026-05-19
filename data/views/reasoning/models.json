@@ -1,15 +1,15 @@
 {
   "object": "list",
   "view": "reasoning",
-  "updated_at": "2026-05-18T06:17:27.508Z",
-  "total": 56,
+  "updated_at": "2026-05-19T04:54:24.169Z",
+  "total": 85,
   "filters": {
     "tags": "reasoning"
   },
   "data": [
     {
       "id": "bigmodel/glm-4.1v-thinking-flash",
-      "created": 1779084991,
+      "created": 1837044177,
       "provider": "bigmodel",
       "name": "GLM-4.1V-Thinking-Flash",
       "description": "GLM-4.1V-Thinking-Flash 是智谱推出的免费视觉推理模型。它在图表/视频理解、前端 Coding、GUI 任务等场景表现出色，核心能力达到全面新 SOTA。模型引入思维链推理机制，显著提升了复杂场景中的回答精准度与可解释性。",
@@ -59,7 +59,7 @@
     },
     {
       "id": "bigmodel/glm-4v-plus-0111",
-      "created": 1779084992,
+      "created": 276374161,
       "provider": "bigmodel",
       "name": "GLM-4V-Plus-0111",
       "description": "视觉推理",
@@ -108,7 +108,7 @@
     },
     {
       "id": "bigmodel/chatglm3-6b",
-      "created": 1779084993,
+      "created": 123049937,
       "provider": "bigmodel",
       "name": "ChatGLM3-6B",
       "description": "模型推理",
@@ -151,7 +151,7 @@
     },
     {
       "id": "bigmodel/glm-z1-air",
-      "created": 1779084994,
+      "created": 1068850520,
       "provider": "bigmodel",
       "name": "GLM-Z1-Air",
       "description": "文本模型",
@@ -193,7 +193,7 @@
     },
     {
       "id": "bigmodel/glm-z1-airx",
-      "created": 1779084995,
+      "created": 912328912,
       "provider": "bigmodel",
       "name": "GLM-Z1-AirX",
       "description": "文本模型",
@@ -235,7 +235,7 @@
     },
     {
       "id": "bigmodel/glm-z1-flashx",
-      "created": 1779084996,
+      "created": 1587361698,
       "provider": "bigmodel",
       "name": "GLM-Z1-FlashX",
       "description": "文本模型",
@@ -277,7 +277,7 @@
     },
     {
       "id": "bigmodel/glm-z1-flash",
-      "created": 1779084997,
+      "created": 48101866,
       "provider": "bigmodel",
       "name": "GLM-Z1-Flash",
       "description": "推理模型",
@@ -321,7 +321,7 @@
     },
     {
       "id": "bigmodel/glm-ocr",
-      "created": 1779084998,
+      "created": 1873159208,
       "provider": "bigmodel",
       "name": "GLM-OCR",
       "description": "视觉推理",
@@ -368,7 +368,7 @@
     },
     {
       "id": "bigmodel/glm-4.1v-thinking-flashx",
-      "created": 1779084999,
+      "created": 492915817,
       "provider": "bigmodel",
       "name": "GLM-4.1V-Thinking-FlashX",
       "description": "视觉推理",
@@ -416,7 +416,7 @@
     },
     {
       "id": "bigmodel/glm-4.6v-flash",
-      "created": 1779085000,
+      "created": 1161885709,
       "provider": "bigmodel",
       "name": "GLM-4.6V-Flash",
       "description": "GLM-4.6V-Flash 是 GLM-4.6V 的免费版本，是 GLM 系列在多模态方向上的一次重要迭代，支持开启或关闭思考模式。它将训练时上下文窗口提升到128k tokens，在 视觉理解精度上达到同参数规模 SOTA，并首次在模型架构中将 Function Call（工具调用）能力原生融入视觉模型，打通从「视觉感知」到「可执行行动（Action）」的链路，为真实业务场景中的多模态 Agent 提供统一的技术底座。",
@@ -471,7 +471,7 @@
     },
     {
       "id": "bigmodel/glm-4.7-flash",
-      "created": 1779085001,
+      "created": 1010454616,
       "provider": "bigmodel",
       "name": "GLM-4.7-Flash",
       "description": "GLM-4.7-Flash 作为 30B 级 SOTA 模型，提供了一个兼顾性能与效率的新选择。面向 Agentic Coding 场景强化了编码能力、长程任务规划与工具协同，并在多个公开基准的当期榜单中取得同尺寸开源模型中的出色表现。在执行复杂智能体任务，在工具调用时指令遵循更强，Artifacts 与 Agentic Coding 的前端美感和长程任务完成效率进一步提升。",
@@ -522,7 +522,7 @@
     },
     {
       "id": "cerebras/qwen-3-235b-a22b-instruct-2507",
-      "created": 1779085002,
+      "created": 445270153,
       "provider": "cerebras",
       "name": "Qwen 3 235B Instruct",
       "description": "Cerebras Preview model: Qwen 3 235B Instruct - 235B parameters - 1400 tokens/sec",
@@ -539,7 +539,7 @@
         "chat",
         "reasoning"
       ],
-      "is_reasoning": false,
+      "is_reasoning": true,
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "preview",
@@ -565,8 +565,647 @@
       "estimated_latency": "< 1s"
     },
     {
+      "id": "cloudflare/@cf/openai/gpt-oss-120b",
+      "created": 1887065703,
+      "provider": "cloudflare",
+      "name": "@cf/openai/gpt-oss-120b",
+      "description": "OpenAI’s open-weight models designed for powerful reasoning, agentic tasks, and versatile developer use cases – gpt-oss-120b is for production, general purpose, high reasoning use-cases.",
+      "context_size": 128000,
+      "context_label": "128K",
+      "price_input": 0.35,
+      "price_output": 0.75,
+      "is_free": true,
+      "capabilities": [
+        "text-generation",
+        "function-calling",
+        "reasoning"
+      ],
+      "tags": [
+        "reasoning",
+        "text-generation",
+        "function-calling"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+      },
+      "trial_scope": "all",
+      "model_family": "@cf-openai-gpt-oss-120b",
+      "aliases": [],
+      "parameter_count": 120000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "cloudflare/@cf/meta/llama-3-8b-instruct",
+      "created": 687720006,
+      "provider": "cloudflare",
+      "name": "@cf/meta/llama-3-8b-instruct",
+      "description": "Generation over generation, Meta Llama 3 demonstrates state-of-the-art performance on a wide range of industry benchmarks and offers new capabilities, including improved reasoning.",
+      "context_size": 7968,
+      "context_label": "8K",
+      "price_input": 0.282,
+      "price_output": 0.827,
+      "is_free": true,
+      "capabilities": [
+        "text-generation"
+      ],
+      "tags": [
+        "reasoning",
+        "text-generation"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+      },
+      "trial_scope": "all",
+      "model_family": "@cf-meta-llama-3-8b",
+      "model_variant": "instruct",
+      "aliases": [
+        "cloudflare/@cf/meta/llama-3-8b-instruct-awq"
+      ],
+      "parameter_count": 8000000000,
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "cloudflare/@cf/moonshotai/kimi-k2.5",
+      "created": 1273849036,
+      "provider": "cloudflare",
+      "name": "@cf/moonshotai/kimi-k2.5",
+      "description": "Kimi K2.5 is a frontier-scale open-source model with a 256k context window, multi-turn tool calling, vision inputs, and structured outputs for agentic workloads.",
+      "context_size": 256000,
+      "context_label": "256K",
+      "price_input": 0.1,
+      "price_output": 3,
+      "is_free": true,
+      "capabilities": [
+        "text-generation",
+        "function-calling",
+        "reasoning"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "tool-use",
+        "function-calling",
+        "reasoning",
+        "multimodal"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": true,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+      },
+      "trial_scope": "all",
+      "model_family": "@cf-moonshotai-kimi-k2.5",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "cloudflare/@cf/deepseek-ai/deepseek-r1-distill-qwen-32b",
+      "created": 1445310573,
+      "provider": "cloudflare",
+      "name": "@cf/deepseek-ai/deepseek-r1-distill-qwen-32b",
+      "description": "DeepSeek-R1-Distill-Qwen-32B is a model distilled from DeepSeek-R1 based on Qwen2.5. It outperforms OpenAI-o1-mini across various benchmarks, achieving new state-of-the-art results for dense models.",
+      "context_size": 80000,
+      "context_label": "80K",
+      "price_input": 0.497,
+      "price_output": 4.881,
+      "is_free": true,
+      "capabilities": [
+        "text-generation",
+        "reasoning"
+      ],
+      "tags": [
+        "reasoning",
+        "text-generation"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+      },
+      "trial_scope": "all",
+      "model_family": "@cf-deepseek-ai-deepseek-r1-distill-qwen-32b",
+      "model_variant": "r1",
+      "aliases": [],
+      "parameter_count": 32000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "cloudflare/@cf/moonshotai/kimi-k2.6",
+      "created": 1273849035,
+      "provider": "cloudflare",
+      "name": "@cf/moonshotai/kimi-k2.6",
+      "description": "Kimi K2.6 is a frontier-scale open-source 1T parameter model with a 262.1k context window, multi-turn tool calling, vision inputs, and structured outputs for agentic workloads.",
+      "context_size": 262144,
+      "context_label": "262K",
+      "price_input": 0.16,
+      "price_output": 4,
+      "is_free": true,
+      "capabilities": [
+        "text-generation",
+        "function-calling",
+        "reasoning"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "tool-use",
+        "function-calling",
+        "reasoning",
+        "multimodal"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": true,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+      },
+      "trial_scope": "all",
+      "model_family": "@cf-moonshotai-kimi-k2.6",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "cloudflare/@cf/zai-org/glm-4.7-flash",
+      "created": 590789846,
+      "provider": "cloudflare",
+      "name": "@cf/zai-org/glm-4.7-flash",
+      "description": "GLM-4.7-Flash is a fast and efficient multilingual text generation model with a 131,072 token context window. Optimized for dialogue, instruction-following, and multi-turn tool calling across 100+ languages.",
+      "context_size": 131072,
+      "context_label": "131K",
+      "price_input": 0.0605,
+      "price_output": 0.4,
+      "is_free": true,
+      "capabilities": [
+        "text-generation",
+        "function-calling",
+        "reasoning"
+      ],
+      "tags": [
+        "text-generation",
+        "tool-use",
+        "function-calling",
+        "reasoning"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+      },
+      "trial_scope": "all",
+      "model_family": "@cf-zai-org-glm-4.7-flash",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "cloudflare/@cf/nvidia/nemotron-3-120b-a12b",
+      "created": 1408041182,
+      "provider": "cloudflare",
+      "name": "@cf/nvidia/nemotron-3-120b-a12b",
+      "description": "NVIDIA Nemotron 3 Super is a hybrid MoE model with leading accuracy for multi-agent applications and specialized agentic AI systems.",
+      "context_size": 256000,
+      "context_label": "256K",
+      "price_input": 0.5,
+      "price_output": 1.5,
+      "is_free": true,
+      "capabilities": [
+        "text-generation",
+        "function-calling",
+        "reasoning"
+      ],
+      "tags": [
+        "text-generation",
+        "function-calling",
+        "reasoning"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+      },
+      "trial_scope": "all",
+      "model_family": "@cf-nvidia-nemotron-3-120b-a12b",
+      "aliases": [],
+      "parameter_count": 120000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "cloudflare/@cf/qwen/qwen3-30b-a3b-fp8",
+      "created": 1418141003,
+      "provider": "cloudflare",
+      "name": "@cf/qwen/qwen3-30b-a3b-fp8",
+      "description": "Qwen3 is the latest generation of large language models in Qwen series, offering a comprehensive suite of dense and mixture-of-experts (MoE) models. Built upon extensive training, Qwen3 delivers groundbreaking advancements in reasoning, instruction-following, agent capabilities, and multilingual support.",
+      "context_size": 32768,
+      "context_label": "33K",
+      "price_input": 0.0509,
+      "price_output": 0.335,
+      "is_free": true,
+      "capabilities": [
+        "text-generation",
+        "function-calling",
+        "reasoning"
+      ],
+      "tags": [
+        "reasoning",
+        "text-generation",
+        "function-calling"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+      },
+      "trial_scope": "all",
+      "model_family": "@cf-qwen-qwen3-30b-a3b",
+      "quantization": "fp8",
+      "aliases": [],
+      "parameter_count": 30000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "cloudflare/@cf/google/gemma-4-26b-a4b-it",
+      "created": 1485938918,
+      "provider": "cloudflare",
+      "name": "@cf/google/gemma-4-26b-a4b-it",
+      "description": "Gemma 4 is Google's most intelligent family of open models, built from Gemini 3 research to maximize intelligence-per-parameter.",
+      "context_size": 256000,
+      "context_label": "256K",
+      "price_input": 0.1,
+      "price_output": 0.3,
+      "is_free": true,
+      "capabilities": [
+        "text-generation",
+        "function-calling",
+        "reasoning"
+      ],
+      "tags": [
+        "text-generation",
+        "function-calling",
+        "reasoning"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+      },
+      "trial_scope": "all",
+      "model_family": "@cf-google-gemma-4-26b-a4b",
+      "model_variant": "it",
+      "aliases": [],
+      "parameter_count": 26000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "cloudflare/@cf/meta/llama-3.2-11b-vision-instruct",
+      "created": 1402530999,
+      "provider": "cloudflare",
+      "name": "@cf/meta/llama-3.2-11b-vision-instruct",
+      "description": " The Llama 3.2-Vision instruction-tuned models are optimized for visual recognition, image reasoning, captioning, and answering general questions about an image.",
+      "context_size": 128000,
+      "context_label": "128K",
+      "price_input": 0.0485,
+      "price_output": 0.676,
+      "is_free": true,
+      "capabilities": [
+        "text-generation"
+      ],
+      "tags": [
+        "reasoning",
+        "vision",
+        "text-generation",
+        "multimodal"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+      },
+      "trial_scope": "all",
+      "model_family": "@cf-meta-llama-3.2-11b-vision",
+      "model_variant": "vision",
+      "aliases": [],
+      "parameter_count": 11000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "cloudflare/@cf/openai/gpt-oss-20b",
+      "created": 1244320362,
+      "provider": "cloudflare",
+      "name": "@cf/openai/gpt-oss-20b",
+      "description": "OpenAI’s open-weight models designed for powerful reasoning, agentic tasks, and versatile developer use cases – gpt-oss-20b is for lower latency, and local or specialized use-cases.",
+      "context_size": 128000,
+      "context_label": "128K",
+      "price_input": 0.2,
+      "price_output": 0.3,
+      "is_free": true,
+      "capabilities": [
+        "text-generation",
+        "function-calling",
+        "reasoning"
+      ],
+      "tags": [
+        "reasoning",
+        "text-generation",
+        "function-calling"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+      },
+      "trial_scope": "all",
+      "model_family": "@cf-openai-gpt-oss-20b",
+      "aliases": [],
+      "parameter_count": 20000000000,
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "cloudflare/@cf/google/gemma-3-12b-it",
+      "created": 483040028,
+      "provider": "cloudflare",
+      "name": "@cf/google/gemma-3-12b-it",
+      "description": "Gemma 3 models are well-suited for a variety of text generation and image understanding tasks, including question answering, summarization, and reasoning. Gemma 3 models are multimodal, handling text and image input and generating text output, with a large, 128K context window, multilingual support in over 140 languages, and is available in more sizes than previous versions.",
+      "context_size": 80000,
+      "context_label": "80K",
+      "price_input": 0.345,
+      "price_output": 0.556,
+      "is_free": true,
+      "capabilities": [
+        "text-generation"
+      ],
+      "tags": [
+        "reasoning",
+        "vision",
+        "text-generation",
+        "multimodal"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+      },
+      "trial_scope": "all",
+      "model_family": "@cf-google-gemma-3-12b",
+      "model_variant": "it",
+      "aliases": [],
+      "parameter_count": 12000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "cloudflare/@cf/qwen/qwq-32b",
+      "created": 569336420,
+      "provider": "cloudflare",
+      "name": "@cf/qwen/qwq-32b",
+      "description": "QwQ is the reasoning model of the Qwen series. Compared with conventional instruction-tuned models, QwQ, which is capable of thinking and reasoning, can achieve significantly enhanced performance in downstream tasks, especially hard problems. QwQ-32B is the medium-sized reasoning model, which is capable of achieving competitive performance against state-of-the-art reasoning models, e.g., DeepSeek-R1, o1-mini.",
+      "context_size": 24000,
+      "context_label": "24K",
+      "price_input": 0.66,
+      "price_output": 1,
+      "is_free": true,
+      "capabilities": [
+        "text-generation",
+        "reasoning"
+      ],
+      "tags": [
+        "reasoning",
+        "text-generation"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+      },
+      "trial_scope": "all",
+      "model_family": "@cf-qwen-qwq-32b",
+      "aliases": [],
+      "parameter_count": 32000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "cohere/command-a-reasoning-08-2025",
+      "created": 1261656011,
+      "provider": "cohere",
+      "name": "command-a-reasoning-08-2025",
+      "context_size": 288768,
+      "context_label": "289K",
+      "is_free": true,
+      "capabilities": [
+        "chat"
+      ],
+      "tags": [
+        "reasoning",
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "notes": "1000 requests/month shared across all models on trial key"
+      },
+      "trial_scope": "all",
+      "model_family": "command-a-reasoning-08",
+      "model_variant": "reasoning",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
       "id": "DeepSeek-R1-Distill-Qwen-32B",
-      "created": 1779085003,
+      "created": 1505787943,
       "provider": "gitee",
       "name": "DeepSeek-R1-Distill-Qwen-32B",
       "description": "DeepSeek-R1 系列通过强化学习与冷启动数据优化推理性能，开源模型刷新多任务标杆，超越 OpenAI-o1-mini 水平。",
@@ -576,8 +1215,7 @@
       "price_output": 1.26,
       "is_free": false,
       "capabilities": [
-        "text-generation",
-        "reasoning"
+        "text-generation"
       ],
       "tags": [
         "reasoning",
@@ -610,7 +1248,7 @@
     },
     {
       "id": "DeepSeek-R1-Distill-Qwen-1.5B",
-      "created": 1779085004,
+      "created": 1848528840,
       "provider": "gitee",
       "name": "DeepSeek-R1-Distill-Qwen-1.5B",
       "description": "基于 Qwen2.5-Math-1.5B 的 DeepSeek-R1 蒸馏模型，通过强化学习与冷启动数据优化推理性能，开源模型刷新多任务标杆。",
@@ -620,8 +1258,7 @@
       "price_output": 0,
       "is_free": true,
       "capabilities": [
-        "text-generation",
-        "reasoning"
+        "text-generation"
       ],
       "tags": [
         "reasoning",
@@ -652,7 +1289,7 @@
     },
     {
       "id": "DeepSeek-R1-Distill-Qwen-14B",
-      "created": 1779085005,
+      "created": 1505790055,
       "provider": "gitee",
       "name": "DeepSeek-R1-Distill-Qwen-14B",
       "description": "基于 Qwen2.5-14B 的 DeepSeek-R1 蒸馏模型，通过强化学习与冷启动数据优化推理性能，开源模型刷新多任务标杆。",
@@ -662,8 +1299,7 @@
       "price_output": 0,
       "is_free": true,
       "capabilities": [
-        "text-generation",
-        "reasoning"
+        "text-generation"
       ],
       "tags": [
         "reasoning",
@@ -694,7 +1330,7 @@
     },
     {
       "id": "DeepSeek-R1-Distill-Qwen-7B",
-      "created": 1779085006,
+      "created": 1477285557,
       "provider": "gitee",
       "name": "DeepSeek-R1-Distill-Qwen-7B",
       "description": "基于 Qwen2.5-Math-7B 的 DeepSeek-R1 蒸馏模型，通过强化学习与冷启动数据优化推理性能，开源模型刷新多任务标杆。",
@@ -704,8 +1340,7 @@
       "price_output": 0,
       "is_free": true,
       "capabilities": [
-        "text-generation",
-        "reasoning"
+        "text-generation"
       ],
       "tags": [
         "reasoning",
@@ -736,7 +1371,7 @@
     },
     {
       "id": "DeepSeek-R1",
-      "created": 1779085007,
+      "created": 708100795,
       "provider": "gitee",
       "name": "DeepSeek-R1",
       "description": "DeepSeek-R1 是一款采用强化学习技术的推理模型，凭借少量标注数据大幅提升推理能力，性能媲美 OpenAI o1。",
@@ -746,8 +1381,7 @@
       "price_output": 16,
       "is_free": false,
       "capabilities": [
-        "text-generation",
-        "reasoning"
+        "text-generation"
       ],
       "tags": [
         "reasoning",
@@ -762,6 +1396,8 @@
       "model_family": "deepseek-r1",
       "model_variant": "r1",
       "aliases": [
+        "github/DeepSeek-R1-0528",
+        "github/DeepSeek-R1",
         "xingchen/xdeepseekr1"
       ],
       "tier": "large",
@@ -779,7 +1415,7 @@
     },
     {
       "id": "Fin-R1",
-      "created": 1779085008,
+      "created": 1294906990,
       "provider": "gitee",
       "name": "Fin-R1 金融大模型",
       "description": "Fin-R1 是一款针对金融领域复杂推理的大型语言模型，由上海财经大学统计与数据科学学院张立文教授与其领衔的金融大语言模型课题组（SUFE-AIFLM-Lab）联合财跃星辰研发并开源发布。",
@@ -789,8 +1425,7 @@
       "price_output": 8,
       "is_free": false,
       "capabilities": [
-        "text-generation",
-        "reasoning"
+        "text-generation"
       ],
       "tags": [
         "reasoning",
@@ -820,7 +1455,7 @@
     },
     {
       "id": "DianJin-R1-32B",
-      "created": 1779085009,
+      "created": 223205722,
       "provider": "gitee",
       "name": "DianJin 金融大模型",
       "description": "DianJin-R1-32B 是一款拥有 32B 参数、专为金融场景优化的大语言模型，具备强大的金融问答和多步推理能力，能生成结构化答案并在多个金融基准测试中表现优异。",
@@ -830,8 +1465,7 @@
       "price_output": 8,
       "is_free": false,
       "capabilities": [
-        "text-generation",
-        "reasoning"
+        "text-generation"
       ],
       "tags": [
         "reasoning",
@@ -861,7 +1495,7 @@
     },
     {
       "id": "Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled",
-      "created": 1779085010,
+      "created": 364348000,
       "provider": "gitee",
       "name": "Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled",
       "description": "基于 Qwen3.5-27B 深度蒸馏 Claude-4.6 Opus 推理能力的高性能模型，擅长结构化思考与复杂问题分解，兼顾推理深度与效率。",
@@ -871,8 +1505,7 @@
       "price_output": 4.8,
       "is_free": false,
       "capabilities": [
-        "text-generation",
-        "reasoning"
+        "text-generation"
       ],
       "tags": [
         "reasoning",
@@ -902,8 +1535,659 @@
       "estimated_latency": "3-10s"
     },
     {
+      "id": "github/Phi-4-reasoning",
+      "created": 1293811252,
+      "provider": "github",
+      "name": "Phi-4-reasoning",
+      "description": "State-of-the-art open-weight reasoning model.",
+      "context_size": 32768,
+      "context_label": "33K",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "reasoning",
+        "text-generation",
+        "chat"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
+      },
+      "trial_scope": "all",
+      "model_family": "phi-4-reasoning",
+      "model_variant": "reasoning",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "github/Phi-4-mini-reasoning",
+      "created": 1364244698,
+      "provider": "github",
+      "name": "Phi-4-mini-reasoning",
+      "description": "Lightweight math reasoning model optimized for multi-step problem solving",
+      "context_size": 128000,
+      "context_label": "128K",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "reasoning",
+        "text-generation",
+        "chat"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
+      },
+      "trial_scope": "all",
+      "model_family": "phi-4-mini-reasoning",
+      "model_variant": "reasoning",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "github/Phi-4-mini-instruct",
+      "created": 821970876,
+      "provider": "github",
+      "name": "Phi-4-mini-instruct",
+      "description": "3.8B parameters Small Language Model outperforming larger models in reasoning, math, coding, and function-calling",
+      "context_size": 128000,
+      "context_label": "128K",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "reasoning",
+        "text-generation",
+        "chat"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
+      },
+      "trial_scope": "all",
+      "model_family": "phi-4-mini",
+      "model_variant": "instruct",
+      "aliases": [
+        "microsoft/phi-4-mini-instruct"
+      ],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "github/o1-preview",
+      "created": 1871391782,
+      "provider": "github",
+      "name": "OpenAI o1-preview",
+      "description": "Focused on advanced reasoning and solving complex problems, including math and science tasks. Ideal for applications that require deep contextual understanding and agentic workflows.",
+      "context_size": 128000,
+      "context_label": "128K",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "reasoning",
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
+      },
+      "trial_scope": "all",
+      "model_family": "o1-preview",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "github/o1",
+      "created": 1817828937,
+      "provider": "github",
+      "name": "OpenAI o1",
+      "description": "Focused on advanced reasoning and solving complex problems, including math and science tasks. Ideal for applications that require deep contextual understanding and agentic workflows.",
+      "context_size": 200000,
+      "context_label": "200K",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "reasoning",
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
+      },
+      "trial_scope": "all",
+      "model_family": "github-o1",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "github/MAI-DS-R1",
+      "created": 1229766914,
+      "provider": "github",
+      "name": "MAI-DS-R1",
+      "description": "MAI-DS-R1 is a DeepSeek-R1 reasoning model that has been post-trained by the Microsoft AI team to fill in information gaps in the previous version of the model and improve its harm protections while maintaining R1 reasoning capabilities.",
+      "context_size": 128000,
+      "context_label": "128K",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "reasoning",
+        "text-generation",
+        "chat"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
+      },
+      "trial_scope": "all",
+      "model_family": "mai-ds-r1",
+      "model_variant": "r1",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "github/Llama-3-3-70B-Instruct",
+      "created": 1125580093,
+      "provider": "github",
+      "name": "Llama-3.3-70B-Instruct",
+      "description": "Llama 3.3 70B Instruct offers enhanced reasoning, math, and instruction following with performance comparable to Llama 3.1 405B.",
+      "context_size": 128000,
+      "context_label": "128K",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "reasoning",
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
+      },
+      "trial_scope": "all",
+      "model_family": "llama-3.3-70b",
+      "model_variant": "instruct",
+      "aliases": [
+        "groq/llama-3.3-70b-versatile",
+        "meta/llama-3.3-70b-instruct",
+        "sambanova/Meta-Llama-3.3-70B-Instruct"
+      ],
+      "parameter_count": 70000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "github/Llama-3-2-90B-Vision-Instruct",
+      "created": 595156925,
+      "provider": "github",
+      "name": "Llama-3.2-90B-Vision-Instruct",
+      "description": "Advanced image reasoning capabilities for visual understanding agentic apps.",
+      "context_size": 128000,
+      "context_label": "128K",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "reasoning",
+        "vision",
+        "chat",
+        "text-generation",
+        "multimodal"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
+      },
+      "trial_scope": "all",
+      "model_family": "llama-3.2-90b-vision",
+      "model_variant": "vision",
+      "aliases": [
+        "meta/llama-3.2-90b-vision-instruct"
+      ],
+      "parameter_count": 90000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "image-understanding",
+        "visual-q&a",
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "github/Llama-3-2-11B-Vision-Instruct",
+      "created": 1137283164,
+      "provider": "github",
+      "name": "Llama-3.2-11B-Vision-Instruct",
+      "description": "Excels in image reasoning capabilities on high-res images for visual understanding apps.",
+      "context_size": 128000,
+      "context_label": "128K",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "reasoning",
+        "vision",
+        "chat",
+        "text-generation",
+        "multimodal"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
+      },
+      "trial_scope": "all",
+      "model_family": "llama-3.2-11b-vision",
+      "model_variant": "vision",
+      "aliases": [
+        "meta/llama-3.2-11b-vision-instruct"
+      ],
+      "parameter_count": 11000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "image-understanding",
+        "visual-q&a",
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "github/Llama-4-Scout-17B-16E-Instruct",
+      "created": 1291378253,
+      "provider": "github",
+      "name": "Llama 4 Scout 17B 16E Instruct",
+      "description": "Llama 4 Scout 17B 16E Instruct is great at multi-document summarization, parsing extensive user activity for personalized tasks, and reasoning over vast codebases.",
+      "context_size": 10000000,
+      "context_label": "10M",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "reasoning",
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
+      },
+      "trial_scope": "all",
+      "model_family": "llama-4-scout-17b-16e",
+      "model_variant": "instruct",
+      "aliases": [
+        "groq/meta-llama/llama-4-scout-17b-16e-instruct"
+      ],
+      "parameter_count": 17000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "github/mistral-medium-2505",
+      "created": 1947813446,
+      "provider": "github",
+      "name": "Mistral Medium 3 (25.05)",
+      "description": "Mistral Medium 3 is an advanced Large Language Model (LLM) with state-of-the-art reasoning, knowledge, coding and vision capabilities.",
+      "context_size": 128000,
+      "context_label": "128K",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "reasoning",
+        "vision",
+        "text-generation",
+        "chat",
+        "multimodal"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
+      },
+      "trial_scope": "all",
+      "model_family": "mistral-medium-3-(25.05)",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "github/DeepSeek-V3-0324",
+      "created": 983049015,
+      "provider": "github",
+      "name": "DeepSeek-V3-0324",
+      "description": "DeepSeek-V3-0324 demonstrates notable improvements over its predecessor, DeepSeek-V3, in several key aspects, including enhanced reasoning, improved function calling, and superior code generation capabilities.",
+      "context_size": 128000,
+      "context_label": "128K",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "reasoning",
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
+      },
+      "trial_scope": "all",
+      "model_family": "deepseek-v3",
+      "aliases": [
+        "DeepSeek-V3",
+        "xingchen/xdeepseekv3"
+      ],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "github/DeepSeek-R1-0528",
+      "created": 1932222199,
+      "provider": "github",
+      "name": "DeepSeek-R1-0528",
+      "description": "The DeepSeek R1 0528 model has improved reasoning capabilities, this version also offers a reduced hallucination rate, enhanced support for function calling, and better experience for vibe coding.",
+      "context_size": 128000,
+      "context_label": "128K",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "reasoning",
+        "text-generation",
+        "chat"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
+      },
+      "trial_scope": "all",
+      "model_family": "deepseek-r1",
+      "model_variant": "r1",
+      "aliases": [
+        "DeepSeek-R1",
+        "github/DeepSeek-R1",
+        "xingchen/xdeepseekr1"
+      ],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "github/DeepSeek-R1",
+      "created": 197420051,
+      "provider": "github",
+      "name": "DeepSeek-R1",
+      "description": "DeepSeek-R1 excels at reasoning tasks using a step-by-step training process, such as language, scientific reasoning, and coding tasks.",
+      "context_size": 128000,
+      "context_label": "128K",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "reasoning",
+        "text-generation",
+        "chat"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
+      },
+      "trial_scope": "all",
+      "model_family": "deepseek-r1",
+      "model_variant": "r1",
+      "aliases": [
+        "DeepSeek-R1",
+        "github/DeepSeek-R1-0528",
+        "xingchen/xdeepseekr1"
+      ],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
       "id": "google/gemini-3.1-pro-preview",
-      "created": 1779085011,
+      "created": 363730922,
       "provider": "google",
       "name": "Gemini 3.1 Pro Preview",
       "description": "Google: 最新性能、智力和可用性改进，支持多模态理解、代理能力和 vibe-coding",
@@ -924,7 +2208,7 @@
         "reasoning",
         "agentic"
       ],
-      "is_reasoning": false,
+      "is_reasoning": true,
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": null,
@@ -948,8 +2232,52 @@
       "estimated_latency": "3-10s"
     },
     {
+      "id": "google/gemini-3-flash-preview",
+      "created": 769096788,
+      "provider": "google",
+      "name": "Gemini 3 Flash Preview",
+      "description": "Google: 为速度而构建的智能模型，结合前沿智能与卓越搜索",
+      "context_size": 1000000,
+      "context_label": "1M",
+      "price_input": 0.5,
+      "price_output": 3,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "reasoning"
+      ],
+      "tags": [
+        "chat",
+        "text-generation",
+        "reasoning"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": null,
+      "trial_scope": "fast",
+      "model_family": "gemini-3-flash-preview",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
       "id": "google/gemini-2.5-pro",
-      "created": 1779085012,
+      "created": 294251798,
       "provider": "google",
       "name": "Gemini 2.5 Pro",
       "description": "Google: 最先进的通用模型，擅长编码和复杂推理任务",
@@ -969,7 +2297,7 @@
         "text-generation",
         "reasoning"
       ],
-      "is_reasoning": false,
+      "is_reasoning": true,
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
@@ -994,7 +2322,7 @@
     },
     {
       "id": "google/gemini-2.5-flash",
-      "created": 1779085013,
+      "created": 1670252999,
       "provider": "google",
       "name": "Gemini 2.5 Flash",
       "description": "Google: 首个混合推理模型，支持 1M token 上下文窗口和思考预算",
@@ -1013,7 +2341,7 @@
         "text-generation",
         "reasoning"
       ],
-      "is_reasoning": false,
+      "is_reasoning": true,
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
@@ -1038,31 +2366,33 @@
     },
     {
       "id": "groq/qwen/qwen3-32b",
-      "created": 1779085014,
+      "created": 1949760537,
       "provider": "groq",
-      "name": "Qwen3 32B",
-      "description": "Groq model: Qwen3 32B - 662 tokens/sec",
-      "context_size": 131000,
+      "name": "qwen/qwen3-32b",
+      "context_size": 131072,
       "context_label": "131K",
       "price_input": 0.29,
       "price_output": 0.59,
-      "is_free": false,
+      "is_free": true,
       "capabilities": [
         "chat",
         "text-generation",
         "reasoning"
       ],
       "tags": [
-        "text-generation",
         "chat",
+        "text-generation",
         "reasoning"
       ],
-      "is_reasoning": false,
+      "is_reasoning": true,
       "is_multimodal": false,
       "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpd": 1000,
+        "tpm": 6000
+      },
+      "trial_scope": "all",
       "model_family": "qwen3-32b",
       "aliases": [
         "Qwen3-32B",
@@ -1070,23 +2400,23 @@
       ],
       "parameter_count": 32000000000,
       "tier": "large",
-      "speed": "premium",
+      "speed": "fast",
       "use_case": [
-        "content-creation",
-        "writing-assistance",
         "conversation",
         "q&a",
+        "content-creation",
+        "writing-assistance",
         "problem-solving",
         "logical-analysis",
         "math",
         "complex-reasoning"
       ],
-      "performance_level": "high",
-      "estimated_latency": "3-10s"
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
     },
     {
       "id": "longcat/LongCat-Flash-Thinking",
-      "created": 1779085015,
+      "created": 82841112,
       "provider": "longcat",
       "name": "LongCat Flash Thinking",
       "description": "LongCat: 深度思考模型",
@@ -1103,7 +2433,7 @@
         "text-generation",
         "reasoning"
       ],
-      "is_reasoning": false,
+      "is_reasoning": true,
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "daily-tokens",
@@ -1133,7 +2463,7 @@
     },
     {
       "id": "longcat/LongCat-Flash-Thinking-2601",
-      "created": 1779085016,
+      "created": 2010773346,
       "provider": "longcat",
       "name": "LongCat Flash Thinking 2601",
       "description": "LongCat: 升级版深度思考模型",
@@ -1150,7 +2480,7 @@
         "text-generation",
         "reasoning"
       ],
-      "is_reasoning": false,
+      "is_reasoning": true,
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "daily-tokens",
@@ -1180,7 +2510,7 @@
     },
     {
       "id": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
-      "created": 1779085017,
+      "created": 945254306,
       "provider": "nvidia",
       "name": "nemotron-3-nano-omni-30b-a3b-reasoning",
       "description": "Model: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
@@ -1222,7 +2552,7 @@
     },
     {
       "id": "nvidia/nemotron-content-safety-reasoning-4b",
-      "created": 1779085018,
+      "created": 549384392,
       "provider": "nvidia",
       "name": "nemotron-content-safety-reasoning-4b",
       "description": "Model: nvidia/nemotron-content-safety-reasoning-4b",
@@ -1265,7 +2595,7 @@
     },
     {
       "id": "openrouter/baidu/cobuddy",
-      "created": 1779085019,
+      "created": 1213574267,
       "provider": "openrouter",
       "name": "Baidu Qianfan: CoBuddy (free)",
       "description": "CoBuddy is a code generation model from Baidu, optimized for coding tasks and AI Agent workflows. It features high inference throughput and low end-to-end latency, with native support for tool calling and reasoning. The model runs on fp8 quantization with a 131K token context window and up to 65K output tokens.",
@@ -1314,7 +2644,7 @@
     },
     {
       "id": "openrouter/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
-      "created": 1779085020,
+      "created": 1459367772,
       "provider": "openrouter",
       "name": "NVIDIA: Nemotron 3 Nano Omni (free)",
       "description": "NVIDIA Nemotron™ 3 Nano Omni is a 30B-A3B open multimodal model designed to function as a perception and context sub-agent in enterprise agent systems. It accepts text, image, video, and audio inputs and produces text output, enabling agents to perceive and reason across modalities in a single inference loop.\n\nBuilt on a hybrid MoE Transformer-Mamba architecture with Conv3D video layers and Efficient Video Sampling (EVS), it delivers approximately 2× higher throughput and 2.5× lower compute for ",
@@ -1333,12 +2663,12 @@
       ],
       "tags": [
         "reasoning",
-        "text-generation",
         "vision",
-        "multimodal",
+        "text-generation",
         "chat",
         "speech-recognition",
-        "video-generation"
+        "video-generation",
+        "multimodal"
       ],
       "is_reasoning": true,
       "is_multimodal": true,
@@ -1359,10 +2689,10 @@
         "problem-solving",
         "logical-analysis",
         "math",
-        "content-creation",
-        "writing-assistance",
         "image-understanding",
         "visual-q&a",
+        "content-creation",
+        "writing-assistance",
         "conversation",
         "q&a",
         "transcription",
@@ -1375,7 +2705,7 @@
     },
     {
       "id": "openrouter/poolside/laguna-xs.2",
-      "created": 1779085021,
+      "created": 2082984965,
       "provider": "openrouter",
       "name": "Poolside: Laguna XS.2 (free)",
       "description": "Laguna XS.2 is the second-generation model in the XS size class from [Poolside](https://poolside.ai), their efficient coding agent series. It combines tool calling and reasoning capabilities with a compact footprint, offering a 128K context window and up to 8K output tokens. Quantized to fp8 for fast, cost-efficient agentic coding workflows.\n\n\nLaguna XS.2 is designed for software engineering and agentic coding use cases, and you are responsible for confirming that it is appropriate for your inte",
@@ -1392,6 +2722,7 @@
       "tags": [
         "reasoning",
         "text-generation",
+        "tool-use",
         "chat"
       ],
       "is_reasoning": true,
@@ -1423,7 +2754,7 @@
     },
     {
       "id": "openrouter/poolside/laguna-m.1",
-      "created": 1779085022,
+      "created": 63106502,
       "provider": "openrouter",
       "name": "Poolside: Laguna M.1 (free)",
       "description": "Laguna M.1 is the flagship coding agent model from [Poolside](https://poolside.ai), optimized for complex software engineering tasks. Designed for agentic coding workflows, it supports tool calling and reasoning, with a 128K context window and up to 8K output tokens. Quantized to fp8 for efficient inference. By using this model, you agree to Poolside’s [End User License Agreement](https://poolside.ai/legal/eula)",
@@ -1440,6 +2771,7 @@
       "tags": [
         "reasoning",
         "text-generation",
+        "tool-use",
         "chat"
       ],
       "is_reasoning": true,
@@ -1471,12 +2803,12 @@
     },
     {
       "id": "openrouter/deepseek/deepseek-v4-flash",
-      "created": 1779085023,
+      "created": 1497929652,
       "provider": "openrouter",
       "name": "DeepSeek: DeepSeek V4 Flash (free)",
       "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and high-throughput workloads, while maintaining strong reasoning and coding performance.\n\nThe model includes hybrid attention for efficient long-context processing. Reasoning efforts `high` and `xhigh` are supported; `xhigh` maps to max reasoning. It is well suited for applications suc",
       "context_size": 1048576,
-      "context_label": "256K",
+      "context_label": "1M",
       "price_input": 0,
       "price_output": 0,
       "is_free": true,
@@ -1519,7 +2851,7 @@
     },
     {
       "id": "openrouter/google/gemma-4-26b-a4b-it",
-      "created": 1779085024,
+      "created": 1808299360,
       "provider": "openrouter",
       "name": "Google: Gemma 4 26B A4B  (free)",
       "description": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference — delivering near-31B quality at a fraction of the compute cost. Supports multimodal input including text, images, and video (up to 60s at 1fps). Features a 256K token context window, native function calling, configurable thinking/reasoning mode, and structured output support. Released under Apache 2.0.",
@@ -1537,11 +2869,11 @@
       ],
       "tags": [
         "reasoning",
-        "text-generation",
         "vision",
-        "multimodal",
+        "text-generation",
         "chat",
-        "video-generation"
+        "video-generation",
+        "multimodal"
       ],
       "is_reasoning": true,
       "is_multimodal": true,
@@ -1563,10 +2895,10 @@
         "problem-solving",
         "logical-analysis",
         "math",
-        "content-creation",
-        "writing-assistance",
         "image-understanding",
         "visual-q&a",
+        "content-creation",
+        "writing-assistance",
         "conversation",
         "q&a",
         "video-creation",
@@ -1577,7 +2909,7 @@
     },
     {
       "id": "openrouter/google/gemma-4-31b-it",
-      "created": 1779085025,
+      "created": 678872440,
       "provider": "openrouter",
       "name": "Google: Gemma 4 31B (free)",
       "description": "Gemma 4 31B Instruct is Google DeepMind's 30.7B dense multimodal model supporting text and image input with text output. Features a 256K token context window, configurable thinking/reasoning mode, native function calling, and multilingual support across 140+ languages. Strong on coding, reasoning, and document understanding tasks. Apache 2.0 license.",
@@ -1595,11 +2927,11 @@
       ],
       "tags": [
         "reasoning",
-        "text-generation",
         "vision",
-        "multimodal",
+        "text-generation",
         "chat",
-        "video-generation"
+        "video-generation",
+        "multimodal"
       ],
       "is_reasoning": true,
       "is_multimodal": true,
@@ -1621,10 +2953,10 @@
         "problem-solving",
         "logical-analysis",
         "math",
-        "content-creation",
-        "writing-assistance",
         "image-understanding",
         "visual-q&a",
+        "content-creation",
+        "writing-assistance",
         "conversation",
         "q&a",
         "video-creation",
@@ -1635,7 +2967,7 @@
     },
     {
       "id": "openrouter/arcee-ai/trinity-large-thinking",
-      "created": 1779085026,
+      "created": 1008658881,
       "provider": "openrouter",
       "name": "Arcee AI: Trinity Large Thinking (free)",
       "description": "Trinity Large Thinking is a powerful open source reasoning model from the team at Arcee AI. It shows strong performance in PinchBench, agentic workloads, and reasoning tasks. Launch video: https://youtu.be/Gc82AXLa0Rg?si=4RLn6WBz33qT--B7\n\nThis model is optimized for agentic workflows and performs best when reasoning is preserved (aka interleaved thinking). Learn how to preserve reasoning in our docs: https://openrouter.ai/docs/guides/best-practices/reasoning-tokens#preserving-reasoning",
@@ -1684,12 +3016,12 @@
     },
     {
       "id": "openrouter/nvidia/nemotron-3-super-120b-a12b",
-      "created": 1779085027,
+      "created": 1939737900,
       "provider": "openrouter",
       "name": "NVIDIA: Nemotron 3 Super (free)",
       "description": "NVIDIA Nemotron 3 Super is a 120B-parameter open hybrid MoE model, activating just 12B parameters for maximum compute efficiency and accuracy in complex multi-agent applications. Built on a hybrid Mamba-Transformer Mixture-of-Experts architecture with multi-token prediction (MTP), it delivers over 50% higher token generation compared to leading open models.\n \nThe model features a 1M token context window for long-term agent coherence, cross-document reasoning, and multi-step task planning. Latent",
       "context_size": 1000000,
-      "context_label": "262K",
+      "context_label": "1M",
       "price_input": 0,
       "price_output": 0,
       "is_free": true,
@@ -1732,12 +3064,12 @@
     },
     {
       "id": "openrouter/minimax/minimax-m2.5",
-      "created": 1779085028,
+      "created": 514249899,
       "provider": "openrouter",
       "name": "MiniMax: MiniMax M2.5 (free)",
       "description": "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise of M2.1 to extend into general office work, reaching fluency in generating and operating Word, Excel, and Powerpoint files, context switching between diverse software environments, and working across different agent and human teams. Scoring 80.2% on SWE-Bench Verified, 51.3% on Multi-SWE-Bench, and 7",
       "context_size": 204800,
-      "context_label": "197K",
+      "context_label": "205K",
       "price_input": 0,
       "price_output": 0,
       "is_free": true,
@@ -1751,7 +3083,7 @@
         "chat",
         "reasoning"
       ],
-      "is_reasoning": false,
+      "is_reasoning": true,
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
@@ -1780,7 +3112,7 @@
     },
     {
       "id": "openrouter/sourceful/riverflow-v2-pro",
-      "created": 1779085029,
+      "created": 264833887,
       "provider": "openrouter",
       "name": "Sourceful: Riverflow V2 Pro",
       "description": "Riverflow V2 Pro is the most powerful variant of Sourceful's Riverflow 2.0 lineup, best for top-tier control and perfect text rendering.\n\nThe Riverflow 2.0 series represents SOTA performance on image generation and editing tasks, using an integrated reasoning model to boost reliability and tackle complex challenges.\n\nPricing is $0.15 per 1K/2K output image and $0.33 per 4K output image.\n\nAdditional features:\n- Custom font rendering via font_inputs ($0.03/font, max 2)\n- Image enhancement via supe",
@@ -1796,10 +3128,10 @@
       ],
       "tags": [
         "reasoning",
-        "text-generation",
         "vision",
-        "multimodal",
-        "chat"
+        "text-generation",
+        "chat",
+        "multimodal"
       ],
       "is_reasoning": true,
       "is_multimodal": true,
@@ -1819,10 +3151,10 @@
         "problem-solving",
         "logical-analysis",
         "math",
-        "content-creation",
-        "writing-assistance",
         "image-understanding",
         "visual-q&a",
+        "content-creation",
+        "writing-assistance",
         "conversation",
         "q&a",
         "complex-reasoning"
@@ -1832,7 +3164,7 @@
     },
     {
       "id": "openrouter/sourceful/riverflow-v2-fast",
-      "created": 1779085030,
+      "created": 149961314,
       "provider": "openrouter",
       "name": "Sourceful: Riverflow V2 Fast",
       "description": "Riverflow V2 Fast is the fastest variant of Sourceful's Riverflow 2.0 lineup, best for production deployments and latency-critical workflows.\n\nThe Riverflow 2.0 series represents SOTA performance on image generation and editing tasks, using an integrated reasoning model to boost reliability and tackle complex challenges.\n\nPricing is $0.02 per 1K output image and $0.04 per 2K output image. Does not support 4K image output.\n\nAdditional features:\n- Custom font rendering via font_inputs ($0.03/font,",
@@ -1848,10 +3180,10 @@
       ],
       "tags": [
         "reasoning",
-        "text-generation",
         "vision",
-        "multimodal",
-        "chat"
+        "text-generation",
+        "chat",
+        "multimodal"
       ],
       "is_reasoning": true,
       "is_multimodal": true,
@@ -1871,10 +3203,10 @@
         "problem-solving",
         "logical-analysis",
         "math",
-        "content-creation",
-        "writing-assistance",
         "image-understanding",
         "visual-q&a",
+        "content-creation",
+        "writing-assistance",
         "conversation",
         "q&a",
         "complex-reasoning"
@@ -1884,7 +3216,7 @@
     },
     {
       "id": "openrouter/liquid/lfm-2.5-1.2b-thinking",
-      "created": 1779085031,
+      "created": 2009026872,
       "provider": "openrouter",
       "name": "LiquidAI: LFM2.5-1.2B-Thinking (free)",
       "description": "LFM2.5-1.2B-Thinking is a lightweight reasoning-focused model optimized for agentic tasks, data extraction, and RAG—while still running comfortably on edge devices. It supports long context (up to 32K tokens) and is designed to provide higher-quality “thinking” responses in a small 1.2B model.",
@@ -1934,7 +3266,7 @@
     },
     {
       "id": "openrouter/bytedance-seed/seedream-4.5",
-      "created": 1779085032,
+      "created": 1676655389,
       "provider": "openrouter",
       "name": "ByteDance Seed: Seedream 4.5",
       "description": "Seedream 4.5 is the latest in-house image generation model developed by ByteDance. Compared with Seedream 4.0, it delivers comprehensive improvements, especially in editing consistency, including better preservation of subject details, lighting, and color tone. It also enhances portrait refinement and small-text rendering. The model’s multi-image composition capabilities have been significantly strengthened, and both reasoning performance and visual aesthetics continue to advance, enabling more ",
@@ -1950,10 +3282,10 @@
       ],
       "tags": [
         "reasoning",
-        "text-generation",
         "vision",
-        "multimodal",
-        "chat"
+        "text-generation",
+        "chat",
+        "multimodal"
       ],
       "is_reasoning": true,
       "is_multimodal": true,
@@ -1973,10 +3305,10 @@
         "problem-solving",
         "logical-analysis",
         "math",
-        "content-creation",
-        "writing-assistance",
         "image-understanding",
         "visual-q&a",
+        "content-creation",
+        "writing-assistance",
         "conversation",
         "q&a",
         "complex-reasoning"
@@ -1986,7 +3318,7 @@
     },
     {
       "id": "openrouter/nvidia/nemotron-3-nano-30b-a3b",
-      "created": 1779085033,
+      "created": 516312209,
       "provider": "openrouter",
       "name": "NVIDIA: Nemotron 3 Nano 30B A3B (free)",
       "description": "NVIDIA Nemotron 3 Nano 30B A3B is a small language MoE model with highest compute efficiency and accuracy for developers to build specialized agentic AI systems.\n\nThe model is fully open with open-weights, datasets and recipes so developers can easily\ncustomize, optimize, and deploy the model on their infrastructure for maximum privacy and\nsecurity.",
@@ -2005,7 +3337,7 @@
         "chat",
         "reasoning"
       ],
-      "is_reasoning": false,
+      "is_reasoning": true,
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
@@ -2035,7 +3367,7 @@
     },
     {
       "id": "openrouter/nvidia/nemotron-nano-12b-v2-vl",
-      "created": 1779085034,
+      "created": 1379410382,
       "provider": "openrouter",
       "name": "NVIDIA: Nemotron Nano 12B 2 VL (free)",
       "description": "NVIDIA Nemotron Nano 2 VL is a 12-billion-parameter open multimodal reasoning model designed for video understanding and document intelligence. It introduces a hybrid Transformer-Mamba architecture, combining transformer-level accuracy with Mamba’s memory-efficient sequence modeling for significantly higher throughput and lower latency.\n\nThe model supports inputs of text and multi-image documents, producing natural-language outputs. It is trained on high-quality NVIDIA-curated synthetic datasets",
@@ -2053,11 +3385,11 @@
       ],
       "tags": [
         "reasoning",
-        "text-generation",
         "vision",
-        "multimodal",
+        "text-generation",
         "chat",
-        "video-generation"
+        "video-generation",
+        "multimodal"
       ],
       "is_reasoning": true,
       "is_multimodal": true,
@@ -2079,10 +3411,10 @@
         "problem-solving",
         "logical-analysis",
         "math",
-        "content-creation",
-        "writing-assistance",
         "image-understanding",
         "visual-q&a",
+        "content-creation",
+        "writing-assistance",
         "conversation",
         "q&a",
         "video-creation",
@@ -2093,7 +3425,7 @@
     },
     {
       "id": "openrouter/qwen/qwen3-next-80b-a3b-instruct",
-      "created": 1779085035,
+      "created": 212892430,
       "provider": "openrouter",
       "name": "Qwen: Qwen3 Next 80B A3B Instruct (free)",
       "description": "Qwen3-Next-80B-A3B-Instruct is an instruction-tuned chat model in the Qwen3-Next series optimized for fast, stable responses without “thinking” traces. It targets complex tasks across reasoning, code generation, knowledge QA, and multilingual use, while remaining robust on alignment and formatting. Compared with prior Qwen3 instruct variants, it focuses on higher throughput and stability on ultra-long inputs and multi-turn dialogues, making it well-suited for RAG, tool use, and agentic workflows",
@@ -2109,6 +3441,7 @@
       "tags": [
         "reasoning",
         "text-generation",
+        "tool-use",
         "chat"
       ],
       "is_reasoning": true,
@@ -2142,7 +3475,7 @@
     },
     {
       "id": "openrouter/nvidia/nemotron-nano-9b-v2",
-      "created": 1779085036,
+      "created": 76451431,
       "provider": "openrouter",
       "name": "NVIDIA: Nemotron Nano 9B V2 (free)",
       "description": "NVIDIA-Nemotron-Nano-9B-v2 is a large language model (LLM) trained from scratch by NVIDIA, and designed as a unified model for both reasoning and non-reasoning tasks. It responds to user queries and tasks by first generating a reasoning trace and then concluding with a final response. \n\nThe model's reasoning capabilities can be controlled via a system prompt. If the user prefers the model to provide its final answer without intermediate reasoning traces, it can be configured to do so.",
@@ -2191,7 +3524,7 @@
     },
     {
       "id": "openrouter/openai/gpt-oss-120b",
-      "created": 1779085037,
+      "created": 952761505,
       "provider": "openrouter",
       "name": "OpenAI: gpt-oss-120b (free)",
       "description": "gpt-oss-120b is an open-weight, 117B-parameter Mixture-of-Experts (MoE) language model from OpenAI designed for high-reasoning, agentic, and general-purpose production use cases. It activates 5.1B parameters per forward pass and is optimized to run on a single H100 GPU with native MXFP4 quantization. The model supports configurable reasoning depth, full chain-of-thought access, and native tool use, including function calling, browsing, and structured output generation.",
@@ -2208,6 +3541,7 @@
       "tags": [
         "reasoning",
         "text-generation",
+        "tool-use",
         "chat"
       ],
       "is_reasoning": true,
@@ -2240,7 +3574,7 @@
     },
     {
       "id": "openrouter/openai/gpt-oss-20b",
-      "created": 1779085038,
+      "created": 1330377872,
       "provider": "openrouter",
       "name": "OpenAI: gpt-oss-20b (free)",
       "description": "gpt-oss-20b is an open-weight 21B parameter model released by OpenAI under the Apache 2.0 license. It uses a Mixture-of-Experts (MoE) architecture with 3.6B active parameters per forward pass, optimized for lower-latency inference and deployability on consumer or single-GPU hardware. The model is trained in OpenAI’s Harmony response format and supports reasoning level configuration, fine-tuning, and agentic capabilities including function calling, tool use, and structured outputs.",
@@ -2257,6 +3591,7 @@
       "tags": [
         "reasoning",
         "text-generation",
+        "tool-use",
         "chat"
       ],
       "is_reasoning": true,
@@ -2289,7 +3624,7 @@
     },
     {
       "id": "openrouter/z-ai/glm-4.5-air",
-      "created": 1779085039,
+      "created": 2031077428,
       "provider": "openrouter",
       "name": "Z.ai: GLM 4.5 Air (free)",
       "description": "GLM-4.5-Air is the lightweight variant of our latest flagship model family, also purpose-built for agent-centric applications. Like GLM-4.5, it adopts the Mixture-of-Experts (MoE) architecture but with a more compact parameter size. GLM-4.5-Air also supports hybrid inference modes, offering a \"thinking mode\" for advanced reasoning and tool use, and a \"non-thinking mode\" for real-time interaction. Users can control the reasoning behaviour with the `reasoning` `enabled` boolean. [Learn more in our",
@@ -2306,6 +3641,7 @@
       "tags": [
         "reasoning",
         "text-generation",
+        "tool-use",
         "chat"
       ],
       "is_reasoning": true,
@@ -2337,12 +3673,12 @@
     },
     {
       "id": "openrouter/qwen/qwen3-coder",
-      "created": 1779085040,
+      "created": 649025593,
       "provider": "openrouter",
       "name": "Qwen: Qwen3 Coder 480B A35B (free)",
       "description": "Qwen3-Coder-480B-A35B-Instruct is a Mixture-of-Experts (MoE) code generation model developed by the Qwen team. It is optimized for agentic coding tasks such as function calling, tool use, and long-context reasoning over repositories. The model features 480 billion total parameters, with 35 billion active per forward pass (8 out of 160 experts).\n\nPricing for the Alibaba endpoints varies by context length. Once a request is greater than 128k input tokens, the higher pricing is used.",
       "context_size": 1048576,
-      "context_label": "262K",
+      "context_label": "1M",
       "price_input": 0,
       "price_output": 0,
       "is_free": true,
@@ -2354,6 +3690,7 @@
       "tags": [
         "reasoning",
         "text-generation",
+        "tool-use",
         "chat",
         "code-generation"
       ],
@@ -2390,7 +3727,7 @@
     },
     {
       "id": "openrouter/meta-llama/llama-3.2-3b-instruct",
-      "created": 1779085041,
+      "created": 2071699779,
       "provider": "openrouter",
       "name": "Meta: Llama 3.2 3B Instruct (free)",
       "description": "Llama 3.2 3B is a 3-billion-parameter multilingual large language model, optimized for advanced natural language processing tasks like dialogue generation, reasoning, and summarization. Designed with the latest transformer architecture, it supports eight languages, including English, Spanish, and Hindi, and is adaptable for additional languages.\n\nTrained on 9 trillion tokens, the Llama 3.2 3B model excels in instruction-following, complex reasoning, and tool use. Its balanced performance makes i",
@@ -2406,6 +3743,7 @@
       "tags": [
         "reasoning",
         "text-generation",
+        "tool-use",
         "chat"
       ],
       "is_reasoning": true,
@@ -2439,7 +3777,7 @@
     },
     {
       "id": "openrouter/nousresearch/hermes-3-llama-3.1-405b",
-      "created": 1779085042,
+      "created": 376698361,
       "provider": "openrouter",
       "name": "Nous: Hermes 3 405B Instruct (free)",
       "description": "Hermes 3 is a generalist language model with many improvements over Hermes 2, including advanced agentic capabilities, much better roleplaying, reasoning, multi-turn conversation, long context coherence, and improvements across the board.\n\nHermes 3 405B is a frontier-level, full-parameter finetune of the Llama-3.1 405B foundation model, focused on aligning LLMs to the user, with powerful steering capabilities and control given to the end user.\n\nThe Hermes 3 series builds and expands on the Herme",
@@ -2487,7 +3825,7 @@
     },
     {
       "id": "xingchen/xdeepseekr1",
-      "created": 1779085043,
+      "created": 837229335,
       "provider": "xingchen",
       "name": "DeepSeek-R1",
       "description": "该版本通过利用更多的计算资源并在后训练阶段引入算法优化机制，显著提升了其推理能力和深度推理能力。该模型在数学、编程和一般逻辑等多个基准测试中表现出色，整体性能已接近 O3 和 Gemini 2.5 Pro 等领先模型。与之前的版本相比，升级后的模型在处理复杂推理任务方面显示出显著的改进。",
@@ -2515,7 +3853,9 @@
       "model_family": "deepseek-r1",
       "model_variant": "r1",
       "aliases": [
-        "DeepSeek-R1"
+        "DeepSeek-R1",
+        "github/DeepSeek-R1-0528",
+        "github/DeepSeek-R1"
       ],
       "tier": "large",
       "speed": "premium",
@@ -2534,7 +3874,7 @@
     },
     {
       "id": "xingchen/xdeepseekr1qwen32b",
-      "created": 1779085044,
+      "created": 1006193365,
       "provider": "xingchen",
       "name": "DeepSeek-R1-Distill-Qwen-32B",
       "description": "DeepSeek-R1-Distill-Qwen-32B 是基于 DeepSeek-R1推理数据蒸馏训练的模型，基础模型为Qwen2.5-32B。在数学推理、代码生成等复杂任务中表现卓越，尤其擅长多步推导和跨领域问题解决。",
@@ -2582,7 +3922,7 @@
     },
     {
       "id": "xingchen/xopkimik2blth",
-      "created": 1779085045,
+      "created": 712808688,
       "provider": "xingchen",
       "name": "Kimi-K2-thinking",
       "description": "kimi-k2-thinking模型是月之暗面提供的具有通用 Agentic能力和推理能力的思考模型，它擅长深度推理，并可通过多步工具调用，帮助解决各类难题。",
@@ -2629,7 +3969,7 @@
     },
     {
       "id": "xingchen/xdeepseekr1llama8b",
-      "created": 1779085046,
+      "created": 691182730,
       "provider": "xingchen",
       "name": "DeepSeek-R1-Distill-Llama-8B",
       "description": "DeepSeek-R1-Distill-Llama-8B 是基于 DeepSeek-R1推理数据蒸馏训练的模型，基础模型为Llama-3.1-8B。在数学推理、代码生成等任务中表现卓越。",

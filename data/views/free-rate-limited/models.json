@@ -1,15 +1,15 @@
 {
   "object": "list",
   "view": "free-rate-limited",
-  "updated_at": "2026-05-18T06:17:27.505Z",
-  "total": 94,
+  "updated_at": "2026-05-19T04:54:24.161Z",
+  "total": 184,
   "filters": {
     "freeMechanism": "rate-limited"
   },
   "data": [
     {
       "id": "cerebras/llama3.1-8b",
-      "created": 1779084953,
+      "created": 649137691,
       "provider": "cerebras",
       "name": "Llama 3.1 8B",
       "description": "Cerebras model: Llama 3.1 8B - 8B parameters - 2200 tokens/sec",
@@ -50,7 +50,7 @@
     },
     {
       "id": "cerebras/gpt-oss-120b",
-      "created": 1779084954,
+      "created": 369610922,
       "provider": "cerebras",
       "name": "OpenAI GPT OSS",
       "description": "Cerebras model: OpenAI GPT OSS - 120B parameters - 3000 tokens/sec",
@@ -86,8 +86,2858 @@
       "estimated_latency": "< 1s"
     },
     {
+      "id": "cohere/c4ai-aya-expanse-32b",
+      "created": 1289316296,
+      "provider": "cohere",
+      "name": "c4ai-aya-expanse-32b",
+      "context_size": 128000,
+      "context_label": "128K",
+      "is_free": true,
+      "capabilities": [
+        "text-generation",
+        "chat"
+      ],
+      "tags": [
+        "text-generation",
+        "chat"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "notes": "1000 requests/month shared across all models on trial key"
+      },
+      "trial_scope": "all",
+      "model_family": "c4ai-aya-expanse-32b",
+      "aliases": [],
+      "parameter_count": 32000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "cohere/c4ai-aya-vision-32b",
+      "created": 768839148,
+      "provider": "cohere",
+      "name": "c4ai-aya-vision-32b",
+      "context_size": 16384,
+      "context_label": "16K",
+      "is_free": true,
+      "capabilities": [
+        "chat"
+      ],
+      "tags": [
+        "vision",
+        "chat",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "notes": "1000 requests/month shared across all models on trial key"
+      },
+      "trial_scope": "all",
+      "model_family": "c4ai-aya-vision-32b",
+      "model_variant": "vision",
+      "aliases": [],
+      "parameter_count": 32000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "cohere/cohere-transcribe-03-2026",
+      "created": 1478340127,
+      "provider": "cohere",
+      "name": "cohere-transcribe-03-2026",
+      "context_size": 32768,
+      "context_label": "33K",
+      "is_free": true,
+      "capabilities": [
+        "speech-recognition"
+      ],
+      "tags": [
+        "speech-recognition"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "notes": "1000 requests/month shared across all models on trial key"
+      },
+      "trial_scope": "all",
+      "model_family": "cohere-transcribe-03",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "transcription",
+        "voice-input"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "cohere/command-a-03-2025",
+      "created": 2000245501,
+      "provider": "cohere",
+      "name": "command-a-03-2025",
+      "context_size": 288000,
+      "context_label": "288K",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "notes": "1000 requests/month shared across all models on trial key"
+      },
+      "trial_scope": "all",
+      "model_family": "command-a-03",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "cohere/command-a-reasoning-08-2025",
+      "created": 1261656011,
+      "provider": "cohere",
+      "name": "command-a-reasoning-08-2025",
+      "context_size": 288768,
+      "context_label": "289K",
+      "is_free": true,
+      "capabilities": [
+        "chat"
+      ],
+      "tags": [
+        "reasoning",
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "notes": "1000 requests/month shared across all models on trial key"
+      },
+      "trial_scope": "all",
+      "model_family": "command-a-reasoning-08",
+      "model_variant": "reasoning",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "cohere/command-a-translate-08-2025",
+      "created": 820543101,
+      "provider": "cohere",
+      "name": "command-a-translate-08-2025",
+      "context_size": 8992,
+      "context_label": "9K",
+      "is_free": true,
+      "capabilities": [
+        "chat"
+      ],
+      "tags": [
+        "chat"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "notes": "1000 requests/month shared across all models on trial key"
+      },
+      "trial_scope": "all",
+      "model_family": "command-a-translate-08",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "cohere/command-a-vision-07-2025",
+      "created": 1738664102,
+      "provider": "cohere",
+      "name": "command-a-vision-07-2025",
+      "context_size": 128000,
+      "context_label": "128K",
+      "is_free": true,
+      "capabilities": [
+        "chat"
+      ],
+      "tags": [
+        "vision",
+        "chat",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "notes": "1000 requests/month shared across all models on trial key"
+      },
+      "trial_scope": "all",
+      "model_family": "command-a-vision-07",
+      "model_variant": "vision",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "cohere/command-r-08-2024",
+      "created": 1059495730,
+      "provider": "cohere",
+      "name": "command-r-08-2024",
+      "context_size": 128000,
+      "context_label": "128K",
+      "is_free": true,
+      "capabilities": [
+        "text-generation",
+        "chat"
+      ],
+      "tags": [
+        "text-generation",
+        "chat"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "notes": "1000 requests/month shared across all models on trial key"
+      },
+      "trial_scope": "all",
+      "model_family": "command-r-08",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "cohere/command-r-plus-08-2024",
+      "created": 1209609917,
+      "provider": "cohere",
+      "name": "command-r-plus-08-2024",
+      "context_size": 128000,
+      "context_label": "128K",
+      "is_free": true,
+      "capabilities": [
+        "text-generation",
+        "chat"
+      ],
+      "tags": [
+        "text-generation",
+        "chat"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "notes": "1000 requests/month shared across all models on trial key"
+      },
+      "trial_scope": "all",
+      "model_family": "command-r-plus-08",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "cohere/command-r7b-12-2024",
+      "created": 1730057562,
+      "provider": "cohere",
+      "name": "command-r7b-12-2024",
+      "context_size": 132000,
+      "context_label": "132K",
+      "is_free": true,
+      "capabilities": [
+        "text-generation",
+        "chat"
+      ],
+      "tags": [
+        "text-generation",
+        "chat"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "notes": "1000 requests/month shared across all models on trial key"
+      },
+      "trial_scope": "all",
+      "model_family": "command-r7b-12",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "cohere/command-r7b-arabic-02-2025",
+      "created": 1335142987,
+      "provider": "cohere",
+      "name": "command-r7b-arabic-02-2025",
+      "context_size": 128000,
+      "context_label": "128K",
+      "is_free": true,
+      "capabilities": [
+        "text-generation",
+        "chat"
+      ],
+      "tags": [
+        "text-generation",
+        "chat"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "notes": "1000 requests/month shared across all models on trial key"
+      },
+      "trial_scope": "all",
+      "model_family": "command-r7b-arabic-02",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "cohere/embed-english-light-v3.0",
+      "created": 2142952617,
+      "provider": "cohere",
+      "name": "embed-english-light-v3.0",
+      "context_size": 512,
+      "context_label": "512",
+      "is_free": true,
+      "capabilities": [
+        "embeddings"
+      ],
+      "tags": [
+        "embeddings"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "notes": "1000 requests/month shared across all models on trial key"
+      },
+      "trial_scope": "all",
+      "model_family": "embed-english-light-v3.0",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "semantic-search",
+        "similarity"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "cohere/embed-english-light-v3.0-image",
+      "created": 1342199449,
+      "provider": "cohere",
+      "name": "embed-english-light-v3.0-image",
+      "context_size": 0,
+      "context_label": "unknown",
+      "is_free": true,
+      "capabilities": [
+        "vision"
+      ],
+      "tags": [
+        "vision",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "notes": "1000 requests/month shared across all models on trial key"
+      },
+      "trial_scope": "all",
+      "model_family": "embed-english-light-v3.0-image",
+      "model_variant": "image",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "cohere/embed-english-v3.0",
+      "created": 838328114,
+      "provider": "cohere",
+      "name": "embed-english-v3.0",
+      "context_size": 512,
+      "context_label": "512",
+      "is_free": true,
+      "capabilities": [
+        "embeddings"
+      ],
+      "tags": [
+        "embeddings"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "notes": "1000 requests/month shared across all models on trial key"
+      },
+      "trial_scope": "all",
+      "model_family": "embed-english-v3.0",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "semantic-search",
+        "similarity"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "cohere/embed-english-v3.0-image",
+      "created": 61119874,
+      "provider": "cohere",
+      "name": "embed-english-v3.0-image",
+      "context_size": 0,
+      "context_label": "unknown",
+      "is_free": true,
+      "capabilities": [
+        "vision"
+      ],
+      "tags": [
+        "vision",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "notes": "1000 requests/month shared across all models on trial key"
+      },
+      "trial_scope": "all",
+      "model_family": "embed-english-v3.0-image",
+      "model_variant": "image",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "cohere/embed-multilingual-light-v3.0",
+      "created": 224455140,
+      "provider": "cohere",
+      "name": "embed-multilingual-light-v3.0",
+      "context_size": 512,
+      "context_label": "512",
+      "is_free": true,
+      "capabilities": [
+        "embeddings"
+      ],
+      "tags": [
+        "embeddings"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "notes": "1000 requests/month shared across all models on trial key"
+      },
+      "trial_scope": "all",
+      "model_family": "embed-multilingual-light-v3.0",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "semantic-search",
+        "similarity"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "cohere/embed-multilingual-light-v3.0-image",
+      "created": 1445684660,
+      "provider": "cohere",
+      "name": "embed-multilingual-light-v3.0-image",
+      "context_size": 0,
+      "context_label": "unknown",
+      "is_free": true,
+      "capabilities": [
+        "vision"
+      ],
+      "tags": [
+        "vision",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "notes": "1000 requests/month shared across all models on trial key"
+      },
+      "trial_scope": "all",
+      "model_family": "embed-multilingual-light-v3.0-image",
+      "model_variant": "image",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "cohere/embed-multilingual-v3.0",
+      "created": 833028097,
+      "provider": "cohere",
+      "name": "embed-multilingual-v3.0",
+      "context_size": 512,
+      "context_label": "512",
+      "is_free": true,
+      "capabilities": [
+        "embeddings"
+      ],
+      "tags": [
+        "embeddings"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "notes": "1000 requests/month shared across all models on trial key"
+      },
+      "trial_scope": "all",
+      "model_family": "embed-multilingual-v3.0",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "semantic-search",
+        "similarity"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "cohere/embed-multilingual-v3.0-image",
+      "created": 1866439665,
+      "provider": "cohere",
+      "name": "embed-multilingual-v3.0-image",
+      "context_size": 0,
+      "context_label": "unknown",
+      "is_free": true,
+      "capabilities": [
+        "vision"
+      ],
+      "tags": [
+        "vision",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "notes": "1000 requests/month shared across all models on trial key"
+      },
+      "trial_scope": "all",
+      "model_family": "embed-multilingual-v3.0-image",
+      "model_variant": "image",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "cohere/embed-v4.0",
+      "created": 1409841788,
+      "provider": "cohere",
+      "name": "embed-v4.0",
+      "context_size": 8192,
+      "context_label": "8K",
+      "is_free": true,
+      "capabilities": [
+        "embeddings"
+      ],
+      "tags": [
+        "embeddings"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "notes": "1000 requests/month shared across all models on trial key"
+      },
+      "trial_scope": "all",
+      "model_family": "embed-v4.0",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "semantic-search",
+        "similarity"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "cohere/rerank-english-v3.0",
+      "created": 615989432,
+      "provider": "cohere",
+      "name": "rerank-english-v3.0",
+      "context_size": 4096,
+      "context_label": "4K",
+      "is_free": true,
+      "capabilities": [
+        "rerank"
+      ],
+      "tags": [
+        "rerank"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "notes": "1000 requests/month shared across all models on trial key"
+      },
+      "trial_scope": "all",
+      "model_family": "rerank-english-v3.0",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "search-improvement",
+        "relevance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "cohere/rerank-multilingual-v3.0",
+      "created": 848280251,
+      "provider": "cohere",
+      "name": "rerank-multilingual-v3.0",
+      "context_size": 4096,
+      "context_label": "4K",
+      "is_free": true,
+      "capabilities": [
+        "rerank"
+      ],
+      "tags": [
+        "rerank"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "notes": "1000 requests/month shared across all models on trial key"
+      },
+      "trial_scope": "all",
+      "model_family": "rerank-multilingual-v3.0",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "search-improvement",
+        "relevance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "cohere/rerank-v3.5",
+      "created": 1634094650,
+      "provider": "cohere",
+      "name": "rerank-v3.5",
+      "context_size": 4096,
+      "context_label": "4K",
+      "is_free": true,
+      "capabilities": [
+        "rerank"
+      ],
+      "tags": [
+        "rerank"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "notes": "1000 requests/month shared across all models on trial key"
+      },
+      "trial_scope": "all",
+      "model_family": "rerank-v3.5",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "search-improvement",
+        "relevance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "cohere/rerank-v4.0-fast",
+      "created": 959295613,
+      "provider": "cohere",
+      "name": "rerank-v4.0-fast",
+      "context_size": 32768,
+      "context_label": "33K",
+      "is_free": true,
+      "capabilities": [
+        "rerank"
+      ],
+      "tags": [
+        "rerank"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "notes": "1000 requests/month shared across all models on trial key"
+      },
+      "trial_scope": "all",
+      "model_family": "rerank-v4.0-fast",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "search-improvement",
+        "relevance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "cohere/rerank-v4.0-pro",
+      "created": 549683104,
+      "provider": "cohere",
+      "name": "rerank-v4.0-pro",
+      "context_size": 32768,
+      "context_label": "33K",
+      "is_free": true,
+      "capabilities": [
+        "rerank"
+      ],
+      "tags": [
+        "rerank"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "notes": "1000 requests/month shared across all models on trial key"
+      },
+      "trial_scope": "all",
+      "model_family": "rerank-v4.0-pro",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "search-improvement",
+        "relevance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "cohere/tiny-aya-earth",
+      "created": 875815337,
+      "provider": "cohere",
+      "name": "tiny-aya-earth",
+      "context_size": 8192,
+      "context_label": "8K",
+      "is_free": true,
+      "capabilities": [
+        "text-generation",
+        "chat"
+      ],
+      "tags": [
+        "text-generation",
+        "chat"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "notes": "1000 requests/month shared across all models on trial key"
+      },
+      "trial_scope": "all",
+      "model_family": "tiny-aya-earth",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "cohere/tiny-aya-fire",
+      "created": 884558441,
+      "provider": "cohere",
+      "name": "tiny-aya-fire",
+      "context_size": 8192,
+      "context_label": "8K",
+      "is_free": true,
+      "capabilities": [
+        "text-generation",
+        "chat"
+      ],
+      "tags": [
+        "text-generation",
+        "chat"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "notes": "1000 requests/month shared across all models on trial key"
+      },
+      "trial_scope": "all",
+      "model_family": "tiny-aya-fire",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "cohere/tiny-aya-global",
+      "created": 1254053332,
+      "provider": "cohere",
+      "name": "tiny-aya-global",
+      "context_size": 8192,
+      "context_label": "8K",
+      "is_free": true,
+      "capabilities": [
+        "text-generation",
+        "chat"
+      ],
+      "tags": [
+        "text-generation",
+        "chat"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "notes": "1000 requests/month shared across all models on trial key"
+      },
+      "trial_scope": "all",
+      "model_family": "tiny-aya-global",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "cohere/tiny-aya-water",
+      "created": 854467066,
+      "provider": "cohere",
+      "name": "tiny-aya-water",
+      "context_size": 8192,
+      "context_label": "8K",
+      "is_free": true,
+      "capabilities": [
+        "text-generation",
+        "chat"
+      ],
+      "tags": [
+        "text-generation",
+        "chat"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "notes": "1000 requests/month shared across all models on trial key"
+      },
+      "trial_scope": "all",
+      "model_family": "tiny-aya-water",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "github/AI21-Jamba-1-5-Large",
+      "created": 2040203588,
+      "provider": "github",
+      "name": "AI21 Jamba 1.5 Large",
+      "description": "A 398B parameters (94B active) multilingual model, offering a 256K long context window, function calling, structured output, and grounded generation.",
+      "context_size": 262144,
+      "context_label": "262K",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation",
+        "chat"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
+      },
+      "trial_scope": "all",
+      "model_family": "jamba-1.5-large",
+      "aliases": [
+        "ai21labs/jamba-1.5-large-instruct"
+      ],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "github/Phi-4-reasoning",
+      "created": 1293811252,
+      "provider": "github",
+      "name": "Phi-4-reasoning",
+      "description": "State-of-the-art open-weight reasoning model.",
+      "context_size": 32768,
+      "context_label": "33K",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "reasoning",
+        "text-generation",
+        "chat"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
+      },
+      "trial_scope": "all",
+      "model_family": "phi-4-reasoning",
+      "model_variant": "reasoning",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "github/Phi-4-multimodal-instruct",
+      "created": 1579706809,
+      "provider": "github",
+      "name": "Phi-4-multimodal-instruct",
+      "description": "First small multimodal model to have 3 modality inputs (text, audio, image), excelling in quality and efficiency",
+      "context_size": 128000,
+      "context_label": "128K",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "chat",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
+      },
+      "trial_scope": "all",
+      "model_family": "phi-4-multimodal",
+      "model_variant": "multimodal",
+      "aliases": [
+        "microsoft/phi-4-multimodal-instruct"
+      ],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "github/Phi-4-mini-reasoning",
+      "created": 1364244698,
+      "provider": "github",
+      "name": "Phi-4-mini-reasoning",
+      "description": "Lightweight math reasoning model optimized for multi-step problem solving",
+      "context_size": 128000,
+      "context_label": "128K",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "reasoning",
+        "text-generation",
+        "chat"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
+      },
+      "trial_scope": "all",
+      "model_family": "phi-4-mini-reasoning",
+      "model_variant": "reasoning",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "github/Phi-4-mini-instruct",
+      "created": 821970876,
+      "provider": "github",
+      "name": "Phi-4-mini-instruct",
+      "description": "3.8B parameters Small Language Model outperforming larger models in reasoning, math, coding, and function-calling",
+      "context_size": 128000,
+      "context_label": "128K",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "reasoning",
+        "text-generation",
+        "chat"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
+      },
+      "trial_scope": "all",
+      "model_family": "phi-4-mini",
+      "model_variant": "instruct",
+      "aliases": [
+        "microsoft/phi-4-mini-instruct"
+      ],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "github/Phi-4",
+      "created": 900607943,
+      "provider": "github",
+      "name": "Phi-4",
+      "description": "Phi-4 14B, a highly capable model for low latency scenarios.",
+      "context_size": 16384,
+      "context_label": "16K",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation",
+        "chat"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
+      },
+      "trial_scope": "all",
+      "model_family": "phi-4",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "github/text-embedding-3-small",
+      "created": 1129029870,
+      "provider": "github",
+      "name": "OpenAI Text Embedding 3 (small)",
+      "description": "Text-embedding-3 series models are the latest and most capable embedding model from OpenAI.",
+      "context_size": 8191,
+      "context_label": "8K",
+      "is_free": true,
+      "capabilities": [
+        "embeddings"
+      ],
+      "tags": [
+        "text-generation",
+        "embeddings"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
+      },
+      "trial_scope": "all",
+      "model_family": "text-embedding-3-(small)",
+      "model_variant": "embedding",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "semantic-search",
+        "similarity"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "github/text-embedding-3-large",
+      "created": 1120315520,
+      "provider": "github",
+      "name": "OpenAI Text Embedding 3 (large)",
+      "description": "Text-embedding-3 series models are the latest and most capable embedding model from OpenAI.",
+      "context_size": 8191,
+      "context_label": "8K",
+      "is_free": true,
+      "capabilities": [
+        "embeddings"
+      ],
+      "tags": [
+        "text-generation",
+        "embeddings"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
+      },
+      "trial_scope": "all",
+      "model_family": "text-embedding-3-(large)",
+      "model_variant": "embedding",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "semantic-search",
+        "similarity"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "github/o4-mini",
+      "created": 2062427956,
+      "provider": "github",
+      "name": "OpenAI o4-mini",
+      "description": "o4-mini includes significant improvements on quality and safety while supporting the existing features of o3-mini and delivering comparable or better performance.",
+      "context_size": 200000,
+      "context_label": "200K",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
+      },
+      "trial_scope": "all",
+      "model_family": "o4-mini",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "github/o3-mini",
+      "created": 2023292563,
+      "provider": "github",
+      "name": "OpenAI o3-mini",
+      "description": "o3-mini includes the o1 features with significant cost-efficiencies for scenarios requiring high performance.",
+      "context_size": 200000,
+      "context_label": "200K",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
+      },
+      "trial_scope": "all",
+      "model_family": "o3-mini",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "github/o3",
+      "created": 1817828935,
+      "provider": "github",
+      "name": "OpenAI o3",
+      "description": "o3 includes significant improvements on quality and safety while supporting the existing features of o1 and delivering comparable or better performance.",
+      "context_size": 200000,
+      "context_label": "200K",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
+      },
+      "trial_scope": "all",
+      "model_family": "github-o3",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "github/o1-preview",
+      "created": 1871391782,
+      "provider": "github",
+      "name": "OpenAI o1-preview",
+      "description": "Focused on advanced reasoning and solving complex problems, including math and science tasks. Ideal for applications that require deep contextual understanding and agentic workflows.",
+      "context_size": 128000,
+      "context_label": "128K",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "reasoning",
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
+      },
+      "trial_scope": "all",
+      "model_family": "o1-preview",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "github/o1-mini",
+      "created": 1945021777,
+      "provider": "github",
+      "name": "OpenAI o1-mini",
+      "description": "Smaller, faster, and 80% cheaper than o1-preview, performs well at code generation and small context operations.",
+      "context_size": 128000,
+      "context_label": "128K",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
+      },
+      "trial_scope": "all",
+      "model_family": "o1-mini",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "github/o1",
+      "created": 1817828937,
+      "provider": "github",
+      "name": "OpenAI o1",
+      "description": "Focused on advanced reasoning and solving complex problems, including math and science tasks. Ideal for applications that require deep contextual understanding and agentic workflows.",
+      "context_size": 200000,
+      "context_label": "200K",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "reasoning",
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
+      },
+      "trial_scope": "all",
+      "model_family": "github-o1",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "github/gpt-5-nano",
+      "created": 933886019,
+      "provider": "github",
+      "name": "OpenAI gpt-5-nano",
+      "description": "gpt-5-nano is optimized for speed, ideal for applications requiring low latency. ",
+      "context_size": 200000,
+      "context_label": "200K",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
+      },
+      "trial_scope": "all",
+      "model_family": "gpt-5-nano",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "github/gpt-5-mini",
+      "created": 933913250,
+      "provider": "github",
+      "name": "OpenAI gpt-5-mini",
+      "description": "gpt-5-mini is a lightweight version for cost-sensitive applications.",
+      "context_size": 200000,
+      "context_label": "200K",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
+      },
+      "trial_scope": "all",
+      "model_family": "gpt-5-mini",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "github/gpt-5-chat",
+      "created": 934274127,
+      "provider": "github",
+      "name": "OpenAI gpt-5-chat (preview)",
+      "description": "gpt-5-chat (preview) is an advanced, natural, multimodal, and context-aware conversations for enterprise applications.",
+      "context_size": 200000,
+      "context_label": "200K",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "chat",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
+      },
+      "trial_scope": "all",
+      "model_family": "gpt-5-(preview)",
+      "model_variant": "chat",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "github/gpt-5",
+      "created": 873032284,
+      "provider": "github",
+      "name": "OpenAI gpt-5",
+      "description": "gpt-5 is designed for logic-heavy and multi-step tasks. ",
+      "context_size": 200000,
+      "context_label": "200K",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
+      },
+      "trial_scope": "all",
+      "model_family": "gpt-5",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "github/gpt-4o-mini",
+      "created": 461341420,
+      "provider": "github",
+      "name": "OpenAI GPT-4o mini",
+      "description": "An affordable, efficient AI solution for diverse text and image tasks.",
+      "context_size": 131072,
+      "context_label": "131K",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "chat",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
+      },
+      "trial_scope": "all",
+      "model_family": "gpt-4o-mini",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "github/gpt-4o",
+      "created": 1254705778,
+      "provider": "github",
+      "name": "OpenAI GPT-4o",
+      "description": "OpenAI's most advanced multimodal model in the gpt-4o family. Can handle both text and image inputs.",
+      "context_size": 131072,
+      "context_label": "131K",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "chat",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
+      },
+      "trial_scope": "all",
+      "model_family": "gpt-4o",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "github/gpt-4-1-nano",
+      "created": 1212333926,
+      "provider": "github",
+      "name": "OpenAI GPT-4.1-nano",
+      "description": "gpt-4.1-nano provides gains in coding, instruction following, and long-context handling along with lower latency and cost",
+      "context_size": 1048576,
+      "context_label": "1M",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
+      },
+      "trial_scope": "all",
+      "model_family": "gpt-4.1-nano",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "github/gpt-4-1-mini",
+      "created": 1212361157,
+      "provider": "github",
+      "name": "OpenAI GPT-4.1-mini",
+      "description": "gpt-4.1-mini outperform gpt-4o-mini across the board, with major gains in coding, instruction following, and long-context handling",
+      "context_size": 1048576,
+      "context_label": "1M",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
+      },
+      "trial_scope": "all",
+      "model_family": "gpt-4.1-mini",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "github/gpt-4-1",
+      "created": 1544384415,
+      "provider": "github",
+      "name": "OpenAI GPT-4.1",
+      "description": "gpt-4.1 outperforms gpt-4o across the board, with major gains in coding, instruction following, and long-context understanding",
+      "context_size": 1048576,
+      "context_label": "1M",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
+      },
+      "trial_scope": "all",
+      "model_family": "gpt-4.1",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "github/Meta-Llama-3-1-8B-Instruct",
+      "created": 1481244960,
+      "provider": "github",
+      "name": "Meta-Llama-3.1-8B-Instruct",
+      "description": "The Llama 3.1 instruction tuned text only models are optimized for multilingual dialogue use cases and outperform many of the available open source and closed chat models on common industry benchmarks.",
+      "context_size": 131072,
+      "context_label": "131K",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation",
+        "chat"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
+      },
+      "trial_scope": "all",
+      "model_family": "3.1-8b",
+      "model_variant": "instruct",
+      "aliases": [],
+      "parameter_count": 8000000000,
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "github/Meta-Llama-3-1-405B-Instruct",
+      "created": 791014143,
+      "provider": "github",
+      "name": "Meta-Llama-3.1-405B-Instruct",
+      "description": "The Llama 3.1 instruction tuned text only models are optimized for multilingual dialogue use cases and outperform many of the available open source and closed chat models on common industry benchmarks.",
+      "context_size": 131072,
+      "context_label": "131K",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation",
+        "chat"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
+      },
+      "trial_scope": "all",
+      "model_family": "3.1-405b",
+      "model_variant": "instruct",
+      "aliases": [],
+      "parameter_count": 405000000000,
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "github/MAI-DS-R1",
+      "created": 1229766914,
+      "provider": "github",
+      "name": "MAI-DS-R1",
+      "description": "MAI-DS-R1 is a DeepSeek-R1 reasoning model that has been post-trained by the Microsoft AI team to fill in information gaps in the previous version of the model and improve its harm protections while maintaining R1 reasoning capabilities.",
+      "context_size": 128000,
+      "context_label": "128K",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "reasoning",
+        "text-generation",
+        "chat"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
+      },
+      "trial_scope": "all",
+      "model_family": "mai-ds-r1",
+      "model_variant": "r1",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "github/Llama-3-3-70B-Instruct",
+      "created": 1125580093,
+      "provider": "github",
+      "name": "Llama-3.3-70B-Instruct",
+      "description": "Llama 3.3 70B Instruct offers enhanced reasoning, math, and instruction following with performance comparable to Llama 3.1 405B.",
+      "context_size": 128000,
+      "context_label": "128K",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "reasoning",
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
+      },
+      "trial_scope": "all",
+      "model_family": "llama-3.3-70b",
+      "model_variant": "instruct",
+      "aliases": [
+        "groq/llama-3.3-70b-versatile",
+        "meta/llama-3.3-70b-instruct",
+        "sambanova/Meta-Llama-3.3-70B-Instruct"
+      ],
+      "parameter_count": 70000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "github/Llama-3-2-90B-Vision-Instruct",
+      "created": 595156925,
+      "provider": "github",
+      "name": "Llama-3.2-90B-Vision-Instruct",
+      "description": "Advanced image reasoning capabilities for visual understanding agentic apps.",
+      "context_size": 128000,
+      "context_label": "128K",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "reasoning",
+        "vision",
+        "chat",
+        "text-generation",
+        "multimodal"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
+      },
+      "trial_scope": "all",
+      "model_family": "llama-3.2-90b-vision",
+      "model_variant": "vision",
+      "aliases": [
+        "meta/llama-3.2-90b-vision-instruct"
+      ],
+      "parameter_count": 90000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "image-understanding",
+        "visual-q&a",
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "github/Llama-3-2-11B-Vision-Instruct",
+      "created": 1137283164,
+      "provider": "github",
+      "name": "Llama-3.2-11B-Vision-Instruct",
+      "description": "Excels in image reasoning capabilities on high-res images for visual understanding apps.",
+      "context_size": 128000,
+      "context_label": "128K",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "reasoning",
+        "vision",
+        "chat",
+        "text-generation",
+        "multimodal"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
+      },
+      "trial_scope": "all",
+      "model_family": "llama-3.2-11b-vision",
+      "model_variant": "vision",
+      "aliases": [
+        "meta/llama-3.2-11b-vision-instruct"
+      ],
+      "parameter_count": 11000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "image-understanding",
+        "visual-q&a",
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "github/Llama-4-Scout-17B-16E-Instruct",
+      "created": 1291378253,
+      "provider": "github",
+      "name": "Llama 4 Scout 17B 16E Instruct",
+      "description": "Llama 4 Scout 17B 16E Instruct is great at multi-document summarization, parsing extensive user activity for personalized tasks, and reasoning over vast codebases.",
+      "context_size": 10000000,
+      "context_label": "10M",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "reasoning",
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
+      },
+      "trial_scope": "all",
+      "model_family": "llama-4-scout-17b-16e",
+      "model_variant": "instruct",
+      "aliases": [
+        "groq/meta-llama/llama-4-scout-17b-16e-instruct"
+      ],
+      "parameter_count": 17000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "github/Llama-4-Maverick-17B-128E-Instruct-FP8",
+      "created": 894047558,
+      "provider": "github",
+      "name": "Llama 4 Maverick 17B 128E Instruct FP8",
+      "description": "Llama 4 Maverick 17B 128E Instruct FP8 is great at precise image understanding and creative writing, offering high quality at a lower price compared to Llama 3.3 70B",
+      "context_size": 1000000,
+      "context_label": "1M",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "vision",
+        "chat",
+        "text-generation",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
+      },
+      "trial_scope": "all",
+      "model_family": "llama-4-maverick-17b-128e",
+      "model_variant": "instruct",
+      "quantization": "fp8",
+      "aliases": [
+        "meta/llama-4-maverick-17b-128e-instruct",
+        "sambanova/Llama-4-Maverick-17B-128E-Instruct"
+      ],
+      "parameter_count": 17000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "github/Cohere-command-r-plus-08-2024",
+      "created": 1093061293,
+      "provider": "github",
+      "name": "Cohere Command R+ 08-2024",
+      "description": "Command R+ is a state-of-the-art RAG-optimized model designed to tackle enterprise-grade workloads.",
+      "context_size": 131072,
+      "context_label": "131K",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation",
+        "chat"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
+      },
+      "trial_scope": "all",
+      "model_family": "cohere-command-r+-08",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "github/Cohere-command-r-08-2024",
+      "created": 319407806,
+      "provider": "github",
+      "name": "Cohere Command R 08-2024",
+      "description": "Command R is a scalable generative model targeting RAG and Tool Use to enable production-scale AI for enterprise.",
+      "context_size": 131072,
+      "context_label": "131K",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation",
+        "tool-use",
+        "chat"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
+      },
+      "trial_scope": "all",
+      "model_family": "cohere-command-r-08",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "github/cohere-command-a",
+      "created": 1356767769,
+      "provider": "github",
+      "name": "Cohere Command A",
+      "description": "Command A is a highly efficient generative model that excels at agentic and multilingual use cases.",
+      "context_size": 131072,
+      "context_label": "131K",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation",
+        "chat"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
+      },
+      "trial_scope": "all",
+      "model_family": "cohere-command-a",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "github/mistral-small-2503",
+      "created": 531792016,
+      "provider": "github",
+      "name": "Mistral Small 3.1",
+      "description": "Enhanced Mistral Small 3 with multimodal capabilities and a 128k context length.",
+      "context_size": 128000,
+      "context_label": "128K",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "vision",
+        "chat",
+        "text-generation",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
+      },
+      "trial_scope": "all",
+      "model_family": "mistral-small-3.1",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "github/Codestral-2501",
+      "created": 118895795,
+      "provider": "github",
+      "name": "Codestral 25.01",
+      "description": "Codestral 25.01 by Mistral AI is designed for code generation, supporting 80+ programming languages, and optimized for tasks like code completion and fill-in-the-middle",
+      "context_size": 256000,
+      "context_label": "256K",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
+      },
+      "trial_scope": "all",
+      "model_family": "codestral-25.01",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "github/mistral-medium-2505",
+      "created": 1947813446,
+      "provider": "github",
+      "name": "Mistral Medium 3 (25.05)",
+      "description": "Mistral Medium 3 is an advanced Large Language Model (LLM) with state-of-the-art reasoning, knowledge, coding and vision capabilities.",
+      "context_size": 128000,
+      "context_label": "128K",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "reasoning",
+        "vision",
+        "text-generation",
+        "chat",
+        "multimodal"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
+      },
+      "trial_scope": "all",
+      "model_family": "mistral-medium-3-(25.05)",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "github/Ministral-3B",
+      "created": 1733062572,
+      "provider": "github",
+      "name": "Ministral 3B",
+      "description": "Ministral 3B is a state-of-the-art Small Language Model (SLM) optimized for edge computing and on-device applications. As it is designed for low-latency and compute-efficient inference, it it also the perfect model for standard GenAI applications that have",
+      "context_size": 131072,
+      "context_label": "131K",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation",
+        "chat"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
+      },
+      "trial_scope": "all",
+      "model_family": "ministral-3b",
+      "aliases": [],
+      "parameter_count": 3000000000,
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "github/DeepSeek-V3-0324",
+      "created": 983049015,
+      "provider": "github",
+      "name": "DeepSeek-V3-0324",
+      "description": "DeepSeek-V3-0324 demonstrates notable improvements over its predecessor, DeepSeek-V3, in several key aspects, including enhanced reasoning, improved function calling, and superior code generation capabilities.",
+      "context_size": 128000,
+      "context_label": "128K",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "reasoning",
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
+      },
+      "trial_scope": "all",
+      "model_family": "deepseek-v3",
+      "aliases": [
+        "DeepSeek-V3",
+        "xingchen/xdeepseekv3"
+      ],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "github/DeepSeek-R1-0528",
+      "created": 1932222199,
+      "provider": "github",
+      "name": "DeepSeek-R1-0528",
+      "description": "The DeepSeek R1 0528 model has improved reasoning capabilities, this version also offers a reduced hallucination rate, enhanced support for function calling, and better experience for vibe coding.",
+      "context_size": 128000,
+      "context_label": "128K",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "reasoning",
+        "text-generation",
+        "chat"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
+      },
+      "trial_scope": "all",
+      "model_family": "deepseek-r1",
+      "model_variant": "r1",
+      "aliases": [
+        "DeepSeek-R1",
+        "github/DeepSeek-R1",
+        "xingchen/xdeepseekr1"
+      ],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "github/DeepSeek-R1",
+      "created": 197420051,
+      "provider": "github",
+      "name": "DeepSeek-R1",
+      "description": "DeepSeek-R1 excels at reasoning tasks using a step-by-step training process, such as language, scientific reasoning, and coding tasks.",
+      "context_size": 128000,
+      "context_label": "128K",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "reasoning",
+        "text-generation",
+        "chat"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
+      },
+      "trial_scope": "all",
+      "model_family": "deepseek-r1",
+      "model_variant": "r1",
+      "aliases": [
+        "DeepSeek-R1",
+        "github/DeepSeek-R1-0528",
+        "xingchen/xdeepseekr1"
+      ],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "github/grok-3-mini",
+      "created": 1850396580,
+      "provider": "github",
+      "name": "Grok 3 Mini",
+      "description": "Grok 3 Mini is a lightweight model that thinks before responding. Trained on mathematic and scientific problems, it is great for logic-based tasks.",
+      "context_size": 131072,
+      "context_label": "131K",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation",
+        "chat"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
+      },
+      "trial_scope": "all",
+      "model_family": "grok-3-mini",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "github/grok-3",
+      "created": 1256965162,
+      "provider": "github",
+      "name": "Grok 3",
+      "description": "Grok 3 is xAI's debut model, pretrained by Colossus at supermassive scale to excel in specialized domains like finance, healthcare, and the law.",
+      "context_size": 131072,
+      "context_label": "131K",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation",
+        "chat"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
+      },
+      "trial_scope": "all",
+      "model_family": "grok-3",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
       "id": "google/gemini-3.1-flash-lite-preview",
-      "created": 1779084955,
+      "created": 720964174,
       "provider": "google",
       "name": "Gemini 3.1 Flash-Lite Preview",
       "description": "Google: 最具成本效益的模型，针对高容量代理任务、翻译和简单数据处理优化",
@@ -125,7 +2975,7 @@
     },
     {
       "id": "google/gemini-3.1-flash-live-preview",
-      "created": 1779084956,
+      "created": 856566928,
       "provider": "google",
       "name": "Gemini 3.1 Flash Live Preview",
       "description": "Google: 低延迟音频到音频模型，优化实时对话、 acoustic nuance 检测",
@@ -167,7 +3017,7 @@
     },
     {
       "id": "google/gemini-3.1-flash-tts-preview",
-      "created": 1779084957,
+      "created": 943760155,
       "provider": "google",
       "name": "Gemini 3.1 Flash TTS Preview",
       "description": "Google: 3.1 Flash 文本转语音模型，优化价格性能比",
@@ -201,12 +3051,12 @@
     },
     {
       "id": "google/gemini-3-flash-preview",
-      "created": 1779084958,
+      "created": 769096788,
       "provider": "google",
       "name": "Gemini 3 Flash Preview",
       "description": "Google: 为速度而构建的智能模型，结合前沿智能与卓越搜索",
       "context_size": 1000000,
-      "context_label": "unknown",
+      "context_label": "1M",
       "price_input": 0.5,
       "price_output": 3,
       "is_free": true,
@@ -216,10 +3066,11 @@
         "reasoning"
       ],
       "tags": [
+        "chat",
         "text-generation",
-        "chat"
+        "reasoning"
       ],
-      "is_reasoning": false,
+      "is_reasoning": true,
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
@@ -227,20 +3078,24 @@
       "trial_scope": "fast",
       "model_family": "gemini-3-flash-preview",
       "aliases": [],
-      "tier": "medium",
+      "tier": "large",
       "speed": "fast",
       "use_case": [
+        "conversation",
+        "q&a",
         "content-creation",
         "writing-assistance",
-        "conversation",
-        "q&a"
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
       "id": "google/gemini-2.5-pro",
-      "created": 1779084959,
+      "created": 294251798,
       "provider": "google",
       "name": "Gemini 2.5 Pro",
       "description": "Google: 最先进的通用模型，擅长编码和复杂推理任务",
@@ -260,7 +3115,7 @@
         "text-generation",
         "reasoning"
       ],
-      "is_reasoning": false,
+      "is_reasoning": true,
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
@@ -285,7 +3140,7 @@
     },
     {
       "id": "google/gemini-2.5-flash",
-      "created": 1779084960,
+      "created": 1670252999,
       "provider": "google",
       "name": "Gemini 2.5 Flash",
       "description": "Google: 首个混合推理模型，支持 1M token 上下文窗口和思考预算",
@@ -304,7 +3159,7 @@
         "text-generation",
         "reasoning"
       ],
-      "is_reasoning": false,
+      "is_reasoning": true,
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
@@ -329,7 +3184,7 @@
     },
     {
       "id": "google/gemini-2.5-flash-lite",
-      "created": 1779084961,
+      "created": 1638296638,
       "provider": "google",
       "name": "Gemini 2.5 Flash-Lite",
       "description": "Google: 最小且最具成本效益的模型，为规模化使用而构建",
@@ -367,7 +3222,7 @@
     },
     {
       "id": "google/gemini-2.5-flash-lite-preview-09-2025",
-      "created": 1779084962,
+      "created": 1575125565,
       "provider": "google",
       "name": "Gemini 2.5 Flash-Lite Preview",
       "description": "Google: 基于 Gemini 2.5 Flash Lite 优化成本效益、高吞吐量和高质量",
@@ -405,7 +3260,7 @@
     },
     {
       "id": "google/gemini-2.5-flash-native-audio-preview-12-2025",
-      "created": 1779084963,
+      "created": 347378161,
       "provider": "google",
       "name": "Gemini 2.5 Flash Native Audio",
       "description": "Google: 原生音频模型，优化更高质量的音频输出",
@@ -448,7 +3303,7 @@
     },
     {
       "id": "google/gemini-2.5-flash-preview-tts",
-      "created": 1779084964,
+      "created": 1426061598,
       "provider": "google",
       "name": "Gemini 2.5 Flash Preview TTS",
       "description": "Google: 2.5 Flash 文本转语音模型，优化价格性能比和低延迟",
@@ -482,7 +3337,7 @@
     },
     {
       "id": "google/gemini-2.0-flash",
-      "created": 1779084965,
+      "created": 492119550,
       "provider": "google",
       "name": "Gemini 2.0 Flash",
       "description": "Google: （已弃用，将于 2026 年 6 月 1 日关闭）",
@@ -520,7 +3375,7 @@
     },
     {
       "id": "google/gemini-2.0-flash-lite",
-      "created": 1779084966,
+      "created": 1449606947,
       "provider": "google",
       "name": "Gemini 2.0 Flash-Lite",
       "description": "Google: （已弃用，将于 2026 年 6 月 1 日关闭）",
@@ -558,7 +3413,7 @@
     },
     {
       "id": "google/gemini-embedding-2",
-      "created": 1779084967,
+      "created": 1954536875,
       "provider": "google",
       "name": "Gemini Embedding 2",
       "description": "Google: 首个多模态嵌入模型，将文本、图像、视频、音频和 PDF 映射到统一嵌入空间",
@@ -569,7 +3424,6 @@
         "embeddings"
       ],
       "tags": [
-        "text-generation",
         "embeddings"
       ],
       "is_reasoning": false,
@@ -584,8 +3438,6 @@
       "tier": "small",
       "speed": "fast",
       "use_case": [
-        "content-creation",
-        "writing-assistance",
         "semantic-search",
         "similarity"
       ],
@@ -594,7 +3446,7 @@
     },
     {
       "id": "google/gemini-embedding-001",
-      "created": 1779084968,
+      "created": 1813121396,
       "provider": "google",
       "name": "Gemini Embedding",
       "description": "Google: 纯文本嵌入模型",
@@ -605,7 +3457,6 @@
         "embeddings"
       ],
       "tags": [
-        "text-generation",
         "embeddings"
       ],
       "is_reasoning": false,
@@ -620,8 +3471,6 @@
       "tier": "small",
       "speed": "fast",
       "use_case": [
-        "content-creation",
-        "writing-assistance",
         "semantic-search",
         "similarity"
       ],
@@ -630,7 +3479,7 @@
     },
     {
       "id": "google/gemini-robotics-er-1.6-preview",
-      "created": 1779084969,
+      "created": 761682543,
       "provider": "google",
       "name": "Gemini Robotics-ER 1.6 Preview",
       "description": "Google: 思考模型，增强机器人理解物理世界并与之交互的能力",
@@ -669,7 +3518,7 @@
     },
     {
       "id": "google/gemini-robotics-er-1.5-preview",
-      "created": 1779084970,
+      "created": 1578972304,
       "provider": "google",
       "name": "Gemini Robotics-ER 1.5 Preview",
       "description": "Google: 思考模型，增强机器人理解物理世界并与之交互的能力",
@@ -708,7 +3557,7 @@
     },
     {
       "id": "google/gemma-4",
-      "created": 1779084971,
+      "created": 622978905,
       "provider": "google",
       "name": "Gemma 4",
       "description": "Google: 轻量级、最先进的开放模型",
@@ -743,8 +3592,738 @@
       "estimated_latency": "< 1s"
     },
     {
+      "id": "groq/whisper-large-v3",
+      "created": 821695011,
+      "provider": "groq",
+      "name": "whisper-large-v3",
+      "context_size": 448,
+      "context_label": "448",
+      "price_input": 0.111,
+      "is_free": true,
+      "capabilities": [
+        "speech-recognition"
+      ],
+      "tags": [
+        "speech-recognition"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Rate-limited free tier"
+      },
+      "trial_scope": "all",
+      "model_family": "whisper-large-v3",
+      "aliases": [
+        "whisper-large-v3-turbo",
+        "whisper-large-v3",
+        "groq/whisper-large-v3-turbo"
+      ],
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "transcription",
+        "voice-input"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "groq/meta-llama/llama-prompt-guard-2-86m",
+      "created": 2021365556,
+      "provider": "groq",
+      "name": "meta-llama/llama-prompt-guard-2-86m",
+      "context_size": 512,
+      "context_label": "512",
+      "is_free": true,
+      "capabilities": [
+        "moderation"
+      ],
+      "tags": [
+        "moderation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Rate-limited free tier"
+      },
+      "trial_scope": "all",
+      "model_family": "llama-prompt-guard-2-86m",
+      "model_variant": "guard",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-filtering",
+        "safety"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "groq/openai/gpt-oss-20b",
+      "created": 772969846,
+      "provider": "groq",
+      "name": "openai/gpt-oss-20b",
+      "context_size": 131072,
+      "context_label": "131K",
+      "price_input": 0.075,
+      "price_output": 0.3,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpd": 1000,
+        "tpm": 8000
+      },
+      "trial_scope": "all",
+      "model_family": "gpt-oss-20b",
+      "aliases": [
+        "openai/gpt-oss-20b"
+      ],
+      "parameter_count": 20000000000,
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "groq/qwen/qwen3-32b",
+      "created": 1949760537,
+      "provider": "groq",
+      "name": "qwen/qwen3-32b",
+      "context_size": 131072,
+      "context_label": "131K",
+      "price_input": 0.29,
+      "price_output": 0.59,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "reasoning"
+      ],
+      "tags": [
+        "chat",
+        "text-generation",
+        "reasoning"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpd": 1000,
+        "tpm": 6000
+      },
+      "trial_scope": "all",
+      "model_family": "qwen3-32b",
+      "aliases": [
+        "Qwen3-32B",
+        "xingchen/xop3qwen32b"
+      ],
+      "parameter_count": 32000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "groq/openai/gpt-oss-120b",
+      "created": 261834169,
+      "provider": "groq",
+      "name": "openai/gpt-oss-120b",
+      "context_size": 131072,
+      "context_label": "131K",
+      "price_input": 0.15,
+      "price_output": 0.6,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpd": 1000,
+        "tpm": 8000
+      },
+      "trial_scope": "all",
+      "model_family": "gpt-oss-120b",
+      "aliases": [
+        "gpt-oss-120b",
+        "openai/gpt-oss-120b",
+        "sambanova/gpt-oss-120b"
+      ],
+      "parameter_count": 120000000000,
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "groq/canopylabs/orpheus-v1-english",
+      "created": 1993843289,
+      "provider": "groq",
+      "name": "canopylabs/orpheus-v1-english",
+      "context_size": 4000,
+      "context_label": "4K",
+      "price_input": 22,
+      "is_free": true,
+      "capabilities": [
+        "speech-synthesis"
+      ],
+      "tags": [
+        "speech-synthesis"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Rate-limited free tier"
+      },
+      "trial_scope": "all",
+      "model_family": "orpheus-v1-english",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "text-to-speech",
+        "voice-output"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "groq/groq/compound-mini",
+      "created": 326333228,
+      "provider": "groq",
+      "name": "groq/compound-mini",
+      "context_size": 131072,
+      "context_label": "131K",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpd": 250,
+        "tpm": 70000
+      },
+      "trial_scope": "all",
+      "model_family": "compound-mini",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "groq/canopylabs/orpheus-arabic-saudi",
+      "created": 1964073120,
+      "provider": "groq",
+      "name": "canopylabs/orpheus-arabic-saudi",
+      "context_size": 4000,
+      "context_label": "4K",
+      "price_input": 40,
+      "is_free": true,
+      "capabilities": [
+        "speech-synthesis",
+        "translation"
+      ],
+      "tags": [
+        "speech-synthesis",
+        "translation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Rate-limited free tier"
+      },
+      "trial_scope": "all",
+      "model_family": "orpheus-arabic-saudi",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "text-to-speech",
+        "voice-output"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "groq/whisper-large-v3-turbo",
+      "created": 831031114,
+      "provider": "groq",
+      "name": "whisper-large-v3-turbo",
+      "context_size": 448,
+      "context_label": "448",
+      "price_input": 0.04,
+      "is_free": true,
+      "capabilities": [
+        "speech-recognition"
+      ],
+      "tags": [
+        "speech-recognition"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Rate-limited free tier"
+      },
+      "trial_scope": "all",
+      "model_family": "whisper-large-v3",
+      "model_variant": "turbo",
+      "aliases": [
+        "whisper-large-v3-turbo",
+        "whisper-large-v3",
+        "groq/whisper-large-v3"
+      ],
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "transcription",
+        "voice-input"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "groq/meta-llama/llama-prompt-guard-2-22m",
+      "created": 2021358890,
+      "provider": "groq",
+      "name": "meta-llama/llama-prompt-guard-2-22m",
+      "context_size": 512,
+      "context_label": "512",
+      "is_free": true,
+      "capabilities": [
+        "moderation"
+      ],
+      "tags": [
+        "moderation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Rate-limited free tier"
+      },
+      "trial_scope": "all",
+      "model_family": "llama-prompt-guard-2-22m",
+      "model_variant": "guard",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-filtering",
+        "safety"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "groq/llama-3.3-70b-versatile",
+      "created": 281060039,
+      "provider": "groq",
+      "name": "llama-3.3-70b-versatile",
+      "context_size": 131072,
+      "context_label": "131K",
+      "price_input": 0.59,
+      "price_output": 0.79,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpd": 1000,
+        "tpm": 12000
+      },
+      "trial_scope": "all",
+      "model_family": "llama-3.3-70b",
+      "model_variant": "versatile",
+      "aliases": [
+        "github/Llama-3-3-70B-Instruct",
+        "meta/llama-3.3-70b-instruct",
+        "sambanova/Meta-Llama-3.3-70B-Instruct"
+      ],
+      "parameter_count": 70000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "groq/openai/gpt-oss-safeguard-20b",
+      "created": 573618965,
+      "provider": "groq",
+      "name": "openai/gpt-oss-safeguard-20b",
+      "context_size": 131072,
+      "context_label": "131K",
+      "price_input": 0.075,
+      "price_output": 0.3,
+      "is_free": true,
+      "capabilities": [
+        "moderation"
+      ],
+      "tags": [
+        "moderation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Rate-limited free tier"
+      },
+      "trial_scope": "all",
+      "model_family": "gpt-oss-safeguard-20b",
+      "aliases": [],
+      "parameter_count": 20000000000,
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-filtering",
+        "safety"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "groq/meta-llama/llama-4-scout-17b-16e-instruct",
+      "created": 463560371,
+      "provider": "groq",
+      "name": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "context_size": 131072,
+      "context_label": "131K",
+      "price_input": 0.11,
+      "price_output": 0.34,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpd": 1000,
+        "tpm": 30000
+      },
+      "trial_scope": "all",
+      "model_family": "llama-4-scout-17b-16e",
+      "model_variant": "instruct",
+      "aliases": [
+        "github/Llama-4-Scout-17B-16E-Instruct"
+      ],
+      "parameter_count": 17000000000,
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "groq/allam-2-7b",
+      "created": 1278808711,
+      "provider": "groq",
+      "name": "allam-2-7b",
+      "context_size": 4096,
+      "context_label": "4K",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpd": 7000,
+        "tpm": 6000
+      },
+      "trial_scope": "all",
+      "model_family": "allam-2-7b",
+      "aliases": [],
+      "parameter_count": 7000000000,
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "groq/groq/compound",
+      "created": 1269203802,
+      "provider": "groq",
+      "name": "groq/compound",
+      "context_size": 131072,
+      "context_label": "131K",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpd": 250,
+        "tpm": 70000
+      },
+      "trial_scope": "all",
+      "model_family": "groq-compound",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "groq/llama-3.1-8b-instant",
+      "created": 1070279672,
+      "provider": "groq",
+      "name": "llama-3.1-8b-instant",
+      "context_size": 131072,
+      "context_label": "131K",
+      "price_input": 0.05,
+      "price_output": 0.08,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpd": 14400,
+        "tpm": 6000
+      },
+      "trial_scope": "all",
+      "model_family": "llama-3.1-8b-instant",
+      "aliases": [],
+      "parameter_count": 8000000000,
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "openrouter/x-ai/grok-imagine-video",
+      "created": 1912116803,
+      "provider": "openrouter",
+      "name": "xAI: Grok Imagine Video",
+      "description": "Grok Imagine Video is xAI's fast, text-, image-, and reference-conditioned video generation model. It produces short videos (1–15 seconds, 24 fps) at 480p or 720p across seven aspect ratios - 1:1, 16:9, 9:16, 4:3, 3:4, 3:2, and 2:3.\n\nThe model supports three generation modes: text-to-video from a prompt alone, image-to-video that animates a still input, and reference-to-video that grounds the output in up to seven reference images for consistent characters, styles, or settings.",
+      "context_label": "unknown",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "chat",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "rpd": 50,
+        "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
+      },
+      "trial_scope": "specific",
+      "model_family": "xai:-grok-imagine-video",
+      "model_variant": "video",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "openrouter/x-ai/grok-imagine-image-quality",
+      "created": 1847076379,
+      "provider": "openrouter",
+      "name": "xAI: Grok Imagine Image Quality",
+      "description": "Grok Imagine Image Quality is xAI's fast, high-fidelity image generation and editing model. It accepts text prompts and optional reference images, producing photorealistic outputs at 1K or 2K across a range of aspect ratios, including flexible adjustment of reference images.\n\nThe model emphasizes realistic detail — natural lighting and physics, accurate textures, and consistent rendering of named entities such as brands, public figures, and specific locations. It supports clean multilingual text",
+      "context_size": 65536,
+      "context_label": "66K",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "chat",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "rpd": 50,
+        "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
+      },
+      "trial_scope": "specific",
+      "model_family": "xai:-grok-imagine-image-quality",
+      "model_variant": "image",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
       "id": "openrouter/recraft/recraft-v4.1-pro-vector",
-      "created": 1779084972,
+      "created": 271868328,
       "provider": "openrouter",
       "name": "Recraft: Recraft V4.1 Pro Vector",
       "description": "Recraft V4.1 Pro Vector is the vector (SVG) variant of Recraft V4.1 Pro, tuned for high aesthetics. It supports text and image inputs and produces higher-resolution SVG image output across multiple aspect ratios, with typical generation around 20 seconds. Output scales cleanly, making it suitable for icons, logos, and other graphics. V4.1 brings more personality to text and illustrations, smoother gradients, and stronger short-prompt adherence compared to V4 Pro.\n\nSuited for higher-resolution il",
@@ -791,7 +4370,7 @@
     },
     {
       "id": "openrouter/recraft/recraft-v4.1-vector",
-      "created": 1779084973,
+      "created": 1601284486,
       "provider": "openrouter",
       "name": "Recraft: Recraft V4.1 Vector",
       "description": "Recraft V4.1 Vector is the vector (SVG) variant of Recraft V4.1, tuned for high aesthetics. It supports text and image inputs and produces SVG image output across multiple aspect ratios, with typical generation around 13 seconds. Output scales cleanly, making it suitable for icons, logos, and other graphics. V4.1 brings more personality to text and illustrations, smoother gradients, and stronger short-prompt adherence compared to V4.\n\nSuited for everyday illustration work where output should be ",
@@ -838,7 +4417,7 @@
     },
     {
       "id": "openrouter/recraft/recraft-v4.1-utility-pro",
-      "created": 1779084974,
+      "created": 823939001,
       "provider": "openrouter",
       "name": "Recraft: Recraft V4.1 Utility Pro",
       "description": "Recraft V4.1 Utility Pro is a general-purpose image generation model from Recraft. It supports text and image inputs with image output at ~2K resolution across multiple aspect ratios — double the resolution of V4.1 Utility - with typical generation around 20 seconds. Like V4.1 Utility, it is designed for restraint as the aesthetic choice - flat lighting, front-facing composition, and simple, controlled scenes - at higher fidelity for production use cases.\n\nV4.1 improvements over V4 Pro include m",
@@ -885,7 +4464,7 @@
     },
     {
       "id": "openrouter/recraft/recraft-v4.1-utility",
-      "created": 1779084975,
+      "created": 2000395877,
       "provider": "openrouter",
       "name": "Recraft: Recraft V4.1 Utility",
       "description": "Recraft V4.1 Utility is a general-purpose image generation model from Recraft. It supports text and image inputs with image output at ~1K resolution across multiple aspect ratios, with typical generation around 10 seconds. The Utility line is designed for restraint as the aesthetic choice - flat lighting, front-facing composition, and simple, controlled scenes - making it a practical fit for product imagery, mockups, and structured visuals where the high-aesthetic V4.1 line would be too expressi",
@@ -932,7 +4511,7 @@
     },
     {
       "id": "openrouter/recraft/recraft-v4.1-pro",
-      "created": 1779084976,
+      "created": 532144280,
       "provider": "openrouter",
       "name": "Recraft: Recraft V4.1 Pro",
       "description": "Recraft V4.1 Pro is an image generation model from Recraft tuned for high aesthetics. It supports text and image inputs with image output at ~2K resolution across multiple aspect ratios - double the resolution of V4.1 - with typical generation around 30 seconds. It shares the V4.1 visual sensibility at higher fidelity and detail density, with more natural photorealism, smoother 3D rendering and gradients, and stronger short-prompt adherence than V4 Pro.\n\nSuited for production work where image qu",
@@ -979,7 +4558,7 @@
     },
     {
       "id": "openrouter/recraft/recraft-v4.1",
-      "created": 1779084977,
+      "created": 659839738,
       "provider": "openrouter",
       "name": "Recraft: Recraft V4.1",
       "description": "Recraft V4.1 is an image generation model from Recraft tuned for high aesthetics. It supports text and image inputs with image output at ~1K resolution across multiple aspect ratios, with typical generation around 10 seconds. Compared to V4, photorealism feels more natural with quieter backgrounds and more purposeful lighting, 3D rendering and soft gradients are smoother, and the model follows shorter prompts more reliably.\n\nSuited for exploration, concept work, and everyday creative work where ",
@@ -1026,7 +4605,7 @@
     },
     {
       "id": "openrouter/recraft/recraft-v4-pro-vector",
-      "created": 1779084978,
+      "created": 1158197543,
       "provider": "openrouter",
       "name": "Recraft: Recraft V4 Pro Vector",
       "description": "Recraft V4 Pro Vector is the vector (SVG) variant of Recraft V4 Pro. It supports text and image inputs and produces vector image output across multiple aspect ratios at the higher fidelity Pro tier. Output is delivered as SVG, suitable for icons, logos, and other graphics that need to scale cleanly. V4 Pro offers higher fidelity and detail density than V4, with stronger compositional judgment, color coherence, and legible embedded text compared to V3.\n\nSupports the following `image_config` param",
@@ -1073,7 +4652,7 @@
     },
     {
       "id": "openrouter/recraft/recraft-v4-vector",
-      "created": 1779084979,
+      "created": 1855712891,
       "provider": "openrouter",
       "name": "Recraft: Recraft V4 Vector",
       "description": "Recraft V4 Vector is the vector (SVG) variant of Recraft V4. It supports text and image inputs and produces vector image output across multiple aspect ratios. Compared to the raster V4, output is delivered as SVG, suitable for icons, logos, and other graphics that need to scale cleanly. V4 delivers stronger compositional judgment, color coherence, and legible embedded text compared to V3.\n\nSupports the following `image_config` parameters: `strength` (controls how much the output deviates from th",
@@ -1120,7 +4699,7 @@
     },
     {
       "id": "openrouter/recraft/recraft-v4-pro",
-      "created": 1779084980,
+      "created": 1305972793,
       "provider": "openrouter",
       "name": "Recraft: Recraft V4 Pro",
       "description": "Recraft V4 Pro is an image generation model from Recraft. It supports text and image inputs with image output at ~2K resolution across multiple aspect ratios, double the resolution of V4. It offers higher fidelity and detail density than V4, suited for production use cases where image quality is a priority.\n\nSupports the following `image_config` parameters: `strength` (controls how much the output deviates from the source image), `rgb_colors` (sets a color palette), and `background_rgb_color` (s",
@@ -1167,7 +4746,7 @@
     },
     {
       "id": "openrouter/recraft/recraft-v4",
-      "created": 1779084981,
+      "created": 485712411,
       "provider": "openrouter",
       "name": "Recraft: Recraft V4",
       "description": "Recraft V4 is an image generation model from Recraft. It supports text and image inputs with image output at ~1K resolution across multiple aspect ratios. It delivers stronger compositional judgment, color coherence, and legible embedded text compared to V3, making it suited for infographics, signage, and packaging.\n\nSupports the following `image_config` parameters: `strength` (controls how much the output deviates from the source image), `rgb_colors` (sets a color palette), and `background_rgb_",
@@ -1214,7 +4793,7 @@
     },
     {
       "id": "openrouter/recraft/recraft-v3",
-      "created": 1779084982,
+      "created": 485712410,
       "provider": "openrouter",
       "name": "Recraft: Recraft V3",
       "description": "Recraft V3 is an image generation model from Recraft. It supports text and image inputs with image output at ~1K resolution across multiple aspect ratios.\n\nSupports the following `image_config` parameters: `strength` (controls how much the output deviates from the source image), `style` (applies an artistic style), `text_layout` (places text at specific positions), `rgb_colors` (sets a color palette), and `background_rgb_color` (sets the background color). See the image generation docs for detai",
@@ -1261,7 +4840,7 @@
     },
     {
       "id": "openrouter/baidu/cobuddy",
-      "created": 1779084983,
+      "created": 1213574267,
       "provider": "openrouter",
       "name": "Baidu Qianfan: CoBuddy (free)",
       "description": "CoBuddy is a code generation model from Baidu, optimized for coding tasks and AI Agent workflows. It features high inference throughput and low end-to-end latency, with native support for tool calling and reasoning. The model runs on fp8 quantization with a 131K token context window and up to 65K output tokens.",
@@ -1310,7 +4889,7 @@
     },
     {
       "id": "openrouter/kwaivgi/kling-v3.0-pro",
-      "created": 1779084984,
+      "created": 1715063503,
       "provider": "openrouter",
       "name": "Kling: Video v3.0 Pro",
       "description": "Kling v3.0 Pro is Kuaishou's premium video generation model, offering higher visual quality than the Standard tier. It supports text-to-video and image-to-video workflows, with first-frame and last-frame control for precise scene composition. Clips range from 3 to 15 seconds in 16:9, 9:16, or 1:1 aspect ratios. Native audio generation is available as an option.",
@@ -1357,7 +4936,7 @@
     },
     {
       "id": "openrouter/kwaivgi/kling-v3.0-std",
-      "created": 1779084985,
+      "created": 1715066825,
       "provider": "openrouter",
       "name": "Kling: Video v3.0 Standard",
       "description": "Kling v3.0 Standard is a video generation model from Kuaishou. It supports text-to-video and image-to-video workflows, with first-frame and last-frame control for guided scene composition. Clips range from 3 to 15 seconds in 16:9, 9:16, or 1:1 aspect ratios. Native audio generation is available as an option.",
@@ -1404,7 +4983,7 @@
     },
     {
       "id": "openrouter/openrouter/owl-alpha",
-      "created": 1779084986,
+      "created": 1388528850,
       "provider": "openrouter",
       "name": "Owl Alpha",
       "description": "Owl Alpha is a high-performance foundation model designed for agentic workloads. Natively supports tool use, and long-context tasks, with strong performance in code generation, automated workflows, and complex instruction execution. Compatible with Claude Code, OpenClaw, and other mainstream productivity tools.\n\nNote: Prompts and completions may be logged by the provider and used to improve the model.",
@@ -1447,7 +5026,7 @@
     },
     {
       "id": "openrouter/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
-      "created": 1779084987,
+      "created": 1459367772,
       "provider": "openrouter",
       "name": "NVIDIA: Nemotron 3 Nano Omni (free)",
       "description": "NVIDIA Nemotron™ 3 Nano Omni is a 30B-A3B open multimodal model designed to function as a perception and context sub-agent in enterprise agent systems. It accepts text, image, video, and audio inputs and produces text output, enabling agents to perceive and reason across modalities in a single inference loop.\n\nBuilt on a hybrid MoE Transformer-Mamba architecture with Conv3D video layers and Efficient Video Sampling (EVS), it delivers approximately 2× higher throughput and 2.5× lower compute for ",
@@ -1466,12 +5045,12 @@
       ],
       "tags": [
         "reasoning",
-        "text-generation",
         "vision",
-        "multimodal",
+        "text-generation",
         "chat",
         "speech-recognition",
-        "video-generation"
+        "video-generation",
+        "multimodal"
       ],
       "is_reasoning": true,
       "is_multimodal": true,
@@ -1492,10 +5071,10 @@
         "problem-solving",
         "logical-analysis",
         "math",
-        "content-creation",
-        "writing-assistance",
         "image-understanding",
         "visual-q&a",
+        "content-creation",
+        "writing-assistance",
         "conversation",
         "q&a",
         "transcription",
@@ -1508,7 +5087,7 @@
     },
     {
       "id": "openrouter/poolside/laguna-xs.2",
-      "created": 1779084988,
+      "created": 2082984965,
       "provider": "openrouter",
       "name": "Poolside: Laguna XS.2 (free)",
       "description": "Laguna XS.2 is the second-generation model in the XS size class from [Poolside](https://poolside.ai), their efficient coding agent series. It combines tool calling and reasoning capabilities with a compact footprint, offering a 128K context window and up to 8K output tokens. Quantized to fp8 for fast, cost-efficient agentic coding workflows.\n\n\nLaguna XS.2 is designed for software engineering and agentic coding use cases, and you are responsible for confirming that it is appropriate for your inte",
@@ -1525,6 +5104,7 @@
       "tags": [
         "reasoning",
         "text-generation",
+        "tool-use",
         "chat"
       ],
       "is_reasoning": true,
@@ -1556,7 +5136,7 @@
     },
     {
       "id": "openrouter/poolside/laguna-m.1",
-      "created": 1779084989,
+      "created": 63106502,
       "provider": "openrouter",
       "name": "Poolside: Laguna M.1 (free)",
       "description": "Laguna M.1 is the flagship coding agent model from [Poolside](https://poolside.ai), optimized for complex software engineering tasks. Designed for agentic coding workflows, it supports tool calling and reasoning, with a 128K context window and up to 8K output tokens. Quantized to fp8 for efficient inference. By using this model, you agree to Poolside’s [End User License Agreement](https://poolside.ai/legal/eula)",
@@ -1573,6 +5153,7 @@
       "tags": [
         "reasoning",
         "text-generation",
+        "tool-use",
         "chat"
       ],
       "is_reasoning": true,
@@ -1604,12 +5185,12 @@
     },
     {
       "id": "openrouter/deepseek/deepseek-v4-flash",
-      "created": 1779084990,
+      "created": 1497929652,
       "provider": "openrouter",
       "name": "DeepSeek: DeepSeek V4 Flash (free)",
       "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and high-throughput workloads, while maintaining strong reasoning and coding performance.\n\nThe model includes hybrid attention for efficient long-context processing. Reasoning efforts `high` and `xhigh` are supported; `xhigh` maps to max reasoning. It is well suited for applications suc",
       "context_size": 1048576,
-      "context_label": "256K",
+      "context_label": "1M",
       "price_input": 0,
       "price_output": 0,
       "is_free": true,
@@ -1652,7 +5233,7 @@
     },
     {
       "id": "openrouter/google/veo-3.1-fast",
-      "created": 1779084991,
+      "created": 1738850345,
       "provider": "openrouter",
       "name": "Google: Veo 3.1 Fast",
       "description": "Google's mid-tier video generation model balancing speed and quality. Veo 3.1 Fast generates high-quality video from text or image prompts with native synchronized audio, offering faster turnaround than Veo 3.1 at lower cost. Supports first-frame and last-frame conditioning, multiple resolutions and aspect ratios, and SynthID watermarking.",
@@ -1666,10 +5247,10 @@
         "vision"
       ],
       "tags": [
-        "text-generation",
         "vision",
-        "multimodal",
-        "chat"
+        "text-generation",
+        "chat",
+        "multimodal"
       ],
       "is_reasoning": false,
       "is_multimodal": true,
@@ -1686,10 +5267,10 @@
       "tier": "large",
       "speed": "fast",
       "use_case": [
-        "content-creation",
-        "writing-assistance",
         "image-understanding",
         "visual-q&a",
+        "content-creation",
+        "writing-assistance",
         "conversation",
         "q&a"
       ],
@@ -1698,7 +5279,7 @@
     },
     {
       "id": "openrouter/google/veo-3.1-lite",
-      "created": 1779084992,
+      "created": 1738625993,
       "provider": "openrouter",
       "name": "Google: Veo 3.1 Lite",
       "description": "Google's most cost-effective video generation model, designed for high-volume applications and rapid iteration. Veo 3.1 Lite generates 720p and 1080p video from text or image prompts with native synchronized audio at less than 50% of the cost of Veo 3.1 Fast. Supports 4–8 second clips in landscape (16:9) and portrait (9:16) formats, with SynthID watermarking. Ideal for content platforms, short-form video creation, and automated media generation.",
@@ -1712,10 +5293,10 @@
         "vision"
       ],
       "tags": [
-        "text-generation",
         "vision",
-        "multimodal",
-        "chat"
+        "text-generation",
+        "chat",
+        "multimodal"
       ],
       "is_reasoning": false,
       "is_multimodal": true,
@@ -1732,10 +5313,10 @@
       "tier": "large",
       "speed": "fast",
       "use_case": [
-        "content-creation",
-        "writing-assistance",
         "image-understanding",
         "visual-q&a",
+        "content-creation",
+        "writing-assistance",
         "conversation",
         "q&a"
       ],
@@ -1744,7 +5325,7 @@
     },
     {
       "id": "openrouter/kwaivgi/kling-video-o1",
-      "created": 1779084993,
+      "created": 618353550,
       "provider": "openrouter",
       "name": "Kling: Video O1",
       "description": "Kling Video O1 is a video generation model from Kuaishou. It supports text and image inputs with video output, enabling text-to-video and image-to-video workflows. It is suited for cinematic content production, with first-frame and last-frame control for precise scene composition. It generates 5 or 10 second clips in 16:9, 9:16, or 1:1 aspect ratios.",
@@ -1758,10 +5339,10 @@
         "vision"
       ],
       "tags": [
-        "text-generation",
         "vision",
-        "multimodal",
-        "chat"
+        "text-generation",
+        "chat",
+        "multimodal"
       ],
       "is_reasoning": false,
       "is_multimodal": true,
@@ -1779,10 +5360,10 @@
       "tier": "large",
       "speed": "fast",
       "use_case": [
-        "content-creation",
-        "writing-assistance",
         "image-understanding",
         "visual-q&a",
+        "content-creation",
+        "writing-assistance",
         "conversation",
         "q&a"
       ],
@@ -1791,7 +5372,7 @@
     },
     {
       "id": "openrouter/minimax/hailuo-2.3",
-      "created": 1779084994,
+      "created": 2031895947,
       "provider": "openrouter",
       "name": "MiniMax: Hailuo 2.3",
       "description": "Hailuo 2.3 is a video generation model from MiniMax. It accepts text prompts and reference images as input and generates video output, supporting both text-to-video and image-to-video workflows. It is suited for creative content production, cinematic scene generation, and character animation, with a focus on realistic motion and expressive character rendering.",
@@ -1805,10 +5386,10 @@
         "vision"
       ],
       "tags": [
-        "text-generation",
         "vision",
-        "multimodal",
-        "chat"
+        "text-generation",
+        "chat",
+        "multimodal"
       ],
       "is_reasoning": false,
       "is_multimodal": true,
@@ -1825,102 +5406,10 @@
       "tier": "large",
       "speed": "fast",
       "use_case": [
-        "content-creation",
-        "writing-assistance",
         "image-understanding",
         "visual-q&a",
-        "conversation",
-        "q&a"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "openrouter/alibaba/wan-2.7",
-      "created": 1779084995,
-      "provider": "openrouter",
-      "name": "Alibaba: Wan 2.7",
-      "description": "Wan 2.7 is a video generation model from Alibaba. It supports text-to-video, image-to-video with first and last frame control, and reference-to-video, where multiple reference images guide the style and content of the generated scene.",
-      "context_label": "unknown",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "vision"
-      ],
-      "tags": [
-        "text-generation",
-        "vision",
-        "multimodal",
-        "chat"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "rpm": 20,
-        "rpd": 50,
-        "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
-      },
-      "trial_scope": "specific",
-      "model_family": "alibaba:-wan-2.7",
-      "aliases": [],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
         "content-creation",
         "writing-assistance",
-        "image-understanding",
-        "visual-q&a",
-        "conversation",
-        "q&a"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "openrouter/bytedance/seedance-2.0-fast",
-      "created": 1779084996,
-      "provider": "openrouter",
-      "name": "ByteDance: Seedance 2.0 Fast",
-      "description": "Seedance 2.0 Fast is a video generation model from ByteDance. It supports text-to-video, image-to-video with first and last frame control, and multimodal reference-to-video. It prioritizes generation speed and lower cost over maximum output quality. The number of tokens is given by (height of output video * width of output video * duration * 24) / 1024",
-      "context_label": "unknown",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "vision"
-      ],
-      "tags": [
-        "text-generation",
-        "vision",
-        "multimodal",
-        "chat"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "rpm": 20,
-        "rpd": 50,
-        "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
-      },
-      "trial_scope": "specific",
-      "model_family": "bytedance:-seedance-2.0-fast",
-      "aliases": [],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "image-understanding",
-        "visual-q&a",
         "conversation",
         "q&a"
       ],
@@ -1929,7 +5418,7 @@
     },
     {
       "id": "openrouter/bytedance/seedance-2.0",
-      "created": 1779084997,
+      "created": 1661669850,
       "provider": "openrouter",
       "name": "ByteDance: Seedance 2.0",
       "description": "Seedance 2.0 is a video generation model from ByteDance. It supports text-to-video, image-to-video with first and last frame control, and multimodal reference-to-video. It is particularly strong at preserving character consistency, visual style, and camera movement from reference material. The number of tokens is given by (height of output video * width of output video * duration * 24) / 1024",
@@ -1943,10 +5432,10 @@
         "vision"
       ],
       "tags": [
-        "text-generation",
         "vision",
-        "multimodal",
-        "chat"
+        "text-generation",
+        "chat",
+        "multimodal"
       ],
       "is_reasoning": false,
       "is_multimodal": true,
@@ -1963,10 +5452,102 @@
       "tier": "large",
       "speed": "fast",
       "use_case": [
-        "content-creation",
-        "writing-assistance",
         "image-understanding",
         "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "openrouter/bytedance/seedance-2.0-fast",
+      "created": 1450560683,
+      "provider": "openrouter",
+      "name": "ByteDance: Seedance 2.0 Fast",
+      "description": "Seedance 2.0 Fast is a video generation model from ByteDance. It supports text-to-video, image-to-video with first and last frame control, and multimodal reference-to-video. It prioritizes generation speed and lower cost over maximum output quality. The number of tokens is given by (height of output video * width of output video * duration * 24) / 1024",
+      "context_label": "unknown",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "chat",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "rpd": 50,
+        "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
+      },
+      "trial_scope": "specific",
+      "model_family": "bytedance:-seedance-2.0-fast",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "openrouter/alibaba/wan-2.7",
+      "created": 1577432060,
+      "provider": "openrouter",
+      "name": "Alibaba: Wan 2.7",
+      "description": "Wan 2.7 is a video generation model from Alibaba. It supports text-to-video, image-to-video with first and last frame control, and reference-to-video, where multiple reference images guide the style and content of the generated scene.",
+      "context_label": "unknown",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "chat",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "rpd": 50,
+        "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
+      },
+      "trial_scope": "specific",
+      "model_family": "alibaba:-wan-2.7",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
         "conversation",
         "q&a"
       ],
@@ -1975,7 +5556,7 @@
     },
     {
       "id": "openrouter/cohere/rerank-4-pro",
-      "created": 1779084998,
+      "created": 1068466830,
       "provider": "openrouter",
       "name": "Cohere: Rerank 4 Pro",
       "description": "Cohere's AI search foundation model for enhancing the relevance of information surfaced within search and RAG systems. Features a 32K context window, multilingual support across 100+ languages, no data pre-processing required, and state of the art performance with low latency.",
@@ -2022,7 +5603,7 @@
     },
     {
       "id": "openrouter/cohere/rerank-4-fast",
-      "created": 1779084999,
+      "created": 899289387,
       "provider": "openrouter",
       "name": "Cohere: Rerank 4 Fast",
       "description": "Cohere's AI search foundation model for enhancing the relevance of information surfaced within search and RAG systems. Features a 32K context window, multilingual support across 100+ languages, no data pre-processing required, and high performance with lowest latency.",
@@ -2069,7 +5650,7 @@
     },
     {
       "id": "openrouter/cohere/rerank-v3.5",
-      "created": 1779085000,
+      "created": 355697656,
       "provider": "openrouter",
       "name": "Cohere: Rerank v3.5",
       "description": "Rerank v3.5 is designed to reorder search results for improved relevance. It supports multi-aspect and semi-structured data reranking over 100+ languages. Ideal for refining results from semantic or keyword search pipelines.",
@@ -2116,7 +5697,7 @@
     },
     {
       "id": "openrouter/google/gemma-4-26b-a4b-it",
-      "created": 1779085001,
+      "created": 1808299360,
       "provider": "openrouter",
       "name": "Google: Gemma 4 26B A4B  (free)",
       "description": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference — delivering near-31B quality at a fraction of the compute cost. Supports multimodal input including text, images, and video (up to 60s at 1fps). Features a 256K token context window, native function calling, configurable thinking/reasoning mode, and structured output support. Released under Apache 2.0.",
@@ -2134,11 +5715,11 @@
       ],
       "tags": [
         "reasoning",
-        "text-generation",
         "vision",
-        "multimodal",
+        "text-generation",
         "chat",
-        "video-generation"
+        "video-generation",
+        "multimodal"
       ],
       "is_reasoning": true,
       "is_multimodal": true,
@@ -2160,10 +5741,10 @@
         "problem-solving",
         "logical-analysis",
         "math",
-        "content-creation",
-        "writing-assistance",
         "image-understanding",
         "visual-q&a",
+        "content-creation",
+        "writing-assistance",
         "conversation",
         "q&a",
         "video-creation",
@@ -2174,7 +5755,7 @@
     },
     {
       "id": "openrouter/google/gemma-4-31b-it",
-      "created": 1779085002,
+      "created": 678872440,
       "provider": "openrouter",
       "name": "Google: Gemma 4 31B (free)",
       "description": "Gemma 4 31B Instruct is Google DeepMind's 30.7B dense multimodal model supporting text and image input with text output. Features a 256K token context window, configurable thinking/reasoning mode, native function calling, and multilingual support across 140+ languages. Strong on coding, reasoning, and document understanding tasks. Apache 2.0 license.",
@@ -2192,11 +5773,11 @@
       ],
       "tags": [
         "reasoning",
-        "text-generation",
         "vision",
-        "multimodal",
+        "text-generation",
         "chat",
-        "video-generation"
+        "video-generation",
+        "multimodal"
       ],
       "is_reasoning": true,
       "is_multimodal": true,
@@ -2218,10 +5799,10 @@
         "problem-solving",
         "logical-analysis",
         "math",
-        "content-creation",
-        "writing-assistance",
         "image-understanding",
         "visual-q&a",
+        "content-creation",
+        "writing-assistance",
         "conversation",
         "q&a",
         "video-creation",
@@ -2232,7 +5813,7 @@
     },
     {
       "id": "openrouter/arcee-ai/trinity-large-thinking",
-      "created": 1779085003,
+      "created": 1008658881,
       "provider": "openrouter",
       "name": "Arcee AI: Trinity Large Thinking (free)",
       "description": "Trinity Large Thinking is a powerful open source reasoning model from the team at Arcee AI. It shows strong performance in PinchBench, agentic workloads, and reasoning tasks. Launch video: https://youtu.be/Gc82AXLa0Rg?si=4RLn6WBz33qT--B7\n\nThis model is optimized for agentic workflows and performs best when reasoning is preserved (aka interleaved thinking). Learn how to preserve reasoning in our docs: https://openrouter.ai/docs/guides/best-practices/reasoning-tokens#preserving-reasoning",
@@ -2281,7 +5862,7 @@
     },
     {
       "id": "openrouter/google/lyria-3-pro-preview",
-      "created": 1779085004,
+      "created": 1004753407,
       "provider": "openrouter",
       "name": "Google: Lyria 3 Pro Preview",
       "description": "Full-length songs are priced at $0.08 per song. Lyria 3 is Google's family of music generation models, available through the Gemini API. With Lyria 3, you can generate high-quality, 48kHz stereo audio from text prompts or from images. These models deliver structural coherence, including vocals, timed lyrics, and full instrumental arrangements. Lyria 3 Pro can generate full-length songs with verses, choruses, bridges.",
@@ -2298,10 +5879,11 @@
       "tags": [
         "text-generation",
         "chat",
-        "vision"
+        "vision",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
       "free_quota": {
@@ -2327,7 +5909,7 @@
     },
     {
       "id": "openrouter/google/lyria-3-clip-preview",
-      "created": 1779085005,
+      "created": 1116468104,
       "provider": "openrouter",
       "name": "Google: Lyria 3 Clip Preview",
       "description": "30 second duration clips are priced at $0.04 per clip. Lyria 3 is Google's family of music generation models, available through the Gemini API. With Lyria 3, you can generate high-quality, 48kHz stereo audio from text prompts or from images. These models deliver structural coherence, including vocals, timed lyrics, and full instrumental arrangements. Lyria 3 Clip can generate short clips, loops, previews.",
@@ -2344,10 +5926,11 @@
       "tags": [
         "text-generation",
         "chat",
-        "vision"
+        "vision",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
       "free_quota": {
@@ -2373,7 +5956,7 @@
     },
     {
       "id": "openrouter/alibaba/wan-2.6",
-      "created": 1779085006,
+      "created": 1577432059,
       "provider": "openrouter",
       "name": "Alibaba: Wan 2.6",
       "description": "Alibaba's most advanced video generation model, supporting over 10 visual creation capabilities in a unified system. Wan 2.6 generates 1080p video at 24fps from text, images, reference videos, or audio, with native audio-visual synchronization and precise lip-sync. Key features include reference-to-video (insert a character's appearance and voice into new scenes), multi-shot storytelling from simple prompts, synchronized sound effects and music, and support for 16:9, 9:16, and 1:1 aspect ratios ",
@@ -2387,10 +5970,10 @@
         "vision"
       ],
       "tags": [
-        "text-generation",
         "vision",
-        "multimodal",
-        "chat"
+        "text-generation",
+        "chat",
+        "multimodal"
       ],
       "is_reasoning": false,
       "is_multimodal": true,
@@ -2407,10 +5990,10 @@
       "tier": "large",
       "speed": "fast",
       "use_case": [
-        "content-creation",
-        "writing-assistance",
         "image-understanding",
         "visual-q&a",
+        "content-creation",
+        "writing-assistance",
         "conversation",
         "q&a"
       ],
@@ -2419,7 +6002,7 @@
     },
     {
       "id": "openrouter/bytedance/seedance-1-5-pro",
-      "created": 1779085007,
+      "created": 457565029,
       "provider": "openrouter",
       "name": "ByteDance: Seedance 1.5 Pro",
       "description": "ByteDance's next-generation audio-visual generation model with a 4.5B parameter Dual-Branch Diffusion Transformer architecture. Seedance 1.5 Pro generates video and audio simultaneously in a single unified pass — eliminating the timing issues of sequential audio dubbing. Supports multi-language lip-sync (English, Mandarin, Japanese, Korean, Spanish, and more), cinematic camera control (pan, tilt, zoom, orbit), multi-character dialogue, and character consistency across shots. Produces clips from ",
@@ -2433,10 +6016,10 @@
         "vision"
       ],
       "tags": [
-        "text-generation",
         "vision",
-        "multimodal",
-        "chat"
+        "text-generation",
+        "chat",
+        "multimodal"
       ],
       "is_reasoning": false,
       "is_multimodal": true,
@@ -2453,10 +6036,10 @@
       "tier": "large",
       "speed": "fast",
       "use_case": [
-        "content-creation",
-        "writing-assistance",
         "image-understanding",
         "visual-q&a",
+        "content-creation",
+        "writing-assistance",
         "conversation",
         "q&a"
       ],
@@ -2465,7 +6048,7 @@
     },
     {
       "id": "openrouter/openai/sora-2-pro",
-      "created": 1779085008,
+      "created": 368557788,
       "provider": "openrouter",
       "name": "OpenAI: Sora 2 Pro",
       "description": "OpenAI's flagship video generation model, delivering production-quality video with physics-accurate motion, synchronized audio, and world-state persistence across shots. Sora 2 Pro follows intricate multi-shot instructions while maintaining consistent spatial relationships — objects don't disappear or change shape between cuts. Supports text-to-video and image-to-video, with synchronized background soundscapes, speech, and sound effects. Includes advanced content safety with C2PA metadata proven",
@@ -2479,10 +6062,10 @@
         "vision"
       ],
       "tags": [
-        "text-generation",
         "vision",
-        "multimodal",
-        "chat"
+        "text-generation",
+        "chat",
+        "multimodal"
       ],
       "is_reasoning": false,
       "is_multimodal": true,
@@ -2499,10 +6082,10 @@
       "tier": "large",
       "speed": "fast",
       "use_case": [
-        "content-creation",
-        "writing-assistance",
         "image-understanding",
         "visual-q&a",
+        "content-creation",
+        "writing-assistance",
         "conversation",
         "q&a"
       ],
@@ -2511,7 +6094,7 @@
     },
     {
       "id": "openrouter/google/veo-3.1",
-      "created": 1779085009,
+      "created": 1946141980,
       "provider": "openrouter",
       "name": "Google: Veo 3.1",
       "description": "Google's state-of-the-art video generation model, built for maximum visual fidelity in final production cuts. Veo 3.1 generates high-quality 1080p video from text or image prompts with native synchronized audio — including dialogue, ambient effects, and background sound. Supports scene extension (up to 20 chained clips for 140+ second narratives), frames-to-video transitions between two images, vertical video for Shorts, and 4K upscaling.",
@@ -2525,10 +6108,10 @@
         "vision"
       ],
       "tags": [
-        "text-generation",
         "vision",
-        "multimodal",
-        "chat"
+        "text-generation",
+        "chat",
+        "multimodal"
       ],
       "is_reasoning": false,
       "is_multimodal": true,
@@ -2545,10 +6128,10 @@
       "tier": "large",
       "speed": "fast",
       "use_case": [
-        "content-creation",
-        "writing-assistance",
         "image-understanding",
         "visual-q&a",
+        "content-creation",
+        "writing-assistance",
         "conversation",
         "q&a"
       ],
@@ -2557,12 +6140,12 @@
     },
     {
       "id": "openrouter/nvidia/nemotron-3-super-120b-a12b",
-      "created": 1779085010,
+      "created": 1939737900,
       "provider": "openrouter",
       "name": "NVIDIA: Nemotron 3 Super (free)",
       "description": "NVIDIA Nemotron 3 Super is a 120B-parameter open hybrid MoE model, activating just 12B parameters for maximum compute efficiency and accuracy in complex multi-agent applications. Built on a hybrid Mamba-Transformer Mixture-of-Experts architecture with multi-token prediction (MTP), it delivers over 50% higher token generation compared to leading open models.\n \nThe model features a 1M token context window for long-term agent coherence, cross-document reasoning, and multi-step task planning. Latent",
       "context_size": 1000000,
-      "context_label": "262K",
+      "context_label": "1M",
       "price_input": 0,
       "price_output": 0,
       "is_free": true,
@@ -2605,7 +6188,7 @@
     },
     {
       "id": "openrouter/nvidia/llama-nemotron-embed-vl-1b-v2",
-      "created": 1779085011,
+      "created": 483798725,
       "provider": "openrouter",
       "name": "NVIDIA: Llama Nemotron Embed VL 1B V2 (free)",
       "description": "The Llama Nemotron Embed VL 1B V2 embedding model is optimized for multimodal question-answering retrieval. The model can embed 'documents' in the form of image, text, or image and text combined. Documents can be retrieved given a user query in text form. The model supports images containing text, tables, charts, and infographics.",
@@ -2621,11 +6204,11 @@
         "embeddings"
       ],
       "tags": [
-        "text-generation",
         "vision",
-        "multimodal",
+        "text-generation",
         "chat",
-        "embeddings"
+        "embeddings",
+        "multimodal"
       ],
       "is_reasoning": false,
       "is_multimodal": true,
@@ -2644,10 +6227,10 @@
       "tier": "medium",
       "speed": "fast",
       "use_case": [
-        "content-creation",
-        "writing-assistance",
         "image-understanding",
         "visual-q&a",
+        "content-creation",
+        "writing-assistance",
         "conversation",
         "q&a",
         "semantic-search",
@@ -2658,12 +6241,12 @@
     },
     {
       "id": "openrouter/minimax/minimax-m2.5",
-      "created": 1779085012,
+      "created": 514249899,
       "provider": "openrouter",
       "name": "MiniMax: MiniMax M2.5 (free)",
       "description": "MiniMax-M2.5 is a SOTA large language model designed for real-world productivity. Trained in a diverse range of complex real-world digital working environments, M2.5 builds upon the coding expertise of M2.1 to extend into general office work, reaching fluency in generating and operating Word, Excel, and Powerpoint files, context switching between diverse software environments, and working across different agent and human teams. Scoring 80.2% on SWE-Bench Verified, 51.3% on Multi-SWE-Bench, and 7",
       "context_size": 204800,
-      "context_label": "197K",
+      "context_label": "205K",
       "price_input": 0,
       "price_output": 0,
       "is_free": true,
@@ -2677,7 +6260,7 @@
         "chat",
         "reasoning"
       ],
-      "is_reasoning": false,
+      "is_reasoning": true,
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
@@ -2706,7 +6289,7 @@
     },
     {
       "id": "openrouter/sourceful/riverflow-v2-pro",
-      "created": 1779085013,
+      "created": 264833887,
       "provider": "openrouter",
       "name": "Sourceful: Riverflow V2 Pro",
       "description": "Riverflow V2 Pro is the most powerful variant of Sourceful's Riverflow 2.0 lineup, best for top-tier control and perfect text rendering.\n\nThe Riverflow 2.0 series represents SOTA performance on image generation and editing tasks, using an integrated reasoning model to boost reliability and tackle complex challenges.\n\nPricing is $0.15 per 1K/2K output image and $0.33 per 4K output image.\n\nAdditional features:\n- Custom font rendering via font_inputs ($0.03/font, max 2)\n- Image enhancement via supe",
@@ -2722,10 +6305,10 @@
       ],
       "tags": [
         "reasoning",
-        "text-generation",
         "vision",
-        "multimodal",
-        "chat"
+        "text-generation",
+        "chat",
+        "multimodal"
       ],
       "is_reasoning": true,
       "is_multimodal": true,
@@ -2745,10 +6328,10 @@
         "problem-solving",
         "logical-analysis",
         "math",
-        "content-creation",
-        "writing-assistance",
         "image-understanding",
         "visual-q&a",
+        "content-creation",
+        "writing-assistance",
         "conversation",
         "q&a",
         "complex-reasoning"
@@ -2758,7 +6341,7 @@
     },
     {
       "id": "openrouter/sourceful/riverflow-v2-fast",
-      "created": 1779085014,
+      "created": 149961314,
       "provider": "openrouter",
       "name": "Sourceful: Riverflow V2 Fast",
       "description": "Riverflow V2 Fast is the fastest variant of Sourceful's Riverflow 2.0 lineup, best for production deployments and latency-critical workflows.\n\nThe Riverflow 2.0 series represents SOTA performance on image generation and editing tasks, using an integrated reasoning model to boost reliability and tackle complex challenges.\n\nPricing is $0.02 per 1K output image and $0.04 per 2K output image. Does not support 4K image output.\n\nAdditional features:\n- Custom font rendering via font_inputs ($0.03/font,",
@@ -2774,10 +6357,10 @@
       ],
       "tags": [
         "reasoning",
-        "text-generation",
         "vision",
-        "multimodal",
-        "chat"
+        "text-generation",
+        "chat",
+        "multimodal"
       ],
       "is_reasoning": true,
       "is_multimodal": true,
@@ -2797,10 +6380,10 @@
         "problem-solving",
         "logical-analysis",
         "math",
-        "content-creation",
-        "writing-assistance",
         "image-understanding",
         "visual-q&a",
+        "content-creation",
+        "writing-assistance",
         "conversation",
         "q&a",
         "complex-reasoning"
@@ -2810,7 +6393,7 @@
     },
     {
       "id": "openrouter/liquid/lfm-2.5-1.2b-thinking",
-      "created": 1779085015,
+      "created": 2009026872,
       "provider": "openrouter",
       "name": "LiquidAI: LFM2.5-1.2B-Thinking (free)",
       "description": "LFM2.5-1.2B-Thinking is a lightweight reasoning-focused model optimized for agentic tasks, data extraction, and RAG—while still running comfortably on edge devices. It supports long context (up to 32K tokens) and is designed to provide higher-quality “thinking” responses in a small 1.2B model.",
@@ -2860,7 +6443,7 @@
     },
     {
       "id": "openrouter/liquid/lfm-2.5-1.2b-instruct",
-      "created": 1779085016,
+      "created": 1192109896,
       "provider": "openrouter",
       "name": "LiquidAI: LFM2.5-1.2B-Instruct (free)",
       "description": "LFM2.5-1.2B-Instruct is a compact, high-performance instruction-tuned model built for fast on-device AI. It delivers strong chat quality in a 1.2B parameter footprint, with efficient edge inference and broad runtime support.",
@@ -2904,7 +6487,7 @@
     },
     {
       "id": "openrouter/black-forest-labs/flux.2-klein-4b",
-      "created": 1779085017,
+      "created": 395266396,
       "provider": "openrouter",
       "name": "Black Forest Labs: FLUX.2 Klein 4B",
       "description": "FLUX.2 [klein] 4B is the fastest and most cost-effective model in the FLUX.2 family, optimized for high-throughput use cases while maintaining excellent image quality.\n\nPricing is based on the output image. The first generated megapixel is charged $0.014. Each subsequent megapixel is charged $0.001.",
@@ -2919,10 +6502,10 @@
         "vision"
       ],
       "tags": [
-        "text-generation",
         "vision",
-        "multimodal",
-        "chat"
+        "text-generation",
+        "chat",
+        "multimodal"
       ],
       "is_reasoning": false,
       "is_multimodal": true,
@@ -2940,10 +6523,10 @@
       "tier": "small",
       "speed": "fast",
       "use_case": [
-        "content-creation",
-        "writing-assistance",
         "image-understanding",
         "visual-q&a",
+        "content-creation",
+        "writing-assistance",
         "conversation",
         "q&a"
       ],
@@ -2952,7 +6535,7 @@
     },
     {
       "id": "openrouter/bytedance-seed/seedream-4.5",
-      "created": 1779085018,
+      "created": 1676655389,
       "provider": "openrouter",
       "name": "ByteDance Seed: Seedream 4.5",
       "description": "Seedream 4.5 is the latest in-house image generation model developed by ByteDance. Compared with Seedream 4.0, it delivers comprehensive improvements, especially in editing consistency, including better preservation of subject details, lighting, and color tone. It also enhances portrait refinement and small-text rendering. The model’s multi-image composition capabilities have been significantly strengthened, and both reasoning performance and visual aesthetics continue to advance, enabling more ",
@@ -2968,10 +6551,10 @@
       ],
       "tags": [
         "reasoning",
-        "text-generation",
         "vision",
-        "multimodal",
-        "chat"
+        "text-generation",
+        "chat",
+        "multimodal"
       ],
       "is_reasoning": true,
       "is_multimodal": true,
@@ -2991,10 +6574,10 @@
         "problem-solving",
         "logical-analysis",
         "math",
-        "content-creation",
-        "writing-assistance",
         "image-understanding",
         "visual-q&a",
+        "content-creation",
+        "writing-assistance",
         "conversation",
         "q&a",
         "complex-reasoning"
@@ -3004,7 +6587,7 @@
     },
     {
       "id": "openrouter/black-forest-labs/flux.2-max",
-      "created": 1779085019,
+      "created": 1694893452,
       "provider": "openrouter",
       "name": "Black Forest Labs: FLUX.2 Max",
       "description": "FLUX.2 [max] is the new top-tier image model from Black Forest Labs, pushing image quality, prompt understanding, and editing consistency to the highest level yet.\n\nPricing is as follows, [per the docs](https://bfl.ai/pricing?category=flux.2):\nInput: We charge $0.03 for each megapixel on the input (i.e. reference images for editing)\nOutput: The first generated megapixel is charged $0.07. Each subsequent megapixel is charged $0.03.",
@@ -3019,10 +6602,10 @@
         "vision"
       ],
       "tags": [
-        "text-generation",
         "vision",
-        "multimodal",
-        "chat"
+        "text-generation",
+        "chat",
+        "multimodal"
       ],
       "is_reasoning": false,
       "is_multimodal": true,
@@ -3039,10 +6622,10 @@
       "tier": "large",
       "speed": "fast",
       "use_case": [
-        "content-creation",
-        "writing-assistance",
         "image-understanding",
         "visual-q&a",
+        "content-creation",
+        "writing-assistance",
         "conversation",
         "q&a"
       ],
@@ -3051,7 +6634,7 @@
     },
     {
       "id": "openrouter/nvidia/nemotron-3-nano-30b-a3b",
-      "created": 1779085020,
+      "created": 516312209,
       "provider": "openrouter",
       "name": "NVIDIA: Nemotron 3 Nano 30B A3B (free)",
       "description": "NVIDIA Nemotron 3 Nano 30B A3B is a small language MoE model with highest compute efficiency and accuracy for developers to build specialized agentic AI systems.\n\nThe model is fully open with open-weights, datasets and recipes so developers can easily\ncustomize, optimize, and deploy the model on their infrastructure for maximum privacy and\nsecurity.",
@@ -3070,7 +6653,7 @@
         "chat",
         "reasoning"
       ],
-      "is_reasoning": false,
+      "is_reasoning": true,
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
@@ -3100,7 +6683,7 @@
     },
     {
       "id": "openrouter/sourceful/riverflow-v2-max-preview",
-      "created": 1779085021,
+      "created": 774078245,
       "provider": "openrouter",
       "name": "Sourceful: Riverflow V2 Max Preview",
       "description": "Riverflow V2 Max Preview is the most powerful variant of Sourceful's Riverflow V2 preview lineup. This preview version exceeds the performance of Riverflow 1 Family and is Sourceful's first unified text-to-image and image-to-image model family.\n\nPricing is $0.075 per output image, regardless of size.\n\nSourceful imposes a 4.5MB request size limit, therefore it is highly recommended to pass image URLs instead of Base64 data.",
@@ -3115,10 +6698,10 @@
         "vision"
       ],
       "tags": [
-        "text-generation",
         "vision",
-        "multimodal",
-        "chat"
+        "text-generation",
+        "chat",
+        "multimodal"
       ],
       "is_reasoning": false,
       "is_multimodal": true,
@@ -3135,10 +6718,10 @@
       "tier": "large",
       "speed": "fast",
       "use_case": [
-        "content-creation",
-        "writing-assistance",
         "image-understanding",
         "visual-q&a",
+        "content-creation",
+        "writing-assistance",
         "conversation",
         "q&a"
       ],
@@ -3147,7 +6730,7 @@
     },
     {
       "id": "openrouter/sourceful/riverflow-v2-standard-preview",
-      "created": 1779085022,
+      "created": 363470352,
       "provider": "openrouter",
       "name": "Sourceful: Riverflow V2 Standard Preview",
       "description": "Riverflow V2 Standard Preview is the standard variant of Sourceful's Riverflow V2 preview lineup. This preview version exceeds the performance of Riverflow 1 Family and is Sourceful's first unified text-to-image and image-to-image model family.\n\nPricing is $0.035 per output image, regardless of size.\n\nSourceful imposes a 4.5MB request size limit, therefore it is highly recommended to pass image URLs instead of Base64 data.",
@@ -3162,10 +6745,10 @@
         "vision"
       ],
       "tags": [
-        "text-generation",
         "vision",
-        "multimodal",
-        "chat"
+        "text-generation",
+        "chat",
+        "multimodal"
       ],
       "is_reasoning": false,
       "is_multimodal": true,
@@ -3182,10 +6765,10 @@
       "tier": "large",
       "speed": "fast",
       "use_case": [
-        "content-creation",
-        "writing-assistance",
         "image-understanding",
         "visual-q&a",
+        "content-creation",
+        "writing-assistance",
         "conversation",
         "q&a"
       ],
@@ -3194,7 +6777,7 @@
     },
     {
       "id": "openrouter/sourceful/riverflow-v2-fast-preview",
-      "created": 1779085023,
+      "created": 2077112563,
       "provider": "openrouter",
       "name": "Sourceful: Riverflow V2 Fast Preview",
       "description": "Riverflow V2 Fast Preview is the fastest variant of Sourceful's Riverflow V2 preview lineup. This preview version exceeds the performance of Riverflow 1 Family and is Sourceful's first unified text-to-image and image-to-image model family.\n\nPricing is $0.03 per output image, regardless of size.\n\nSourceful imposes a 4.5MB request size limit, therefore it is highly recommended to pass image URLs instead of Base64 data.",
@@ -3209,10 +6792,10 @@
         "vision"
       ],
       "tags": [
-        "text-generation",
         "vision",
-        "multimodal",
-        "chat"
+        "text-generation",
+        "chat",
+        "multimodal"
       ],
       "is_reasoning": false,
       "is_multimodal": true,
@@ -3229,10 +6812,10 @@
       "tier": "large",
       "speed": "fast",
       "use_case": [
-        "content-creation",
-        "writing-assistance",
         "image-understanding",
         "visual-q&a",
+        "content-creation",
+        "writing-assistance",
         "conversation",
         "q&a"
       ],
@@ -3241,7 +6824,7 @@
     },
     {
       "id": "openrouter/black-forest-labs/flux.2-flex",
-      "created": 1779085024,
+      "created": 97149155,
       "provider": "openrouter",
       "name": "Black Forest Labs: FLUX.2 Flex",
       "description": "FLUX.2 [flex] excels at rendering complex text, typography, and fine details, and supports multi-reference editing in the same unified architecture.\n\nPricing is as follows, [per the docs](https://bfl.ai/pricing?category=flux.2):\nWe charge $0.06 for each megapixel on both input and output side.",
@@ -3258,10 +6841,11 @@
       "tags": [
         "text-generation",
         "chat",
-        "vision"
+        "vision",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
       "free_quota": {
@@ -3287,7 +6871,7 @@
     },
     {
       "id": "openrouter/black-forest-labs/flux.2-pro",
-      "created": 1779085025,
+      "created": 1694889633,
       "provider": "openrouter",
       "name": "Black Forest Labs: FLUX.2 Pro",
       "description": "A high-end image generation and editing model focused on frontier-level visual quality and reliability. It delivers strong prompt adherence, stable lighting, sharp textures, and consistent character/style reproduction across multi-reference inputs. Designed for production workloads, it balances speed and quality while supporting text-to-image and image editing up to 4 MP resolution.\n\nPricing is as follows, [per the docs](https://bfl.ai/pricing?category=flux.2):\nInput: We charge $0.015 for each m",
@@ -3302,10 +6886,10 @@
         "vision"
       ],
       "tags": [
-        "text-generation",
         "vision",
-        "multimodal",
-        "chat"
+        "text-generation",
+        "chat",
+        "multimodal"
       ],
       "is_reasoning": false,
       "is_multimodal": true,
@@ -3322,10 +6906,10 @@
       "tier": "large",
       "speed": "fast",
       "use_case": [
-        "content-creation",
-        "writing-assistance",
         "image-understanding",
         "visual-q&a",
+        "content-creation",
+        "writing-assistance",
         "conversation",
         "q&a"
       ],
@@ -3334,7 +6918,7 @@
     },
     {
       "id": "openrouter/nvidia/nemotron-nano-12b-v2-vl",
-      "created": 1779085026,
+      "created": 1379410382,
       "provider": "openrouter",
       "name": "NVIDIA: Nemotron Nano 12B 2 VL (free)",
       "description": "NVIDIA Nemotron Nano 2 VL is a 12-billion-parameter open multimodal reasoning model designed for video understanding and document intelligence. It introduces a hybrid Transformer-Mamba architecture, combining transformer-level accuracy with Mamba’s memory-efficient sequence modeling for significantly higher throughput and lower latency.\n\nThe model supports inputs of text and multi-image documents, producing natural-language outputs. It is trained on high-quality NVIDIA-curated synthetic datasets",
@@ -3352,11 +6936,11 @@
       ],
       "tags": [
         "reasoning",
-        "text-generation",
         "vision",
-        "multimodal",
+        "text-generation",
         "chat",
-        "video-generation"
+        "video-generation",
+        "multimodal"
       ],
       "is_reasoning": true,
       "is_multimodal": true,
@@ -3378,10 +6962,10 @@
         "problem-solving",
         "logical-analysis",
         "math",
-        "content-creation",
-        "writing-assistance",
         "image-understanding",
         "visual-q&a",
+        "content-creation",
+        "writing-assistance",
         "conversation",
         "q&a",
         "video-creation",
@@ -3392,7 +6976,7 @@
     },
     {
       "id": "openrouter/qwen/qwen3-next-80b-a3b-instruct",
-      "created": 1779085027,
+      "created": 212892430,
       "provider": "openrouter",
       "name": "Qwen: Qwen3 Next 80B A3B Instruct (free)",
       "description": "Qwen3-Next-80B-A3B-Instruct is an instruction-tuned chat model in the Qwen3-Next series optimized for fast, stable responses without “thinking” traces. It targets complex tasks across reasoning, code generation, knowledge QA, and multilingual use, while remaining robust on alignment and formatting. Compared with prior Qwen3 instruct variants, it focuses on higher throughput and stability on ultra-long inputs and multi-turn dialogues, making it well-suited for RAG, tool use, and agentic workflows",
@@ -3408,6 +6992,7 @@
       "tags": [
         "reasoning",
         "text-generation",
+        "tool-use",
         "chat"
       ],
       "is_reasoning": true,
@@ -3441,7 +7026,7 @@
     },
     {
       "id": "openrouter/nvidia/nemotron-nano-9b-v2",
-      "created": 1779085028,
+      "created": 76451431,
       "provider": "openrouter",
       "name": "NVIDIA: Nemotron Nano 9B V2 (free)",
       "description": "NVIDIA-Nemotron-Nano-9B-v2 is a large language model (LLM) trained from scratch by NVIDIA, and designed as a unified model for both reasoning and non-reasoning tasks. It responds to user queries and tasks by first generating a reasoning trace and then concluding with a final response. \n\nThe model's reasoning capabilities can be controlled via a system prompt. If the user prefers the model to provide its final answer without intermediate reasoning traces, it can be configured to do so.",
@@ -3490,7 +7075,7 @@
     },
     {
       "id": "openrouter/openai/gpt-oss-120b",
-      "created": 1779085029,
+      "created": 952761505,
       "provider": "openrouter",
       "name": "OpenAI: gpt-oss-120b (free)",
       "description": "gpt-oss-120b is an open-weight, 117B-parameter Mixture-of-Experts (MoE) language model from OpenAI designed for high-reasoning, agentic, and general-purpose production use cases. It activates 5.1B parameters per forward pass and is optimized to run on a single H100 GPU with native MXFP4 quantization. The model supports configurable reasoning depth, full chain-of-thought access, and native tool use, including function calling, browsing, and structured output generation.",
@@ -3507,6 +7092,7 @@
       "tags": [
         "reasoning",
         "text-generation",
+        "tool-use",
         "chat"
       ],
       "is_reasoning": true,
@@ -3539,7 +7125,7 @@
     },
     {
       "id": "openrouter/openai/gpt-oss-20b",
-      "created": 1779085030,
+      "created": 1330377872,
       "provider": "openrouter",
       "name": "OpenAI: gpt-oss-20b (free)",
       "description": "gpt-oss-20b is an open-weight 21B parameter model released by OpenAI under the Apache 2.0 license. It uses a Mixture-of-Experts (MoE) architecture with 3.6B active parameters per forward pass, optimized for lower-latency inference and deployability on consumer or single-GPU hardware. The model is trained in OpenAI’s Harmony response format and supports reasoning level configuration, fine-tuning, and agentic capabilities including function calling, tool use, and structured outputs.",
@@ -3556,6 +7142,7 @@
       "tags": [
         "reasoning",
         "text-generation",
+        "tool-use",
         "chat"
       ],
       "is_reasoning": true,
@@ -3588,7 +7175,7 @@
     },
     {
       "id": "openrouter/z-ai/glm-4.5-air",
-      "created": 1779085031,
+      "created": 2031077428,
       "provider": "openrouter",
       "name": "Z.ai: GLM 4.5 Air (free)",
       "description": "GLM-4.5-Air is the lightweight variant of our latest flagship model family, also purpose-built for agent-centric applications. Like GLM-4.5, it adopts the Mixture-of-Experts (MoE) architecture but with a more compact parameter size. GLM-4.5-Air also supports hybrid inference modes, offering a \"thinking mode\" for advanced reasoning and tool use, and a \"non-thinking mode\" for real-time interaction. Users can control the reasoning behaviour with the `reasoning` `enabled` boolean. [Learn more in our",
@@ -3605,6 +7192,7 @@
       "tags": [
         "reasoning",
         "text-generation",
+        "tool-use",
         "chat"
       ],
       "is_reasoning": true,
@@ -3636,12 +7224,12 @@
     },
     {
       "id": "openrouter/qwen/qwen3-coder",
-      "created": 1779085032,
+      "created": 649025593,
       "provider": "openrouter",
       "name": "Qwen: Qwen3 Coder 480B A35B (free)",
       "description": "Qwen3-Coder-480B-A35B-Instruct is a Mixture-of-Experts (MoE) code generation model developed by the Qwen team. It is optimized for agentic coding tasks such as function calling, tool use, and long-context reasoning over repositories. The model features 480 billion total parameters, with 35 billion active per forward pass (8 out of 160 experts).\n\nPricing for the Alibaba endpoints varies by context length. Once a request is greater than 128k input tokens, the higher pricing is used.",
       "context_size": 1048576,
-      "context_label": "262K",
+      "context_label": "1M",
       "price_input": 0,
       "price_output": 0,
       "is_free": true,
@@ -3653,6 +7241,7 @@
       "tags": [
         "reasoning",
         "text-generation",
+        "tool-use",
         "chat",
         "code-generation"
       ],
@@ -3689,7 +7278,7 @@
     },
     {
       "id": "openrouter/cognitivecomputations/dolphin-mistral-24b-venice-edition",
-      "created": 1779085033,
+      "created": 458381680,
       "provider": "openrouter",
       "name": "Venice: Uncensored (free)",
       "description": "Venice Uncensored Dolphin Mistral 24B Venice Edition is a fine-tuned variant of Mistral-Small-24B-Instruct-2501, developed by dphn.ai in collaboration with Venice.ai. This model is designed as an “uncensored” instruct-tuned LLM, preserving user control over alignment, system prompts, and behavior. Intended for advanced and unrestricted use cases, Venice Uncensored emphasizes steerability and transparent behavior, removing default safety and alignment layers typically found in mainstream assistan",
@@ -3731,12 +7320,12 @@
     },
     {
       "id": "openrouter/meta-llama/llama-3.3-70b-instruct",
-      "created": 1779085034,
+      "created": 1183381400,
       "provider": "openrouter",
       "name": "Meta: Llama 3.3 70B Instruct (free)",
       "description": "The Meta Llama 3.3 multilingual large language model (LLM) is a pretrained and instruction tuned generative model in 70B (text in/text out). The Llama 3.3 instruction tuned text only model is optimized for multilingual dialogue use cases and outperforms many of the available open source and closed chat models on common industry benchmarks.\n\nSupported languages: English, German, French, Italian, Portuguese, Hindi, Spanish, and Thai.\n\n[Model Card](https://github.com/meta-llama/llama-models/blob/ma",
       "context_size": 131072,
-      "context_label": "66K",
+      "context_label": "131K",
       "price_input": 0,
       "price_output": 0,
       "is_free": true,
@@ -3775,7 +7364,7 @@
     },
     {
       "id": "openrouter/meta-llama/llama-3.2-3b-instruct",
-      "created": 1779085035,
+      "created": 2071699779,
       "provider": "openrouter",
       "name": "Meta: Llama 3.2 3B Instruct (free)",
       "description": "Llama 3.2 3B is a 3-billion-parameter multilingual large language model, optimized for advanced natural language processing tasks like dialogue generation, reasoning, and summarization. Designed with the latest transformer architecture, it supports eight languages, including English, Spanish, and Hindi, and is adaptable for additional languages.\n\nTrained on 9 trillion tokens, the Llama 3.2 3B model excels in instruction-following, complex reasoning, and tool use. Its balanced performance makes i",
@@ -3791,6 +7380,7 @@
       "tags": [
         "reasoning",
         "text-generation",
+        "tool-use",
         "chat"
       ],
       "is_reasoning": true,
@@ -3824,7 +7414,7 @@
     },
     {
       "id": "openrouter/nousresearch/hermes-3-llama-3.1-405b",
-      "created": 1779085036,
+      "created": 376698361,
       "provider": "openrouter",
       "name": "Nous: Hermes 3 405B Instruct (free)",
       "description": "Hermes 3 is a generalist language model with many improvements over Hermes 2, including advanced agentic capabilities, much better roleplaying, reasoning, multi-turn conversation, long context coherence, and improvements across the board.\n\nHermes 3 405B is a frontier-level, full-parameter finetune of the Llama-3.1 405B foundation model, focused on aligning LLMs to the user, with powerful steering capabilities and control given to the end user.\n\nThe Hermes 3 series builds and expands on the Herme",
@@ -3872,7 +7462,7 @@
     },
     {
       "id": "xingchen/xop35qwen2b",
-      "created": 1779085037,
+      "created": 368694390,
       "provider": "xingchen",
       "name": "Qwen3.5-2B",
       "description": "Qwen3.5-2B是阿里云开源的20亿参数轻量大模型，兼顾小体积与强性能，可在手机、笔记本等端侧设备本地运行，在对话、轻量代码等场景表现均衡。",
@@ -3911,7 +7501,7 @@
     },
     {
       "id": "xingchen/xopqwentti20b",
-      "created": 1779085038,
+      "created": 636859249,
       "provider": "xingchen",
       "name": "Qwen-Image-2512",
       "description": "Qwen-Image-2512 是阿里云通义千问推出的 12 月更新版文本到图像基础模型，相较 8 月版本大幅提升了人物真实感、自然细节精细度与文字渲染质量，在 AI Arena 超 1 万轮盲评中成为当前最强的开源文本生成图像模型，且在闭源模型阵营中也具备较强竞争力。\n",
@@ -3952,7 +7542,7 @@
     },
     {
       "id": "xingchen/xopdeepseekocr",
-      "created": 1779085039,
+      "created": 1967418761,
       "provider": "xingchen",
       "name": "DeepSeek-OCR",
       "description": "DeepSeek-OCR 是深度求索（DeepSeek）推出的高性能光学字符识别（OCR）模型，作为面向通用与垂直场景的 OCR 解决方案，DeepSeek-OCR 具备 “全模态识别 + 结构化输出” 的核心能力，覆盖从文本提取到信息解析的全流程。",
@@ -3998,7 +7588,7 @@
     },
     {
       "id": "xingchen/xophunyuanocr",
-      "created": 1779085040,
+      "created": 1791264683,
       "provider": "xingchen",
       "name": "HunyuanOCR",
       "description": "HunyuanOCR 是腾讯混元于 2025 年 11 月 25 日开源的一款商业级轻量 OCR 专用视觉语言模型，凭借端到端架构设计，兼顾了识别性能与部署便捷性，适配多场景多语种 OCR 相关需求。",
@@ -4044,7 +7634,7 @@
     },
     {
       "id": "xingchen/xophunyuan7bmt",
-      "created": 1779085041,
+      "created": 1019821215,
       "provider": "xingchen",
       "name": "Hunyuan-MT-7B",
       "description": "文档翻译、跨语言内容生成、多语言客服对话等，支持 “中文与其他语言互译”“非中文语言间互译” 两类模式。7B 参数规模的核心翻译模型，负责将源语言文本精准转换为目标语言，支持 33 种语言互译（含中文、英语、法语等主流语言，以及藏语、哈萨克语等 5 种中国少数民族语言），在同规模模型中性能达行业领先水平。",
@@ -4083,7 +7673,7 @@
     },
     {
       "id": "xingchen/xopzimageturbo",
-      "created": 1779085042,
+      "created": 751334248,
       "provider": "xingchen",
       "name": "Z-Image-Turbo",
       "description": "Z-Image 是一款开源、免费的高效图像生成基础模型，参数量为 6B，1秒出图。无需依赖顶级算力和参数堆砌，即可在 16GB 显存的消费级显卡上，生成品质可与顶级商业模型相媲美的超真实图像，尤其在中英双语文本渲染方面效果突出。",
@@ -4125,7 +7715,7 @@
     },
     {
       "id": "xingchen/xop3qwen8breranker",
-      "created": 1779085043,
+      "created": 501243201,
       "provider": "xingchen",
       "name": "Qwen3-Reranker-8B",
       "description": "Qwen3-Reranker-8B 是 Qwen3 系列专为文本嵌入与重排序设计的 80 亿参数模型，支持 100 + 语言及长上下文，继承 Qwen3 基础模型的多语言理解与推理能力，在 MTEB-R、CMTEB-R 等多语言检索评测中表现突出（如 MTEB-R 得分 69.76），具备指令感知特性（自定义指令可提升 1%-5% 性能），适用于文本检索、代码检索、文本分类等场景。",
@@ -4163,7 +7753,7 @@
     },
     {
       "id": "xingchen/xop3qwen8bembedding",
-      "created": 1779085044,
+      "created": 1969157370,
       "provider": "xingchen",
       "name": "Qwen3-Embedding-8B",
       "description": "Qwen3-Embedding-8B 是阿里巴巴 2025 年 6 月开源的轻量级文本嵌入模型，专为文本嵌入和排序任务设计，继承基础模型多语言、长文本理解与推理能力，在文本检索、代码检索等任务中进步显著，8B 模型居 MTEB 多语言排行榜首位，支持超 100 种语言及用户自定义指令，兼具多功能性与灵活性。",
@@ -4201,7 +7791,7 @@
     },
     {
       "id": "xingchen/xssdxl",
-      "created": 1779085045,
+      "created": 796788910,
       "provider": "xingchen",
       "name": "StableDiffusion_XL_Base_1",
       "description": "【可商用】SD XL 1.0由Stability AI研发并开源的文生图模型。",
@@ -4234,7 +7824,7 @@
     },
     {
       "id": "xinghuo/lite",
-      "created": 1779085046,
+      "created": 940500668,
       "provider": "xinghuo",
       "name": "Spark Lite",
       "description": "讯飞星火 Lite 版本，轻量免费模型，速率受限。",

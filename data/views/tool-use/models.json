@@ -1,15 +1,15 @@
 {
   "object": "list",
   "view": "tool-use",
-  "updated_at": "2026-05-18T06:17:27.510Z",
-  "total": 16,
+  "updated_at": "2026-05-19T04:54:24.172Z",
+  "total": 30,
   "filters": {
     "hasToolUse": "true"
   },
   "data": [
     {
       "id": "bigmodel/glm-4-flash-250414",
-      "created": 1779085031,
+      "created": 469226736,
       "provider": "bigmodel",
       "name": "GLM-4-Flash-250414",
       "description": "GLM-4-Flash-250414 语言模型是 智谱AI 首个免费的大模型 API，它在实时网页检索、长上下文处理、多语言支持等方面表现出色，适用于智能问答、摘要生成和文本数据处理等多种应用场景。",
@@ -53,7 +53,7 @@
     },
     {
       "id": "bigmodel/glm-4.6v-flash",
-      "created": 1779085032,
+      "created": 1161885709,
       "provider": "bigmodel",
       "name": "GLM-4.6V-Flash",
       "description": "GLM-4.6V-Flash 是 GLM-4.6V 的免费版本，是 GLM 系列在多模态方向上的一次重要迭代，支持开启或关闭思考模式。它将训练时上下文窗口提升到128k tokens，在 视觉理解精度上达到同参数规模 SOTA，并首次在模型架构中将 Function Call（工具调用）能力原生融入视觉模型，打通从「视觉感知」到「可执行行动（Action）」的链路，为真实业务场景中的多模态 Agent 提供统一的技术底座。",
@@ -108,7 +108,7 @@
     },
     {
       "id": "bigmodel/glm-4.7-flash",
-      "created": 1779085033,
+      "created": 1010454616,
       "provider": "bigmodel",
       "name": "GLM-4.7-Flash",
       "description": "GLM-4.7-Flash 作为 30B 级 SOTA 模型，提供了一个兼顾性能与效率的新选择。面向 Agentic Coding 场景强化了编码能力、长程任务规划与工具协同，并在多个公开基准的当期榜单中取得同尺寸开源模型中的出色表现。在执行复杂智能体任务，在工具调用时指令遵循更强，Artifacts 与 Agentic Coding 的前端美感和长程任务完成效率进一步提升。",
@@ -158,8 +158,582 @@
       "estimated_latency": "< 1s"
     },
     {
+      "id": "cloudflare/@cf/openai/gpt-oss-120b",
+      "created": 1887065703,
+      "provider": "cloudflare",
+      "name": "@cf/openai/gpt-oss-120b",
+      "description": "OpenAI’s open-weight models designed for powerful reasoning, agentic tasks, and versatile developer use cases – gpt-oss-120b is for production, general purpose, high reasoning use-cases.",
+      "context_size": 128000,
+      "context_label": "128K",
+      "price_input": 0.35,
+      "price_output": 0.75,
+      "is_free": true,
+      "capabilities": [
+        "text-generation",
+        "function-calling",
+        "reasoning"
+      ],
+      "tags": [
+        "reasoning",
+        "text-generation",
+        "function-calling"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+      },
+      "trial_scope": "all",
+      "model_family": "@cf-openai-gpt-oss-120b",
+      "aliases": [],
+      "parameter_count": 120000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "cloudflare/@cf/moonshotai/kimi-k2.5",
+      "created": 1273849036,
+      "provider": "cloudflare",
+      "name": "@cf/moonshotai/kimi-k2.5",
+      "description": "Kimi K2.5 is a frontier-scale open-source model with a 256k context window, multi-turn tool calling, vision inputs, and structured outputs for agentic workloads.",
+      "context_size": 256000,
+      "context_label": "256K",
+      "price_input": 0.1,
+      "price_output": 3,
+      "is_free": true,
+      "capabilities": [
+        "text-generation",
+        "function-calling",
+        "reasoning"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "tool-use",
+        "function-calling",
+        "reasoning",
+        "multimodal"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": true,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+      },
+      "trial_scope": "all",
+      "model_family": "@cf-moonshotai-kimi-k2.5",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "cloudflare/@cf/moonshotai/kimi-k2.6",
+      "created": 1273849035,
+      "provider": "cloudflare",
+      "name": "@cf/moonshotai/kimi-k2.6",
+      "description": "Kimi K2.6 is a frontier-scale open-source 1T parameter model with a 262.1k context window, multi-turn tool calling, vision inputs, and structured outputs for agentic workloads.",
+      "context_size": 262144,
+      "context_label": "262K",
+      "price_input": 0.16,
+      "price_output": 4,
+      "is_free": true,
+      "capabilities": [
+        "text-generation",
+        "function-calling",
+        "reasoning"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "tool-use",
+        "function-calling",
+        "reasoning",
+        "multimodal"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": true,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+      },
+      "trial_scope": "all",
+      "model_family": "@cf-moonshotai-kimi-k2.6",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "cloudflare/@cf/zai-org/glm-4.7-flash",
+      "created": 590789846,
+      "provider": "cloudflare",
+      "name": "@cf/zai-org/glm-4.7-flash",
+      "description": "GLM-4.7-Flash is a fast and efficient multilingual text generation model with a 131,072 token context window. Optimized for dialogue, instruction-following, and multi-turn tool calling across 100+ languages.",
+      "context_size": 131072,
+      "context_label": "131K",
+      "price_input": 0.0605,
+      "price_output": 0.4,
+      "is_free": true,
+      "capabilities": [
+        "text-generation",
+        "function-calling",
+        "reasoning"
+      ],
+      "tags": [
+        "text-generation",
+        "tool-use",
+        "function-calling",
+        "reasoning"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+      },
+      "trial_scope": "all",
+      "model_family": "@cf-zai-org-glm-4.7-flash",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "cloudflare/@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+      "created": 669118560,
+      "provider": "cloudflare",
+      "name": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+      "description": "Llama 3.3 70B quantized to fp8 precision, optimized to be faster.",
+      "context_size": 24000,
+      "context_label": "24K",
+      "price_input": 0.293,
+      "price_output": 2.253,
+      "is_free": true,
+      "capabilities": [
+        "text-generation",
+        "function-calling"
+      ],
+      "tags": [
+        "text-generation",
+        "function-calling"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+      },
+      "trial_scope": "all",
+      "model_family": "@cf-meta-llama-3.3-70b-fast",
+      "model_variant": "instruct",
+      "quantization": "fp8",
+      "aliases": [],
+      "parameter_count": 70000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "cloudflare/@cf/ibm-granite/granite-4.0-h-micro",
+      "created": 2029425488,
+      "provider": "cloudflare",
+      "name": "@cf/ibm-granite/granite-4.0-h-micro",
+      "description": "Granite 4.0 instruct models deliver strong performance across benchmarks, achieving industry-leading results in key agentic tasks like instruction following and function calling. These efficiencies make the models well-suited for a wide range of use cases like retrieval-augmented generation (RAG), multi-agent workflows, and edge deployments.",
+      "context_size": 131000,
+      "context_label": "131K",
+      "price_input": 0.017,
+      "price_output": 0.112,
+      "is_free": true,
+      "capabilities": [
+        "text-generation",
+        "function-calling"
+      ],
+      "tags": [
+        "text-generation",
+        "function-calling"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+      },
+      "trial_scope": "all",
+      "model_family": "@cf-ibm-granite-granite-4.0-h-micro",
+      "aliases": [],
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "cloudflare/@hf/nousresearch/hermes-2-pro-mistral-7b",
+      "created": 1629406115,
+      "provider": "cloudflare",
+      "name": "@hf/nousresearch/hermes-2-pro-mistral-7b",
+      "description": "Hermes 2 Pro on Mistral 7B is the new flagship 7B Hermes! Hermes 2 Pro is an upgraded, retrained version of Nous Hermes 2, consisting of an updated and cleaned version of the OpenHermes 2.5 Dataset, as well as a newly introduced Function Calling and JSON Mode dataset developed in-house.",
+      "context_size": 24000,
+      "context_label": "24K",
+      "is_free": true,
+      "capabilities": [
+        "text-generation",
+        "function-calling"
+      ],
+      "tags": [
+        "text-generation",
+        "function-calling"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+      },
+      "trial_scope": "all",
+      "model_family": "@hf-nousresearch-hermes-2-pro-mistral-7b",
+      "aliases": [],
+      "parameter_count": 7000000000,
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "cloudflare/@cf/nvidia/nemotron-3-120b-a12b",
+      "created": 1408041182,
+      "provider": "cloudflare",
+      "name": "@cf/nvidia/nemotron-3-120b-a12b",
+      "description": "NVIDIA Nemotron 3 Super is a hybrid MoE model with leading accuracy for multi-agent applications and specialized agentic AI systems.",
+      "context_size": 256000,
+      "context_label": "256K",
+      "price_input": 0.5,
+      "price_output": 1.5,
+      "is_free": true,
+      "capabilities": [
+        "text-generation",
+        "function-calling",
+        "reasoning"
+      ],
+      "tags": [
+        "text-generation",
+        "function-calling",
+        "reasoning"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+      },
+      "trial_scope": "all",
+      "model_family": "@cf-nvidia-nemotron-3-120b-a12b",
+      "aliases": [],
+      "parameter_count": 120000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "cloudflare/@cf/qwen/qwen3-30b-a3b-fp8",
+      "created": 1418141003,
+      "provider": "cloudflare",
+      "name": "@cf/qwen/qwen3-30b-a3b-fp8",
+      "description": "Qwen3 is the latest generation of large language models in Qwen series, offering a comprehensive suite of dense and mixture-of-experts (MoE) models. Built upon extensive training, Qwen3 delivers groundbreaking advancements in reasoning, instruction-following, agent capabilities, and multilingual support.",
+      "context_size": 32768,
+      "context_label": "33K",
+      "price_input": 0.0509,
+      "price_output": 0.335,
+      "is_free": true,
+      "capabilities": [
+        "text-generation",
+        "function-calling",
+        "reasoning"
+      ],
+      "tags": [
+        "reasoning",
+        "text-generation",
+        "function-calling"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+      },
+      "trial_scope": "all",
+      "model_family": "@cf-qwen-qwen3-30b-a3b",
+      "quantization": "fp8",
+      "aliases": [],
+      "parameter_count": 30000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "cloudflare/@cf/google/gemma-4-26b-a4b-it",
+      "created": 1485938918,
+      "provider": "cloudflare",
+      "name": "@cf/google/gemma-4-26b-a4b-it",
+      "description": "Gemma 4 is Google's most intelligent family of open models, built from Gemini 3 research to maximize intelligence-per-parameter.",
+      "context_size": 256000,
+      "context_label": "256K",
+      "price_input": 0.1,
+      "price_output": 0.3,
+      "is_free": true,
+      "capabilities": [
+        "text-generation",
+        "function-calling",
+        "reasoning"
+      ],
+      "tags": [
+        "text-generation",
+        "function-calling",
+        "reasoning"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+      },
+      "trial_scope": "all",
+      "model_family": "@cf-google-gemma-4-26b-a4b",
+      "model_variant": "it",
+      "aliases": [],
+      "parameter_count": 26000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "cloudflare/@cf/mistralai/mistral-small-3.1-24b-instruct",
+      "created": 721639137,
+      "provider": "cloudflare",
+      "name": "@cf/mistralai/mistral-small-3.1-24b-instruct",
+      "description": "Building upon Mistral Small 3 (2501), Mistral Small 3.1 (2503) adds state-of-the-art vision understanding and enhances long context capabilities up to 128k tokens without compromising text performance. With 24 billion parameters, this model achieves top-tier capabilities in both text and vision tasks.",
+      "context_size": 128000,
+      "context_label": "128K",
+      "price_input": 0.351,
+      "price_output": 0.555,
+      "is_free": true,
+      "capabilities": [
+        "text-generation",
+        "function-calling"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "function-calling",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": true,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+      },
+      "trial_scope": "all",
+      "model_family": "@cf-mistralai-mistral-small-3.1-24b",
+      "model_variant": "instruct",
+      "aliases": [],
+      "parameter_count": 24000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "cloudflare/@cf/openai/gpt-oss-20b",
+      "created": 1244320362,
+      "provider": "cloudflare",
+      "name": "@cf/openai/gpt-oss-20b",
+      "description": "OpenAI’s open-weight models designed for powerful reasoning, agentic tasks, and versatile developer use cases – gpt-oss-20b is for lower latency, and local or specialized use-cases.",
+      "context_size": 128000,
+      "context_label": "128K",
+      "price_input": 0.2,
+      "price_output": 0.3,
+      "is_free": true,
+      "capabilities": [
+        "text-generation",
+        "function-calling",
+        "reasoning"
+      ],
+      "tags": [
+        "reasoning",
+        "text-generation",
+        "function-calling"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+      },
+      "trial_scope": "all",
+      "model_family": "@cf-openai-gpt-oss-20b",
+      "aliases": [],
+      "parameter_count": 20000000000,
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "cloudflare/@cf/meta/llama-4-scout-17b-16e-instruct",
+      "created": 1430621087,
+      "provider": "cloudflare",
+      "name": "@cf/meta/llama-4-scout-17b-16e-instruct",
+      "description": "Meta's Llama 4 Scout is a 17 billion parameter model with 16 experts that is natively multimodal. These models leverage a mixture-of-experts architecture to offer industry-leading performance in text and image understanding.",
+      "context_size": 131000,
+      "context_label": "131K",
+      "price_input": 0.27,
+      "price_output": 0.85,
+      "is_free": true,
+      "capabilities": [
+        "text-generation",
+        "function-calling"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "function-calling",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": true,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+      },
+      "trial_scope": "all",
+      "model_family": "@cf-meta-llama-4-scout-17b-16e",
+      "model_variant": "instruct",
+      "aliases": [],
+      "parameter_count": 17000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
       "id": "Qwen2.5-72B-Instruct",
-      "created": 1779085034,
+      "created": 155804854,
       "provider": "gitee",
       "name": "Qwen2.5-72B-Instruct",
       "description": "Qwen2.5-72B-Instruct  支持 32k 上下文, 生成长文本超过 8K 。支持 function call 与外部系统无缝交互，极大提升了灵活性和扩展性。模型知识明显增加，并且大大提高了编码和数学能力, 多语言支持超过 29 种",
@@ -169,14 +743,11 @@
       "price_output": 4,
       "is_free": false,
       "capabilities": [
-        "text-generation",
-        "tool_use",
-        "function_calling"
+        "text-generation"
       ],
       "tags": [
-        "text-generation",
         "tool-use",
-        "function-calling"
+        "text-generation"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
@@ -199,7 +770,7 @@
     },
     {
       "id": "Qwen2.5-7B-Instruct",
-      "created": 1779085035,
+      "created": 1228510948,
       "provider": "gitee",
       "name": "Qwen2.5-7B-Instruct",
       "description": "Qwen2.5-7B-Instruct 是一款 70 亿参数的大语言模型，支持 function call 与外部系统无缝交互，极大提升了灵活性和扩展性。优化中文和多语言场景，支持智能问答、内容生成等应用。",
@@ -209,14 +780,11 @@
       "price_output": 0.35,
       "is_free": false,
       "capabilities": [
-        "text-generation",
-        "tool_use",
-        "function_calling"
+        "text-generation"
       ],
       "tags": [
-        "text-generation",
         "tool-use",
-        "function-calling"
+        "text-generation"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
@@ -239,7 +807,7 @@
     },
     {
       "id": "GLM-4.6V",
-      "created": 1779085036,
+      "created": 1826081920,
       "provider": "gitee",
       "name": "GLM-4.6V",
       "description": "GLM-4.6V 是 GLM 系列在多模态方向上的一次重要迭代，它将训练时上下文窗口提升到128k tokens，在视觉理解精度上达到同参数规模 SOTA，并首次在模型架构中将 Function Call（工具调用）能力原生融入视觉模型，打通从「视觉感知」到「可执行行动（Action）」的链路，为真实业务场景中的多模态 Agent 提供统一的技术底座。",
@@ -249,14 +817,11 @@
       "price_output": 6,
       "is_free": false,
       "capabilities": [
-        "text-generation",
-        "tool_use",
-        "function_calling"
+        "text-generation"
       ],
       "tags": [
-        "text-generation",
         "tool-use",
-        "function-calling"
+        "text-generation"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
@@ -276,8 +841,47 @@
       "estimated_latency": "1-3s"
     },
     {
+      "id": "github/Cohere-command-r-08-2024",
+      "created": 319407806,
+      "provider": "github",
+      "name": "Cohere Command R 08-2024",
+      "description": "Command R is a scalable generative model targeting RAG and Tool Use to enable production-scale AI for enterprise.",
+      "context_size": 131072,
+      "context_label": "131K",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation",
+        "tool-use",
+        "chat"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
+      },
+      "trial_scope": "all",
+      "model_family": "cohere-command-r-08",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
       "id": "openrouter/baidu/cobuddy",
-      "created": 1779085037,
+      "created": 1213574267,
       "provider": "openrouter",
       "name": "Baidu Qianfan: CoBuddy (free)",
       "description": "CoBuddy is a code generation model from Baidu, optimized for coding tasks and AI Agent workflows. It features high inference throughput and low end-to-end latency, with native support for tool calling and reasoning. The model runs on fp8 quantization with a 131K token context window and up to 65K output tokens.",
@@ -326,7 +930,7 @@
     },
     {
       "id": "openrouter/openrouter/owl-alpha",
-      "created": 1779085038,
+      "created": 1388528850,
       "provider": "openrouter",
       "name": "Owl Alpha",
       "description": "Owl Alpha is a high-performance foundation model designed for agentic workloads. Natively supports tool use, and long-context tasks, with strong performance in code generation, automated workflows, and complex instruction execution. Compatible with Claude Code, OpenClaw, and other mainstream productivity tools.\n\nNote: Prompts and completions may be logged by the provider and used to improve the model.",
@@ -369,7 +973,7 @@
     },
     {
       "id": "openrouter/poolside/laguna-xs.2",
-      "created": 1779085039,
+      "created": 2082984965,
       "provider": "openrouter",
       "name": "Poolside: Laguna XS.2 (free)",
       "description": "Laguna XS.2 is the second-generation model in the XS size class from [Poolside](https://poolside.ai), their efficient coding agent series. It combines tool calling and reasoning capabilities with a compact footprint, offering a 128K context window and up to 8K output tokens. Quantized to fp8 for fast, cost-efficient agentic coding workflows.\n\n\nLaguna XS.2 is designed for software engineering and agentic coding use cases, and you are responsible for confirming that it is appropriate for your inte",
@@ -386,6 +990,7 @@
       "tags": [
         "reasoning",
         "text-generation",
+        "tool-use",
         "chat"
       ],
       "is_reasoning": true,
@@ -417,7 +1022,7 @@
     },
     {
       "id": "openrouter/poolside/laguna-m.1",
-      "created": 1779085040,
+      "created": 63106502,
       "provider": "openrouter",
       "name": "Poolside: Laguna M.1 (free)",
       "description": "Laguna M.1 is the flagship coding agent model from [Poolside](https://poolside.ai), optimized for complex software engineering tasks. Designed for agentic coding workflows, it supports tool calling and reasoning, with a 128K context window and up to 8K output tokens. Quantized to fp8 for efficient inference. By using this model, you agree to Poolside’s [End User License Agreement](https://poolside.ai/legal/eula)",
@@ -434,6 +1039,7 @@
       "tags": [
         "reasoning",
         "text-generation",
+        "tool-use",
         "chat"
       ],
       "is_reasoning": true,
@@ -465,7 +1071,7 @@
     },
     {
       "id": "openrouter/qwen/qwen3-next-80b-a3b-instruct",
-      "created": 1779085041,
+      "created": 212892430,
       "provider": "openrouter",
       "name": "Qwen: Qwen3 Next 80B A3B Instruct (free)",
       "description": "Qwen3-Next-80B-A3B-Instruct is an instruction-tuned chat model in the Qwen3-Next series optimized for fast, stable responses without “thinking” traces. It targets complex tasks across reasoning, code generation, knowledge QA, and multilingual use, while remaining robust on alignment and formatting. Compared with prior Qwen3 instruct variants, it focuses on higher throughput and stability on ultra-long inputs and multi-turn dialogues, making it well-suited for RAG, tool use, and agentic workflows",
@@ -481,6 +1087,7 @@
       "tags": [
         "reasoning",
         "text-generation",
+        "tool-use",
         "chat"
       ],
       "is_reasoning": true,
@@ -514,7 +1121,7 @@
     },
     {
       "id": "openrouter/openai/gpt-oss-120b",
-      "created": 1779085042,
+      "created": 952761505,
       "provider": "openrouter",
       "name": "OpenAI: gpt-oss-120b (free)",
       "description": "gpt-oss-120b is an open-weight, 117B-parameter Mixture-of-Experts (MoE) language model from OpenAI designed for high-reasoning, agentic, and general-purpose production use cases. It activates 5.1B parameters per forward pass and is optimized to run on a single H100 GPU with native MXFP4 quantization. The model supports configurable reasoning depth, full chain-of-thought access, and native tool use, including function calling, browsing, and structured output generation.",
@@ -531,6 +1138,7 @@
       "tags": [
         "reasoning",
         "text-generation",
+        "tool-use",
         "chat"
       ],
       "is_reasoning": true,
@@ -563,7 +1171,7 @@
     },
     {
       "id": "openrouter/openai/gpt-oss-20b",
-      "created": 1779085043,
+      "created": 1330377872,
       "provider": "openrouter",
       "name": "OpenAI: gpt-oss-20b (free)",
       "description": "gpt-oss-20b is an open-weight 21B parameter model released by OpenAI under the Apache 2.0 license. It uses a Mixture-of-Experts (MoE) architecture with 3.6B active parameters per forward pass, optimized for lower-latency inference and deployability on consumer or single-GPU hardware. The model is trained in OpenAI’s Harmony response format and supports reasoning level configuration, fine-tuning, and agentic capabilities including function calling, tool use, and structured outputs.",
@@ -580,6 +1188,7 @@
       "tags": [
         "reasoning",
         "text-generation",
+        "tool-use",
         "chat"
       ],
       "is_reasoning": true,
@@ -612,7 +1221,7 @@
     },
     {
       "id": "openrouter/z-ai/glm-4.5-air",
-      "created": 1779085044,
+      "created": 2031077428,
       "provider": "openrouter",
       "name": "Z.ai: GLM 4.5 Air (free)",
       "description": "GLM-4.5-Air is the lightweight variant of our latest flagship model family, also purpose-built for agent-centric applications. Like GLM-4.5, it adopts the Mixture-of-Experts (MoE) architecture but with a more compact parameter size. GLM-4.5-Air also supports hybrid inference modes, offering a \"thinking mode\" for advanced reasoning and tool use, and a \"non-thinking mode\" for real-time interaction. Users can control the reasoning behaviour with the `reasoning` `enabled` boolean. [Learn more in our",
@@ -629,6 +1238,7 @@
       "tags": [
         "reasoning",
         "text-generation",
+        "tool-use",
         "chat"
       ],
       "is_reasoning": true,
@@ -660,12 +1270,12 @@
     },
     {
       "id": "openrouter/qwen/qwen3-coder",
-      "created": 1779085045,
+      "created": 649025593,
       "provider": "openrouter",
       "name": "Qwen: Qwen3 Coder 480B A35B (free)",
       "description": "Qwen3-Coder-480B-A35B-Instruct is a Mixture-of-Experts (MoE) code generation model developed by the Qwen team. It is optimized for agentic coding tasks such as function calling, tool use, and long-context reasoning over repositories. The model features 480 billion total parameters, with 35 billion active per forward pass (8 out of 160 experts).\n\nPricing for the Alibaba endpoints varies by context length. Once a request is greater than 128k input tokens, the higher pricing is used.",
       "context_size": 1048576,
-      "context_label": "262K",
+      "context_label": "1M",
       "price_input": 0,
       "price_output": 0,
       "is_free": true,
@@ -677,6 +1287,7 @@
       "tags": [
         "reasoning",
         "text-generation",
+        "tool-use",
         "chat",
         "code-generation"
       ],
@@ -713,7 +1324,7 @@
     },
     {
       "id": "openrouter/meta-llama/llama-3.2-3b-instruct",
-      "created": 1779085046,
+      "created": 2071699779,
       "provider": "openrouter",
       "name": "Meta: Llama 3.2 3B Instruct (free)",
       "description": "Llama 3.2 3B is a 3-billion-parameter multilingual large language model, optimized for advanced natural language processing tasks like dialogue generation, reasoning, and summarization. Designed with the latest transformer architecture, it supports eight languages, including English, Spanish, and Hindi, and is adaptable for additional languages.\n\nTrained on 9 trillion tokens, the Llama 3.2 3B model excels in instruction-following, complex reasoning, and tool use. Its balanced performance makes i",
@@ -729,6 +1340,7 @@
       "tags": [
         "reasoning",
         "text-generation",
+        "tool-use",
         "chat"
       ],
       "is_reasoning": true,
