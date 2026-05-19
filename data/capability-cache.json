@@ -10024,5 +10024,269 @@
     "performanceLevel": "entry",
     "description": "【可商用】Qwen2.5-14b 是阿里qwen团队推出的超大规模语言模型，基于阿里巴巴达摩院的研究积累，采用改进版 Transformer 架构等先进技术，预训练数据集从 7 万亿个 token 扩展到 18 万亿个 token，支持 128k 长上下文及多语言，在数学、编码、指令跟踪等多方面能力显著增强，其指令微调版本表现出色，适用于多种应用场景 。",
     "updatedAt": "2026-05-01T10:41:15.113Z"
+  },
+  "openrouter/openrouter/baidu/cobuddy": {
+    "tags": [
+      "reasoning",
+      "text-generation",
+      "tool-use",
+      "chat"
+    ],
+    "isReasoning": true,
+    "isMultimodal": false,
+    "hasToolUse": true,
+    "contextSize": "131K",
+    "tier": "large",
+    "performanceLevel": "mid",
+    "description": "CoBuddy is a code generation model from Baidu, optimized for coding tasks and AI Agent workflows. It features high inference throughput and low end-to-end latency, with native support for tool calling and reasoning. The model runs on fp8 quantization with a 131K token context window and up to 65K output tokens.",
+    "updatedAt": "2026-05-06T05:31:46.158Z"
+  },
+  "openrouter/openrouter/recraft/recraft-v4-pro": {
+    "tags": [
+      "vision",
+      "text-generation",
+      "chat",
+      "multimodal"
+    ],
+    "isReasoning": false,
+    "isMultimodal": true,
+    "hasToolUse": false,
+    "contextSize": "66K",
+    "tier": "large",
+    "performanceLevel": "mid",
+    "description": "Recraft V4 Pro is an image generation model from Recraft. It supports text and image inputs with image output at ~2K resolution across multiple aspect ratios, double the resolution of V4. It offers higher fidelity and detail density than V4, suited for production use cases where image quality is a priority.\n\nSupports the following `image_config` parameters: `strength` (controls how much the output deviates from the source image), `rgb_colors` (sets a color palette), and `background_rgb_color` (s",
+    "updatedAt": "2026-05-08T04:54:55.282Z"
+  },
+  "openrouter/openrouter/recraft/recraft-v4": {
+    "tags": [
+      "vision",
+      "text-generation",
+      "chat",
+      "multimodal"
+    ],
+    "isReasoning": false,
+    "isMultimodal": true,
+    "hasToolUse": false,
+    "contextSize": "66K",
+    "tier": "large",
+    "performanceLevel": "mid",
+    "description": "Recraft V4 is an image generation model from Recraft. It supports text and image inputs with image output at ~1K resolution across multiple aspect ratios. It delivers stronger compositional judgment, color coherence, and legible embedded text compared to V3, making it suited for infographics, signage, and packaging.\n\nSupports the following `image_config` parameters: `strength` (controls how much the output deviates from the source image), `rgb_colors` (sets a color palette), and `background_rgb_",
+    "updatedAt": "2026-05-08T04:54:55.282Z"
+  },
+  "openrouter/openrouter/recraft/recraft-v3": {
+    "tags": [
+      "vision",
+      "text-generation",
+      "chat",
+      "multimodal"
+    ],
+    "isReasoning": false,
+    "isMultimodal": true,
+    "hasToolUse": false,
+    "contextSize": "66K",
+    "tier": "large",
+    "performanceLevel": "mid",
+    "description": "Recraft V3 is an image generation model from Recraft. It supports text and image inputs with image output at ~1K resolution across multiple aspect ratios.\n\nSupports the following `image_config` parameters: `strength` (controls how much the output deviates from the source image), `style` (applies an artistic style), `text_layout` (places text at specific positions), `rgb_colors` (sets a color palette), and `background_rgb_color` (sets the background color). See the image generation docs for detai",
+    "updatedAt": "2026-05-08T04:54:55.282Z"
+  },
+  "gitee/HappyHorse-1.0": {
+    "tags": [
+      "video-generation"
+    ],
+    "isReasoning": false,
+    "isMultimodal": false,
+    "hasToolUse": false,
+    "contextSize": "unknown",
+    "tier": "medium",
+    "performanceLevel": "entry",
+    "description": "HappyHorse-1.0-I2V支持图生视频，具备高度还原的动态画面生成能力，能够精准理解文本语义，输出流畅自然、细节丰富的高质量视频。",
+    "updatedAt": "2026-05-08T04:55:02.475Z"
+  },
+  "openrouter/openrouter/inclusionai/ring-2.6-1t": {
+    "tags": [
+      "reasoning",
+      "text-generation",
+      "tool-use",
+      "chat"
+    ],
+    "isReasoning": true,
+    "isMultimodal": false,
+    "hasToolUse": true,
+    "contextSize": "262K",
+    "tier": "large",
+    "performanceLevel": "mid",
+    "description": "Ring-2.6-1T is a 1T-parameter-scale thinking model with 63B active parameters, built for real-world agent workflows that require both strong capability and operational efficiency. It is optimized for coding agents, tool use, and long-horizon task execution, delivering leading results on benchmarks including PinchBench, ClawEval, TAU2-Bench, and GAIA2-search.\n\nWith adaptive reasoning effort across high and xhigh modes, Ring-2.6-1T dynamically allocates reasoning budget based on task complexity. T",
+    "updatedAt": "2026-05-09T05:23:51.530Z"
+  },
+  "openrouter/openrouter/arcee-ai/trinity-large-thinking": {
+    "tags": [
+      "reasoning",
+      "text-generation",
+      "chat"
+    ],
+    "isReasoning": true,
+    "isMultimodal": false,
+    "hasToolUse": false,
+    "contextSize": "262K",
+    "tier": "large",
+    "performanceLevel": "mid",
+    "description": "Trinity Large Thinking is a powerful open source reasoning model from the team at Arcee AI. It shows strong performance in PinchBench, agentic workloads, and reasoning tasks. Launch video: https://youtu.be/Gc82AXLa0Rg?si=4RLn6WBz33qT--B7\n\nThis model is optimized for agentic workflows and performs best when reasoning is preserved (aka interleaved thinking). Learn how to preserve reasoning in our docs: https://openrouter.ai/docs/guides/best-practices/reasoning-tokens#preserving-reasoning",
+    "updatedAt": "2026-05-12T05:40:43.955Z"
+  },
+  "openrouter/openrouter/deepseek/deepseek-v4-flash": {
+    "tags": [
+      "reasoning",
+      "text-generation",
+      "chat"
+    ],
+    "isReasoning": true,
+    "isMultimodal": false,
+    "hasToolUse": false,
+    "contextSize": "256K",
+    "tier": "large",
+    "performanceLevel": "mid",
+    "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and high-throughput workloads, while maintaining strong reasoning and coding performance.\n\nThe model includes hybrid attention for efficient long-context processing. Reasoning efforts `high` and `xhigh` are supported; `xhigh` maps to max reasoning. It is well suited for applications suc",
+    "updatedAt": "2026-05-14T05:50:25.634Z"
+  },
+  "openrouter/openrouter/recraft/recraft-v4.1-pro-vector": {
+    "tags": [
+      "vision",
+      "text-generation",
+      "chat",
+      "multimodal"
+    ],
+    "isReasoning": false,
+    "isMultimodal": true,
+    "hasToolUse": false,
+    "contextSize": "66K",
+    "tier": "large",
+    "performanceLevel": "mid",
+    "description": "Recraft V4.1 Pro Vector is the vector (SVG) variant of Recraft V4.1 Pro, tuned for high aesthetics. It supports text and image inputs and produces higher-resolution SVG image output across multiple aspect ratios, with typical generation around 20 seconds. Output scales cleanly, making it suitable for icons, logos, and other graphics. V4.1 brings more personality to text and illustrations, smoother gradients, and stronger short-prompt adherence compared to V4 Pro.\n\nSuited for higher-resolution il",
+    "updatedAt": "2026-05-15T05:57:06.101Z"
+  },
+  "openrouter/openrouter/recraft/recraft-v4.1-vector": {
+    "tags": [
+      "vision",
+      "text-generation",
+      "chat",
+      "multimodal"
+    ],
+    "isReasoning": false,
+    "isMultimodal": true,
+    "hasToolUse": false,
+    "contextSize": "66K",
+    "tier": "large",
+    "performanceLevel": "mid",
+    "description": "Recraft V4.1 Vector is the vector (SVG) variant of Recraft V4.1, tuned for high aesthetics. It supports text and image inputs and produces SVG image output across multiple aspect ratios, with typical generation around 13 seconds. Output scales cleanly, making it suitable for icons, logos, and other graphics. V4.1 brings more personality to text and illustrations, smoother gradients, and stronger short-prompt adherence compared to V4.\n\nSuited for everyday illustration work where output should be ",
+    "updatedAt": "2026-05-15T05:57:06.102Z"
+  },
+  "openrouter/openrouter/recraft/recraft-v4.1-utility-pro": {
+    "tags": [
+      "vision",
+      "text-generation",
+      "chat",
+      "multimodal"
+    ],
+    "isReasoning": false,
+    "isMultimodal": true,
+    "hasToolUse": false,
+    "contextSize": "66K",
+    "tier": "large",
+    "performanceLevel": "mid",
+    "description": "Recraft V4.1 Utility Pro is a general-purpose image generation model from Recraft. It supports text and image inputs with image output at ~2K resolution across multiple aspect ratios — double the resolution of V4.1 Utility - with typical generation around 20 seconds. Like V4.1 Utility, it is designed for restraint as the aesthetic choice - flat lighting, front-facing composition, and simple, controlled scenes - at higher fidelity for production use cases.\n\nV4.1 improvements over V4 Pro include m",
+    "updatedAt": "2026-05-15T05:57:06.102Z"
+  },
+  "openrouter/openrouter/recraft/recraft-v4.1-utility": {
+    "tags": [
+      "vision",
+      "text-generation",
+      "chat",
+      "multimodal"
+    ],
+    "isReasoning": false,
+    "isMultimodal": true,
+    "hasToolUse": false,
+    "contextSize": "66K",
+    "tier": "large",
+    "performanceLevel": "mid",
+    "description": "Recraft V4.1 Utility is a general-purpose image generation model from Recraft. It supports text and image inputs with image output at ~1K resolution across multiple aspect ratios, with typical generation around 10 seconds. The Utility line is designed for restraint as the aesthetic choice - flat lighting, front-facing composition, and simple, controlled scenes - making it a practical fit for product imagery, mockups, and structured visuals where the high-aesthetic V4.1 line would be too expressi",
+    "updatedAt": "2026-05-15T05:57:06.102Z"
+  },
+  "openrouter/openrouter/recraft/recraft-v4.1-pro": {
+    "tags": [
+      "vision",
+      "text-generation",
+      "chat",
+      "multimodal"
+    ],
+    "isReasoning": false,
+    "isMultimodal": true,
+    "hasToolUse": false,
+    "contextSize": "66K",
+    "tier": "large",
+    "performanceLevel": "mid",
+    "description": "Recraft V4.1 Pro is an image generation model from Recraft tuned for high aesthetics. It supports text and image inputs with image output at ~2K resolution across multiple aspect ratios - double the resolution of V4.1 - with typical generation around 30 seconds. It shares the V4.1 visual sensibility at higher fidelity and detail density, with more natural photorealism, smoother 3D rendering and gradients, and stronger short-prompt adherence than V4 Pro.\n\nSuited for production work where image qu",
+    "updatedAt": "2026-05-15T05:57:06.102Z"
+  },
+  "openrouter/openrouter/recraft/recraft-v4.1": {
+    "tags": [
+      "vision",
+      "text-generation",
+      "chat",
+      "multimodal"
+    ],
+    "isReasoning": false,
+    "isMultimodal": true,
+    "hasToolUse": false,
+    "contextSize": "66K",
+    "tier": "large",
+    "performanceLevel": "mid",
+    "description": "Recraft V4.1 is an image generation model from Recraft tuned for high aesthetics. It supports text and image inputs with image output at ~1K resolution across multiple aspect ratios, with typical generation around 10 seconds. Compared to V4, photorealism feels more natural with quieter backgrounds and more purposeful lighting, 3D rendering and soft gradients are smoother, and the model follows shorter prompts more reliably.\n\nSuited for exploration, concept work, and everyday creative work where ",
+    "updatedAt": "2026-05-15T05:57:06.102Z"
+  },
+  "openrouter/openrouter/recraft/recraft-v4-pro-vector": {
+    "tags": [
+      "vision",
+      "text-generation",
+      "chat",
+      "multimodal"
+    ],
+    "isReasoning": false,
+    "isMultimodal": true,
+    "hasToolUse": false,
+    "contextSize": "66K",
+    "tier": "large",
+    "performanceLevel": "mid",
+    "description": "Recraft V4 Pro Vector is the vector (SVG) variant of Recraft V4 Pro. It supports text and image inputs and produces vector image output across multiple aspect ratios at the higher fidelity Pro tier. Output is delivered as SVG, suitable for icons, logos, and other graphics that need to scale cleanly. V4 Pro offers higher fidelity and detail density than V4, with stronger compositional judgment, color coherence, and legible embedded text compared to V3.\n\nSupports the following `image_config` param",
+    "updatedAt": "2026-05-15T05:57:06.102Z"
+  },
+  "openrouter/openrouter/recraft/recraft-v4-vector": {
+    "tags": [
+      "vision",
+      "text-generation",
+      "chat",
+      "multimodal"
+    ],
+    "isReasoning": false,
+    "isMultimodal": true,
+    "hasToolUse": false,
+    "contextSize": "66K",
+    "tier": "large",
+    "performanceLevel": "mid",
+    "description": "Recraft V4 Vector is the vector (SVG) variant of Recraft V4. It supports text and image inputs and produces vector image output across multiple aspect ratios. Compared to the raster V4, output is delivered as SVG, suitable for icons, logos, and other graphics that need to scale cleanly. V4 delivers stronger compositional judgment, color coherence, and legible embedded text compared to V3.\n\nSupports the following `image_config` parameters: `strength` (controls how much the output deviates from th",
+    "updatedAt": "2026-05-15T05:57:06.103Z"
+  },
+  "gitee/Wan2.7": {
+    "tags": [
+      "video-generation"
+    ],
+    "isReasoning": false,
+    "isMultimodal": false,
+    "hasToolUse": false,
+    "contextSize": "unknown",
+    "tier": "medium",
+    "performanceLevel": "entry",
+    "description": "万相2.7，演绎能力全面升级，文戏情感细腻自然，动作戏激烈拳拳到肉，搭配更富有戏剧性和节奏感的镜头切换，实现更强表演能力。",
+    "updatedAt": "2026-05-16T05:29:20.324Z"
   }
 }
