@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write
   models: read
 
 jobs:
@@ -19,7 +20,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
 
       - name: Install dependencies
         run: npm ci
@@ -28,10 +29,25 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           WECHAT_QYAPI_ID: ${{ secrets.WECHAT_QYAPI_ID }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_KEY: ${{ secrets.CLOUDFLARE_API_KEY }}
+          COHERE_API_KEY: ${{ secrets.COHERE_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
         run: npm run sync
 
-      - name: Commit changes
-        uses: stefanzweifel/git-auto-commit-action@v5
+      - name: Open PR with changes
+        uses: peter-evans/create-pull-request@v7
         with:
-          commit_message: 'chore: sync models and generated docs'
-          file_pattern: 'data README.md docs/providers'
+          commit-message: 'chore: sync models and generated docs'
+          title: 'chore: daily model sync'
+          body: |
+            Automated daily sync from upstream providers.
+
+            Review the diff for unexpected model removals or anomaly warnings before merging.
+          branch: bot/daily-model-sync
+          base: master
+          delete-branch: true
+          add-paths: |
+            data
+            README.md
+            docs/providers
