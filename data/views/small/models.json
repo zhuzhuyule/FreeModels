@@ -1,15 +1,583 @@
 {
   "object": "list",
   "view": "small",
-  "updated_at": "2026-05-18T06:17:27.513Z",
-  "total": 54,
+  "updated_at": "2026-05-19T04:54:24.176Z",
+  "total": 72,
   "filters": {
     "tier": "small"
   },
   "data": [
     {
+      "id": "cloudflare/@cf/baai/bge-m3",
+      "created": 806179036,
+      "provider": "cloudflare",
+      "name": "@cf/baai/bge-m3",
+      "description": "Multi-Functionality, Multi-Linguality, and Multi-Granularity embeddings model.",
+      "context_size": 60000,
+      "context_label": "60K",
+      "price_input": 0.0118,
+      "is_free": true,
+      "capabilities": [
+        "embeddings"
+      ],
+      "tags": [
+        "text-generation",
+        "embeddings"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+      },
+      "trial_scope": "all",
+      "model_family": "@cf-baai-bge-m3",
+      "aliases": [],
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "semantic-search",
+        "similarity"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "cloudflare/@cf/huggingface/distilbert-sst-2-int8",
+      "created": 595821408,
+      "provider": "cloudflare",
+      "name": "@cf/huggingface/distilbert-sst-2-int8",
+      "description": "Distilled BERT model that was finetuned on SST-2 for sentiment classification",
+      "context_label": "unknown",
+      "price_input": 0.0263,
+      "is_free": true,
+      "capabilities": [
+        "moderation"
+      ],
+      "tags": [
+        "text-generation",
+        "moderation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+      },
+      "trial_scope": "all",
+      "model_family": "@cf-huggingface-distilbert-sst-2",
+      "quantization": "int8",
+      "aliases": [],
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "content-filtering",
+        "safety"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "cloudflare/@cf/google/gemma-2b-it-lora",
+      "created": 1773086106,
+      "provider": "cloudflare",
+      "name": "@cf/google/gemma-2b-it-lora",
+      "description": "This is a Gemma-2B base model that Cloudflare dedicates for inference with LoRA adapters. Gemma is a family of lightweight, state-of-the-art open models from Google, built from the same research and technology used to create the Gemini models.",
+      "context_size": 8192,
+      "context_label": "8K",
+      "is_free": true,
+      "capabilities": [
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+      },
+      "trial_scope": "all",
+      "model_family": "@cf-google-gemma-2b-lora",
+      "model_variant": "it",
+      "aliases": [],
+      "parameter_count": 2000000000,
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "cloudflare/@cf/meta/llama-3.2-3b-instruct",
+      "created": 1195405333,
+      "provider": "cloudflare",
+      "name": "@cf/meta/llama-3.2-3b-instruct",
+      "description": "The Llama 3.2 instruction-tuned text only models are optimized for multilingual dialogue use cases, including agentic retrieval and summarization tasks.",
+      "context_size": 80000,
+      "context_label": "80K",
+      "price_input": 0.0509,
+      "price_output": 0.335,
+      "is_free": true,
+      "capabilities": [
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+      },
+      "trial_scope": "all",
+      "model_family": "@cf-meta-llama-3.2-3b",
+      "model_variant": "instruct",
+      "aliases": [],
+      "parameter_count": 3000000000,
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "cloudflare/@cf/pfnet/plamo-embedding-1b",
+      "created": 525894462,
+      "provider": "cloudflare",
+      "name": "@cf/pfnet/plamo-embedding-1b",
+      "description": "PLaMo-Embedding-1B is a Japanese text embedding model developed by Preferred Networks, Inc.\n\nIt can convert Japanese text input into numerical vectors and can be used for a wide range of applications, including information retrieval, text classification, and clustering.",
+      "context_label": "unknown",
+      "price_input": 0.0186,
+      "is_free": true,
+      "capabilities": [
+        "embeddings"
+      ],
+      "tags": [
+        "text-generation",
+        "embeddings"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+      },
+      "trial_scope": "all",
+      "model_family": "@cf-pfnet-plamo-embedding-1b",
+      "model_variant": "embedding",
+      "aliases": [],
+      "parameter_count": 1000000000,
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "semantic-search",
+        "similarity"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "cloudflare/@cf/meta/llama-3.2-1b-instruct",
+      "created": 1015481747,
+      "provider": "cloudflare",
+      "name": "@cf/meta/llama-3.2-1b-instruct",
+      "description": "The Llama 3.2 instruction-tuned text only models are optimized for multilingual dialogue use cases, including agentic retrieval and summarization tasks.",
+      "context_size": 60000,
+      "context_label": "60K",
+      "price_input": 0.027,
+      "price_output": 0.201,
+      "is_free": true,
+      "capabilities": [
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+      },
+      "trial_scope": "all",
+      "model_family": "@cf-meta-llama-3.2-1b",
+      "model_variant": "instruct",
+      "aliases": [],
+      "parameter_count": 1000000000,
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "cloudflare/@cf/ibm-granite/granite-4.0-h-micro",
+      "created": 2029425488,
+      "provider": "cloudflare",
+      "name": "@cf/ibm-granite/granite-4.0-h-micro",
+      "description": "Granite 4.0 instruct models deliver strong performance across benchmarks, achieving industry-leading results in key agentic tasks like instruction following and function calling. These efficiencies make the models well-suited for a wide range of use cases like retrieval-augmented generation (RAG), multi-agent workflows, and edge deployments.",
+      "context_size": 131000,
+      "context_label": "131K",
+      "price_input": 0.017,
+      "price_output": 0.112,
+      "is_free": true,
+      "capabilities": [
+        "text-generation",
+        "function-calling"
+      ],
+      "tags": [
+        "text-generation",
+        "function-calling"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+      },
+      "trial_scope": "all",
+      "model_family": "@cf-ibm-granite-granite-4.0-h-micro",
+      "aliases": [],
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "cloudflare/@cf/meta/m2m100-1.2b",
+      "created": 24857184,
+      "provider": "cloudflare",
+      "name": "@cf/meta/m2m100-1.2b",
+      "description": "Multilingual encoder-decoder (seq-to-seq) model trained for Many-to-Many multilingual translation",
+      "context_label": "unknown",
+      "price_input": 0.342,
+      "price_output": 0.342,
+      "is_free": true,
+      "capabilities": [
+        "translation"
+      ],
+      "tags": [
+        "text-generation",
+        "translation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+      },
+      "trial_scope": "all",
+      "model_family": "@cf-meta-m2m100-1.2b",
+      "aliases": [],
+      "parameter_count": 1200000000,
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "cloudflare/@cf/ai4bharat/indictrans2-en-indic-1B",
+      "created": 1923123167,
+      "provider": "cloudflare",
+      "name": "@cf/ai4bharat/indictrans2-en-indic-1B",
+      "description": "IndicTrans2 is the first open-source transformer-based multilingual NMT model that supports high-quality translations across all the 22 scheduled Indic languages",
+      "context_label": "unknown",
+      "price_input": 0.342,
+      "price_output": 0.342,
+      "is_free": true,
+      "capabilities": [
+        "translation"
+      ],
+      "tags": [
+        "text-generation",
+        "translation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+      },
+      "trial_scope": "all",
+      "model_family": "@cf-ai4bharat-indictrans2-en-indic-1b",
+      "aliases": [],
+      "parameter_count": 1000000000,
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "cloudflare/@cf/black-forest-labs/flux-2-klein-4b",
+      "created": 1831533993,
+      "provider": "cloudflare",
+      "name": "@cf/black-forest-labs/flux-2-klein-4b",
+      "description": "FLUX.2 [klein] is an ultra-fast, distilled image model. It unifies image generation and editing in a single model, delivering state-of-the-art quality enabling interactive workflows, real-time previews, and latency-critical applications.",
+      "context_label": "unknown",
+      "is_free": true,
+      "capabilities": [
+        "image-generation"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "image-generation",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+      },
+      "trial_scope": "all",
+      "model_family": "@cf-black-forest-labs-flux-2-klein-4b",
+      "aliases": [],
+      "parameter_count": 4000000000,
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "creative-generation",
+        "art"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "cloudflare/@cf/baai/bge-small-en-v1.5",
+      "created": 847714420,
+      "provider": "cloudflare",
+      "name": "@cf/baai/bge-small-en-v1.5",
+      "description": "BAAI general embedding (Small) model that transforms any given text into a 384-dimensional vector",
+      "context_label": "unknown",
+      "price_input": 0.0202,
+      "is_free": true,
+      "capabilities": [
+        "embeddings"
+      ],
+      "tags": [
+        "text-generation",
+        "embeddings"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+      },
+      "trial_scope": "all",
+      "model_family": "@cf-baai-bge-small-en-v1.5",
+      "aliases": [],
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "semantic-search",
+        "similarity"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "cloudflare/@cf/baai/bge-base-en-v1.5",
+      "created": 1816005450,
+      "provider": "cloudflare",
+      "name": "@cf/baai/bge-base-en-v1.5",
+      "description": "BAAI general embedding (Base) model that transforms any given text into a 768-dimensional vector",
+      "context_size": 153600,
+      "context_label": "154K",
+      "price_input": 0.0666,
+      "is_free": true,
+      "capabilities": [
+        "embeddings"
+      ],
+      "tags": [
+        "text-generation",
+        "embeddings"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+      },
+      "trial_scope": "all",
+      "model_family": "@cf-baai-bge-base-en-v1.5",
+      "aliases": [],
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "semantic-search",
+        "similarity"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "cloudflare/@cf/aisingapore/gemma-sea-lion-v4-27b-it",
+      "created": 1501963923,
+      "provider": "cloudflare",
+      "name": "@cf/aisingapore/gemma-sea-lion-v4-27b-it",
+      "description": "SEA-LION stands for Southeast Asian Languages In One Network, which is a collection of Large Language Models (LLMs) which have been pretrained and instruct-tuned for the Southeast Asia (SEA) region.",
+      "context_size": 128000,
+      "context_label": "128K",
+      "price_input": 0.351,
+      "price_output": 0.555,
+      "is_free": true,
+      "capabilities": [
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+      },
+      "trial_scope": "all",
+      "model_family": "@cf-aisingapore-gemma-sea-lion-v4-27b",
+      "model_variant": "it",
+      "aliases": [],
+      "parameter_count": 27000000000,
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "cloudflare/@cf/baai/bge-reranker-base",
+      "created": 880140678,
+      "provider": "cloudflare",
+      "name": "@cf/baai/bge-reranker-base",
+      "description": "Different from embedding model, reranker uses question and document as input and directly output similarity instead of embedding. You can get a relevance score by inputting query and passage to the reranker. And the score can be mapped to a float value in [0,1] by sigmoid function.\n\n",
+      "context_label": "unknown",
+      "price_input": 0.00311,
+      "is_free": true,
+      "capabilities": [
+        "moderation"
+      ],
+      "tags": [
+        "text-generation",
+        "moderation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+      },
+      "trial_scope": "all",
+      "model_family": "@cf-baai-bge-reranker-base",
+      "model_variant": "reranker",
+      "aliases": [],
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "content-filtering",
+        "safety"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "cloudflare/@cf/baai/bge-large-en-v1.5",
+      "created": 1393660422,
+      "provider": "cloudflare",
+      "name": "@cf/baai/bge-large-en-v1.5",
+      "description": "BAAI general embedding (Large) model that transforms any given text into a 1024-dimensional vector",
+      "context_label": "unknown",
+      "price_input": 0.204,
+      "is_free": true,
+      "capabilities": [
+        "embeddings"
+      ],
+      "tags": [
+        "text-generation",
+        "embeddings"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+      },
+      "trial_scope": "all",
+      "model_family": "@cf-baai-bge-large-en-v1.5",
+      "aliases": [],
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "semantic-search",
+        "similarity"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
       "id": "CosyVoice2",
-      "created": 1779084993,
+      "created": 451919563,
       "provider": "gitee",
       "name": "CosyVoice2-0.5B",
       "description": "CosyVoice2 是一款升级版语音生成模型，提供更高精准度的多语种支持、情感调节与自然流畅的语音合成，适用于智能客服、语音助手等多个场景。",
@@ -43,7 +611,7 @@
     },
     {
       "id": "DeepSeek-R1-Distill-Qwen-1.5B",
-      "created": 1779084994,
+      "created": 1848528840,
       "provider": "gitee",
       "name": "DeepSeek-R1-Distill-Qwen-1.5B",
       "description": "基于 Qwen2.5-Math-1.5B 的 DeepSeek-R1 蒸馏模型，通过强化学习与冷启动数据优化推理性能，开源模型刷新多任务标杆。",
@@ -53,8 +621,7 @@
       "price_output": 0,
       "is_free": true,
       "capabilities": [
-        "text-generation",
-        "reasoning"
+        "text-generation"
       ],
       "tags": [
         "reasoning",
@@ -85,7 +652,7 @@
     },
     {
       "id": "Step-Audio-TTS-3B",
-      "created": 1779084995,
+      "created": 1708997162,
       "provider": "gitee",
       "name": "Step-Audio-TTS-3B",
       "description": "Step-Audio-TTS-3B 是一款高精度文本转语音模型，能生成自然、流畅且富有情感的语音，支持多种语音风格和口音。",
@@ -120,7 +687,7 @@
     },
     {
       "id": "Spark-TTS-0.5B",
-      "created": 1779084996,
+      "created": 1573793520,
       "provider": "gitee",
       "name": "Spark-TTS-0.5B",
       "description": "Spark-TTS 是一款先进的文本转语音系统，它利用大型语言模型 (LLM) 的强大功能，实现高精度、自然的语音合成。它高效、灵活、功能强大，适用于研究和生产环境。",
@@ -158,7 +725,7 @@
     },
     {
       "id": "Qwen3-4B",
-      "created": 1779084997,
+      "created": 128569450,
       "provider": "gitee",
       "name": "Qwen3-4B",
       "description": "Qwen3 是 Qwen 系列中的最新一代大型语言模型，提供了一系列密集型和混合专家（MoE）模型。基于在训练数据、模型架构和优化技术方面的广泛进步。",
@@ -195,7 +762,7 @@
     },
     {
       "id": "Qwen3-Embedding-4B",
-      "created": 1779084998,
+      "created": 2051849566,
       "provider": "gitee",
       "name": "Qwen3-Embedding-4B",
       "description": "Qwen3-Embedding-4B 是一款多语言、多模态任务通用的高性能文本和代码嵌入模型，适用于语义搜索、跨语言检索和信息匹配等场景。",
@@ -231,7 +798,7 @@
     },
     {
       "id": "Qwen3-Reranker-4B",
-      "created": 1779084999,
+      "created": 1357368355,
       "provider": "gitee",
       "name": "Qwen3-Reranker-4B",
       "description": "Qwen3‑Reranker‑4B 是Qwen团队推出的一款基于大型（≈40亿参数）Decoder-only Transformer，专为跨语言和多域的信息检索排序任务优化的高性能reranker模型。",
@@ -267,7 +834,7 @@
     },
     {
       "id": "Qwen3-VL-4B-Instruct",
-      "created": 1779085000,
+      "created": 751274514,
       "provider": "gitee",
       "name": "Qwen3-VL-4B-Instruct",
       "description": "Qwen3-VL-4B-Instruct 在保持轻量级（4B 级别）模型规模的同时，具备 原生多模态理解 + 指令响应能力，且在视觉-文本对齐、跨模态推理和快速响应效率方面具有其独特优势。",
@@ -303,7 +870,7 @@
     },
     {
       "id": "Qwen3Guard-Gen-4B",
-      "created": 1779085001,
+      "created": 1198367600,
       "provider": "gitee",
       "name": "Qwen3Guard-Gen-4B",
       "description": "Qwen3Guard是阿里巴巴Qwen团队于2025年9月24日发布的人工智能安全审查模型系列。该模型基于Qwen3模型构建，主要用于提供实时高效的人工智能安全保障。",
@@ -338,7 +905,7 @@
     },
     {
       "id": "SeedVR2-3B",
-      "created": 1779085002,
+      "created": 1871713502,
       "provider": "gitee",
       "name": "SeedVR2-3B",
       "description": "SeedVR2‑3B 是由 ByteDance‑Seed 提出的一个 3B 参数级别的一步式扩散对抗后训练模型，专为高分辨率图片修复设计。",
@@ -372,7 +939,7 @@
     },
     {
       "id": "Qwen3-VL-Embedding-2B",
-      "created": 1779085003,
+      "created": 1650875217,
       "provider": "gitee",
       "name": "Qwen3-VL-Embedding-2B",
       "description": "Qwen3-VL-Embedding-2B 是一个支持文本、图像等多模态输入、用于生成统一高维语义向量的 2 B 参数级多模态嵌入模型，常用于跨模态检索和相似性搜索等任务。",
@@ -407,7 +974,7 @@
     },
     {
       "id": "Qwen3-VL-Reranker-2B",
-      "created": 1779085004,
+      "created": 2038695946,
       "provider": "gitee",
       "name": "Qwen3-VL-Reranker-2B",
       "description": "Qwen3-VL-Reranker-2B 是一个基于 Qwen3-VL 多模态基础模型的 2 B 参数级别、多模态重新排序（Reranker）模型，用于对检索到的文本/图像/视频等候选结果进行精细相关性评分，从而提升多模态检索管道的准确性。",
@@ -442,7 +1009,7 @@
     },
     {
       "id": "FLUX.2-klein-4B",
-      "created": 1779085005,
+      "created": 1793401191,
       "provider": "gitee",
       "name": "FLUX.2-klein-4B",
       "description": "FLUX.2-klein-4B 是 Black Forest Labs 发布的一款 轻量级、高速推理的图像生成 AI 模型。",
@@ -476,7 +1043,7 @@
     },
     {
       "id": "Qwen3.5-35B-A3B",
-      "created": 1779085006,
+      "created": 308399120,
       "provider": "gitee",
       "name": "Qwen3.5-35B-A3B",
       "description": "作为原生视觉-语言模型，Qwen3.5-397B-A17B 在推理、编程、智能体能力与多模态理解等全方位基准评估中表现优异，助力开发者与企业显著提升生产力。",
@@ -513,7 +1080,7 @@
     },
     {
       "id": "Qwen3.6-35B-A3B",
-      "created": 1779085007,
+      "created": 1645913329,
       "provider": "gitee",
       "name": "Qwen3.6-35B-A3B",
       "description": "Qwen3.6-35B-A3B 模型是一款基于混合专家架构的高性能大语言模型，具备强推理能力与高性价比，适用于复杂任务与高并发AI应用场景。",
@@ -549,8 +1116,47 @@
       "estimated_latency": "< 1s"
     },
     {
+      "id": "github/Ministral-3B",
+      "created": 1733062572,
+      "provider": "github",
+      "name": "Ministral 3B",
+      "description": "Ministral 3B is a state-of-the-art Small Language Model (SLM) optimized for edge computing and on-device applications. As it is designed for low-latency and compute-efficient inference, it it also the perfect model for standard GenAI applications that have",
+      "context_size": 131072,
+      "context_label": "131K",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation",
+        "chat"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
+      },
+      "trial_scope": "all",
+      "model_family": "ministral-3b",
+      "aliases": [],
+      "parameter_count": 3000000000,
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
       "id": "google/gemini-3.1-flash-lite-preview",
-      "created": 1779085008,
+      "created": 720964174,
       "provider": "google",
       "name": "Gemini 3.1 Flash-Lite Preview",
       "description": "Google: 最具成本效益的模型，针对高容量代理任务、翻译和简单数据处理优化",
@@ -588,7 +1194,7 @@
     },
     {
       "id": "google/gemini-2.5-flash-lite",
-      "created": 1779085009,
+      "created": 1638296638,
       "provider": "google",
       "name": "Gemini 2.5 Flash-Lite",
       "description": "Google: 最小且最具成本效益的模型，为规模化使用而构建",
@@ -626,7 +1232,7 @@
     },
     {
       "id": "google/gemini-2.5-flash-lite-preview-09-2025",
-      "created": 1779085010,
+      "created": 1575125565,
       "provider": "google",
       "name": "Gemini 2.5 Flash-Lite Preview",
       "description": "Google: 基于 Gemini 2.5 Flash Lite 优化成本效益、高吞吐量和高质量",
@@ -664,7 +1270,7 @@
     },
     {
       "id": "google/gemini-2.0-flash",
-      "created": 1779085011,
+      "created": 492119550,
       "provider": "google",
       "name": "Gemini 2.0 Flash",
       "description": "Google: （已弃用，将于 2026 年 6 月 1 日关闭）",
@@ -702,7 +1308,7 @@
     },
     {
       "id": "google/gemini-2.0-flash-lite",
-      "created": 1779085012,
+      "created": 1449606947,
       "provider": "google",
       "name": "Gemini 2.0 Flash-Lite",
       "description": "Google: （已弃用，将于 2026 年 6 月 1 日关闭）",
@@ -740,7 +1346,7 @@
     },
     {
       "id": "google/imagen-4.0-generate-001",
-      "created": 1779085013,
+      "created": 195075127,
       "provider": "google",
       "name": "Imagen 4",
       "description": "Google: 最新图像生成模型，显著更好的文本渲染和整体图像质量",
@@ -772,7 +1378,7 @@
     },
     {
       "id": "google/imagen-4.0-ultra-generate-001",
-      "created": 1779085014,
+      "created": 290470964,
       "provider": "google",
       "name": "Imagen 4 Ultra",
       "description": "Google: 最高质量图像生成",
@@ -804,7 +1410,7 @@
     },
     {
       "id": "google/imagen-4.0-fast-generate-001",
-      "created": 1779085015,
+      "created": 1926039026,
       "provider": "google",
       "name": "Imagen 4 Fast",
       "description": "Google: 快速图像生成",
@@ -836,7 +1442,7 @@
     },
     {
       "id": "google/veo-3.1-generate-preview",
-      "created": 1779085016,
+      "created": 852156833,
       "provider": "google",
       "name": "Veo 3.1",
       "description": "Google: 最新视频生成模型",
@@ -867,7 +1473,7 @@
     },
     {
       "id": "google/veo-3.1-fast-generate-preview",
-      "created": 1779085017,
+      "created": 1052690556,
       "provider": "google",
       "name": "Veo 3.1 Fast",
       "description": "Google: 快速视频生成",
@@ -898,7 +1504,7 @@
     },
     {
       "id": "google/veo-3.0-generate-001",
-      "created": 1779085018,
+      "created": 1268357935,
       "provider": "google",
       "name": "Veo 3.0",
       "description": "Google: 稳定版视频生成模型",
@@ -929,7 +1535,7 @@
     },
     {
       "id": "google/veo-2.0-generate-001",
-      "created": 1779085019,
+      "created": 1063548238,
       "provider": "google",
       "name": "Veo 2.0",
       "description": "Google: 最先进的视频生成模型",
@@ -960,7 +1566,7 @@
     },
     {
       "id": "google/lyria-3-clip-preview",
-      "created": 1779085020,
+      "created": 935630838,
       "provider": "google",
       "name": "Lyria 3 Clip",
       "description": "Google: 音乐生成模型（30秒）",
@@ -987,7 +1593,7 @@
     },
     {
       "id": "google/lyria-3-pro-preview",
-      "created": 1779085021,
+      "created": 749388223,
       "provider": "google",
       "name": "Lyria 3 Pro",
       "description": "Google: 音乐生成模型（全曲）",
@@ -1014,7 +1620,7 @@
     },
     {
       "id": "google/gemini-embedding-2",
-      "created": 1779085022,
+      "created": 1954536875,
       "provider": "google",
       "name": "Gemini Embedding 2",
       "description": "Google: 首个多模态嵌入模型，将文本、图像、视频、音频和 PDF 映射到统一嵌入空间",
@@ -1025,7 +1631,6 @@
         "embeddings"
       ],
       "tags": [
-        "text-generation",
         "embeddings"
       ],
       "is_reasoning": false,
@@ -1040,8 +1645,6 @@
       "tier": "small",
       "speed": "fast",
       "use_case": [
-        "content-creation",
-        "writing-assistance",
         "semantic-search",
         "similarity"
       ],
@@ -1050,7 +1653,7 @@
     },
     {
       "id": "google/gemini-embedding-001",
-      "created": 1779085023,
+      "created": 1813121396,
       "provider": "google",
       "name": "Gemini Embedding",
       "description": "Google: 纯文本嵌入模型",
@@ -1061,7 +1664,6 @@
         "embeddings"
       ],
       "tags": [
-        "text-generation",
         "embeddings"
       ],
       "is_reasoning": false,
@@ -1076,8 +1678,6 @@
       "tier": "small",
       "speed": "fast",
       "use_case": [
-        "content-creation",
-        "writing-assistance",
         "semantic-search",
         "similarity"
       ],
@@ -1086,7 +1686,7 @@
     },
     {
       "id": "google/gemini-robotics-er-1.5-preview",
-      "created": 1779085024,
+      "created": 1578972304,
       "provider": "google",
       "name": "Gemini Robotics-ER 1.5 Preview",
       "description": "Google: 思考模型，增强机器人理解物理世界并与之交互的能力",
@@ -1124,154 +1724,121 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "groq/meta-llama/llama-4-scout-17b-16e-instruct",
-      "created": 1779085025,
+      "id": "groq/whisper-large-v3",
+      "created": 821695011,
       "provider": "groq",
-      "name": "Llama 4 Scout (17Bx16E)",
-      "description": "Groq model: Llama 4 Scout (17Bx16E) - 594 tokens/sec",
-      "context_size": 128000,
-      "context_label": "128K",
-      "price_input": 0.11,
-      "price_output": 0.34,
-      "is_free": false,
+      "name": "whisper-large-v3",
+      "context_size": 448,
+      "context_label": "448",
+      "price_input": 0.111,
+      "is_free": true,
       "capabilities": [
-        "chat",
-        "text-generation"
+        "speech-recognition"
       ],
       "tags": [
-        "text-generation",
-        "chat"
+        "speech-recognition"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
       "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
-      "model_family": "llama-4-scout-(17bx16e)",
-      "model_variant": "instruct",
-      "aliases": [],
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Rate-limited free tier"
+      },
+      "trial_scope": "all",
+      "model_family": "whisper-large-v3",
+      "aliases": [
+        "whisper-large-v3-turbo",
+        "whisper-large-v3",
+        "groq/whisper-large-v3-turbo"
+      ],
       "tier": "small",
       "speed": "fast",
       "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a"
+        "transcription",
+        "voice-input"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
     },
     {
       "id": "groq/openai/gpt-oss-120b",
-      "created": 1779085026,
+      "created": 261834169,
       "provider": "groq",
-      "name": "GPT OSS 120B",
-      "description": "Groq model: GPT OSS 120B - 500 tokens/sec",
-      "context_size": 128000,
-      "context_label": "128K",
+      "name": "openai/gpt-oss-120b",
+      "context_size": 131072,
+      "context_label": "131K",
       "price_input": 0.15,
       "price_output": 0.6,
-      "is_free": false,
+      "is_free": true,
       "capabilities": [
         "chat",
         "text-generation"
       ],
       "tags": [
-        "text-generation",
-        "chat"
+        "chat",
+        "text-generation"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
       "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpd": 1000,
+        "tpm": 8000
+      },
+      "trial_scope": "all",
       "model_family": "gpt-oss-120b",
       "aliases": [
         "gpt-oss-120b",
-        "openai/gpt-oss-120b"
+        "openai/gpt-oss-120b",
+        "sambanova/gpt-oss-120b"
       ],
       "parameter_count": 120000000000,
       "tier": "small",
       "speed": "fast",
       "use_case": [
-        "content-creation",
-        "writing-assistance",
         "conversation",
-        "q&a"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "groq/whisper-large-v3",
-      "created": 1779085027,
-      "provider": "groq",
-      "name": "Whisper V3 Large",
-      "description": "Groq model: Whisper V3 Large - 217 tokens/sec",
-      "context_label": "unknown",
-      "price_input": 0.111,
-      "is_free": false,
-      "capabilities": [
-        "speech-recognition"
-      ],
-      "tags": [
-        "text-generation",
-        "speech-recognition"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
-      "model_family": "whisper-v3-large",
-      "aliases": [],
-      "tier": "small",
-      "speed": "fast",
-      "use_case": [
+        "q&a",
         "content-creation",
-        "writing-assistance",
-        "transcription",
-        "voice-input"
+        "writing-assistance"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
     },
     {
       "id": "groq/whisper-large-v3-turbo",
-      "created": 1779085028,
+      "created": 831031114,
       "provider": "groq",
-      "name": "Whisper Large v3 Turbo",
-      "description": "Groq model: Whisper Large v3 Turbo - 228 tokens/sec",
-      "context_label": "unknown",
+      "name": "whisper-large-v3-turbo",
+      "context_size": 448,
+      "context_label": "448",
       "price_input": 0.04,
-      "is_free": false,
+      "is_free": true,
       "capabilities": [
         "speech-recognition"
       ],
       "tags": [
-        "text-generation",
         "speech-recognition"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
       "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Rate-limited free tier"
+      },
+      "trial_scope": "all",
       "model_family": "whisper-large-v3",
       "model_variant": "turbo",
       "aliases": [
         "whisper-large-v3-turbo",
-        "whisper-large-v3"
+        "whisper-large-v3",
+        "groq/whisper-large-v3"
       ],
       "tier": "small",
       "speed": "fast",
       "use_case": [
-        "content-creation",
-        "writing-assistance",
         "transcription",
         "voice-input"
       ],
@@ -1279,8 +1846,52 @@
       "estimated_latency": "< 1s"
     },
     {
+      "id": "groq/meta-llama/llama-4-scout-17b-16e-instruct",
+      "created": 463560371,
+      "provider": "groq",
+      "name": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "context_size": 131072,
+      "context_label": "131K",
+      "price_input": 0.11,
+      "price_output": 0.34,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpd": 1000,
+        "tpm": 30000
+      },
+      "trial_scope": "all",
+      "model_family": "llama-4-scout-17b-16e",
+      "model_variant": "instruct",
+      "aliases": [
+        "github/Llama-4-Scout-17B-16E-Instruct"
+      ],
+      "parameter_count": 17000000000,
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
       "id": "google/gemma-2-2b-it",
-      "created": 1779085029,
+      "created": 477447330,
       "provider": "nvidia",
       "name": "gemma-2-2b-it",
       "description": "Model: google/gemma-2-2b-it",
@@ -1319,7 +1930,7 @@
     },
     {
       "id": "google/gemma-2b",
-      "created": 1779085030,
+      "created": 916532583,
       "provider": "nvidia",
       "name": "gemma-2b",
       "description": "Model: google/gemma-2b",
@@ -1355,7 +1966,7 @@
     },
     {
       "id": "google/gemma-3-4b-it",
-      "created": 1779085031,
+      "created": 1771287141,
       "provider": "nvidia",
       "name": "gemma-3-4b-it",
       "description": "Model: google/gemma-3-4b-it",
@@ -1392,7 +2003,7 @@
     },
     {
       "id": "google/recurrentgemma-2b",
-      "created": 1779085032,
+      "created": 2051718125,
       "provider": "nvidia",
       "name": "recurrentgemma-2b",
       "description": "Model: google/recurrentgemma-2b",
@@ -1428,7 +2039,7 @@
     },
     {
       "id": "ibm/granite-3.0-3b-a800m-instruct",
-      "created": 1779085033,
+      "created": 1994111218,
       "provider": "nvidia",
       "name": "granite-3.0-3b-a800m-instruct",
       "description": "Model: ibm/granite-3.0-3b-a800m-instruct",
@@ -1465,7 +2076,7 @@
     },
     {
       "id": "meta/llama-3.2-3b-instruct",
-      "created": 1779085034,
+      "created": 1613866189,
       "provider": "nvidia",
       "name": "llama-3.2-3b-instruct",
       "description": "Model: meta/llama-3.2-3b-instruct",
@@ -1502,7 +2113,7 @@
     },
     {
       "id": "nvidia/nemotron-content-safety-reasoning-4b",
-      "created": 1779085035,
+      "created": 549384392,
       "provider": "nvidia",
       "name": "nemotron-content-safety-reasoning-4b",
       "description": "Model: nvidia/nemotron-content-safety-reasoning-4b",
@@ -1545,7 +2156,7 @@
     },
     {
       "id": "nvidia/nemotron-mini-4b-instruct",
-      "created": 1779085036,
+      "created": 148486695,
       "provider": "nvidia",
       "name": "nemotron-mini-4b-instruct",
       "description": "Model: nvidia/nemotron-mini-4b-instruct",
@@ -1584,7 +2195,7 @@
     },
     {
       "id": "nvidia/riva-translate-4b-instruct",
-      "created": 1779085037,
+      "created": 460366680,
       "provider": "nvidia",
       "name": "riva-translate-4b-instruct",
       "description": "Model: nvidia/riva-translate-4b-instruct",
@@ -1620,7 +2231,7 @@
     },
     {
       "id": "nvidia/riva-translate-4b-instruct-v1.1",
-      "created": 1779085038,
+      "created": 1004232603,
       "provider": "nvidia",
       "name": "riva-translate-4b-instruct-v1.1",
       "description": "Model: nvidia/riva-translate-4b-instruct-v1.1",
@@ -1656,7 +2267,7 @@
     },
     {
       "id": "openrouter/liquid/lfm-2.5-1.2b-thinking",
-      "created": 1779085039,
+      "created": 2009026872,
       "provider": "openrouter",
       "name": "LiquidAI: LFM2.5-1.2B-Thinking (free)",
       "description": "LFM2.5-1.2B-Thinking is a lightweight reasoning-focused model optimized for agentic tasks, data extraction, and RAG—while still running comfortably on edge devices. It supports long context (up to 32K tokens) and is designed to provide higher-quality “thinking” responses in a small 1.2B model.",
@@ -1706,7 +2317,7 @@
     },
     {
       "id": "openrouter/liquid/lfm-2.5-1.2b-instruct",
-      "created": 1779085040,
+      "created": 1192109896,
       "provider": "openrouter",
       "name": "LiquidAI: LFM2.5-1.2B-Instruct (free)",
       "description": "LFM2.5-1.2B-Instruct is a compact, high-performance instruction-tuned model built for fast on-device AI. It delivers strong chat quality in a 1.2B parameter footprint, with efficient edge inference and broad runtime support.",
@@ -1750,7 +2361,7 @@
     },
     {
       "id": "openrouter/black-forest-labs/flux.2-klein-4b",
-      "created": 1779085041,
+      "created": 395266396,
       "provider": "openrouter",
       "name": "Black Forest Labs: FLUX.2 Klein 4B",
       "description": "FLUX.2 [klein] 4B is the fastest and most cost-effective model in the FLUX.2 family, optimized for high-throughput use cases while maintaining excellent image quality.\n\nPricing is based on the output image. The first generated megapixel is charged $0.014. Each subsequent megapixel is charged $0.001.",
@@ -1765,10 +2376,10 @@
         "vision"
       ],
       "tags": [
-        "text-generation",
         "vision",
-        "multimodal",
-        "chat"
+        "text-generation",
+        "chat",
+        "multimodal"
       ],
       "is_reasoning": false,
       "is_multimodal": true,
@@ -1786,10 +2397,10 @@
       "tier": "small",
       "speed": "fast",
       "use_case": [
-        "content-creation",
-        "writing-assistance",
         "image-understanding",
         "visual-q&a",
+        "content-creation",
+        "writing-assistance",
         "conversation",
         "q&a"
       ],
@@ -1798,7 +2409,7 @@
     },
     {
       "id": "openrouter/meta-llama/llama-3.2-3b-instruct",
-      "created": 1779085042,
+      "created": 2071699779,
       "provider": "openrouter",
       "name": "Meta: Llama 3.2 3B Instruct (free)",
       "description": "Llama 3.2 3B is a 3-billion-parameter multilingual large language model, optimized for advanced natural language processing tasks like dialogue generation, reasoning, and summarization. Designed with the latest transformer architecture, it supports eight languages, including English, Spanish, and Hindi, and is adaptable for additional languages.\n\nTrained on 9 trillion tokens, the Llama 3.2 3B model excels in instruction-following, complex reasoning, and tool use. Its balanced performance makes i",
@@ -1814,6 +2425,7 @@
       "tags": [
         "reasoning",
         "text-generation",
+        "tool-use",
         "chat"
       ],
       "is_reasoning": true,
@@ -1846,8 +2458,95 @@
       "estimated_latency": "< 1s"
     },
     {
+      "id": "sambanova/gpt-oss-120b",
+      "created": 2048018171,
+      "provider": "sambanova",
+      "name": "openai/gpt-oss-120b",
+      "context_label": "unknown",
+      "price_input": 0.22,
+      "price_output": 0.59,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "total_credits": 5,
+        "notes": "$5 trial credits, valid for 3 months"
+      },
+      "trial_scope": "all",
+      "model_family": "gpt-oss-120b",
+      "aliases": [
+        "gpt-oss-120b",
+        "groq/openai/gpt-oss-120b",
+        "openai/gpt-oss-120b"
+      ],
+      "parameter_count": 120000000000,
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "sambanova/gemma-3-12b-it",
+      "created": 1136995089,
+      "provider": "sambanova",
+      "name": "google/gemma-3-12b-it",
+      "context_label": "unknown",
+      "price_input": 0.35,
+      "price_output": 0.59,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "total_credits": 5,
+        "notes": "$5 trial credits, valid for 3 months"
+      },
+      "trial_scope": "all",
+      "model_family": "gemma-3-12b",
+      "model_variant": "it",
+      "aliases": [
+        "google/gemma-3-12b-it"
+      ],
+      "parameter_count": 12000000000,
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
       "id": "xingchen/xop35qwen2b",
-      "created": 1779085043,
+      "created": 368694390,
       "provider": "xingchen",
       "name": "Qwen3.5-2B",
       "description": "Qwen3.5-2B是阿里云开源的20亿参数轻量大模型，兼顾小体积与强性能，可在手机、笔记本等端侧设备本地运行，在对话、轻量代码等场景表现均衡。",
@@ -1886,7 +2585,7 @@
     },
     {
       "id": "xingchen/xop3qwen30b2507",
-      "created": 1779085044,
+      "created": 611028064,
       "provider": "xingchen",
       "name": "Qwen3-30B-A3B-Instruct-2507",
       "description": "Qwen3-30B-A3B-Instruct-2507 作为 Qwen3-30B-A3B 非思考模式的更新版本，在通用能力（含指令遵循、逻辑推理等）、多语言长尾知识覆盖、用户偏好对齐及长上下文理解方面均有显著提升。",
@@ -1929,7 +2628,7 @@
     },
     {
       "id": "xingchen/xop3qwen30b",
-      "created": 1779085045,
+      "created": 761086098,
       "provider": "xingchen",
       "name": "Qwen3-30B-A3B",
       "description": "Qwen3-30B-A3B 是 Qwen 系列新一代因果语言模型，基于混合专家（MoE）架构，通过预训练与后期优化，实现推理能力、任务适配与多语言支持的全面突破。在推理精度上超越前代 Qwen2.5 系列，在创意写作、多轮交互中带来更自然的体验，还具备强大的外部工具整合能力与超 100 种语言的支持。该模型拥有 30.5B 总参数量（激活 3.3B），48 层 Transformer 架构，原生支",
@@ -1971,7 +2670,7 @@
     },
     {
       "id": "xingchen/xop3qwen4b",
-      "created": 1779085046,
+      "created": 107087229,
       "provider": "xingchen",
       "name": "Qwen3-4B",
       "description": "Qwen3-4B 是 Qwen 系列的轻量级因果语言模型，经预训练与后期优化，具备 40 亿参数规模，采用 36 层 Transformer 架构，原生支持 32K tokens 长上下文（通过 YaRN 技术可扩展至 131K tokens），兼顾高效推理与长文本处理能力，适用于中小规模场景的快速部署与多轮对话、文档分析等任务。",

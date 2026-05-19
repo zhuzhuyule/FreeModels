@@ -21,8 +21,8 @@
 
 | 指标 | 数量 |
 |---|---:|
-| 总模型 | 65 |
-| 免费模型 | 65 |
+| 总模型 | 67 |
+| 免费模型 | 67 |
 | 付费可试用 | 0 |
 
 ## 免费策略
@@ -49,7 +49,7 @@
 | openrouter  | `openrouter/cohere/rerank-4-fast` | Cohere: Rerank 4 Fast | 33K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/cohere/rerank-4-pro` | Cohere: Rerank 4 Pro | 33K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/cohere/rerank-v3.5` | Cohere: Rerank v3.5 | 4K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
-| openrouter  | `openrouter/deepseek/deepseek-v4-flash` | DeepSeek: DeepSeek V4 Flash (free) | 256K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
+| openrouter  | `openrouter/deepseek/deepseek-v4-flash` | DeepSeek: DeepSeek V4 Flash (free) | 1M | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/google/gemma-4-26b-a4b-it` | Google: Gemma 4 26B A4B  (free) | 262K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/google/gemma-4-31b-it` | Google: Gemma 4 31B (free) | 262K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/google/lyria-3-clip-preview` | Google: Lyria 3 Clip Preview | 1M | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
@@ -63,14 +63,14 @@
 | openrouter  | `openrouter/liquid/lfm-2.5-1.2b-instruct` | LiquidAI: LFM2.5-1.2B-Instruct (free) | 33K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/liquid/lfm-2.5-1.2b-thinking` | LiquidAI: LFM2.5-1.2B-Thinking (free) | 33K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/meta-llama/llama-3.2-3b-instruct` | Meta: Llama 3.2 3B Instruct (free) | 131K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
-| openrouter  | `openrouter/meta-llama/llama-3.3-70b-instruct` | Meta: Llama 3.3 70B Instruct (free) | 66K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
+| openrouter  | `openrouter/meta-llama/llama-3.3-70b-instruct` | Meta: Llama 3.3 70B Instruct (free) | 131K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/minimax/hailuo-2.3` | MiniMax: Hailuo 2.3 | unknown | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
-| openrouter  | `openrouter/minimax/minimax-m2.5` | MiniMax: MiniMax M2.5 (free) | 197K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
+| openrouter  | `openrouter/minimax/minimax-m2.5` | MiniMax: MiniMax M2.5 (free) | 205K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/nousresearch/hermes-3-llama-3.1-405b` | Nous: Hermes 3 405B Instruct (free) | 131K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/nvidia/llama-nemotron-embed-vl-1b-v2` | NVIDIA: Llama Nemotron Embed VL 1B V2 (free) | 131K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/nvidia/nemotron-3-nano-30b-a3b` | NVIDIA: Nemotron 3 Nano 30B A3B (free) | 256K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning` | NVIDIA: Nemotron 3 Nano Omni (free) | 256K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
-| openrouter  | `openrouter/nvidia/nemotron-3-super-120b-a12b` | NVIDIA: Nemotron 3 Super (free) | 262K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
+| openrouter  | `openrouter/nvidia/nemotron-3-super-120b-a12b` | NVIDIA: Nemotron 3 Super (free) | 1M | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/nvidia/nemotron-nano-12b-v2-vl` | NVIDIA: Nemotron Nano 12B 2 VL (free) | 128K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/nvidia/nemotron-nano-9b-v2` | NVIDIA: Nemotron Nano 9B V2 (free) | 128K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/openai/gpt-oss-120b` | OpenAI: gpt-oss-120b (free) | 131K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
@@ -79,7 +79,7 @@
 | openrouter  | `openrouter/openrouter/owl-alpha` | Owl Alpha | 1M | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/poolside/laguna-m.1` | Poolside: Laguna M.1 (free) | 131K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/poolside/laguna-xs.2` | Poolside: Laguna XS.2 (free) | 131K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
-| openrouter  | `openrouter/qwen/qwen3-coder` | Qwen: Qwen3 Coder 480B A35B (free) | 262K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
+| openrouter  | `openrouter/qwen/qwen3-coder` | Qwen: Qwen3 Coder 480B A35B (free) | 1M | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/qwen/qwen3-next-80b-a3b-instruct` | Qwen: Qwen3 Next 80B A3B Instruct (free) | 262K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/recraft/recraft-v3` | Recraft: Recraft V3 | 66K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/recraft/recraft-v4` | Recraft: Recraft V4 | 66K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
@@ -97,4 +97,6 @@
 | openrouter  | `openrouter/sourceful/riverflow-v2-max-preview` | Sourceful: Riverflow V2 Max Preview | 8K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/sourceful/riverflow-v2-pro` | Sourceful: Riverflow V2 Pro | 8K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/sourceful/riverflow-v2-standard-preview` | Sourceful: Riverflow V2 Standard Preview | 8K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
+| openrouter  | `openrouter/x-ai/grok-imagine-image-quality` | xAI: Grok Imagine Image Quality | 66K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
+| openrouter  | `openrouter/x-ai/grok-imagine-video` | xAI: Grok Imagine Video | unknown | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/z-ai/glm-4.5-air` | Z.ai: GLM 4.5 Air (free) | 131K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |

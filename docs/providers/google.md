@@ -41,7 +41,7 @@ Gemini API 部分模型提供免费层，通常带有 RPM / RPD / TPM 限制。
 | google  | `google/gemini-2.5-flash-native-audio-preview-12-2025` | Gemini 2.5 Flash Native Audio | 1M | 限速免费 | — |
 | google  | `google/gemini-2.5-flash-preview-tts` | Gemini 2.5 Flash Preview TTS | unknown | 限速免费 | — |
 | google  | `google/gemini-2.5-pro` | Gemini 2.5 Pro | 1M | 限速免费 | — |
-| google  | `google/gemini-3-flash-preview` | Gemini 3 Flash Preview | unknown | 限速免费 | — |
+| google  | `google/gemini-3-flash-preview` | Gemini 3 Flash Preview | 1M | 限速免费 | — |
 | google  | `google/gemini-3.1-flash-lite-preview` | Gemini 3.1 Flash-Lite Preview | 1M | 限速免费 | — |
 | google  | `google/gemini-3.1-flash-live-preview` | Gemini 3.1 Flash Live Preview | 1M | 限速免费 | — |
 | google  | `google/gemini-3.1-flash-tts-preview` | Gemini 3.1 Flash TTS Preview | unknown | 限速免费 | — |
