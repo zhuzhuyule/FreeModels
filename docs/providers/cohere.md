@@ -1,4 +1,4 @@
-# cohere
+# Cohere
 
 > 本文档由 `npm run generate-docs` 根据 `data/models.json` 自动生成。
 
@@ -7,15 +7,15 @@
 | 项目 | 内容 |
 |---|---|
 | 内部 Provider ID | `cohere` |
-| 官网 | — |
-| 注册/登录 | — |
-| 控制台 | — |
-| API Key | — |
-| 官方文档 | — |
-| 模型/价格 | — |
-| API Base URL | — |
-| 鉴权方式 | — |
-| 环境变量 | — |
+| 官网 | [https://cohere.com](https://cohere.com) |
+| 注册/登录 | [https://dashboard.cohere.com/welcome/register](https://dashboard.cohere.com/welcome/register) |
+| 控制台 | [https://dashboard.cohere.com](https://dashboard.cohere.com) |
+| API Key | [https://dashboard.cohere.com/api-keys](https://dashboard.cohere.com/api-keys) |
+| 官方文档 | [https://docs.cohere.com](https://docs.cohere.com) |
+| 模型/价格 | [https://docs.cohere.com/docs/models](https://docs.cohere.com/docs/models) |
+| API Base URL | `https://api.cohere.com/v1` |
+| 鉴权方式 | bearer |
+| 环境变量 | `COHERE_API_KEY` |
 
 ## 当前统计
 
@@ -27,7 +27,7 @@
 
 ## 免费策略
 
-以官方文档和控制台为准。
+Trial key 永久免费：20 RPM、1000 requests/月，所有模型共享配额。
 
 ## 当前免费模型
 

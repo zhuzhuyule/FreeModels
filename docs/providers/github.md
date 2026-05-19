@@ -1,4 +1,4 @@
-# github
+# GitHub Models
 
 > 本文档由 `npm run generate-docs` 根据 `data/models.json` 自动生成。
 
@@ -7,15 +7,15 @@
 | 项目 | 内容 |
 |---|---|
 | 内部 Provider ID | `github` |
-| 官网 | — |
-| 注册/登录 | — |
-| 控制台 | — |
-| API Key | — |
-| 官方文档 | — |
-| 模型/价格 | — |
-| API Base URL | — |
-| 鉴权方式 | — |
-| 环境变量 | — |
+| 官网 | [https://github.com/marketplace/models](https://github.com/marketplace/models) |
+| 注册/登录 | [https://github.com/join](https://github.com/join) |
+| 控制台 | [https://github.com/marketplace/models](https://github.com/marketplace/models) |
+| API Key | [https://github.com/settings/tokens](https://github.com/settings/tokens) |
+| 官方文档 | [https://docs.github.com/en/github-models](https://docs.github.com/en/github-models) |
+| 模型/价格 | [https://github.com/marketplace?type=models](https://github.com/marketplace?type=models) |
+| API Base URL | `https://models.github.ai/inference` |
+| 鉴权方式 | bearer |
+| 环境变量 | `GITHUB_TOKEN` |
 
 ## 当前统计
 
@@ -27,7 +27,7 @@
 
 ## 免费策略
 
-以官方文档和控制台为准。
+按 Copilot 订阅层级（Free / Pro / Pro+ / Business / Enterprise）限速，免费层有较严格的 input/output token 限制。
 
 ## 当前免费模型
 

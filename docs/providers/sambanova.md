@@ -1,4 +1,4 @@
-# sambanova
+# SambaNova Cloud
 
 > 本文档由 `npm run generate-docs` 根据 `data/models.json` 自动生成。
 
@@ -7,15 +7,15 @@
 | 项目 | 内容 |
 |---|---|
 | 内部 Provider ID | `sambanova` |
-| 官网 | — |
-| 注册/登录 | — |
-| 控制台 | — |
-| API Key | — |
-| 官方文档 | — |
-| 模型/价格 | — |
-| API Base URL | — |
-| 鉴权方式 | — |
-| 环境变量 | — |
+| 官网 | [https://cloud.sambanova.ai](https://cloud.sambanova.ai) |
+| 注册/登录 | [https://cloud.sambanova.ai](https://cloud.sambanova.ai) |
+| 控制台 | [https://cloud.sambanova.ai](https://cloud.sambanova.ai) |
+| API Key | [https://cloud.sambanova.ai/apis](https://cloud.sambanova.ai/apis) |
+| 官方文档 | [https://docs.sambanova.ai](https://docs.sambanova.ai) |
+| 模型/价格 | [https://cloud.sambanova.ai/models](https://cloud.sambanova.ai/models) |
+| API Base URL | `https://api.sambanova.ai/v1` |
+| 鉴权方式 | bearer |
+| 环境变量 | `SAMBANOVA_API_KEY` |
 
 ## 当前统计
 
@@ -27,7 +27,7 @@
 
 ## 免费策略
 
-以官方文档和控制台为准。
+新账户提供 $5 trial credits，有效期 3 个月。
 
 ## 当前免费模型
 
