@@ -1,8 +1,8 @@
 {
   "object": "list",
   "provider": "cohere",
-  "updated_at": "2026-05-19T04:58:56.456Z",
-  "total": 29,
+  "updated_at": "2026-05-21T06:13:16.640Z",
+  "total": 30,
   "data": [
     {
       "id": "cohere/c4ai-aya-expanse-32b",
@@ -151,6 +151,44 @@
         "q&a",
         "content-creation",
         "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "cohere/command-a-plus-05-2026",
+      "created": 1046248527,
+      "provider": "cohere",
+      "name": "command-a-plus-05-2026",
+      "context_size": 128000,
+      "context_label": "128K",
+      "is_free": true,
+      "capabilities": [
+        "text-generation",
+        "chat"
+      ],
+      "tags": [
+        "text-generation",
+        "chat"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "notes": "1000 requests/month shared across all models on trial key"
+      },
+      "trial_scope": "all",
+      "model_family": "command-a-plus-05",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"

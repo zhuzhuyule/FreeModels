@@ -1,15 +1,56 @@
 {
   "object": "list",
   "provider": "xingchen",
-  "updated_at": "2026-05-19T04:58:56.464Z",
-  "total": 47,
+  "updated_at": "2026-05-21T06:13:16.645Z",
+  "total": 48,
   "data": [
+    {
+      "id": "xingchen/xopdeepseekv4pro",
+      "created": 663035872,
+      "provider": "xingchen",
+      "name": "DeepSeek-V4-Pro",
+      "description": "DeepSeek-V4 系列预览版，DeepSeek-V4-Pro 参数量达 1.6 万亿（激活参数量 490 亿），模型支持百万级上下文窗口。",
+      "context_size": 262144,
+      "context_label": "262K",
+      "price_input": 12,
+      "price_output": 24,
+      "is_free": false,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "deepseek-v4-pro",
+      "aliases": [
+        "DeepSeek-V4-Pro",
+        "deepseek-ai/deepseek-v4-pro"
+      ],
+      "tier": "large",
+      "speed": "premium",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "3-10s"
+    },
     {
       "id": "xingchen/xsparkx2flash",
       "created": 119700729,
       "provider": "xingchen",
       "name": "Spark-X2-Flash",
-      "description": "星火Spark-X2-Flash，面向Agent场景优化效果，输入最大长度支持192K。星火30B中等尺寸极具性价比又完全基于全国产算力训练和推理的全新模型，智能体和代码等能力显著提升，输入最大长度支持192K。",
+      "description": "星火Spark-X2-Flash，面向Agent场景优化效果，星火30B中等尺寸极具性价比又完全基于全国产算力训练和推理的全新模型，智能体和代码等能力显著提升，输入最大长度支持192K。",
       "context_size": 262144,
       "context_label": "262K",
       "price_input": 1,
@@ -924,6 +965,7 @@
       "aliases": [
         "Qwen3-235B-A22B",
         "Qwen3-235B-A22B-Instruct-2507",
+        "sambanova/Qwen3-235B-A22B-Instruct-2507",
         "xingchen/xop3qwen235b"
       ],
       "parameter_count": 235000000000,
@@ -1010,6 +1052,7 @@
       "aliases": [
         "Qwen3-235B-A22B",
         "Qwen3-235B-A22B-Instruct-2507",
+        "sambanova/Qwen3-235B-A22B-Instruct-2507",
         "xingchen/xop3qwen235b2507"
       ],
       "parameter_count": 235000000000,
@@ -1094,7 +1137,8 @@
       "model_family": "qwen3-32b",
       "aliases": [
         "Qwen3-32B",
-        "groq/qwen/qwen3-32b"
+        "groq/qwen/qwen3-32b",
+        "sambanova/Qwen3-32B"
       ],
       "parameter_count": 32000000000,
       "tier": "large",
@@ -1136,7 +1180,8 @@
       "model_family": "deepseek-v3",
       "aliases": [
         "DeepSeek-V3",
-        "github/DeepSeek-V3-0324"
+        "github/DeepSeek-V3-0324",
+        "sambanova/DeepSeek-V3-0324"
       ],
       "tier": "medium",
       "speed": "standard",
@@ -1181,7 +1226,8 @@
       "aliases": [
         "DeepSeek-R1",
         "github/DeepSeek-R1-0528",
-        "github/DeepSeek-R1"
+        "github/DeepSeek-R1",
+        "sambanova/DeepSeek-R1-0528"
       ],
       "tier": "large",
       "speed": "premium",

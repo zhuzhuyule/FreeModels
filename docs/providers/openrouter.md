@@ -21,8 +21,8 @@
 
 | 指标 | 数量 |
 |---|---:|
-| 总模型 | 67 |
-| 免费模型 | 67 |
+| 总模型 | 68 |
+| 免费模型 | 68 |
 | 付费可试用 | 0 |
 
 ## 免费策略
@@ -100,3 +100,4 @@
 | openrouter  | `openrouter/x-ai/grok-imagine-image-quality` | xAI: Grok Imagine Image Quality | 66K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/x-ai/grok-imagine-video` | xAI: Grok Imagine Video | unknown | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
 | openrouter  | `openrouter/z-ai/glm-4.5-air` | Z.ai: GLM 4.5 Air (free) | 131K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |
+| openrouter  | `openrouter/z-ai/glm-5.1` | Z.ai: GLM 5.1 | 203K | 限速免费 | 20 RPM / 50 RPD / Free models limited to 20 req/min, 50/day on basic accounts |

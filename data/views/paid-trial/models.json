@@ -1,7 +1,7 @@
 {
   "object": "list",
   "view": "paid-trial",
-  "updated_at": "2026-05-19T04:58:56.485Z",
+  "updated_at": "2026-05-21T06:13:16.656Z",
   "total": 136,
   "filters": {
     "isFree": "false",
@@ -207,8 +207,9 @@
       "model_variant": "turbo",
       "aliases": [
         "whisper-large-v3",
+        "groq/whisper-large-v3-turbo",
         "groq/whisper-large-v3",
-        "groq/whisper-large-v3-turbo"
+        "sambanova/Whisper-Large-v3"
       ],
       "tier": "medium",
       "speed": "standard",
@@ -458,6 +459,7 @@
       "model_family": "deepseek-v3",
       "aliases": [
         "github/DeepSeek-V3-0324",
+        "sambanova/DeepSeek-V3-0324",
         "xingchen/xdeepseekv3"
       ],
       "tier": "medium",
@@ -498,6 +500,7 @@
       "aliases": [
         "github/DeepSeek-R1-0528",
         "github/DeepSeek-R1",
+        "sambanova/DeepSeek-R1-0528",
         "xingchen/xdeepseekr1"
       ],
       "tier": "large",
@@ -674,8 +677,9 @@
       "model_family": "whisper-large-v3",
       "aliases": [
         "whisper-large-v3-turbo",
+        "groq/whisper-large-v3-turbo",
         "groq/whisper-large-v3",
-        "groq/whisper-large-v3-turbo"
+        "sambanova/Whisper-Large-v3"
       ],
       "tier": "medium",
       "speed": "standard",
@@ -1033,6 +1037,7 @@
       "model_family": "qwen3-32b",
       "aliases": [
         "groq/qwen/qwen3-32b",
+        "sambanova/Qwen3-32B",
         "xingchen/xop3qwen32b"
       ],
       "parameter_count": 32000000000,
@@ -1197,6 +1202,7 @@
       "model_family": "qwen3-235b-a22b",
       "aliases": [
         "Qwen3-235B-A22B-Instruct-2507",
+        "sambanova/Qwen3-235B-A22B-Instruct-2507",
         "xingchen/xop3qwen235b2507",
         "xingchen/xop3qwen235b"
       ],
@@ -1647,6 +1653,7 @@
       "model_variant": "instruct",
       "aliases": [
         "Qwen3-235B-A22B",
+        "sambanova/Qwen3-235B-A22B-Instruct-2507",
         "xingchen/xop3qwen235b2507",
         "xingchen/xop3qwen235b"
       ],
@@ -2199,9 +2206,7 @@
       "trial_scope": "all",
       "model_family": "qwen3-next-80b-a3b-thinking",
       "model_variant": "thinking",
-      "aliases": [
-        "qwen/qwen3-next-80b-a3b-thinking"
-      ],
+      "aliases": [],
       "parameter_count": 80000000000,
       "tier": "medium",
       "speed": "standard",
@@ -2236,7 +2241,9 @@
       "free_quota": null,
       "trial_scope": "all",
       "model_family": "deepseek-v3.1-terminus",
-      "aliases": [],
+      "aliases": [
+        "sambanova/DeepSeek-V3.1-Terminus"
+      ],
       "tier": "medium",
       "speed": "standard",
       "use_case": [

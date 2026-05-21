@@ -1,8 +1,8 @@
 {
   "object": "list",
   "view": "all",
-  "updated_at": "2026-05-19T04:58:56.469Z",
-  "total": 697,
+  "updated_at": "2026-05-21T06:13:16.645Z",
+  "total": 715,
   "filters": {},
   "data": [
     {
@@ -2314,7 +2314,8 @@
       "trial_scope": "specific",
       "model_family": "llama-3.1-8b",
       "aliases": [
-        "meta/llama-3.1-8b-instruct"
+        "meta/llama-3.1-8b-instruct",
+        "sambanova/Meta-Llama-3.1-8B-Instruct"
       ],
       "parameter_count": 8000000000,
       "tier": "medium",
@@ -5421,6 +5422,44 @@
       "estimated_latency": "< 1s"
     },
     {
+      "id": "cohere/command-a-plus-05-2026",
+      "created": 1046248527,
+      "provider": "cohere",
+      "name": "command-a-plus-05-2026",
+      "context_size": 128000,
+      "context_label": "128K",
+      "is_free": true,
+      "capabilities": [
+        "text-generation",
+        "chat"
+      ],
+      "tags": [
+        "text-generation",
+        "chat"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "notes": "1000 requests/month shared across all models on trial key"
+      },
+      "trial_scope": "all",
+      "model_family": "command-a-plus-05",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
       "id": "cohere/command-a-reasoning-08-2025",
       "created": 1261656011,
       "provider": "cohere",
@@ -6591,8 +6630,9 @@
       "model_variant": "turbo",
       "aliases": [
         "whisper-large-v3",
+        "groq/whisper-large-v3-turbo",
         "groq/whisper-large-v3",
-        "groq/whisper-large-v3-turbo"
+        "sambanova/Whisper-Large-v3"
       ],
       "tier": "medium",
       "speed": "standard",
@@ -7135,6 +7175,7 @@
       "model_family": "deepseek-v3",
       "aliases": [
         "github/DeepSeek-V3-0324",
+        "sambanova/DeepSeek-V3-0324",
         "xingchen/xdeepseekv3"
       ],
       "tier": "medium",
@@ -7175,6 +7216,7 @@
       "aliases": [
         "github/DeepSeek-R1-0528",
         "github/DeepSeek-R1",
+        "sambanova/DeepSeek-R1-0528",
         "xingchen/xdeepseekr1"
       ],
       "tier": "large",
@@ -7387,8 +7429,9 @@
       "model_family": "whisper-large-v3",
       "aliases": [
         "whisper-large-v3-turbo",
+        "groq/whisper-large-v3-turbo",
         "groq/whisper-large-v3",
-        "groq/whisper-large-v3-turbo"
+        "sambanova/Whisper-Large-v3"
       ],
       "tier": "medium",
       "speed": "standard",
@@ -7925,6 +7968,7 @@
       "model_family": "qwen3-32b",
       "aliases": [
         "groq/qwen/qwen3-32b",
+        "sambanova/Qwen3-32B",
         "xingchen/xop3qwen32b"
       ],
       "parameter_count": 32000000000,
@@ -8199,6 +8243,7 @@
       "model_family": "qwen3-235b-a22b",
       "aliases": [
         "Qwen3-235B-A22B-Instruct-2507",
+        "sambanova/Qwen3-235B-A22B-Instruct-2507",
         "xingchen/xop3qwen235b2507",
         "xingchen/xop3qwen235b"
       ],
@@ -8975,6 +9020,7 @@
       "model_variant": "instruct",
       "aliases": [
         "Qwen3-235B-A22B",
+        "sambanova/Qwen3-235B-A22B-Instruct-2507",
         "xingchen/xop3qwen235b2507",
         "xingchen/xop3qwen235b"
       ],
@@ -9595,9 +9641,7 @@
       "trial_scope": "all",
       "model_family": "qwen3-next-80b-a3b-thinking",
       "model_variant": "thinking",
-      "aliases": [
-        "qwen/qwen3-next-80b-a3b-thinking"
-      ],
+      "aliases": [],
       "parameter_count": 80000000000,
       "tier": "medium",
       "speed": "standard",
@@ -9632,7 +9676,9 @@
       "free_quota": null,
       "trial_scope": "all",
       "model_family": "deepseek-v3.1-terminus",
-      "aliases": [],
+      "aliases": [
+        "sambanova/DeepSeek-V3.1-Terminus"
+      ],
       "tier": "medium",
       "speed": "standard",
       "use_case": [
@@ -12402,7 +12448,8 @@
       "trial_scope": "none",
       "model_family": "deepseek-v4-pro",
       "aliases": [
-        "deepseek-ai/deepseek-v4-pro"
+        "deepseek-ai/deepseek-v4-pro",
+        "xingchen/xopdeepseekv4pro"
       ],
       "tier": "large",
       "speed": "premium",
@@ -12556,7 +12603,7 @@
       "id": "Wan2.7",
       "created": 639088414,
       "provider": "gitee",
-      "name": "Wan2.7",
+      "name": "Wan 2.7 - 万相视频生成模型",
       "description": "万相2.7，演绎能力全面升级，文戏情感细腻自然，动作戏激烈拳拳到肉，搭配更富有戏剧性和节奏感的镜头切换，实现更强表演能力。",
       "context_label": "unknown",
       "price_input": 0,
@@ -12574,7 +12621,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "wan2.7",
+      "model_family": "wan-2.7",
       "aliases": [],
       "tier": "medium",
       "speed": "standard",
@@ -12582,6 +12629,136 @@
         "video-creation"
       ],
       "performance_level": "entry",
+      "estimated_latency": "1-3s"
+    },
+    {
+      "id": "ViduQ3-Turbo",
+      "created": 733769798,
+      "provider": "gitee",
+      "name": "ViduQ3-Turbo",
+      "description": "Vidu 的 ViduQ3-Turbo 是一款高性能加速版视频生成模型，兼顾生成效率、画质表现与动态效果，尤其在打斗动作、情绪演绎和语义理解方面表现突出，具备较高性价比，适用于图片社交、AI陪伴、特效素材等泛娱乐场景。",
+      "context_label": "unknown",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": false,
+      "capabilities": [
+        "video-generation"
+      ],
+      "tags": [
+        "video-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "viduq3",
+      "model_variant": "turbo",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "standard",
+      "use_case": [
+        "video-creation"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "1-3s"
+    },
+    {
+      "id": "ViduQ2-Turbo",
+      "created": 2025237767,
+      "provider": "gitee",
+      "name": "ViduQ2-Turbo",
+      "description": "ViduQ2-Turbo图生视频是极速生成引擎。720P 5s视频最快仅需19秒，1080P 5s视频约27秒。人物动作与表情自然逼真，真实感强，在打斗等高动态场景中效果出色，运动幅度大。",
+      "context_label": "unknown",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": false,
+      "capabilities": [
+        "video-generation"
+      ],
+      "tags": [
+        "video-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "viduq2",
+      "model_variant": "turbo",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "standard",
+      "use_case": [
+        "video-creation"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "1-3s"
+    },
+    {
+      "id": "ViduQ2-Pro",
+      "created": 1863411074,
+      "provider": "gitee",
+      "name": "ViduQ2-Pro",
+      "description": "ViduQ2-Pro图生视频是全球首创「万物可参考」视频模型。支持特效、表情、纹理、动作、人物、场景等六大维度参考，实现编辑全面进化。通过可控式增、删、改，达成精细化视频编辑，专为漫剧、短剧、影视制作打造的生产级创作引擎",
+      "context_label": "unknown",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": false,
+      "capabilities": [
+        "video-generation"
+      ],
+      "tags": [
+        "video-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "viduq2-pro",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "premium",
+      "use_case": [
+        "video-creation"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "1-3s"
+    },
+    {
+      "id": "ViduQ3-Pro",
+      "created": 1862225153,
+      "provider": "gitee",
+      "name": "ViduQ3-Pro",
+      "description": "ViduQ3-Pro支持长达16秒的音画同步生成，实现多镜头自由切换，精准把控节奏、情绪与叙事连贯性。参数量领先，画质、人物一致性及情绪表现卓越，达电影级标准。适用于广告（电商、TVC、效果投放）、漫剧、真人剧及游戏等专业生产场景。",
+      "context_label": "unknown",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": false,
+      "capabilities": [
+        "video-generation"
+      ],
+      "tags": [
+        "video-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "viduq3-pro",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "premium",
+      "use_case": [
+        "video-creation"
+      ],
+      "performance_level": "mid",
       "estimated_latency": "1-3s"
     },
     {
@@ -14212,7 +14389,8 @@
       "aliases": [
         "groq/llama-3.3-70b-versatile",
         "meta/llama-3.3-70b-instruct",
-        "sambanova/Meta-Llama-3.3-70B-Instruct"
+        "sambanova/Meta-Llama-3.3-70B-Instruct",
+        "sambanova/Llama-3.3-Swallow-70B-Instruct-v0.4"
       ],
       "parameter_count": 70000000000,
       "tier": "large",
@@ -14737,6 +14915,7 @@
       "model_family": "deepseek-v3",
       "aliases": [
         "DeepSeek-V3",
+        "sambanova/DeepSeek-V3-0324",
         "xingchen/xdeepseekv3"
       ],
       "tier": "large",
@@ -14785,6 +14964,7 @@
       "aliases": [
         "DeepSeek-R1",
         "github/DeepSeek-R1",
+        "sambanova/DeepSeek-R1-0528",
         "xingchen/xdeepseekr1"
       ],
       "tier": "large",
@@ -14833,6 +15013,7 @@
       "aliases": [
         "DeepSeek-R1",
         "github/DeepSeek-R1-0528",
+        "sambanova/DeepSeek-R1-0528",
         "xingchen/xdeepseekr1"
       ],
       "tier": "large",
@@ -16118,82 +16299,6 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "groq/groq/compound",
-      "created": 1269203802,
-      "provider": "groq",
-      "name": "groq/compound",
-      "context_size": 131072,
-      "context_label": "131K",
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "chat",
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "rpd": 250,
-        "tpm": 70000
-      },
-      "trial_scope": "all",
-      "model_family": "groq-compound",
-      "aliases": [],
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "groq/whisper-large-v3",
-      "created": 821695011,
-      "provider": "groq",
-      "name": "whisper-large-v3",
-      "context_size": 448,
-      "context_label": "448",
-      "price_input": 0.111,
-      "is_free": true,
-      "capabilities": [
-        "speech-recognition"
-      ],
-      "tags": [
-        "speech-recognition"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Rate-limited free tier"
-      },
-      "trial_scope": "all",
-      "model_family": "whisper-large-v3",
-      "aliases": [
-        "whisper-large-v3-turbo",
-        "whisper-large-v3",
-        "groq/whisper-large-v3-turbo"
-      ],
-      "tier": "small",
-      "speed": "fast",
-      "use_case": [
-        "transcription",
-        "voice-input"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
       "id": "groq/allam-2-7b",
       "created": 1278808711,
       "provider": "groq",
@@ -16233,19 +16338,18 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "groq/canopylabs/orpheus-v1-english",
-      "created": 1993843289,
+      "id": "groq/meta-llama/llama-prompt-guard-2-86m",
+      "created": 2021365556,
       "provider": "groq",
-      "name": "canopylabs/orpheus-v1-english",
-      "context_size": 4000,
-      "context_label": "4K",
-      "price_input": 22,
+      "name": "meta-llama/llama-prompt-guard-2-86m",
+      "context_size": 512,
+      "context_label": "512",
       "is_free": true,
       "capabilities": [
-        "speech-synthesis"
+        "moderation"
       ],
       "tags": [
-        "speech-synthesis"
+        "moderation"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
@@ -16255,24 +16359,27 @@
         "notes": "Rate-limited free tier"
       },
       "trial_scope": "all",
-      "model_family": "orpheus-v1-english",
+      "model_family": "llama-prompt-guard-2-86m",
+      "model_variant": "guard",
       "aliases": [],
-      "tier": "large",
+      "tier": "medium",
       "speed": "fast",
       "use_case": [
-        "text-to-speech",
-        "voice-output"
+        "content-filtering",
+        "safety"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
     },
     {
-      "id": "groq/groq/compound-mini",
-      "created": 326333228,
+      "id": "groq/llama-3.1-8b-instant",
+      "created": 1070279672,
       "provider": "groq",
-      "name": "groq/compound-mini",
+      "name": "llama-3.1-8b-instant",
       "context_size": 131072,
       "context_label": "131K",
+      "price_input": 0.05,
+      "price_output": 0.08,
       "is_free": true,
       "capabilities": [
         "chat",
@@ -16287,12 +16394,13 @@
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
       "free_quota": {
-        "rpd": 250,
-        "tpm": 70000
+        "rpd": 14400,
+        "tpm": 6000
       },
       "trial_scope": "all",
-      "model_family": "compound-mini",
+      "model_family": "llama-3.1-8b-instant",
       "aliases": [],
+      "parameter_count": 8000000000,
       "tier": "medium",
       "speed": "fast",
       "use_case": [
@@ -16336,6 +16444,7 @@
       "model_family": "qwen3-32b",
       "aliases": [
         "Qwen3-32B",
+        "sambanova/Qwen3-32B",
         "xingchen/xop3qwen32b"
       ],
       "parameter_count": 32000000000,
@@ -16352,97 +16461,6 @@
         "complex-reasoning"
       ],
       "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "groq/openai/gpt-oss-120b",
-      "created": 261834169,
-      "provider": "groq",
-      "name": "openai/gpt-oss-120b",
-      "context_size": 131072,
-      "context_label": "131K",
-      "price_input": 0.15,
-      "price_output": 0.6,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "chat",
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "rpd": 1000,
-        "tpm": 8000
-      },
-      "trial_scope": "all",
-      "model_family": "gpt-oss-120b",
-      "aliases": [
-        "gpt-oss-120b",
-        "openai/gpt-oss-120b",
-        "sambanova/gpt-oss-120b"
-      ],
-      "parameter_count": 120000000000,
-      "tier": "small",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "groq/llama-3.3-70b-versatile",
-      "created": 281060039,
-      "provider": "groq",
-      "name": "llama-3.3-70b-versatile",
-      "context_size": 131072,
-      "context_label": "131K",
-      "price_input": 0.59,
-      "price_output": 0.79,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "chat",
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "rpd": 1000,
-        "tpm": 12000
-      },
-      "trial_scope": "all",
-      "model_family": "llama-3.3-70b",
-      "model_variant": "versatile",
-      "aliases": [
-        "github/Llama-3-3-70B-Instruct",
-        "meta/llama-3.3-70b-instruct",
-        "sambanova/Meta-Llama-3.3-70B-Instruct"
-      ],
-      "parameter_count": 70000000000,
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
       "estimated_latency": "< 1s"
     },
     {
@@ -16473,7 +16491,8 @@
       "aliases": [
         "whisper-large-v3-turbo",
         "whisper-large-v3",
-        "groq/whisper-large-v3"
+        "groq/whisper-large-v3",
+        "sambanova/Whisper-Large-v3"
       ],
       "tier": "small",
       "speed": "fast",
@@ -16485,18 +16504,59 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "groq/meta-llama/llama-prompt-guard-2-86m",
-      "created": 2021365556,
+      "id": "groq/groq/compound",
+      "created": 1269203802,
       "provider": "groq",
-      "name": "meta-llama/llama-prompt-guard-2-86m",
-      "context_size": 512,
-      "context_label": "512",
+      "name": "groq/compound",
+      "context_size": 131072,
+      "context_label": "131K",
       "is_free": true,
       "capabilities": [
-        "moderation"
+        "chat",
+        "text-generation"
       ],
       "tags": [
-        "moderation"
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpd": 250,
+        "tpm": 70000
+      },
+      "trial_scope": "all",
+      "model_family": "groq-compound",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "groq/canopylabs/orpheus-arabic-saudi",
+      "created": 1964073120,
+      "provider": "groq",
+      "name": "canopylabs/orpheus-arabic-saudi",
+      "context_size": 4000,
+      "context_label": "4K",
+      "price_input": 40,
+      "is_free": true,
+      "capabilities": [
+        "speech-synthesis",
+        "translation"
+      ],
+      "tags": [
+        "speech-synthesis",
+        "translation"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
@@ -16506,14 +16566,13 @@
         "notes": "Rate-limited free tier"
       },
       "trial_scope": "all",
-      "model_family": "llama-prompt-guard-2-86m",
-      "model_variant": "guard",
+      "model_family": "orpheus-arabic-saudi",
       "aliases": [],
-      "tier": "medium",
+      "tier": "large",
       "speed": "fast",
       "use_case": [
-        "content-filtering",
-        "safety"
+        "text-to-speech",
+        "voice-output"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
@@ -16562,14 +16621,14 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "groq/llama-3.1-8b-instant",
-      "created": 1070279672,
+      "id": "groq/llama-3.3-70b-versatile",
+      "created": 281060039,
       "provider": "groq",
-      "name": "llama-3.1-8b-instant",
+      "name": "llama-3.3-70b-versatile",
       "context_size": 131072,
       "context_label": "131K",
-      "price_input": 0.05,
-      "price_output": 0.08,
+      "price_input": 0.59,
+      "price_output": 0.79,
       "is_free": true,
       "capabilities": [
         "chat",
@@ -16584,14 +16643,172 @@
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
       "free_quota": {
-        "rpd": 14400,
-        "tpm": 6000
+        "rpd": 1000,
+        "tpm": 12000
       },
       "trial_scope": "all",
-      "model_family": "llama-3.1-8b-instant",
+      "model_family": "llama-3.3-70b",
+      "model_variant": "versatile",
+      "aliases": [
+        "github/Llama-3-3-70B-Instruct",
+        "meta/llama-3.3-70b-instruct",
+        "sambanova/Meta-Llama-3.3-70B-Instruct",
+        "sambanova/Llama-3.3-Swallow-70B-Instruct-v0.4"
+      ],
+      "parameter_count": 70000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "groq/meta-llama/llama-prompt-guard-2-22m",
+      "created": 2021358890,
+      "provider": "groq",
+      "name": "meta-llama/llama-prompt-guard-2-22m",
+      "context_size": 512,
+      "context_label": "512",
+      "is_free": true,
+      "capabilities": [
+        "moderation"
+      ],
+      "tags": [
+        "moderation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Rate-limited free tier"
+      },
+      "trial_scope": "all",
+      "model_family": "llama-prompt-guard-2-22m",
+      "model_variant": "guard",
       "aliases": [],
-      "parameter_count": 8000000000,
       "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-filtering",
+        "safety"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "groq/whisper-large-v3",
+      "created": 821695011,
+      "provider": "groq",
+      "name": "whisper-large-v3",
+      "context_size": 448,
+      "context_label": "448",
+      "price_input": 0.111,
+      "is_free": true,
+      "capabilities": [
+        "speech-recognition"
+      ],
+      "tags": [
+        "speech-recognition"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Rate-limited free tier"
+      },
+      "trial_scope": "all",
+      "model_family": "whisper-large-v3",
+      "aliases": [
+        "whisper-large-v3-turbo",
+        "whisper-large-v3",
+        "groq/whisper-large-v3-turbo",
+        "sambanova/Whisper-Large-v3"
+      ],
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "transcription",
+        "voice-input"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "groq/canopylabs/orpheus-v1-english",
+      "created": 1993843289,
+      "provider": "groq",
+      "name": "canopylabs/orpheus-v1-english",
+      "context_size": 4000,
+      "context_label": "4K",
+      "price_input": 22,
+      "is_free": true,
+      "capabilities": [
+        "speech-synthesis"
+      ],
+      "tags": [
+        "speech-synthesis"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Rate-limited free tier"
+      },
+      "trial_scope": "all",
+      "model_family": "orpheus-v1-english",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "text-to-speech",
+        "voice-output"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "groq/openai/gpt-oss-120b",
+      "created": 261834169,
+      "provider": "groq",
+      "name": "openai/gpt-oss-120b",
+      "context_size": 131072,
+      "context_label": "131K",
+      "price_input": 0.15,
+      "price_output": 0.6,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpd": 1000,
+        "tpm": 8000
+      },
+      "trial_scope": "all",
+      "model_family": "gpt-oss-120b",
+      "aliases": [
+        "gpt-oss-120b",
+        "openai/gpt-oss-120b",
+        "sambanova/gpt-oss-120b"
+      ],
+      "parameter_count": 120000000000,
+      "tier": "small",
       "speed": "fast",
       "use_case": [
         "conversation",
@@ -16683,71 +16900,39 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "groq/canopylabs/orpheus-arabic-saudi",
-      "created": 1964073120,
+      "id": "groq/groq/compound-mini",
+      "created": 326333228,
       "provider": "groq",
-      "name": "canopylabs/orpheus-arabic-saudi",
-      "context_size": 4000,
-      "context_label": "4K",
-      "price_input": 40,
+      "name": "groq/compound-mini",
+      "context_size": 131072,
+      "context_label": "131K",
       "is_free": true,
       "capabilities": [
-        "speech-synthesis",
-        "translation"
+        "chat",
+        "text-generation"
       ],
       "tags": [
-        "speech-synthesis",
-        "translation"
+        "chat",
+        "text-generation"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
       "free_quota": {
-        "notes": "Rate-limited free tier"
+        "rpd": 250,
+        "tpm": 70000
       },
       "trial_scope": "all",
-      "model_family": "orpheus-arabic-saudi",
-      "aliases": [],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "text-to-speech",
-        "voice-output"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "groq/meta-llama/llama-prompt-guard-2-22m",
-      "created": 2021358890,
-      "provider": "groq",
-      "name": "meta-llama/llama-prompt-guard-2-22m",
-      "context_size": 512,
-      "context_label": "512",
-      "is_free": true,
-      "capabilities": [
-        "moderation"
-      ],
-      "tags": [
-        "moderation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Rate-limited free tier"
-      },
-      "trial_scope": "all",
-      "model_family": "llama-prompt-guard-2-22m",
-      "model_variant": "guard",
+      "model_family": "compound-mini",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
       "use_case": [
-        "content-filtering",
-        "safety"
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
@@ -17472,7 +17657,8 @@
       "trial_scope": "none",
       "model_family": "deepseek-v4-pro",
       "aliases": [
-        "DeepSeek-V4-Pro"
+        "DeepSeek-V4-Pro",
+        "xingchen/xopdeepseekv4pro"
       ],
       "tier": "medium",
       "speed": "premium",
@@ -18138,7 +18324,8 @@
       "model_family": "llama-3.1-8b",
       "model_variant": "instruct",
       "aliases": [
-        "cerebras/llama3.1-8b"
+        "cerebras/llama3.1-8b",
+        "sambanova/Meta-Llama-3.1-8B-Instruct"
       ],
       "parameter_count": 8000000000,
       "tier": "medium",
@@ -18331,7 +18518,8 @@
       "aliases": [
         "github/Llama-3-3-70B-Instruct",
         "groq/llama-3.3-70b-versatile",
-        "sambanova/Meta-Llama-3.3-70B-Instruct"
+        "sambanova/Meta-Llama-3.3-70B-Instruct",
+        "sambanova/Llama-3.3-Swallow-70B-Instruct-v0.4"
       ],
       "parameter_count": 70000000000,
       "tier": "large",
@@ -19015,45 +19203,6 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "mistralai/mixtral-8x22b-instruct-v0.1",
-      "created": 1794772935,
-      "provider": "nvidia",
-      "name": "mixtral-8x22b-instruct-v0.1",
-      "description": "Model: mistralai/mixtral-8x22b-instruct-v0.1",
-      "context_label": "unknown",
-      "is_free": false,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation",
-        "chat"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
-      "model_family": "mixtral-8x22b-v0.1",
-      "model_variant": "instruct",
-      "aliases": [
-        "mistralai/mixtral-8x22b-v0.1"
-      ],
-      "parameter_count": 22000000000,
-      "tier": "medium",
-      "speed": "standard",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
-    },
-    {
       "id": "mistralai/mixtral-8x22b-v0.1",
       "created": 190080112,
       "provider": "nvidia",
@@ -19076,9 +19225,7 @@
       "free_quota": null,
       "trial_scope": "none",
       "model_family": "mixtral-8x22b-v0.1",
-      "aliases": [
-        "mistralai/mixtral-8x22b-instruct-v0.1"
-      ],
+      "aliases": [],
       "parameter_count": 22000000000,
       "tier": "medium",
       "speed": "standard",
@@ -20928,45 +21075,6 @@
       "estimated_latency": "1-3s"
     },
     {
-      "id": "qwen/qwen3-next-80b-a3b-thinking",
-      "created": 489450700,
-      "provider": "nvidia",
-      "name": "qwen3-next-80b-a3b-thinking",
-      "description": "Model: qwen/qwen3-next-80b-a3b-thinking",
-      "context_label": "unknown",
-      "is_free": false,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation",
-        "chat"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
-      "model_family": "qwen3-next-80b-a3b-thinking",
-      "model_variant": "thinking",
-      "aliases": [
-        "Qwen3-Next-80B-A3B-Thinking"
-      ],
-      "parameter_count": 80000000000,
-      "tier": "medium",
-      "speed": "standard",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
-    },
-    {
       "id": "qwen/qwen3.5-122b-a10b",
       "created": 2005996363,
       "provider": "nvidia",
@@ -22633,6 +22741,52 @@
       "estimated_latency": "< 1s"
     },
     {
+      "id": "openrouter/alibaba/wan-2.7",
+      "created": 1577432060,
+      "provider": "openrouter",
+      "name": "Alibaba: Wan 2.7",
+      "description": "Wan 2.7 is a video generation model from Alibaba. It supports text-to-video, image-to-video with first and last frame control, and reference-to-video, where multiple reference images guide the style and content of the generated scene.",
+      "context_label": "unknown",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "chat",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "rpd": 50,
+        "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
+      },
+      "trial_scope": "specific",
+      "model_family": "alibaba:-wan-2.7",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
       "id": "openrouter/bytedance/seedance-2.0",
       "created": 1661669850,
       "provider": "openrouter",
@@ -22725,28 +22879,28 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "openrouter/alibaba/wan-2.7",
-      "created": 1577432060,
+      "id": "openrouter/z-ai/glm-5.1",
+      "created": 1383393096,
       "provider": "openrouter",
-      "name": "Alibaba: Wan 2.7",
-      "description": "Wan 2.7 is a video generation model from Alibaba. It supports text-to-video, image-to-video with first and last frame control, and reference-to-video, where multiple reference images guide the style and content of the generated scene.",
-      "context_label": "unknown",
+      "name": "Z.ai: GLM 5.1",
+      "description": "GLM-5.1 delivers a major leap in coding capability, with particularly significant gains in handling long-horizon tasks. Unlike previous models built around minute-level interactions, GLM-5.1 can work independently and continuously on a single task for more than 8 hours, autonomously planning, executing, and improving itself throughout the process, ultimately delivering complete, engineering-grade results.",
+      "context_size": 202800,
+      "context_label": "203K",
       "price_input": 0,
       "price_output": 0,
       "is_free": true,
       "capabilities": [
         "chat",
         "text-generation",
-        "vision"
+        "reasoning"
       ],
       "tags": [
-        "vision",
-        "text-generation",
         "chat",
-        "multimodal"
+        "text-generation",
+        "reasoning"
       ],
-      "is_reasoning": false,
-      "is_multimodal": true,
+      "is_reasoning": true,
+      "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
       "free_quota": {
@@ -22755,17 +22909,19 @@
         "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
       },
       "trial_scope": "specific",
-      "model_family": "alibaba:-wan-2.7",
+      "model_family": "z.ai:-glm-5.1",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
       "use_case": [
-        "image-understanding",
-        "visual-q&a",
+        "conversation",
+        "q&a",
         "content-creation",
         "writing-assistance",
-        "conversation",
-        "q&a"
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
       ],
       "performance_level": "mid",
       "estimated_latency": "< 1s"
@@ -24677,13 +24833,13 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "sambanova/gpt-oss-120b",
-      "created": 2048018171,
+      "id": "sambanova/llama3-8b",
+      "created": 1550049523,
       "provider": "sambanova",
-      "name": "openai/gpt-oss-120b",
+      "name": "llama3-8b",
       "context_label": "unknown",
-      "price_input": 0.22,
-      "price_output": 0.59,
+      "price_input": 0,
+      "price_output": 0,
       "is_free": true,
       "capabilities": [
         "chat",
@@ -24702,14 +24858,100 @@
         "notes": "$5 trial credits, valid for 3 months"
       },
       "trial_scope": "all",
-      "model_family": "gpt-oss-120b",
-      "aliases": [
-        "gpt-oss-120b",
-        "groq/openai/gpt-oss-120b",
-        "openai/gpt-oss-120b"
+      "model_family": "llama3-8b",
+      "aliases": [],
+      "parameter_count": 8000000000,
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
       ],
-      "parameter_count": 120000000000,
-      "tier": "small",
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "sambanova/DeepSeek-R1-Distill-Llama-70B",
+      "created": 392278382,
+      "provider": "sambanova",
+      "name": "deepseek-ai/DeepSeek-R1-Distill-Llama-70B",
+      "context_label": "unknown",
+      "price_input": 0.7,
+      "price_output": 1.4,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "reasoning",
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "total_credits": 5,
+        "notes": "$5 trial credits, valid for 3 months"
+      },
+      "trial_scope": "all",
+      "model_family": "deepseek-r1-distill-llama-70b",
+      "model_variant": "r1",
+      "aliases": [],
+      "parameter_count": 70000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "sambanova/Llama-4-Maverick-17B-128E-Instruct",
+      "created": 1929449344,
+      "provider": "sambanova",
+      "name": "Llama-4-Maverick-17B-128E-Instruct",
+      "context_label": "unknown",
+      "price_input": 0.63,
+      "price_output": 1.8,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "total_credits": 5,
+        "notes": "$5 trial credits, valid for 3 months"
+      },
+      "trial_scope": "all",
+      "model_family": "llama-4-maverick-17b-128e",
+      "model_variant": "instruct",
+      "aliases": [
+        "github/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "meta/llama-4-maverick-17b-128e-instruct"
+      ],
+      "parameter_count": 17000000000,
+      "tier": "medium",
       "speed": "fast",
       "use_case": [
         "conversation",
@@ -24762,13 +25004,13 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "sambanova/Llama-4-Maverick-17B-128E-Instruct",
-      "created": 1929449344,
+      "id": "sambanova/Meta-Llama-3.3-70B-Instruct",
+      "created": 1912571463,
       "provider": "sambanova",
-      "name": "Llama-4-Maverick-17B-128E-Instruct",
+      "name": "Llama 3.3 70B",
       "context_label": "unknown",
-      "price_input": 0.63,
-      "price_output": 1.8,
+      "price_input": 0.6,
+      "price_output": 1.2,
       "is_free": true,
       "capabilities": [
         "chat",
@@ -24787,14 +25029,110 @@
         "notes": "$5 trial credits, valid for 3 months"
       },
       "trial_scope": "all",
-      "model_family": "llama-4-maverick-17b-128e",
+      "model_family": "llama-3.3-70b",
       "model_variant": "instruct",
       "aliases": [
-        "github/Llama-4-Maverick-17B-128E-Instruct-FP8",
-        "meta/llama-4-maverick-17b-128e-instruct"
+        "github/Llama-3-3-70B-Instruct",
+        "groq/llama-3.3-70b-versatile",
+        "meta/llama-3.3-70b-instruct",
+        "sambanova/Llama-3.3-Swallow-70B-Instruct-v0.4"
       ],
-      "parameter_count": 17000000000,
-      "tier": "medium",
+      "parameter_count": 70000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "sambanova/DeepSeek-R1-0528",
+      "created": 437937886,
+      "provider": "sambanova",
+      "name": "deepseek-ai/DeepSeek-R1-0528",
+      "context_label": "unknown",
+      "price_input": 5,
+      "price_output": 7,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "reasoning",
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "total_credits": 5,
+        "notes": "$5 trial credits, valid for 3 months"
+      },
+      "trial_scope": "all",
+      "model_family": "deepseek-r1",
+      "model_variant": "r1",
+      "aliases": [
+        "DeepSeek-R1",
+        "github/DeepSeek-R1-0528",
+        "github/DeepSeek-R1",
+        "xingchen/xdeepseekr1"
+      ],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "sambanova/gpt-oss-120b",
+      "created": 2048018171,
+      "provider": "sambanova",
+      "name": "openai/gpt-oss-120b",
+      "context_label": "unknown",
+      "price_input": 0.22,
+      "price_output": 0.59,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "total_credits": 5,
+        "notes": "$5 trial credits, valid for 3 months"
+      },
+      "trial_scope": "all",
+      "model_family": "gpt-oss-120b",
+      "aliases": [
+        "gpt-oss-120b",
+        "groq/openai/gpt-oss-120b",
+        "openai/gpt-oss-120b"
+      ],
+      "parameter_count": 120000000000,
+      "tier": "small",
       "speed": "fast",
       "use_case": [
         "conversation",
@@ -24848,8 +25186,391 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "sambanova/Meta-Llama-3.3-70B-Instruct",
-      "created": 1912571463,
+      "id": "sambanova/DeepSeek-V3-0324",
+      "created": 1387111070,
+      "provider": "sambanova",
+      "name": "deepseek-ai/DeepSeek-V3-0324",
+      "context_label": "unknown",
+      "price_input": 3,
+      "price_output": 4.5,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "total_credits": 5,
+        "notes": "$5 trial credits, valid for 3 months"
+      },
+      "trial_scope": "all",
+      "model_family": "deepseek-v3",
+      "aliases": [
+        "DeepSeek-V3",
+        "github/DeepSeek-V3-0324",
+        "xingchen/xdeepseekv3"
+      ],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "sambanova/E5-Mistral-7B-Instruct",
+      "created": 189272062,
+      "provider": "sambanova",
+      "name": "E5-Mistral-7B-Instruct",
+      "context_label": "unknown",
+      "price_input": 0.13,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "total_credits": 5,
+        "notes": "$5 trial credits, valid for 3 months"
+      },
+      "trial_scope": "all",
+      "model_family": "e5-mistral-7b",
+      "model_variant": "instruct",
+      "aliases": [],
+      "parameter_count": 7000000000,
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "sambanova/gemma-3-27b-it",
+      "created": 1091930091,
+      "provider": "sambanova",
+      "name": "google/gemma-3-27b-it",
+      "context_label": "unknown",
+      "price_input": 0.22,
+      "price_output": 0.59,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "total_credits": 5,
+        "notes": "$5 trial credits, valid for 3 months"
+      },
+      "trial_scope": "all",
+      "model_family": "gemma-3-27b",
+      "model_variant": "it",
+      "aliases": [],
+      "parameter_count": 27000000000,
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "sambanova/Meta-Llama-3.1-8B-Instruct",
+      "created": 2001924394,
+      "provider": "sambanova",
+      "name": "Llama 3.1 8B",
+      "context_label": "unknown",
+      "price_input": 0.1,
+      "price_output": 0.2,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "total_credits": 5,
+        "notes": "$5 trial credits, valid for 3 months"
+      },
+      "trial_scope": "all",
+      "model_family": "llama-3.1-8b",
+      "model_variant": "instruct",
+      "aliases": [
+        "cerebras/llama3.1-8b",
+        "meta/llama-3.1-8b-instruct"
+      ],
+      "parameter_count": 8000000000,
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "sambanova/Whisper-Large-v3",
+      "created": 191906492,
+      "provider": "sambanova",
+      "name": "Whisper-Large-v3",
+      "context_label": "unknown",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "total_credits": 5,
+        "notes": "$5 trial credits, valid for 3 months"
+      },
+      "trial_scope": "all",
+      "model_family": "whisper-large-v3",
+      "aliases": [
+        "whisper-large-v3-turbo",
+        "whisper-large-v3",
+        "groq/whisper-large-v3-turbo",
+        "groq/whisper-large-v3"
+      ],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "sambanova/Qwen3-235B-A22B-Instruct-2507",
+      "created": 2096442811,
+      "provider": "sambanova",
+      "name": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+      "context_label": "unknown",
+      "price_input": 0.4,
+      "price_output": 0.8,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "total_credits": 5,
+        "notes": "$5 trial credits, valid for 3 months"
+      },
+      "trial_scope": "all",
+      "model_family": "qwen3-235b-a22b",
+      "model_variant": "instruct",
+      "aliases": [
+        "Qwen3-235B-A22B",
+        "Qwen3-235B-A22B-Instruct-2507",
+        "xingchen/xop3qwen235b2507",
+        "xingchen/xop3qwen235b"
+      ],
+      "parameter_count": 235000000000,
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "sambanova/ALLaM-7B-Instruct-preview",
+      "created": 385789167,
+      "provider": "sambanova",
+      "name": "tbd",
+      "context_label": "unknown",
+      "price_input": 0.22,
+      "price_output": 0.59,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "total_credits": 5,
+        "notes": "$5 trial credits, valid for 3 months"
+      },
+      "trial_scope": "all",
+      "model_family": "sambanova-allam-7b-preview",
+      "model_variant": "instruct",
+      "aliases": [],
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "sambanova/Qwen3-235B",
+      "created": 1034281123,
+      "provider": "sambanova",
+      "name": "Qwen/Qwen3-235B",
+      "context_label": "unknown",
+      "price_input": 0.4,
+      "price_output": 0.8,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "total_credits": 5,
+        "notes": "$5 trial credits, valid for 3 months"
+      },
+      "trial_scope": "all",
+      "model_family": "qwen3-235b",
+      "aliases": [],
+      "parameter_count": 235000000000,
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "sambanova/Qwen3-32B",
+      "created": 1270162322,
+      "provider": "sambanova",
+      "name": "Qwen/Qwen3-32B",
+      "context_label": "unknown",
+      "price_input": 0.4,
+      "price_output": 0.8,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "total_credits": 5,
+        "notes": "$5 trial credits, valid for 3 months"
+      },
+      "trial_scope": "all",
+      "model_family": "qwen3-32b",
+      "aliases": [
+        "Qwen3-32B",
+        "groq/qwen/qwen3-32b",
+        "xingchen/xop3qwen32b"
+      ],
+      "parameter_count": 32000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "sambanova/Llama-3.3-Swallow-70B-Instruct-v0.4",
+      "created": 461621090,
       "provider": "sambanova",
       "name": "Llama 3.3 70B",
       "context_label": "unknown",
@@ -24878,49 +25599,11 @@
       "aliases": [
         "github/Llama-3-3-70B-Instruct",
         "groq/llama-3.3-70b-versatile",
-        "meta/llama-3.3-70b-instruct"
+        "meta/llama-3.3-70b-instruct",
+        "sambanova/Meta-Llama-3.3-70B-Instruct"
       ],
       "parameter_count": 70000000000,
       "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "sambanova/MiniMax-M2.7",
-      "created": 1377797552,
-      "provider": "sambanova",
-      "name": "minimaxai/minimax-m2.7",
-      "context_label": "unknown",
-      "price_input": 0.6,
-      "price_output": 2.4,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "chat",
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "trial-credits",
-      "free_quota": {
-        "total_credits": 5,
-        "notes": "$5 trial credits, valid for 3 months"
-      },
-      "trial_scope": "all",
-      "model_family": "minimaxai-minimax-m2.7",
-      "aliases": [],
-      "tier": "medium",
       "speed": "fast",
       "use_case": [
         "conversation",
@@ -24937,7 +25620,7 @@
       "provider": "sambanova",
       "name": "google/gemma-3-12b-it",
       "context_label": "unknown",
-      "price_input": 0.35,
+      "price_input": 0.22,
       "price_output": 0.59,
       "is_free": true,
       "capabilities": [
@@ -24975,11 +25658,93 @@
       "estimated_latency": "< 1s"
     },
     {
+      "id": "sambanova/DeepSeek-V3.1-Terminus",
+      "created": 1169349077,
+      "provider": "sambanova",
+      "name": "deepseek-ai/DeepSeek-V3.1-Terminus",
+      "context_label": "unknown",
+      "price_input": 3,
+      "price_output": 4.5,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "total_credits": 5,
+        "notes": "$5 trial credits, valid for 3 months"
+      },
+      "trial_scope": "all",
+      "model_family": "deepseek-v3.1-terminus",
+      "aliases": [
+        "DeepSeek-V3_1-Terminus"
+      ],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "xingchen/xopdeepseekv4pro",
+      "created": 663035872,
+      "provider": "xingchen",
+      "name": "DeepSeek-V4-Pro",
+      "description": "DeepSeek-V4 系列预览版，DeepSeek-V4-Pro 参数量达 1.6 万亿（激活参数量 490 亿），模型支持百万级上下文窗口。",
+      "context_size": 262144,
+      "context_label": "262K",
+      "price_input": 12,
+      "price_output": 24,
+      "is_free": false,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "deepseek-v4-pro",
+      "aliases": [
+        "DeepSeek-V4-Pro",
+        "deepseek-ai/deepseek-v4-pro"
+      ],
+      "tier": "large",
+      "speed": "premium",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "3-10s"
+    },
+    {
       "id": "xingchen/xsparkx2flash",
       "created": 119700729,
       "provider": "xingchen",
       "name": "Spark-X2-Flash",
-      "description": "星火Spark-X2-Flash，面向Agent场景优化效果，输入最大长度支持192K。星火30B中等尺寸极具性价比又完全基于全国产算力训练和推理的全新模型，智能体和代码等能力显著提升，输入最大长度支持192K。",
+      "description": "星火Spark-X2-Flash，面向Agent场景优化效果，星火30B中等尺寸极具性价比又完全基于全国产算力训练和推理的全新模型，智能体和代码等能力显著提升，输入最大长度支持192K。",
       "context_size": 262144,
       "context_label": "262K",
       "price_input": 1,
@@ -25894,6 +26659,7 @@
       "aliases": [
         "Qwen3-235B-A22B",
         "Qwen3-235B-A22B-Instruct-2507",
+        "sambanova/Qwen3-235B-A22B-Instruct-2507",
         "xingchen/xop3qwen235b"
       ],
       "parameter_count": 235000000000,
@@ -25980,6 +26746,7 @@
       "aliases": [
         "Qwen3-235B-A22B",
         "Qwen3-235B-A22B-Instruct-2507",
+        "sambanova/Qwen3-235B-A22B-Instruct-2507",
         "xingchen/xop3qwen235b2507"
       ],
       "parameter_count": 235000000000,
@@ -26064,7 +26831,8 @@
       "model_family": "qwen3-32b",
       "aliases": [
         "Qwen3-32B",
-        "groq/qwen/qwen3-32b"
+        "groq/qwen/qwen3-32b",
+        "sambanova/Qwen3-32B"
       ],
       "parameter_count": 32000000000,
       "tier": "large",
@@ -26106,7 +26874,8 @@
       "model_family": "deepseek-v3",
       "aliases": [
         "DeepSeek-V3",
-        "github/DeepSeek-V3-0324"
+        "github/DeepSeek-V3-0324",
+        "sambanova/DeepSeek-V3-0324"
       ],
       "tier": "medium",
       "speed": "standard",
@@ -26151,7 +26920,8 @@
       "aliases": [
         "DeepSeek-R1",
         "github/DeepSeek-R1-0528",
-        "github/DeepSeek-R1"
+        "github/DeepSeek-R1",
+        "sambanova/DeepSeek-R1-0528"
       ],
       "tier": "large",
       "speed": "premium",

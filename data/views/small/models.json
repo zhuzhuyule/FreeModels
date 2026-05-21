@@ -1,8 +1,8 @@
 {
   "object": "list",
   "view": "small",
-  "updated_at": "2026-05-19T04:58:56.492Z",
-  "total": 72,
+  "updated_at": "2026-05-21T06:13:16.665Z",
+  "total": 76,
   "filters": {
     "tier": "small"
   },
@@ -1724,6 +1724,46 @@
       "estimated_latency": "< 1s"
     },
     {
+      "id": "groq/whisper-large-v3-turbo",
+      "created": 831031114,
+      "provider": "groq",
+      "name": "whisper-large-v3-turbo",
+      "context_size": 448,
+      "context_label": "448",
+      "price_input": 0.04,
+      "is_free": true,
+      "capabilities": [
+        "speech-recognition"
+      ],
+      "tags": [
+        "speech-recognition"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Rate-limited free tier"
+      },
+      "trial_scope": "all",
+      "model_family": "whisper-large-v3",
+      "model_variant": "turbo",
+      "aliases": [
+        "whisper-large-v3-turbo",
+        "whisper-large-v3",
+        "groq/whisper-large-v3",
+        "sambanova/Whisper-Large-v3"
+      ],
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "transcription",
+        "voice-input"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
       "id": "groq/whisper-large-v3",
       "created": 821695011,
       "provider": "groq",
@@ -1750,7 +1790,8 @@
       "aliases": [
         "whisper-large-v3-turbo",
         "whisper-large-v3",
-        "groq/whisper-large-v3-turbo"
+        "groq/whisper-large-v3-turbo",
+        "sambanova/Whisper-Large-v3"
       ],
       "tier": "small",
       "speed": "fast",
@@ -1802,45 +1843,6 @@
         "q&a",
         "content-creation",
         "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "groq/whisper-large-v3-turbo",
-      "created": 831031114,
-      "provider": "groq",
-      "name": "whisper-large-v3-turbo",
-      "context_size": 448,
-      "context_label": "448",
-      "price_input": 0.04,
-      "is_free": true,
-      "capabilities": [
-        "speech-recognition"
-      ],
-      "tags": [
-        "speech-recognition"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Rate-limited free tier"
-      },
-      "trial_scope": "all",
-      "model_family": "whisper-large-v3",
-      "model_variant": "turbo",
-      "aliases": [
-        "whisper-large-v3-turbo",
-        "whisper-large-v3",
-        "groq/whisper-large-v3"
-      ],
-      "tier": "small",
-      "speed": "fast",
-      "use_case": [
-        "transcription",
-        "voice-input"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
@@ -2502,12 +2504,179 @@
       "estimated_latency": "< 1s"
     },
     {
+      "id": "sambanova/gemma-3-27b-it",
+      "created": 1091930091,
+      "provider": "sambanova",
+      "name": "google/gemma-3-27b-it",
+      "context_label": "unknown",
+      "price_input": 0.22,
+      "price_output": 0.59,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "total_credits": 5,
+        "notes": "$5 trial credits, valid for 3 months"
+      },
+      "trial_scope": "all",
+      "model_family": "gemma-3-27b",
+      "model_variant": "it",
+      "aliases": [],
+      "parameter_count": 27000000000,
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "sambanova/Qwen3-235B-A22B-Instruct-2507",
+      "created": 2096442811,
+      "provider": "sambanova",
+      "name": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+      "context_label": "unknown",
+      "price_input": 0.4,
+      "price_output": 0.8,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "total_credits": 5,
+        "notes": "$5 trial credits, valid for 3 months"
+      },
+      "trial_scope": "all",
+      "model_family": "qwen3-235b-a22b",
+      "model_variant": "instruct",
+      "aliases": [
+        "Qwen3-235B-A22B",
+        "Qwen3-235B-A22B-Instruct-2507",
+        "xingchen/xop3qwen235b2507",
+        "xingchen/xop3qwen235b"
+      ],
+      "parameter_count": 235000000000,
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "sambanova/ALLaM-7B-Instruct-preview",
+      "created": 385789167,
+      "provider": "sambanova",
+      "name": "tbd",
+      "context_label": "unknown",
+      "price_input": 0.22,
+      "price_output": 0.59,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "total_credits": 5,
+        "notes": "$5 trial credits, valid for 3 months"
+      },
+      "trial_scope": "all",
+      "model_family": "sambanova-allam-7b-preview",
+      "model_variant": "instruct",
+      "aliases": [],
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "sambanova/Qwen3-235B",
+      "created": 1034281123,
+      "provider": "sambanova",
+      "name": "Qwen/Qwen3-235B",
+      "context_label": "unknown",
+      "price_input": 0.4,
+      "price_output": 0.8,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "total_credits": 5,
+        "notes": "$5 trial credits, valid for 3 months"
+      },
+      "trial_scope": "all",
+      "model_family": "qwen3-235b",
+      "aliases": [],
+      "parameter_count": 235000000000,
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
       "id": "sambanova/gemma-3-12b-it",
       "created": 1136995089,
       "provider": "sambanova",
       "name": "google/gemma-3-12b-it",
       "context_label": "unknown",
-      "price_input": 0.35,
+      "price_input": 0.22,
       "price_output": 0.59,
       "is_free": true,
       "capabilities": [

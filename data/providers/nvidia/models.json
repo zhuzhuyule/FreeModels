@@ -1,8 +1,8 @@
 {
   "object": "list",
   "provider": "nvidia",
-  "updated_at": "2026-05-19T04:58:56.463Z",
-  "total": 119,
+  "updated_at": "2026-05-21T06:13:16.643Z",
+  "total": 117,
   "data": [
     {
       "id": "01-ai/yi-large",
@@ -431,7 +431,8 @@
       "trial_scope": "none",
       "model_family": "deepseek-v4-pro",
       "aliases": [
-        "DeepSeek-V4-Pro"
+        "DeepSeek-V4-Pro",
+        "xingchen/xopdeepseekv4pro"
       ],
       "tier": "medium",
       "speed": "premium",
@@ -1097,7 +1098,8 @@
       "model_family": "llama-3.1-8b",
       "model_variant": "instruct",
       "aliases": [
-        "cerebras/llama3.1-8b"
+        "cerebras/llama3.1-8b",
+        "sambanova/Meta-Llama-3.1-8B-Instruct"
       ],
       "parameter_count": 8000000000,
       "tier": "medium",
@@ -1290,7 +1292,8 @@
       "aliases": [
         "github/Llama-3-3-70B-Instruct",
         "groq/llama-3.3-70b-versatile",
-        "sambanova/Meta-Llama-3.3-70B-Instruct"
+        "sambanova/Meta-Llama-3.3-70B-Instruct",
+        "sambanova/Llama-3.3-Swallow-70B-Instruct-v0.4"
       ],
       "parameter_count": 70000000000,
       "tier": "large",
@@ -1974,45 +1977,6 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "mistralai/mixtral-8x22b-instruct-v0.1",
-      "created": 1794772935,
-      "provider": "nvidia",
-      "name": "mixtral-8x22b-instruct-v0.1",
-      "description": "Model: mistralai/mixtral-8x22b-instruct-v0.1",
-      "context_label": "unknown",
-      "is_free": false,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation",
-        "chat"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
-      "model_family": "mixtral-8x22b-v0.1",
-      "model_variant": "instruct",
-      "aliases": [
-        "mistralai/mixtral-8x22b-v0.1"
-      ],
-      "parameter_count": 22000000000,
-      "tier": "medium",
-      "speed": "standard",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
-    },
-    {
       "id": "mistralai/mixtral-8x22b-v0.1",
       "created": 190080112,
       "provider": "nvidia",
@@ -2035,9 +1999,7 @@
       "free_quota": null,
       "trial_scope": "none",
       "model_family": "mixtral-8x22b-v0.1",
-      "aliases": [
-        "mistralai/mixtral-8x22b-instruct-v0.1"
-      ],
+      "aliases": [],
       "parameter_count": 22000000000,
       "tier": "medium",
       "speed": "standard",
@@ -3873,45 +3835,6 @@
       "aliases": [
         "Qwen3-Next-80B-A3B-Instruct",
         "xingchen/xop3qwen80bnext"
-      ],
-      "parameter_count": 80000000000,
-      "tier": "medium",
-      "speed": "standard",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
-    },
-    {
-      "id": "qwen/qwen3-next-80b-a3b-thinking",
-      "created": 489450700,
-      "provider": "nvidia",
-      "name": "qwen3-next-80b-a3b-thinking",
-      "description": "Model: qwen/qwen3-next-80b-a3b-thinking",
-      "context_label": "unknown",
-      "is_free": false,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation",
-        "chat"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
-      "model_family": "qwen3-next-80b-a3b-thinking",
-      "model_variant": "thinking",
-      "aliases": [
-        "Qwen3-Next-80B-A3B-Thinking"
       ],
       "parameter_count": 80000000000,
       "tier": "medium",

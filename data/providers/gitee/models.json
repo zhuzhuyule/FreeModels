@@ -1,8 +1,8 @@
 {
   "object": "list",
   "provider": "gitee",
-  "updated_at": "2026-05-19T04:58:56.456Z",
-  "total": 192,
+  "updated_at": "2026-05-21T06:13:16.641Z",
+  "total": 196,
   "data": [
     {
       "id": "jina-clip-v1",
@@ -271,8 +271,9 @@
       "model_variant": "turbo",
       "aliases": [
         "whisper-large-v3",
+        "groq/whisper-large-v3-turbo",
         "groq/whisper-large-v3",
-        "groq/whisper-large-v3-turbo"
+        "sambanova/Whisper-Large-v3"
       ],
       "tier": "medium",
       "speed": "standard",
@@ -815,6 +816,7 @@
       "model_family": "deepseek-v3",
       "aliases": [
         "github/DeepSeek-V3-0324",
+        "sambanova/DeepSeek-V3-0324",
         "xingchen/xdeepseekv3"
       ],
       "tier": "medium",
@@ -855,6 +857,7 @@
       "aliases": [
         "github/DeepSeek-R1-0528",
         "github/DeepSeek-R1",
+        "sambanova/DeepSeek-R1-0528",
         "xingchen/xdeepseekr1"
       ],
       "tier": "large",
@@ -1067,8 +1070,9 @@
       "model_family": "whisper-large-v3",
       "aliases": [
         "whisper-large-v3-turbo",
+        "groq/whisper-large-v3-turbo",
         "groq/whisper-large-v3",
-        "groq/whisper-large-v3-turbo"
+        "sambanova/Whisper-Large-v3"
       ],
       "tier": "medium",
       "speed": "standard",
@@ -1605,6 +1609,7 @@
       "model_family": "qwen3-32b",
       "aliases": [
         "groq/qwen/qwen3-32b",
+        "sambanova/Qwen3-32B",
         "xingchen/xop3qwen32b"
       ],
       "parameter_count": 32000000000,
@@ -1879,6 +1884,7 @@
       "model_family": "qwen3-235b-a22b",
       "aliases": [
         "Qwen3-235B-A22B-Instruct-2507",
+        "sambanova/Qwen3-235B-A22B-Instruct-2507",
         "xingchen/xop3qwen235b2507",
         "xingchen/xop3qwen235b"
       ],
@@ -2655,6 +2661,7 @@
       "model_variant": "instruct",
       "aliases": [
         "Qwen3-235B-A22B",
+        "sambanova/Qwen3-235B-A22B-Instruct-2507",
         "xingchen/xop3qwen235b2507",
         "xingchen/xop3qwen235b"
       ],
@@ -3275,9 +3282,7 @@
       "trial_scope": "all",
       "model_family": "qwen3-next-80b-a3b-thinking",
       "model_variant": "thinking",
-      "aliases": [
-        "qwen/qwen3-next-80b-a3b-thinking"
-      ],
+      "aliases": [],
       "parameter_count": 80000000000,
       "tier": "medium",
       "speed": "standard",
@@ -3312,7 +3317,9 @@
       "free_quota": null,
       "trial_scope": "all",
       "model_family": "deepseek-v3.1-terminus",
-      "aliases": [],
+      "aliases": [
+        "sambanova/DeepSeek-V3.1-Terminus"
+      ],
       "tier": "medium",
       "speed": "standard",
       "use_case": [
@@ -6082,7 +6089,8 @@
       "trial_scope": "none",
       "model_family": "deepseek-v4-pro",
       "aliases": [
-        "deepseek-ai/deepseek-v4-pro"
+        "deepseek-ai/deepseek-v4-pro",
+        "xingchen/xopdeepseekv4pro"
       ],
       "tier": "large",
       "speed": "premium",
@@ -6236,7 +6244,7 @@
       "id": "Wan2.7",
       "created": 639088414,
       "provider": "gitee",
-      "name": "Wan2.7",
+      "name": "Wan 2.7 - 万相视频生成模型",
       "description": "万相2.7，演绎能力全面升级，文戏情感细腻自然，动作戏激烈拳拳到肉，搭配更富有戏剧性和节奏感的镜头切换，实现更强表演能力。",
       "context_label": "unknown",
       "price_input": 0,
@@ -6254,7 +6262,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "wan2.7",
+      "model_family": "wan-2.7",
       "aliases": [],
       "tier": "medium",
       "speed": "standard",
@@ -6262,6 +6270,136 @@
         "video-creation"
       ],
       "performance_level": "entry",
+      "estimated_latency": "1-3s"
+    },
+    {
+      "id": "ViduQ3-Turbo",
+      "created": 733769798,
+      "provider": "gitee",
+      "name": "ViduQ3-Turbo",
+      "description": "Vidu 的 ViduQ3-Turbo 是一款高性能加速版视频生成模型，兼顾生成效率、画质表现与动态效果，尤其在打斗动作、情绪演绎和语义理解方面表现突出，具备较高性价比，适用于图片社交、AI陪伴、特效素材等泛娱乐场景。",
+      "context_label": "unknown",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": false,
+      "capabilities": [
+        "video-generation"
+      ],
+      "tags": [
+        "video-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "viduq3",
+      "model_variant": "turbo",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "standard",
+      "use_case": [
+        "video-creation"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "1-3s"
+    },
+    {
+      "id": "ViduQ2-Turbo",
+      "created": 2025237767,
+      "provider": "gitee",
+      "name": "ViduQ2-Turbo",
+      "description": "ViduQ2-Turbo图生视频是极速生成引擎。720P 5s视频最快仅需19秒，1080P 5s视频约27秒。人物动作与表情自然逼真，真实感强，在打斗等高动态场景中效果出色，运动幅度大。",
+      "context_label": "unknown",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": false,
+      "capabilities": [
+        "video-generation"
+      ],
+      "tags": [
+        "video-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "viduq2",
+      "model_variant": "turbo",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "standard",
+      "use_case": [
+        "video-creation"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "1-3s"
+    },
+    {
+      "id": "ViduQ2-Pro",
+      "created": 1863411074,
+      "provider": "gitee",
+      "name": "ViduQ2-Pro",
+      "description": "ViduQ2-Pro图生视频是全球首创「万物可参考」视频模型。支持特效、表情、纹理、动作、人物、场景等六大维度参考，实现编辑全面进化。通过可控式增、删、改，达成精细化视频编辑，专为漫剧、短剧、影视制作打造的生产级创作引擎",
+      "context_label": "unknown",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": false,
+      "capabilities": [
+        "video-generation"
+      ],
+      "tags": [
+        "video-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "viduq2-pro",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "premium",
+      "use_case": [
+        "video-creation"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "1-3s"
+    },
+    {
+      "id": "ViduQ3-Pro",
+      "created": 1862225153,
+      "provider": "gitee",
+      "name": "ViduQ3-Pro",
+      "description": "ViduQ3-Pro支持长达16秒的音画同步生成，实现多镜头自由切换，精准把控节奏、情绪与叙事连贯性。参数量领先，画质、人物一致性及情绪表现卓越，达电影级标准。适用于广告（电商、TVC、效果投放）、漫剧、真人剧及游戏等专业生产场景。",
+      "context_label": "unknown",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": false,
+      "capabilities": [
+        "video-generation"
+      ],
+      "tags": [
+        "video-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "viduq3-pro",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "premium",
+      "use_case": [
+        "video-creation"
+      ],
+      "performance_level": "mid",
       "estimated_latency": "1-3s"
     },
     {

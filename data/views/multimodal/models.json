@@ -1,7 +1,7 @@
 {
   "object": "list",
   "view": "multimodal",
-  "updated_at": "2026-05-19T04:58:56.487Z",
+  "updated_at": "2026-05-21T06:13:16.659Z",
   "total": 125,
   "filters": {
     "tags": "vision"
@@ -4001,6 +4001,52 @@
       "estimated_latency": "< 1s"
     },
     {
+      "id": "openrouter/alibaba/wan-2.7",
+      "created": 1577432060,
+      "provider": "openrouter",
+      "name": "Alibaba: Wan 2.7",
+      "description": "Wan 2.7 is a video generation model from Alibaba. It supports text-to-video, image-to-video with first and last frame control, and reference-to-video, where multiple reference images guide the style and content of the generated scene.",
+      "context_label": "unknown",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "chat",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "rpd": 50,
+        "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
+      },
+      "trial_scope": "specific",
+      "model_family": "alibaba:-wan-2.7",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
       "id": "openrouter/bytedance/seedance-2.0",
       "created": 1661669850,
       "provider": "openrouter",
@@ -4078,52 +4124,6 @@
       },
       "trial_scope": "specific",
       "model_family": "bytedance:-seedance-2.0-fast",
-      "aliases": [],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "image-understanding",
-        "visual-q&a",
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "openrouter/alibaba/wan-2.7",
-      "created": 1577432060,
-      "provider": "openrouter",
-      "name": "Alibaba: Wan 2.7",
-      "description": "Wan 2.7 is a video generation model from Alibaba. It supports text-to-video, image-to-video with first and last frame control, and reference-to-video, where multiple reference images guide the style and content of the generated scene.",
-      "context_label": "unknown",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "vision"
-      ],
-      "tags": [
-        "vision",
-        "text-generation",
-        "chat",
-        "multimodal"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "rpm": 20,
-        "rpd": 50,
-        "notes": "Free models limited to 20 req/min, 50/day on basic accounts"
-      },
-      "trial_scope": "specific",
-      "model_family": "alibaba:-wan-2.7",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
