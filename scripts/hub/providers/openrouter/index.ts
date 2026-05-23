@@ -1,11 +1,22 @@
 import type { RawModelData, ProviderPlugin } from '../../types.js';
 
-const API_URL = 'https://openrouter.ai/api/frontend/models/find?fmt=cards&max_price=0';
+const API_URL =
+  'https://openrouter.ai/api/frontend/models/find?active=true&max_price=0&output_modalities=text';
 
 interface OpenRouterAPIResponse {
   data: {
     models: OpenRouterModel[];
   };
+}
+
+interface OpenRouterEndpoint {
+  is_free: boolean;
+  is_disabled?: boolean;
+  is_hidden?: boolean;
+  limit_rpm?: number | null;
+  limit_rpd?: number | null;
+  provider_name?: string;
+  provider_slug?: string;
 }
 
 interface OpenRouterModel {
@@ -26,6 +37,7 @@ interface OpenRouterModel {
   };
   group: string;
   hidden: boolean;
+  endpoint?: OpenRouterEndpoint | null;
 }
 
 function inferCapabilities(model: OpenRouterModel): string[] {
@@ -63,7 +75,9 @@ async function fetchOpenRouterModels(): Promise<RawModelData[]> {
   }
 
   const data = (await response.json()) as OpenRouterAPIResponse;
-  const models = data.data.models;
+  const models = data.data.models.filter(
+    (m) => m.endpoint?.is_free && !m.endpoint?.is_disabled && !m.endpoint?.is_hidden,
+  );
 
   console.log(`[openrouter] Fetched ${models.length} free models from OpenRouter`);
 
@@ -71,6 +85,15 @@ async function fetchOpenRouterModels(): Promise<RawModelData[]> {
     const capabilities = inferCapabilities(m);
     const isMultimodal = (m.input_modalities || []).length > 1 ||
       (m.input_modalities || []).some(mod => ['image', 'audio', 'video'].includes(mod));
+
+    const rpm = m.endpoint?.limit_rpm ?? undefined;
+    const rpd = m.endpoint?.limit_rpd ?? undefined;
+    const quotaParts: string[] = [];
+    if (rpm) quotaParts.push(`${rpm} req/min`);
+    if (rpd) quotaParts.push(`${rpd} req/day`);
+    const notes = quotaParts.length
+      ? `Free tier: ${quotaParts.join(', ')} (per endpoint, basic account)`
+      : 'Free tier with rate limits (see openrouter.ai)';
 
     return {
       vendor: 'openrouter',
@@ -83,7 +106,7 @@ async function fetchOpenRouterModels(): Promise<RawModelData[]> {
       priceCurrency: 'USD',
       isFree: true,
       freeMechanism: 'rate-limited',
-      freeQuota: { rpm: 20, rpd: 50, notes: 'Free models limited to 20 req/min, 50/day on basic accounts' },
+      freeQuota: { rpm, rpd, notes },
       trialScope: 'specific',
       capabilities,
       metadata: {
@@ -96,6 +119,7 @@ async function fetchOpenRouterModels(): Promise<RawModelData[]> {
         reasoning_config: m.reasoning_config,
         group: m.group,
         is_multimodal: isMultimodal,
+        endpoint_provider: m.endpoint?.provider_slug,
         provider: 'openrouter',
       },
     };
