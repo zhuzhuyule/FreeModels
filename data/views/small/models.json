@@ -1,7 +1,7 @@
 {
   "object": "list",
   "view": "small",
-  "updated_at": "2026-05-23T16:17:45.865Z",
+  "updated_at": "2026-05-24T04:50:20.666Z",
   "total": 75,
   "filters": {
     "tier": "small"
@@ -1724,45 +1724,6 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "groq/whisper-large-v3",
-      "created": 821695011,
-      "provider": "groq",
-      "name": "whisper-large-v3",
-      "context_size": 448,
-      "context_label": "448",
-      "price_input": 0.111,
-      "is_free": true,
-      "capabilities": [
-        "speech-recognition"
-      ],
-      "tags": [
-        "speech-recognition"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Rate-limited free tier"
-      },
-      "trial_scope": "all",
-      "model_family": "whisper-large-v3",
-      "aliases": [
-        "whisper-large-v3-turbo",
-        "whisper-large-v3",
-        "groq/whisper-large-v3-turbo",
-        "sambanova/Whisper-Large-v3"
-      ],
-      "tier": "small",
-      "speed": "fast",
-      "use_case": [
-        "transcription",
-        "voice-input"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
       "id": "groq/openai/gpt-oss-120b",
       "created": 261834169,
       "provider": "groq",
@@ -1880,6 +1841,45 @@
         "whisper-large-v3-turbo",
         "whisper-large-v3",
         "groq/whisper-large-v3",
+        "sambanova/Whisper-Large-v3"
+      ],
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "transcription",
+        "voice-input"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "groq/whisper-large-v3",
+      "created": 821695011,
+      "provider": "groq",
+      "name": "whisper-large-v3",
+      "context_size": 448,
+      "context_label": "448",
+      "price_input": 0.111,
+      "is_free": true,
+      "capabilities": [
+        "speech-recognition"
+      ],
+      "tags": [
+        "speech-recognition"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Rate-limited free tier"
+      },
+      "trial_scope": "all",
+      "model_family": "whisper-large-v3",
+      "aliases": [
+        "whisper-large-v3-turbo",
+        "whisper-large-v3",
+        "groq/whisper-large-v3-turbo",
         "sambanova/Whisper-Large-v3"
       ],
       "tier": "small",
@@ -2268,8 +2268,8 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "openrouter/liquid/lfm-2.5-1.2b-thinking",
-      "created": 2009026872,
+      "id": "liquid/lfm-2.5-1.2b-thinking:free",
+      "created": 556747778,
       "provider": "openrouter",
       "name": "LiquidAI: LFM2.5-1.2B-Thinking (free)",
       "description": "LFM2.5-1.2B-Thinking is a lightweight reasoning-focused model optimized for agentic tasks, data extraction, and RAG—while still running comfortably on edge devices. It supports long context (up to 32K tokens) and is designed to provide higher-quality “thinking” responses in a small 1.2B model.",
@@ -2316,8 +2316,8 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "openrouter/liquid/lfm-2.5-1.2b-instruct",
-      "created": 1192109896,
+      "id": "liquid/lfm-2.5-1.2b-instruct:free",
+      "created": 1035736194,
       "provider": "openrouter",
       "name": "LiquidAI: LFM2.5-1.2B-Instruct (free)",
       "description": "LFM2.5-1.2B-Instruct is a compact, high-performance instruction-tuned model built for fast on-device AI. It delivers strong chat quality in a 1.2B parameter footprint, with efficient edge inference and broad runtime support.",
@@ -2358,8 +2358,8 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "openrouter/meta-llama/llama-3.2-3b-instruct",
-      "created": 2071699779,
+      "id": "meta-llama/llama-3.2-3b-instruct:free",
+      "created": 1478438307,
       "provider": "openrouter",
       "name": "Meta: Llama 3.2 3B Instruct (free)",
       "description": "Llama 3.2 3B is a 3-billion-parameter multilingual large language model, optimized for advanced natural language processing tasks like dialogue generation, reasoning, and summarization. Designed with the latest transformer architecture, it supports eight languages, including English, Spanish, and Hindi, and is adaptable for additional languages.\n\nTrained on 9 trillion tokens, the Llama 3.2 3B model excels in instruction-following, complex reasoning, and tool use. Its balanced performance makes i",
