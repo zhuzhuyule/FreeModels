@@ -1,61 +1,23 @@
 {
   "object": "list",
   "provider": "groq",
-  "updated_at": "2026-05-19T04:58:56.463Z",
+  "updated_at": "2026-05-23T16:17:45.842Z",
   "total": 16,
   "data": [
     {
-      "id": "groq/groq/compound",
-      "created": 1269203802,
+      "id": "groq/canopylabs/orpheus-v1-english",
+      "created": 1993843289,
       "provider": "groq",
-      "name": "groq/compound",
-      "context_size": 131072,
-      "context_label": "131K",
+      "name": "canopylabs/orpheus-v1-english",
+      "context_size": 4000,
+      "context_label": "4K",
+      "price_input": 22,
       "is_free": true,
       "capabilities": [
-        "chat",
-        "text-generation"
+        "speech-synthesis"
       ],
       "tags": [
-        "chat",
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "rpd": 250,
-        "tpm": 70000
-      },
-      "trial_scope": "all",
-      "model_family": "groq-compound",
-      "aliases": [],
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "groq/whisper-large-v3",
-      "created": 821695011,
-      "provider": "groq",
-      "name": "whisper-large-v3",
-      "context_size": 448,
-      "context_label": "448",
-      "price_input": 0.111,
-      "is_free": true,
-      "capabilities": [
-        "speech-recognition"
-      ],
-      "tags": [
-        "speech-recognition"
+        "speech-synthesis"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
@@ -65,17 +27,13 @@
         "notes": "Rate-limited free tier"
       },
       "trial_scope": "all",
-      "model_family": "whisper-large-v3",
-      "aliases": [
-        "whisper-large-v3-turbo",
-        "whisper-large-v3",
-        "groq/whisper-large-v3-turbo"
-      ],
-      "tier": "small",
+      "model_family": "orpheus-v1-english",
+      "aliases": [],
+      "tier": "large",
       "speed": "fast",
       "use_case": [
-        "transcription",
-        "voice-input"
+        "text-to-speech",
+        "voice-output"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
@@ -120,19 +78,19 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "groq/canopylabs/orpheus-v1-english",
-      "created": 1993843289,
+      "id": "groq/whisper-large-v3",
+      "created": 821695011,
       "provider": "groq",
-      "name": "canopylabs/orpheus-v1-english",
-      "context_size": 4000,
-      "context_label": "4K",
-      "price_input": 22,
+      "name": "whisper-large-v3",
+      "context_size": 448,
+      "context_label": "448",
+      "price_input": 0.111,
       "is_free": true,
       "capabilities": [
-        "speech-synthesis"
+        "speech-recognition"
       ],
       "tags": [
-        "speech-synthesis"
+        "speech-recognition"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
@@ -142,22 +100,97 @@
         "notes": "Rate-limited free tier"
       },
       "trial_scope": "all",
-      "model_family": "orpheus-v1-english",
-      "aliases": [],
-      "tier": "large",
+      "model_family": "whisper-large-v3",
+      "aliases": [
+        "whisper-large-v3-turbo",
+        "whisper-large-v3",
+        "groq/whisper-large-v3-turbo",
+        "sambanova/Whisper-Large-v3"
+      ],
+      "tier": "small",
       "speed": "fast",
       "use_case": [
-        "text-to-speech",
-        "voice-output"
+        "transcription",
+        "voice-input"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
     },
     {
-      "id": "groq/groq/compound-mini",
-      "created": 326333228,
+      "id": "groq/meta-llama/llama-prompt-guard-2-86m",
+      "created": 2021365556,
       "provider": "groq",
-      "name": "groq/compound-mini",
+      "name": "meta-llama/llama-prompt-guard-2-86m",
+      "context_size": 512,
+      "context_label": "512",
+      "is_free": true,
+      "capabilities": [
+        "moderation"
+      ],
+      "tags": [
+        "moderation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Rate-limited free tier"
+      },
+      "trial_scope": "all",
+      "model_family": "llama-prompt-guard-2-86m",
+      "model_variant": "guard",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-filtering",
+        "safety"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "groq/openai/gpt-oss-safeguard-20b",
+      "created": 573618965,
+      "provider": "groq",
+      "name": "openai/gpt-oss-safeguard-20b",
+      "context_size": 131072,
+      "context_label": "131K",
+      "price_input": 0.075,
+      "price_output": 0.3,
+      "is_free": true,
+      "capabilities": [
+        "moderation"
+      ],
+      "tags": [
+        "moderation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Rate-limited free tier"
+      },
+      "trial_scope": "all",
+      "model_family": "gpt-oss-safeguard-20b",
+      "aliases": [],
+      "parameter_count": 20000000000,
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-filtering",
+        "safety"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "groq/groq/compound",
+      "created": 1269203802,
+      "provider": "groq",
+      "name": "groq/compound",
       "context_size": 131072,
       "context_label": "131K",
       "is_free": true,
@@ -178,7 +211,7 @@
         "tpm": 70000
       },
       "trial_scope": "all",
-      "model_family": "compound-mini",
+      "model_family": "groq-compound",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
@@ -189,56 +222,6 @@
         "writing-assistance"
       ],
       "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "groq/qwen/qwen3-32b",
-      "created": 1949760537,
-      "provider": "groq",
-      "name": "qwen/qwen3-32b",
-      "context_size": 131072,
-      "context_label": "131K",
-      "price_input": 0.29,
-      "price_output": 0.59,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "reasoning"
-      ],
-      "tags": [
-        "chat",
-        "text-generation",
-        "reasoning"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "rpd": 1000,
-        "tpm": 6000
-      },
-      "trial_scope": "all",
-      "model_family": "qwen3-32b",
-      "aliases": [
-        "Qwen3-32B",
-        "xingchen/xop3qwen32b"
-      ],
-      "parameter_count": 32000000000,
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance",
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -318,7 +301,8 @@
       "aliases": [
         "github/Llama-3-3-70B-Instruct",
         "meta/llama-3.3-70b-instruct",
-        "sambanova/Meta-Llama-3.3-70B-Instruct"
+        "sambanova/Meta-Llama-3.3-70B-Instruct",
+        "sambanova/Llama-3.3-Swallow-70B-Instruct-v0.4"
       ],
       "parameter_count": 70000000000,
       "tier": "large",
@@ -333,49 +317,54 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "groq/whisper-large-v3-turbo",
-      "created": 831031114,
+      "id": "groq/meta-llama/llama-4-scout-17b-16e-instruct",
+      "created": 463560371,
       "provider": "groq",
-      "name": "whisper-large-v3-turbo",
-      "context_size": 448,
-      "context_label": "448",
-      "price_input": 0.04,
+      "name": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "context_size": 131072,
+      "context_label": "131K",
+      "price_input": 0.11,
+      "price_output": 0.34,
       "is_free": true,
       "capabilities": [
-        "speech-recognition"
+        "chat",
+        "text-generation"
       ],
       "tags": [
-        "speech-recognition"
+        "chat",
+        "text-generation"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
       "free_quota": {
-        "notes": "Rate-limited free tier"
+        "rpd": 1000,
+        "tpm": 30000
       },
       "trial_scope": "all",
-      "model_family": "whisper-large-v3",
-      "model_variant": "turbo",
+      "model_family": "llama-4-scout-17b-16e",
+      "model_variant": "instruct",
       "aliases": [
-        "whisper-large-v3-turbo",
-        "whisper-large-v3",
-        "groq/whisper-large-v3"
+        "github/Llama-4-Scout-17B-16E-Instruct"
       ],
+      "parameter_count": 17000000000,
       "tier": "small",
       "speed": "fast",
       "use_case": [
-        "transcription",
-        "voice-input"
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
     },
     {
-      "id": "groq/meta-llama/llama-prompt-guard-2-86m",
-      "created": 2021365556,
+      "id": "groq/meta-llama/llama-prompt-guard-2-22m",
+      "created": 2021358890,
       "provider": "groq",
-      "name": "meta-llama/llama-prompt-guard-2-86m",
+      "name": "meta-llama/llama-prompt-guard-2-22m",
       "context_size": 512,
       "context_label": "512",
       "is_free": true,
@@ -393,7 +382,7 @@
         "notes": "Rate-limited free tier"
       },
       "trial_scope": "all",
-      "model_family": "llama-prompt-guard-2-86m",
+      "model_family": "llama-prompt-guard-2-22m",
       "model_variant": "guard",
       "aliases": [],
       "tier": "medium",
@@ -449,14 +438,12 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "groq/llama-3.1-8b-instant",
-      "created": 1070279672,
+      "id": "groq/groq/compound-mini",
+      "created": 326333228,
       "provider": "groq",
-      "name": "llama-3.1-8b-instant",
+      "name": "groq/compound-mini",
       "context_size": 131072,
       "context_label": "131K",
-      "price_input": 0.05,
-      "price_output": 0.08,
       "is_free": true,
       "capabilities": [
         "chat",
@@ -471,94 +458,13 @@
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
       "free_quota": {
-        "rpd": 14400,
-        "tpm": 6000
+        "rpd": 250,
+        "tpm": 70000
       },
       "trial_scope": "all",
-      "model_family": "llama-3.1-8b-instant",
+      "model_family": "compound-mini",
       "aliases": [],
-      "parameter_count": 8000000000,
       "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "groq/openai/gpt-oss-safeguard-20b",
-      "created": 573618965,
-      "provider": "groq",
-      "name": "openai/gpt-oss-safeguard-20b",
-      "context_size": 131072,
-      "context_label": "131K",
-      "price_input": 0.075,
-      "price_output": 0.3,
-      "is_free": true,
-      "capabilities": [
-        "moderation"
-      ],
-      "tags": [
-        "moderation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Rate-limited free tier"
-      },
-      "trial_scope": "all",
-      "model_family": "gpt-oss-safeguard-20b",
-      "aliases": [],
-      "parameter_count": 20000000000,
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-filtering",
-        "safety"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "groq/meta-llama/llama-4-scout-17b-16e-instruct",
-      "created": 463560371,
-      "provider": "groq",
-      "name": "meta-llama/llama-4-scout-17b-16e-instruct",
-      "context_size": 131072,
-      "context_label": "131K",
-      "price_input": 0.11,
-      "price_output": 0.34,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "chat",
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "rpd": 1000,
-        "tpm": 30000
-      },
-      "trial_scope": "all",
-      "model_family": "llama-4-scout-17b-16e",
-      "model_variant": "instruct",
-      "aliases": [
-        "github/Llama-4-Scout-17B-16E-Instruct"
-      ],
-      "parameter_count": 17000000000,
-      "tier": "small",
       "speed": "fast",
       "use_case": [
         "conversation",
@@ -606,18 +512,111 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "groq/meta-llama/llama-prompt-guard-2-22m",
-      "created": 2021358890,
+      "id": "groq/llama-3.1-8b-instant",
+      "created": 1070279672,
       "provider": "groq",
-      "name": "meta-llama/llama-prompt-guard-2-22m",
-      "context_size": 512,
-      "context_label": "512",
+      "name": "llama-3.1-8b-instant",
+      "context_size": 131072,
+      "context_label": "131K",
+      "price_input": 0.05,
+      "price_output": 0.08,
       "is_free": true,
       "capabilities": [
-        "moderation"
+        "chat",
+        "text-generation"
       ],
       "tags": [
-        "moderation"
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpd": 14400,
+        "tpm": 6000
+      },
+      "trial_scope": "all",
+      "model_family": "llama-3.1-8b-instant",
+      "aliases": [],
+      "parameter_count": 8000000000,
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "groq/qwen/qwen3-32b",
+      "created": 1949760537,
+      "provider": "groq",
+      "name": "qwen/qwen3-32b",
+      "context_size": 131072,
+      "context_label": "131K",
+      "price_input": 0.29,
+      "price_output": 0.59,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "reasoning"
+      ],
+      "tags": [
+        "chat",
+        "text-generation",
+        "reasoning"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpd": 1000,
+        "tpm": 6000
+      },
+      "trial_scope": "all",
+      "model_family": "qwen3-32b",
+      "aliases": [
+        "Qwen3-32B",
+        "sambanova/Qwen3-32B",
+        "xingchen/xop3qwen32b"
+      ],
+      "parameter_count": 32000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "groq/whisper-large-v3-turbo",
+      "created": 831031114,
+      "provider": "groq",
+      "name": "whisper-large-v3-turbo",
+      "context_size": 448,
+      "context_label": "448",
+      "price_input": 0.04,
+      "is_free": true,
+      "capabilities": [
+        "speech-recognition"
+      ],
+      "tags": [
+        "speech-recognition"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
@@ -627,14 +626,19 @@
         "notes": "Rate-limited free tier"
       },
       "trial_scope": "all",
-      "model_family": "llama-prompt-guard-2-22m",
-      "model_variant": "guard",
-      "aliases": [],
-      "tier": "medium",
+      "model_family": "whisper-large-v3",
+      "model_variant": "turbo",
+      "aliases": [
+        "whisper-large-v3-turbo",
+        "whisper-large-v3",
+        "groq/whisper-large-v3",
+        "sambanova/Whisper-Large-v3"
+      ],
+      "tier": "small",
       "speed": "fast",
       "use_case": [
-        "content-filtering",
-        "safety"
+        "transcription",
+        "voice-input"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
