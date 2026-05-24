@@ -17,6 +17,8 @@ interface OpenRouterEndpoint {
   limit_rpd?: number | null;
   provider_name?: string;
   provider_slug?: string;
+  model_variant_slug?: string;
+  variant?: string;
 }
 
 interface OpenRouterModel {
@@ -95,9 +97,14 @@ async function fetchOpenRouterModels(): Promise<RawModelData[]> {
       ? `Free tier: ${quotaParts.join(', ')} (per endpoint, basic account)`
       : 'Free tier with rate limits (see openrouter.ai)';
 
+    // modelId is the exact string the user passes to OpenRouter's API.
+    // model_variant_slug includes the :free suffix; without it the call hits
+    // the same-named paid endpoint and silently bills.
+    const canonicalSlug = m.endpoint?.model_variant_slug || m.slug;
+
     return {
       vendor: 'openrouter',
-      modelId: `openrouter/${m.slug}`,
+      modelId: canonicalSlug,
       name: m.name,
       description: m.description.replace(/<[^>]*>/g, '').slice(0, 500),
       contextSize: m.context_length || undefined,
@@ -110,7 +117,9 @@ async function fetchOpenRouterModels(): Promise<RawModelData[]> {
       trialScope: 'specific',
       capabilities,
       metadata: {
-        originalId: m.slug,
+        originalId: canonicalSlug,
+        baseSlug: m.slug,
+        variant: m.endpoint?.variant,
         author: m.author,
         author_display_name: m.author_display_name,
         input_modalities: m.input_modalities,
