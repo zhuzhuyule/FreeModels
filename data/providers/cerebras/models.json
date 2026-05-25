@@ -1,7 +1,7 @@
 {
   "object": "list",
   "provider": "cerebras",
-  "updated_at": "2026-05-25T00:37:34.747Z",
+  "updated_at": "2026-05-25T02:26:56.983Z",
   "total": 4,
   "data": [
     {
@@ -31,11 +31,8 @@
       "free_mechanism": "rate-limited",
       "free_quota": null,
       "trial_scope": "specific",
-      "model_family": "llama-3.1-8b",
-      "aliases": [
-        "meta/llama-3.1-8b-instruct",
-        "sambanova/Meta-Llama-3.1-8B-Instruct"
-      ],
+      "model_family": "llama3.1-8b",
+      "aliases": [],
       "parameter_count": 8000000000,
       "tier": "medium",
       "speed": "fast",
@@ -74,8 +71,15 @@
       "free_mechanism": "rate-limited",
       "free_quota": null,
       "trial_scope": "specific",
-      "model_family": "gpt-oss",
-      "aliases": [],
+      "model_family": "gpt-oss-120b",
+      "aliases": [
+        "cloudflare/@cf/openai/gpt-oss-120b",
+        "gpt-oss-120b",
+        "groq/openai/gpt-oss-120b",
+        "openai/gpt-oss-120b",
+        "openai/gpt-oss-120b:free",
+        "sambanova/gpt-oss-120b"
+      ],
       "tier": "medium",
       "speed": "fast",
       "use_case": [
@@ -114,7 +118,7 @@
       "free_mechanism": "preview",
       "free_quota": null,
       "trial_scope": "specific",
-      "model_family": "qwen-3-235b",
+      "model_family": "qwen-3-235b-a22b",
       "model_variant": "instruct",
       "aliases": [],
       "parameter_count": 235000000000,
@@ -157,8 +161,11 @@
       "free_mechanism": "preview",
       "free_quota": null,
       "trial_scope": "specific",
-      "model_family": "z.ai-glm-4.7",
-      "aliases": [],
+      "model_family": "glm-4.7",
+      "aliases": [
+        "GLM-4.7",
+        "xingchen/xopglm47blth2"
+      ],
       "tier": "medium",
       "speed": "fast",
       "use_case": [

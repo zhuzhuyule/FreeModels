@@ -1,7 +1,7 @@
 {
   "object": "list",
   "view": "free-permanent",
-  "updated_at": "2026-05-25T00:37:34.759Z",
+  "updated_at": "2026-05-25T02:26:56.991Z",
   "total": 48,
   "filters": {
     "freeMechanism": "permanent"
@@ -620,7 +620,7 @@
       "free_mechanism": "permanent",
       "free_quota": null,
       "trial_scope": "specific",
-      "model_family": "bce-embedding-base-v1",
+      "model_family": "bce-embedding-base_v1",
       "model_variant": "embedding",
       "aliases": [],
       "tier": "medium",
@@ -657,7 +657,7 @@
       "free_mechanism": "permanent",
       "free_quota": null,
       "trial_scope": "specific",
-      "model_family": "bce-reranker-base-v1",
+      "model_family": "bce-reranker-base_v1",
       "model_variant": "reranker",
       "aliases": [],
       "tier": "medium",
@@ -1088,9 +1088,7 @@
       "free_mechanism": "permanent",
       "free_quota": null,
       "trial_scope": "specific",
-      "model_family": "prover-v2-7b",
-      "model_variant": "null",
-      "quantization": "null",
+      "model_family": "deepseek-prover-v2-7b",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
@@ -1168,7 +1166,9 @@
       "trial_scope": "specific",
       "model_family": "qwen3-embedding-0.6b",
       "model_variant": "embedding",
-      "aliases": [],
+      "aliases": [
+        "cloudflare/@cf/qwen/qwen3-embedding-0.6b"
+      ],
       "parameter_count": 600000000,
       "tier": "medium",
       "speed": "fast",
@@ -1581,7 +1581,7 @@
       "free_mechanism": "permanent",
       "free_quota": null,
       "trial_scope": "specific",
-      "model_family": "huatuo-gpt-o1-7b",
+      "model_family": "huatuogpt-o1-7b",
       "aliases": [],
       "parameter_count": 7000000000,
       "tier": "medium",
@@ -1768,9 +1768,7 @@
       "free_quota": null,
       "trial_scope": "specific",
       "model_family": "bge-m3",
-      "aliases": [
-        "baai/bge-m3"
-      ],
+      "aliases": [],
       "tier": "medium",
       "speed": "fast",
       "use_case": [

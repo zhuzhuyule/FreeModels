@@ -1,7 +1,7 @@
 {
   "object": "list",
   "provider": "nvidia",
-  "updated_at": "2026-05-25T00:37:34.750Z",
+  "updated_at": "2026-05-25T02:26:56.985Z",
   "total": 117,
   "data": [
     {
@@ -28,7 +28,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "yi-large",
+      "model_family": "01-ai-yi-large",
       "aliases": [],
       "tier": "medium",
       "speed": "standard",
@@ -65,7 +65,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "dracarys-llama-3.1-70b",
+      "model_family": "abacusai-dracarys-llama-3.1-70b",
       "model_variant": "instruct",
       "aliases": [],
       "parameter_count": 70000000000,
@@ -104,7 +104,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "fuyu-8b",
+      "model_family": "adept-fuyu-8b",
       "aliases": [],
       "parameter_count": 8000000000,
       "tier": "medium",
@@ -142,11 +142,9 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "jamba-1.5-large",
+      "model_family": "ai21labs-jamba-1.5-large",
       "model_variant": "instruct",
-      "aliases": [
-        "github/AI21-Jamba-1-5-Large"
-      ],
+      "aliases": [],
       "tier": "medium",
       "speed": "standard",
       "use_case": [
@@ -182,7 +180,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "sea-lion-7b",
+      "model_family": "aisingapore-sea-lion-7b",
       "model_variant": "instruct",
       "aliases": [],
       "parameter_count": 7000000000,
@@ -220,9 +218,9 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "bge-m3",
+      "model_family": "baai-bge-m3",
       "aliases": [
-        "bge-m3"
+        "cloudflare/@cf/baai/bge-m3"
       ],
       "tier": "medium",
       "speed": "standard",
@@ -258,7 +256,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "starcoder2-15b",
+      "model_family": "bigcode-starcoder2-15b",
       "aliases": [],
       "parameter_count": 15000000000,
       "tier": "medium",
@@ -298,7 +296,7 @@
         "notes": "NVIDIA NIM free credits, exhaustible"
       },
       "trial_scope": "specific",
-      "model_family": "seed-oss-36b",
+      "model_family": "bytedance-seed-oss-36b",
       "model_variant": "instruct",
       "aliases": [],
       "parameter_count": 36000000000,
@@ -416,7 +414,8 @@
       "trial_scope": "none",
       "model_family": "deepseek-v4-flash",
       "aliases": [
-        "DeepSeek-V4-Flash"
+        "DeepSeek-V4-Flash",
+        "deepseek/deepseek-v4-flash:free"
       ],
       "tier": "medium",
       "speed": "standard",
@@ -686,6 +685,7 @@
       "model_family": "gemma-3-12b",
       "model_variant": "it",
       "aliases": [
+        "cloudflare/@cf/google/gemma-3-12b-it",
         "sambanova/gemma-3-12b-it"
       ],
       "parameter_count": 12000000000,
@@ -847,7 +847,9 @@
       "trial_scope": "none",
       "model_family": "gemma-4-31b",
       "model_variant": "it",
-      "aliases": [],
+      "aliases": [
+        "google/gemma-4-31b-it:free"
+      ],
       "parameter_count": 31000000000,
       "tier": "medium",
       "speed": "standard",
@@ -922,7 +924,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "granite-3.0-3b-a800m",
+      "model_family": "ibm-granite-3.0-3b-a800m",
       "model_variant": "instruct",
       "aliases": [],
       "parameter_count": 3000000000,
@@ -961,7 +963,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "granite-3.0-8b",
+      "model_family": "ibm-granite-3.0-8b",
       "model_variant": "instruct",
       "aliases": [],
       "parameter_count": 8000000000,
@@ -1000,7 +1002,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "granite-34b-code",
+      "model_family": "ibm-granite-34b-code",
       "model_variant": "code",
       "aliases": [],
       "parameter_count": 34000000000,
@@ -1039,7 +1041,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "granite-8b-code",
+      "model_family": "ibm-granite-8b-code",
       "model_variant": "code",
       "aliases": [],
       "parameter_count": 8000000000,
@@ -1158,8 +1160,8 @@
       "model_family": "llama-3.1-8b",
       "model_variant": "instruct",
       "aliases": [
-        "cerebras/llama3.1-8b",
-        "sambanova/Meta-Llama-3.1-8B-Instruct"
+        "cloudflare/@cf/meta/llama-3.1-8b-instruct-fp8",
+        "cloudflare/@cf/meta/llama-3.1-8b-instruct-awq"
       ],
       "parameter_count": 8000000000,
       "tier": "medium",
@@ -1200,6 +1202,7 @@
       "model_family": "llama-3.2-11b-vision",
       "model_variant": "vision",
       "aliases": [
+        "cloudflare/@cf/meta/llama-3.2-11b-vision-instruct",
         "github/Llama-3-2-11B-Vision-Instruct"
       ],
       "parameter_count": 11000000000,
@@ -1240,7 +1243,9 @@
       "trial_scope": "none",
       "model_family": "llama-3.2-1b",
       "model_variant": "instruct",
-      "aliases": [],
+      "aliases": [
+        "cloudflare/@cf/meta/llama-3.2-1b-instruct"
+      ],
       "parameter_count": 1000000000,
       "tier": "medium",
       "speed": "standard",
@@ -1279,7 +1284,10 @@
       "trial_scope": "none",
       "model_family": "llama-3.2-3b",
       "model_variant": "instruct",
-      "aliases": [],
+      "aliases": [
+        "cloudflare/@cf/meta/llama-3.2-3b-instruct",
+        "meta-llama/llama-3.2-3b-instruct:free"
+      ],
       "parameter_count": 3000000000,
       "tier": "small",
       "speed": "standard",
@@ -1362,8 +1370,7 @@
       "aliases": [
         "github/Llama-3-3-70B-Instruct",
         "groq/llama-3.3-70b-versatile",
-        "sambanova/Meta-Llama-3.3-70B-Instruct",
-        "sambanova/Llama-3.3-Swallow-70B-Instruct-v0.4"
+        "meta-llama/llama-3.3-70b-instruct:free"
       ],
       "parameter_count": 70000000000,
       "tier": "large",
@@ -1720,10 +1727,8 @@
         "notes": "NVIDIA NIM free credits, exhaustible"
       },
       "trial_scope": "specific",
-      "model_family": "minimax-m2.7",
-      "aliases": [
-        "MiniMax-M2.7"
-      ],
+      "model_family": "minimaxai-minimax-m2.7",
+      "aliases": [],
       "tier": "medium",
       "speed": "fast",
       "use_case": [
@@ -2183,9 +2188,9 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "kimi-k2.6",
+      "model_family": "moonshotai-kimi-k2.6",
       "aliases": [
-        "Kimi-K2.6"
+        "cloudflare/@cf/moonshotai/kimi-k2.6"
       ],
       "tier": "medium",
       "speed": "standard",
@@ -2222,7 +2227,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "mistral-nemo-12b",
+      "model_family": "nv-mistralai-mistral-nemo-12b",
       "model_variant": "instruct",
       "aliases": [],
       "parameter_count": 12000000000,
@@ -3142,7 +3147,9 @@
       "free_quota": null,
       "trial_scope": "none",
       "model_family": "nemotron-3-nano-30b-a3b",
-      "aliases": [],
+      "aliases": [
+        "nvidia/nemotron-3-nano-30b-a3b:free"
+      ],
       "parameter_count": 30000000000,
       "tier": "medium",
       "speed": "standard",
@@ -3182,7 +3189,9 @@
       "trial_scope": "none",
       "model_family": "nemotron-3-nano-omni-30b-a3b-reasoning",
       "model_variant": "reasoning",
-      "aliases": [],
+      "aliases": [
+        "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
+      ],
       "parameter_count": 30000000000,
       "tier": "large",
       "speed": "premium",
@@ -3224,7 +3233,9 @@
       "free_quota": null,
       "trial_scope": "none",
       "model_family": "nemotron-3-super-120b-a12b",
-      "aliases": [],
+      "aliases": [
+        "nvidia/nemotron-3-super-120b-a12b:free"
+      ],
       "parameter_count": 120000000000,
       "tier": "medium",
       "speed": "standard",
@@ -3426,7 +3437,9 @@
       "trial_scope": "none",
       "model_family": "nemotron-nano-12b-v2-vl",
       "model_variant": "vl",
-      "aliases": [],
+      "aliases": [
+        "nvidia/nemotron-nano-12b-v2-vl:free"
+      ],
       "parameter_count": 12000000000,
       "tier": "large",
       "speed": "premium",
@@ -3765,7 +3778,9 @@
       "free_quota": null,
       "trial_scope": "none",
       "model_family": "nemotron-nano-9b-v2",
-      "aliases": [],
+      "aliases": [
+        "nvidia/nemotron-nano-9b-v2:free"
+      ],
       "parameter_count": 9000000000,
       "tier": "medium",
       "speed": "standard",
@@ -3917,8 +3932,11 @@
       "trial_scope": "none",
       "model_family": "gpt-oss-120b",
       "aliases": [
+        "cerebras/gpt-oss-120b",
+        "cloudflare/@cf/openai/gpt-oss-120b",
         "gpt-oss-120b",
         "groq/openai/gpt-oss-120b",
+        "openai/gpt-oss-120b:free",
         "sambanova/gpt-oss-120b"
       ],
       "parameter_count": 120000000000,
@@ -3959,7 +3977,9 @@
       "trial_scope": "none",
       "model_family": "gpt-oss-20b",
       "aliases": [
-        "groq/openai/gpt-oss-20b"
+        "cloudflare/@cf/openai/gpt-oss-20b",
+        "groq/openai/gpt-oss-20b",
+        "openai/gpt-oss-20b:free"
       ],
       "parameter_count": 20000000000,
       "tier": "medium",
@@ -4001,7 +4021,9 @@
       "trial_scope": "specific",
       "model_family": "qwen3-coder-480b-a35b",
       "model_variant": "coder",
-      "aliases": [],
+      "aliases": [
+        "qwen3-coder-480b-a35b-instruct"
+      ],
       "parameter_count": 480000000000,
       "tier": "medium",
       "speed": "fast",
@@ -4042,6 +4064,7 @@
       "model_variant": "instruct",
       "aliases": [
         "Qwen3-Next-80B-A3B-Instruct",
+        "qwen/qwen3-next-80b-a3b-instruct:free",
         "xingchen/xop3qwen80bnext"
       ],
       "parameter_count": 80000000000,
@@ -4160,7 +4183,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "sarvam-m",
+      "model_family": "sarvamai-sarvam-m",
       "aliases": [],
       "tier": "medium",
       "speed": "standard",
@@ -4196,7 +4219,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "arctic-embed-l",
+      "model_family": "snowflake-arctic-embed-l",
       "model_variant": "embed",
       "aliases": [],
       "tier": "medium",
@@ -4236,7 +4259,7 @@
         "notes": "NVIDIA NIM free credits, exhaustible"
       },
       "trial_scope": "specific",
-      "model_family": "step-3.5-flash",
+      "model_family": "stepfun-ai-step-3.5-flash",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
@@ -4273,7 +4296,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "stockmark-2-100b",
+      "model_family": "stockmark-stockmark-2-100b",
       "model_variant": "instruct",
       "aliases": [],
       "parameter_count": 100000000000,
@@ -4312,7 +4335,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "solar-10.7b",
+      "model_family": "upstage-solar-10.7b",
       "model_variant": "instruct",
       "aliases": [],
       "parameter_count": 10700000000,
@@ -4351,7 +4374,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "palmyra-creative-122b",
+      "model_family": "writer-palmyra-creative-122b",
       "aliases": [],
       "parameter_count": 122000000000,
       "tier": "medium",
@@ -4389,7 +4412,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "palmyra-fin-70b-32k",
+      "model_family": "writer-palmyra-fin-70b-32k",
       "aliases": [],
       "parameter_count": 70000000000,
       "tier": "large",
@@ -4427,7 +4450,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "palmyra-med-70b",
+      "model_family": "writer-palmyra-med-70b",
       "aliases": [],
       "parameter_count": 70000000000,
       "tier": "large",
@@ -4465,7 +4488,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "palmyra-med-70b-32k",
+      "model_family": "writer-palmyra-med-70b-32k",
       "aliases": [],
       "parameter_count": 70000000000,
       "tier": "large",
@@ -4543,7 +4566,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "zamba2-7b",
+      "model_family": "zyphra-zamba2-7b",
       "model_variant": "instruct",
       "aliases": [],
       "parameter_count": 7000000000,

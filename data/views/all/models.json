@@ -1,7 +1,7 @@
 {
   "object": "list",
   "view": "all",
-  "updated_at": "2026-05-25T00:37:34.752Z",
+  "updated_at": "2026-05-25T02:26:56.987Z",
   "total": 673,
   "filters": {},
   "data": [
@@ -112,7 +112,8 @@
       "trial_scope": "none",
       "model_family": "glm-4.5-air",
       "aliases": [
-        "GLM-4_5-Air"
+        "GLM-4_5-Air",
+        "z-ai/glm-4.5-air:free"
       ],
       "tier": "medium",
       "speed": "standard",
@@ -2426,11 +2427,8 @@
       "free_mechanism": "rate-limited",
       "free_quota": null,
       "trial_scope": "specific",
-      "model_family": "llama-3.1-8b",
-      "aliases": [
-        "meta/llama-3.1-8b-instruct",
-        "sambanova/Meta-Llama-3.1-8B-Instruct"
-      ],
+      "model_family": "llama3.1-8b",
+      "aliases": [],
       "parameter_count": 8000000000,
       "tier": "medium",
       "speed": "fast",
@@ -2469,8 +2467,15 @@
       "free_mechanism": "rate-limited",
       "free_quota": null,
       "trial_scope": "specific",
-      "model_family": "gpt-oss",
-      "aliases": [],
+      "model_family": "gpt-oss-120b",
+      "aliases": [
+        "cloudflare/@cf/openai/gpt-oss-120b",
+        "gpt-oss-120b",
+        "groq/openai/gpt-oss-120b",
+        "openai/gpt-oss-120b",
+        "openai/gpt-oss-120b:free",
+        "sambanova/gpt-oss-120b"
+      ],
       "tier": "medium",
       "speed": "fast",
       "use_case": [
@@ -2509,7 +2514,7 @@
       "free_mechanism": "preview",
       "free_quota": null,
       "trial_scope": "specific",
-      "model_family": "qwen-3-235b",
+      "model_family": "qwen-3-235b-a22b",
       "model_variant": "instruct",
       "aliases": [],
       "parameter_count": 235000000000,
@@ -2552,8 +2557,11 @@
       "free_mechanism": "preview",
       "free_quota": null,
       "trial_scope": "specific",
-      "model_family": "z.ai-glm-4.7",
-      "aliases": [],
+      "model_family": "glm-4.7",
+      "aliases": [
+        "GLM-4.7",
+        "xingchen/xopglm47blth2"
+      ],
       "tier": "medium",
       "speed": "fast",
       "use_case": [
@@ -2596,8 +2604,15 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-openai-gpt-oss-120b",
-      "aliases": [],
+      "model_family": "gpt-oss-120b",
+      "aliases": [
+        "cerebras/gpt-oss-120b",
+        "gpt-oss-120b",
+        "groq/openai/gpt-oss-120b",
+        "openai/gpt-oss-120b",
+        "openai/gpt-oss-120b:free",
+        "sambanova/gpt-oss-120b"
+      ],
       "parameter_count": 120000000000,
       "tier": "large",
       "speed": "fast",
@@ -2639,8 +2654,10 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-baai-bge-m3",
-      "aliases": [],
+      "model_family": "baai-bge-m3",
+      "aliases": [
+        "baai/bge-m3"
+      ],
       "tier": "small",
       "speed": "fast",
       "use_case": [
@@ -2678,7 +2695,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-huggingface-distilbert-sst-2",
+      "model_family": "huggingface-distilbert-sst-2",
       "quantization": "int8",
       "aliases": [],
       "tier": "small",
@@ -2717,7 +2734,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-google-gemma-2b-lora",
+      "model_family": "gemma-2b-lora",
       "model_variant": "it",
       "aliases": [],
       "parameter_count": 2000000000,
@@ -2755,7 +2772,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-black-forest-labs-flux-2-klein-9b",
+      "model_family": "black-forest-labs-flux-2-klein-9b",
       "aliases": [],
       "parameter_count": 9000000000,
       "tier": "medium",
@@ -2797,7 +2814,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-meta-llama-3-8b",
+      "model_family": "llama-3-8b",
       "model_variant": "instruct",
       "aliases": [
         "cloudflare/@cf/meta/llama-3-8b-instruct-awq"
@@ -2843,9 +2860,12 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-meta-llama-3.2-3b",
+      "model_family": "llama-3.2-3b",
       "model_variant": "instruct",
-      "aliases": [],
+      "aliases": [
+        "meta/llama-3.2-3b-instruct",
+        "meta-llama/llama-3.2-3b-instruct:free"
+      ],
       "parameter_count": 3000000000,
       "tier": "small",
       "speed": "fast",
@@ -2890,7 +2910,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-moonshotai-kimi-k2.5",
+      "model_family": "moonshotai-kimi-k2.5",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -2934,7 +2954,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-meta-llama-guard-3-8b",
+      "model_family": "llama-guard-3-8b",
       "model_variant": "guard",
       "aliases": [],
       "parameter_count": 8000000000,
@@ -2974,9 +2994,11 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-qwen-qwen3-embedding-0.6b",
+      "model_family": "qwen3-embedding-0.6b",
       "model_variant": "embedding",
-      "aliases": [],
+      "aliases": [
+        "Qwen3-Embedding-0.6B"
+      ],
       "parameter_count": 600000000,
       "tier": "medium",
       "speed": "fast",
@@ -3016,7 +3038,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-meta-llama-2-7b",
+      "model_family": "llama-2-7b",
       "model_variant": "chat",
       "quantization": "fp16",
       "aliases": [
@@ -3059,7 +3081,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-mistral-mistral-7b-v0.1",
+      "model_family": "mistral-7b-v0.1",
       "model_variant": "instruct",
       "aliases": [],
       "parameter_count": 7000000000,
@@ -3097,7 +3119,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-myshell-ai-melotts",
+      "model_family": "myshell-ai-melotts",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
@@ -3135,7 +3157,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-mistral-mistral-7b-v0.2-lora",
+      "model_family": "mistral-7b-v0.2-lora",
       "model_variant": "instruct",
       "aliases": [],
       "parameter_count": 7000000000,
@@ -3173,7 +3195,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-deepgram-aura-2-es",
+      "model_family": "deepgram-aura-2-es",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
@@ -3211,7 +3233,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-openai-whisper",
+      "model_family": "whisper",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
@@ -3250,7 +3272,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-pfnet-plamo-embedding-1b",
+      "model_family": "pfnet-plamo-embedding-1b",
       "model_variant": "embedding",
       "aliases": [],
       "parameter_count": 1000000000,
@@ -3329,7 +3351,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-llava-hf-llava-1.5-7b-hf",
+      "model_family": "llava-hf-llava-1.5-7b-hf",
       "aliases": [],
       "parameter_count": 7000000000,
       "tier": "medium",
@@ -3372,9 +3394,12 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-deepseek-ai-deepseek-r1-distill-qwen-32b",
+      "model_family": "deepseek-r1-distill-qwen-32b",
       "model_variant": "r1",
-      "aliases": [],
+      "aliases": [
+        "DeepSeek-R1-Distill-Qwen-32B",
+        "xingchen/xdeepseekr1qwen32b"
+      ],
       "parameter_count": 32000000000,
       "tier": "large",
       "speed": "fast",
@@ -3416,7 +3441,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-runwayml-stable-diffusion-v1-5-inpainting",
+      "model_family": "runwayml-stable-diffusion-v1-5-inpainting",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -3456,7 +3481,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-deepgram-flux",
+      "model_family": "deepgram-flux",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
@@ -3494,7 +3519,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-deepgram-nova-3",
+      "model_family": "deepgram-nova-3",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
@@ -3532,7 +3557,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-black-forest-labs-flux-1-schnell",
+      "model_family": "black-forest-labs-flux-1-schnell",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
@@ -3570,7 +3595,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-meta-llama-2-7b",
+      "model_family": "llama-2-7b",
       "model_variant": "chat",
       "quantization": "int8",
       "aliases": [
@@ -3613,11 +3638,12 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-meta-llama-3.1-8b",
+      "model_family": "llama-3.1-8b",
       "model_variant": "instruct",
       "quantization": "fp8",
       "aliases": [
-        "cloudflare/@cf/meta/llama-3.1-8b-instruct-awq"
+        "cloudflare/@cf/meta/llama-3.1-8b-instruct-awq",
+        "meta/llama-3.1-8b-instruct"
       ],
       "parameter_count": 8000000000,
       "tier": "medium",
@@ -3656,9 +3682,11 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-meta-llama-3.2-1b",
+      "model_family": "llama-3.2-1b",
       "model_variant": "instruct",
-      "aliases": [],
+      "aliases": [
+        "meta/llama-3.2-1b-instruct"
+      ],
       "parameter_count": 1000000000,
       "tier": "small",
       "speed": "fast",
@@ -3703,8 +3731,10 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-moonshotai-kimi-k2.6",
-      "aliases": [],
+      "model_family": "moonshotai-kimi-k2.6",
+      "aliases": [
+        "moonshotai/kimi-k2.6"
+      ],
       "tier": "large",
       "speed": "fast",
       "use_case": [
@@ -3752,7 +3782,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-zai-org-glm-4.7-flash",
+      "model_family": "org-glm-4.7-flash",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -3792,7 +3822,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-microsoft-resnet-50",
+      "model_family": "resnet-50",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -3830,7 +3860,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-bytedance-stable-diffusion-xl-lightning",
+      "model_family": "bytedance-stable-diffusion-xl-lightning",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -3870,7 +3900,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-meta-llama-llama-2-7b-hf-lora",
+      "model_family": "llama-2-7b-hf-lora",
       "model_variant": "chat",
       "aliases": [],
       "parameter_count": 7000000000,
@@ -3912,7 +3942,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-meta-llama-3.3-70b-fast",
+      "model_family": "llama-3.3-70b-fast",
       "model_variant": "instruct",
       "quantization": "fp8",
       "aliases": [],
@@ -3955,7 +3985,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-ibm-granite-granite-4.0-h-micro",
+      "model_family": "ibm-granite-granite-4.0-h-micro",
       "aliases": [],
       "tier": "small",
       "speed": "fast",
@@ -3991,7 +4021,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-lykon-dreamshaper-8-lcm",
+      "model_family": "lykon-dreamshaper-8-lcm",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
@@ -4029,7 +4059,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-leonardo-phoenix-1.0",
+      "model_family": "leonardo-phoenix-1.0",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
@@ -4069,7 +4099,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-stabilityai-stable-diffusion-xl-base-1.0",
+      "model_family": "stabilityai-stable-diffusion-xl-base-1.0",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -4111,7 +4141,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-meta-m2m100-1.2b",
+      "model_family": "m2m100-1.2b",
       "aliases": [],
       "parameter_count": 1200000000,
       "tier": "small",
@@ -4150,7 +4180,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-ai4bharat-indictrans2-en-indic-1b",
+      "model_family": "ai4bharat-indictrans2-en-indic-1b",
       "aliases": [],
       "parameter_count": 1000000000,
       "tier": "small",
@@ -4189,7 +4219,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-black-forest-labs-flux-2-klein-4b",
+      "model_family": "black-forest-labs-flux-2-klein-4b",
       "aliases": [],
       "parameter_count": 4000000000,
       "tier": "small",
@@ -4231,7 +4261,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-baai-bge-small-en-v1.5",
+      "model_family": "baai-bge-small-en-v1.5",
       "aliases": [],
       "tier": "small",
       "speed": "fast",
@@ -4271,7 +4301,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-qwen-qwen2.5-coder-32b",
+      "model_family": "qwen2.5-coder-32b",
       "model_variant": "coder",
       "aliases": [],
       "parameter_count": 32000000000,
@@ -4354,7 +4384,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-nvidia-nemotron-3-120b-a12b",
+      "model_family": "nemotron-3-120b-a12b",
       "aliases": [],
       "parameter_count": 120000000000,
       "tier": "large",
@@ -4397,7 +4427,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-baai-bge-base-en-v1.5",
+      "model_family": "baai-bge-base-en-v1.5",
       "aliases": [],
       "tier": "small",
       "speed": "fast",
@@ -4437,7 +4467,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-aisingapore-gemma-sea-lion-v4-27b",
+      "model_family": "aisingapore-gemma-sea-lion-v4-27b",
       "model_variant": "it",
       "aliases": [],
       "parameter_count": 27000000000,
@@ -4481,9 +4511,13 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-qwen-qwen3-30b-a3b",
+      "model_family": "qwen3-30b-a3b",
       "quantization": "fp8",
-      "aliases": [],
+      "aliases": [
+        "Qwen3-30B-A3B-Instruct-2507",
+        "xingchen/xop3qwen30b2507",
+        "xingchen/xop3qwen30b"
+      ],
       "parameter_count": 30000000000,
       "tier": "large",
       "speed": "fast",
@@ -4525,11 +4559,12 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-meta-llama-3.1-8b",
+      "model_family": "llama-3.1-8b",
       "model_variant": "instruct",
       "quantization": "awq",
       "aliases": [
-        "cloudflare/@cf/meta/llama-3.1-8b-instruct-fp8"
+        "cloudflare/@cf/meta/llama-3.1-8b-instruct-fp8",
+        "meta/llama-3.1-8b-instruct"
       ],
       "parameter_count": 8000000000,
       "tier": "medium",
@@ -4567,7 +4602,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-unum-uform-gen2-qwen-500m",
+      "model_family": "unum-uform-gen2-qwen-500m",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -4607,7 +4642,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-black-forest-labs-flux-2-dev",
+      "model_family": "black-forest-labs-flux-2-dev",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -4647,7 +4682,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-google-gemma-7b-lora",
+      "model_family": "gemma-7b-lora",
       "model_variant": "it",
       "aliases": [],
       "parameter_count": 7000000000,
@@ -4691,9 +4726,12 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-google-gemma-4-26b-a4b",
+      "model_family": "gemma-4-26b-a4b",
       "model_variant": "it",
-      "aliases": [],
+      "aliases": [
+        "gemma-4-26B-A4B-it",
+        "google/gemma-4-26b-a4b-it:free"
+      ],
       "parameter_count": 26000000000,
       "tier": "large",
       "speed": "fast",
@@ -4739,7 +4777,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-mistralai-mistral-small-3.1-24b",
+      "model_family": "mistral-small-3.1-24b",
       "model_variant": "instruct",
       "aliases": [],
       "parameter_count": 24000000000,
@@ -4781,7 +4819,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-meta-llama-3-8b",
+      "model_family": "llama-3-8b",
       "model_variant": "instruct",
       "quantization": "awq",
       "aliases": [
@@ -4827,9 +4865,12 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-meta-llama-3.2-11b-vision",
+      "model_family": "llama-3.2-11b-vision",
       "model_variant": "vision",
-      "aliases": [],
+      "aliases": [
+        "github/Llama-3-2-11B-Vision-Instruct",
+        "meta/llama-3.2-11b-vision-instruct"
+      ],
       "parameter_count": 11000000000,
       "tier": "large",
       "speed": "fast",
@@ -4871,7 +4912,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-openai-whisper-tiny-en",
+      "model_family": "whisper-tiny-en",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
@@ -4909,9 +4950,15 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-openai-whisper-large-v3",
+      "model_family": "whisper-large-v3",
       "model_variant": "turbo",
-      "aliases": [],
+      "aliases": [
+        "whisper-large-v3-turbo",
+        "whisper-large-v3",
+        "groq/whisper-large-v3",
+        "groq/whisper-large-v3-turbo",
+        "sambanova/Whisper-Large-v3"
+      ],
       "tier": "medium",
       "speed": "fast",
       "use_case": [
@@ -4948,7 +4995,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-deepgram-aura-1",
+      "model_family": "deepgram-aura-1",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
@@ -4986,7 +5033,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-defog-sqlcoder-7b-2",
+      "model_family": "defog-sqlcoder-7b-2",
       "aliases": [],
       "parameter_count": 7000000000,
       "tier": "medium",
@@ -5023,7 +5070,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-microsoft-phi-2",
+      "model_family": "phi-2",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
@@ -5059,7 +5106,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-facebook-bart-large-cnn",
+      "model_family": "facebook-bart-large-cnn",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
@@ -5097,7 +5144,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-runwayml-stable-diffusion-v1-5-img2img",
+      "model_family": "runwayml-stable-diffusion-v1-5-img2img",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -5143,8 +5190,12 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-openai-gpt-oss-20b",
-      "aliases": [],
+      "model_family": "gpt-oss-20b",
+      "aliases": [
+        "groq/openai/gpt-oss-20b",
+        "openai/gpt-oss-20b",
+        "openai/gpt-oss-20b:free"
+      ],
       "parameter_count": 20000000000,
       "tier": "medium",
       "speed": "fast",
@@ -5184,7 +5235,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-google-embeddinggemma-300m",
+      "model_family": "embeddinggemma-300m",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
@@ -5223,7 +5274,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-baai-bge-reranker-base",
+      "model_family": "baai-bge-reranker-base",
       "model_variant": "reranker",
       "aliases": [],
       "tier": "small",
@@ -5302,7 +5353,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-leonardo-lucid-origin",
+      "model_family": "leonardo-lucid-origin",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -5348,9 +5399,12 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-meta-llama-4-scout-17b-16e",
+      "model_family": "llama-4-scout-17b-16e",
       "model_variant": "instruct",
-      "aliases": [],
+      "aliases": [
+        "github/Llama-4-Scout-17B-16E-Instruct",
+        "groq/meta-llama/llama-4-scout-17b-16e-instruct"
+      ],
       "parameter_count": 17000000000,
       "tier": "large",
       "speed": "fast",
@@ -5393,9 +5447,12 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-google-gemma-3-12b",
+      "model_family": "gemma-3-12b",
       "model_variant": "it",
-      "aliases": [],
+      "aliases": [
+        "google/gemma-3-12b-it",
+        "sambanova/gemma-3-12b-it"
+      ],
       "parameter_count": 12000000000,
       "tier": "large",
       "speed": "fast",
@@ -5441,8 +5498,10 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-qwen-qwq-32b",
-      "aliases": [],
+      "model_family": "qwq-32b",
+      "aliases": [
+        "QwQ-32B"
+      ],
       "parameter_count": 32000000000,
       "tier": "large",
       "speed": "fast",
@@ -5483,7 +5542,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-baai-bge-large-en-v1.5",
+      "model_family": "baai-bge-large-en-v1.5",
       "aliases": [],
       "tier": "small",
       "speed": "fast",
@@ -5521,7 +5580,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-deepgram-aura-2-en",
+      "model_family": "deepgram-aura-2-en",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
@@ -6969,6 +7028,7 @@
       "model_family": "whisper-large-v3",
       "model_variant": "turbo",
       "aliases": [
+        "cloudflare/@cf/openai/whisper-large-v3-turbo",
         "whisper-large-v3",
         "groq/whisper-large-v3",
         "groq/whisper-large-v3-turbo",
@@ -7116,7 +7176,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "all",
-      "model_family": "got-ocr2-0",
+      "model_family": "got-ocr2_0",
       "aliases": [],
       "tier": "large",
       "speed": "premium",
@@ -7258,7 +7318,7 @@
       "free_mechanism": "permanent",
       "free_quota": null,
       "trial_scope": "specific",
-      "model_family": "bce-embedding-base-v1",
+      "model_family": "bce-embedding-base_v1",
       "model_variant": "embedding",
       "aliases": [],
       "tier": "medium",
@@ -7295,7 +7355,7 @@
       "free_mechanism": "permanent",
       "free_quota": null,
       "trial_scope": "specific",
-      "model_family": "bce-reranker-base-v1",
+      "model_family": "bce-reranker-base_v1",
       "model_variant": "reranker",
       "aliases": [],
       "tier": "medium",
@@ -7372,6 +7432,7 @@
       "model_family": "deepseek-r1-distill-qwen-32b",
       "model_variant": "r1",
       "aliases": [
+        "cloudflare/@cf/deepseek-ai/deepseek-r1-distill-qwen-32b",
         "xingchen/xdeepseekr1qwen32b"
       ],
       "parameter_count": 32000000000,
@@ -7702,7 +7763,9 @@
       "free_quota": null,
       "trial_scope": "all",
       "model_family": "qwq-32b",
-      "aliases": [],
+      "aliases": [
+        "cloudflare/@cf/qwen/qwq-32b"
+      ],
       "parameter_count": 32000000000,
       "tier": "large",
       "speed": "standard",
@@ -7812,6 +7875,7 @@
       "trial_scope": "all",
       "model_family": "whisper-large-v3",
       "aliases": [
+        "cloudflare/@cf/openai/whisper-large-v3-turbo",
         "whisper-large-v3-turbo",
         "groq/whisper-large-v3",
         "groq/whisper-large-v3-turbo",
@@ -8493,9 +8557,7 @@
       "free_mechanism": "permanent",
       "free_quota": null,
       "trial_scope": "specific",
-      "model_family": "prover-v2-7b",
-      "model_variant": "null",
-      "quantization": "null",
+      "model_family": "deepseek-prover-v2-7b",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
@@ -8784,7 +8846,9 @@
       "trial_scope": "specific",
       "model_family": "qwen3-embedding-0.6b",
       "model_variant": "embedding",
-      "aliases": [],
+      "aliases": [
+        "cloudflare/@cf/qwen/qwen3-embedding-0.6b"
+      ],
       "parameter_count": 600000000,
       "tier": "medium",
       "speed": "fast",
@@ -9199,7 +9263,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "all",
-      "model_family": "heygem",
+      "model_family": "duix.heygem-数字人大模型",
       "aliases": [],
       "tier": "medium",
       "speed": "standard",
@@ -9453,9 +9517,11 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "all",
-      "model_family": "qwen3-coder",
+      "model_family": "qwen3-coder-480b-a35b",
       "model_variant": "coder",
-      "aliases": [],
+      "aliases": [
+        "qwen/qwen3-coder-480b-a35b-instruct"
+      ],
       "tier": "medium",
       "speed": "standard",
       "use_case": [
@@ -9573,7 +9639,8 @@
       "trial_scope": "all",
       "model_family": "glm-4.5-air",
       "aliases": [
-        "bigmodel/glm-4.5-air"
+        "bigmodel/glm-4.5-air",
+        "z-ai/glm-4.5-air:free"
       ],
       "tier": "medium",
       "speed": "standard",
@@ -9608,7 +9675,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "all",
-      "model_family": "cogview4-6b",
+      "model_family": "cogview4_6b",
       "aliases": [],
       "parameter_count": 6000000000,
       "tier": "medium",
@@ -9683,7 +9750,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "all",
-      "model_family": "flux.1-krea-dev",
+      "model_family": "flux_1-krea-dev",
       "aliases": [],
       "tier": "medium",
       "speed": "standard",
@@ -9722,6 +9789,7 @@
       "model_family": "qwen3-30b-a3b",
       "model_variant": "instruct",
       "aliases": [
+        "cloudflare/@cf/qwen/qwen3-30b-a3b-fp8",
         "xingchen/xop3qwen30b2507",
         "xingchen/xop3qwen30b"
       ],
@@ -9840,8 +9908,11 @@
       "trial_scope": "all",
       "model_family": "gpt-oss-120b",
       "aliases": [
+        "cerebras/gpt-oss-120b",
+        "cloudflare/@cf/openai/gpt-oss-120b",
         "groq/openai/gpt-oss-120b",
         "openai/gpt-oss-120b",
+        "openai/gpt-oss-120b:free",
         "sambanova/gpt-oss-120b"
       ],
       "parameter_count": 120000000000,
@@ -9917,7 +9988,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "baichuan-m2-32b",
+      "model_family": "m2-32b",
       "aliases": [],
       "parameter_count": 32000000000,
       "tier": "large",
@@ -10110,6 +10181,7 @@
       "model_variant": "instruct",
       "aliases": [
         "qwen/qwen3-next-80b-a3b-instruct",
+        "qwen/qwen3-next-80b-a3b-instruct:free",
         "xingchen/xop3qwen80bnext"
       ],
       "parameter_count": 80000000000,
@@ -10900,9 +10972,7 @@
       "free_quota": null,
       "trial_scope": "all",
       "model_family": "hunyuanocr",
-      "aliases": [
-        "xingchen/xophunyuanocr"
-      ],
+      "aliases": [],
       "tier": "large",
       "speed": "premium",
       "use_case": [
@@ -11127,7 +11197,7 @@
       "free_mechanism": "permanent",
       "free_quota": null,
       "trial_scope": "specific",
-      "model_family": "huatuo-gpt-o1-7b",
+      "model_family": "huatuogpt-o1-7b",
       "aliases": [],
       "parameter_count": 7000000000,
       "tier": "medium",
@@ -11312,7 +11382,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "all",
-      "model_family": "infinite-talk",
+      "model_family": "infinitetalk-数字人模型",
       "aliases": [],
       "tier": "medium",
       "speed": "standard",
@@ -11422,6 +11492,7 @@
       "trial_scope": "all",
       "model_family": "glm-4.7",
       "aliases": [
+        "cerebras/zai-glm-4.7",
         "xingchen/xopglm47blth2"
       ],
       "tier": "medium",
@@ -11572,7 +11643,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "all",
-      "model_family": "sam-3",
+      "model_family": "sam-3-图像分割模型",
       "aliases": [],
       "tier": "large",
       "speed": "premium",
@@ -12893,7 +12964,10 @@
       "trial_scope": "all",
       "model_family": "gemma-4-26b-a4b",
       "model_variant": "it",
-      "aliases": [],
+      "aliases": [
+        "cloudflare/@cf/google/gemma-4-26b-a4b-it",
+        "google/gemma-4-26b-a4b-it:free"
+      ],
       "parameter_count": 26000000000,
       "tier": "medium",
       "speed": "standard",
@@ -12930,9 +13004,7 @@
       "free_quota": null,
       "trial_scope": "none",
       "model_family": "minimax-m2.7",
-      "aliases": [
-        "minimaxai/minimax-m2.7"
-      ],
+      "aliases": [],
       "tier": "medium",
       "speed": "standard",
       "use_case": [
@@ -13004,9 +13076,7 @@
       "free_quota": null,
       "trial_scope": "none",
       "model_family": "kimi-k2.6",
-      "aliases": [
-        "moonshotai/kimi-k2.6"
-      ],
+      "aliases": [],
       "tier": "medium",
       "speed": "premium",
       "use_case": [
@@ -13152,7 +13222,8 @@
       "trial_scope": "all",
       "model_family": "deepseek-v4-flash",
       "aliases": [
-        "deepseek-ai/deepseek-v4-flash"
+        "deepseek-ai/deepseek-v4-flash",
+        "deepseek/deepseek-v4-flash:free"
       ],
       "tier": "medium",
       "speed": "standard",
@@ -13297,7 +13368,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "wan-2.7",
+      "model_family": "wan-2.7-万相视频生成模型",
       "aliases": [],
       "tier": "medium",
       "speed": "standard",
@@ -13614,9 +13685,7 @@
       "free_quota": null,
       "trial_scope": "specific",
       "model_family": "bge-m3",
-      "aliases": [
-        "baai/bge-m3"
-      ],
+      "aliases": [],
       "tier": "medium",
       "speed": "fast",
       "use_case": [
@@ -13760,7 +13829,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "all",
-      "model_family": "flux.1-schnell",
+      "model_family": "flux-1-schnell",
       "aliases": [],
       "tier": "medium",
       "speed": "standard",
@@ -13795,7 +13864,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "all",
-      "model_family": "cosyvoice-300m",
+      "model_family": "funaudiollm-cosyvoice-300m",
       "aliases": [],
       "tier": "medium",
       "speed": "standard",
@@ -14088,9 +14157,7 @@
       },
       "trial_scope": "all",
       "model_family": "jamba-1.5-large",
-      "aliases": [
-        "ai21labs/jamba-1.5-large-instruct"
-      ],
+      "aliases": [],
       "tier": "medium",
       "speed": "fast",
       "use_case": [
@@ -14355,7 +14422,7 @@
         "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
       },
       "trial_scope": "all",
-      "model_family": "text-embedding-3-(small)",
+      "model_family": "text-embedding-3-small",
       "model_variant": "embedding",
       "aliases": [],
       "tier": "medium",
@@ -14395,7 +14462,7 @@
         "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
       },
       "trial_scope": "all",
-      "model_family": "text-embedding-3-(large)",
+      "model_family": "text-embedding-3-large",
       "model_variant": "embedding",
       "aliases": [],
       "tier": "medium",
@@ -14516,7 +14583,7 @@
         "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
       },
       "trial_scope": "all",
-      "model_family": "github-o3",
+      "model_family": "o3",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
@@ -14642,7 +14709,7 @@
         "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
       },
       "trial_scope": "all",
-      "model_family": "github-o1",
+      "model_family": "o1",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -14768,9 +14835,11 @@
         "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
       },
       "trial_scope": "all",
-      "model_family": "gpt-5-(preview)",
+      "model_family": "gpt-5",
       "model_variant": "chat",
-      "aliases": [],
+      "aliases": [
+        "github/gpt-5"
+      ],
       "tier": "large",
       "speed": "fast",
       "use_case": [
@@ -14812,7 +14881,9 @@
       },
       "trial_scope": "all",
       "model_family": "gpt-5",
-      "aliases": [],
+      "aliases": [
+        "github/gpt-5-chat"
+      ],
       "tier": "medium",
       "speed": "fast",
       "use_case": [
@@ -15061,7 +15132,9 @@
       "trial_scope": "all",
       "model_family": "3.1-8b",
       "model_variant": "instruct",
-      "aliases": [],
+      "aliases": [
+        "sambanova/Meta-Llama-3.1-8B-Instruct"
+      ],
       "parameter_count": 8000000000,
       "tier": "medium",
       "speed": "fast",
@@ -15195,8 +15268,7 @@
       "aliases": [
         "groq/llama-3.3-70b-versatile",
         "meta/llama-3.3-70b-instruct",
-        "sambanova/Meta-Llama-3.3-70B-Instruct",
-        "sambanova/Llama-3.3-Swallow-70B-Instruct-v0.4"
+        "meta-llama/llama-3.3-70b-instruct:free"
       ],
       "parameter_count": 70000000000,
       "tier": "large",
@@ -15300,6 +15372,7 @@
       "model_family": "llama-3.2-11b-vision",
       "model_variant": "vision",
       "aliases": [
+        "cloudflare/@cf/meta/llama-3.2-11b-vision-instruct",
         "meta/llama-3.2-11b-vision-instruct"
       ],
       "parameter_count": 11000000000,
@@ -15351,6 +15424,7 @@
       "model_family": "llama-4-scout-17b-16e",
       "model_variant": "instruct",
       "aliases": [
+        "cloudflare/@cf/meta/llama-4-scout-17b-16e-instruct",
         "groq/meta-llama/llama-4-scout-17b-16e-instruct"
       ],
       "parameter_count": 17000000000,
@@ -15446,7 +15520,7 @@
         "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
       },
       "trial_scope": "all",
-      "model_family": "cohere-command-r+-08",
+      "model_family": "cohere-command-r-plus-08",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
@@ -16417,7 +16491,7 @@
       "free_mechanism": "rate-limited",
       "free_quota": null,
       "trial_scope": "fast",
-      "model_family": "gemini-2.5-flash-lite-preview",
+      "model_family": "gemini-2.5-flash-lite-preview-09",
       "aliases": [],
       "tier": "small",
       "speed": "fast",
@@ -16459,7 +16533,7 @@
       "free_mechanism": "rate-limited",
       "free_quota": null,
       "trial_scope": "fast",
-      "model_family": "gemini-2.5-flash-native-audio",
+      "model_family": "gemini-2.5-flash-native-audio-preview-12",
       "model_variant": "audio",
       "aliases": [],
       "tier": "medium",
@@ -16801,7 +16875,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "veo-3.1",
+      "model_family": "veo-3.1-generate-preview",
       "aliases": [],
       "tier": "small",
       "speed": "fast",
@@ -16834,7 +16908,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "veo-3.1-fast",
+      "model_family": "veo-3.1-fast-generate-preview",
       "aliases": [],
       "tier": "small",
       "speed": "fast",
@@ -16867,7 +16941,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "veo-3.0",
+      "model_family": "veo-3.0-generate-001",
       "aliases": [],
       "tier": "small",
       "speed": "fast",
@@ -16900,7 +16974,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "veo-2.0",
+      "model_family": "veo-2.0-generate-001",
       "aliases": [],
       "tier": "small",
       "speed": "fast",
@@ -16931,7 +17005,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "lyria-3-clip",
+      "model_family": "lyria-3-clip-preview",
       "aliases": [],
       "tier": "small",
       "speed": "fast",
@@ -16960,7 +17034,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "lyria-3-pro",
+      "model_family": "lyria-3-pro-preview",
       "aliases": [],
       "tier": "small",
       "speed": "premium",
@@ -17026,7 +17100,7 @@
       "free_mechanism": "rate-limited",
       "free_quota": null,
       "trial_scope": "fast",
-      "model_family": "gemini-embedding",
+      "model_family": "gemini-embedding-001",
       "model_variant": "embedding",
       "aliases": [],
       "tier": "small",
@@ -17149,7 +17223,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "gemini-2.5-computer-use-preview",
+      "model_family": "gemini-2.5-computer-use-preview-10",
       "aliases": [],
       "tier": "medium",
       "speed": "standard",
@@ -17201,16 +17275,16 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "llama-3.3-70b-versatile",
+      "id": "meta-llama/llama-4-scout-17b-16e-instruct",
       "object": "model",
-      "created": 281060039,
+      "created": 463560371,
       "owned_by": "groq",
       "provider": "groq",
-      "name": "llama-3.3-70b-versatile",
+      "name": "meta-llama/llama-4-scout-17b-16e-instruct",
       "context_size": 131072,
       "context_label": "131K",
-      "price_input": 0.59,
-      "price_output": 0.79,
+      "price_input": 0.11,
+      "price_output": 0.34,
       "is_free": true,
       "capabilities": [
         "chat",
@@ -17226,19 +17300,17 @@
       "free_mechanism": "rate-limited",
       "free_quota": {
         "rpd": 1000,
-        "tpm": 12000
+        "tpm": 30000
       },
       "trial_scope": "all",
-      "model_family": "llama-3.3-70b",
-      "model_variant": "versatile",
+      "model_family": "llama-4-scout-17b-16e",
+      "model_variant": "instruct",
       "aliases": [
-        "github/Llama-3-3-70B-Instruct",
-        "meta/llama-3.3-70b-instruct",
-        "sambanova/Meta-Llama-3.3-70B-Instruct",
-        "sambanova/Llama-3.3-Swallow-70B-Instruct-v0.4"
+        "cloudflare/@cf/meta/llama-4-scout-17b-16e-instruct",
+        "github/Llama-4-Scout-17B-16E-Instruct"
       ],
-      "parameter_count": 70000000000,
-      "tier": "large",
+      "parameter_count": 17000000000,
+      "tier": "small",
       "speed": "fast",
       "use_case": [
         "conversation",
@@ -17250,14 +17322,16 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "groq/compound",
+      "id": "openai/gpt-oss-120b",
       "object": "model",
-      "created": 1269203802,
+      "created": 261834169,
       "owned_by": "groq",
       "provider": "groq",
-      "name": "groq/compound",
+      "name": "openai/gpt-oss-120b",
       "context_size": 131072,
       "context_label": "131K",
+      "price_input": 0.15,
+      "price_output": 0.6,
       "is_free": true,
       "capabilities": [
         "chat",
@@ -17272,12 +17346,139 @@
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
       "free_quota": {
-        "rpd": 250,
-        "tpm": 70000
+        "rpd": 1000,
+        "tpm": 8000
       },
       "trial_scope": "all",
-      "model_family": "groq-compound",
+      "model_family": "gpt-oss-120b",
+      "aliases": [
+        "cerebras/gpt-oss-120b",
+        "cloudflare/@cf/openai/gpt-oss-120b",
+        "gpt-oss-120b",
+        "openai/gpt-oss-120b",
+        "openai/gpt-oss-120b:free",
+        "sambanova/gpt-oss-120b"
+      ],
+      "parameter_count": 120000000000,
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "meta-llama/llama-prompt-guard-2-86m",
+      "object": "model",
+      "created": 2021365556,
+      "owned_by": "groq",
+      "provider": "groq",
+      "name": "meta-llama/llama-prompt-guard-2-86m",
+      "context_size": 512,
+      "context_label": "512",
+      "is_free": true,
+      "capabilities": [
+        "moderation"
+      ],
+      "tags": [
+        "moderation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Rate-limited free tier"
+      },
+      "trial_scope": "all",
+      "model_family": "llama-prompt-guard-2-86m",
+      "model_variant": "guard",
       "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-filtering",
+        "safety"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "whisper-large-v3",
+      "object": "model",
+      "created": 821695011,
+      "owned_by": "groq",
+      "provider": "groq",
+      "name": "whisper-large-v3",
+      "context_size": 448,
+      "context_label": "448",
+      "price_input": 0.111,
+      "is_free": true,
+      "capabilities": [
+        "speech-recognition"
+      ],
+      "tags": [
+        "speech-recognition"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Rate-limited free tier"
+      },
+      "trial_scope": "all",
+      "model_family": "whisper-large-v3",
+      "aliases": [
+        "cloudflare/@cf/openai/whisper-large-v3-turbo",
+        "whisper-large-v3-turbo",
+        "whisper-large-v3",
+        "groq/whisper-large-v3-turbo",
+        "sambanova/Whisper-Large-v3"
+      ],
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "transcription",
+        "voice-input"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "allam-2-7b",
+      "object": "model",
+      "created": 1278808711,
+      "owned_by": "groq",
+      "provider": "groq",
+      "name": "allam-2-7b",
+      "context_size": 4096,
+      "context_label": "4K",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpd": 7000,
+        "tpm": 6000
+      },
+      "trial_scope": "all",
+      "model_family": "allam-2-7b",
+      "aliases": [],
+      "parameter_count": 7000000000,
       "tier": "medium",
       "speed": "fast",
       "use_case": [
@@ -17326,6 +17527,101 @@
       "estimated_latency": "< 1s"
     },
     {
+      "id": "openai/gpt-oss-20b",
+      "object": "model",
+      "created": 772969846,
+      "owned_by": "groq",
+      "provider": "groq",
+      "name": "openai/gpt-oss-20b",
+      "context_size": 131072,
+      "context_label": "131K",
+      "price_input": 0.075,
+      "price_output": 0.3,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpd": 1000,
+        "tpm": 8000
+      },
+      "trial_scope": "all",
+      "model_family": "gpt-oss-20b",
+      "aliases": [
+        "cloudflare/@cf/openai/gpt-oss-20b",
+        "openai/gpt-oss-20b",
+        "openai/gpt-oss-20b:free"
+      ],
+      "parameter_count": 20000000000,
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "llama-3.3-70b-versatile",
+      "object": "model",
+      "created": 281060039,
+      "owned_by": "groq",
+      "provider": "groq",
+      "name": "llama-3.3-70b-versatile",
+      "context_size": 131072,
+      "context_label": "131K",
+      "price_input": 0.59,
+      "price_output": 0.79,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpd": 1000,
+        "tpm": 12000
+      },
+      "trial_scope": "all",
+      "model_family": "llama-3.3-70b",
+      "model_variant": "versatile",
+      "aliases": [
+        "github/Llama-3-3-70B-Instruct",
+        "meta/llama-3.3-70b-instruct",
+        "meta-llama/llama-3.3-70b-instruct:free"
+      ],
+      "parameter_count": 70000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
       "id": "canopylabs/orpheus-arabic-saudi",
       "object": "model",
       "created": 1964073120,
@@ -17364,21 +17660,102 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "whisper-large-v3",
+      "id": "groq/compound",
       "object": "model",
-      "created": 821695011,
+      "created": 1269203802,
       "owned_by": "groq",
       "provider": "groq",
-      "name": "whisper-large-v3",
-      "context_size": 448,
-      "context_label": "448",
-      "price_input": 0.111,
+      "name": "groq/compound",
+      "context_size": 131072,
+      "context_label": "131K",
       "is_free": true,
       "capabilities": [
-        "speech-recognition"
+        "chat",
+        "text-generation"
       ],
       "tags": [
-        "speech-recognition"
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpd": 250,
+        "tpm": 70000
+      },
+      "trial_scope": "all",
+      "model_family": "compound",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "groq/compound-mini",
+      "object": "model",
+      "created": 326333228,
+      "owned_by": "groq",
+      "provider": "groq",
+      "name": "groq/compound-mini",
+      "context_size": 131072,
+      "context_label": "131K",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpd": 250,
+        "tpm": 70000
+      },
+      "trial_scope": "all",
+      "model_family": "compound-mini",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "openai/gpt-oss-safeguard-20b",
+      "object": "model",
+      "created": 573618965,
+      "owned_by": "groq",
+      "provider": "groq",
+      "name": "openai/gpt-oss-safeguard-20b",
+      "context_size": 131072,
+      "context_label": "131K",
+      "price_input": 0.075,
+      "price_output": 0.3,
+      "is_free": true,
+      "capabilities": [
+        "moderation"
+      ],
+      "tags": [
+        "moderation"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
@@ -17388,18 +17765,14 @@
         "notes": "Rate-limited free tier"
       },
       "trial_scope": "all",
-      "model_family": "whisper-large-v3",
-      "aliases": [
-        "whisper-large-v3-turbo",
-        "whisper-large-v3",
-        "groq/whisper-large-v3-turbo",
-        "sambanova/Whisper-Large-v3"
-      ],
-      "tier": "small",
+      "model_family": "gpt-oss-safeguard-20b",
+      "aliases": [],
+      "parameter_count": 20000000000,
+      "tier": "medium",
       "speed": "fast",
       "use_case": [
-        "transcription",
-        "voice-input"
+        "content-filtering",
+        "safety"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
@@ -17494,46 +17867,6 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "groq/compound-mini",
-      "object": "model",
-      "created": 326333228,
-      "owned_by": "groq",
-      "provider": "groq",
-      "name": "groq/compound-mini",
-      "context_size": 131072,
-      "context_label": "131K",
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "chat",
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "rpd": 250,
-        "tpm": 70000
-      },
-      "trial_scope": "all",
-      "model_family": "compound-mini",
-      "aliases": [],
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
       "id": "llama-3.1-8b-instant",
       "object": "model",
       "created": 1070279672,
@@ -17577,259 +17910,6 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "openai/gpt-oss-safeguard-20b",
-      "object": "model",
-      "created": 573618965,
-      "owned_by": "groq",
-      "provider": "groq",
-      "name": "openai/gpt-oss-safeguard-20b",
-      "context_size": 131072,
-      "context_label": "131K",
-      "price_input": 0.075,
-      "price_output": 0.3,
-      "is_free": true,
-      "capabilities": [
-        "moderation"
-      ],
-      "tags": [
-        "moderation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Rate-limited free tier"
-      },
-      "trial_scope": "all",
-      "model_family": "gpt-oss-safeguard-20b",
-      "aliases": [],
-      "parameter_count": 20000000000,
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-filtering",
-        "safety"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "openai/gpt-oss-20b",
-      "object": "model",
-      "created": 772969846,
-      "owned_by": "groq",
-      "provider": "groq",
-      "name": "openai/gpt-oss-20b",
-      "context_size": 131072,
-      "context_label": "131K",
-      "price_input": 0.075,
-      "price_output": 0.3,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "chat",
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "rpd": 1000,
-        "tpm": 8000
-      },
-      "trial_scope": "all",
-      "model_family": "gpt-oss-20b",
-      "aliases": [
-        "openai/gpt-oss-20b"
-      ],
-      "parameter_count": 20000000000,
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "meta-llama/llama-4-scout-17b-16e-instruct",
-      "object": "model",
-      "created": 463560371,
-      "owned_by": "groq",
-      "provider": "groq",
-      "name": "meta-llama/llama-4-scout-17b-16e-instruct",
-      "context_size": 131072,
-      "context_label": "131K",
-      "price_input": 0.11,
-      "price_output": 0.34,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "chat",
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "rpd": 1000,
-        "tpm": 30000
-      },
-      "trial_scope": "all",
-      "model_family": "llama-4-scout-17b-16e",
-      "model_variant": "instruct",
-      "aliases": [
-        "github/Llama-4-Scout-17B-16E-Instruct"
-      ],
-      "parameter_count": 17000000000,
-      "tier": "small",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "allam-2-7b",
-      "object": "model",
-      "created": 1278808711,
-      "owned_by": "groq",
-      "provider": "groq",
-      "name": "allam-2-7b",
-      "context_size": 4096,
-      "context_label": "4K",
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "chat",
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "rpd": 7000,
-        "tpm": 6000
-      },
-      "trial_scope": "all",
-      "model_family": "allam-2-7b",
-      "aliases": [],
-      "parameter_count": 7000000000,
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "meta-llama/llama-prompt-guard-2-86m",
-      "object": "model",
-      "created": 2021365556,
-      "owned_by": "groq",
-      "provider": "groq",
-      "name": "meta-llama/llama-prompt-guard-2-86m",
-      "context_size": 512,
-      "context_label": "512",
-      "is_free": true,
-      "capabilities": [
-        "moderation"
-      ],
-      "tags": [
-        "moderation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Rate-limited free tier"
-      },
-      "trial_scope": "all",
-      "model_family": "llama-prompt-guard-2-86m",
-      "model_variant": "guard",
-      "aliases": [],
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-filtering",
-        "safety"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "openai/gpt-oss-120b",
-      "object": "model",
-      "created": 261834169,
-      "owned_by": "groq",
-      "provider": "groq",
-      "name": "openai/gpt-oss-120b",
-      "context_size": 131072,
-      "context_label": "131K",
-      "price_input": 0.15,
-      "price_output": 0.6,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "chat",
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "rpd": 1000,
-        "tpm": 8000
-      },
-      "trial_scope": "all",
-      "model_family": "gpt-oss-120b",
-      "aliases": [
-        "gpt-oss-120b",
-        "openai/gpt-oss-120b",
-        "sambanova/gpt-oss-120b"
-      ],
-      "parameter_count": 120000000000,
-      "tier": "small",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
       "id": "whisper-large-v3-turbo",
       "object": "model",
       "created": 831031114,
@@ -17857,6 +17937,7 @@
       "model_family": "whisper-large-v3",
       "model_variant": "turbo",
       "aliases": [
+        "cloudflare/@cf/openai/whisper-large-v3-turbo",
         "whisper-large-v3-turbo",
         "whisper-large-v3",
         "groq/whisper-large-v3",
@@ -18202,7 +18283,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "yi-large",
+      "model_family": "01-ai-yi-large",
       "aliases": [],
       "tier": "medium",
       "speed": "standard",
@@ -18239,7 +18320,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "dracarys-llama-3.1-70b",
+      "model_family": "abacusai-dracarys-llama-3.1-70b",
       "model_variant": "instruct",
       "aliases": [],
       "parameter_count": 70000000000,
@@ -18278,7 +18359,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "fuyu-8b",
+      "model_family": "adept-fuyu-8b",
       "aliases": [],
       "parameter_count": 8000000000,
       "tier": "medium",
@@ -18316,11 +18397,9 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "jamba-1.5-large",
+      "model_family": "ai21labs-jamba-1.5-large",
       "model_variant": "instruct",
-      "aliases": [
-        "github/AI21-Jamba-1-5-Large"
-      ],
+      "aliases": [],
       "tier": "medium",
       "speed": "standard",
       "use_case": [
@@ -18356,7 +18435,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "sea-lion-7b",
+      "model_family": "aisingapore-sea-lion-7b",
       "model_variant": "instruct",
       "aliases": [],
       "parameter_count": 7000000000,
@@ -18394,9 +18473,9 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "bge-m3",
+      "model_family": "baai-bge-m3",
       "aliases": [
-        "bge-m3"
+        "cloudflare/@cf/baai/bge-m3"
       ],
       "tier": "medium",
       "speed": "standard",
@@ -18432,7 +18511,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "starcoder2-15b",
+      "model_family": "bigcode-starcoder2-15b",
       "aliases": [],
       "parameter_count": 15000000000,
       "tier": "medium",
@@ -18472,7 +18551,7 @@
         "notes": "NVIDIA NIM free credits, exhaustible"
       },
       "trial_scope": "specific",
-      "model_family": "seed-oss-36b",
+      "model_family": "bytedance-seed-oss-36b",
       "model_variant": "instruct",
       "aliases": [],
       "parameter_count": 36000000000,
@@ -18590,7 +18669,8 @@
       "trial_scope": "none",
       "model_family": "deepseek-v4-flash",
       "aliases": [
-        "DeepSeek-V4-Flash"
+        "DeepSeek-V4-Flash",
+        "deepseek/deepseek-v4-flash:free"
       ],
       "tier": "medium",
       "speed": "standard",
@@ -18860,6 +18940,7 @@
       "model_family": "gemma-3-12b",
       "model_variant": "it",
       "aliases": [
+        "cloudflare/@cf/google/gemma-3-12b-it",
         "sambanova/gemma-3-12b-it"
       ],
       "parameter_count": 12000000000,
@@ -19021,7 +19102,9 @@
       "trial_scope": "none",
       "model_family": "gemma-4-31b",
       "model_variant": "it",
-      "aliases": [],
+      "aliases": [
+        "google/gemma-4-31b-it:free"
+      ],
       "parameter_count": 31000000000,
       "tier": "medium",
       "speed": "standard",
@@ -19096,7 +19179,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "granite-3.0-3b-a800m",
+      "model_family": "ibm-granite-3.0-3b-a800m",
       "model_variant": "instruct",
       "aliases": [],
       "parameter_count": 3000000000,
@@ -19135,7 +19218,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "granite-3.0-8b",
+      "model_family": "ibm-granite-3.0-8b",
       "model_variant": "instruct",
       "aliases": [],
       "parameter_count": 8000000000,
@@ -19174,7 +19257,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "granite-34b-code",
+      "model_family": "ibm-granite-34b-code",
       "model_variant": "code",
       "aliases": [],
       "parameter_count": 34000000000,
@@ -19213,7 +19296,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "granite-8b-code",
+      "model_family": "ibm-granite-8b-code",
       "model_variant": "code",
       "aliases": [],
       "parameter_count": 8000000000,
@@ -19332,8 +19415,8 @@
       "model_family": "llama-3.1-8b",
       "model_variant": "instruct",
       "aliases": [
-        "cerebras/llama3.1-8b",
-        "sambanova/Meta-Llama-3.1-8B-Instruct"
+        "cloudflare/@cf/meta/llama-3.1-8b-instruct-fp8",
+        "cloudflare/@cf/meta/llama-3.1-8b-instruct-awq"
       ],
       "parameter_count": 8000000000,
       "tier": "medium",
@@ -19374,6 +19457,7 @@
       "model_family": "llama-3.2-11b-vision",
       "model_variant": "vision",
       "aliases": [
+        "cloudflare/@cf/meta/llama-3.2-11b-vision-instruct",
         "github/Llama-3-2-11B-Vision-Instruct"
       ],
       "parameter_count": 11000000000,
@@ -19414,7 +19498,9 @@
       "trial_scope": "none",
       "model_family": "llama-3.2-1b",
       "model_variant": "instruct",
-      "aliases": [],
+      "aliases": [
+        "cloudflare/@cf/meta/llama-3.2-1b-instruct"
+      ],
       "parameter_count": 1000000000,
       "tier": "medium",
       "speed": "standard",
@@ -19453,7 +19539,10 @@
       "trial_scope": "none",
       "model_family": "llama-3.2-3b",
       "model_variant": "instruct",
-      "aliases": [],
+      "aliases": [
+        "cloudflare/@cf/meta/llama-3.2-3b-instruct",
+        "meta-llama/llama-3.2-3b-instruct:free"
+      ],
       "parameter_count": 3000000000,
       "tier": "small",
       "speed": "standard",
@@ -19536,8 +19625,7 @@
       "aliases": [
         "github/Llama-3-3-70B-Instruct",
         "groq/llama-3.3-70b-versatile",
-        "sambanova/Meta-Llama-3.3-70B-Instruct",
-        "sambanova/Llama-3.3-Swallow-70B-Instruct-v0.4"
+        "meta-llama/llama-3.3-70b-instruct:free"
       ],
       "parameter_count": 70000000000,
       "tier": "large",
@@ -19894,10 +19982,8 @@
         "notes": "NVIDIA NIM free credits, exhaustible"
       },
       "trial_scope": "specific",
-      "model_family": "minimax-m2.7",
-      "aliases": [
-        "MiniMax-M2.7"
-      ],
+      "model_family": "minimaxai-minimax-m2.7",
+      "aliases": [],
       "tier": "medium",
       "speed": "fast",
       "use_case": [
@@ -20357,9 +20443,9 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "kimi-k2.6",
+      "model_family": "moonshotai-kimi-k2.6",
       "aliases": [
-        "Kimi-K2.6"
+        "cloudflare/@cf/moonshotai/kimi-k2.6"
       ],
       "tier": "medium",
       "speed": "standard",
@@ -20396,7 +20482,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "mistral-nemo-12b",
+      "model_family": "nv-mistralai-mistral-nemo-12b",
       "model_variant": "instruct",
       "aliases": [],
       "parameter_count": 12000000000,
@@ -21316,7 +21402,9 @@
       "free_quota": null,
       "trial_scope": "none",
       "model_family": "nemotron-3-nano-30b-a3b",
-      "aliases": [],
+      "aliases": [
+        "nvidia/nemotron-3-nano-30b-a3b:free"
+      ],
       "parameter_count": 30000000000,
       "tier": "medium",
       "speed": "standard",
@@ -21356,7 +21444,9 @@
       "trial_scope": "none",
       "model_family": "nemotron-3-nano-omni-30b-a3b-reasoning",
       "model_variant": "reasoning",
-      "aliases": [],
+      "aliases": [
+        "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
+      ],
       "parameter_count": 30000000000,
       "tier": "large",
       "speed": "premium",
@@ -21398,7 +21488,9 @@
       "free_quota": null,
       "trial_scope": "none",
       "model_family": "nemotron-3-super-120b-a12b",
-      "aliases": [],
+      "aliases": [
+        "nvidia/nemotron-3-super-120b-a12b:free"
+      ],
       "parameter_count": 120000000000,
       "tier": "medium",
       "speed": "standard",
@@ -21600,7 +21692,9 @@
       "trial_scope": "none",
       "model_family": "nemotron-nano-12b-v2-vl",
       "model_variant": "vl",
-      "aliases": [],
+      "aliases": [
+        "nvidia/nemotron-nano-12b-v2-vl:free"
+      ],
       "parameter_count": 12000000000,
       "tier": "large",
       "speed": "premium",
@@ -21939,7 +22033,9 @@
       "free_quota": null,
       "trial_scope": "none",
       "model_family": "nemotron-nano-9b-v2",
-      "aliases": [],
+      "aliases": [
+        "nvidia/nemotron-nano-9b-v2:free"
+      ],
       "parameter_count": 9000000000,
       "tier": "medium",
       "speed": "standard",
@@ -22091,8 +22187,11 @@
       "trial_scope": "none",
       "model_family": "gpt-oss-120b",
       "aliases": [
+        "cerebras/gpt-oss-120b",
+        "cloudflare/@cf/openai/gpt-oss-120b",
         "gpt-oss-120b",
         "groq/openai/gpt-oss-120b",
+        "openai/gpt-oss-120b:free",
         "sambanova/gpt-oss-120b"
       ],
       "parameter_count": 120000000000,
@@ -22133,7 +22232,9 @@
       "trial_scope": "none",
       "model_family": "gpt-oss-20b",
       "aliases": [
-        "groq/openai/gpt-oss-20b"
+        "cloudflare/@cf/openai/gpt-oss-20b",
+        "groq/openai/gpt-oss-20b",
+        "openai/gpt-oss-20b:free"
       ],
       "parameter_count": 20000000000,
       "tier": "medium",
@@ -22175,7 +22276,9 @@
       "trial_scope": "specific",
       "model_family": "qwen3-coder-480b-a35b",
       "model_variant": "coder",
-      "aliases": [],
+      "aliases": [
+        "qwen3-coder-480b-a35b-instruct"
+      ],
       "parameter_count": 480000000000,
       "tier": "medium",
       "speed": "fast",
@@ -22216,6 +22319,7 @@
       "model_variant": "instruct",
       "aliases": [
         "Qwen3-Next-80B-A3B-Instruct",
+        "qwen/qwen3-next-80b-a3b-instruct:free",
         "xingchen/xop3qwen80bnext"
       ],
       "parameter_count": 80000000000,
@@ -22334,7 +22438,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "sarvam-m",
+      "model_family": "sarvamai-sarvam-m",
       "aliases": [],
       "tier": "medium",
       "speed": "standard",
@@ -22370,7 +22474,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "arctic-embed-l",
+      "model_family": "snowflake-arctic-embed-l",
       "model_variant": "embed",
       "aliases": [],
       "tier": "medium",
@@ -22410,7 +22514,7 @@
         "notes": "NVIDIA NIM free credits, exhaustible"
       },
       "trial_scope": "specific",
-      "model_family": "step-3.5-flash",
+      "model_family": "stepfun-ai-step-3.5-flash",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
@@ -22447,7 +22551,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "stockmark-2-100b",
+      "model_family": "stockmark-stockmark-2-100b",
       "model_variant": "instruct",
       "aliases": [],
       "parameter_count": 100000000000,
@@ -22486,7 +22590,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "solar-10.7b",
+      "model_family": "upstage-solar-10.7b",
       "model_variant": "instruct",
       "aliases": [],
       "parameter_count": 10700000000,
@@ -22525,7 +22629,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "palmyra-creative-122b",
+      "model_family": "writer-palmyra-creative-122b",
       "aliases": [],
       "parameter_count": 122000000000,
       "tier": "medium",
@@ -22563,7 +22667,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "palmyra-fin-70b-32k",
+      "model_family": "writer-palmyra-fin-70b-32k",
       "aliases": [],
       "parameter_count": 70000000000,
       "tier": "large",
@@ -22601,7 +22705,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "palmyra-med-70b",
+      "model_family": "writer-palmyra-med-70b",
       "aliases": [],
       "parameter_count": 70000000000,
       "tier": "large",
@@ -22639,7 +22743,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "palmyra-med-70b-32k",
+      "model_family": "writer-palmyra-med-70b-32k",
       "aliases": [],
       "parameter_count": 70000000000,
       "tier": "large",
@@ -22717,7 +22821,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "zamba2-7b",
+      "model_family": "zyphra-zamba2-7b",
       "model_variant": "instruct",
       "aliases": [],
       "parameter_count": 7000000000,
@@ -22764,7 +22868,7 @@
         "notes": "Free tier with rate limits (see openrouter.ai)"
       },
       "trial_scope": "specific",
-      "model_family": "baidu-qianfan:-cobuddy-(free)",
+      "model_family": "baidu-cobuddy",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -22862,9 +22966,11 @@
         "notes": "Free tier with rate limits (see openrouter.ai)"
       },
       "trial_scope": "specific",
-      "model_family": "nvidia:-nemotron-3-nano-omni-(free)",
+      "model_family": "nemotron-3-nano-omni-30b-a3b-reasoning",
       "model_variant": "reasoning",
-      "aliases": [],
+      "aliases": [
+        "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning"
+      ],
       "tier": "large",
       "speed": "fast",
       "use_case": [
@@ -22917,7 +23023,7 @@
         "notes": "Free tier with rate limits (see openrouter.ai)"
       },
       "trial_scope": "specific",
-      "model_family": "poolside:-laguna-xs.2-(free)",
+      "model_family": "poolside-laguna-xs.2",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -22966,7 +23072,7 @@
         "notes": "Free tier with rate limits (see openrouter.ai)"
       },
       "trial_scope": "specific",
-      "model_family": "poolside:-laguna-m.1-(free)",
+      "model_family": "poolside-laguna-m.1",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -23014,8 +23120,11 @@
         "notes": "Free tier with rate limits (see openrouter.ai)"
       },
       "trial_scope": "specific",
-      "model_family": "deepseek:-deepseek-v4-flash-(free)",
-      "aliases": [],
+      "model_family": "deepseek-v4-flash",
+      "aliases": [
+        "DeepSeek-V4-Flash",
+        "deepseek-ai/deepseek-v4-flash"
+      ],
       "tier": "large",
       "speed": "fast",
       "use_case": [
@@ -23067,9 +23176,12 @@
         "notes": "Free tier with rate limits (see openrouter.ai)"
       },
       "trial_scope": "specific",
-      "model_family": "google:-gemma-4-26b-a4b-(free)",
+      "model_family": "gemma-4-26b-a4b",
       "model_variant": "it",
-      "aliases": [],
+      "aliases": [
+        "cloudflare/@cf/google/gemma-4-26b-a4b-it",
+        "gemma-4-26B-A4B-it"
+      ],
       "parameter_count": 26000000000,
       "tier": "large",
       "speed": "fast",
@@ -23125,9 +23237,11 @@
         "notes": "Free tier with rate limits (see openrouter.ai)"
       },
       "trial_scope": "specific",
-      "model_family": "google:-gemma-4-31b-(free)",
+      "model_family": "gemma-4-31b",
       "model_variant": "it",
-      "aliases": [],
+      "aliases": [
+        "google/gemma-4-31b-it"
+      ],
       "parameter_count": 31000000000,
       "tier": "large",
       "speed": "fast",
@@ -23178,7 +23292,7 @@
         "notes": "Free tier with rate limits (see openrouter.ai)"
       },
       "trial_scope": "specific",
-      "model_family": "arcee-ai:-trinity-large-thinking-(free)",
+      "model_family": "arcee-ai-trinity-large-thinking",
       "model_variant": "thinking",
       "aliases": [],
       "tier": "large",
@@ -23228,8 +23342,10 @@
         "notes": "Free tier with rate limits (see openrouter.ai)"
       },
       "trial_scope": "specific",
-      "model_family": "nvidia:-nemotron-3-super-(free)",
-      "aliases": [],
+      "model_family": "nemotron-3-super-120b-a12b",
+      "aliases": [
+        "nvidia/nemotron-3-super-120b-a12b"
+      ],
       "tier": "large",
       "speed": "fast",
       "use_case": [
@@ -23277,7 +23393,7 @@
         "notes": "Free tier: 10000 req/day (per endpoint, basic account)"
       },
       "trial_scope": "specific",
-      "model_family": "minimax:-minimax-m2.5-(free)",
+      "model_family": "minimax-minimax-m2.5",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -23325,7 +23441,7 @@
         "notes": "Free tier with rate limits (see openrouter.ai)"
       },
       "trial_scope": "specific",
-      "model_family": "liquidai:-lfm2.5-1.2b-thinking-(free)",
+      "model_family": "liquid-lfm-2.5-1.2b-thinking",
       "model_variant": "thinking",
       "aliases": [],
       "parameter_count": 1200000000,
@@ -23373,7 +23489,7 @@
         "notes": "Free tier with rate limits (see openrouter.ai)"
       },
       "trial_scope": "specific",
-      "model_family": "liquidai:-lfm2.5-1.2b-(free)",
+      "model_family": "liquid-lfm-2.5-1.2b",
       "model_variant": "instruct",
       "aliases": [],
       "parameter_count": 1200000000,
@@ -23419,8 +23535,10 @@
         "notes": "Free tier with rate limits (see openrouter.ai)"
       },
       "trial_scope": "specific",
-      "model_family": "nvidia:-nemotron-3-nano-30b-a3b-(free)",
-      "aliases": [],
+      "model_family": "nemotron-3-nano-30b-a3b",
+      "aliases": [
+        "nvidia/nemotron-3-nano-30b-a3b"
+      ],
       "parameter_count": 30000000000,
       "tier": "large",
       "speed": "fast",
@@ -23473,9 +23591,11 @@
         "notes": "Free tier with rate limits (see openrouter.ai)"
       },
       "trial_scope": "specific",
-      "model_family": "nvidia:-nemotron-nano-12b-2-vl-(free)",
+      "model_family": "nemotron-nano-12b-v2-vl",
       "model_variant": "vl",
-      "aliases": [],
+      "aliases": [
+        "nvidia/nemotron-nano-12b-v2-vl"
+      ],
       "parameter_count": 12000000000,
       "tier": "large",
       "speed": "fast",
@@ -23527,9 +23647,13 @@
         "notes": "Free tier: 8 req/min (per endpoint, basic account)"
       },
       "trial_scope": "specific",
-      "model_family": "qwen:-qwen3-next-80b-a3b-(free)",
+      "model_family": "qwen3-next-80b-a3b",
       "model_variant": "instruct",
-      "aliases": [],
+      "aliases": [
+        "Qwen3-Next-80B-A3B-Instruct",
+        "qwen/qwen3-next-80b-a3b-instruct",
+        "xingchen/xop3qwen80bnext"
+      ],
       "parameter_count": 80000000000,
       "tier": "large",
       "speed": "fast",
@@ -23578,8 +23702,10 @@
         "notes": "Free tier: 50 req/min (per endpoint, basic account)"
       },
       "trial_scope": "specific",
-      "model_family": "nvidia:-nemotron-nano-9b-v2-(free)",
-      "aliases": [],
+      "model_family": "nemotron-nano-9b-v2",
+      "aliases": [
+        "nvidia/nvidia-nemotron-nano-9b-v2"
+      ],
       "parameter_count": 9000000000,
       "tier": "medium",
       "speed": "fast",
@@ -23629,8 +23755,15 @@
         "notes": "Free tier: 5000 req/day (per endpoint, basic account)"
       },
       "trial_scope": "specific",
-      "model_family": "openai:-gpt-oss-120b-(free)",
-      "aliases": [],
+      "model_family": "gpt-oss-120b",
+      "aliases": [
+        "cerebras/gpt-oss-120b",
+        "cloudflare/@cf/openai/gpt-oss-120b",
+        "gpt-oss-120b",
+        "groq/openai/gpt-oss-120b",
+        "openai/gpt-oss-120b",
+        "sambanova/gpt-oss-120b"
+      ],
       "parameter_count": 120000000000,
       "tier": "large",
       "speed": "fast",
@@ -23680,8 +23813,12 @@
         "notes": "Free tier: 10000 req/day (per endpoint, basic account)"
       },
       "trial_scope": "specific",
-      "model_family": "openai:-gpt-oss-20b-(free)",
-      "aliases": [],
+      "model_family": "gpt-oss-20b",
+      "aliases": [
+        "cloudflare/@cf/openai/gpt-oss-20b",
+        "groq/openai/gpt-oss-20b",
+        "openai/gpt-oss-20b"
+      ],
       "parameter_count": 20000000000,
       "tier": "medium",
       "speed": "fast",
@@ -23730,8 +23867,11 @@
         "notes": "Free tier with rate limits (see openrouter.ai)"
       },
       "trial_scope": "specific",
-      "model_family": "z.ai:-glm-4.5-air-(free)",
-      "aliases": [],
+      "model_family": "glm-4.5-air",
+      "aliases": [
+        "bigmodel/glm-4.5-air",
+        "GLM-4_5-Air"
+      ],
       "tier": "large",
       "speed": "fast",
       "use_case": [
@@ -23781,7 +23921,7 @@
         "notes": "Free tier: 8 req/min (per endpoint, basic account)"
       },
       "trial_scope": "specific",
-      "model_family": "qwen:-qwen3-coder-480b-a35b-(free)",
+      "model_family": "qwen:-qwen3-coder-480b-a35b",
       "model_variant": "coder",
       "aliases": [],
       "parameter_count": 480000000000,
@@ -23832,7 +23972,7 @@
         "notes": "Free tier: 8 req/min (per endpoint, basic account)"
       },
       "trial_scope": "specific",
-      "model_family": "venice:-uncensored-(free)",
+      "model_family": "cognitivecomputations-dolphin-mistral-24b-venice-edition",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
@@ -23875,9 +24015,13 @@
         "notes": "Free tier: 8 req/min (per endpoint, basic account)"
       },
       "trial_scope": "specific",
-      "model_family": "meta:-llama-3.3-70b-(free)",
+      "model_family": "llama-3.3-70b",
       "model_variant": "instruct",
-      "aliases": [],
+      "aliases": [
+        "github/Llama-3-3-70B-Instruct",
+        "groq/llama-3.3-70b-versatile",
+        "meta/llama-3.3-70b-instruct"
+      ],
       "parameter_count": 70000000000,
       "tier": "large",
       "speed": "fast",
@@ -23922,9 +24066,12 @@
         "notes": "Free tier: 8 req/min (per endpoint, basic account)"
       },
       "trial_scope": "specific",
-      "model_family": "meta:-llama-3.2-3b-(free)",
+      "model_family": "llama-3.2-3b",
       "model_variant": "instruct",
-      "aliases": [],
+      "aliases": [
+        "cloudflare/@cf/meta/llama-3.2-3b-instruct",
+        "meta/llama-3.2-3b-instruct"
+      ],
       "parameter_count": 3000000000,
       "tier": "small",
       "speed": "fast",
@@ -23972,7 +24119,7 @@
         "notes": "Free tier: 8 req/min (per endpoint, basic account)"
       },
       "trial_scope": "specific",
-      "model_family": "nousresearch-hermes-3-llama-3.1-405b:free",
+      "model_family": "nousresearch-hermes-3-llama-3.1-405b",
       "aliases": [],
       "parameter_count": 405000000000,
       "tier": "large",
@@ -24060,14 +24207,9 @@
         "notes": "$5 trial credits, valid for 3 months"
       },
       "trial_scope": "all",
-      "model_family": "llama-3.3-70b",
+      "model_family": "3.3-70b",
       "model_variant": "instruct",
-      "aliases": [
-        "github/Llama-3-3-70B-Instruct",
-        "groq/llama-3.3-70b-versatile",
-        "meta/llama-3.3-70b-instruct",
-        "sambanova/Llama-3.3-Swallow-70B-Instruct-v0.4"
-      ],
+      "aliases": [],
       "parameter_count": 70000000000,
       "tier": "large",
       "speed": "fast",
@@ -24110,9 +24252,12 @@
       "trial_scope": "all",
       "model_family": "gpt-oss-120b",
       "aliases": [
+        "cerebras/gpt-oss-120b",
+        "cloudflare/@cf/openai/gpt-oss-120b",
         "gpt-oss-120b",
         "groq/openai/gpt-oss-120b",
-        "openai/gpt-oss-120b"
+        "openai/gpt-oss-120b",
+        "openai/gpt-oss-120b:free"
       ],
       "parameter_count": 120000000000,
       "tier": "small",
@@ -24474,11 +24619,10 @@
         "notes": "$5 trial credits, valid for 3 months"
       },
       "trial_scope": "all",
-      "model_family": "llama-3.1-8b",
+      "model_family": "3.1-8b",
       "model_variant": "instruct",
       "aliases": [
-        "cerebras/llama3.1-8b",
-        "meta/llama-3.1-8b-instruct"
+        "github/Meta-Llama-3-1-8B-Instruct"
       ],
       "parameter_count": 8000000000,
       "tier": "medium",
@@ -24614,6 +24758,7 @@
       "trial_scope": "all",
       "model_family": "whisper-large-v3",
       "aliases": [
+        "cloudflare/@cf/openai/whisper-large-v3-turbo",
         "whisper-large-v3-turbo",
         "whisper-large-v3",
         "groq/whisper-large-v3",
@@ -24658,7 +24803,7 @@
         "notes": "$5 trial credits, valid for 3 months"
       },
       "trial_scope": "all",
-      "model_family": "sambanova-allam-7b-preview",
+      "model_family": "allam-7b-preview",
       "model_variant": "instruct",
       "aliases": [],
       "tier": "small",
@@ -24791,6 +24936,7 @@
       "model_family": "gemma-3-12b",
       "model_variant": "it",
       "aliases": [
+        "cloudflare/@cf/google/gemma-3-12b-it",
         "google/gemma-3-12b-it"
       ],
       "parameter_count": 12000000000,
@@ -24833,14 +24979,9 @@
         "notes": "$5 trial credits, valid for 3 months"
       },
       "trial_scope": "all",
-      "model_family": "llama-3.3-70b",
+      "model_family": "llama-3.3-swallow-70b-v0.4",
       "model_variant": "instruct",
-      "aliases": [
-        "github/Llama-3-3-70B-Instruct",
-        "groq/llama-3.3-70b-versatile",
-        "meta/llama-3.3-70b-instruct",
-        "sambanova/Meta-Llama-3.3-70B-Instruct"
-      ],
+      "aliases": [],
       "parameter_count": 70000000000,
       "tier": "large",
       "speed": "fast",
@@ -25542,6 +25683,7 @@
       "trial_scope": "none",
       "model_family": "glm-4.7",
       "aliases": [
+        "cerebras/zai-glm-4.7",
         "GLM-4.7"
       ],
       "tier": "medium",
@@ -25724,10 +25866,8 @@
       "free_mechanism": "rate-limited",
       "free_quota": null,
       "trial_scope": "specific",
-      "model_family": "hunyuanocr",
-      "aliases": [
-        "HunyuanOCR"
-      ],
+      "model_family": "xophunyuanocr",
+      "aliases": [],
       "tier": "large",
       "speed": "fast",
       "use_case": [
@@ -25857,7 +25997,8 @@
       "model_variant": "instruct",
       "aliases": [
         "Qwen3-Next-80B-A3B-Instruct",
-        "qwen/qwen3-next-80b-a3b-instruct"
+        "qwen/qwen3-next-80b-a3b-instruct",
+        "qwen/qwen3-next-80b-a3b-instruct:free"
       ],
       "parameter_count": 80000000000,
       "tier": "medium",
@@ -25948,6 +26089,7 @@
       "model_family": "qwen3-30b-a3b",
       "model_variant": "instruct",
       "aliases": [
+        "cloudflare/@cf/qwen/qwen3-30b-a3b-fp8",
         "Qwen3-30B-A3B-Instruct-2507",
         "xingchen/xop3qwen30b"
       ],
@@ -26038,6 +26180,7 @@
       "trial_scope": "none",
       "model_family": "qwen3-30b-a3b",
       "aliases": [
+        "cloudflare/@cf/qwen/qwen3-30b-a3b-fp8",
         "Qwen3-30B-A3B-Instruct-2507",
         "xingchen/xop3qwen30b2507"
       ],
@@ -26226,6 +26369,7 @@
       "model_family": "deepseek-r1-distill-qwen-32b",
       "model_variant": "r1",
       "aliases": [
+        "cloudflare/@cf/deepseek-ai/deepseek-r1-distill-qwen-32b",
         "DeepSeek-R1-Distill-Qwen-32B"
       ],
       "parameter_count": 32000000000,
@@ -27100,7 +27244,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "spark-max-32k",
+      "model_family": "max-32k",
       "aliases": [],
       "tier": "medium",
       "speed": "standard",
@@ -27177,7 +27321,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "spark-pro-128k",
+      "model_family": "pro-128k",
       "aliases": [],
       "tier": "medium",
       "speed": "premium",
