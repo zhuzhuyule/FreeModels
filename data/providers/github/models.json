@@ -1,7 +1,7 @@
 {
   "object": "list",
   "provider": "github",
-  "updated_at": "2026-05-25T00:37:34.749Z",
+  "updated_at": "2026-05-25T02:26:56.985Z",
   "total": 43,
   "data": [
     {
@@ -32,9 +32,7 @@
       },
       "trial_scope": "all",
       "model_family": "jamba-1.5-large",
-      "aliases": [
-        "ai21labs/jamba-1.5-large-instruct"
-      ],
+      "aliases": [],
       "tier": "medium",
       "speed": "fast",
       "use_case": [
@@ -299,7 +297,7 @@
         "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
       },
       "trial_scope": "all",
-      "model_family": "text-embedding-3-(small)",
+      "model_family": "text-embedding-3-small",
       "model_variant": "embedding",
       "aliases": [],
       "tier": "medium",
@@ -339,7 +337,7 @@
         "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
       },
       "trial_scope": "all",
-      "model_family": "text-embedding-3-(large)",
+      "model_family": "text-embedding-3-large",
       "model_variant": "embedding",
       "aliases": [],
       "tier": "medium",
@@ -460,7 +458,7 @@
         "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
       },
       "trial_scope": "all",
-      "model_family": "github-o3",
+      "model_family": "o3",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
@@ -586,7 +584,7 @@
         "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
       },
       "trial_scope": "all",
-      "model_family": "github-o1",
+      "model_family": "o1",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -712,9 +710,11 @@
         "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
       },
       "trial_scope": "all",
-      "model_family": "gpt-5-(preview)",
+      "model_family": "gpt-5",
       "model_variant": "chat",
-      "aliases": [],
+      "aliases": [
+        "github/gpt-5"
+      ],
       "tier": "large",
       "speed": "fast",
       "use_case": [
@@ -756,7 +756,9 @@
       },
       "trial_scope": "all",
       "model_family": "gpt-5",
-      "aliases": [],
+      "aliases": [
+        "github/gpt-5-chat"
+      ],
       "tier": "medium",
       "speed": "fast",
       "use_case": [
@@ -1005,7 +1007,9 @@
       "trial_scope": "all",
       "model_family": "3.1-8b",
       "model_variant": "instruct",
-      "aliases": [],
+      "aliases": [
+        "sambanova/Meta-Llama-3.1-8B-Instruct"
+      ],
       "parameter_count": 8000000000,
       "tier": "medium",
       "speed": "fast",
@@ -1139,8 +1143,7 @@
       "aliases": [
         "groq/llama-3.3-70b-versatile",
         "meta/llama-3.3-70b-instruct",
-        "sambanova/Meta-Llama-3.3-70B-Instruct",
-        "sambanova/Llama-3.3-Swallow-70B-Instruct-v0.4"
+        "meta-llama/llama-3.3-70b-instruct:free"
       ],
       "parameter_count": 70000000000,
       "tier": "large",
@@ -1244,6 +1247,7 @@
       "model_family": "llama-3.2-11b-vision",
       "model_variant": "vision",
       "aliases": [
+        "cloudflare/@cf/meta/llama-3.2-11b-vision-instruct",
         "meta/llama-3.2-11b-vision-instruct"
       ],
       "parameter_count": 11000000000,
@@ -1295,6 +1299,7 @@
       "model_family": "llama-4-scout-17b-16e",
       "model_variant": "instruct",
       "aliases": [
+        "cloudflare/@cf/meta/llama-4-scout-17b-16e-instruct",
         "groq/meta-llama/llama-4-scout-17b-16e-instruct"
       ],
       "parameter_count": 17000000000,
@@ -1390,7 +1395,7 @@
         "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
       },
       "trial_scope": "all",
-      "model_family": "cohere-command-r+-08",
+      "model_family": "cohere-command-r-plus-08",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",

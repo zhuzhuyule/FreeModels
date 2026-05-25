@@ -17,6 +17,7 @@ export interface FamilyResult {
 const PROVIDER_PREFIXES = [
   'groq', 'openrouter', 'cerebras', 'nvidia', 'google',
   'gitee', 'bigmodel', 'xinghuo', 'xingchen', 'longcat',
+  'cloudflare', 'cohere', 'github', 'sambanova',
 ];
 
 // 只用 `prefix/` 形式剥离的 owner 前缀。这些字符串本身也常作为模型家族前缀
@@ -78,13 +79,24 @@ function loadOverrides(): OverridesFile {
 }
 
 function stripProviderPrefix(id: string): string {
-  for (const prefix of PROVIDER_PREFIXES) {
-    const re = new RegExp(`^${prefix}/`, 'i');
-    if (re.test(id)) {
-      return id.replace(re, '');
+  // 循环剥, 解决多层路径如 "cloudflare/@cf/openai/gpt-oss-120b":
+  //   pass 1: 剥 cloudflare/ → "@cf/openai/gpt-oss-120b"
+  //   pass 2: 剥 @cf/         → "openai/gpt-oss-120b" (owner 由后续 stripAllOwnerPrefixes 剥)
+  let prev = '';
+  let curr = id;
+  while (prev !== curr) {
+    prev = curr;
+    // Cloudflare 特殊: @cf/ 是 Workers AI 的 path namespace, 不是 owner
+    curr = curr.replace(/^@cf\//i, '');
+    for (const prefix of PROVIDER_PREFIXES) {
+      const re = new RegExp(`^${prefix}/`, 'i');
+      if (re.test(curr)) {
+        curr = curr.replace(re, '');
+        break;
+      }
     }
   }
-  return id;
+  return curr;
 }
 
 // 长度倒序，避免 "meta" 抢先匹配 "meta-llama"
@@ -119,9 +131,12 @@ function stripAllOwnerPrefixes(id: string): string {
   return curr;
 }
 
-// 评分越高表示 family 越"可读"（有版本号、有分隔符），越低说明越像不透明 slug
+// 评分越高表示 family 越"可读"（有版本号、有分隔符、有 size），越低说明越像不透明 slug.
+// hasSize 加 +5 让任何含 size suffix 的 family 永远赢过缺 size 的, 避免
+// cerebras name="OpenAI GPT OSS" 跟 id="gpt-oss-120b" 平手时丢掉 120b.
 function familyScore(family: string): number {
   let score = 0;
+  if (/-\d+b\b/i.test(family)) score += 5;    // size suffix (-120b, -70b, -8b 等), 最重要维度
   if (/\d+\.\d+/.test(family)) score += 3;   // 版本号带点（glm-5.1, llama-3.1）
   if (/-/.test(family)) score += 1;            // 含连字符
   if (/^[a-z0-9]+$/.test(family)) score -= 2; // 纯字母数字无分隔符（opaque slug）
@@ -130,6 +145,13 @@ function familyScore(family: string): number {
 
 function deriveFamilyFromSlug(slug: string): FamilyResult {
   let id = slug;
+  // 剥 license/channel 标记 -- 这些是计费/分发维度, 不影响"用户互换能力等价".
+  //   (free) / (beta) / (preview) / (trial)    -- 括号风格 (OpenRouter name)
+  //   :free / :beta / :preview                  -- 冒号风格 (OpenRouter id)
+  // 必须在 stripProviderPrefix 之前, 因为 OpenRouter id 是 "openai/gpt-oss-120b:free",
+  // 不剥 :free 会让 family 变成 "gpt-oss-120b:free" 跟其他 provider 的 "gpt-oss-120b" 分裂.
+  id = id.replace(/[\s\-_]?\((free|beta|preview|trial)\)/gi, '');
+  id = id.replace(/:(free|beta|preview)\b/gi, '');
   id = stripProviderPrefix(id);
   id = stripAllOwnerPrefixes(id);
 
@@ -202,7 +224,10 @@ export function canonicalizeFamily(modelId: string, name?: string): FamilyResult
   if (name) {
     const nameSlug = name.toLowerCase().replace(/[\s_]+/g, '-');
     const nameResult = deriveFamilyFromSlug(nameSlug);
-    if (familyScore(nameResult.family) >= familyScore(idResult.family)) {
+    // > 而非 >=: 平手时 idResult 赢. 配合 familyScore 的 size 加分, 让 id
+    // 含 size 但 name 不含的 case (cerebras gpt-oss-120b / name "OpenAI GPT OSS")
+    // 自动选 id 保留 size.
+    if (familyScore(nameResult.family) > familyScore(idResult.family)) {
       return {
         family: nameResult.family,
         variant: idResult.variant ?? nameResult.variant,

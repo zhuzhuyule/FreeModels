@@ -1,7 +1,7 @@
 {
   "object": "list",
   "view": "tool-use",
-  "updated_at": "2026-05-25T00:37:34.768Z",
+  "updated_at": "2026-05-25T02:26:56.996Z",
   "total": 30,
   "filters": {
     "hasToolUse": "true"
@@ -194,8 +194,15 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-openai-gpt-oss-120b",
-      "aliases": [],
+      "model_family": "gpt-oss-120b",
+      "aliases": [
+        "cerebras/gpt-oss-120b",
+        "gpt-oss-120b",
+        "groq/openai/gpt-oss-120b",
+        "openai/gpt-oss-120b",
+        "openai/gpt-oss-120b:free",
+        "sambanova/gpt-oss-120b"
+      ],
       "parameter_count": 120000000000,
       "tier": "large",
       "speed": "fast",
@@ -244,7 +251,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-moonshotai-kimi-k2.5",
+      "model_family": "moonshotai-kimi-k2.5",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -295,8 +302,10 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-moonshotai-kimi-k2.6",
-      "aliases": [],
+      "model_family": "moonshotai-kimi-k2.6",
+      "aliases": [
+        "moonshotai/kimi-k2.6"
+      ],
       "tier": "large",
       "speed": "fast",
       "use_case": [
@@ -344,7 +353,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-zai-org-glm-4.7-flash",
+      "model_family": "org-glm-4.7-flash",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -388,7 +397,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-meta-llama-3.3-70b-fast",
+      "model_family": "llama-3.3-70b-fast",
       "model_variant": "instruct",
       "quantization": "fp8",
       "aliases": [],
@@ -431,7 +440,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-ibm-granite-granite-4.0-h-micro",
+      "model_family": "ibm-granite-granite-4.0-h-micro",
       "aliases": [],
       "tier": "small",
       "speed": "fast",
@@ -512,7 +521,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-nvidia-nemotron-3-120b-a12b",
+      "model_family": "nemotron-3-120b-a12b",
       "aliases": [],
       "parameter_count": 120000000000,
       "tier": "large",
@@ -559,9 +568,13 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-qwen-qwen3-30b-a3b",
+      "model_family": "qwen3-30b-a3b",
       "quantization": "fp8",
-      "aliases": [],
+      "aliases": [
+        "Qwen3-30B-A3B-Instruct-2507",
+        "xingchen/xop3qwen30b2507",
+        "xingchen/xop3qwen30b"
+      ],
       "parameter_count": 30000000000,
       "tier": "large",
       "speed": "fast",
@@ -607,9 +620,12 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-google-gemma-4-26b-a4b",
+      "model_family": "gemma-4-26b-a4b",
       "model_variant": "it",
-      "aliases": [],
+      "aliases": [
+        "gemma-4-26B-A4B-it",
+        "google/gemma-4-26b-a4b-it:free"
+      ],
       "parameter_count": 26000000000,
       "tier": "large",
       "speed": "fast",
@@ -655,7 +671,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-mistralai-mistral-small-3.1-24b",
+      "model_family": "mistral-small-3.1-24b",
       "model_variant": "instruct",
       "aliases": [],
       "parameter_count": 24000000000,
@@ -701,8 +717,12 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-openai-gpt-oss-20b",
-      "aliases": [],
+      "model_family": "gpt-oss-20b",
+      "aliases": [
+        "groq/openai/gpt-oss-20b",
+        "openai/gpt-oss-20b",
+        "openai/gpt-oss-20b:free"
+      ],
       "parameter_count": 20000000000,
       "tier": "medium",
       "speed": "fast",
@@ -748,9 +768,12 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-meta-llama-4-scout-17b-16e",
+      "model_family": "llama-4-scout-17b-16e",
       "model_variant": "instruct",
-      "aliases": [],
+      "aliases": [
+        "github/Llama-4-Scout-17B-16E-Instruct",
+        "groq/meta-llama/llama-4-scout-17b-16e-instruct"
+      ],
       "parameter_count": 17000000000,
       "tier": "large",
       "speed": "fast",
@@ -951,7 +974,7 @@
         "notes": "Free tier with rate limits (see openrouter.ai)"
       },
       "trial_scope": "specific",
-      "model_family": "baidu-qianfan:-cobuddy-(free)",
+      "model_family": "baidu-cobuddy",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -1043,7 +1066,7 @@
         "notes": "Free tier with rate limits (see openrouter.ai)"
       },
       "trial_scope": "specific",
-      "model_family": "poolside:-laguna-xs.2-(free)",
+      "model_family": "poolside-laguna-xs.2",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -1092,7 +1115,7 @@
         "notes": "Free tier with rate limits (see openrouter.ai)"
       },
       "trial_scope": "specific",
-      "model_family": "poolside:-laguna-m.1-(free)",
+      "model_family": "poolside-laguna-m.1",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -1141,9 +1164,13 @@
         "notes": "Free tier: 8 req/min (per endpoint, basic account)"
       },
       "trial_scope": "specific",
-      "model_family": "qwen:-qwen3-next-80b-a3b-(free)",
+      "model_family": "qwen3-next-80b-a3b",
       "model_variant": "instruct",
-      "aliases": [],
+      "aliases": [
+        "Qwen3-Next-80B-A3B-Instruct",
+        "qwen/qwen3-next-80b-a3b-instruct",
+        "xingchen/xop3qwen80bnext"
+      ],
       "parameter_count": 80000000000,
       "tier": "large",
       "speed": "fast",
@@ -1193,8 +1220,15 @@
         "notes": "Free tier: 5000 req/day (per endpoint, basic account)"
       },
       "trial_scope": "specific",
-      "model_family": "openai:-gpt-oss-120b-(free)",
-      "aliases": [],
+      "model_family": "gpt-oss-120b",
+      "aliases": [
+        "cerebras/gpt-oss-120b",
+        "cloudflare/@cf/openai/gpt-oss-120b",
+        "gpt-oss-120b",
+        "groq/openai/gpt-oss-120b",
+        "openai/gpt-oss-120b",
+        "sambanova/gpt-oss-120b"
+      ],
       "parameter_count": 120000000000,
       "tier": "large",
       "speed": "fast",
@@ -1244,8 +1278,12 @@
         "notes": "Free tier: 10000 req/day (per endpoint, basic account)"
       },
       "trial_scope": "specific",
-      "model_family": "openai:-gpt-oss-20b-(free)",
-      "aliases": [],
+      "model_family": "gpt-oss-20b",
+      "aliases": [
+        "cloudflare/@cf/openai/gpt-oss-20b",
+        "groq/openai/gpt-oss-20b",
+        "openai/gpt-oss-20b"
+      ],
       "parameter_count": 20000000000,
       "tier": "medium",
       "speed": "fast",
@@ -1294,8 +1332,11 @@
         "notes": "Free tier with rate limits (see openrouter.ai)"
       },
       "trial_scope": "specific",
-      "model_family": "z.ai:-glm-4.5-air-(free)",
-      "aliases": [],
+      "model_family": "glm-4.5-air",
+      "aliases": [
+        "bigmodel/glm-4.5-air",
+        "GLM-4_5-Air"
+      ],
       "tier": "large",
       "speed": "fast",
       "use_case": [
@@ -1345,7 +1386,7 @@
         "notes": "Free tier: 8 req/min (per endpoint, basic account)"
       },
       "trial_scope": "specific",
-      "model_family": "qwen:-qwen3-coder-480b-a35b-(free)",
+      "model_family": "qwen:-qwen3-coder-480b-a35b",
       "model_variant": "coder",
       "aliases": [],
       "parameter_count": 480000000000,
@@ -1398,9 +1439,12 @@
         "notes": "Free tier: 8 req/min (per endpoint, basic account)"
       },
       "trial_scope": "specific",
-      "model_family": "meta:-llama-3.2-3b-(free)",
+      "model_family": "llama-3.2-3b",
       "model_variant": "instruct",
-      "aliases": [],
+      "aliases": [
+        "cloudflare/@cf/meta/llama-3.2-3b-instruct",
+        "meta/llama-3.2-3b-instruct"
+      ],
       "parameter_count": 3000000000,
       "tier": "small",
       "speed": "fast",

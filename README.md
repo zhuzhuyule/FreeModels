@@ -62,8 +62,8 @@ curl https://ofind.cn/FreeModels/v1/models.json
 | 模型总数 | 673 |
 | 免费模型 (`is_free=true`) | 310 |
 | 付费可试用 (Gitee 体验等) | 136 |
-| 模型家族 | 572 |
-| 跨 Provider 家族 | 61 |
+| 模型家族 | 546 |
+| 跨 Provider 家族 | 71 |
 | · 限速免费 | 143 |
 | · 日 token 配额 | 79 |
 | · 永久免费 | 48 |

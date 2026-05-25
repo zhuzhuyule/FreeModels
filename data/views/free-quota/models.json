@@ -1,7 +1,7 @@
 {
   "object": "list",
   "view": "free-quota",
-  "updated_at": "2026-05-25T00:37:34.761Z",
+  "updated_at": "2026-05-25T02:26:56.993Z",
   "total": 117,
   "filters": {
     "freeMechanism": [
@@ -42,8 +42,15 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-openai-gpt-oss-120b",
-      "aliases": [],
+      "model_family": "gpt-oss-120b",
+      "aliases": [
+        "cerebras/gpt-oss-120b",
+        "gpt-oss-120b",
+        "groq/openai/gpt-oss-120b",
+        "openai/gpt-oss-120b",
+        "openai/gpt-oss-120b:free",
+        "sambanova/gpt-oss-120b"
+      ],
       "parameter_count": 120000000000,
       "tier": "large",
       "speed": "fast",
@@ -85,8 +92,10 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-baai-bge-m3",
-      "aliases": [],
+      "model_family": "baai-bge-m3",
+      "aliases": [
+        "baai/bge-m3"
+      ],
       "tier": "small",
       "speed": "fast",
       "use_case": [
@@ -124,7 +133,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-huggingface-distilbert-sst-2",
+      "model_family": "huggingface-distilbert-sst-2",
       "quantization": "int8",
       "aliases": [],
       "tier": "small",
@@ -163,7 +172,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-google-gemma-2b-lora",
+      "model_family": "gemma-2b-lora",
       "model_variant": "it",
       "aliases": [],
       "parameter_count": 2000000000,
@@ -201,7 +210,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-black-forest-labs-flux-2-klein-9b",
+      "model_family": "black-forest-labs-flux-2-klein-9b",
       "aliases": [],
       "parameter_count": 9000000000,
       "tier": "medium",
@@ -243,7 +252,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-meta-llama-3-8b",
+      "model_family": "llama-3-8b",
       "model_variant": "instruct",
       "aliases": [
         "cloudflare/@cf/meta/llama-3-8b-instruct-awq"
@@ -289,9 +298,12 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-meta-llama-3.2-3b",
+      "model_family": "llama-3.2-3b",
       "model_variant": "instruct",
-      "aliases": [],
+      "aliases": [
+        "meta/llama-3.2-3b-instruct",
+        "meta-llama/llama-3.2-3b-instruct:free"
+      ],
       "parameter_count": 3000000000,
       "tier": "small",
       "speed": "fast",
@@ -336,7 +348,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-moonshotai-kimi-k2.5",
+      "model_family": "moonshotai-kimi-k2.5",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -380,7 +392,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-meta-llama-guard-3-8b",
+      "model_family": "llama-guard-3-8b",
       "model_variant": "guard",
       "aliases": [],
       "parameter_count": 8000000000,
@@ -420,9 +432,11 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-qwen-qwen3-embedding-0.6b",
+      "model_family": "qwen3-embedding-0.6b",
       "model_variant": "embedding",
-      "aliases": [],
+      "aliases": [
+        "Qwen3-Embedding-0.6B"
+      ],
       "parameter_count": 600000000,
       "tier": "medium",
       "speed": "fast",
@@ -462,7 +476,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-meta-llama-2-7b",
+      "model_family": "llama-2-7b",
       "model_variant": "chat",
       "quantization": "fp16",
       "aliases": [
@@ -505,7 +519,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-mistral-mistral-7b-v0.1",
+      "model_family": "mistral-7b-v0.1",
       "model_variant": "instruct",
       "aliases": [],
       "parameter_count": 7000000000,
@@ -543,7 +557,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-myshell-ai-melotts",
+      "model_family": "myshell-ai-melotts",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
@@ -581,7 +595,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-mistral-mistral-7b-v0.2-lora",
+      "model_family": "mistral-7b-v0.2-lora",
       "model_variant": "instruct",
       "aliases": [],
       "parameter_count": 7000000000,
@@ -619,7 +633,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-deepgram-aura-2-es",
+      "model_family": "deepgram-aura-2-es",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
@@ -657,7 +671,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-openai-whisper",
+      "model_family": "whisper",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
@@ -696,7 +710,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-pfnet-plamo-embedding-1b",
+      "model_family": "pfnet-plamo-embedding-1b",
       "model_variant": "embedding",
       "aliases": [],
       "parameter_count": 1000000000,
@@ -775,7 +789,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-llava-hf-llava-1.5-7b-hf",
+      "model_family": "llava-hf-llava-1.5-7b-hf",
       "aliases": [],
       "parameter_count": 7000000000,
       "tier": "medium",
@@ -818,9 +832,12 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-deepseek-ai-deepseek-r1-distill-qwen-32b",
+      "model_family": "deepseek-r1-distill-qwen-32b",
       "model_variant": "r1",
-      "aliases": [],
+      "aliases": [
+        "DeepSeek-R1-Distill-Qwen-32B",
+        "xingchen/xdeepseekr1qwen32b"
+      ],
       "parameter_count": 32000000000,
       "tier": "large",
       "speed": "fast",
@@ -862,7 +879,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-runwayml-stable-diffusion-v1-5-inpainting",
+      "model_family": "runwayml-stable-diffusion-v1-5-inpainting",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -902,7 +919,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-deepgram-flux",
+      "model_family": "deepgram-flux",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
@@ -940,7 +957,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-deepgram-nova-3",
+      "model_family": "deepgram-nova-3",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
@@ -978,7 +995,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-black-forest-labs-flux-1-schnell",
+      "model_family": "black-forest-labs-flux-1-schnell",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
@@ -1016,7 +1033,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-meta-llama-2-7b",
+      "model_family": "llama-2-7b",
       "model_variant": "chat",
       "quantization": "int8",
       "aliases": [
@@ -1059,11 +1076,12 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-meta-llama-3.1-8b",
+      "model_family": "llama-3.1-8b",
       "model_variant": "instruct",
       "quantization": "fp8",
       "aliases": [
-        "cloudflare/@cf/meta/llama-3.1-8b-instruct-awq"
+        "cloudflare/@cf/meta/llama-3.1-8b-instruct-awq",
+        "meta/llama-3.1-8b-instruct"
       ],
       "parameter_count": 8000000000,
       "tier": "medium",
@@ -1102,9 +1120,11 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-meta-llama-3.2-1b",
+      "model_family": "llama-3.2-1b",
       "model_variant": "instruct",
-      "aliases": [],
+      "aliases": [
+        "meta/llama-3.2-1b-instruct"
+      ],
       "parameter_count": 1000000000,
       "tier": "small",
       "speed": "fast",
@@ -1149,8 +1169,10 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-moonshotai-kimi-k2.6",
-      "aliases": [],
+      "model_family": "moonshotai-kimi-k2.6",
+      "aliases": [
+        "moonshotai/kimi-k2.6"
+      ],
       "tier": "large",
       "speed": "fast",
       "use_case": [
@@ -1198,7 +1220,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-zai-org-glm-4.7-flash",
+      "model_family": "org-glm-4.7-flash",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -1238,7 +1260,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-microsoft-resnet-50",
+      "model_family": "resnet-50",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -1276,7 +1298,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-bytedance-stable-diffusion-xl-lightning",
+      "model_family": "bytedance-stable-diffusion-xl-lightning",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -1316,7 +1338,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-meta-llama-llama-2-7b-hf-lora",
+      "model_family": "llama-2-7b-hf-lora",
       "model_variant": "chat",
       "aliases": [],
       "parameter_count": 7000000000,
@@ -1358,7 +1380,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-meta-llama-3.3-70b-fast",
+      "model_family": "llama-3.3-70b-fast",
       "model_variant": "instruct",
       "quantization": "fp8",
       "aliases": [],
@@ -1401,7 +1423,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-ibm-granite-granite-4.0-h-micro",
+      "model_family": "ibm-granite-granite-4.0-h-micro",
       "aliases": [],
       "tier": "small",
       "speed": "fast",
@@ -1437,7 +1459,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-lykon-dreamshaper-8-lcm",
+      "model_family": "lykon-dreamshaper-8-lcm",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
@@ -1475,7 +1497,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-leonardo-phoenix-1.0",
+      "model_family": "leonardo-phoenix-1.0",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
@@ -1515,7 +1537,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-stabilityai-stable-diffusion-xl-base-1.0",
+      "model_family": "stabilityai-stable-diffusion-xl-base-1.0",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -1557,7 +1579,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-meta-m2m100-1.2b",
+      "model_family": "m2m100-1.2b",
       "aliases": [],
       "parameter_count": 1200000000,
       "tier": "small",
@@ -1596,7 +1618,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-ai4bharat-indictrans2-en-indic-1b",
+      "model_family": "ai4bharat-indictrans2-en-indic-1b",
       "aliases": [],
       "parameter_count": 1000000000,
       "tier": "small",
@@ -1635,7 +1657,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-black-forest-labs-flux-2-klein-4b",
+      "model_family": "black-forest-labs-flux-2-klein-4b",
       "aliases": [],
       "parameter_count": 4000000000,
       "tier": "small",
@@ -1677,7 +1699,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-baai-bge-small-en-v1.5",
+      "model_family": "baai-bge-small-en-v1.5",
       "aliases": [],
       "tier": "small",
       "speed": "fast",
@@ -1717,7 +1739,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-qwen-qwen2.5-coder-32b",
+      "model_family": "qwen2.5-coder-32b",
       "model_variant": "coder",
       "aliases": [],
       "parameter_count": 32000000000,
@@ -1800,7 +1822,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-nvidia-nemotron-3-120b-a12b",
+      "model_family": "nemotron-3-120b-a12b",
       "aliases": [],
       "parameter_count": 120000000000,
       "tier": "large",
@@ -1843,7 +1865,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-baai-bge-base-en-v1.5",
+      "model_family": "baai-bge-base-en-v1.5",
       "aliases": [],
       "tier": "small",
       "speed": "fast",
@@ -1883,7 +1905,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-aisingapore-gemma-sea-lion-v4-27b",
+      "model_family": "aisingapore-gemma-sea-lion-v4-27b",
       "model_variant": "it",
       "aliases": [],
       "parameter_count": 27000000000,
@@ -1927,9 +1949,13 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-qwen-qwen3-30b-a3b",
+      "model_family": "qwen3-30b-a3b",
       "quantization": "fp8",
-      "aliases": [],
+      "aliases": [
+        "Qwen3-30B-A3B-Instruct-2507",
+        "xingchen/xop3qwen30b2507",
+        "xingchen/xop3qwen30b"
+      ],
       "parameter_count": 30000000000,
       "tier": "large",
       "speed": "fast",
@@ -1971,11 +1997,12 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-meta-llama-3.1-8b",
+      "model_family": "llama-3.1-8b",
       "model_variant": "instruct",
       "quantization": "awq",
       "aliases": [
-        "cloudflare/@cf/meta/llama-3.1-8b-instruct-fp8"
+        "cloudflare/@cf/meta/llama-3.1-8b-instruct-fp8",
+        "meta/llama-3.1-8b-instruct"
       ],
       "parameter_count": 8000000000,
       "tier": "medium",
@@ -2013,7 +2040,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-unum-uform-gen2-qwen-500m",
+      "model_family": "unum-uform-gen2-qwen-500m",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -2053,7 +2080,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-black-forest-labs-flux-2-dev",
+      "model_family": "black-forest-labs-flux-2-dev",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -2093,7 +2120,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-google-gemma-7b-lora",
+      "model_family": "gemma-7b-lora",
       "model_variant": "it",
       "aliases": [],
       "parameter_count": 7000000000,
@@ -2137,9 +2164,12 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-google-gemma-4-26b-a4b",
+      "model_family": "gemma-4-26b-a4b",
       "model_variant": "it",
-      "aliases": [],
+      "aliases": [
+        "gemma-4-26B-A4B-it",
+        "google/gemma-4-26b-a4b-it:free"
+      ],
       "parameter_count": 26000000000,
       "tier": "large",
       "speed": "fast",
@@ -2185,7 +2215,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-mistralai-mistral-small-3.1-24b",
+      "model_family": "mistral-small-3.1-24b",
       "model_variant": "instruct",
       "aliases": [],
       "parameter_count": 24000000000,
@@ -2227,7 +2257,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-meta-llama-3-8b",
+      "model_family": "llama-3-8b",
       "model_variant": "instruct",
       "quantization": "awq",
       "aliases": [
@@ -2273,9 +2303,12 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-meta-llama-3.2-11b-vision",
+      "model_family": "llama-3.2-11b-vision",
       "model_variant": "vision",
-      "aliases": [],
+      "aliases": [
+        "github/Llama-3-2-11B-Vision-Instruct",
+        "meta/llama-3.2-11b-vision-instruct"
+      ],
       "parameter_count": 11000000000,
       "tier": "large",
       "speed": "fast",
@@ -2317,7 +2350,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-openai-whisper-tiny-en",
+      "model_family": "whisper-tiny-en",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
@@ -2355,9 +2388,15 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-openai-whisper-large-v3",
+      "model_family": "whisper-large-v3",
       "model_variant": "turbo",
-      "aliases": [],
+      "aliases": [
+        "whisper-large-v3-turbo",
+        "whisper-large-v3",
+        "groq/whisper-large-v3",
+        "groq/whisper-large-v3-turbo",
+        "sambanova/Whisper-Large-v3"
+      ],
       "tier": "medium",
       "speed": "fast",
       "use_case": [
@@ -2394,7 +2433,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-deepgram-aura-1",
+      "model_family": "deepgram-aura-1",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
@@ -2432,7 +2471,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-defog-sqlcoder-7b-2",
+      "model_family": "defog-sqlcoder-7b-2",
       "aliases": [],
       "parameter_count": 7000000000,
       "tier": "medium",
@@ -2469,7 +2508,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-microsoft-phi-2",
+      "model_family": "phi-2",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
@@ -2505,7 +2544,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-facebook-bart-large-cnn",
+      "model_family": "facebook-bart-large-cnn",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
@@ -2543,7 +2582,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-runwayml-stable-diffusion-v1-5-img2img",
+      "model_family": "runwayml-stable-diffusion-v1-5-img2img",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -2589,8 +2628,12 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-openai-gpt-oss-20b",
-      "aliases": [],
+      "model_family": "gpt-oss-20b",
+      "aliases": [
+        "groq/openai/gpt-oss-20b",
+        "openai/gpt-oss-20b",
+        "openai/gpt-oss-20b:free"
+      ],
       "parameter_count": 20000000000,
       "tier": "medium",
       "speed": "fast",
@@ -2630,7 +2673,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-google-embeddinggemma-300m",
+      "model_family": "embeddinggemma-300m",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
@@ -2669,7 +2712,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-baai-bge-reranker-base",
+      "model_family": "baai-bge-reranker-base",
       "model_variant": "reranker",
       "aliases": [],
       "tier": "small",
@@ -2748,7 +2791,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-leonardo-lucid-origin",
+      "model_family": "leonardo-lucid-origin",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -2794,9 +2837,12 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-meta-llama-4-scout-17b-16e",
+      "model_family": "llama-4-scout-17b-16e",
       "model_variant": "instruct",
-      "aliases": [],
+      "aliases": [
+        "github/Llama-4-Scout-17B-16E-Instruct",
+        "groq/meta-llama/llama-4-scout-17b-16e-instruct"
+      ],
       "parameter_count": 17000000000,
       "tier": "large",
       "speed": "fast",
@@ -2839,9 +2885,12 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-google-gemma-3-12b",
+      "model_family": "gemma-3-12b",
       "model_variant": "it",
-      "aliases": [],
+      "aliases": [
+        "google/gemma-3-12b-it",
+        "sambanova/gemma-3-12b-it"
+      ],
       "parameter_count": 12000000000,
       "tier": "large",
       "speed": "fast",
@@ -2887,8 +2936,10 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-qwen-qwq-32b",
-      "aliases": [],
+      "model_family": "qwq-32b",
+      "aliases": [
+        "QwQ-32B"
+      ],
       "parameter_count": 32000000000,
       "tier": "large",
       "speed": "fast",
@@ -2929,7 +2980,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-baai-bge-large-en-v1.5",
+      "model_family": "baai-bge-large-en-v1.5",
       "aliases": [],
       "tier": "small",
       "speed": "fast",
@@ -2967,7 +3018,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "@cf-deepgram-aura-2-en",
+      "model_family": "deepgram-aura-2-en",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
@@ -3313,7 +3364,7 @@
         "notes": "NVIDIA NIM free credits, exhaustible"
       },
       "trial_scope": "specific",
-      "model_family": "seed-oss-36b",
+      "model_family": "bytedance-seed-oss-36b",
       "model_variant": "instruct",
       "aliases": [],
       "parameter_count": 36000000000,
@@ -3603,10 +3654,8 @@
         "notes": "NVIDIA NIM free credits, exhaustible"
       },
       "trial_scope": "specific",
-      "model_family": "minimax-m2.7",
-      "aliases": [
-        "MiniMax-M2.7"
-      ],
+      "model_family": "minimaxai-minimax-m2.7",
+      "aliases": [],
       "tier": "medium",
       "speed": "fast",
       "use_case": [
@@ -3967,7 +4016,9 @@
       "trial_scope": "specific",
       "model_family": "qwen3-coder-480b-a35b",
       "model_variant": "coder",
-      "aliases": [],
+      "aliases": [
+        "qwen3-coder-480b-a35b-instruct"
+      ],
       "parameter_count": 480000000000,
       "tier": "medium",
       "speed": "fast",
@@ -4006,7 +4057,7 @@
         "notes": "NVIDIA NIM free credits, exhaustible"
       },
       "trial_scope": "specific",
-      "model_family": "step-3.5-flash",
+      "model_family": "stepfun-ai-step-3.5-flash",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
@@ -4089,14 +4140,9 @@
         "notes": "$5 trial credits, valid for 3 months"
       },
       "trial_scope": "all",
-      "model_family": "llama-3.3-70b",
+      "model_family": "3.3-70b",
       "model_variant": "instruct",
-      "aliases": [
-        "github/Llama-3-3-70B-Instruct",
-        "groq/llama-3.3-70b-versatile",
-        "meta/llama-3.3-70b-instruct",
-        "sambanova/Llama-3.3-Swallow-70B-Instruct-v0.4"
-      ],
+      "aliases": [],
       "parameter_count": 70000000000,
       "tier": "large",
       "speed": "fast",
@@ -4139,9 +4185,12 @@
       "trial_scope": "all",
       "model_family": "gpt-oss-120b",
       "aliases": [
+        "cerebras/gpt-oss-120b",
+        "cloudflare/@cf/openai/gpt-oss-120b",
         "gpt-oss-120b",
         "groq/openai/gpt-oss-120b",
-        "openai/gpt-oss-120b"
+        "openai/gpt-oss-120b",
+        "openai/gpt-oss-120b:free"
       ],
       "parameter_count": 120000000000,
       "tier": "small",
@@ -4503,11 +4552,10 @@
         "notes": "$5 trial credits, valid for 3 months"
       },
       "trial_scope": "all",
-      "model_family": "llama-3.1-8b",
+      "model_family": "3.1-8b",
       "model_variant": "instruct",
       "aliases": [
-        "cerebras/llama3.1-8b",
-        "meta/llama-3.1-8b-instruct"
+        "github/Meta-Llama-3-1-8B-Instruct"
       ],
       "parameter_count": 8000000000,
       "tier": "medium",
@@ -4643,6 +4691,7 @@
       "trial_scope": "all",
       "model_family": "whisper-large-v3",
       "aliases": [
+        "cloudflare/@cf/openai/whisper-large-v3-turbo",
         "whisper-large-v3-turbo",
         "whisper-large-v3",
         "groq/whisper-large-v3",
@@ -4687,7 +4736,7 @@
         "notes": "$5 trial credits, valid for 3 months"
       },
       "trial_scope": "all",
-      "model_family": "sambanova-allam-7b-preview",
+      "model_family": "allam-7b-preview",
       "model_variant": "instruct",
       "aliases": [],
       "tier": "small",
@@ -4820,6 +4869,7 @@
       "model_family": "gemma-3-12b",
       "model_variant": "it",
       "aliases": [
+        "cloudflare/@cf/google/gemma-3-12b-it",
         "google/gemma-3-12b-it"
       ],
       "parameter_count": 12000000000,
@@ -4862,14 +4912,9 @@
         "notes": "$5 trial credits, valid for 3 months"
       },
       "trial_scope": "all",
-      "model_family": "llama-3.3-70b",
+      "model_family": "llama-3.3-swallow-70b-v0.4",
       "model_variant": "instruct",
-      "aliases": [
-        "github/Llama-3-3-70B-Instruct",
-        "groq/llama-3.3-70b-versatile",
-        "meta/llama-3.3-70b-instruct",
-        "sambanova/Meta-Llama-3.3-70B-Instruct"
-      ],
+      "aliases": [],
       "parameter_count": 70000000000,
       "tier": "large",
       "speed": "fast",
