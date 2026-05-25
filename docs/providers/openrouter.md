@@ -52,7 +52,7 @@
 | openrouter  | `nvidia/nemotron-nano-9b-v2:free` | NVIDIA: Nemotron Nano 9B V2 (free) | 128K | 限速免费 | 50 RPM / Free tier: 50 req/min (per endpoint, basic account) |
 | openrouter  | `openai/gpt-oss-120b:free` | OpenAI: gpt-oss-120b (free) | 131K | 限速免费 | 5000 RPD / Free tier: 5000 req/day (per endpoint, basic account) |
 | openrouter  | `openai/gpt-oss-20b:free` | OpenAI: gpt-oss-20b (free) | 131K | 限速免费 | 10000 RPD / Free tier: 10000 req/day (per endpoint, basic account) |
-| openrouter  | `openrouter/owl-alpha` | Owl Alpha | 1M | 限速免费 | Free tier with rate limits (see openrouter.ai) |
+| openrouter  | `owl-alpha` | Owl Alpha | 1M | 限速免费 | Free tier with rate limits (see openrouter.ai) |
 | openrouter  | `poolside/laguna-m.1:free` | Poolside: Laguna M.1 (free) | 131K | 限速免费 | Free tier with rate limits (see openrouter.ai) |
 | openrouter  | `poolside/laguna-xs.2:free` | Poolside: Laguna XS.2 (free) | 131K | 限速免费 | Free tier with rate limits (see openrouter.ai) |
 | openrouter  | `qwen/qwen3-coder:free` | Qwen: Qwen3 Coder 480B A35B (free) | 1M | 限速免费 | 8 RPM / Free tier: 8 req/min (per endpoint, basic account) |
