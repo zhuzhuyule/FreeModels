@@ -1,7 +1,7 @@
 {
   "object": "list",
   "view": "small",
-  "updated_at": "2026-05-25T00:35:18.876Z",
+  "updated_at": "2026-05-25T00:37:34.774Z",
   "total": 75,
   "filters": {
     "tier": "small"
@@ -1820,48 +1820,42 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "openai/gpt-oss-120b",
+      "id": "whisper-large-v3",
       "object": "model",
-      "created": 261834169,
+      "created": 821695011,
       "owned_by": "groq",
       "provider": "groq",
-      "name": "openai/gpt-oss-120b",
-      "context_size": 131072,
-      "context_label": "131K",
-      "price_input": 0.15,
-      "price_output": 0.6,
+      "name": "whisper-large-v3",
+      "context_size": 448,
+      "context_label": "448",
+      "price_input": 0.111,
       "is_free": true,
       "capabilities": [
-        "chat",
-        "text-generation"
+        "speech-recognition"
       ],
       "tags": [
-        "chat",
-        "text-generation"
+        "speech-recognition"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
       "free_quota": {
-        "rpd": 1000,
-        "tpm": 8000
+        "notes": "Rate-limited free tier"
       },
       "trial_scope": "all",
-      "model_family": "gpt-oss-120b",
+      "model_family": "whisper-large-v3",
       "aliases": [
-        "gpt-oss-120b",
-        "openai/gpt-oss-120b",
-        "sambanova/gpt-oss-120b"
+        "whisper-large-v3-turbo",
+        "whisper-large-v3",
+        "groq/whisper-large-v3-turbo",
+        "sambanova/Whisper-Large-v3"
       ],
-      "parameter_count": 120000000000,
       "tier": "small",
       "speed": "fast",
       "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance"
+        "transcription",
+        "voice-input"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
@@ -1913,42 +1907,48 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "whisper-large-v3",
+      "id": "openai/gpt-oss-120b",
       "object": "model",
-      "created": 821695011,
+      "created": 261834169,
       "owned_by": "groq",
       "provider": "groq",
-      "name": "whisper-large-v3",
-      "context_size": 448,
-      "context_label": "448",
-      "price_input": 0.111,
+      "name": "openai/gpt-oss-120b",
+      "context_size": 131072,
+      "context_label": "131K",
+      "price_input": 0.15,
+      "price_output": 0.6,
       "is_free": true,
       "capabilities": [
-        "speech-recognition"
+        "chat",
+        "text-generation"
       ],
       "tags": [
-        "speech-recognition"
+        "chat",
+        "text-generation"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
       "free_quota": {
-        "notes": "Rate-limited free tier"
+        "rpd": 1000,
+        "tpm": 8000
       },
       "trial_scope": "all",
-      "model_family": "whisper-large-v3",
+      "model_family": "gpt-oss-120b",
       "aliases": [
-        "whisper-large-v3-turbo",
-        "whisper-large-v3",
-        "groq/whisper-large-v3-turbo",
-        "sambanova/Whisper-Large-v3"
+        "gpt-oss-120b",
+        "openai/gpt-oss-120b",
+        "sambanova/gpt-oss-120b"
       ],
+      "parameter_count": 120000000000,
       "tier": "small",
       "speed": "fast",
       "use_case": [
-        "transcription",
-        "voice-input"
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
