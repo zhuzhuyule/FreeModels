@@ -1,7 +1,7 @@
 {
   "object": "list",
   "view": "large",
-  "updated_at": "2026-05-25T02:28:11.394Z",
+  "updated_at": "2026-05-25T04:29:35.043Z",
   "total": 170,
   "filters": {
     "tier": "large"
@@ -4487,9 +4487,9 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "gemini-3.1-pro-preview",
+      "id": "models/gemini-3.1-pro-preview",
       "object": "model",
-      "created": 363730922,
+      "created": 2025547191,
       "owned_by": "google",
       "provider": "google",
       "name": "Gemini 3.1 Pro Preview",
@@ -4535,9 +4535,9 @@
       "estimated_latency": "3-10s"
     },
     {
-      "id": "gemini-3.1-flash-image-preview",
+      "id": "models/gemini-3.1-flash-image-preview",
       "object": "model",
-      "created": 1423015165,
+      "created": 713181130,
       "owned_by": "google",
       "provider": "google",
       "name": "Gemini 3.1 Flash Image Preview",
@@ -4584,9 +4584,9 @@
       "estimated_latency": "3-10s"
     },
     {
-      "id": "gemini-3-flash-preview",
+      "id": "models/gemini-3-flash-preview",
       "object": "model",
-      "created": 769096788,
+      "created": 892719481,
       "owned_by": "google",
       "provider": "google",
       "name": "Gemini 3 Flash Preview",
@@ -4630,9 +4630,9 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "gemini-3-pro-image-preview",
+      "id": "models/gemini-3-pro-image-preview",
       "object": "model",
-      "created": 871681991,
+      "created": 1836358790,
       "owned_by": "google",
       "provider": "google",
       "name": "Gemini 3 Pro Image Preview",
@@ -4679,9 +4679,9 @@
       "estimated_latency": "3-10s"
     },
     {
-      "id": "gemini-2.5-pro",
+      "id": "models/gemini-2.5-pro",
       "object": "model",
-      "created": 294251798,
+      "created": 618611229,
       "owned_by": "google",
       "provider": "google",
       "name": "Gemini 2.5 Pro",
@@ -4726,9 +4726,9 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "gemini-2.5-flash",
+      "id": "models/gemini-2.5-flash",
       "object": "model",
-      "created": 1670252999,
+      "created": 654323270,
       "owned_by": "google",
       "provider": "google",
       "name": "Gemini 2.5 Flash",
@@ -4772,9 +4772,9 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "gemini-2.5-flash-image",
+      "id": "models/gemini-2.5-flash-image",
       "object": "model",
-      "created": 1767351255,
+      "created": 105534986,
       "owned_by": "google",
       "provider": "google",
       "name": "Gemini 2.5 Flash Image",
@@ -4819,6 +4819,44 @@
       ],
       "performance_level": "mid",
       "estimated_latency": "3-10s"
+    },
+    {
+      "id": "canopylabs/orpheus-arabic-saudi",
+      "object": "model",
+      "created": 1964073120,
+      "owned_by": "groq",
+      "provider": "groq",
+      "name": "canopylabs/orpheus-arabic-saudi",
+      "context_size": 4000,
+      "context_label": "4K",
+      "price_input": 40,
+      "is_free": true,
+      "capabilities": [
+        "speech-synthesis",
+        "translation"
+      ],
+      "tags": [
+        "speech-synthesis",
+        "translation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Rate-limited free tier"
+      },
+      "trial_scope": "all",
+      "model_family": "orpheus-arabic-saudi",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "text-to-speech",
+        "voice-output"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
     },
     {
       "id": "qwen/qwen3-32b",
@@ -4871,44 +4909,6 @@
         "complex-reasoning"
       ],
       "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "canopylabs/orpheus-arabic-saudi",
-      "object": "model",
-      "created": 1964073120,
-      "owned_by": "groq",
-      "provider": "groq",
-      "name": "canopylabs/orpheus-arabic-saudi",
-      "context_size": 4000,
-      "context_label": "4K",
-      "price_input": 40,
-      "is_free": true,
-      "capabilities": [
-        "speech-synthesis",
-        "translation"
-      ],
-      "tags": [
-        "speech-synthesis",
-        "translation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Rate-limited free tier"
-      },
-      "trial_scope": "all",
-      "model_family": "orpheus-arabic-saudi",
-      "aliases": [],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "text-to-speech",
-        "voice-output"
-      ],
-      "performance_level": "entry",
       "estimated_latency": "< 1s"
     },
     {
