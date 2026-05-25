@@ -1,13 +1,21 @@
 /**
- * 历史上参考 OpenAI /v1/models 响应保留的字段集合.
- * `object` / `owned_by` 两个字段已从输出中移除:
- *   - `object` 一直是常量 "model", 无信息
- *   - `owned_by` 一直 ≡ `provider`, 是冗余
+ * 严格 OpenAI /v1/models 响应字段集合.
+ *
+ * `object` 和 `owned_by` 是 OpenAI 标准必填字段, 之前以"无信息/冗余"为
+ * 理由删除过, 但 LobeChat / NextChat / OneAPI 等 standard OpenAI client
+ * 会读这两个字段做 UI 分组. 现在 FreeModels 定位为 "OpenAI /v1/models
+ * drop-in 数据源", 必须严格输出.
+ *
  * permission/root/parent 是 OpenAI 规范定义但消费方都没用过, 保留可选.
+ *
+ * 同时保留 FreeModels 历史字段 `provider` (与 owned_by 同值), 兼容
+ * 现有消费方; 新消费方推荐用 owned_by.
  */
 export interface OpenAIModelObject {
   id: string;
+  object: 'model';
   created: number;
+  owned_by: string;
   permission?: unknown[];
   root?: string;
   parent?: string | null;
@@ -196,8 +204,40 @@ function stableCreated(modelId: string): number {
   return Math.abs(hash);
 }
 
+/**
+ * toCanonicalId 把 FreeModels 内部 modelId (部分 provider 带 "<provider>/"
+ * 前缀, 历史命名约定不统一) 归一化为 raw API id —— 即 OpenAI 标准里
+ * `data[].id`, 也就是 "POST body.model 直接填的字符串".
+ *
+ * 规则: 只剥 "<freemodels-provider-id>/" 一层前缀 (不剥 owner 前缀如
+ * OpenRouter 的 `qwen/`、NVIDIA 的 `bytedance/`、Groq 的 `openai/`).
+ * 保留 OpenRouter `:free` 后缀、Cloudflare `@cf/` 前缀, 它们是调 API 必需.
+ *
+ * 对照表 (14 个 provider):
+ *   bigmodel/glm-4-flash        → glm-4-flash
+ *   cerebras/llama3.1-8b        → llama3.1-8b
+ *   cloudflare/@cf/openai/x     → @cf/openai/x       (剥 cloudflare/, 保留 @cf/)
+ *   cohere/c4ai-aya-32b         → c4ai-aya-32b
+ *   gitee/jina-clip-v1          → jina-clip-v1       (gitee 本就 raw)
+ *   github/AI21-Jamba           → AI21-Jamba
+ *   google/gemini-2.5-flash     → gemini-2.5-flash
+ *   groq/openai/gpt-oss-20b     → openai/gpt-oss-20b (剥 groq/, 保留 owner)
+ *   longcat/LongCat-Flash-Chat  → LongCat-Flash-Chat
+ *   nvidia/...                  → ...                (nvidia 本就 raw, modelId 无前缀)
+ *   openrouter/...              → ...                (openrouter 本就 raw, modelId 无前缀)
+ *   sambanova/llama3-8b         → llama3-8b
+ *   xingchen/xop35qwen2b        → xop35qwen2b
+ *   xinghuo/lite                → lite
+ */
+export function toCanonicalId(provider: string, modelId: string): string {
+  const prefix = `${provider.toLowerCase()}/`;
+  if (modelId.toLowerCase().startsWith(prefix)) {
+    return modelId.slice(prefix.length);
+  }
+  return modelId;
+}
+
 export function toOpenAICompatible(models: EnhancedModelData[]): OpenAICompatibleOutput {
-  const seenProviders: Record<string, boolean> = {};
   const views = [
     'all', 'free', 'free-full', 'free-trial',
     'reasoning', 'multimodal', 'tool-use',
@@ -211,16 +251,15 @@ export function toOpenAICompatible(models: EnhancedModelData[]): OpenAICompatibl
     providers: {},
     views,
     data: models.map((m) => {
-      seenProviders[m.provider] = true;
-      // 已删除字段 (上提到 providerMeta 或与其他字段 100% 等价):
-      //   object        — 全局常量 "model", 无信息
-      //   model_id      — 100% ≡ id
-      //   owned_by      — 100% ≡ provider
-      //   price_currency, price_unit — per-provider 唯一, 上提到 providerMeta
+      // id 是 raw API id (调 POST body.model 直接填的字符串).
+      // 历史上有些 provider 在 modelId 上带 "<provider>/" 前缀, 这里统一剥掉.
+      const canonicalId = toCanonicalId(m.provider, m.modelId);
       return {
-        id: m.modelId,
-        created: stableCreated(m.modelId),
-        provider: m.provider,
+        id: canonicalId,
+        object: 'model' as const,
+        created: stableCreated(m.modelId), // 基于内部 modelId, 跨版本稳定
+        owned_by: m.provider,
+        provider: m.provider,              // 历史字段, 与 owned_by 同值, 保留兼容
         name: m.name,
         description: m.description,
         context_size: m.contextSize,

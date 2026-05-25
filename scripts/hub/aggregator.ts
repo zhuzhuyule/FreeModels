@@ -97,7 +97,10 @@ async function runProvider(
   }
 }
 
-function dedupeByModelId(models: EnhancedModelData[]): EnhancedModelData[] {
+function dedupeByProviderModelId(models: EnhancedModelData[]): EnhancedModelData[] {
+  // 复合键 (provider, modelId): 跨 provider 同名 model 是合法的 (同一开源
+  // 模型不同 host, 如 Groq/Cerebras/SambaNova 都有 llama-3.1-8b), 必须共存.
+  // 去重只发生在同一 provider 内 (plugin 重复返回同一 model 时).
   const map = new Map<string, EnhancedModelData>();
   const conflicts: Record<string, number> = {};
 
@@ -119,15 +122,18 @@ function dedupeByModelId(models: EnhancedModelData[]): EnhancedModelData[] {
     return false;
   };
 
+  const compositeKey = (m: EnhancedModelData): string => `${m.provider}:${m.modelId}`;
+
   for (const m of models) {
-    const existing = map.get(m.modelId);
+    const key = compositeKey(m);
+    const existing = map.get(key);
     if (!existing) {
-      map.set(m.modelId, m);
+      map.set(key, m);
       continue;
     }
-    conflicts[m.modelId] = (conflicts[m.modelId] ?? 1) + 1;
+    conflicts[key] = (conflicts[key] ?? 1) + 1;
     if (isBetter(m, existing)) {
-      map.set(m.modelId, m);
+      map.set(key, m);
     }
   }
 
@@ -135,7 +141,7 @@ function dedupeByModelId(models: EnhancedModelData[]): EnhancedModelData[] {
   if (conflictCount > 0) {
     const total = Object.values(conflicts).reduce((a, b) => a + b, 0);
     console.warn(
-      `[Aggregator] Deduplicated ${total - conflictCount} conflicting record(s) across ${conflictCount} model id(s).`
+      `[Aggregator] Deduplicated ${total - conflictCount} intra-provider conflicting record(s) across ${conflictCount} (provider, modelId) pair(s).`
     );
   }
 
@@ -259,7 +265,7 @@ function snapshotPrevious(): ProviderSnapshot | null {
   if (!fs.existsSync(OUTPUT_PATH)) return null;
   try {
     const previous = JSON.parse(fs.readFileSync(OUTPUT_PATH, 'utf-8')) as {
-      data?: Array<{ id: string; provider: string; is_free?: boolean }>;
+      data?: Array<{ id: string; provider?: string; owned_by?: string; is_free?: boolean }>;
     };
     if (!Array.isArray(previous.data)) {
       console.warn(`[Aggregator] ⚠ Previous models.json has no .data array — anomaly detection disabled.`);
@@ -269,8 +275,12 @@ function snapshotPrevious(): ProviderSnapshot | null {
     const ids = new Set<string>();
     let freeCount = 0;
     for (const m of previous.data) {
-      byProvider[m.provider] = (byProvider[m.provider] ?? 0) + 1;
-      ids.add(m.id);
+      // owned_by 是新 schema 的字段名, provider 是历史字段 (同值, 二者并存).
+      // 读取时优先 owned_by, fallback provider 兼容旧 JSON.
+      const owner = m.owned_by ?? m.provider ?? '';
+      byProvider[owner] = (byProvider[owner] ?? 0) + 1;
+      // 复合键: 跨 provider 同 id 是合法共存, 必须用 (owner, id) 才唯一.
+      ids.add(`${owner}:${m.id}`);
       if (m.is_free) freeCount++;
     }
     return { total: previous.data.length, freeCount, byProvider, ids };
@@ -345,7 +355,7 @@ async function main(): Promise<void> {
   saveCache(cache);
 
   const allModels = validateAndFilter(
-    dedupeByModelId(results.flatMap(r => r.models))
+    dedupeByProviderModelId(results.flatMap(r => r.models))
   );
 
   if (isLlmEnabled()) initLlmContext();
@@ -393,7 +403,9 @@ async function main(): Promise<void> {
   let freeCount = 0;
   for (const m of allModels) {
     byProvider[m.provider] = (byProvider[m.provider] ?? 0) + 1;
-    currentIds.add(m.modelId);
+    // 复合键, 与 snapshotPrevious 保持一致 (跨 provider 同名 model 合法共存).
+    // 这里用内部 modelId 而非 canonical id, 因为对比的是同 schema 内的标识.
+    currentIds.add(`${m.provider}:${m.modelId}`);
     if (m.isFree) freeCount++;
   }
   const current: ProviderSnapshot = {

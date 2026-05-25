@@ -33,4 +33,4 @@ Spark Lite 永久免费但限速（5 并发）；其他 Spark 系列按 token �
 
 | Provider | Model ID | 名称 | 上下文 | 免费类型 | 限制 |
 |---|---|---|---:|---|---|
-| xinghuo  | `xinghuo/lite` | Spark Lite | 4K | 限速免费 | 5 并发上限 |
+| xinghuo  | `lite` | Spark Lite | 4K | 限速免费 | 5 并发上限 |

@@ -33,12 +33,12 @@
 
 | Provider | Model ID | 名称 | 上下文 | 免费类型 | 限制 |
 |---|---|---|---:|---|---|
-| xingchen  | `xingchen/xop35qwen2b` | Qwen3.5-2B | 33K | 限速免费 | — |
-| xingchen  | `xingchen/xop3qwen8bembedding` | Qwen3-Embedding-8B | 33K | 限速免费 | — |
-| xingchen  | `xingchen/xop3qwen8breranker` | Qwen3-Reranker-8B | 33K | 限速免费 | — |
-| xingchen  | `xingchen/xopdeepseekocr` | DeepSeek-OCR | 8K | 限速免费 | — |
-| xingchen  | `xingchen/xophunyuan7bmt` | Hunyuan-MT-7B | 33K | 限速免费 | — |
-| xingchen  | `xingchen/xophunyuanocr` | HunyuanOCR | 33K | 限速免费 | — |
-| xingchen  | `xingchen/xopqwentti20b` | Qwen-Image-2512 | unknown | 限速免费 | — |
-| xingchen  | `xingchen/xopzimageturbo` | Z-Image-Turbo | 512 | 限速免费 | — |
-| xingchen  | `xingchen/xssdxl` | StableDiffusion_XL_Base_1 | unknown | 限速免费 | — |
+| xingchen  | `xop35qwen2b` | Qwen3.5-2B | 33K | 限速免费 | — |
+| xingchen  | `xop3qwen8bembedding` | Qwen3-Embedding-8B | 33K | 限速免费 | — |
+| xingchen  | `xop3qwen8breranker` | Qwen3-Reranker-8B | 33K | 限速免费 | — |
+| xingchen  | `xopdeepseekocr` | DeepSeek-OCR | 8K | 限速免费 | — |
+| xingchen  | `xophunyuan7bmt` | Hunyuan-MT-7B | 33K | 限速免费 | — |
+| xingchen  | `xophunyuanocr` | HunyuanOCR | 33K | 限速免费 | — |
+| xingchen  | `xopqwentti20b` | Qwen-Image-2512 | unknown | 限速免费 | — |
+| xingchen  | `xopzimageturbo` | Z-Image-Turbo | 512 | 限速免费 | — |
+| xingchen  | `xssdxl` | StableDiffusion_XL_Base_1 | unknown | 限速免费 | — |

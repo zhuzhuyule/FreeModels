@@ -62,6 +62,20 @@
 - [付费可试用](https://ofind.cn/FreeModels/data/views/paid-trial/models.json)
 <!-- AUTO-GENERATED:FREE_MODELS_END -->
 
+## OpenAI Client Drop-in
+
+FreeModels 的所有 JSON 都严格兼容 OpenAI `/v1/models` 响应 schema —— 含 `object: "list"` 顶层 + 每条 model 的 `id` / `object: "model"` / `created` / `owned_by` 标准字段。**任何标准 OpenAI client（LobeChat / NextChat / OneAPI / Dify / Cherry Studio）都能 drop-in 把 FreeModels 当 model 索引服务用**：
+
+```bash
+# 模拟 OpenAI client 拉模型列表（响应就是 OpenAI /v1/models 标准结构）
+curl https://ofind.cn/FreeModels/data/models.json | jq '.data[0]'
+# {"id": "qwen/qwen3-coder:free", "object": "model", "created": ..., "owned_by": "openrouter", ...}
+```
+
+> **HTTP 路径别名（规划中）**：`https://ofind.cn/FreeModels/v1/models` 将作为 `data/models.json` 的 alias 部署，让 client 配置 BaseURL = `https://ofind.cn/FreeModels/v1` 即可拉到 model 列表。当前可直接用 `data/models.json` URL。
+
+每条 model 的 `id` 字段就是 **POST body.model 直接填的字符串**（raw API id, 跟上游 `/v1/models` 返回完全一致）。跨 provider 同名 model 通过 `owned_by` 字段区分（如 `llama-3.1-8b` 在 Groq/Cerebras/SambaNova 同时存在是 3 条独立记录）。
+
 ## 直接使用预编译 JSON（推荐 API 消费方）
 
 所有数据文件已部署在 GitHub Pages，**无需自己跑同步**，直接 fetch 即可。
@@ -133,29 +147,38 @@ console.log(`${reasoning.length} 个免费推理模型`);
 
 ## 数据格式示例
 
+每条 model 严格符合 OpenAI `/v1/models` 标准（前 4 个字段），扩展字段做增强：
+
 ```json
 {
-  "id": "openrouter/meta-llama/llama-3.3-70b-instruct",
+  "id": "qwen/qwen3-coder:free",
+  "object": "model",
+  "created": 713746669,
+  "owned_by": "openrouter",
   "provider": "openrouter",
-  "name": "Llama 3.3 70B Instruct",
-  "context_size": 128000,
-  "context_label": "128K",
+  "name": "Qwen: Qwen3 Coder 480B A35B (free)",
+  "context_size": 1048576,
+  "context_label": "1M",
   "price_input": 0,
   "price_output": 0,
-  "price_currency": "USD",
-  "price_unit": "per_million_tokens",
   "is_free": true,
   "free_mechanism": "rate-limited",
-  "free_quota": { "rpm": 20, "rpd": 50, "notes": "Free models limited to 20/min" },
+  "free_quota": { "notes": "Free models limited to 20/min" },
   "trial_scope": "specific",
-  "model_family": "llama-3.3-70b",
+  "model_family": "qwen3-coder",
   "model_variant": "instruct",
-  "aliases": ["groq/llama-3.3-70b-versatile", "nvidia/meta/llama-3.3-70b-instruct"],
-  "tags": ["chat", "text-generation", "tool-use"],
+  "capabilities": ["chat", "text-generation", "code-generation"],
+  "tags": ["reasoning", "text-generation", "tool-use", "chat", "code-generation"],
   "tier": "large",
   "performance_level": "high"
 }
 ```
+
+字段说明：
+- **`id`** 是 raw API id —— POST body.model 直接填这个字符串
+- **`owned_by`** 是 OpenAI 标准字段，等于 FreeModels 内部 `provider`（两者并存兼容老消费方）
+- **跨 provider 同名 model 合法共存** —— 复合主键 `(owned_by, id)`，例如 `llama-3.1-8b` 在 Groq/Cerebras/SambaNova 同时存在是 3 条独立记录
+- **价格货币和单位** 上提到顶层 `providers[<id>].priceCurrency` / `priceUnit`（per-provider 唯一，model 数据瘦身）
 
 ### 免费定义
 

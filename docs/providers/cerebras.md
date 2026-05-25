@@ -33,7 +33,7 @@
 
 | Provider | Model ID | 名称 | 上下文 | 免费类型 | 限制 |
 |---|---|---|---:|---|---|
-| cerebras  | `cerebras/gpt-oss-120b` | OpenAI GPT OSS | unknown | 限速免费 | — |
-| cerebras  | `cerebras/llama3.1-8b` | Llama 3.1 8B | 8K | 限速免费 | — |
-| cerebras  | `cerebras/qwen-3-235b-a22b-instruct-2507` | Qwen 3 235B Instruct | 66K | 预览版 | — |
-| cerebras  | `cerebras/zai-glm-4.7` | Z.ai GLM 4.7 | unknown | 预览版 | — |
+| cerebras  | `gpt-oss-120b` | OpenAI GPT OSS | unknown | 限速免费 | — |
+| cerebras  | `llama3.1-8b` | Llama 3.1 8B | 8K | 限速免费 | — |
+| cerebras  | `qwen-3-235b-a22b-instruct-2507` | Qwen 3 235B Instruct | 66K | 预览版 | — |
+| cerebras  | `zai-glm-4.7` | Z.ai GLM 4.7 | unknown | 预览版 | — |

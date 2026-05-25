@@ -33,19 +33,19 @@
 
 | Provider | Model ID | 名称 | 上下文 | 免费类型 | 限制 |
 |---|---|---|---:|---|---|
-| groq  | `groq/allam-2-7b` | allam-2-7b | 4K | 限速免费 | 7000 RPD / 6000 TPM |
-| groq  | `groq/canopylabs/orpheus-arabic-saudi` | canopylabs/orpheus-arabic-saudi | 4K | 限速免费 | Rate-limited free tier |
-| groq  | `groq/canopylabs/orpheus-v1-english` | canopylabs/orpheus-v1-english | 4K | 限速免费 | Rate-limited free tier |
-| groq  | `groq/groq/compound` | groq/compound | 131K | 限速免费 | 250 RPD / 70000 TPM |
-| groq  | `groq/groq/compound-mini` | groq/compound-mini | 131K | 限速免费 | 250 RPD / 70000 TPM |
-| groq  | `groq/llama-3.1-8b-instant` | llama-3.1-8b-instant | 131K | 限速免费 | 14400 RPD / 6000 TPM |
-| groq  | `groq/llama-3.3-70b-versatile` | llama-3.3-70b-versatile | 131K | 限速免费 | 1000 RPD / 12000 TPM |
-| groq  | `groq/meta-llama/llama-4-scout-17b-16e-instruct` | meta-llama/llama-4-scout-17b-16e-instruct | 131K | 限速免费 | 1000 RPD / 30000 TPM |
-| groq  | `groq/meta-llama/llama-prompt-guard-2-22m` | meta-llama/llama-prompt-guard-2-22m | 512 | 限速免费 | Rate-limited free tier |
-| groq  | `groq/meta-llama/llama-prompt-guard-2-86m` | meta-llama/llama-prompt-guard-2-86m | 512 | 限速免费 | Rate-limited free tier |
-| groq  | `groq/openai/gpt-oss-120b` | openai/gpt-oss-120b | 131K | 限速免费 | 1000 RPD / 8000 TPM |
-| groq  | `groq/openai/gpt-oss-20b` | openai/gpt-oss-20b | 131K | 限速免费 | 1000 RPD / 8000 TPM |
-| groq  | `groq/openai/gpt-oss-safeguard-20b` | openai/gpt-oss-safeguard-20b | 131K | 限速免费 | Rate-limited free tier |
-| groq  | `groq/qwen/qwen3-32b` | qwen/qwen3-32b | 131K | 限速免费 | 1000 RPD / 6000 TPM |
-| groq  | `groq/whisper-large-v3` | whisper-large-v3 | 448 | 限速免费 | Rate-limited free tier |
-| groq  | `groq/whisper-large-v3-turbo` | whisper-large-v3-turbo | 448 | 限速免费 | Rate-limited free tier |
+| groq  | `allam-2-7b` | allam-2-7b | 4K | 限速免费 | 7000 RPD / 6000 TPM |
+| groq  | `canopylabs/orpheus-arabic-saudi` | canopylabs/orpheus-arabic-saudi | 4K | 限速免费 | Rate-limited free tier |
+| groq  | `canopylabs/orpheus-v1-english` | canopylabs/orpheus-v1-english | 4K | 限速免费 | Rate-limited free tier |
+| groq  | `groq/compound` | groq/compound | 131K | 限速免费 | 250 RPD / 70000 TPM |
+| groq  | `groq/compound-mini` | groq/compound-mini | 131K | 限速免费 | 250 RPD / 70000 TPM |
+| groq  | `llama-3.1-8b-instant` | llama-3.1-8b-instant | 131K | 限速免费 | 14400 RPD / 6000 TPM |
+| groq  | `llama-3.3-70b-versatile` | llama-3.3-70b-versatile | 131K | 限速免费 | 1000 RPD / 12000 TPM |
+| groq  | `meta-llama/llama-4-scout-17b-16e-instruct` | meta-llama/llama-4-scout-17b-16e-instruct | 131K | 限速免费 | 1000 RPD / 30000 TPM |
+| groq  | `meta-llama/llama-prompt-guard-2-22m` | meta-llama/llama-prompt-guard-2-22m | 512 | 限速免费 | Rate-limited free tier |
+| groq  | `meta-llama/llama-prompt-guard-2-86m` | meta-llama/llama-prompt-guard-2-86m | 512 | 限速免费 | Rate-limited free tier |
+| groq  | `openai/gpt-oss-120b` | openai/gpt-oss-120b | 131K | 限速免费 | 1000 RPD / 8000 TPM |
+| groq  | `openai/gpt-oss-20b` | openai/gpt-oss-20b | 131K | 限速免费 | 1000 RPD / 8000 TPM |
+| groq  | `openai/gpt-oss-safeguard-20b` | openai/gpt-oss-safeguard-20b | 131K | 限速免费 | Rate-limited free tier |
+| groq  | `qwen/qwen3-32b` | qwen/qwen3-32b | 131K | 限速免费 | 1000 RPD / 6000 TPM |
+| groq  | `whisper-large-v3` | whisper-large-v3 | 448 | 限速免费 | Rate-limited free tier |
+| groq  | `whisper-large-v3-turbo` | whisper-large-v3-turbo | 448 | 限速免费 | Rate-limited free tier |
