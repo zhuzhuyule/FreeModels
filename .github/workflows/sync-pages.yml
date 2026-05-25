@@ -25,6 +25,7 @@ jobs:
             index.html
             website
             data
+            v1
           sparse-checkout-cone-mode: false
 
       - name: Checkout master
@@ -36,14 +37,16 @@ jobs:
             index.html
             website
             data
+            v1
           sparse-checkout-cone-mode: false
 
       - name: Sync files
         run: |
-          rm -rf gh-pages/index.html gh-pages/website gh-pages/data
+          rm -rf gh-pages/index.html gh-pages/website gh-pages/data gh-pages/v1
           cp -r master/index.html gh-pages/
           cp -r master/website gh-pages/
           cp -r master/data gh-pages/
+          cp -r master/v1 gh-pages/
 
       - name: Commit and push
         run: |
