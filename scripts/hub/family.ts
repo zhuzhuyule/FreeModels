@@ -88,6 +88,9 @@ function stripProviderPrefix(id: string): string {
     prev = curr;
     // Cloudflare 特殊: @cf/ 是 Workers AI 的 path namespace, 不是 owner
     curr = curr.replace(/^@cf\//i, '');
+    // Google Gemini 特殊: models/ 是 Gemini API 的 resource name 前缀, 不是 owner.
+    // (modelId 形如 google/models/gemini-2.5-flash → 剥 google 后剥 models)
+    curr = curr.replace(/^models\//i, '');
     for (const prefix of PROVIDER_PREFIXES) {
       const re = new RegExp(`^${prefix}/`, 'i');
       if (re.test(curr)) {

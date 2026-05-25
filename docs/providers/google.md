@@ -33,20 +33,20 @@ Gemini API 部分模型提供免费层，通常带有 RPM / RPD / TPM 限制。
 
 | Provider | Model ID | 名称 | 上下文 | 免费类型 | 限制 |
 |---|---|---|---:|---|---|
-| google  | `gemini-2.0-flash` | Gemini 2.0 Flash | 1M | 限速免费 | — |
-| google  | `gemini-2.0-flash-lite` | Gemini 2.0 Flash-Lite | 1M | 限速免费 | — |
-| google  | `gemini-2.5-flash` | Gemini 2.5 Flash | 1M | 限速免费 | — |
-| google  | `gemini-2.5-flash-lite` | Gemini 2.5 Flash-Lite | 1M | 限速免费 | — |
-| google  | `gemini-2.5-flash-lite-preview-09-2025` | Gemini 2.5 Flash-Lite Preview | 1M | 限速免费 | — |
-| google  | `gemini-2.5-flash-native-audio-preview-12-2025` | Gemini 2.5 Flash Native Audio | 1M | 限速免费 | — |
-| google  | `gemini-2.5-flash-preview-tts` | Gemini 2.5 Flash Preview TTS | unknown | 限速免费 | — |
-| google  | `gemini-2.5-pro` | Gemini 2.5 Pro | 1M | 限速免费 | — |
-| google  | `gemini-3-flash-preview` | Gemini 3 Flash Preview | 1M | 限速免费 | — |
-| google  | `gemini-3.1-flash-lite-preview` | Gemini 3.1 Flash-Lite Preview | 1M | 限速免费 | — |
-| google  | `gemini-3.1-flash-live-preview` | Gemini 3.1 Flash Live Preview | 1M | 限速免费 | — |
-| google  | `gemini-3.1-flash-tts-preview` | Gemini 3.1 Flash TTS Preview | unknown | 限速免费 | — |
-| google  | `gemini-embedding-001` | Gemini Embedding | unknown | 限速免费 | — |
-| google  | `gemini-embedding-2` | Gemini Embedding 2 | unknown | 限速免费 | — |
-| google  | `gemini-robotics-er-1.5-preview` | Gemini Robotics-ER 1.5 Preview | 1M | 限速免费 | — |
-| google  | `gemini-robotics-er-1.6-preview` | Gemini Robotics-ER 1.6 Preview | 1M | 限速免费 | — |
-| google  | `gemma-4` | Gemma 4 | 1M | 限速免费 | — |
+| google  | `models/gemini-2.0-flash` | Gemini 2.0 Flash | 1M | 限速免费 | — |
+| google  | `models/gemini-2.0-flash-lite` | Gemini 2.0 Flash-Lite | 1M | 限速免费 | — |
+| google  | `models/gemini-2.5-flash` | Gemini 2.5 Flash | 1M | 限速免费 | — |
+| google  | `models/gemini-2.5-flash-lite` | Gemini 2.5 Flash-Lite | 1M | 限速免费 | — |
+| google  | `models/gemini-2.5-flash-lite-preview-09-2025` | Gemini 2.5 Flash-Lite Preview | 1M | 限速免费 | — |
+| google  | `models/gemini-2.5-flash-native-audio-preview-12-2025` | Gemini 2.5 Flash Native Audio | 1M | 限速免费 | — |
+| google  | `models/gemini-2.5-flash-preview-tts` | Gemini 2.5 Flash Preview TTS | unknown | 限速免费 | — |
+| google  | `models/gemini-2.5-pro` | Gemini 2.5 Pro | 1M | 限速免费 | — |
+| google  | `models/gemini-3-flash-preview` | Gemini 3 Flash Preview | 1M | 限速免费 | — |
+| google  | `models/gemini-3.1-flash-lite-preview` | Gemini 3.1 Flash-Lite Preview | 1M | 限速免费 | — |
+| google  | `models/gemini-3.1-flash-live-preview` | Gemini 3.1 Flash Live Preview | 1M | 限速免费 | — |
+| google  | `models/gemini-3.1-flash-tts-preview` | Gemini 3.1 Flash TTS Preview | unknown | 限速免费 | — |
+| google  | `models/gemini-embedding-001` | Gemini Embedding | unknown | 限速免费 | — |
+| google  | `models/gemini-embedding-2` | Gemini Embedding 2 | unknown | 限速免费 | — |
+| google  | `models/gemini-robotics-er-1.5-preview` | Gemini Robotics-ER 1.5 Preview | 1M | 限速免费 | — |
+| google  | `models/gemini-robotics-er-1.6-preview` | Gemini Robotics-ER 1.6 Preview | 1M | 限速免费 | — |
+| google  | `models/gemma-4` | Gemma 4 | 1M | 限速免费 | — |

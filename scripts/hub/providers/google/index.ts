@@ -358,9 +358,12 @@ async function fetchGoogleModels(): Promise<RawModelData[]> {
 
   return MODEL_DATA.map((m) => {
     const isFlagship = /pro|ultra/i.test(m.modelId);
+    // modelId 加 "models/" 前缀对齐 Gemini OpenAI-compat /v1beta/openai/models
+    // 端点返回的格式. 不加这个前缀, 消费方 (api-center) 拿上游 /v1/models 跟
+    // Registry id 求交集会 0 命中 (gemini1 free=0 bug).
     return {
       vendor: 'google',
-      modelId: `google/${m.modelId}`,
+      modelId: `google/models/${m.modelId}`,
       name: m.name,
       description: `Google: ${m.description}`,
       contextSize: m.contextSize,
