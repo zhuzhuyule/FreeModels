@@ -66,15 +66,25 @@
 
 FreeModels 的所有 JSON 都严格兼容 OpenAI `/v1/models` 响应 schema —— 含 `object: "list"` 顶层 + 每条 model 的 `id` / `object: "model"` / `created` / `owned_by` 标准字段。**任何标准 OpenAI client（LobeChat / NextChat / OneAPI / Dify / Cherry Studio）都能 drop-in 把 FreeModels 当 model 索引服务用**：
 
-```bash
-# 模拟 OpenAI client 拉模型列表（响应就是 OpenAI /v1/models 标准结构）
-curl https://ofind.cn/FreeModels/data/models.json | jq '.data[0]'
-# {"id": "qwen/qwen3-coder:free", "object": "model", "created": ..., "owned_by": "openrouter", ...}
+```
+配置 BaseURL：https://ofind.cn/FreeModels/v1
+# OpenAI client 会自动调 GET {BaseURL}/models, 拉到 OpenAI 标准格式的 model 列表
+# (含 673 个免费/试用模型 + 扩展字段 is_free / capabilities / tier 等)
 ```
 
-> **HTTP 路径别名（规划中）**：`https://ofind.cn/FreeModels/v1/models` 将作为 `data/models.json` 的 alias 部署，让 client 配置 BaseURL = `https://ofind.cn/FreeModels/v1` 即可拉到 model 列表。当前可直接用 `data/models.json` URL。
+直接 `curl` 验证：
+
+```bash
+curl https://ofind.cn/FreeModels/v1/models | jq '.data[0]'
+# {"id": "glm-4.6", "object": "model", "created": ..., "owned_by": "bigmodel", ...}
+
+# 备用路径 (带 .json 扩展名, 强制 Content-Type: application/json):
+curl https://ofind.cn/FreeModels/v1/models.json
+```
 
 每条 model 的 `id` 字段就是 **POST body.model 直接填的字符串**（raw API id, 跟上游 `/v1/models` 返回完全一致）。跨 provider 同名 model 通过 `owned_by` 字段区分（如 `llama-3.1-8b` 在 Groq/Cerebras/SambaNova 同时存在是 3 条独立记录）。
+
+> **Content-Type 提示**：`v1/models` 无扩展名, GitHub Pages 默认返回 `text/plain`. 大部分 OpenAI client (LobeChat / NextChat / Dify) 用 `response.json()` 直接 parse, 不依赖 Content-Type 头, 实际能正常工作. 严格依赖 Content-Type 的 client 可用 `v1/models.json` 备用路径, 或在 Cloudflare 配 Transform Rule force `application/json`.
 
 ## 直接使用预编译 JSON（推荐 API 消费方）
 

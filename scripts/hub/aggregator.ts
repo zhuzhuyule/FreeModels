@@ -31,6 +31,13 @@ const OUTPUT_PATH = path.resolve('data/models.json');
 const ANOMALY_THRESHOLD = 0.5;
 const TOTAL_DROP_THRESHOLD = 0.1;
 
+// OpenAI /v1/models drop-in 端点的物理路径. 让 OpenAI client 配置
+// BaseURL = "https://ofind.cn/FreeModels/v1" 后直接拉到 model 列表.
+// 写两份: 无扩展名 (OpenAI 标准路径) + .json 扩展名 (确保 Content-Type
+// 是 application/json -- GitHub Pages 按扩展名设 mime type).
+const V1_MODELS_PATH = path.resolve('v1/models');
+const V1_MODELS_JSON_PATH = path.resolve('v1/models.json');
+
 interface DiscoveredProvider {
   name: string;
   fetch: ProviderPlugin;
@@ -432,8 +439,15 @@ async function main(): Promise<void> {
     }
   }
 
-  fs.writeFileSync(OUTPUT_PATH, JSON.stringify(output, null, 2));
+  const outputJson = JSON.stringify(output, null, 2);
+  fs.writeFileSync(OUTPUT_PATH, outputJson);
   console.log(`[Aggregator] Saved ${allModels.length} models to ${OUTPUT_PATH}`);
+
+  // OpenAI /v1/models drop-in: 写两份, 详见 V1_MODELS_PATH 常量注释.
+  fs.mkdirSync(path.dirname(V1_MODELS_PATH), { recursive: true });
+  fs.writeFileSync(V1_MODELS_PATH, outputJson);
+  fs.writeFileSync(V1_MODELS_JSON_PATH, outputJson);
+  console.log(`[Aggregator] Saved OpenAI /v1/models drop-in to ${V1_MODELS_PATH} (+ .json variant)`);
 
   for (const provider of availableProviders) {
     const providerModels = allModels.filter(m => m.provider === provider);
