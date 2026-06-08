@@ -15,68 +15,10 @@ interface LongCatModel {
   isMultimodal?: boolean;
 }
 
+// 2026-06 复核: 平台下架 Flash 全系列 (Chat / Thinking / Thinking-2601 /
+// Lite / Omni-2603 / Chat-2602-Exp), 仅保留 LongCat-2.0-Preview.
+// 数据源: https://longcat.chat/platform/docs/zh/
 const MODEL_DATA: LongCatModel[] = [
-  {
-    modelId: 'LongCat-Flash-Chat',
-    name: 'LongCat Flash Chat',
-    contextSize: 256000,
-    description: '高性能通用对话模型',
-    isFree: true,
-    freeQuota: '500,000 tokens/天',
-    capabilities: ['chat', 'text-generation'],
-    apiFormats: ['OpenAI', 'Anthropic'],
-  },
-  {
-    modelId: 'LongCat-Flash-Thinking',
-    name: 'LongCat Flash Thinking',
-    contextSize: 256000,
-    description: '深度思考模型',
-    isFree: true,
-    freeQuota: '500,000 tokens/天',
-    capabilities: ['chat', 'text-generation', 'reasoning'],
-    apiFormats: ['OpenAI', 'Anthropic'],
-  },
-  {
-    modelId: 'LongCat-Flash-Thinking-2601',
-    name: 'LongCat Flash Thinking 2601',
-    contextSize: 256000,
-    description: '升级版深度思考模型',
-    isFree: true,
-    freeQuota: '500,000 tokens/天',
-    capabilities: ['chat', 'text-generation', 'reasoning'],
-    apiFormats: ['OpenAI', 'Anthropic'],
-  },
-  {
-    modelId: 'LongCat-Flash-Lite',
-    name: 'LongCat Flash Lite',
-    contextSize: 256000,
-    description: '高效轻量化MoE模型',
-    isFree: true,
-    freeQuota: '50,000,000 tokens/天',
-    capabilities: ['chat', 'text-generation'],
-    apiFormats: ['OpenAI', 'Anthropic'],
-  },
-  {
-    modelId: 'LongCat-Flash-Omni-2603',
-    name: 'LongCat Flash Omni 2603',
-    contextSize: 128000,
-    description: '多模态模型',
-    isFree: true,
-    freeQuota: '500,000 tokens/天',
-    capabilities: ['chat', 'text-generation', 'vision'],
-    apiFormats: ['OpenAI'],
-    isMultimodal: true,
-  },
-  {
-    modelId: 'LongCat-Flash-Chat-2602-Exp',
-    name: 'LongCat Flash Chat 2602 Exp',
-    contextSize: 256000,
-    description: '高性能通用对话模型（实验版）',
-    isFree: true,
-    freeQuota: '500,000 tokens/天',
-    capabilities: ['chat', 'text-generation'],
-    apiFormats: ['OpenAI'],
-  },
   {
     modelId: 'LongCat-2.0-Preview',
     name: 'LongCat 2.0 Preview',
