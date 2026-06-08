@@ -1,49 +1,9 @@
 {
   "object": "list",
   "provider": "github",
-  "updated_at": "2026-05-25T04:29:35.017Z",
-  "total": 43,
+  "updated_at": "2026-06-08T13:57:08.104Z",
+  "total": 37,
   "data": [
-    {
-      "id": "AI21-Jamba-1-5-Large",
-      "object": "model",
-      "created": 2040203588,
-      "owned_by": "github",
-      "provider": "github",
-      "name": "AI21 Jamba 1.5 Large",
-      "description": "A 398B parameters (94B active) multilingual model, offering a 256K long context window, function calling, structured output, and grounded generation.",
-      "context_size": 262144,
-      "context_label": "262K",
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation",
-        "chat"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
-      },
-      "trial_scope": "all",
-      "model_family": "jamba-1.5-large",
-      "aliases": [],
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
     {
       "id": "Phi-4-reasoning",
       "object": "model",
@@ -1007,9 +967,7 @@
       "trial_scope": "all",
       "model_family": "3.1-8b",
       "model_variant": "instruct",
-      "aliases": [
-        "sambanova/Meta-Llama-3.1-8B-Instruct"
-      ],
+      "aliases": [],
       "parameter_count": 8000000000,
       "tier": "medium",
       "speed": "fast",
@@ -1062,52 +1020,6 @@
         "q&a"
       ],
       "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "MAI-DS-R1",
-      "object": "model",
-      "created": 1229766914,
-      "owned_by": "github",
-      "provider": "github",
-      "name": "MAI-DS-R1",
-      "description": "MAI-DS-R1 is a DeepSeek-R1 reasoning model that has been post-trained by the Microsoft AI team to fill in information gaps in the previous version of the model and improve its harm protections while maintaining R1 reasoning capabilities.",
-      "context_size": 128000,
-      "context_label": "128K",
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "reasoning",
-        "text-generation",
-        "chat"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
-      },
-      "trial_scope": "all",
-      "model_family": "mai-ds-r1",
-      "model_variant": "r1",
-      "aliases": [],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -1369,87 +1281,6 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "Cohere-command-r-plus-08-2024",
-      "object": "model",
-      "created": 1093061293,
-      "owned_by": "github",
-      "provider": "github",
-      "name": "Cohere Command R+ 08-2024",
-      "description": "Command R+ is a state-of-the-art RAG-optimized model designed to tackle enterprise-grade workloads.",
-      "context_size": 131072,
-      "context_label": "131K",
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation",
-        "chat"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
-      },
-      "trial_scope": "all",
-      "model_family": "cohere-command-r-plus-08",
-      "aliases": [],
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "Cohere-command-r-08-2024",
-      "object": "model",
-      "created": 319407806,
-      "owned_by": "github",
-      "provider": "github",
-      "name": "Cohere Command R 08-2024",
-      "description": "Command R is a scalable generative model targeting RAG and Tool Use to enable production-scale AI for enterprise.",
-      "context_size": 131072,
-      "context_label": "131K",
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation",
-        "tool-use",
-        "chat"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": true,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
-      },
-      "trial_scope": "all",
-      "model_family": "cohere-command-r-08",
-      "aliases": [],
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
       "id": "cohere-command-a",
       "object": "model",
       "created": 1356767769,
@@ -1694,7 +1525,6 @@
       "model_family": "deepseek-v3",
       "aliases": [
         "DeepSeek-V3",
-        "sambanova/DeepSeek-V3-0324",
         "xingchen/xdeepseekv3"
       ],
       "tier": "large",
@@ -1745,7 +1575,6 @@
       "aliases": [
         "DeepSeek-R1",
         "github/DeepSeek-R1",
-        "sambanova/DeepSeek-R1-0528",
         "xingchen/xdeepseekr1"
       ],
       "tier": "large",
@@ -1796,7 +1625,6 @@
       "aliases": [
         "DeepSeek-R1",
         "github/DeepSeek-R1-0528",
-        "sambanova/DeepSeek-R1-0528",
         "xingchen/xdeepseekr1"
       ],
       "tier": "large",
@@ -1812,86 +1640,6 @@
         "complex-reasoning"
       ],
       "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "grok-3-mini",
-      "object": "model",
-      "created": 1850396580,
-      "owned_by": "github",
-      "provider": "github",
-      "name": "Grok 3 Mini",
-      "description": "Grok 3 Mini is a lightweight model that thinks before responding. Trained on mathematic and scientific problems, it is great for logic-based tasks.",
-      "context_size": 131072,
-      "context_label": "131K",
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation",
-        "chat"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
-      },
-      "trial_scope": "all",
-      "model_family": "grok-3-mini",
-      "aliases": [],
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "grok-3",
-      "object": "model",
-      "created": 1256965162,
-      "owned_by": "github",
-      "provider": "github",
-      "name": "Grok 3",
-      "description": "Grok 3 is xAI's debut model, pretrained by Colossus at supermassive scale to excel in specialized domains like finance, healthcare, and the law.",
-      "context_size": 131072,
-      "context_label": "131K",
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation",
-        "chat"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
-      },
-      "trial_scope": "all",
-      "model_family": "grok-3",
-      "aliases": [],
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a"
-      ],
-      "performance_level": "entry",
       "estimated_latency": "< 1s"
     }
   ]

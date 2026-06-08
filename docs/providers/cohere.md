@@ -37,7 +37,7 @@ Trial key 永久免费：20 RPM、1000 requests/月，所有模型共享配额�
 | cohere  | `c4ai-aya-vision-32b` | c4ai-aya-vision-32b | 16K | 限速免费 | 20 RPM / 1000 requests/month shared across all models on trial key |
 | cohere  | `cohere-transcribe-03-2026` | cohere-transcribe-03-2026 | 33K | 限速免费 | 20 RPM / 1000 requests/month shared across all models on trial key |
 | cohere  | `command-a-03-2025` | command-a-03-2025 | 288K | 限速免费 | 20 RPM / 1000 requests/month shared across all models on trial key |
-| cohere  | `command-a-plus-05-2026` | command-a-plus-05-2026 | 128K | 限速免费 | 20 RPM / 1000 requests/month shared across all models on trial key |
+| cohere  | `command-a-plus-05-2026` | command-a-plus-05-2026 | 436K | 限速免费 | 20 RPM / 1000 requests/month shared across all models on trial key |
 | cohere  | `command-a-reasoning-08-2025` | command-a-reasoning-08-2025 | 289K | 限速免费 | 20 RPM / 1000 requests/month shared across all models on trial key |
 | cohere  | `command-a-translate-08-2025` | command-a-translate-08-2025 | 9K | 限速免费 | 20 RPM / 1000 requests/month shared across all models on trial key |
 | cohere  | `command-a-vision-07-2025` | command-a-vision-07-2025 | 128K | 限速免费 | 20 RPM / 1000 requests/month shared across all models on trial key |

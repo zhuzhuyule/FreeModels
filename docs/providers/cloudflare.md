@@ -21,8 +21,8 @@
 
 | 指标 | 数量 |
 |---|---:|
-| 总模型 | 72 |
-| 免费模型 | 72 |
+| 总模型 | 57 |
+| 免费模型 | 57 |
 | 付费可试用 | 0 |
 
 ## 免费策略
@@ -51,11 +51,8 @@
 | cloudflare  | `@cf/deepgram/flux` | @cf/deepgram/flux | unknown | 日 token 配额 | 10,000 neurons/day account-wide (shared across all Workers AI models) |
 | cloudflare  | `@cf/deepgram/nova-3` | @cf/deepgram/nova-3 | unknown | 日 token 配额 | 10,000 neurons/day account-wide (shared across all Workers AI models) |
 | cloudflare  | `@cf/deepseek-ai/deepseek-r1-distill-qwen-32b` | @cf/deepseek-ai/deepseek-r1-distill-qwen-32b | 80K | 日 token 配额 | 10,000 neurons/day account-wide (shared across all Workers AI models) |
-| cloudflare  | `@cf/defog/sqlcoder-7b-2` | @cf/defog/sqlcoder-7b-2 | 10K | 日 token 配额 | 10,000 neurons/day account-wide (shared across all Workers AI models) |
-| cloudflare  | `@cf/facebook/bart-large-cnn` | @cf/facebook/bart-large-cnn | unknown | 日 token 配额 | 10,000 neurons/day account-wide (shared across all Workers AI models) |
 | cloudflare  | `@cf/google/embeddinggemma-300m` | @cf/google/embeddinggemma-300m | unknown | 日 token 配额 | 10,000 neurons/day account-wide (shared across all Workers AI models) |
 | cloudflare  | `@cf/google/gemma-2b-it-lora` | @cf/google/gemma-2b-it-lora | 8K | 日 token 配额 | 10,000 neurons/day account-wide (shared across all Workers AI models) |
-| cloudflare  | `@cf/google/gemma-3-12b-it` | @cf/google/gemma-3-12b-it | 80K | 日 token 配额 | 10,000 neurons/day account-wide (shared across all Workers AI models) |
 | cloudflare  | `@cf/google/gemma-4-26b-a4b-it` | @cf/google/gemma-4-26b-a4b-it | 256K | 日 token 配额 | 10,000 neurons/day account-wide (shared across all Workers AI models) |
 | cloudflare  | `@cf/google/gemma-7b-it-lora` | @cf/google/gemma-7b-it-lora | 4K | 日 token 配额 | 10,000 neurons/day account-wide (shared across all Workers AI models) |
 | cloudflare  | `@cf/huggingface/distilbert-sst-2-int8` | @cf/huggingface/distilbert-sst-2-int8 | unknown | 日 token 配额 | 10,000 neurons/day account-wide (shared across all Workers AI models) |
@@ -65,11 +62,6 @@
 | cloudflare  | `@cf/llava-hf/llava-1.5-7b-hf` | @cf/llava-hf/llava-1.5-7b-hf | unknown | 日 token 配额 | 10,000 neurons/day account-wide (shared across all Workers AI models) |
 | cloudflare  | `@cf/lykon/dreamshaper-8-lcm` | @cf/lykon/dreamshaper-8-lcm | unknown | 日 token 配额 | 10,000 neurons/day account-wide (shared across all Workers AI models) |
 | cloudflare  | `@cf/meta-llama/llama-2-7b-chat-hf-lora` | @cf/meta-llama/llama-2-7b-chat-hf-lora | 8K | 日 token 配额 | 10,000 neurons/day account-wide (shared across all Workers AI models) |
-| cloudflare  | `@cf/meta/llama-2-7b-chat-fp16` | @cf/meta/llama-2-7b-chat-fp16 | 4K | 日 token 配额 | 10,000 neurons/day account-wide (shared across all Workers AI models) |
-| cloudflare  | `@cf/meta/llama-2-7b-chat-int8` | @cf/meta/llama-2-7b-chat-int8 | 8K | 日 token 配额 | 10,000 neurons/day account-wide (shared across all Workers AI models) |
-| cloudflare  | `@cf/meta/llama-3-8b-instruct` | @cf/meta/llama-3-8b-instruct | 8K | 日 token 配额 | 10,000 neurons/day account-wide (shared across all Workers AI models) |
-| cloudflare  | `@cf/meta/llama-3-8b-instruct-awq` | @cf/meta/llama-3-8b-instruct-awq | 8K | 日 token 配额 | 10,000 neurons/day account-wide (shared across all Workers AI models) |
-| cloudflare  | `@cf/meta/llama-3.1-8b-instruct-awq` | @cf/meta/llama-3.1-8b-instruct-awq | 8K | 日 token 配额 | 10,000 neurons/day account-wide (shared across all Workers AI models) |
 | cloudflare  | `@cf/meta/llama-3.1-8b-instruct-fp8` | @cf/meta/llama-3.1-8b-instruct-fp8 | 32K | 日 token 配额 | 10,000 neurons/day account-wide (shared across all Workers AI models) |
 | cloudflare  | `@cf/meta/llama-3.2-11b-vision-instruct` | @cf/meta/llama-3.2-11b-vision-instruct | 128K | 日 token 配额 | 10,000 neurons/day account-wide (shared across all Workers AI models) |
 | cloudflare  | `@cf/meta/llama-3.2-1b-instruct` | @cf/meta/llama-3.2-1b-instruct | 60K | 日 token 配额 | 10,000 neurons/day account-wide (shared across all Workers AI models) |
@@ -78,12 +70,9 @@
 | cloudflare  | `@cf/meta/llama-4-scout-17b-16e-instruct` | @cf/meta/llama-4-scout-17b-16e-instruct | 131K | 日 token 配额 | 10,000 neurons/day account-wide (shared across all Workers AI models) |
 | cloudflare  | `@cf/meta/llama-guard-3-8b` | @cf/meta/llama-guard-3-8b | 131K | 日 token 配额 | 10,000 neurons/day account-wide (shared across all Workers AI models) |
 | cloudflare  | `@cf/meta/m2m100-1.2b` | @cf/meta/m2m100-1.2b | unknown | 日 token 配额 | 10,000 neurons/day account-wide (shared across all Workers AI models) |
-| cloudflare  | `@cf/microsoft/phi-2` | @cf/microsoft/phi-2 | 2K | 日 token 配额 | 10,000 neurons/day account-wide (shared across all Workers AI models) |
 | cloudflare  | `@cf/microsoft/resnet-50` | @cf/microsoft/resnet-50 | unknown | 日 token 配额 | 10,000 neurons/day account-wide (shared across all Workers AI models) |
-| cloudflare  | `@cf/mistral/mistral-7b-instruct-v0.1` | @cf/mistral/mistral-7b-instruct-v0.1 | 3K | 日 token 配额 | 10,000 neurons/day account-wide (shared across all Workers AI models) |
 | cloudflare  | `@cf/mistral/mistral-7b-instruct-v0.2-lora` | @cf/mistral/mistral-7b-instruct-v0.2-lora | 15K | 日 token 配额 | 10,000 neurons/day account-wide (shared across all Workers AI models) |
 | cloudflare  | `@cf/mistralai/mistral-small-3.1-24b-instruct` | @cf/mistralai/mistral-small-3.1-24b-instruct | 128K | 日 token 配额 | 10,000 neurons/day account-wide (shared across all Workers AI models) |
-| cloudflare  | `@cf/moonshotai/kimi-k2.5` | @cf/moonshotai/kimi-k2.5 | 256K | 日 token 配额 | 10,000 neurons/day account-wide (shared across all Workers AI models) |
 | cloudflare  | `@cf/moonshotai/kimi-k2.6` | @cf/moonshotai/kimi-k2.6 | 262K | 日 token 配额 | 10,000 neurons/day account-wide (shared across all Workers AI models) |
 | cloudflare  | `@cf/myshell-ai/melotts` | @cf/myshell-ai/melotts | unknown | 日 token 配额 | 10,000 neurons/day account-wide (shared across all Workers AI models) |
 | cloudflare  | `@cf/nvidia/nemotron-3-120b-a12b` | @cf/nvidia/nemotron-3-120b-a12b | 256K | 日 token 配额 | 10,000 neurons/day account-wide (shared across all Workers AI models) |
@@ -100,8 +89,4 @@
 | cloudflare  | `@cf/runwayml/stable-diffusion-v1-5-img2img` | @cf/runwayml/stable-diffusion-v1-5-img2img | unknown | 日 token 配额 | 10,000 neurons/day account-wide (shared across all Workers AI models) |
 | cloudflare  | `@cf/runwayml/stable-diffusion-v1-5-inpainting` | @cf/runwayml/stable-diffusion-v1-5-inpainting | unknown | 日 token 配额 | 10,000 neurons/day account-wide (shared across all Workers AI models) |
 | cloudflare  | `@cf/stabilityai/stable-diffusion-xl-base-1.0` | @cf/stabilityai/stable-diffusion-xl-base-1.0 | unknown | 日 token 配额 | 10,000 neurons/day account-wide (shared across all Workers AI models) |
-| cloudflare  | `@cf/unum/uform-gen2-qwen-500m` | @cf/unum/uform-gen2-qwen-500m | unknown | 日 token 配额 | 10,000 neurons/day account-wide (shared across all Workers AI models) |
 | cloudflare  | `@cf/zai-org/glm-4.7-flash` | @cf/zai-org/glm-4.7-flash | 131K | 日 token 配额 | 10,000 neurons/day account-wide (shared across all Workers AI models) |
-| cloudflare  | `@hf/google/gemma-7b-it` | @hf/google/gemma-7b-it | 8K | 日 token 配额 | 10,000 neurons/day account-wide (shared across all Workers AI models) |
-| cloudflare  | `@hf/mistral/mistral-7b-instruct-v0.2` | @hf/mistral/mistral-7b-instruct-v0.2 | 3K | 日 token 配额 | 10,000 neurons/day account-wide (shared across all Workers AI models) |
-| cloudflare  | `@hf/nousresearch/hermes-2-pro-mistral-7b` | @hf/nousresearch/hermes-2-pro-mistral-7b | 24K | 日 token 配额 | 10,000 neurons/day account-wide (shared across all Workers AI models) |

@@ -1,8 +1,8 @@
 {
   "object": "list",
   "provider": "nvidia",
-  "updated_at": "2026-05-25T04:29:35.018Z",
-  "total": 117,
+  "updated_at": "2026-06-08T13:57:08.105Z",
+  "total": 120,
   "data": [
     {
       "id": "01-ai/yi-large",
@@ -397,7 +397,7 @@
       "name": "deepseek-v4-flash",
       "description": "Model: deepseek-ai/deepseek-v4-flash",
       "context_label": "unknown",
-      "is_free": false,
+      "is_free": true,
       "capabilities": [
         "chat",
         "text-generation"
@@ -409,16 +409,18 @@
       "is_reasoning": false,
       "is_multimodal": false,
       "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
       "model_family": "deepseek-v4-flash",
       "aliases": [
         "DeepSeek-V4-Flash",
-        "deepseek/deepseek-v4-flash:free"
+        "xingchen/xopdeepseekv4flash"
       ],
       "tier": "medium",
-      "speed": "standard",
+      "speed": "fast",
       "use_case": [
         "content-creation",
         "writing-assistance",
@@ -426,7 +428,7 @@
         "q&a"
       ],
       "performance_level": "entry",
-      "estimated_latency": "1-3s"
+      "estimated_latency": "< 1s"
     },
     {
       "id": "deepseek-ai/deepseek-v4-pro",
@@ -685,7 +687,6 @@
       "model_family": "gemma-3-12b",
       "model_variant": "it",
       "aliases": [
-        "cloudflare/@cf/google/gemma-3-12b-it",
         "sambanova/gemma-3-12b-it"
       ],
       "parameter_count": 12000000000,
@@ -830,7 +831,7 @@
       "name": "gemma-4-31b-it",
       "description": "Model: google/gemma-4-31b-it",
       "context_label": "unknown",
-      "is_free": false,
+      "is_free": true,
       "capabilities": [
         "chat",
         "text-generation"
@@ -842,17 +843,20 @@
       "is_reasoning": false,
       "is_multimodal": false,
       "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
       "model_family": "gemma-4-31b",
       "model_variant": "it",
       "aliases": [
-        "google/gemma-4-31b-it:free"
+        "google/gemma-4-31b-it:free",
+        "sambanova/gemma-4-31B-it"
       ],
       "parameter_count": 31000000000,
       "tier": "medium",
-      "speed": "standard",
+      "speed": "fast",
       "use_case": [
         "content-creation",
         "writing-assistance",
@@ -860,7 +864,7 @@
         "q&a"
       ],
       "performance_level": "entry",
-      "estimated_latency": "1-3s"
+      "estimated_latency": "< 1s"
     },
     {
       "id": "google/recurrentgemma-2b",
@@ -1160,8 +1164,7 @@
       "model_family": "llama-3.1-8b",
       "model_variant": "instruct",
       "aliases": [
-        "cloudflare/@cf/meta/llama-3.1-8b-instruct-fp8",
-        "cloudflare/@cf/meta/llama-3.1-8b-instruct-awq"
+        "cloudflare/@cf/meta/llama-3.1-8b-instruct-fp8"
       ],
       "parameter_count": 8000000000,
       "tier": "medium",
@@ -1184,7 +1187,7 @@
       "name": "llama-3.2-11b-vision-instruct",
       "description": "Model: meta/llama-3.2-11b-vision-instruct",
       "context_label": "unknown",
-      "is_free": false,
+      "is_free": true,
       "capabilities": [
         "vision"
       ],
@@ -1196,9 +1199,11 @@
       "is_reasoning": false,
       "is_multimodal": true,
       "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
       "model_family": "llama-3.2-11b-vision",
       "model_variant": "vision",
       "aliases": [
@@ -1207,7 +1212,7 @@
       ],
       "parameter_count": 11000000000,
       "tier": "large",
-      "speed": "standard",
+      "speed": "fast",
       "use_case": [
         "image-understanding",
         "visual-q&a",
@@ -1215,7 +1220,7 @@
         "writing-assistance"
       ],
       "performance_level": "mid",
-      "estimated_latency": "3-10s"
+      "estimated_latency": "< 1s"
     },
     {
       "id": "meta/llama-3.2-1b-instruct",
@@ -1226,7 +1231,7 @@
       "name": "llama-3.2-1b-instruct",
       "description": "Model: meta/llama-3.2-1b-instruct",
       "context_label": "unknown",
-      "is_free": false,
+      "is_free": true,
       "capabilities": [
         "chat",
         "text-generation"
@@ -1238,9 +1243,11 @@
       "is_reasoning": false,
       "is_multimodal": false,
       "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
       "model_family": "llama-3.2-1b",
       "model_variant": "instruct",
       "aliases": [
@@ -1248,7 +1255,7 @@
       ],
       "parameter_count": 1000000000,
       "tier": "medium",
-      "speed": "standard",
+      "speed": "fast",
       "use_case": [
         "content-creation",
         "writing-assistance",
@@ -1256,7 +1263,7 @@
         "q&a"
       ],
       "performance_level": "entry",
-      "estimated_latency": "1-3s"
+      "estimated_latency": "< 1s"
     },
     {
       "id": "meta/llama-3.2-3b-instruct",
@@ -1267,7 +1274,7 @@
       "name": "llama-3.2-3b-instruct",
       "description": "Model: meta/llama-3.2-3b-instruct",
       "context_label": "unknown",
-      "is_free": false,
+      "is_free": true,
       "capabilities": [
         "chat",
         "text-generation"
@@ -1279,9 +1286,11 @@
       "is_reasoning": false,
       "is_multimodal": false,
       "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
       "model_family": "llama-3.2-3b",
       "model_variant": "instruct",
       "aliases": [
@@ -1290,7 +1299,7 @@
       ],
       "parameter_count": 3000000000,
       "tier": "small",
-      "speed": "standard",
+      "speed": "fast",
       "use_case": [
         "content-creation",
         "writing-assistance",
@@ -1309,7 +1318,7 @@
       "name": "llama-3.2-90b-vision-instruct",
       "description": "Model: meta/llama-3.2-90b-vision-instruct",
       "context_label": "unknown",
-      "is_free": false,
+      "is_free": true,
       "capabilities": [
         "vision"
       ],
@@ -1321,9 +1330,11 @@
       "is_reasoning": false,
       "is_multimodal": true,
       "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
       "model_family": "llama-3.2-90b-vision",
       "model_variant": "vision",
       "aliases": [
@@ -1331,7 +1342,7 @@
       ],
       "parameter_count": 90000000000,
       "tier": "large",
-      "speed": "standard",
+      "speed": "fast",
       "use_case": [
         "image-understanding",
         "visual-q&a",
@@ -1339,7 +1350,7 @@
         "writing-assistance"
       ],
       "performance_level": "mid",
-      "estimated_latency": "3-10s"
+      "estimated_latency": "< 1s"
     },
     {
       "id": "meta/llama-3.3-70b-instruct",
@@ -1628,7 +1639,7 @@
       "name": "phi-4-mini-instruct",
       "description": "Model: microsoft/phi-4-mini-instruct",
       "context_label": "unknown",
-      "is_free": false,
+      "is_free": true,
       "capabilities": [
         "chat",
         "text-generation"
@@ -1640,9 +1651,11 @@
       "is_reasoning": false,
       "is_multimodal": false,
       "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
       "model_family": "phi-4-mini",
       "model_variant": "instruct",
       "aliases": [
@@ -1787,7 +1800,7 @@
       "name": "ministral-14b-instruct-2512",
       "description": "Model: mistralai/ministral-14b-instruct-2512",
       "context_label": "unknown",
-      "is_free": false,
+      "is_free": true,
       "capabilities": [
         "chat",
         "text-generation"
@@ -1799,15 +1812,17 @@
       "is_reasoning": false,
       "is_multimodal": false,
       "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
       "model_family": "ministral-14b",
       "model_variant": "instruct",
       "aliases": [],
       "parameter_count": 14000000000,
       "tier": "medium",
-      "speed": "standard",
+      "speed": "fast",
       "use_case": [
         "content-creation",
         "writing-assistance",
@@ -1815,7 +1830,7 @@
         "q&a"
       ],
       "performance_level": "entry",
-      "estimated_latency": "1-3s"
+      "estimated_latency": "< 1s"
     },
     {
       "id": "mistralai/mistral-7b-instruct-v0.3",
@@ -1981,7 +1996,7 @@
       "name": "mistral-medium-3.5-128b",
       "description": "Model: mistralai/mistral-medium-3.5-128b",
       "context_label": "unknown",
-      "is_free": false,
+      "is_free": true,
       "capabilities": [
         "chat",
         "text-generation"
@@ -1993,14 +2008,16 @@
       "is_reasoning": false,
       "is_multimodal": false,
       "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
       "model_family": "mistral-medium-3.5-128b",
       "aliases": [],
       "parameter_count": 128000000000,
       "tier": "medium",
-      "speed": "standard",
+      "speed": "fast",
       "use_case": [
         "content-creation",
         "writing-assistance",
@@ -2008,7 +2025,7 @@
         "q&a"
       ],
       "performance_level": "entry",
-      "estimated_latency": "1-3s"
+      "estimated_latency": "< 1s"
     },
     {
       "id": "mistralai/mistral-nemotron",
@@ -2058,7 +2075,7 @@
       "name": "mistral-small-4-119b-2603",
       "description": "Model: mistralai/mistral-small-4-119b-2603",
       "context_label": "unknown",
-      "is_free": false,
+      "is_free": true,
       "capabilities": [
         "chat",
         "text-generation"
@@ -2070,9 +2087,11 @@
       "is_reasoning": false,
       "is_multimodal": false,
       "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
       "model_family": "mistral-small-4-119b",
       "aliases": [],
       "parameter_count": 119000000000,
@@ -2173,7 +2192,7 @@
       "name": "kimi-k2.6",
       "description": "Model: moonshotai/kimi-k2.6",
       "context_label": "unknown",
-      "is_free": false,
+      "is_free": true,
       "capabilities": [
         "chat",
         "text-generation"
@@ -2185,15 +2204,18 @@
       "is_reasoning": false,
       "is_multimodal": false,
       "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
       "model_family": "moonshotai-kimi-k2.6",
       "aliases": [
-        "cloudflare/@cf/moonshotai/kimi-k2.6"
+        "cloudflare/@cf/moonshotai/kimi-k2.6",
+        "moonshotai/kimi-k2.6:free"
       ],
       "tier": "medium",
-      "speed": "standard",
+      "speed": "fast",
       "use_case": [
         "content-creation",
         "writing-assistance",
@@ -2201,7 +2223,7 @@
         "q&a"
       ],
       "performance_level": "entry",
-      "estimated_latency": "1-3s"
+      "estimated_latency": "< 1s"
     },
     {
       "id": "nv-mistralai/mistral-nemo-12b-instruct",
@@ -2397,7 +2419,7 @@
       "name": "ising-calibration-1-35b-a3b",
       "description": "Model: nvidia/ising-calibration-1-35b-a3b",
       "context_label": "unknown",
-      "is_free": false,
+      "is_free": true,
       "capabilities": [
         "chat",
         "text-generation"
@@ -2409,14 +2431,16 @@
       "is_reasoning": false,
       "is_multimodal": false,
       "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
       "model_family": "ising-calibration-1-35b-a3b",
       "aliases": [],
       "parameter_count": 35000000000,
       "tier": "medium",
-      "speed": "standard",
+      "speed": "fast",
       "use_case": [
         "content-creation",
         "writing-assistance",
@@ -2424,7 +2448,7 @@
         "q&a"
       ],
       "performance_level": "entry",
-      "estimated_latency": "1-3s"
+      "estimated_latency": "< 1s"
     },
     {
       "id": "llama-3.1-nemoguard-8b-content-safety",
@@ -2626,7 +2650,7 @@
       "name": "llama-3.1-nemotron-nano-vl-8b-v1",
       "description": "Model: nvidia/llama-3.1-nemotron-nano-vl-8b-v1",
       "context_label": "unknown",
-      "is_free": false,
+      "is_free": true,
       "capabilities": [
         "vision"
       ],
@@ -2638,23 +2662,25 @@
       "is_reasoning": false,
       "is_multimodal": true,
       "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
       "model_family": "llama-3.1-nemotron-nano-vl-8b-v1",
       "model_variant": "vl",
       "aliases": [],
       "parameter_count": 8000000000,
       "tier": "medium",
-      "speed": "premium",
+      "speed": "fast",
       "use_case": [
         "content-creation",
         "writing-assistance",
         "image-understanding",
         "visual-q&a"
       ],
-      "performance_level": "mid",
-      "estimated_latency": "1-3s"
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
     },
     {
       "id": "llama-3.1-nemotron-safety-guard-8b-v3",
@@ -3131,7 +3157,7 @@
       "name": "nemotron-3-nano-30b-a3b",
       "description": "Model: nvidia/nemotron-3-nano-30b-a3b",
       "context_label": "unknown",
-      "is_free": false,
+      "is_free": true,
       "capabilities": [
         "chat",
         "text-generation"
@@ -3143,16 +3169,18 @@
       "is_reasoning": false,
       "is_multimodal": false,
       "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
       "model_family": "nemotron-3-nano-30b-a3b",
       "aliases": [
         "nvidia/nemotron-3-nano-30b-a3b:free"
       ],
       "parameter_count": 30000000000,
       "tier": "medium",
-      "speed": "standard",
+      "speed": "fast",
       "use_case": [
         "content-creation",
         "writing-assistance",
@@ -3160,7 +3188,7 @@
         "q&a"
       ],
       "performance_level": "entry",
-      "estimated_latency": "1-3s"
+      "estimated_latency": "< 1s"
     },
     {
       "id": "nemotron-3-nano-omni-30b-a3b-reasoning",
@@ -3171,7 +3199,7 @@
       "name": "nemotron-3-nano-omni-30b-a3b-reasoning",
       "description": "Model: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
       "context_label": "unknown",
-      "is_free": false,
+      "is_free": true,
       "capabilities": [
         "chat",
         "text-generation"
@@ -3184,9 +3212,11 @@
       "is_reasoning": true,
       "is_multimodal": false,
       "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
       "model_family": "nemotron-3-nano-omni-30b-a3b-reasoning",
       "model_variant": "reasoning",
       "aliases": [
@@ -3194,7 +3224,7 @@
       ],
       "parameter_count": 30000000000,
       "tier": "large",
-      "speed": "premium",
+      "speed": "fast",
       "use_case": [
         "problem-solving",
         "logical-analysis",
@@ -3205,8 +3235,8 @@
         "q&a",
         "complex-reasoning"
       ],
-      "performance_level": "high",
-      "estimated_latency": "3-10s"
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
     },
     {
       "id": "nemotron-3-super-120b-a12b",
@@ -3217,7 +3247,7 @@
       "name": "nemotron-3-super-120b-a12b",
       "description": "Model: nvidia/nemotron-3-super-120b-a12b",
       "context_label": "unknown",
-      "is_free": false,
+      "is_free": true,
       "capabilities": [
         "chat",
         "text-generation"
@@ -3229,16 +3259,18 @@
       "is_reasoning": false,
       "is_multimodal": false,
       "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
       "model_family": "nemotron-3-super-120b-a12b",
       "aliases": [
         "nvidia/nemotron-3-super-120b-a12b:free"
       ],
       "parameter_count": 120000000000,
       "tier": "medium",
-      "speed": "standard",
+      "speed": "fast",
       "use_case": [
         "content-creation",
         "writing-assistance",
@@ -3246,7 +3278,90 @@
         "q&a"
       ],
       "performance_level": "entry",
-      "estimated_latency": "1-3s"
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "nemotron-3-ultra-550b-a55b",
+      "object": "model",
+      "created": 343103399,
+      "owned_by": "nvidia",
+      "provider": "nvidia",
+      "name": "nemotron-3-ultra-550b-a55b",
+      "description": "Model: nvidia/nemotron-3-ultra-550b-a55b",
+      "context_label": "unknown",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation",
+        "chat"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
+      "model_family": "nemotron-3-ultra-550b-a55b",
+      "aliases": [
+        "nvidia/nemotron-3-ultra-550b-a55b:free"
+      ],
+      "parameter_count": 550000000000,
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "nemotron-3.5-content-safety",
+      "object": "model",
+      "created": 1989299781,
+      "owned_by": "nvidia",
+      "provider": "nvidia",
+      "name": "nemotron-3.5-content-safety",
+      "description": "Model: nvidia/nemotron-3.5-content-safety",
+      "context_label": "unknown",
+      "is_free": true,
+      "capabilities": [
+        "moderation"
+      ],
+      "tags": [
+        "text-generation",
+        "moderation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
+      "model_family": "nemotron-3.5-content-safety",
+      "model_variant": "safety",
+      "aliases": [
+        "nvidia/nemotron-3.5-content-safety:free"
+      ],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "content-filtering",
+        "safety"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
     },
     {
       "id": "nemotron-4-340b-instruct",
@@ -3420,7 +3535,7 @@
       "name": "nemotron-nano-12b-v2-vl",
       "description": "Model: nvidia/nemotron-nano-12b-v2-vl",
       "context_label": "unknown",
-      "is_free": false,
+      "is_free": true,
       "capabilities": [
         "vision"
       ],
@@ -3432,9 +3547,11 @@
       "is_reasoning": false,
       "is_multimodal": true,
       "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
       "model_family": "nemotron-nano-12b-v2-vl",
       "model_variant": "vl",
       "aliases": [
@@ -3442,7 +3559,7 @@
       ],
       "parameter_count": 12000000000,
       "tier": "large",
-      "speed": "premium",
+      "speed": "fast",
       "use_case": [
         "content-creation",
         "writing-assistance",
@@ -3450,7 +3567,7 @@
         "visual-q&a"
       ],
       "performance_level": "mid",
-      "estimated_latency": "3-10s"
+      "estimated_latency": "< 1s"
     },
     {
       "id": "nemotron-nano-3-30b-a3b",
@@ -3762,7 +3879,7 @@
       "name": "nvidia-nemotron-nano-9b-v2",
       "description": "Model: nvidia/nvidia-nemotron-nano-9b-v2",
       "context_label": "unknown",
-      "is_free": false,
+      "is_free": true,
       "capabilities": [
         "chat",
         "text-generation"
@@ -3774,16 +3891,18 @@
       "is_reasoning": false,
       "is_multimodal": false,
       "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
       "model_family": "nemotron-nano-9b-v2",
       "aliases": [
         "nvidia/nemotron-nano-9b-v2:free"
       ],
       "parameter_count": 9000000000,
       "tier": "medium",
-      "speed": "standard",
+      "speed": "fast",
       "use_case": [
         "content-creation",
         "writing-assistance",
@@ -3791,7 +3910,7 @@
         "q&a"
       ],
       "performance_level": "entry",
-      "estimated_latency": "1-3s"
+      "estimated_latency": "< 1s"
     },
     {
       "id": "riva-translate-4b-instruct",
@@ -3915,7 +4034,7 @@
       "name": "gpt-oss-120b",
       "description": "Model: openai/gpt-oss-120b",
       "context_label": "unknown",
-      "is_free": false,
+      "is_free": true,
       "capabilities": [
         "chat",
         "text-generation"
@@ -3927,9 +4046,11 @@
       "is_reasoning": false,
       "is_multimodal": false,
       "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
       "model_family": "gpt-oss-120b",
       "aliases": [
         "cerebras/gpt-oss-120b",
@@ -3941,7 +4062,7 @@
       ],
       "parameter_count": 120000000000,
       "tier": "medium",
-      "speed": "standard",
+      "speed": "fast",
       "use_case": [
         "content-creation",
         "writing-assistance",
@@ -3949,7 +4070,7 @@
         "q&a"
       ],
       "performance_level": "entry",
-      "estimated_latency": "1-3s"
+      "estimated_latency": "< 1s"
     },
     {
       "id": "openai/gpt-oss-20b",
@@ -3960,7 +4081,7 @@
       "name": "gpt-oss-20b",
       "description": "Model: openai/gpt-oss-20b",
       "context_label": "unknown",
-      "is_free": false,
+      "is_free": true,
       "capabilities": [
         "chat",
         "text-generation"
@@ -3972,9 +4093,11 @@
       "is_reasoning": false,
       "is_multimodal": false,
       "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
       "model_family": "gpt-oss-20b",
       "aliases": [
         "cloudflare/@cf/openai/gpt-oss-20b",
@@ -3983,7 +4106,7 @@
       ],
       "parameter_count": 20000000000,
       "tier": "medium",
-      "speed": "standard",
+      "speed": "fast",
       "use_case": [
         "content-creation",
         "writing-assistance",
@@ -3991,7 +4114,7 @@
         "q&a"
       ],
       "performance_level": "entry",
-      "estimated_latency": "1-3s"
+      "estimated_latency": "< 1s"
     },
     {
       "id": "qwen/qwen3-coder-480b-a35b-instruct",
@@ -4045,7 +4168,7 @@
       "name": "qwen3-next-80b-a3b-instruct",
       "description": "Model: qwen/qwen3-next-80b-a3b-instruct",
       "context_label": "unknown",
-      "is_free": false,
+      "is_free": true,
       "capabilities": [
         "chat",
         "text-generation"
@@ -4057,9 +4180,11 @@
       "is_reasoning": false,
       "is_multimodal": false,
       "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
       "model_family": "qwen3-next-80b-a3b",
       "model_variant": "instruct",
       "aliases": [
@@ -4069,7 +4194,7 @@
       ],
       "parameter_count": 80000000000,
       "tier": "medium",
-      "speed": "standard",
+      "speed": "fast",
       "use_case": [
         "content-creation",
         "writing-assistance",
@@ -4077,7 +4202,7 @@
         "q&a"
       ],
       "performance_level": "entry",
-      "estimated_latency": "1-3s"
+      "estimated_latency": "< 1s"
     },
     {
       "id": "qwen/qwen3.5-122b-a10b",
@@ -4088,7 +4213,7 @@
       "name": "qwen3.5-122b-a10b",
       "description": "Model: qwen/qwen3.5-122b-a10b",
       "context_label": "unknown",
-      "is_free": false,
+      "is_free": true,
       "capabilities": [
         "chat",
         "text-generation"
@@ -4100,16 +4225,18 @@
       "is_reasoning": false,
       "is_multimodal": false,
       "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
       "model_family": "qwen3.5-122b-a10b",
       "aliases": [
         "Qwen3.5-122B-A10B"
       ],
       "parameter_count": 122000000000,
       "tier": "medium",
-      "speed": "standard",
+      "speed": "fast",
       "use_case": [
         "content-creation",
         "writing-assistance",
@@ -4117,7 +4244,7 @@
         "q&a"
       ],
       "performance_level": "entry",
-      "estimated_latency": "1-3s"
+      "estimated_latency": "< 1s"
     },
     {
       "id": "qwen/qwen3.5-397b-a17b",
@@ -4128,7 +4255,7 @@
       "name": "qwen3.5-397b-a17b",
       "description": "Model: qwen/qwen3.5-397b-a17b",
       "context_label": "unknown",
-      "is_free": false,
+      "is_free": true,
       "capabilities": [
         "chat",
         "text-generation"
@@ -4140,16 +4267,18 @@
       "is_reasoning": false,
       "is_multimodal": false,
       "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
       "model_family": "qwen3.5-397b-a17b",
       "aliases": [
         "xingchen/xopqwen35397b"
       ],
       "parameter_count": 397000000000,
       "tier": "medium",
-      "speed": "standard",
+      "speed": "fast",
       "use_case": [
         "content-creation",
         "writing-assistance",
@@ -4157,7 +4286,7 @@
         "q&a"
       ],
       "performance_level": "entry",
-      "estimated_latency": "1-3s"
+      "estimated_latency": "< 1s"
     },
     {
       "id": "sarvamai/sarvam-m",
@@ -4168,7 +4297,7 @@
       "name": "sarvam-m",
       "description": "Model: sarvamai/sarvam-m",
       "context_label": "unknown",
-      "is_free": false,
+      "is_free": true,
       "capabilities": [
         "chat",
         "text-generation"
@@ -4180,13 +4309,15 @@
       "is_reasoning": false,
       "is_multimodal": false,
       "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
       "model_family": "sarvamai-sarvam-m",
       "aliases": [],
       "tier": "medium",
-      "speed": "standard",
+      "speed": "fast",
       "use_case": [
         "content-creation",
         "writing-assistance",
@@ -4194,7 +4325,7 @@
         "q&a"
       ],
       "performance_level": "entry",
-      "estimated_latency": "1-3s"
+      "estimated_latency": "< 1s"
     },
     {
       "id": "snowflake/arctic-embed-l",
@@ -4273,15 +4404,15 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "stockmark/stockmark-2-100b-instruct",
+      "id": "stepfun-ai/step-3.7-flash",
       "object": "model",
-      "created": 1322155738,
+      "created": 1525916148,
       "owned_by": "nvidia",
       "provider": "nvidia",
-      "name": "stockmark-2-100b-instruct",
-      "description": "Model: stockmark/stockmark-2-100b-instruct",
+      "name": "step-3.7-flash",
+      "description": "Model: stepfun-ai/step-3.7-flash",
       "context_label": "unknown",
-      "is_free": false,
+      "is_free": true,
       "capabilities": [
         "chat",
         "text-generation"
@@ -4293,15 +4424,15 @@
       "is_reasoning": false,
       "is_multimodal": false,
       "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
-      "model_family": "stockmark-stockmark-2-100b",
-      "model_variant": "instruct",
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
+      "model_family": "stepfun-ai-step-3.7-flash",
       "aliases": [],
-      "parameter_count": 100000000000,
       "tier": "medium",
-      "speed": "standard",
+      "speed": "fast",
       "use_case": [
         "content-creation",
         "writing-assistance",
@@ -4309,7 +4440,48 @@
         "q&a"
       ],
       "performance_level": "entry",
-      "estimated_latency": "1-3s"
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "stockmark/stockmark-2-100b-instruct",
+      "object": "model",
+      "created": 1322155738,
+      "owned_by": "nvidia",
+      "provider": "nvidia",
+      "name": "stockmark-2-100b-instruct",
+      "description": "Model: stockmark/stockmark-2-100b-instruct",
+      "context_label": "unknown",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation",
+        "chat"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
+      "model_family": "stockmark-stockmark-2-100b",
+      "model_variant": "instruct",
+      "aliases": [],
+      "parameter_count": 100000000000,
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
     },
     {
       "id": "upstage/solar-10.7b-instruct",
@@ -4511,7 +4683,7 @@
       "name": "glm-5.1",
       "description": "Model: z-ai/glm-5.1",
       "context_label": "unknown",
-      "is_free": false,
+      "is_free": true,
       "capabilities": [
         "chat",
         "text-generation"
@@ -4523,16 +4695,18 @@
       "is_reasoning": false,
       "is_multimodal": false,
       "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
       "model_family": "glm-5.1",
       "aliases": [
         "GLM-5.1",
         "xingchen/xopglm51"
       ],
       "tier": "medium",
-      "speed": "standard",
+      "speed": "fast",
       "use_case": [
         "content-creation",
         "writing-assistance",
@@ -4540,7 +4714,7 @@
         "q&a"
       ],
       "performance_level": "entry",
-      "estimated_latency": "1-3s"
+      "estimated_latency": "< 1s"
     },
     {
       "id": "zyphra/zamba2-7b-instruct",

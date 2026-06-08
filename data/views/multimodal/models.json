@@ -1,8 +1,8 @@
 {
   "object": "list",
   "view": "multimodal",
-  "updated_at": "2026-05-25T04:29:35.035Z",
-  "total": 86,
+  "updated_at": "2026-06-08T13:57:08.127Z",
+  "total": 87,
   "filters": {
     "tags": "vision"
   },
@@ -592,57 +592,6 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "@cf/moonshotai/kimi-k2.5",
-      "object": "model",
-      "created": 1273849036,
-      "owned_by": "cloudflare",
-      "provider": "cloudflare",
-      "name": "@cf/moonshotai/kimi-k2.5",
-      "description": "Kimi K2.5 is a frontier-scale open-source model with a 256k context window, multi-turn tool calling, vision inputs, and structured outputs for agentic workloads.",
-      "context_size": 256000,
-      "context_label": "256K",
-      "price_input": 0.1,
-      "price_output": 3,
-      "is_free": true,
-      "capabilities": [
-        "text-generation",
-        "function-calling",
-        "reasoning"
-      ],
-      "tags": [
-        "vision",
-        "text-generation",
-        "tool-use",
-        "function-calling",
-        "reasoning",
-        "multimodal"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": true,
-      "has_tool_use": true,
-      "free_mechanism": "daily-tokens",
-      "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
-      },
-      "trial_scope": "all",
-      "model_family": "moonshotai-kimi-k2.5",
-      "aliases": [],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "image-understanding",
-        "visual-q&a",
-        "content-creation",
-        "writing-assistance",
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
       "id": "@cf/llava-hf/llava-1.5-7b-hf",
       "object": "model",
       "created": 439759033,
@@ -760,7 +709,8 @@
       "trial_scope": "all",
       "model_family": "moonshotai-kimi-k2.6",
       "aliases": [
-        "moonshotai/kimi-k2.6"
+        "moonshotai/kimi-k2.6",
+        "moonshotai/kimi-k2.6:free"
       ],
       "tier": "large",
       "speed": "fast",
@@ -938,45 +888,6 @@
         "art"
       ],
       "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "@cf/unum/uform-gen2-qwen-500m",
-      "object": "model",
-      "created": 1712080890,
-      "owned_by": "cloudflare",
-      "provider": "cloudflare",
-      "name": "@cf/unum/uform-gen2-qwen-500m",
-      "description": "UForm-Gen is a small generative vision-language model primarily designed for Image Captioning and Visual Question Answering. The model was pre-trained on the internal image captioning dataset and fine-tuned on public instructions datasets: SVIT, LVIS, VQAs datasets.",
-      "context_label": "unknown",
-      "is_free": true,
-      "capabilities": [
-        "vision"
-      ],
-      "tags": [
-        "vision",
-        "text-generation",
-        "multimodal"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": "daily-tokens",
-      "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
-      },
-      "trial_scope": "all",
-      "model_family": "unum-uform-gen2-qwen-500m",
-      "aliases": [],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "image-understanding",
-        "visual-q&a",
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -1248,58 +1159,6 @@
         "visual-q&a",
         "content-creation",
         "writing-assistance"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "@cf/google/gemma-3-12b-it",
-      "object": "model",
-      "created": 483040028,
-      "owned_by": "cloudflare",
-      "provider": "cloudflare",
-      "name": "@cf/google/gemma-3-12b-it",
-      "description": "Gemma 3 models are well-suited for a variety of text generation and image understanding tasks, including question answering, summarization, and reasoning. Gemma 3 models are multimodal, handling text and image input and generating text output, with a large, 128K context window, multilingual support in over 140 languages, and is available in more sizes than previous versions.",
-      "context_size": 80000,
-      "context_label": "80K",
-      "price_input": 0.345,
-      "price_output": 0.556,
-      "is_free": true,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "reasoning",
-        "vision",
-        "text-generation",
-        "multimodal"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": "daily-tokens",
-      "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
-      },
-      "trial_scope": "all",
-      "model_family": "gemma-3-12b",
-      "model_variant": "it",
-      "aliases": [
-        "google/gemma-3-12b-it",
-        "sambanova/gemma-3-12b-it"
-      ],
-      "parameter_count": 12000000000,
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "image-understanding",
-        "visual-q&a",
-        "content-creation",
-        "writing-assistance",
-        "complex-reasoning"
       ],
       "performance_level": "mid",
       "estimated_latency": "< 1s"
@@ -2798,51 +2657,6 @@
       "estimated_latency": "3-10s"
     },
     {
-      "id": "LongCat-Flash-Omni-2603",
-      "object": "model",
-      "created": 614562231,
-      "owned_by": "longcat",
-      "provider": "longcat",
-      "name": "LongCat Flash Omni 2603",
-      "description": "LongCat: 多模态模型",
-      "context_size": 128000,
-      "context_label": "128K",
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "vision"
-      ],
-      "tags": [
-        "chat",
-        "text-generation",
-        "vision",
-        "multimodal"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": "daily-tokens",
-      "free_quota": {
-        "notes": "500,000 tokens/天"
-      },
-      "trial_scope": "specific",
-      "model_family": "longcat-flash-omni",
-      "aliases": [],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance",
-        "image-understanding",
-        "visual-q&a"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
       "id": "meta/llama-3.2-11b-vision-instruct",
       "object": "model",
       "created": 649953281,
@@ -2851,7 +2665,7 @@
       "name": "llama-3.2-11b-vision-instruct",
       "description": "Model: meta/llama-3.2-11b-vision-instruct",
       "context_label": "unknown",
-      "is_free": false,
+      "is_free": true,
       "capabilities": [
         "vision"
       ],
@@ -2863,9 +2677,11 @@
       "is_reasoning": false,
       "is_multimodal": true,
       "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
       "model_family": "llama-3.2-11b-vision",
       "model_variant": "vision",
       "aliases": [
@@ -2874,7 +2690,7 @@
       ],
       "parameter_count": 11000000000,
       "tier": "large",
-      "speed": "standard",
+      "speed": "fast",
       "use_case": [
         "image-understanding",
         "visual-q&a",
@@ -2882,7 +2698,7 @@
         "writing-assistance"
       ],
       "performance_level": "mid",
-      "estimated_latency": "3-10s"
+      "estimated_latency": "< 1s"
     },
     {
       "id": "meta/llama-3.2-90b-vision-instruct",
@@ -2893,7 +2709,7 @@
       "name": "llama-3.2-90b-vision-instruct",
       "description": "Model: meta/llama-3.2-90b-vision-instruct",
       "context_label": "unknown",
-      "is_free": false,
+      "is_free": true,
       "capabilities": [
         "vision"
       ],
@@ -2905,9 +2721,11 @@
       "is_reasoning": false,
       "is_multimodal": true,
       "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
       "model_family": "llama-3.2-90b-vision",
       "model_variant": "vision",
       "aliases": [
@@ -2915,7 +2733,7 @@
       ],
       "parameter_count": 90000000000,
       "tier": "large",
-      "speed": "standard",
+      "speed": "fast",
       "use_case": [
         "image-understanding",
         "visual-q&a",
@@ -2923,7 +2741,7 @@
         "writing-assistance"
       ],
       "performance_level": "mid",
-      "estimated_latency": "3-10s"
+      "estimated_latency": "< 1s"
     },
     {
       "id": "microsoft/phi-3-vision-128k-instruct",
@@ -3014,7 +2832,7 @@
       "name": "llama-3.1-nemotron-nano-vl-8b-v1",
       "description": "Model: nvidia/llama-3.1-nemotron-nano-vl-8b-v1",
       "context_label": "unknown",
-      "is_free": false,
+      "is_free": true,
       "capabilities": [
         "vision"
       ],
@@ -3026,23 +2844,25 @@
       "is_reasoning": false,
       "is_multimodal": true,
       "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
       "model_family": "llama-3.1-nemotron-nano-vl-8b-v1",
       "model_variant": "vl",
       "aliases": [],
       "parameter_count": 8000000000,
       "tier": "medium",
-      "speed": "premium",
+      "speed": "fast",
       "use_case": [
         "content-creation",
         "writing-assistance",
         "image-understanding",
         "visual-q&a"
       ],
-      "performance_level": "mid",
-      "estimated_latency": "1-3s"
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
     },
     {
       "id": "llama-3.2-nemoretriever-1b-vlm-embed-v1",
@@ -3139,7 +2959,7 @@
       "name": "nemotron-nano-12b-v2-vl",
       "description": "Model: nvidia/nemotron-nano-12b-v2-vl",
       "context_label": "unknown",
-      "is_free": false,
+      "is_free": true,
       "capabilities": [
         "vision"
       ],
@@ -3151,9 +2971,11 @@
       "is_reasoning": false,
       "is_multimodal": true,
       "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
       "model_family": "nemotron-nano-12b-v2-vl",
       "model_variant": "vl",
       "aliases": [
@@ -3161,7 +2983,7 @@
       ],
       "parameter_count": 12000000000,
       "tier": "large",
-      "speed": "premium",
+      "speed": "fast",
       "use_case": [
         "content-creation",
         "writing-assistance",
@@ -3169,7 +2991,7 @@
         "visual-q&a"
       ],
       "performance_level": "mid",
-      "estimated_latency": "3-10s"
+      "estimated_latency": "< 1s"
     },
     {
       "id": "neva-22b",
@@ -3208,6 +3030,62 @@
       ],
       "performance_level": "mid",
       "estimated_latency": "3-10s"
+    },
+    {
+      "id": "nvidia/nemotron-3.5-content-safety:free",
+      "object": "model",
+      "created": 109416543,
+      "owned_by": "openrouter",
+      "provider": "openrouter",
+      "name": "NVIDIA: Nemotron 3.5 Content Safety (free)",
+      "description": "NVIDIA Nemotron 3.5 Content Safety is a compact 4B-parameter multimodal guardrail model from NVIDIA, fine-tuned from Google Gemma-3-4B. It moderates both inputs to and responses from LLMs and VLMs, accepting text and image input and returning text output: a safe/unsafe classification for the user prompt and the response, safety category labels, and an optional reasoning trace. It covers 12 languages with a context window of up to 128K tokens.\n\nIt is suited for prompt and response moderation, con",
+      "context_size": 128000,
+      "context_label": "128K",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision",
+        "reasoning"
+      ],
+      "tags": [
+        "reasoning",
+        "vision",
+        "text-generation",
+        "chat",
+        "multimodal"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Free tier with rate limits (see openrouter.ai)"
+      },
+      "trial_scope": "specific",
+      "model_family": "nemotron-3.5-content-safety",
+      "model_variant": "safety",
+      "aliases": [
+        "nvidia/nemotron-3.5-content-safety"
+      ],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
     },
     {
       "id": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
@@ -3267,6 +3145,62 @@
         "transcription",
         "voice-input",
         "video-creation",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "moonshotai/kimi-k2.6:free",
+      "object": "model",
+      "created": 530698313,
+      "owned_by": "openrouter",
+      "provider": "openrouter",
+      "name": "MoonshotAI: Kimi K2.6 (free)",
+      "description": "Kimi K2.6 is Moonshot AI's next-generation multimodal model, designed for long-horizon coding, coding-driven UI/UX generation, and multi-agent orchestration. It handles complex end-to-end coding tasks across Python, Rust, and Go, and can convert prompts and visual inputs into production-ready interfaces. Its agent swarm architecture scales to hundreds of parallel sub-agents for autonomous task decomposition - delivering documents, websites, and spreadsheets in a single run without human oversigh",
+      "context_size": 262144,
+      "context_label": "262K",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision",
+        "reasoning"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "chat",
+        "reasoning",
+        "multimodal"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Free tier with rate limits (see openrouter.ai)"
+      },
+      "trial_scope": "specific",
+      "model_family": "moonshotai-kimi-k2.6",
+      "aliases": [
+        "cloudflare/@cf/moonshotai/kimi-k2.6",
+        "moonshotai/kimi-k2.6"
+      ],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "problem-solving",
+        "logical-analysis",
+        "math",
         "complex-reasoning"
       ],
       "performance_level": "mid",
@@ -3372,7 +3306,8 @@
       "model_family": "gemma-4-31b",
       "model_variant": "it",
       "aliases": [
-        "google/gemma-4-31b-it"
+        "google/gemma-4-31b-it",
+        "sambanova/gemma-4-31B-it"
       ],
       "parameter_count": 31000000000,
       "tier": "large",
@@ -3454,17 +3389,61 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "xopqwen36v35b",
+      "id": "sensenova-u1-fast",
       "object": "model",
-      "created": 1041248835,
+      "created": 1200920602,
+      "owned_by": "sensenova",
+      "provider": "sensenova",
+      "name": "SenseNova U1 Fast",
+      "description": "SenseNova: 原生多模态, 理解生成一体 (NEO-Unify 架构)",
+      "context_label": "unknown",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision"
+      ],
+      "tags": [
+        "chat",
+        "text-generation",
+        "vision",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "1500 次 / 5 小时"
+      },
+      "trial_scope": "all",
+      "model_family": "sensenova-sensenova-u1-fast",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "xopkimik26",
+      "object": "model",
+      "created": 1124126980,
       "owned_by": "xingchen",
       "provider": "xingchen",
-      "name": "Qwen3.6-35B-A3B",
-      "description": "Qwen3.6-35B-A3B，以稳定性与实用性为核心，在智能体编码、思维上下文保留上显著升级，为 350 亿参数、30 亿激活参数的因果视觉语言模型，编码开发体验更高效流畅。",
-      "context_size": 131072,
-      "context_label": "131K",
-      "price_input": 1,
-      "price_output": 3.6,
+      "name": "Kimi-K2.6",
+      "description": "Kimi K2.6 是一款开源原生多模态智能体模型，在长链路代码开发、代码驱动设计、主动自主执行以及集群任务编排等实用能力上实现了全面升级。",
+      "context_size": 262144,
+      "context_label": "262K",
+      "price_input": 6.5,
+      "price_output": 27,
       "is_free": false,
       "capabilities": [
         "chat",
@@ -3483,11 +3462,10 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "qwen3.6-35b-a3b",
+      "model_family": "kimi-k2.6",
       "aliases": [
-        "Qwen3.6-35B-A3B"
+        "Kimi-K2.6"
       ],
-      "parameter_count": 35000000000,
       "tier": "large",
       "speed": "premium",
       "use_case": [
@@ -3500,6 +3478,149 @@
       ],
       "performance_level": "mid",
       "estimated_latency": "3-10s"
+    },
+    {
+      "id": "xopqwen36v35b",
+      "object": "model",
+      "created": 1041248835,
+      "owned_by": "xingchen",
+      "provider": "xingchen",
+      "name": "Qwen3.6-35B-A3B",
+      "description": "Qwen3.6-35B-A3B，以稳定性与实用性为核心，在智能体编码、思维上下文保留上显著升级，为 350 亿参数、30 亿激活参数的因果视觉语言模型，编码开发体验更高效流畅。",
+      "context_size": 131072,
+      "context_label": "131K",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision"
+      ],
+      "tags": [
+        "chat",
+        "text-generation",
+        "vision",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": null,
+      "trial_scope": "specific",
+      "model_family": "qwen3.6-35b-a3b",
+      "aliases": [
+        "Qwen3.6-35B-A3B"
+      ],
+      "parameter_count": 35000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "xopqwen35v35b",
+      "object": "model",
+      "created": 1040062914,
+      "owned_by": "xingchen",
+      "provider": "xingchen",
+      "name": "Qwen3.5-35B-A3B",
+      "description": "Qwen3.5-35B-A3B 是阿里巴巴通义千问团队于2026 年 2 月 25 日开源的中型 MoE 稀疏架构大模型，隶属于 Qwen3.5 系列中型模型产品线，主打高性能与高效率平衡，被称为 \"中小团队的 AI 利器\"。核心亮点是35B 总参数仅激活 3B 进行推理，在保持旗舰级性能的同时大幅降低部署成本。",
+      "context_size": 131072,
+      "context_label": "131K",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision"
+      ],
+      "tags": [
+        "chat",
+        "text-generation",
+        "vision",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": null,
+      "trial_scope": "specific",
+      "model_family": "qwen3.5-35b-a3b",
+      "aliases": [
+        "Qwen3.5-35B-A3B"
+      ],
+      "parameter_count": 35000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "xoppaddleocrv16",
+      "object": "model",
+      "created": 2061482730,
+      "owned_by": "xingchen",
+      "provider": "xingchen",
+      "name": "PaddleOCR-VL-1.6",
+      "description": "PaddleOCR-VL-1.6对标业界顶尖多模态视觉语言大模型（VLM）具备强劲竞争力。模型架构与 PaddleOCR-VL-1.5 完全兼容，可零成本即插即用、无缝迁移。",
+      "context_size": 32768,
+      "context_label": "33K",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision",
+        "ocr"
+      ],
+      "tags": [
+        "chat",
+        "text-generation",
+        "vision",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": null,
+      "trial_scope": "specific",
+      "model_family": "paddleocr-vl-1.6",
+      "model_variant": "vl",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
     },
     {
       "id": "xopqwen35397b",
@@ -3583,54 +3704,6 @@
       "aliases": [
         "Kimi-K2.5"
       ],
-      "tier": "large",
-      "speed": "premium",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance",
-        "image-understanding",
-        "visual-q&a"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "3-10s"
-    },
-    {
-      "id": "xopqwen35v35b",
-      "object": "model",
-      "created": 1040062914,
-      "owned_by": "xingchen",
-      "provider": "xingchen",
-      "name": "Qwen3.5-35B-A3B",
-      "description": "Qwen3.5-35B-A3B 是阿里巴巴通义千问团队于2026 年 2 月 25 日开源的中型 MoE 稀疏架构大模型，隶属于 Qwen3.5 系列中型模型产品线，主打高性能与高效率平衡，被称为 \"中小团队的 AI 利器\"。核心亮点是35B 总参数仅激活 3B 进行推理，在保持旗舰级性能的同时大幅降低部署成本。",
-      "context_size": 131072,
-      "context_label": "131K",
-      "price_input": 0.4,
-      "price_output": 1.7,
-      "is_free": false,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "vision"
-      ],
-      "tags": [
-        "chat",
-        "text-generation",
-        "vision",
-        "multimodal"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
-      "model_family": "qwen3.5-35b-a3b",
-      "aliases": [
-        "Qwen3.5-35B-A3B"
-      ],
-      "parameter_count": 35000000000,
       "tier": "large",
       "speed": "premium",
       "use_case": [

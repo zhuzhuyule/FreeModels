@@ -1,8 +1,8 @@
 {
   "object": "list",
   "provider": "gitee",
-  "updated_at": "2026-05-25T04:29:35.015Z",
-  "total": 197,
+  "updated_at": "2026-06-08T13:57:08.103Z",
+  "total": 203,
   "data": [
     {
       "id": "jina-clip-v1",
@@ -289,8 +289,7 @@
         "cloudflare/@cf/openai/whisper-large-v3-turbo",
         "whisper-large-v3",
         "groq/whisper-large-v3-turbo",
-        "groq/whisper-large-v3",
-        "sambanova/Whisper-Large-v3"
+        "groq/whisper-large-v3"
       ],
       "tier": "medium",
       "speed": "standard",
@@ -864,7 +863,6 @@
       "model_family": "deepseek-v3",
       "aliases": [
         "github/DeepSeek-V3-0324",
-        "sambanova/DeepSeek-V3-0324",
         "xingchen/xdeepseekv3"
       ],
       "tier": "medium",
@@ -907,7 +905,6 @@
       "aliases": [
         "github/DeepSeek-R1-0528",
         "github/DeepSeek-R1",
-        "sambanova/DeepSeek-R1-0528",
         "xingchen/xdeepseekr1"
       ],
       "tier": "large",
@@ -1136,8 +1133,7 @@
         "cloudflare/@cf/openai/whisper-large-v3-turbo",
         "whisper-large-v3-turbo",
         "groq/whisper-large-v3-turbo",
-        "groq/whisper-large-v3",
-        "sambanova/Whisper-Large-v3"
+        "groq/whisper-large-v3"
       ],
       "tier": "medium",
       "speed": "standard",
@@ -1704,7 +1700,6 @@
       "model_family": "qwen3-32b",
       "aliases": [
         "groq/qwen/qwen3-32b",
-        "sambanova/Qwen3-32B",
         "xingchen/xop3qwen32b"
       ],
       "parameter_count": 32000000000,
@@ -1993,7 +1988,6 @@
       "model_family": "qwen3-235b-a22b",
       "aliases": [
         "Qwen3-235B-A22B-Instruct-2507",
-        "sambanova/Qwen3-235B-A22B-Instruct-2507",
         "xingchen/xop3qwen235b2507",
         "xingchen/xop3qwen235b"
       ],
@@ -2818,7 +2812,6 @@
       "model_variant": "instruct",
       "aliases": [
         "Qwen3-235B-A22B",
-        "sambanova/Qwen3-235B-A22B-Instruct-2507",
         "xingchen/xop3qwen235b2507",
         "xingchen/xop3qwen235b"
       ],
@@ -3516,9 +3509,7 @@
       "free_quota": null,
       "trial_scope": "all",
       "model_family": "deepseek-v3.1-terminus",
-      "aliases": [
-        "sambanova/DeepSeek-V3.1-Terminus"
-      ],
+      "aliases": [],
       "tier": "medium",
       "speed": "standard",
       "use_case": [
@@ -5334,8 +5325,8 @@
       "created": 461050587,
       "owned_by": "gitee",
       "provider": "gitee",
-      "name": "search",
-      "description": "1",
+      "name": "全网搜索",
+      "description": "从近百亿网页和生态内容源中搜索高质量世界知识，例如新闻、图片、百科、文库等。",
       "context_label": "unknown",
       "price_input": 0,
       "price_output": 0,
@@ -6262,7 +6253,9 @@
       "free_quota": null,
       "trial_scope": "none",
       "model_family": "minimax-m2.7",
-      "aliases": [],
+      "aliases": [
+        "sambanova/MiniMax-M2.7"
+      ],
       "tier": "medium",
       "speed": "standard",
       "use_case": [
@@ -6334,7 +6327,9 @@
       "free_quota": null,
       "trial_scope": "none",
       "model_family": "kimi-k2.6",
-      "aliases": [],
+      "aliases": [
+        "xingchen/xopkimik26"
+      ],
       "tier": "medium",
       "speed": "premium",
       "use_case": [
@@ -6481,7 +6476,7 @@
       "model_family": "deepseek-v4-flash",
       "aliases": [
         "deepseek-ai/deepseek-v4-flash",
-        "deepseek/deepseek-v4-flash:free"
+        "xingchen/xopdeepseekv4flash"
       ],
       "tier": "medium",
       "speed": "standard",
@@ -6809,6 +6804,220 @@
       ],
       "performance_level": "mid",
       "estimated_latency": "3-10s"
+    },
+    {
+      "id": "Hy-MT2-30B-A3B",
+      "object": "model",
+      "created": 1475971707,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "Hy-MT2-30B-A3B 翻译大模型",
+      "description": "Hy-MT2-30B-A3B 模型是一款高性能多语言翻译大模型，具备优秀的跨语言理解与生成能力，适用于实时翻译、本地化与全球化AI应用场景。",
+      "context_size": 32000,
+      "context_label": "32K",
+      "price_input": 0.7,
+      "price_output": 1.2,
+      "is_free": false,
+      "capabilities": [
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "all",
+      "model_family": "hy-mt2-30b-a3b",
+      "aliases": [],
+      "parameter_count": 30000000000,
+      "tier": "medium",
+      "speed": "standard",
+      "use_case": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "1-3s"
+    },
+    {
+      "id": "HY-MT2-7B",
+      "object": "model",
+      "created": 430274444,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "HY-MT2-7B  翻译大模型",
+      "description": "Hy-MT2-7B 模型是一款轻量级多语言翻译模型，具备优秀的跨语言理解与翻译能力，适用于实时翻译与高并发AI服务场景。",
+      "context_size": 32000,
+      "context_label": "32K",
+      "price_input": 0.3,
+      "price_output": 0.3,
+      "is_free": false,
+      "capabilities": [
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "all",
+      "model_family": "hy-mt2-7b",
+      "aliases": [],
+      "parameter_count": 7000000000,
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "MiniMax-M3",
+      "object": "model",
+      "created": 93150149,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "MiniMax-M3",
+      "description": "前沿 Coding & Agentic 能力· 百万上下文 · 原生多模态",
+      "context_label": "unknown",
+      "price_input": 2.1,
+      "price_output": 8.4,
+      "is_free": false,
+      "capabilities": [
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "minimax-m3",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "standard",
+      "use_case": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "1-3s"
+    },
+    {
+      "id": "MiMo-V2.5-Pro",
+      "object": "model",
+      "created": 1914855891,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "MiMo-V2.5-Pro",
+      "description": "MiMo-V2.5-Pro 是一个开源的专家混合（MoE）语言模型，具有 1.02T 的总参数量和 42B 的活跃参数量。它采用了 MiMo-V2-Flash 中引入的混合注意力架构和 3 层多标记预测（MTP），支持高达 1M 标记的上下文长度。",
+      "context_label": "unknown",
+      "price_input": 7,
+      "price_output": 21,
+      "is_free": false,
+      "capabilities": [
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "mimo-v2.5-pro",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "premium",
+      "use_case": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "1-3s"
+    },
+    {
+      "id": "TeleTTS-Mandarin",
+      "object": "model",
+      "created": 1477609953,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "TeleTTS-Mandarin",
+      "description": "非实时将文本转为超自然高品质的语音输出，集情感丰富、自然流畅、多样音色等优势于一身，实现超拟人语音合成，支持普通话版，支持18个音色。",
+      "context_label": "unknown",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": false,
+      "capabilities": [
+        "speech-synthesis"
+      ],
+      "tags": [
+        "speech-synthesis"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "teletts-mandarin",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "standard",
+      "use_case": [
+        "text-to-speech",
+        "voice-output"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "1-3s"
+    },
+    {
+      "id": "TeleASR-MultiDialect",
+      "object": "model",
+      "created": 1089905603,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "TeleASR-MultiDialect",
+      "description": "基于端到端语音识别能力，可将批量上传的长段音频文件2小时转换成文本数据，为信息快速处理和电子存档提供基础。转写速度可达到1小时音频20秒转写完成。支持中+英+60种方言混合识别。",
+      "context_label": "unknown",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": false,
+      "capabilities": [
+        "speech-recognition"
+      ],
+      "tags": [
+        "speech-recognition"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "teleasr-multidialect",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "standard",
+      "use_case": [
+        "transcription",
+        "voice-input"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "1-3s"
     },
     {
       "id": "bge-large-zh-v1.5",

@@ -21,8 +21,8 @@
 
 | 指标 | 数量 |
 |---|---:|
-| 总模型 | 43 |
-| 免费模型 | 43 |
+| 总模型 | 37 |
+| 免费模型 | 37 |
 | 付费可试用 | 0 |
 
 ## 免费策略
@@ -33,11 +33,8 @@
 
 | Provider | Model ID | 名称 | 上下文 | 免费类型 | 限制 |
 |---|---|---|---:|---|---|
-| github  | `AI21-Jamba-1-5-Large` | AI21 Jamba 1.5 Large | 262K | 限速免费 | Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise) |
 | github  | `Codestral-2501` | Codestral 25.01 | 256K | 限速免费 | Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise) |
 | github  | `cohere-command-a` | Cohere Command A | 131K | 限速免费 | Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise) |
-| github  | `Cohere-command-r-08-2024` | Cohere Command R 08-2024 | 131K | 限速免费 | Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise) |
-| github  | `Cohere-command-r-plus-08-2024` | Cohere Command R+ 08-2024 | 131K | 限速免费 | Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise) |
 | github  | `DeepSeek-R1` | DeepSeek-R1 | 128K | 限速免费 | Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise) |
 | github  | `DeepSeek-R1-0528` | DeepSeek-R1-0528 | 128K | 限速免费 | Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise) |
 | github  | `DeepSeek-V3-0324` | DeepSeek-V3-0324 | 128K | 限速免费 | Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise) |
@@ -50,14 +47,11 @@
 | github  | `gpt-5-chat` | OpenAI gpt-5-chat (preview) | 200K | 限速免费 | Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise) |
 | github  | `gpt-5-mini` | OpenAI gpt-5-mini | 200K | 限速免费 | Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise) |
 | github  | `gpt-5-nano` | OpenAI gpt-5-nano | 200K | 限速免费 | Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise) |
-| github  | `grok-3` | Grok 3 | 131K | 限速免费 | Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise) |
-| github  | `grok-3-mini` | Grok 3 Mini | 131K | 限速免费 | Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise) |
 | github  | `Llama-3-2-11B-Vision-Instruct` | Llama-3.2-11B-Vision-Instruct | 128K | 限速免费 | Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise) |
 | github  | `Llama-3-2-90B-Vision-Instruct` | Llama-3.2-90B-Vision-Instruct | 128K | 限速免费 | Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise) |
 | github  | `Llama-3-3-70B-Instruct` | Llama-3.3-70B-Instruct | 128K | 限速免费 | Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise) |
 | github  | `Llama-4-Maverick-17B-128E-Instruct-FP8` | Llama 4 Maverick 17B 128E Instruct FP8 | 1M | 限速免费 | Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise) |
 | github  | `Llama-4-Scout-17B-16E-Instruct` | Llama 4 Scout 17B 16E Instruct | 10M | 限速免费 | Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise) |
-| github  | `MAI-DS-R1` | MAI-DS-R1 | 128K | 限速免费 | Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise) |
 | github  | `Meta-Llama-3-1-405B-Instruct` | Meta-Llama-3.1-405B-Instruct | 131K | 限速免费 | Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise) |
 | github  | `Meta-Llama-3-1-8B-Instruct` | Meta-Llama-3.1-8B-Instruct | 131K | 限速免费 | Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise) |
 | github  | `Ministral-3B` | Ministral 3B | 131K | 限速免费 | Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise) |

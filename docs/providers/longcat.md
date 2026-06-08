@@ -21,8 +21,8 @@
 
 | 指标 | 数量 |
 |---|---:|
-| 总模型 | 7 |
-| 免费模型 | 7 |
+| 总模型 | 1 |
+| 免费模型 | 1 |
 | 付费可试用 | 0 |
 
 ## 免费策略
@@ -34,9 +34,3 @@
 | Provider | Model ID | 名称 | 上下文 | 免费类型 | 限制 |
 |---|---|---|---:|---|---|
 | longcat  | `LongCat-2.0-Preview` | LongCat 2.0 Preview | 1M | 日 token 配额 | 10,000,000 tokens/2小时 |
-| longcat  | `LongCat-Flash-Chat` | LongCat Flash Chat | 256K | 日 token 配额 | 500,000 tokens/天 |
-| longcat  | `LongCat-Flash-Chat-2602-Exp` | LongCat Flash Chat 2602 Exp | 256K | 日 token 配额 | 500,000 tokens/天 |
-| longcat  | `LongCat-Flash-Lite` | LongCat Flash Lite | 256K | 日 token 配额 | 50,000,000 tokens/天 |
-| longcat  | `LongCat-Flash-Omni-2603` | LongCat Flash Omni 2603 | 128K | 日 token 配额 | 500,000 tokens/天 |
-| longcat  | `LongCat-Flash-Thinking` | LongCat Flash Thinking | 256K | 日 token 配额 | 500,000 tokens/天 |
-| longcat  | `LongCat-Flash-Thinking-2601` | LongCat Flash Thinking 2601 | 256K | 日 token 配额 | 500,000 tokens/天 |

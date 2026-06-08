@@ -1,8 +1,8 @@
 {
   "object": "list",
   "view": "premium",
-  "updated_at": "2026-05-25T04:29:35.041Z",
-  "total": 87,
+  "updated_at": "2026-06-08T13:57:08.131Z",
+  "total": 84,
   "filters": {
     "speed": "premium"
   },
@@ -924,7 +924,6 @@
       "aliases": [
         "github/DeepSeek-R1-0528",
         "github/DeepSeek-R1",
-        "sambanova/DeepSeek-R1-0528",
         "xingchen/xdeepseekr1"
       ],
       "tier": "large",
@@ -2075,7 +2074,9 @@
       "free_quota": null,
       "trial_scope": "none",
       "model_family": "kimi-k2.6",
-      "aliases": [],
+      "aliases": [
+        "xingchen/xopkimik26"
+      ],
       "tier": "medium",
       "speed": "premium",
       "use_case": [
@@ -2298,6 +2299,41 @@
       ],
       "performance_level": "mid",
       "estimated_latency": "3-10s"
+    },
+    {
+      "id": "MiMo-V2.5-Pro",
+      "object": "model",
+      "created": 1914855891,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "MiMo-V2.5-Pro",
+      "description": "MiMo-V2.5-Pro 是一个开源的专家混合（MoE）语言模型，具有 1.02T 的总参数量和 42B 的活跃参数量。它采用了 MiMo-V2-Flash 中引入的混合注意力架构和 3 层多标记预测（MTP），支持高达 1M 标记的上下文长度。",
+      "context_label": "unknown",
+      "price_input": 7,
+      "price_output": 21,
+      "is_free": false,
+      "capabilities": [
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "mimo-v2.5-pro",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "premium",
+      "use_case": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "1-3s"
     },
     {
       "id": "models/gemini-3.1-pro-preview",
@@ -2634,45 +2670,6 @@
       "estimated_latency": "1-3s"
     },
     {
-      "id": "llama-3.1-nemotron-nano-vl-8b-v1",
-      "object": "model",
-      "created": 1654189783,
-      "owned_by": "nvidia",
-      "provider": "nvidia",
-      "name": "llama-3.1-nemotron-nano-vl-8b-v1",
-      "description": "Model: nvidia/llama-3.1-nemotron-nano-vl-8b-v1",
-      "context_label": "unknown",
-      "is_free": false,
-      "capabilities": [
-        "vision"
-      ],
-      "tags": [
-        "text-generation",
-        "vision",
-        "multimodal"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
-      "model_family": "llama-3.1-nemotron-nano-vl-8b-v1",
-      "model_variant": "vl",
-      "aliases": [],
-      "parameter_count": 8000000000,
-      "tier": "medium",
-      "speed": "premium",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "image-understanding",
-        "visual-q&a"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "1-3s"
-    },
-    {
       "id": "llama-3.1-nemotron-ultra-253b-v1",
       "object": "model",
       "created": 1055822266,
@@ -2797,93 +2794,6 @@
       "estimated_latency": "1-3s"
     },
     {
-      "id": "nemotron-3-nano-omni-30b-a3b-reasoning",
-      "object": "model",
-      "created": 945254306,
-      "owned_by": "nvidia",
-      "provider": "nvidia",
-      "name": "nemotron-3-nano-omni-30b-a3b-reasoning",
-      "description": "Model: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
-      "context_label": "unknown",
-      "is_free": false,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "reasoning",
-        "text-generation",
-        "chat"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
-      "model_family": "nemotron-3-nano-omni-30b-a3b-reasoning",
-      "model_variant": "reasoning",
-      "aliases": [
-        "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
-      ],
-      "parameter_count": 30000000000,
-      "tier": "large",
-      "speed": "premium",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a",
-        "complex-reasoning"
-      ],
-      "performance_level": "high",
-      "estimated_latency": "3-10s"
-    },
-    {
-      "id": "nemotron-nano-12b-v2-vl",
-      "object": "model",
-      "created": 311795952,
-      "owned_by": "nvidia",
-      "provider": "nvidia",
-      "name": "nemotron-nano-12b-v2-vl",
-      "description": "Model: nvidia/nemotron-nano-12b-v2-vl",
-      "context_label": "unknown",
-      "is_free": false,
-      "capabilities": [
-        "vision"
-      ],
-      "tags": [
-        "text-generation",
-        "vision",
-        "multimodal"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
-      "model_family": "nemotron-nano-12b-v2-vl",
-      "model_variant": "vl",
-      "aliases": [
-        "nvidia/nemotron-nano-12b-v2-vl:free"
-      ],
-      "parameter_count": 12000000000,
-      "tier": "large",
-      "speed": "premium",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "image-understanding",
-        "visual-q&a"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "3-10s"
-    },
-    {
       "id": "neva-22b",
       "object": "model",
       "created": 1502960684,
@@ -2922,15 +2832,62 @@
       "estimated_latency": "3-10s"
     },
     {
+      "id": "xopkimik26",
+      "object": "model",
+      "created": 1124126980,
+      "owned_by": "xingchen",
+      "provider": "xingchen",
+      "name": "Kimi-K2.6",
+      "description": "Kimi K2.6 是一款开源原生多模态智能体模型，在长链路代码开发、代码驱动设计、主动自主执行以及集群任务编排等实用能力上实现了全面升级。",
+      "context_size": 262144,
+      "context_label": "262K",
+      "price_input": 6.5,
+      "price_output": 27,
+      "is_free": false,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision"
+      ],
+      "tags": [
+        "chat",
+        "text-generation",
+        "vision",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "kimi-k2.6",
+      "aliases": [
+        "Kimi-K2.6"
+      ],
+      "tier": "large",
+      "speed": "premium",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "3-10s"
+    },
+    {
       "id": "xopdeepseekv4pro",
       "object": "model",
       "created": 663035872,
       "owned_by": "xingchen",
       "provider": "xingchen",
       "name": "DeepSeek-V4-Pro",
-      "description": "DeepSeek-V4 系列预览版，DeepSeek-V4-Pro 参数量达 1.6 万亿（激活参数量 490 亿），模型支持百万级上下文窗口。",
-      "context_size": 262144,
-      "context_label": "262K",
+      "description": "DeepSeek-V4 系列预览版，DeepSeek-V4-Pro 参数量达 1.6 万亿（激活参数量 490 亿）。",
+      "context_size": 1,
+      "context_label": "1",
       "price_input": 12,
       "price_output": 24,
       "is_free": false,
@@ -2960,54 +2917,6 @@
         "q&a",
         "content-creation",
         "writing-assistance"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "3-10s"
-    },
-    {
-      "id": "xopqwen36v35b",
-      "object": "model",
-      "created": 1041248835,
-      "owned_by": "xingchen",
-      "provider": "xingchen",
-      "name": "Qwen3.6-35B-A3B",
-      "description": "Qwen3.6-35B-A3B，以稳定性与实用性为核心，在智能体编码、思维上下文保留上显著升级，为 350 亿参数、30 亿激活参数的因果视觉语言模型，编码开发体验更高效流畅。",
-      "context_size": 131072,
-      "context_label": "131K",
-      "price_input": 1,
-      "price_output": 3.6,
-      "is_free": false,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "vision"
-      ],
-      "tags": [
-        "chat",
-        "text-generation",
-        "vision",
-        "multimodal"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
-      "model_family": "qwen3.6-35b-a3b",
-      "aliases": [
-        "Qwen3.6-35B-A3B"
-      ],
-      "parameter_count": 35000000000,
-      "tier": "large",
-      "speed": "premium",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance",
-        "image-understanding",
-        "visual-q&a"
       ],
       "performance_level": "mid",
       "estimated_latency": "3-10s"
@@ -3194,54 +3103,6 @@
       "estimated_latency": "3-10s"
     },
     {
-      "id": "xopqwen35v35b",
-      "object": "model",
-      "created": 1040062914,
-      "owned_by": "xingchen",
-      "provider": "xingchen",
-      "name": "Qwen3.5-35B-A3B",
-      "description": "Qwen3.5-35B-A3B 是阿里巴巴通义千问团队于2026 年 2 月 25 日开源的中型 MoE 稀疏架构大模型，隶属于 Qwen3.5 系列中型模型产品线，主打高性能与高效率平衡，被称为 \"中小团队的 AI 利器\"。核心亮点是35B 总参数仅激活 3B 进行推理，在保持旗舰级性能的同时大幅降低部署成本。",
-      "context_size": 131072,
-      "context_label": "131K",
-      "price_input": 0.4,
-      "price_output": 1.7,
-      "is_free": false,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "vision"
-      ],
-      "tags": [
-        "chat",
-        "text-generation",
-        "vision",
-        "multimodal"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
-      "model_family": "qwen3.5-35b-a3b",
-      "aliases": [
-        "Qwen3.5-35B-A3B"
-      ],
-      "parameter_count": 35000000000,
-      "tier": "large",
-      "speed": "premium",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance",
-        "image-understanding",
-        "visual-q&a"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "3-10s"
-    },
-    {
       "id": "xdeepseekr1",
       "object": "model",
       "created": 837229335,
@@ -3275,8 +3136,7 @@
       "aliases": [
         "DeepSeek-R1",
         "github/DeepSeek-R1-0528",
-        "github/DeepSeek-R1",
-        "sambanova/DeepSeek-R1-0528"
+        "github/DeepSeek-R1"
       ],
       "tier": "large",
       "speed": "premium",

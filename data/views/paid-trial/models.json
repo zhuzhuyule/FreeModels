@@ -1,8 +1,8 @@
 {
   "object": "list",
   "view": "paid-trial",
-  "updated_at": "2026-05-25T04:29:35.032Z",
-  "total": 136,
+  "updated_at": "2026-06-08T13:57:08.124Z",
+  "total": 138,
   "filters": {
     "isFree": "false",
     "trialScope": "all"
@@ -221,8 +221,7 @@
         "cloudflare/@cf/openai/whisper-large-v3-turbo",
         "whisper-large-v3",
         "groq/whisper-large-v3-turbo",
-        "groq/whisper-large-v3",
-        "sambanova/Whisper-Large-v3"
+        "groq/whisper-large-v3"
       ],
       "tier": "medium",
       "speed": "standard",
@@ -487,7 +486,6 @@
       "model_family": "deepseek-v3",
       "aliases": [
         "github/DeepSeek-V3-0324",
-        "sambanova/DeepSeek-V3-0324",
         "xingchen/xdeepseekv3"
       ],
       "tier": "medium",
@@ -530,7 +528,6 @@
       "aliases": [
         "github/DeepSeek-R1-0528",
         "github/DeepSeek-R1",
-        "sambanova/DeepSeek-R1-0528",
         "xingchen/xdeepseekr1"
       ],
       "tier": "large",
@@ -721,8 +718,7 @@
         "cloudflare/@cf/openai/whisper-large-v3-turbo",
         "whisper-large-v3-turbo",
         "groq/whisper-large-v3-turbo",
-        "groq/whisper-large-v3",
-        "sambanova/Whisper-Large-v3"
+        "groq/whisper-large-v3"
       ],
       "tier": "medium",
       "speed": "standard",
@@ -1100,7 +1096,6 @@
       "model_family": "qwen3-32b",
       "aliases": [
         "groq/qwen/qwen3-32b",
-        "sambanova/Qwen3-32B",
         "xingchen/xop3qwen32b"
       ],
       "parameter_count": 32000000000,
@@ -1275,7 +1270,6 @@
       "model_family": "qwen3-235b-a22b",
       "aliases": [
         "Qwen3-235B-A22B-Instruct-2507",
-        "sambanova/Qwen3-235B-A22B-Instruct-2507",
         "xingchen/xop3qwen235b2507",
         "xingchen/xop3qwen235b"
       ],
@@ -1754,7 +1748,6 @@
       "model_variant": "instruct",
       "aliases": [
         "Qwen3-235B-A22B",
-        "sambanova/Qwen3-235B-A22B-Instruct-2507",
         "xingchen/xop3qwen235b2507",
         "xingchen/xop3qwen235b"
       ],
@@ -2380,9 +2373,7 @@
       "free_quota": null,
       "trial_scope": "all",
       "model_family": "deepseek-v3.1-terminus",
-      "aliases": [
-        "sambanova/DeepSeek-V3.1-Terminus"
-      ],
+      "aliases": [],
       "tier": "medium",
       "speed": "standard",
       "use_case": [
@@ -3970,8 +3961,8 @@
       "created": 461050587,
       "owned_by": "gitee",
       "provider": "gitee",
-      "name": "search",
-      "description": "1",
+      "name": "全网搜索",
+      "description": "从近百亿网页和生态内容源中搜索高质量世界知识，例如新闻、图片、百科、文库等。",
       "context_label": "unknown",
       "price_input": 0,
       "price_output": 0,
@@ -4668,7 +4659,7 @@
       "model_family": "deepseek-v4-flash",
       "aliases": [
         "deepseek-ai/deepseek-v4-flash",
-        "deepseek/deepseek-v4-flash:free"
+        "xingchen/xopdeepseekv4flash"
       ],
       "tier": "medium",
       "speed": "standard",
@@ -4754,6 +4745,80 @@
       ],
       "performance_level": "entry",
       "estimated_latency": "1-3s"
+    },
+    {
+      "id": "Hy-MT2-30B-A3B",
+      "object": "model",
+      "created": 1475971707,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "Hy-MT2-30B-A3B 翻译大模型",
+      "description": "Hy-MT2-30B-A3B 模型是一款高性能多语言翻译大模型，具备优秀的跨语言理解与生成能力，适用于实时翻译、本地化与全球化AI应用场景。",
+      "context_size": 32000,
+      "context_label": "32K",
+      "price_input": 0.7,
+      "price_output": 1.2,
+      "is_free": false,
+      "capabilities": [
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "all",
+      "model_family": "hy-mt2-30b-a3b",
+      "aliases": [],
+      "parameter_count": 30000000000,
+      "tier": "medium",
+      "speed": "standard",
+      "use_case": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "1-3s"
+    },
+    {
+      "id": "HY-MT2-7B",
+      "object": "model",
+      "created": 430274444,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "HY-MT2-7B  翻译大模型",
+      "description": "Hy-MT2-7B 模型是一款轻量级多语言翻译模型，具备优秀的跨语言理解与翻译能力，适用于实时翻译与高并发AI服务场景。",
+      "context_size": 32000,
+      "context_label": "32K",
+      "price_input": 0.3,
+      "price_output": 0.3,
+      "is_free": false,
+      "capabilities": [
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "all",
+      "model_family": "hy-mt2-7b",
+      "aliases": [],
+      "parameter_count": 7000000000,
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
     },
     {
       "id": "ChatTTS",
