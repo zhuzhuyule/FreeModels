@@ -134,6 +134,24 @@ export const PROVIDER_META: Record<string, ProviderMeta> = {
     priceCurrency: 'CNY',
     priceUnit: 'per_million_tokens',
   },
+  agnes: {
+    name: 'agnes',
+    displayName: 'Agnes AI',
+    website: 'https://agnes-ai.com',
+    apiBaseUrl: 'https://apihub.agnes-ai.com/v1',
+    channelType: 'openai',
+    priceCurrency: 'USD',
+    priceUnit: 'per_million_tokens',
+  },
+  sensenova: {
+    name: 'sensenova',
+    displayName: 'SenseNova / 商汤日日新',
+    website: 'https://www.sensenova.cn',
+    apiBaseUrl: 'https://token.sensenova.cn/v1',
+    channelType: 'openai',
+    priceCurrency: 'CNY',
+    priceUnit: 'per_million_tokens',
+  },
 };
 
 export function loadCache(): Record<string, CachedCapabilities> {
