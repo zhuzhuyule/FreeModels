@@ -1,9 +1,99 @@
 {
   "object": "list",
   "provider": "xingchen",
-  "updated_at": "2026-05-25T04:29:35.019Z",
-  "total": 48,
+  "updated_at": "2026-06-08T13:57:08.106Z",
+  "total": 51,
   "data": [
+    {
+      "id": "xopdeepseekv4flash",
+      "object": "model",
+      "created": 503645059,
+      "owned_by": "xingchen",
+      "provider": "xingchen",
+      "name": "DeepSeek-V4-Flash",
+      "description": "DeepSeek-V4 系列预览版， DeepSeek-V4-Flash总参数量 2840 亿（激活 130 亿）。",
+      "context_size": 1,
+      "context_label": "1",
+      "price_input": 1,
+      "price_output": 2,
+      "is_free": false,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "deepseek-v4-flash",
+      "aliases": [
+        "DeepSeek-V4-Flash",
+        "deepseek-ai/deepseek-v4-flash"
+      ],
+      "tier": "medium",
+      "speed": "standard",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "1-3s"
+    },
+    {
+      "id": "xopkimik26",
+      "object": "model",
+      "created": 1124126980,
+      "owned_by": "xingchen",
+      "provider": "xingchen",
+      "name": "Kimi-K2.6",
+      "description": "Kimi K2.6 是一款开源原生多模态智能体模型，在长链路代码开发、代码驱动设计、主动自主执行以及集群任务编排等实用能力上实现了全面升级。",
+      "context_size": 262144,
+      "context_label": "262K",
+      "price_input": 6.5,
+      "price_output": 27,
+      "is_free": false,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision"
+      ],
+      "tags": [
+        "chat",
+        "text-generation",
+        "vision",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "kimi-k2.6",
+      "aliases": [
+        "Kimi-K2.6"
+      ],
+      "tier": "large",
+      "speed": "premium",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "3-10s"
+    },
     {
       "id": "xopdeepseekv4pro",
       "object": "model",
@@ -11,9 +101,9 @@
       "owned_by": "xingchen",
       "provider": "xingchen",
       "name": "DeepSeek-V4-Pro",
-      "description": "DeepSeek-V4 系列预览版，DeepSeek-V4-Pro 参数量达 1.6 万亿（激活参数量 490 亿），模型支持百万级上下文窗口。",
-      "context_size": 262144,
-      "context_label": "262K",
+      "description": "DeepSeek-V4 系列预览版，DeepSeek-V4-Pro 参数量达 1.6 万亿（激活参数量 490 亿）。",
+      "context_size": 1,
+      "context_label": "1",
       "price_input": 12,
       "price_output": 24,
       "is_free": false,
@@ -46,6 +136,149 @@
       ],
       "performance_level": "mid",
       "estimated_latency": "3-10s"
+    },
+    {
+      "id": "xopqwen36v35b",
+      "object": "model",
+      "created": 1041248835,
+      "owned_by": "xingchen",
+      "provider": "xingchen",
+      "name": "Qwen3.6-35B-A3B",
+      "description": "Qwen3.6-35B-A3B，以稳定性与实用性为核心，在智能体编码、思维上下文保留上显著升级，为 350 亿参数、30 亿激活参数的因果视觉语言模型，编码开发体验更高效流畅。",
+      "context_size": 131072,
+      "context_label": "131K",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision"
+      ],
+      "tags": [
+        "chat",
+        "text-generation",
+        "vision",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": null,
+      "trial_scope": "specific",
+      "model_family": "qwen3.6-35b-a3b",
+      "aliases": [
+        "Qwen3.6-35B-A3B"
+      ],
+      "parameter_count": 35000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "xopqwen35v35b",
+      "object": "model",
+      "created": 1040062914,
+      "owned_by": "xingchen",
+      "provider": "xingchen",
+      "name": "Qwen3.5-35B-A3B",
+      "description": "Qwen3.5-35B-A3B 是阿里巴巴通义千问团队于2026 年 2 月 25 日开源的中型 MoE 稀疏架构大模型，隶属于 Qwen3.5 系列中型模型产品线，主打高性能与高效率平衡，被称为 \"中小团队的 AI 利器\"。核心亮点是35B 总参数仅激活 3B 进行推理，在保持旗舰级性能的同时大幅降低部署成本。",
+      "context_size": 131072,
+      "context_label": "131K",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision"
+      ],
+      "tags": [
+        "chat",
+        "text-generation",
+        "vision",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": null,
+      "trial_scope": "specific",
+      "model_family": "qwen3.5-35b-a3b",
+      "aliases": [
+        "Qwen3.5-35B-A3B"
+      ],
+      "parameter_count": 35000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "xoppaddleocrv16",
+      "object": "model",
+      "created": 2061482730,
+      "owned_by": "xingchen",
+      "provider": "xingchen",
+      "name": "PaddleOCR-VL-1.6",
+      "description": "PaddleOCR-VL-1.6对标业界顶尖多模态视觉语言大模型（VLM）具备强劲竞争力。模型架构与 PaddleOCR-VL-1.5 完全兼容，可零成本即插即用、无缝迁移。",
+      "context_size": 32768,
+      "context_label": "33K",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision",
+        "ocr"
+      ],
+      "tags": [
+        "chat",
+        "text-generation",
+        "vision",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": null,
+      "trial_scope": "specific",
+      "model_family": "paddleocr-vl-1.6",
+      "model_variant": "vl",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
     },
     {
       "id": "xsparkx2flash",
@@ -86,54 +319,6 @@
       ],
       "performance_level": "entry",
       "estimated_latency": "1-3s"
-    },
-    {
-      "id": "xopqwen36v35b",
-      "object": "model",
-      "created": 1041248835,
-      "owned_by": "xingchen",
-      "provider": "xingchen",
-      "name": "Qwen3.6-35B-A3B",
-      "description": "Qwen3.6-35B-A3B，以稳定性与实用性为核心，在智能体编码、思维上下文保留上显著升级，为 350 亿参数、30 亿激活参数的因果视觉语言模型，编码开发体验更高效流畅。",
-      "context_size": 131072,
-      "context_label": "131K",
-      "price_input": 1,
-      "price_output": 3.6,
-      "is_free": false,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "vision"
-      ],
-      "tags": [
-        "chat",
-        "text-generation",
-        "vision",
-        "multimodal"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
-      "model_family": "qwen3.6-35b-a3b",
-      "aliases": [
-        "Qwen3.6-35B-A3B"
-      ],
-      "parameter_count": 35000000000,
-      "tier": "large",
-      "speed": "premium",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance",
-        "image-understanding",
-        "visual-q&a"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "3-10s"
     },
     {
       "id": "xopglm51",
@@ -529,54 +714,6 @@
       ],
       "performance_level": "mid",
       "estimated_latency": "1-3s"
-    },
-    {
-      "id": "xopqwen35v35b",
-      "object": "model",
-      "created": 1040062914,
-      "owned_by": "xingchen",
-      "provider": "xingchen",
-      "name": "Qwen3.5-35B-A3B",
-      "description": "Qwen3.5-35B-A3B 是阿里巴巴通义千问团队于2026 年 2 月 25 日开源的中型 MoE 稀疏架构大模型，隶属于 Qwen3.5 系列中型模型产品线，主打高性能与高效率平衡，被称为 \"中小团队的 AI 利器\"。核心亮点是35B 总参数仅激活 3B 进行推理，在保持旗舰级性能的同时大幅降低部署成本。",
-      "context_size": 131072,
-      "context_label": "131K",
-      "price_input": 0.4,
-      "price_output": 1.7,
-      "is_free": false,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "vision"
-      ],
-      "tags": [
-        "chat",
-        "text-generation",
-        "vision",
-        "multimodal"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
-      "model_family": "qwen3.5-35b-a3b",
-      "aliases": [
-        "Qwen3.5-35B-A3B"
-      ],
-      "parameter_count": 35000000000,
-      "tier": "large",
-      "speed": "premium",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance",
-        "image-understanding",
-        "visual-q&a"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "3-10s"
     },
     {
       "id": "xopglmv47flash",
@@ -1011,7 +1148,6 @@
       "aliases": [
         "Qwen3-235B-A22B",
         "Qwen3-235B-A22B-Instruct-2507",
-        "sambanova/Qwen3-235B-A22B-Instruct-2507",
         "xingchen/xop3qwen235b"
       ],
       "parameter_count": 235000000000,
@@ -1103,7 +1239,6 @@
       "aliases": [
         "Qwen3-235B-A22B",
         "Qwen3-235B-A22B-Instruct-2507",
-        "sambanova/Qwen3-235B-A22B-Instruct-2507",
         "xingchen/xop3qwen235b2507"
       ],
       "parameter_count": 235000000000,
@@ -1193,8 +1328,7 @@
       "model_family": "qwen3-32b",
       "aliases": [
         "Qwen3-32B",
-        "groq/qwen/qwen3-32b",
-        "sambanova/Qwen3-32B"
+        "groq/qwen/qwen3-32b"
       ],
       "parameter_count": 32000000000,
       "tier": "large",
@@ -1238,8 +1372,7 @@
       "model_family": "deepseek-v3",
       "aliases": [
         "DeepSeek-V3",
-        "github/DeepSeek-V3-0324",
-        "sambanova/DeepSeek-V3-0324"
+        "github/DeepSeek-V3-0324"
       ],
       "tier": "medium",
       "speed": "standard",
@@ -1286,8 +1419,7 @@
       "aliases": [
         "DeepSeek-R1",
         "github/DeepSeek-R1-0528",
-        "github/DeepSeek-R1",
-        "sambanova/DeepSeek-R1-0528"
+        "github/DeepSeek-R1"
       ],
       "tier": "large",
       "speed": "premium",

@@ -1,8 +1,8 @@
 {
   "object": "list",
   "provider": "cloudflare",
-  "updated_at": "2026-05-25T04:29:35.014Z",
-  "total": 72,
+  "updated_at": "2026-06-08T13:57:08.101Z",
+  "total": 57,
   "data": [
     {
       "id": "@cf/openai/gpt-oss-120b",
@@ -218,53 +218,6 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "@cf/meta/llama-3-8b-instruct",
-      "object": "model",
-      "created": 687720006,
-      "owned_by": "cloudflare",
-      "provider": "cloudflare",
-      "name": "@cf/meta/llama-3-8b-instruct",
-      "description": "Generation over generation, Meta Llama 3 demonstrates state-of-the-art performance on a wide range of industry benchmarks and offers new capabilities, including improved reasoning.",
-      "context_size": 7968,
-      "context_label": "8K",
-      "price_input": 0.282,
-      "price_output": 0.827,
-      "is_free": true,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "reasoning",
-        "text-generation"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "daily-tokens",
-      "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
-      },
-      "trial_scope": "all",
-      "model_family": "llama-3-8b",
-      "model_variant": "instruct",
-      "aliases": [
-        "cloudflare/@cf/meta/llama-3-8b-instruct-awq"
-      ],
-      "parameter_count": 8000000000,
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "content-creation",
-        "writing-assistance",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
       "id": "@cf/meta/llama-3.2-3b-instruct",
       "object": "model",
       "created": 1195405333,
@@ -305,57 +258,6 @@
         "writing-assistance"
       ],
       "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "@cf/moonshotai/kimi-k2.5",
-      "object": "model",
-      "created": 1273849036,
-      "owned_by": "cloudflare",
-      "provider": "cloudflare",
-      "name": "@cf/moonshotai/kimi-k2.5",
-      "description": "Kimi K2.5 is a frontier-scale open-source model with a 256k context window, multi-turn tool calling, vision inputs, and structured outputs for agentic workloads.",
-      "context_size": 256000,
-      "context_label": "256K",
-      "price_input": 0.1,
-      "price_output": 3,
-      "is_free": true,
-      "capabilities": [
-        "text-generation",
-        "function-calling",
-        "reasoning"
-      ],
-      "tags": [
-        "vision",
-        "text-generation",
-        "tool-use",
-        "function-calling",
-        "reasoning",
-        "multimodal"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": true,
-      "has_tool_use": true,
-      "free_mechanism": "daily-tokens",
-      "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
-      },
-      "trial_scope": "all",
-      "model_family": "moonshotai-kimi-k2.5",
-      "aliases": [],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "image-understanding",
-        "visual-q&a",
-        "content-creation",
-        "writing-assistance",
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -438,89 +340,6 @@
         "writing-assistance",
         "semantic-search",
         "similarity"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "@cf/meta/llama-2-7b-chat-fp16",
-      "object": "model",
-      "created": 1742779514,
-      "owned_by": "cloudflare",
-      "provider": "cloudflare",
-      "name": "@cf/meta/llama-2-7b-chat-fp16",
-      "description": "Full precision (fp16) generative text model with 7 billion parameters from Meta",
-      "context_size": 4096,
-      "context_label": "4K",
-      "price_input": 0.556,
-      "price_output": 6.667,
-      "is_free": true,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "daily-tokens",
-      "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
-      },
-      "trial_scope": "all",
-      "model_family": "llama-2-7b",
-      "model_variant": "chat",
-      "quantization": "fp16",
-      "aliases": [
-        "cloudflare/@cf/meta/llama-2-7b-chat-int8"
-      ],
-      "parameter_count": 7000000000,
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "@cf/mistral/mistral-7b-instruct-v0.1",
-      "object": "model",
-      "created": 650922891,
-      "owned_by": "cloudflare",
-      "provider": "cloudflare",
-      "name": "@cf/mistral/mistral-7b-instruct-v0.1",
-      "description": "Instruct fine-tuned version of the Mistral-7b generative text model with 7 billion parameters",
-      "context_size": 2824,
-      "context_label": "3K",
-      "price_input": 0.11,
-      "price_output": 0.19,
-      "is_free": true,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "daily-tokens",
-      "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
-      },
-      "trial_scope": "all",
-      "model_family": "mistral-7b-v0.1",
-      "model_variant": "instruct",
-      "aliases": [],
-      "parameter_count": 7000000000,
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
@@ -714,44 +533,6 @@
         "writing-assistance",
         "semantic-search",
         "similarity"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "@hf/mistral/mistral-7b-instruct-v0.2",
-      "object": "model",
-      "created": 273653179,
-      "owned_by": "cloudflare",
-      "provider": "cloudflare",
-      "name": "@hf/mistral/mistral-7b-instruct-v0.2",
-      "description": "The Mistral-7B-Instruct-v0.2 Large Language Model (LLM) is an instruct fine-tuned version of the Mistral-7B-v0.2. Mistral-7B-v0.2 has the following changes compared to Mistral-7B-v0.1: 32k context window (vs 8k context in v0.1), rope-theta = 1e6, and no Sliding-Window Attention.",
-      "context_size": 3072,
-      "context_label": "3K",
-      "is_free": true,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "daily-tokens",
-      "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
-      },
-      "trial_scope": "all",
-      "model_family": "@hf-mistral-mistral-7b-v0.2",
-      "model_variant": "instruct",
-      "aliases": [],
-      "parameter_count": 7000000000,
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
@@ -1002,47 +783,6 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "@cf/meta/llama-2-7b-chat-int8",
-      "object": "model",
-      "created": 1742671668,
-      "owned_by": "cloudflare",
-      "provider": "cloudflare",
-      "name": "@cf/meta/llama-2-7b-chat-int8",
-      "description": "Quantized (int8) generative text model with 7 billion parameters from Meta",
-      "context_size": 8192,
-      "context_label": "8K",
-      "is_free": true,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "daily-tokens",
-      "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
-      },
-      "trial_scope": "all",
-      "model_family": "llama-2-7b",
-      "model_variant": "chat",
-      "quantization": "int8",
-      "aliases": [
-        "cloudflare/@cf/meta/llama-2-7b-chat-fp16"
-      ],
-      "parameter_count": 7000000000,
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
       "id": "@cf/meta/llama-3.1-8b-instruct-fp8",
       "object": "model",
       "created": 1897538292,
@@ -1073,7 +813,6 @@
       "model_variant": "instruct",
       "quantization": "fp8",
       "aliases": [
-        "cloudflare/@cf/meta/llama-3.1-8b-instruct-awq",
         "meta/llama-3.1-8b-instruct"
       ],
       "parameter_count": 8000000000,
@@ -1164,7 +903,8 @@
       "trial_scope": "all",
       "model_family": "moonshotai-kimi-k2.6",
       "aliases": [
-        "moonshotai/kimi-k2.6"
+        "moonshotai/kimi-k2.6",
+        "moonshotai/kimi-k2.6:free"
       ],
       "tier": "large",
       "speed": "fast",
@@ -1746,45 +1486,6 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "@hf/nousresearch/hermes-2-pro-mistral-7b",
-      "object": "model",
-      "created": 1629406115,
-      "owned_by": "cloudflare",
-      "provider": "cloudflare",
-      "name": "@hf/nousresearch/hermes-2-pro-mistral-7b",
-      "description": "Hermes 2 Pro on Mistral 7B is the new flagship 7B Hermes! Hermes 2 Pro is an upgraded, retrained version of Nous Hermes 2, consisting of an updated and cleaned version of the OpenHermes 2.5 Dataset, as well as a newly introduced Function Calling and JSON Mode dataset developed in-house.",
-      "context_size": 24000,
-      "context_label": "24K",
-      "is_free": true,
-      "capabilities": [
-        "text-generation",
-        "function-calling"
-      ],
-      "tags": [
-        "text-generation",
-        "function-calling"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": true,
-      "free_mechanism": "daily-tokens",
-      "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
-      },
-      "trial_scope": "all",
-      "model_family": "@hf-nousresearch-hermes-2-pro-mistral-7b",
-      "aliases": [],
-      "parameter_count": 7000000000,
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
       "id": "@cf/nvidia/nemotron-3-120b-a12b",
       "object": "model",
       "created": 1408041182,
@@ -1959,89 +1660,6 @@
         "content-creation",
         "writing-assistance",
         "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "@cf/meta/llama-3.1-8b-instruct-awq",
-      "object": "model",
-      "created": 1897533135,
-      "owned_by": "cloudflare",
-      "provider": "cloudflare",
-      "name": "@cf/meta/llama-3.1-8b-instruct-awq",
-      "description": "Quantized (int4) generative text model with 8 billion parameters from Meta.\n",
-      "context_size": 8192,
-      "context_label": "8K",
-      "price_input": 0.123,
-      "price_output": 0.266,
-      "is_free": true,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "daily-tokens",
-      "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
-      },
-      "trial_scope": "all",
-      "model_family": "llama-3.1-8b",
-      "model_variant": "instruct",
-      "quantization": "awq",
-      "aliases": [
-        "cloudflare/@cf/meta/llama-3.1-8b-instruct-fp8",
-        "meta/llama-3.1-8b-instruct"
-      ],
-      "parameter_count": 8000000000,
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "@cf/unum/uform-gen2-qwen-500m",
-      "object": "model",
-      "created": 1712080890,
-      "owned_by": "cloudflare",
-      "provider": "cloudflare",
-      "name": "@cf/unum/uform-gen2-qwen-500m",
-      "description": "UForm-Gen is a small generative vision-language model primarily designed for Image Captioning and Visual Question Answering. The model was pre-trained on the internal image captioning dataset and fine-tuned on public instructions datasets: SVIT, LVIS, VQAs datasets.",
-      "context_label": "unknown",
-      "is_free": true,
-      "capabilities": [
-        "vision"
-      ],
-      "tags": [
-        "vision",
-        "text-generation",
-        "multimodal"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": "daily-tokens",
-      "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
-      },
-      "trial_scope": "all",
-      "model_family": "unum-uform-gen2-qwen-500m",
-      "aliases": [],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "image-understanding",
-        "visual-q&a",
-        "content-creation",
-        "writing-assistance"
       ],
       "performance_level": "mid",
       "estimated_latency": "< 1s"
@@ -2224,49 +1842,6 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "@cf/meta/llama-3-8b-instruct-awq",
-      "object": "model",
-      "created": 1665736656,
-      "owned_by": "cloudflare",
-      "provider": "cloudflare",
-      "name": "@cf/meta/llama-3-8b-instruct-awq",
-      "description": "Quantized (int4) generative text model with 8 billion parameters from Meta.",
-      "context_size": 8192,
-      "context_label": "8K",
-      "price_input": 0.123,
-      "price_output": 0.266,
-      "is_free": true,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "daily-tokens",
-      "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
-      },
-      "trial_scope": "all",
-      "model_family": "llama-3-8b",
-      "model_variant": "instruct",
-      "quantization": "awq",
-      "aliases": [
-        "cloudflare/@cf/meta/llama-3-8b-instruct"
-      ],
-      "parameter_count": 8000000000,
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
       "id": "@cf/meta/llama-3.2-11b-vision-instruct",
       "object": "model",
       "created": 1402530999,
@@ -2387,8 +1962,7 @@
         "whisper-large-v3-turbo",
         "whisper-large-v3",
         "groq/whisper-large-v3-turbo",
-        "groq/whisper-large-v3",
-        "sambanova/Whisper-Large-v3"
+        "groq/whisper-large-v3"
       ],
       "tier": "medium",
       "speed": "fast",
@@ -2435,115 +2009,6 @@
         "writing-assistance",
         "text-to-speech",
         "voice-output"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "@cf/defog/sqlcoder-7b-2",
-      "object": "model",
-      "created": 265465533,
-      "owned_by": "cloudflare",
-      "provider": "cloudflare",
-      "name": "@cf/defog/sqlcoder-7b-2",
-      "description": "This model is intended to be used by non-technical users to understand data inside their SQL databases. ",
-      "context_size": 10000,
-      "context_label": "10K",
-      "is_free": true,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "daily-tokens",
-      "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
-      },
-      "trial_scope": "all",
-      "model_family": "defog-sqlcoder-7b-2",
-      "aliases": [],
-      "parameter_count": 7000000000,
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "@cf/microsoft/phi-2",
-      "object": "model",
-      "created": 150304402,
-      "owned_by": "cloudflare",
-      "provider": "cloudflare",
-      "name": "@cf/microsoft/phi-2",
-      "description": "Phi-2 is a Transformer-based model with a next-word prediction objective, trained on 1.4T tokens from multiple passes on a mixture of Synthetic and Web datasets for NLP and coding.",
-      "context_size": 2048,
-      "context_label": "2K",
-      "is_free": true,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "daily-tokens",
-      "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
-      },
-      "trial_scope": "all",
-      "model_family": "phi-2",
-      "aliases": [],
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "@cf/facebook/bart-large-cnn",
-      "object": "model",
-      "created": 122773987,
-      "owned_by": "cloudflare",
-      "provider": "cloudflare",
-      "name": "@cf/facebook/bart-large-cnn",
-      "description": "BART is a transformer encoder-encoder (seq2seq) model with a bidirectional (BERT-like) encoder and an autoregressive (GPT-like) decoder. You can use this model for text summarization.",
-      "context_label": "unknown",
-      "price_input": 0,
-      "is_free": true,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "daily-tokens",
-      "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
-      },
-      "trial_scope": "all",
-      "model_family": "facebook-bart-large-cnn",
-      "aliases": [],
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
@@ -2720,44 +2185,6 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "@hf/google/gemma-7b-it",
-      "object": "model",
-      "created": 1886496693,
-      "owned_by": "cloudflare",
-      "provider": "cloudflare",
-      "name": "@hf/google/gemma-7b-it",
-      "description": "Gemma is a family of lightweight, state-of-the-art open models from Google, built from the same research and technology used to create the Gemini models. They are text-to-text, decoder-only large language models, available in English, with open weights, pre-trained variants, and instruction-tuned variants.",
-      "context_size": 8192,
-      "context_label": "8K",
-      "is_free": true,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "daily-tokens",
-      "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
-      },
-      "trial_scope": "all",
-      "model_family": "@hf-google-gemma-7b",
-      "model_variant": "it",
-      "aliases": [],
-      "parameter_count": 7000000000,
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
       "id": "@cf/leonardo/lucid-origin",
       "object": "model",
       "created": 1859467082,
@@ -2844,58 +2271,6 @@
         "visual-q&a",
         "content-creation",
         "writing-assistance"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "@cf/google/gemma-3-12b-it",
-      "object": "model",
-      "created": 483040028,
-      "owned_by": "cloudflare",
-      "provider": "cloudflare",
-      "name": "@cf/google/gemma-3-12b-it",
-      "description": "Gemma 3 models are well-suited for a variety of text generation and image understanding tasks, including question answering, summarization, and reasoning. Gemma 3 models are multimodal, handling text and image input and generating text output, with a large, 128K context window, multilingual support in over 140 languages, and is available in more sizes than previous versions.",
-      "context_size": 80000,
-      "context_label": "80K",
-      "price_input": 0.345,
-      "price_output": 0.556,
-      "is_free": true,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "reasoning",
-        "vision",
-        "text-generation",
-        "multimodal"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": "daily-tokens",
-      "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
-      },
-      "trial_scope": "all",
-      "model_family": "gemma-3-12b",
-      "model_variant": "it",
-      "aliases": [
-        "google/gemma-3-12b-it",
-        "sambanova/gemma-3-12b-it"
-      ],
-      "parameter_count": 12000000000,
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "image-understanding",
-        "visual-q&a",
-        "content-creation",
-        "writing-assistance",
-        "complex-reasoning"
       ],
       "performance_level": "mid",
       "estimated_latency": "< 1s"

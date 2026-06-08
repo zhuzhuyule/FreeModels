@@ -1,8 +1,8 @@
 {
   "object": "list",
   "view": "free-quota",
-  "updated_at": "2026-05-25T04:29:35.031Z",
-  "total": 117,
+  "updated_at": "2026-06-08T13:57:08.123Z",
+  "total": 114,
   "filters": {
     "freeMechanism": [
       "daily-tokens",
@@ -225,53 +225,6 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "@cf/meta/llama-3-8b-instruct",
-      "object": "model",
-      "created": 687720006,
-      "owned_by": "cloudflare",
-      "provider": "cloudflare",
-      "name": "@cf/meta/llama-3-8b-instruct",
-      "description": "Generation over generation, Meta Llama 3 demonstrates state-of-the-art performance on a wide range of industry benchmarks and offers new capabilities, including improved reasoning.",
-      "context_size": 7968,
-      "context_label": "8K",
-      "price_input": 0.282,
-      "price_output": 0.827,
-      "is_free": true,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "reasoning",
-        "text-generation"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "daily-tokens",
-      "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
-      },
-      "trial_scope": "all",
-      "model_family": "llama-3-8b",
-      "model_variant": "instruct",
-      "aliases": [
-        "cloudflare/@cf/meta/llama-3-8b-instruct-awq"
-      ],
-      "parameter_count": 8000000000,
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "content-creation",
-        "writing-assistance",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
       "id": "@cf/meta/llama-3.2-3b-instruct",
       "object": "model",
       "created": 1195405333,
@@ -312,57 +265,6 @@
         "writing-assistance"
       ],
       "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "@cf/moonshotai/kimi-k2.5",
-      "object": "model",
-      "created": 1273849036,
-      "owned_by": "cloudflare",
-      "provider": "cloudflare",
-      "name": "@cf/moonshotai/kimi-k2.5",
-      "description": "Kimi K2.5 is a frontier-scale open-source model with a 256k context window, multi-turn tool calling, vision inputs, and structured outputs for agentic workloads.",
-      "context_size": 256000,
-      "context_label": "256K",
-      "price_input": 0.1,
-      "price_output": 3,
-      "is_free": true,
-      "capabilities": [
-        "text-generation",
-        "function-calling",
-        "reasoning"
-      ],
-      "tags": [
-        "vision",
-        "text-generation",
-        "tool-use",
-        "function-calling",
-        "reasoning",
-        "multimodal"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": true,
-      "has_tool_use": true,
-      "free_mechanism": "daily-tokens",
-      "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
-      },
-      "trial_scope": "all",
-      "model_family": "moonshotai-kimi-k2.5",
-      "aliases": [],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "image-understanding",
-        "visual-q&a",
-        "content-creation",
-        "writing-assistance",
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -445,89 +347,6 @@
         "writing-assistance",
         "semantic-search",
         "similarity"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "@cf/meta/llama-2-7b-chat-fp16",
-      "object": "model",
-      "created": 1742779514,
-      "owned_by": "cloudflare",
-      "provider": "cloudflare",
-      "name": "@cf/meta/llama-2-7b-chat-fp16",
-      "description": "Full precision (fp16) generative text model with 7 billion parameters from Meta",
-      "context_size": 4096,
-      "context_label": "4K",
-      "price_input": 0.556,
-      "price_output": 6.667,
-      "is_free": true,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "daily-tokens",
-      "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
-      },
-      "trial_scope": "all",
-      "model_family": "llama-2-7b",
-      "model_variant": "chat",
-      "quantization": "fp16",
-      "aliases": [
-        "cloudflare/@cf/meta/llama-2-7b-chat-int8"
-      ],
-      "parameter_count": 7000000000,
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "@cf/mistral/mistral-7b-instruct-v0.1",
-      "object": "model",
-      "created": 650922891,
-      "owned_by": "cloudflare",
-      "provider": "cloudflare",
-      "name": "@cf/mistral/mistral-7b-instruct-v0.1",
-      "description": "Instruct fine-tuned version of the Mistral-7b generative text model with 7 billion parameters",
-      "context_size": 2824,
-      "context_label": "3K",
-      "price_input": 0.11,
-      "price_output": 0.19,
-      "is_free": true,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "daily-tokens",
-      "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
-      },
-      "trial_scope": "all",
-      "model_family": "mistral-7b-v0.1",
-      "model_variant": "instruct",
-      "aliases": [],
-      "parameter_count": 7000000000,
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
@@ -721,44 +540,6 @@
         "writing-assistance",
         "semantic-search",
         "similarity"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "@hf/mistral/mistral-7b-instruct-v0.2",
-      "object": "model",
-      "created": 273653179,
-      "owned_by": "cloudflare",
-      "provider": "cloudflare",
-      "name": "@hf/mistral/mistral-7b-instruct-v0.2",
-      "description": "The Mistral-7B-Instruct-v0.2 Large Language Model (LLM) is an instruct fine-tuned version of the Mistral-7B-v0.2. Mistral-7B-v0.2 has the following changes compared to Mistral-7B-v0.1: 32k context window (vs 8k context in v0.1), rope-theta = 1e6, and no Sliding-Window Attention.",
-      "context_size": 3072,
-      "context_label": "3K",
-      "is_free": true,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "daily-tokens",
-      "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
-      },
-      "trial_scope": "all",
-      "model_family": "@hf-mistral-mistral-7b-v0.2",
-      "model_variant": "instruct",
-      "aliases": [],
-      "parameter_count": 7000000000,
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
@@ -1009,47 +790,6 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "@cf/meta/llama-2-7b-chat-int8",
-      "object": "model",
-      "created": 1742671668,
-      "owned_by": "cloudflare",
-      "provider": "cloudflare",
-      "name": "@cf/meta/llama-2-7b-chat-int8",
-      "description": "Quantized (int8) generative text model with 7 billion parameters from Meta",
-      "context_size": 8192,
-      "context_label": "8K",
-      "is_free": true,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "daily-tokens",
-      "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
-      },
-      "trial_scope": "all",
-      "model_family": "llama-2-7b",
-      "model_variant": "chat",
-      "quantization": "int8",
-      "aliases": [
-        "cloudflare/@cf/meta/llama-2-7b-chat-fp16"
-      ],
-      "parameter_count": 7000000000,
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
       "id": "@cf/meta/llama-3.1-8b-instruct-fp8",
       "object": "model",
       "created": 1897538292,
@@ -1080,7 +820,6 @@
       "model_variant": "instruct",
       "quantization": "fp8",
       "aliases": [
-        "cloudflare/@cf/meta/llama-3.1-8b-instruct-awq",
         "meta/llama-3.1-8b-instruct"
       ],
       "parameter_count": 8000000000,
@@ -1171,7 +910,8 @@
       "trial_scope": "all",
       "model_family": "moonshotai-kimi-k2.6",
       "aliases": [
-        "moonshotai/kimi-k2.6"
+        "moonshotai/kimi-k2.6",
+        "moonshotai/kimi-k2.6:free"
       ],
       "tier": "large",
       "speed": "fast",
@@ -1753,45 +1493,6 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "@hf/nousresearch/hermes-2-pro-mistral-7b",
-      "object": "model",
-      "created": 1629406115,
-      "owned_by": "cloudflare",
-      "provider": "cloudflare",
-      "name": "@hf/nousresearch/hermes-2-pro-mistral-7b",
-      "description": "Hermes 2 Pro on Mistral 7B is the new flagship 7B Hermes! Hermes 2 Pro is an upgraded, retrained version of Nous Hermes 2, consisting of an updated and cleaned version of the OpenHermes 2.5 Dataset, as well as a newly introduced Function Calling and JSON Mode dataset developed in-house.",
-      "context_size": 24000,
-      "context_label": "24K",
-      "is_free": true,
-      "capabilities": [
-        "text-generation",
-        "function-calling"
-      ],
-      "tags": [
-        "text-generation",
-        "function-calling"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": true,
-      "free_mechanism": "daily-tokens",
-      "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
-      },
-      "trial_scope": "all",
-      "model_family": "@hf-nousresearch-hermes-2-pro-mistral-7b",
-      "aliases": [],
-      "parameter_count": 7000000000,
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
       "id": "@cf/nvidia/nemotron-3-120b-a12b",
       "object": "model",
       "created": 1408041182,
@@ -1966,89 +1667,6 @@
         "content-creation",
         "writing-assistance",
         "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "@cf/meta/llama-3.1-8b-instruct-awq",
-      "object": "model",
-      "created": 1897533135,
-      "owned_by": "cloudflare",
-      "provider": "cloudflare",
-      "name": "@cf/meta/llama-3.1-8b-instruct-awq",
-      "description": "Quantized (int4) generative text model with 8 billion parameters from Meta.\n",
-      "context_size": 8192,
-      "context_label": "8K",
-      "price_input": 0.123,
-      "price_output": 0.266,
-      "is_free": true,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "daily-tokens",
-      "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
-      },
-      "trial_scope": "all",
-      "model_family": "llama-3.1-8b",
-      "model_variant": "instruct",
-      "quantization": "awq",
-      "aliases": [
-        "cloudflare/@cf/meta/llama-3.1-8b-instruct-fp8",
-        "meta/llama-3.1-8b-instruct"
-      ],
-      "parameter_count": 8000000000,
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "@cf/unum/uform-gen2-qwen-500m",
-      "object": "model",
-      "created": 1712080890,
-      "owned_by": "cloudflare",
-      "provider": "cloudflare",
-      "name": "@cf/unum/uform-gen2-qwen-500m",
-      "description": "UForm-Gen is a small generative vision-language model primarily designed for Image Captioning and Visual Question Answering. The model was pre-trained on the internal image captioning dataset and fine-tuned on public instructions datasets: SVIT, LVIS, VQAs datasets.",
-      "context_label": "unknown",
-      "is_free": true,
-      "capabilities": [
-        "vision"
-      ],
-      "tags": [
-        "vision",
-        "text-generation",
-        "multimodal"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": "daily-tokens",
-      "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
-      },
-      "trial_scope": "all",
-      "model_family": "unum-uform-gen2-qwen-500m",
-      "aliases": [],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "image-understanding",
-        "visual-q&a",
-        "content-creation",
-        "writing-assistance"
       ],
       "performance_level": "mid",
       "estimated_latency": "< 1s"
@@ -2231,49 +1849,6 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "@cf/meta/llama-3-8b-instruct-awq",
-      "object": "model",
-      "created": 1665736656,
-      "owned_by": "cloudflare",
-      "provider": "cloudflare",
-      "name": "@cf/meta/llama-3-8b-instruct-awq",
-      "description": "Quantized (int4) generative text model with 8 billion parameters from Meta.",
-      "context_size": 8192,
-      "context_label": "8K",
-      "price_input": 0.123,
-      "price_output": 0.266,
-      "is_free": true,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "daily-tokens",
-      "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
-      },
-      "trial_scope": "all",
-      "model_family": "llama-3-8b",
-      "model_variant": "instruct",
-      "quantization": "awq",
-      "aliases": [
-        "cloudflare/@cf/meta/llama-3-8b-instruct"
-      ],
-      "parameter_count": 8000000000,
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
       "id": "@cf/meta/llama-3.2-11b-vision-instruct",
       "object": "model",
       "created": 1402530999,
@@ -2394,8 +1969,7 @@
         "whisper-large-v3-turbo",
         "whisper-large-v3",
         "groq/whisper-large-v3-turbo",
-        "groq/whisper-large-v3",
-        "sambanova/Whisper-Large-v3"
+        "groq/whisper-large-v3"
       ],
       "tier": "medium",
       "speed": "fast",
@@ -2442,115 +2016,6 @@
         "writing-assistance",
         "text-to-speech",
         "voice-output"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "@cf/defog/sqlcoder-7b-2",
-      "object": "model",
-      "created": 265465533,
-      "owned_by": "cloudflare",
-      "provider": "cloudflare",
-      "name": "@cf/defog/sqlcoder-7b-2",
-      "description": "This model is intended to be used by non-technical users to understand data inside their SQL databases. ",
-      "context_size": 10000,
-      "context_label": "10K",
-      "is_free": true,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "daily-tokens",
-      "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
-      },
-      "trial_scope": "all",
-      "model_family": "defog-sqlcoder-7b-2",
-      "aliases": [],
-      "parameter_count": 7000000000,
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "@cf/microsoft/phi-2",
-      "object": "model",
-      "created": 150304402,
-      "owned_by": "cloudflare",
-      "provider": "cloudflare",
-      "name": "@cf/microsoft/phi-2",
-      "description": "Phi-2 is a Transformer-based model with a next-word prediction objective, trained on 1.4T tokens from multiple passes on a mixture of Synthetic and Web datasets for NLP and coding.",
-      "context_size": 2048,
-      "context_label": "2K",
-      "is_free": true,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "daily-tokens",
-      "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
-      },
-      "trial_scope": "all",
-      "model_family": "phi-2",
-      "aliases": [],
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "@cf/facebook/bart-large-cnn",
-      "object": "model",
-      "created": 122773987,
-      "owned_by": "cloudflare",
-      "provider": "cloudflare",
-      "name": "@cf/facebook/bart-large-cnn",
-      "description": "BART is a transformer encoder-encoder (seq2seq) model with a bidirectional (BERT-like) encoder and an autoregressive (GPT-like) decoder. You can use this model for text summarization.",
-      "context_label": "unknown",
-      "price_input": 0,
-      "is_free": true,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "daily-tokens",
-      "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
-      },
-      "trial_scope": "all",
-      "model_family": "facebook-bart-large-cnn",
-      "aliases": [],
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
@@ -2727,44 +2192,6 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "@hf/google/gemma-7b-it",
-      "object": "model",
-      "created": 1886496693,
-      "owned_by": "cloudflare",
-      "provider": "cloudflare",
-      "name": "@hf/google/gemma-7b-it",
-      "description": "Gemma is a family of lightweight, state-of-the-art open models from Google, built from the same research and technology used to create the Gemini models. They are text-to-text, decoder-only large language models, available in English, with open weights, pre-trained variants, and instruction-tuned variants.",
-      "context_size": 8192,
-      "context_label": "8K",
-      "is_free": true,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "daily-tokens",
-      "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
-      },
-      "trial_scope": "all",
-      "model_family": "@hf-google-gemma-7b",
-      "model_variant": "it",
-      "aliases": [],
-      "parameter_count": 7000000000,
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
       "id": "@cf/leonardo/lucid-origin",
       "object": "model",
       "created": 1859467082,
@@ -2851,58 +2278,6 @@
         "visual-q&a",
         "content-creation",
         "writing-assistance"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "@cf/google/gemma-3-12b-it",
-      "object": "model",
-      "created": 483040028,
-      "owned_by": "cloudflare",
-      "provider": "cloudflare",
-      "name": "@cf/google/gemma-3-12b-it",
-      "description": "Gemma 3 models are well-suited for a variety of text generation and image understanding tasks, including question answering, summarization, and reasoning. Gemma 3 models are multimodal, handling text and image input and generating text output, with a large, 128K context window, multilingual support in over 140 languages, and is available in more sizes than previous versions.",
-      "context_size": 80000,
-      "context_label": "80K",
-      "price_input": 0.345,
-      "price_output": 0.556,
-      "is_free": true,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "reasoning",
-        "vision",
-        "text-generation",
-        "multimodal"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": "daily-tokens",
-      "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
-      },
-      "trial_scope": "all",
-      "model_family": "gemma-3-12b",
-      "model_variant": "it",
-      "aliases": [
-        "google/gemma-3-12b-it",
-        "sambanova/gemma-3-12b-it"
-      ],
-      "parameter_count": 12000000000,
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "image-understanding",
-        "visual-q&a",
-        "content-creation",
-        "writing-assistance",
-        "complex-reasoning"
       ],
       "performance_level": "mid",
       "estimated_latency": "< 1s"
@@ -3032,271 +2407,6 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "LongCat-Flash-Chat",
-      "object": "model",
-      "created": 510455084,
-      "owned_by": "longcat",
-      "provider": "longcat",
-      "name": "LongCat Flash Chat",
-      "description": "LongCat: 高性能通用对话模型",
-      "context_size": 256000,
-      "context_label": "256K",
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation",
-        "chat"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "daily-tokens",
-      "free_quota": {
-        "notes": "500,000 tokens/天"
-      },
-      "trial_scope": "specific",
-      "model_family": "longcat-flash",
-      "model_variant": "chat",
-      "aliases": [],
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "LongCat-Flash-Thinking",
-      "object": "model",
-      "created": 82841112,
-      "owned_by": "longcat",
-      "provider": "longcat",
-      "name": "LongCat Flash Thinking",
-      "description": "LongCat: 深度思考模型",
-      "context_size": 256000,
-      "context_label": "256K",
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "reasoning"
-      ],
-      "tags": [
-        "chat",
-        "text-generation",
-        "reasoning"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "daily-tokens",
-      "free_quota": {
-        "notes": "500,000 tokens/天"
-      },
-      "trial_scope": "specific",
-      "model_family": "longcat-flash-thinking",
-      "model_variant": "thinking",
-      "aliases": [
-        "longcat/LongCat-Flash-Thinking-2601"
-      ],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance",
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "LongCat-Flash-Thinking-2601",
-      "object": "model",
-      "created": 2010773346,
-      "owned_by": "longcat",
-      "provider": "longcat",
-      "name": "LongCat Flash Thinking 2601",
-      "description": "LongCat: 升级版深度思考模型",
-      "context_size": 256000,
-      "context_label": "256K",
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "reasoning"
-      ],
-      "tags": [
-        "chat",
-        "text-generation",
-        "reasoning"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "daily-tokens",
-      "free_quota": {
-        "notes": "500,000 tokens/天"
-      },
-      "trial_scope": "specific",
-      "model_family": "longcat-flash-thinking",
-      "model_variant": "thinking",
-      "aliases": [
-        "longcat/LongCat-Flash-Thinking"
-      ],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance",
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "LongCat-Flash-Lite",
-      "object": "model",
-      "created": 510780218,
-      "owned_by": "longcat",
-      "provider": "longcat",
-      "name": "LongCat Flash Lite",
-      "description": "LongCat: 高效轻量化MoE模型",
-      "context_size": 256000,
-      "context_label": "256K",
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "chat",
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "daily-tokens",
-      "free_quota": {
-        "notes": "50,000,000 tokens/天"
-      },
-      "trial_scope": "specific",
-      "model_family": "longcat-flash-lite",
-      "aliases": [],
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "LongCat-Flash-Omni-2603",
-      "object": "model",
-      "created": 614562231,
-      "owned_by": "longcat",
-      "provider": "longcat",
-      "name": "LongCat Flash Omni 2603",
-      "description": "LongCat: 多模态模型",
-      "context_size": 128000,
-      "context_label": "128K",
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "vision"
-      ],
-      "tags": [
-        "chat",
-        "text-generation",
-        "vision",
-        "multimodal"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": "daily-tokens",
-      "free_quota": {
-        "notes": "500,000 tokens/天"
-      },
-      "trial_scope": "specific",
-      "model_family": "longcat-flash-omni",
-      "aliases": [],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance",
-        "image-understanding",
-        "visual-q&a"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "LongCat-Flash-Chat-2602-Exp",
-      "object": "model",
-      "created": 516486563,
-      "owned_by": "longcat",
-      "provider": "longcat",
-      "name": "LongCat Flash Chat 2602 Exp",
-      "description": "LongCat: 高性能通用对话模型（实验版）",
-      "context_size": 256000,
-      "context_label": "256K",
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation",
-        "chat"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "daily-tokens",
-      "free_quota": {
-        "notes": "500,000 tokens/天"
-      },
-      "trial_scope": "specific",
-      "model_family": "longcat-flash-2602-exp",
-      "model_variant": "chat",
-      "aliases": [],
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
       "id": "LongCat-2.0-Preview",
       "object": "model",
       "created": 207142192,
@@ -3368,6 +2478,48 @@
       "model_variant": "instruct",
       "aliases": [],
       "parameter_count": 36000000000,
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "deepseek-ai/deepseek-v4-flash",
+      "object": "model",
+      "created": 23741353,
+      "owned_by": "nvidia",
+      "provider": "nvidia",
+      "name": "deepseek-v4-flash",
+      "description": "Model: deepseek-ai/deepseek-v4-flash",
+      "context_label": "unknown",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation",
+        "chat"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
+      "model_family": "deepseek-v4-flash",
+      "aliases": [
+        "DeepSeek-V4-Flash",
+        "xingchen/xopdeepseekv4flash"
+      ],
       "tier": "medium",
       "speed": "fast",
       "use_case": [
@@ -3503,6 +2655,224 @@
       "estimated_latency": "< 1s"
     },
     {
+      "id": "google/gemma-4-31b-it",
+      "object": "model",
+      "created": 2103702922,
+      "owned_by": "nvidia",
+      "provider": "nvidia",
+      "name": "gemma-4-31b-it",
+      "description": "Model: google/gemma-4-31b-it",
+      "context_label": "unknown",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation",
+        "chat"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
+      "model_family": "gemma-4-31b",
+      "model_variant": "it",
+      "aliases": [
+        "google/gemma-4-31b-it:free",
+        "sambanova/gemma-4-31B-it"
+      ],
+      "parameter_count": 31000000000,
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "meta/llama-3.2-11b-vision-instruct",
+      "object": "model",
+      "created": 649953281,
+      "owned_by": "nvidia",
+      "provider": "nvidia",
+      "name": "llama-3.2-11b-vision-instruct",
+      "description": "Model: meta/llama-3.2-11b-vision-instruct",
+      "context_label": "unknown",
+      "is_free": true,
+      "capabilities": [
+        "vision"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
+      "model_family": "llama-3.2-11b-vision",
+      "model_variant": "vision",
+      "aliases": [
+        "cloudflare/@cf/meta/llama-3.2-11b-vision-instruct",
+        "github/Llama-3-2-11B-Vision-Instruct"
+      ],
+      "parameter_count": 11000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "meta/llama-3.2-1b-instruct",
+      "object": "model",
+      "created": 1433942603,
+      "owned_by": "nvidia",
+      "provider": "nvidia",
+      "name": "llama-3.2-1b-instruct",
+      "description": "Model: meta/llama-3.2-1b-instruct",
+      "context_label": "unknown",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation",
+        "chat"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
+      "model_family": "llama-3.2-1b",
+      "model_variant": "instruct",
+      "aliases": [
+        "cloudflare/@cf/meta/llama-3.2-1b-instruct"
+      ],
+      "parameter_count": 1000000000,
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "meta/llama-3.2-3b-instruct",
+      "object": "model",
+      "created": 1613866189,
+      "owned_by": "nvidia",
+      "provider": "nvidia",
+      "name": "llama-3.2-3b-instruct",
+      "description": "Model: meta/llama-3.2-3b-instruct",
+      "context_label": "unknown",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation",
+        "chat"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
+      "model_family": "llama-3.2-3b",
+      "model_variant": "instruct",
+      "aliases": [
+        "cloudflare/@cf/meta/llama-3.2-3b-instruct",
+        "meta-llama/llama-3.2-3b-instruct:free"
+      ],
+      "parameter_count": 3000000000,
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "meta/llama-3.2-90b-vision-instruct",
+      "object": "model",
+      "created": 1082486808,
+      "owned_by": "nvidia",
+      "provider": "nvidia",
+      "name": "llama-3.2-90b-vision-instruct",
+      "description": "Model: meta/llama-3.2-90b-vision-instruct",
+      "context_label": "unknown",
+      "is_free": true,
+      "capabilities": [
+        "vision"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
+      "model_family": "llama-3.2-90b-vision",
+      "model_variant": "vision",
+      "aliases": [
+        "github/Llama-3-2-90B-Vision-Instruct"
+      ],
+      "parameter_count": 90000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
       "id": "meta/llama-4-maverick-17b-128e-instruct",
       "object": "model",
       "created": 297855503,
@@ -3582,6 +2952,48 @@
         "writing-assistance",
         "content-filtering",
         "safety"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "microsoft/phi-4-mini-instruct",
+      "object": "model",
+      "created": 2002121969,
+      "owned_by": "nvidia",
+      "provider": "nvidia",
+      "name": "phi-4-mini-instruct",
+      "description": "Model: microsoft/phi-4-mini-instruct",
+      "context_label": "unknown",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation",
+        "chat"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
+      "model_family": "phi-4-mini",
+      "model_variant": "instruct",
+      "aliases": [
+        "github/Phi-4-mini-instruct"
+      ],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
@@ -3668,6 +3080,47 @@
       "estimated_latency": "< 1s"
     },
     {
+      "id": "mistralai/ministral-14b-instruct-2512",
+      "object": "model",
+      "created": 1385760033,
+      "owned_by": "nvidia",
+      "provider": "nvidia",
+      "name": "ministral-14b-instruct-2512",
+      "description": "Model: mistralai/ministral-14b-instruct-2512",
+      "context_label": "unknown",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation",
+        "chat"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
+      "model_family": "ministral-14b",
+      "model_variant": "instruct",
+      "aliases": [],
+      "parameter_count": 14000000000,
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
       "id": "mistralai/mistral-large-3-675b-instruct-2512",
       "object": "model",
       "created": 263022913,
@@ -3697,6 +3150,46 @@
       "model_variant": "instruct",
       "aliases": [],
       "parameter_count": 675000000000,
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "mistralai/mistral-medium-3.5-128b",
+      "object": "model",
+      "created": 787055727,
+      "owned_by": "nvidia",
+      "provider": "nvidia",
+      "name": "mistral-medium-3.5-128b",
+      "description": "Model: mistralai/mistral-medium-3.5-128b",
+      "context_label": "unknown",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation",
+        "chat"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
+      "model_family": "mistral-medium-3.5-128b",
+      "aliases": [],
+      "parameter_count": 128000000000,
       "tier": "medium",
       "speed": "fast",
       "use_case": [
@@ -3748,6 +3241,88 @@
       "estimated_latency": "< 1s"
     },
     {
+      "id": "mistralai/mistral-small-4-119b-2603",
+      "object": "model",
+      "created": 1266976895,
+      "owned_by": "nvidia",
+      "provider": "nvidia",
+      "name": "mistral-small-4-119b-2603",
+      "description": "Model: mistralai/mistral-small-4-119b-2603",
+      "context_label": "unknown",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation",
+        "chat"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
+      "model_family": "mistral-small-4-119b",
+      "aliases": [],
+      "parameter_count": 119000000000,
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "moonshotai/kimi-k2.6",
+      "object": "model",
+      "created": 1648928237,
+      "owned_by": "nvidia",
+      "provider": "nvidia",
+      "name": "kimi-k2.6",
+      "description": "Model: moonshotai/kimi-k2.6",
+      "context_label": "unknown",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation",
+        "chat"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
+      "model_family": "moonshotai-kimi-k2.6",
+      "aliases": [
+        "cloudflare/@cf/moonshotai/kimi-k2.6",
+        "moonshotai/kimi-k2.6:free"
+      ],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
       "id": "gliner-pii",
       "object": "model",
       "created": 1745089601,
@@ -3786,6 +3361,87 @@
       "estimated_latency": "< 1s"
     },
     {
+      "id": "ising-calibration-1-35b-a3b",
+      "object": "model",
+      "created": 928085930,
+      "owned_by": "nvidia",
+      "provider": "nvidia",
+      "name": "ising-calibration-1-35b-a3b",
+      "description": "Model: nvidia/ising-calibration-1-35b-a3b",
+      "context_label": "unknown",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation",
+        "chat"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
+      "model_family": "ising-calibration-1-35b-a3b",
+      "aliases": [],
+      "parameter_count": 35000000000,
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "llama-3.1-nemotron-nano-vl-8b-v1",
+      "object": "model",
+      "created": 1654189783,
+      "owned_by": "nvidia",
+      "provider": "nvidia",
+      "name": "llama-3.1-nemotron-nano-vl-8b-v1",
+      "description": "Model: nvidia/llama-3.1-nemotron-nano-vl-8b-v1",
+      "context_label": "unknown",
+      "is_free": true,
+      "capabilities": [
+        "vision"
+      ],
+      "tags": [
+        "text-generation",
+        "vision",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
+      "model_family": "llama-3.1-nemotron-nano-vl-8b-v1",
+      "model_variant": "vl",
+      "aliases": [],
+      "parameter_count": 8000000000,
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
       "id": "nemotron-3-content-safety",
       "object": "model",
       "created": 1327867458,
@@ -3813,6 +3469,221 @@
       "model_family": "nemotron-3-content-safety",
       "model_variant": "safety",
       "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "content-filtering",
+        "safety"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "nemotron-3-nano-30b-a3b",
+      "object": "model",
+      "created": 2087448753,
+      "owned_by": "nvidia",
+      "provider": "nvidia",
+      "name": "nemotron-3-nano-30b-a3b",
+      "description": "Model: nvidia/nemotron-3-nano-30b-a3b",
+      "context_label": "unknown",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation",
+        "chat"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
+      "model_family": "nemotron-3-nano-30b-a3b",
+      "aliases": [
+        "nvidia/nemotron-3-nano-30b-a3b:free"
+      ],
+      "parameter_count": 30000000000,
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "nemotron-3-nano-omni-30b-a3b-reasoning",
+      "object": "model",
+      "created": 945254306,
+      "owned_by": "nvidia",
+      "provider": "nvidia",
+      "name": "nemotron-3-nano-omni-30b-a3b-reasoning",
+      "description": "Model: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "context_label": "unknown",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "reasoning",
+        "text-generation",
+        "chat"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
+      "model_family": "nemotron-3-nano-omni-30b-a3b-reasoning",
+      "model_variant": "reasoning",
+      "aliases": [
+        "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
+      ],
+      "parameter_count": 30000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "nemotron-3-super-120b-a12b",
+      "object": "model",
+      "created": 1155048658,
+      "owned_by": "nvidia",
+      "provider": "nvidia",
+      "name": "nemotron-3-super-120b-a12b",
+      "description": "Model: nvidia/nemotron-3-super-120b-a12b",
+      "context_label": "unknown",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation",
+        "chat"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
+      "model_family": "nemotron-3-super-120b-a12b",
+      "aliases": [
+        "nvidia/nemotron-3-super-120b-a12b:free"
+      ],
+      "parameter_count": 120000000000,
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "nemotron-3-ultra-550b-a55b",
+      "object": "model",
+      "created": 343103399,
+      "owned_by": "nvidia",
+      "provider": "nvidia",
+      "name": "nemotron-3-ultra-550b-a55b",
+      "description": "Model: nvidia/nemotron-3-ultra-550b-a55b",
+      "context_label": "unknown",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation",
+        "chat"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
+      "model_family": "nemotron-3-ultra-550b-a55b",
+      "aliases": [
+        "nvidia/nemotron-3-ultra-550b-a55b:free"
+      ],
+      "parameter_count": 550000000000,
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "nemotron-3.5-content-safety",
+      "object": "model",
+      "created": 1989299781,
+      "owned_by": "nvidia",
+      "provider": "nvidia",
+      "name": "nemotron-3.5-content-safety",
+      "description": "Model: nvidia/nemotron-3.5-content-safety",
+      "context_label": "unknown",
+      "is_free": true,
+      "capabilities": [
+        "moderation"
+      ],
+      "tags": [
+        "text-generation",
+        "moderation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
+      "model_family": "nemotron-3.5-content-safety",
+      "model_variant": "safety",
+      "aliases": [
+        "nvidia/nemotron-3.5-content-safety:free"
+      ],
       "tier": "medium",
       "speed": "fast",
       "use_case": [
@@ -3911,6 +3782,49 @@
       "estimated_latency": "< 1s"
     },
     {
+      "id": "nemotron-nano-12b-v2-vl",
+      "object": "model",
+      "created": 311795952,
+      "owned_by": "nvidia",
+      "provider": "nvidia",
+      "name": "nemotron-nano-12b-v2-vl",
+      "description": "Model: nvidia/nemotron-nano-12b-v2-vl",
+      "context_label": "unknown",
+      "is_free": true,
+      "capabilities": [
+        "vision"
+      ],
+      "tags": [
+        "text-generation",
+        "vision",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
+      "model_family": "nemotron-nano-12b-v2-vl",
+      "model_variant": "vl",
+      "aliases": [
+        "nvidia/nemotron-nano-12b-v2-vl:free"
+      ],
+      "parameter_count": 12000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
       "id": "nv-embed-v1",
       "object": "model",
       "created": 274878929,
@@ -3989,6 +3903,139 @@
       "estimated_latency": "< 1s"
     },
     {
+      "id": "nvidia-nemotron-nano-9b-v2",
+      "object": "model",
+      "created": 2012912449,
+      "owned_by": "nvidia",
+      "provider": "nvidia",
+      "name": "nvidia-nemotron-nano-9b-v2",
+      "description": "Model: nvidia/nvidia-nemotron-nano-9b-v2",
+      "context_label": "unknown",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation",
+        "chat"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
+      "model_family": "nemotron-nano-9b-v2",
+      "aliases": [
+        "nvidia/nemotron-nano-9b-v2:free"
+      ],
+      "parameter_count": 9000000000,
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "openai/gpt-oss-120b",
+      "object": "model",
+      "created": 1715333663,
+      "owned_by": "nvidia",
+      "provider": "nvidia",
+      "name": "gpt-oss-120b",
+      "description": "Model: openai/gpt-oss-120b",
+      "context_label": "unknown",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation",
+        "chat"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
+      "model_family": "gpt-oss-120b",
+      "aliases": [
+        "cerebras/gpt-oss-120b",
+        "cloudflare/@cf/openai/gpt-oss-120b",
+        "gpt-oss-120b",
+        "groq/openai/gpt-oss-120b",
+        "openai/gpt-oss-120b:free",
+        "sambanova/gpt-oss-120b"
+      ],
+      "parameter_count": 120000000000,
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "openai/gpt-oss-20b",
+      "object": "model",
+      "created": 51980878,
+      "owned_by": "nvidia",
+      "provider": "nvidia",
+      "name": "gpt-oss-20b",
+      "description": "Model: openai/gpt-oss-20b",
+      "context_label": "unknown",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation",
+        "chat"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
+      "model_family": "gpt-oss-20b",
+      "aliases": [
+        "cloudflare/@cf/openai/gpt-oss-20b",
+        "groq/openai/gpt-oss-20b",
+        "openai/gpt-oss-20b:free"
+      ],
+      "parameter_count": 20000000000,
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
       "id": "qwen/qwen3-coder-480b-a35b-instruct",
       "object": "model",
       "created": 81845091,
@@ -4020,6 +4067,174 @@
         "qwen3-coder-480b-a35b-instruct"
       ],
       "parameter_count": 480000000000,
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "qwen/qwen3-next-80b-a3b-instruct",
+      "object": "model",
+      "created": 604379828,
+      "owned_by": "nvidia",
+      "provider": "nvidia",
+      "name": "qwen3-next-80b-a3b-instruct",
+      "description": "Model: qwen/qwen3-next-80b-a3b-instruct",
+      "context_label": "unknown",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation",
+        "chat"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
+      "model_family": "qwen3-next-80b-a3b",
+      "model_variant": "instruct",
+      "aliases": [
+        "Qwen3-Next-80B-A3B-Instruct",
+        "qwen/qwen3-next-80b-a3b-instruct:free",
+        "xingchen/xop3qwen80bnext"
+      ],
+      "parameter_count": 80000000000,
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "qwen/qwen3.5-122b-a10b",
+      "object": "model",
+      "created": 2005996363,
+      "owned_by": "nvidia",
+      "provider": "nvidia",
+      "name": "qwen3.5-122b-a10b",
+      "description": "Model: qwen/qwen3.5-122b-a10b",
+      "context_label": "unknown",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation",
+        "chat"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
+      "model_family": "qwen3.5-122b-a10b",
+      "aliases": [
+        "Qwen3.5-122B-A10B"
+      ],
+      "parameter_count": 122000000000,
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "qwen/qwen3.5-397b-a17b",
+      "object": "model",
+      "created": 1746391434,
+      "owned_by": "nvidia",
+      "provider": "nvidia",
+      "name": "qwen3.5-397b-a17b",
+      "description": "Model: qwen/qwen3.5-397b-a17b",
+      "context_label": "unknown",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation",
+        "chat"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
+      "model_family": "qwen3.5-397b-a17b",
+      "aliases": [
+        "xingchen/xopqwen35397b"
+      ],
+      "parameter_count": 397000000000,
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "sarvamai/sarvam-m",
+      "object": "model",
+      "created": 243855348,
+      "owned_by": "nvidia",
+      "provider": "nvidia",
+      "name": "sarvam-m",
+      "description": "Model: sarvamai/sarvam-m",
+      "context_label": "unknown",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation",
+        "chat"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
+      "model_family": "sarvamai-sarvam-m",
+      "aliases": [],
       "tier": "medium",
       "speed": "fast",
       "use_case": [
@@ -4071,15 +4286,137 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "llama3-8b",
+      "id": "stepfun-ai/step-3.7-flash",
       "object": "model",
-      "created": 1550049523,
+      "created": 1525916148,
+      "owned_by": "nvidia",
+      "provider": "nvidia",
+      "name": "step-3.7-flash",
+      "description": "Model: stepfun-ai/step-3.7-flash",
+      "context_label": "unknown",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation",
+        "chat"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
+      "model_family": "stepfun-ai-step-3.7-flash",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "stockmark/stockmark-2-100b-instruct",
+      "object": "model",
+      "created": 1322155738,
+      "owned_by": "nvidia",
+      "provider": "nvidia",
+      "name": "stockmark-2-100b-instruct",
+      "description": "Model: stockmark/stockmark-2-100b-instruct",
+      "context_label": "unknown",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation",
+        "chat"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
+      "model_family": "stockmark-stockmark-2-100b",
+      "model_variant": "instruct",
+      "aliases": [],
+      "parameter_count": 100000000000,
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "z-ai/glm-5.1",
+      "object": "model",
+      "created": 915134842,
+      "owned_by": "nvidia",
+      "provider": "nvidia",
+      "name": "glm-5.1",
+      "description": "Model: z-ai/glm-5.1",
+      "context_label": "unknown",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation",
+        "chat"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "notes": "NVIDIA NIM free credits, exhaustible"
+      },
+      "trial_scope": "specific",
+      "model_family": "glm-5.1",
+      "aliases": [
+        "GLM-5.1",
+        "xingchen/xopglm51"
+      ],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "gemma-4-31B-it",
+      "object": "model",
+      "created": 1392290191,
       "owned_by": "sambanova",
       "provider": "sambanova",
-      "name": "llama3-8b",
+      "name": "google/gemma-4-31B-it",
       "context_label": "unknown",
-      "price_input": 0,
-      "price_output": 0,
+      "price_input": 0.38,
+      "price_output": 1.15,
       "is_free": true,
       "capabilities": [
         "chat",
@@ -4098,9 +4435,99 @@
         "notes": "$5 trial credits, valid for 3 months"
       },
       "trial_scope": "all",
-      "model_family": "llama3-8b",
+      "model_family": "gemma-4-31b",
+      "model_variant": "it",
+      "aliases": [
+        "google/gemma-4-31b-it",
+        "google/gemma-4-31b-it:free"
+      ],
+      "parameter_count": 31000000000,
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "gemma-4-31b-32",
+      "object": "model",
+      "created": 1391142055,
+      "owned_by": "sambanova",
+      "provider": "sambanova",
+      "name": "gemma-4-31b-32",
+      "context_label": "unknown",
+      "price_input": 0.38,
+      "price_output": 1.15,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "total_credits": 5,
+        "notes": "$5 trial credits, valid for 3 months"
+      },
+      "trial_scope": "all",
+      "model_family": "gemma-4-31b-32",
       "aliases": [],
-      "parameter_count": 8000000000,
+      "parameter_count": 31000000000,
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "DeepSeek-V3.2",
+      "object": "model",
+      "created": 1211950776,
+      "owned_by": "sambanova",
+      "provider": "sambanova",
+      "name": "deepseek-ai/DeepSeek-V3.2",
+      "context_label": "unknown",
+      "price_input": 3,
+      "price_output": 4.5,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "total_credits": 5,
+        "notes": "$5 trial credits, valid for 3 months"
+      },
+      "trial_scope": "all",
+      "model_family": "deepseek-v3.2",
+      "aliases": [
+        "DeepSeek-V3.2",
+        "xingchen/xopdeepseekv32"
+      ],
       "tier": "medium",
       "speed": "fast",
       "use_case": [
@@ -4145,6 +4572,49 @@
       "aliases": [],
       "parameter_count": 70000000000,
       "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "MiniMax-M2.7",
+      "object": "model",
+      "created": 1377797552,
+      "owned_by": "sambanova",
+      "provider": "sambanova",
+      "name": "minimaxai/minimax-m2.7",
+      "context_label": "unknown",
+      "price_input": 0.6,
+      "price_output": 2.4,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "total_credits": 5,
+        "notes": "$5 trial credits, valid for 3 months"
+      },
+      "trial_scope": "all",
+      "model_family": "minimax-m2.7",
+      "aliases": [
+        "MiniMax-M2.7"
+      ],
+      "tier": "medium",
       "speed": "fast",
       "use_case": [
         "conversation",
@@ -4251,194 +4721,6 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "Qwen3-235B-A22B-Instruct-2507",
-      "object": "model",
-      "created": 2096442811,
-      "owned_by": "sambanova",
-      "provider": "sambanova",
-      "name": "Qwen/Qwen3-235B-A22B-Instruct-2507",
-      "context_label": "unknown",
-      "price_input": 0.4,
-      "price_output": 0.8,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "chat",
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "trial-credits",
-      "free_quota": {
-        "total_credits": 5,
-        "notes": "$5 trial credits, valid for 3 months"
-      },
-      "trial_scope": "all",
-      "model_family": "qwen3-235b-a22b",
-      "model_variant": "instruct",
-      "aliases": [
-        "Qwen3-235B-A22B",
-        "Qwen3-235B-A22B-Instruct-2507",
-        "xingchen/xop3qwen235b2507",
-        "xingchen/xop3qwen235b"
-      ],
-      "parameter_count": 235000000000,
-      "tier": "small",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "DeepSeek-V3-0324",
-      "object": "model",
-      "created": 1387111070,
-      "owned_by": "sambanova",
-      "provider": "sambanova",
-      "name": "deepseek-ai/DeepSeek-V3-0324",
-      "context_label": "unknown",
-      "price_input": 3,
-      "price_output": 4.5,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "chat",
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "trial-credits",
-      "free_quota": {
-        "total_credits": 5,
-        "notes": "$5 trial credits, valid for 3 months"
-      },
-      "trial_scope": "all",
-      "model_family": "deepseek-v3",
-      "aliases": [
-        "DeepSeek-V3",
-        "github/DeepSeek-V3-0324",
-        "xingchen/xdeepseekv3"
-      ],
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "DeepSeek-R1-0528",
-      "object": "model",
-      "created": 437937886,
-      "owned_by": "sambanova",
-      "provider": "sambanova",
-      "name": "deepseek-ai/DeepSeek-R1-0528",
-      "context_label": "unknown",
-      "price_input": 5,
-      "price_output": 7,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "reasoning",
-        "chat",
-        "text-generation"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "trial-credits",
-      "free_quota": {
-        "total_credits": 5,
-        "notes": "$5 trial credits, valid for 3 months"
-      },
-      "trial_scope": "all",
-      "model_family": "deepseek-r1",
-      "model_variant": "r1",
-      "aliases": [
-        "DeepSeek-R1",
-        "github/DeepSeek-R1-0528",
-        "github/DeepSeek-R1",
-        "xingchen/xdeepseekr1"
-      ],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "E5-Mistral-7B-Instruct",
-      "object": "model",
-      "created": 189272062,
-      "owned_by": "sambanova",
-      "provider": "sambanova",
-      "name": "E5-Mistral-7B-Instruct",
-      "context_label": "unknown",
-      "price_input": 0.13,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "chat",
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "trial-credits",
-      "free_quota": {
-        "total_credits": 5,
-        "notes": "$5 trial credits, valid for 3 months"
-      },
-      "trial_scope": "all",
-      "model_family": "e5-mistral-7b",
-      "model_variant": "instruct",
-      "aliases": [],
-      "parameter_count": 7000000000,
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
       "id": "DeepSeek-V3.1",
       "object": "model",
       "created": 1211950777,
@@ -4482,363 +4764,6 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "gemma-3-27b-it",
-      "object": "model",
-      "created": 1091930091,
-      "owned_by": "sambanova",
-      "provider": "sambanova",
-      "name": "google/gemma-3-27b-it",
-      "context_label": "unknown",
-      "price_input": 0.22,
-      "price_output": 0.59,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "chat",
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "trial-credits",
-      "free_quota": {
-        "total_credits": 5,
-        "notes": "$5 trial credits, valid for 3 months"
-      },
-      "trial_scope": "all",
-      "model_family": "gemma-3-27b",
-      "model_variant": "it",
-      "aliases": [],
-      "parameter_count": 27000000000,
-      "tier": "small",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "Meta-Llama-3.1-8B-Instruct",
-      "object": "model",
-      "created": 2001924394,
-      "owned_by": "sambanova",
-      "provider": "sambanova",
-      "name": "Llama 3.1 8B",
-      "context_label": "unknown",
-      "price_input": 0.1,
-      "price_output": 0.2,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "chat",
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "trial-credits",
-      "free_quota": {
-        "total_credits": 5,
-        "notes": "$5 trial credits, valid for 3 months"
-      },
-      "trial_scope": "all",
-      "model_family": "3.1-8b",
-      "model_variant": "instruct",
-      "aliases": [
-        "github/Meta-Llama-3-1-8B-Instruct"
-      ],
-      "parameter_count": 8000000000,
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "DeepSeek-V3.2",
-      "object": "model",
-      "created": 1211950776,
-      "owned_by": "sambanova",
-      "provider": "sambanova",
-      "name": "deepseek-ai/DeepSeek-V3.2",
-      "context_label": "unknown",
-      "price_input": 3,
-      "price_output": 4.5,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "chat",
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "trial-credits",
-      "free_quota": {
-        "total_credits": 5,
-        "notes": "$5 trial credits, valid for 3 months"
-      },
-      "trial_scope": "all",
-      "model_family": "deepseek-v3.2",
-      "aliases": [
-        "DeepSeek-V3.2",
-        "xingchen/xopdeepseekv32"
-      ],
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "DeepSeek-R1-Distill-Llama-70B",
-      "object": "model",
-      "created": 392278382,
-      "owned_by": "sambanova",
-      "provider": "sambanova",
-      "name": "deepseek-ai/DeepSeek-R1-Distill-Llama-70B",
-      "context_label": "unknown",
-      "price_input": 0.7,
-      "price_output": 1.4,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "reasoning",
-        "chat",
-        "text-generation"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "trial-credits",
-      "free_quota": {
-        "total_credits": 5,
-        "notes": "$5 trial credits, valid for 3 months"
-      },
-      "trial_scope": "all",
-      "model_family": "deepseek-r1-distill-llama-70b",
-      "model_variant": "r1",
-      "aliases": [],
-      "parameter_count": 70000000000,
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "Whisper-Large-v3",
-      "object": "model",
-      "created": 191906492,
-      "owned_by": "sambanova",
-      "provider": "sambanova",
-      "name": "Whisper-Large-v3",
-      "context_label": "unknown",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "chat",
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "trial-credits",
-      "free_quota": {
-        "total_credits": 5,
-        "notes": "$5 trial credits, valid for 3 months"
-      },
-      "trial_scope": "all",
-      "model_family": "whisper-large-v3",
-      "aliases": [
-        "cloudflare/@cf/openai/whisper-large-v3-turbo",
-        "whisper-large-v3-turbo",
-        "whisper-large-v3",
-        "groq/whisper-large-v3-turbo",
-        "groq/whisper-large-v3"
-      ],
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "ALLaM-7B-Instruct-preview",
-      "object": "model",
-      "created": 385789167,
-      "owned_by": "sambanova",
-      "provider": "sambanova",
-      "name": "tbd",
-      "context_label": "unknown",
-      "price_input": 0.22,
-      "price_output": 0.59,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "chat",
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "trial-credits",
-      "free_quota": {
-        "total_credits": 5,
-        "notes": "$5 trial credits, valid for 3 months"
-      },
-      "trial_scope": "all",
-      "model_family": "allam-7b-preview",
-      "model_variant": "instruct",
-      "aliases": [],
-      "tier": "small",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "Qwen3-235B",
-      "object": "model",
-      "created": 1034281123,
-      "owned_by": "sambanova",
-      "provider": "sambanova",
-      "name": "Qwen/Qwen3-235B",
-      "context_label": "unknown",
-      "price_input": 0.4,
-      "price_output": 0.8,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "chat",
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "trial-credits",
-      "free_quota": {
-        "total_credits": 5,
-        "notes": "$5 trial credits, valid for 3 months"
-      },
-      "trial_scope": "all",
-      "model_family": "qwen3-235b",
-      "aliases": [],
-      "parameter_count": 235000000000,
-      "tier": "small",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "Qwen3-32B",
-      "object": "model",
-      "created": 1270162322,
-      "owned_by": "sambanova",
-      "provider": "sambanova",
-      "name": "Qwen/Qwen3-32B",
-      "context_label": "unknown",
-      "price_input": 0.4,
-      "price_output": 0.8,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "chat",
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "trial-credits",
-      "free_quota": {
-        "total_credits": 5,
-        "notes": "$5 trial credits, valid for 3 months"
-      },
-      "trial_scope": "all",
-      "model_family": "qwen3-32b",
-      "aliases": [
-        "Qwen3-32B",
-        "groq/qwen/qwen3-32b",
-        "xingchen/xop3qwen32b"
-      ],
-      "parameter_count": 32000000000,
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
       "id": "gemma-3-12b-it",
       "object": "model",
       "created": 1136995089,
@@ -4846,7 +4771,7 @@
       "provider": "sambanova",
       "name": "google/gemma-3-12b-it",
       "context_label": "unknown",
-      "price_input": 0.22,
+      "price_input": 0.35,
       "price_output": 0.59,
       "is_free": true,
       "capabilities": [
@@ -4869,97 +4794,10 @@
       "model_family": "gemma-3-12b",
       "model_variant": "it",
       "aliases": [
-        "cloudflare/@cf/google/gemma-3-12b-it",
         "google/gemma-3-12b-it"
       ],
       "parameter_count": 12000000000,
       "tier": "small",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "Llama-3.3-Swallow-70B-Instruct-v0.4",
-      "object": "model",
-      "created": 461621090,
-      "owned_by": "sambanova",
-      "provider": "sambanova",
-      "name": "Llama 3.3 70B",
-      "context_label": "unknown",
-      "price_input": 0.6,
-      "price_output": 1.2,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "chat",
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "trial-credits",
-      "free_quota": {
-        "total_credits": 5,
-        "notes": "$5 trial credits, valid for 3 months"
-      },
-      "trial_scope": "all",
-      "model_family": "llama-3.3-swallow-70b-v0.4",
-      "model_variant": "instruct",
-      "aliases": [],
-      "parameter_count": 70000000000,
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "DeepSeek-V3.1-Terminus",
-      "object": "model",
-      "created": 1169349077,
-      "owned_by": "sambanova",
-      "provider": "sambanova",
-      "name": "deepseek-ai/DeepSeek-V3.1-Terminus",
-      "context_label": "unknown",
-      "price_input": 3,
-      "price_output": 4.5,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "chat",
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "trial-credits",
-      "free_quota": {
-        "total_credits": 5,
-        "notes": "$5 trial credits, valid for 3 months"
-      },
-      "trial_scope": "all",
-      "model_family": "deepseek-v3.1-terminus",
-      "aliases": [
-        "DeepSeek-V3_1-Terminus"
-      ],
-      "tier": "medium",
       "speed": "fast",
       "use_case": [
         "conversation",
