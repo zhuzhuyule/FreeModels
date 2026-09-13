@@ -22,7 +22,7 @@
 | 指标 | 数量 |
 |---|---:|
 | 总模型 | 51 |
-| 免费模型 | 12 |
+| 免费模型 | 7 |
 | 付费可试用 | 0 |
 
 ## 免费策略
@@ -33,15 +33,10 @@
 
 | Provider | Model ID | 名称 | 上下文 | 免费类型 | 限制 |
 |---|---|---|---:|---|---|
-| xingchen  | `xop35qwen2b` | Qwen3.5-2B | 33K | 限速免费 | — |
+| xingchen  | `spark-x2.5-1.7b` | Spark-X2.5-1.7B | 1 | 限速免费 | — |
+| xingchen  | `spark-x2.5-4b` | Spark-X2.5-4B | 1 | 限速免费 | — |
 | xingchen  | `xop3qwen8bembedding` | Qwen3-Embedding-8B | 33K | 限速免费 | — |
 | xingchen  | `xop3qwen8breranker` | Qwen3-Reranker-8B | 33K | 限速免费 | — |
 | xingchen  | `xopdeepseekocr` | DeepSeek-OCR | 8K | 限速免费 | — |
-| xingchen  | `xophunyuan7bmt` | Hunyuan-MT-7B | 33K | 限速免费 | — |
 | xingchen  | `xophunyuanocr` | HunyuanOCR | 33K | 限速免费 | — |
 | xingchen  | `xoppaddleocrv16` | PaddleOCR-VL-1.6 | 33K | 限速免费 | — |
-| xingchen  | `xopqwen35v35b` | Qwen3.5-35B-A3B | 131K | 限速免费 | — |
-| xingchen  | `xopqwen36v35b` | Qwen3.6-35B-A3B | 131K | 限速免费 | — |
-| xingchen  | `xopqwentti20b` | Qwen-Image-2512 | unknown | 限速免费 | — |
-| xingchen  | `xopzimageturbo` | Z-Image-Turbo | 512 | 限速免费 | — |
-| xingchen  | `xssdxl` | StableDiffusion_XL_Base_1 | unknown | 限速免费 | — |

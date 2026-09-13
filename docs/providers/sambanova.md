@@ -21,8 +21,8 @@
 
 | 指标 | 数量 |
 |---|---:|
-| 总模型 | 9 |
-| 免费模型 | 9 |
+| 总模型 | 20 |
+| 免费模型 | 20 |
 | 付费可试用 | 0 |
 
 ## 免费策略
@@ -33,12 +33,23 @@
 
 | Provider | Model ID | 名称 | 上下文 | 免费类型 | 限制 |
 |---|---|---|---:|---|---|
+| sambanova  | `ALLaM-7B-Instruct-preview` | tbd | unknown | 试用 credits | 5 credits / $5 trial credits, valid for 3 months |
+| sambanova  | `DeepSeek-R1-0528` | deepseek-ai/DeepSeek-R1-0528 | unknown | 试用 credits | 5 credits / $5 trial credits, valid for 3 months |
+| sambanova  | `DeepSeek-R1-Distill-Llama-70B` | deepseek-ai/DeepSeek-R1-Distill-Llama-70B | unknown | 试用 credits | 5 credits / $5 trial credits, valid for 3 months |
+| sambanova  | `DeepSeek-V3-0324` | deepseek-ai/DeepSeek-V3-0324 | unknown | 试用 credits | 5 credits / $5 trial credits, valid for 3 months |
 | sambanova  | `DeepSeek-V3.1` | deepseek-ai/DeepSeek-V3.1 | unknown | 试用 credits | 5 credits / $5 trial credits, valid for 3 months |
+| sambanova  | `DeepSeek-V3.1-Terminus` | deepseek-ai/DeepSeek-V3.1-Terminus | unknown | 试用 credits | 5 credits / $5 trial credits, valid for 3 months |
 | sambanova  | `DeepSeek-V3.2` | deepseek-ai/DeepSeek-V3.2 | unknown | 试用 credits | 5 credits / $5 trial credits, valid for 3 months |
+| sambanova  | `E5-Mistral-7B-Instruct` | E5-Mistral-7B-Instruct | unknown | 试用 credits | 5 credits / $5 trial credits, valid for 3 months |
 | sambanova  | `gemma-3-12b-it` | google/gemma-3-12b-it | unknown | 试用 credits | 5 credits / $5 trial credits, valid for 3 months |
+| sambanova  | `gemma-3-27b-it` | google/gemma-3-27b-it | unknown | 试用 credits | 5 credits / $5 trial credits, valid for 3 months |
 | sambanova  | `gemma-4-31b-32` | gemma-4-31b-32 | unknown | 试用 credits | 5 credits / $5 trial credits, valid for 3 months |
 | sambanova  | `gemma-4-31B-it` | google/gemma-4-31B-it | unknown | 试用 credits | 5 credits / $5 trial credits, valid for 3 months |
 | sambanova  | `gpt-oss-120b` | openai/gpt-oss-120b | unknown | 试用 credits | 5 credits / $5 trial credits, valid for 3 months |
+| sambanova  | `Llama-3.3-Swallow-70B-Instruct-v0.4` | Llama 3.3 70B | unknown | 试用 credits | 5 credits / $5 trial credits, valid for 3 months |
 | sambanova  | `Llama-4-Maverick-17B-128E-Instruct` | Llama-4-Maverick-17B-128E-Instruct | unknown | 试用 credits | 5 credits / $5 trial credits, valid for 3 months |
 | sambanova  | `Meta-Llama-3.3-70B-Instruct` | Llama 3.3 70B | unknown | 试用 credits | 5 credits / $5 trial credits, valid for 3 months |
 | sambanova  | `MiniMax-M2.7` | minimaxai/minimax-m2.7 | unknown | 试用 credits | 5 credits / $5 trial credits, valid for 3 months |
+| sambanova  | `Qwen3-235B-A22B-Instruct-2507` | Qwen/Qwen3-235B-A22B-Instruct-2507 | unknown | 试用 credits | 5 credits / $5 trial credits, valid for 3 months |
+| sambanova  | `Qwen3-32B` | Qwen/Qwen3-32B | unknown | 试用 credits | 5 credits / $5 trial credits, valid for 3 months |
+| sambanova  | `Whisper-Large-v3` | Whisper-Large-v3 | unknown | 试用 credits | 5 credits / $5 trial credits, valid for 3 months |

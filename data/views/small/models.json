@@ -1,8 +1,8 @@
 {
   "object": "list",
   "view": "small",
-  "updated_at": "2026-06-08T13:57:08.132Z",
-  "total": 73,
+  "updated_at": "2026-09-13T07:16:40.165Z",
+  "total": 74,
   "filters": {
     "tier": "small"
   },
@@ -35,9 +35,7 @@
       },
       "trial_scope": "all",
       "model_family": "baai-bge-m3",
-      "aliases": [
-        "baai/bge-m3"
-      ],
+      "aliases": [],
       "tier": "small",
       "speed": "fast",
       "use_case": [
@@ -156,10 +154,7 @@
       "trial_scope": "all",
       "model_family": "llama-3.2-3b",
       "model_variant": "instruct",
-      "aliases": [
-        "meta/llama-3.2-3b-instruct",
-        "meta-llama/llama-3.2-3b-instruct:free"
-      ],
+      "aliases": [],
       "parameter_count": 3000000000,
       "tier": "small",
       "speed": "fast",
@@ -240,9 +235,7 @@
       "trial_scope": "all",
       "model_family": "llama-3.2-1b",
       "model_variant": "instruct",
-      "aliases": [
-        "meta/llama-3.2-1b-instruct"
-      ],
+      "aliases": [],
       "parameter_count": 1000000000,
       "tier": "small",
       "speed": "fast",
@@ -884,44 +877,6 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "Qwen3-VL-4B-Instruct",
-      "object": "model",
-      "created": 751274514,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "Qwen3-VL-4B-Instruct",
-      "description": "Qwen3-VL-4B-Instruct 在保持轻量级（4B 级别）模型规模的同时，具备 原生多模态理解 + 指令响应能力，且在视觉-文本对齐、跨模态推理和快速响应效率方面具有其独特优势。",
-      "context_size": 32000,
-      "context_label": "32K",
-      "price_input": 0.175,
-      "price_output": 0.7,
-      "is_free": false,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "qwen3-vl-4b",
-      "model_variant": "vl",
-      "aliases": [],
-      "parameter_count": 4000000000,
-      "tier": "small",
-      "speed": "standard",
-      "use_case": [
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
       "id": "Qwen3Guard-Gen-4B",
       "object": "model",
       "created": 1198367600,
@@ -1003,8 +958,8 @@
       "name": "Qwen3-VL-Embedding-2B",
       "description": "Qwen3-VL-Embedding-2B 是一个支持文本、图像等多模态输入、用于生成统一高维语义向量的 2 B 参数级多模态嵌入模型，常用于跨模态检索和相似性搜索等任务。",
       "context_label": "unknown",
-      "price_input": 0.09,
-      "price_output": 0.09,
+      "price_input": 0,
+      "price_output": 0,
       "is_free": false,
       "capabilities": [
         "embeddings"
@@ -1128,11 +1083,9 @@
       "has_tool_use": false,
       "free_mechanism": null,
       "free_quota": null,
-      "trial_scope": "all",
+      "trial_scope": "none",
       "model_family": "qwen3.5-35b-a3b",
-      "aliases": [
-        "xingchen/xopqwen35v35b"
-      ],
+      "aliases": [],
       "parameter_count": 35000000000,
       "tier": "small",
       "speed": "fast",
@@ -1173,6 +1126,189 @@
         "xingchen/xopqwen36v35b"
       ],
       "parameter_count": 35000000000,
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "Qwen3.5-Flash",
+      "object": "model",
+      "created": 1411337775,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "Qwen3.5-Flash",
+      "description": "Qwen3.5原生视觉语言系列Flash模型，基于混合架构设计，融合了线性注意力机制与稀疏混合专家模型，实现了更高的推理效率。模型效果在纯文本与多模态方面相较3系列均实现飞跃式进步；响应速度快，兼具推理速度和性能。\n\n",
+      "context_size": 1000000,
+      "context_label": "1M",
+      "price_input": 0.2,
+      "price_output": 2,
+      "is_free": false,
+      "capabilities": [
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "qwen3.5-flash",
+      "aliases": [],
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "WeMM-Embedding-2B",
+      "object": "model",
+      "created": 430246488,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "WeMM-Embedding-2B",
+      "description": "WeMM-Embedding-2B 是腾讯微信团队推出的 20 亿参数通用多模态向量模型，可将文本、图像统一编码为高质量向量，适用于跨模态检索、语义搜索和 RAG 等场景。",
+      "context_size": 256000,
+      "context_label": "256K",
+      "price_input": 0.7,
+      "price_output": 0,
+      "is_free": false,
+      "capabilities": [
+        "embeddings"
+      ],
+      "tags": [
+        "embeddings"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "all",
+      "model_family": "wemm-embedding-2b",
+      "model_variant": "embedding",
+      "aliases": [],
+      "parameter_count": 2000000000,
+      "tier": "small",
+      "speed": "standard",
+      "use_case": [
+        "semantic-search",
+        "similarity"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "WeMM-Embedding-4B",
+      "object": "model",
+      "created": 430246422,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "WeMM-Embedding-4B",
+      "description": "WeMM-Embedding-4B 是腾讯微信团队推出的 40 亿参数多模态嵌入模型，可将文本、图像和视觉文档映射到统一向量空间，适用于跨模态检索、语义搜索和多模态 RAG 等场景。",
+      "context_size": 256000,
+      "context_label": "256K",
+      "price_input": 0.8,
+      "price_output": 0,
+      "is_free": false,
+      "capabilities": [
+        "embeddings"
+      ],
+      "tags": [
+        "embeddings"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "all",
+      "model_family": "wemm-embedding-4b",
+      "model_variant": "embedding",
+      "aliases": [],
+      "parameter_count": 4000000000,
+      "tier": "small",
+      "speed": "standard",
+      "use_case": [
+        "semantic-search",
+        "similarity"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "tongyi-intent-detect-v3",
+      "object": "model",
+      "created": 1281731238,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "tongyi-intent-detect-v3",
+      "description": "意图识别和槽位填充是对话系统中的基础任务。本模型实现了一个基于 API的意图（intent）和槽位参数（slots）联合预测。在一次模型输出中，同时完成多个指令API的返回和槽位参数的填充。返回的结果为标准json格式。",
+      "context_label": "unknown",
+      "price_input": 0.4,
+      "price_output": 1,
+      "is_free": false,
+      "capabilities": [
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "tongyi-intent-detect-v3",
+      "aliases": [],
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "qwen-flash",
+      "object": "model",
+      "created": 568698245,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "Qwen-Flash",
+      "description": "Qwen3 系列 Flash 语言模型，融合思考与非思考模式，可在对话中切换，适用于复杂推理、指令遵循和文本理解任务。",
+      "context_size": 32000,
+      "context_label": "32K",
+      "price_input": 0.15,
+      "price_output": 1.5,
+      "is_free": false,
+      "capabilities": [
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "qwen-flash",
+      "aliases": [],
       "tier": "small",
       "speed": "fast",
       "use_case": [
@@ -1827,48 +1963,6 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "whisper-large-v3-turbo",
-      "object": "model",
-      "created": 831031114,
-      "owned_by": "groq",
-      "provider": "groq",
-      "name": "whisper-large-v3-turbo",
-      "context_size": 448,
-      "context_label": "448",
-      "price_input": 0.04,
-      "is_free": true,
-      "capabilities": [
-        "speech-recognition"
-      ],
-      "tags": [
-        "speech-recognition"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Rate-limited free tier"
-      },
-      "trial_scope": "all",
-      "model_family": "whisper-large-v3",
-      "model_variant": "turbo",
-      "aliases": [
-        "cloudflare/@cf/openai/whisper-large-v3-turbo",
-        "whisper-large-v3-turbo",
-        "whisper-large-v3",
-        "groq/whisper-large-v3"
-      ],
-      "tier": "small",
-      "speed": "fast",
-      "use_case": [
-        "transcription",
-        "voice-input"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
       "id": "openai/gpt-oss-120b",
       "object": "model",
       "created": 261834169,
@@ -1901,9 +1995,6 @@
       "aliases": [
         "cerebras/gpt-oss-120b",
         "cloudflare/@cf/openai/gpt-oss-120b",
-        "gpt-oss-120b",
-        "openai/gpt-oss-120b",
-        "openai/gpt-oss-120b:free",
         "sambanova/gpt-oss-120b"
       ],
       "parameter_count": 120000000000,
@@ -1948,7 +2039,8 @@
         "cloudflare/@cf/openai/whisper-large-v3-turbo",
         "whisper-large-v3-turbo",
         "whisper-large-v3",
-        "groq/whisper-large-v3-turbo"
+        "groq/whisper-large-v3-turbo",
+        "sambanova/Whisper-Large-v3"
       ],
       "tier": "small",
       "speed": "fast",
@@ -1960,89 +2052,44 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "id": "whisper-large-v3-turbo",
       "object": "model",
-      "created": 463560371,
+      "created": 831031114,
       "owned_by": "groq",
       "provider": "groq",
-      "name": "meta-llama/llama-4-scout-17b-16e-instruct",
-      "context_size": 131072,
-      "context_label": "131K",
-      "price_input": 0.11,
-      "price_output": 0.34,
+      "name": "whisper-large-v3-turbo",
+      "context_size": 448,
+      "context_label": "448",
+      "price_input": 0.04,
       "is_free": true,
       "capabilities": [
-        "chat",
-        "text-generation"
+        "speech-recognition"
       ],
       "tags": [
-        "chat",
-        "text-generation"
+        "speech-recognition"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
       "free_quota": {
-        "rpd": 1000,
-        "tpm": 30000
+        "notes": "Rate-limited free tier"
       },
       "trial_scope": "all",
-      "model_family": "llama-4-scout-17b-16e",
-      "model_variant": "instruct",
+      "model_family": "whisper-large-v3",
+      "model_variant": "turbo",
       "aliases": [
-        "cloudflare/@cf/meta/llama-4-scout-17b-16e-instruct",
-        "github/Llama-4-Scout-17B-16E-Instruct"
+        "cloudflare/@cf/openai/whisper-large-v3-turbo",
+        "whisper-large-v3-turbo",
+        "whisper-large-v3",
+        "groq/whisper-large-v3",
+        "sambanova/Whisper-Large-v3"
       ],
-      "parameter_count": 17000000000,
       "tier": "small",
       "speed": "fast",
       "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "google/gemma-2-2b-it",
-      "object": "model",
-      "created": 477447330,
-      "owned_by": "nvidia",
-      "provider": "nvidia",
-      "name": "gemma-2-2b-it",
-      "description": "Model: google/gemma-2-2b-it",
-      "context_label": "unknown",
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation",
-        "chat"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "trial-credits",
-      "free_quota": {
-        "notes": "NVIDIA NIM free credits, exhaustible"
-      },
-      "trial_scope": "specific",
-      "model_family": "gemma-2-2b",
-      "model_variant": "it",
-      "aliases": [],
-      "parameter_count": 2000000000,
-      "tier": "small",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a"
+        "transcription",
+        "voice-input"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
@@ -2202,136 +2249,6 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "meta/llama-3.2-3b-instruct",
-      "object": "model",
-      "created": 1613866189,
-      "owned_by": "nvidia",
-      "provider": "nvidia",
-      "name": "llama-3.2-3b-instruct",
-      "description": "Model: meta/llama-3.2-3b-instruct",
-      "context_label": "unknown",
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation",
-        "chat"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "trial-credits",
-      "free_quota": {
-        "notes": "NVIDIA NIM free credits, exhaustible"
-      },
-      "trial_scope": "specific",
-      "model_family": "llama-3.2-3b",
-      "model_variant": "instruct",
-      "aliases": [
-        "cloudflare/@cf/meta/llama-3.2-3b-instruct",
-        "meta-llama/llama-3.2-3b-instruct:free"
-      ],
-      "parameter_count": 3000000000,
-      "tier": "small",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "nemotron-content-safety-reasoning-4b",
-      "object": "model",
-      "created": 549384392,
-      "owned_by": "nvidia",
-      "provider": "nvidia",
-      "name": "nemotron-content-safety-reasoning-4b",
-      "description": "Model: nvidia/nemotron-content-safety-reasoning-4b",
-      "context_label": "unknown",
-      "is_free": true,
-      "capabilities": [
-        "moderation"
-      ],
-      "tags": [
-        "reasoning",
-        "text-generation",
-        "moderation"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "trial-credits",
-      "free_quota": {
-        "notes": "NVIDIA NIM free credits, exhaustible"
-      },
-      "trial_scope": "specific",
-      "model_family": "nemotron-content-safety-reasoning-4b",
-      "model_variant": "reasoning",
-      "aliases": [],
-      "parameter_count": 4000000000,
-      "tier": "small",
-      "speed": "fast",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "content-creation",
-        "writing-assistance",
-        "content-filtering",
-        "safety",
-        "complex-reasoning"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "nemotron-mini-4b-instruct",
-      "object": "model",
-      "created": 148486695,
-      "owned_by": "nvidia",
-      "provider": "nvidia",
-      "name": "nemotron-mini-4b-instruct",
-      "description": "Model: nvidia/nemotron-mini-4b-instruct",
-      "context_label": "unknown",
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation",
-        "chat"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "trial-credits",
-      "free_quota": {
-        "notes": "NVIDIA NIM free credits, exhaustible"
-      },
-      "trial_scope": "specific",
-      "model_family": "nemotron-mini-4b",
-      "model_variant": "instruct",
-      "aliases": [],
-      "parameter_count": 4000000000,
-      "tier": "small",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
       "id": "riva-translate-4b-instruct",
       "object": "model",
       "created": 460366680,
@@ -2408,195 +2325,39 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "liquid/lfm-2.5-1.2b-thinking:free",
+      "id": "riva-translate-4b-instruct-v2",
       "object": "model",
-      "created": 556747778,
-      "owned_by": "openrouter",
-      "provider": "openrouter",
-      "name": "LiquidAI: LFM2.5-1.2B-Thinking (free)",
-      "description": "LFM2.5-1.2B-Thinking is a lightweight reasoning-focused model optimized for agentic tasks, data extraction, and RAG—while still running comfortably on edge devices. It supports long context (up to 32K tokens) and is designed to provide higher-quality “thinking” responses in a small 1.2B model.",
-      "context_size": 32768,
-      "context_label": "33K",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "reasoning"
-      ],
-      "tags": [
-        "reasoning",
-        "text-generation",
-        "chat"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Free tier with rate limits (see openrouter.ai)"
-      },
-      "trial_scope": "specific",
-      "model_family": "liquid-lfm-2.5-1.2b-thinking",
-      "model_variant": "thinking",
-      "aliases": [],
-      "parameter_count": 1200000000,
-      "tier": "small",
-      "speed": "fast",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a",
-        "complex-reasoning"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "liquid/lfm-2.5-1.2b-instruct:free",
-      "object": "model",
-      "created": 1035736194,
-      "owned_by": "openrouter",
-      "provider": "openrouter",
-      "name": "LiquidAI: LFM2.5-1.2B-Instruct (free)",
-      "description": "LFM2.5-1.2B-Instruct is a compact, high-performance instruction-tuned model built for fast on-device AI. It delivers strong chat quality in a 1.2B parameter footprint, with efficient edge inference and broad runtime support.",
-      "context_size": 32768,
-      "context_label": "33K",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation",
-        "chat"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Free tier with rate limits (see openrouter.ai)"
-      },
-      "trial_scope": "specific",
-      "model_family": "liquid-lfm-2.5-1.2b",
-      "model_variant": "instruct",
-      "aliases": [],
-      "parameter_count": 1200000000,
-      "tier": "small",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "meta-llama/llama-3.2-3b-instruct:free",
-      "object": "model",
-      "created": 1478438307,
-      "owned_by": "openrouter",
-      "provider": "openrouter",
-      "name": "Meta: Llama 3.2 3B Instruct (free)",
-      "description": "Llama 3.2 3B is a 3-billion-parameter multilingual large language model, optimized for advanced natural language processing tasks like dialogue generation, reasoning, and summarization. Designed with the latest transformer architecture, it supports eight languages, including English, Spanish, and Hindi, and is adaptable for additional languages.\n\nTrained on 9 trillion tokens, the Llama 3.2 3B model excels in instruction-following, complex reasoning, and tool use. Its balanced performance makes i",
-      "context_size": 131072,
-      "context_label": "131K",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "reasoning",
-        "text-generation",
-        "tool-use",
-        "chat"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": false,
-      "has_tool_use": true,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "rpm": 8,
-        "notes": "Free tier: 8 req/min (per endpoint, basic account)"
-      },
-      "trial_scope": "specific",
-      "model_family": "llama-3.2-3b",
-      "model_variant": "instruct",
-      "aliases": [
-        "cloudflare/@cf/meta/llama-3.2-3b-instruct",
-        "meta/llama-3.2-3b-instruct"
-      ],
-      "parameter_count": 3000000000,
-      "tier": "small",
-      "speed": "fast",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a",
-        "complex-reasoning"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "gemma-4-31B-it",
-      "object": "model",
-      "created": 1392290191,
-      "owned_by": "sambanova",
-      "provider": "sambanova",
-      "name": "google/gemma-4-31B-it",
+      "created": 16697981,
+      "owned_by": "nvidia",
+      "provider": "nvidia",
+      "name": "riva-translate-4b-instruct-v2",
+      "description": "Model: nvidia/riva-translate-4b-instruct-v2",
       "context_label": "unknown",
-      "price_input": 0.38,
-      "price_output": 1.15,
-      "is_free": true,
+      "is_free": false,
       "capabilities": [
-        "chat",
-        "text-generation"
+        "speech-synthesis"
       ],
       "tags": [
-        "chat",
-        "text-generation"
+        "text-generation",
+        "speech-synthesis"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
       "has_tool_use": false,
-      "free_mechanism": "trial-credits",
-      "free_quota": {
-        "total_credits": 5,
-        "notes": "$5 trial credits, valid for 3 months"
-      },
-      "trial_scope": "all",
-      "model_family": "gemma-4-31b",
-      "model_variant": "it",
-      "aliases": [
-        "google/gemma-4-31b-it",
-        "google/gemma-4-31b-it:free"
-      ],
-      "parameter_count": 31000000000,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "riva-translate-4b-v2",
+      "model_variant": "instruct",
+      "aliases": [],
+      "parameter_count": 4000000000,
       "tier": "small",
-      "speed": "fast",
+      "speed": "standard",
       "use_case": [
-        "conversation",
-        "q&a",
         "content-creation",
-        "writing-assistance"
+        "writing-assistance",
+        "text-to-speech",
+        "voice-output"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
@@ -2644,12 +2405,12 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "gpt-oss-120b",
+      "id": "gemma-4-31B-it",
       "object": "model",
-      "created": 2048018171,
+      "created": 1392290191,
       "owned_by": "sambanova",
       "provider": "sambanova",
-      "name": "openai/gpt-oss-120b",
+      "name": "google/gemma-4-31B-it",
       "context_label": "unknown",
       "price_input": 0.22,
       "price_output": 0.59,
@@ -2671,16 +2432,143 @@
         "notes": "$5 trial credits, valid for 3 months"
       },
       "trial_scope": "all",
-      "model_family": "gpt-oss-120b",
+      "model_family": "gemma-4-31b",
+      "model_variant": "it",
       "aliases": [
-        "cerebras/gpt-oss-120b",
-        "cloudflare/@cf/openai/gpt-oss-120b",
-        "gpt-oss-120b",
-        "groq/openai/gpt-oss-120b",
-        "openai/gpt-oss-120b",
-        "openai/gpt-oss-120b:free"
+        "google/gemma-4-31b-it"
       ],
-      "parameter_count": 120000000000,
+      "parameter_count": 31000000000,
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "Qwen3-235B-A22B-Instruct-2507",
+      "object": "model",
+      "created": 2096442811,
+      "owned_by": "sambanova",
+      "provider": "sambanova",
+      "name": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+      "context_label": "unknown",
+      "price_input": 0.4,
+      "price_output": 0.8,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "total_credits": 5,
+        "notes": "$5 trial credits, valid for 3 months"
+      },
+      "trial_scope": "all",
+      "model_family": "qwen3-235b-a22b",
+      "model_variant": "instruct",
+      "aliases": [
+        "xingchen/xop3qwen235b2507",
+        "xingchen/xop3qwen235b"
+      ],
+      "parameter_count": 235000000000,
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "gemma-3-27b-it",
+      "object": "model",
+      "created": 1091930091,
+      "owned_by": "sambanova",
+      "provider": "sambanova",
+      "name": "google/gemma-3-27b-it",
+      "context_label": "unknown",
+      "price_input": 0.22,
+      "price_output": 0.59,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "total_credits": 5,
+        "notes": "$5 trial credits, valid for 3 months"
+      },
+      "trial_scope": "all",
+      "model_family": "gemma-3-27b",
+      "model_variant": "it",
+      "aliases": [],
+      "parameter_count": 27000000000,
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "ALLaM-7B-Instruct-preview",
+      "object": "model",
+      "created": 385789167,
+      "owned_by": "sambanova",
+      "provider": "sambanova",
+      "name": "tbd",
+      "context_label": "unknown",
+      "price_input": 0.22,
+      "price_output": 0.59,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "total_credits": 5,
+        "notes": "$5 trial credits, valid for 3 months"
+      },
+      "trial_scope": "all",
+      "model_family": "allam-7b-preview",
+      "model_variant": "instruct",
+      "aliases": [],
       "tier": "small",
       "speed": "fast",
       "use_case": [
@@ -2700,7 +2588,7 @@
       "provider": "sambanova",
       "name": "google/gemma-3-12b-it",
       "context_label": "unknown",
-      "price_input": 0.35,
+      "price_input": 0.22,
       "price_output": 0.59,
       "is_free": true,
       "capabilities": [
@@ -2738,15 +2626,61 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "xop35qwen2b",
+      "id": "gpt-oss-120b",
       "object": "model",
-      "created": 368694390,
+      "created": 2048018171,
+      "owned_by": "sambanova",
+      "provider": "sambanova",
+      "name": "openai/gpt-oss-120b",
+      "context_label": "unknown",
+      "price_input": 0.22,
+      "price_output": 0.59,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "total_credits": 5,
+        "notes": "$5 trial credits, valid for 3 months"
+      },
+      "trial_scope": "all",
+      "model_family": "gpt-oss-120b",
+      "aliases": [
+        "cerebras/gpt-oss-120b",
+        "cloudflare/@cf/openai/gpt-oss-120b",
+        "groq/openai/gpt-oss-120b"
+      ],
+      "parameter_count": 120000000000,
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "spark-x2.5-4b",
+      "object": "model",
+      "created": 263902778,
       "owned_by": "xingchen",
       "provider": "xingchen",
-      "name": "Qwen3.5-2B",
-      "description": "Qwen3.5-2B是阿里云开源的20亿参数轻量大模型，兼顾小体积与强性能，可在手机、笔记本等端侧设备本地运行，在对话、轻量代码等场景表现均衡。",
-      "context_size": 32768,
-      "context_label": "33K",
+      "name": "Spark-X2.5-4B",
+      "description": "4B级端侧通用语言Dense模型，采用混合注意力架构，原生支持最长 1M token 的上下文，并支持 200 多种语言，在语言理解、文本创作、数学推理、编程、工具调用和智能体工作流等广泛的日常任务中表现优异，领先同尺寸开源模型。",
+      "context_size": 1,
+      "context_label": "1",
       "price_input": 0,
       "price_output": 0,
       "is_free": true,
@@ -2764,6 +2698,47 @@
       "free_mechanism": "rate-limited",
       "free_quota": null,
       "trial_scope": "specific",
+      "model_family": "spark-x2.5-4b",
+      "aliases": [],
+      "parameter_count": 4000000000,
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "xop35qwen2b",
+      "object": "model",
+      "created": 368694390,
+      "owned_by": "xingchen",
+      "provider": "xingchen",
+      "name": "Qwen3.5-2B",
+      "description": "Qwen3.5-2B是阿里云开源的20亿参数轻量大模型，兼顾小体积与强性能，可在手机、笔记本等端侧设备本地运行，在对话、轻量代码等场景表现均衡。",
+      "context_size": 32768,
+      "context_label": "33K",
+      "price_input": 0.2,
+      "price_output": 0.4,
+      "is_free": false,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
       "model_family": "qwen3.5-2b",
       "aliases": [],
       "parameter_count": 2000000000,
@@ -2809,7 +2784,6 @@
       "model_variant": "instruct",
       "aliases": [
         "cloudflare/@cf/qwen/qwen3-30b-a3b-fp8",
-        "Qwen3-30B-A3B-Instruct-2507",
         "xingchen/xop3qwen30b"
       ],
       "parameter_count": 30000000000,
@@ -2854,7 +2828,6 @@
       "model_family": "qwen3-30b-a3b",
       "aliases": [
         "cloudflare/@cf/qwen/qwen3-30b-a3b-fp8",
-        "Qwen3-30B-A3B-Instruct-2507",
         "xingchen/xop3qwen30b2507"
       ],
       "parameter_count": 30000000000,
@@ -2876,7 +2849,7 @@
       "owned_by": "xingchen",
       "provider": "xingchen",
       "name": "Qwen3-4B",
-      "description": "Qwen3-4B 是 Qwen 系列的轻量级因果语言模型，经预训练与后期优化，具备 40 亿参数规模，采用 36 层 Transformer 架构，原生支持 32K tokens 长上下文（通过 YaRN 技术可扩展至 131K tokens），兼顾高效推理与长文本处理能力，适用于中小规模场景的快速部署与多轮对话、文档分析等任务。",
+      "description": "Qwen3-4B 是 Qwen 系列的轻量级因果语言模型，经预训练与后期优化，具备 40 亿参数规模，采用 36 层 Transformer 架构，适用于中小规模场景的快速部署与多轮对话、文档分析等任务。",
       "context_size": 16384,
       "context_label": "16K",
       "price_input": 0.3,

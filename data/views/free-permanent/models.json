@@ -1,8 +1,8 @@
 {
   "object": "list",
   "view": "free-permanent",
-  "updated_at": "2026-06-08T13:57:08.121Z",
-  "total": 48,
+  "updated_at": "2026-09-13T07:16:40.151Z",
+  "total": 43,
   "filters": {
     "freeMechanism": "permanent"
   },
@@ -14,7 +14,7 @@
       "owned_by": "bigmodel",
       "provider": "bigmodel",
       "name": "GLM-4-Flash-250414",
-      "description": "GLM-4-Flash-250414 语言模型是 智谱AI 首个免费的大模型 API，它在实时网页检索、长上下文处理、多语言支持等方面表现出色，适用于智能问答、摘要生成和文本数据处理等多种应用场景。",
+      "description": "语言模型",
       "context_size": 128000,
       "context_label": "128K",
       "price_input": 0,
@@ -22,19 +22,15 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation",
-        "tool-use",
-        "function-calling"
+        "text-generation"
       ],
       "tags": [
         "chat",
-        "text-generation",
-        "tool-use",
-        "function-calling"
+        "text-generation"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
-      "has_tool_use": true,
+      "has_tool_use": false,
       "free_mechanism": "permanent",
       "free_quota": null,
       "trial_scope": "specific",
@@ -102,7 +98,7 @@
       "owned_by": "bigmodel",
       "provider": "bigmodel",
       "name": "GLM-4.1V-Thinking-Flash",
-      "description": "GLM-4.1V-Thinking-Flash 是智谱推出的免费视觉推理模型。它在图表/视频理解、前端 Coding、GUI 任务等场景表现出色，核心能力达到全面新 SOTA。模型引入思维链推理机制，显著提升了复杂场景中的回答精准度与可解释性。",
+      "description": "视觉推理",
       "context_size": 64000,
       "context_label": "64K",
       "price_input": 0,
@@ -154,7 +150,7 @@
       "owned_by": "bigmodel",
       "provider": "bigmodel",
       "name": "GLM-4V-Flash",
-      "description": "GLM-4V-Flash 是智谱推出的首个完全免费的图像理解模型。在图像识别、图像问答、图像推理等多项任务中展现出卓越的性能。在企业应用场景中，GLM-4V-Flash 表现突出，不仅能够帮助企业实现高效图像处理，还能紧密贴合不同垂直领域的实际需求，适配多样化应用场景。",
+      "description": "图像理解",
       "context_size": 4000,
       "context_label": "4K",
       "price_input": 0,
@@ -244,33 +240,46 @@
       "created": 586716134,
       "owned_by": "bigmodel",
       "provider": "bigmodel",
-      "name": "Cogview-3-Flash",
-      "description": "CogView-3-Flash 是智谱推出的免费图像生成模型，能够根据用户指令生成符合要求且美学评分更高的图像。CogView-3-Flash 主要应用于艺术创作、设计参考、游戏开发、虚拟现实等领域，帮助用户快速实现从文本到图像的转换需求。",
+      "name": "CogView-3-Flash",
+      "description": "图像生成",
       "context_label": "unknown",
       "price_input": 0,
       "price_output": 0,
       "is_free": true,
       "capabilities": [
+        "chat",
+        "text-generation",
+        "vision",
         "image-generation"
       ],
       "tags": [
-        "image-generation"
+        "chat",
+        "text-generation",
+        "vision",
+        "image-generation",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": "permanent",
       "free_quota": null,
       "trial_scope": "specific",
       "model_family": "cogview-3-flash",
       "aliases": [],
-      "tier": "medium",
+      "tier": "large",
       "speed": "fast",
       "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "image-understanding",
+        "visual-q&a",
         "creative-generation",
         "art"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -280,15 +289,19 @@
       "owned_by": "bigmodel",
       "provider": "bigmodel",
       "name": "CogVideoX-Flash",
-      "description": "CogVideoX-Flash 是智谱推出的免费视频生成模型，能够根据用户指令生成符合要求且美学评分更高的视频。",
+      "description": "视频生成",
       "context_label": "unknown",
       "price_input": 0,
       "price_output": 0,
       "is_free": true,
       "capabilities": [
+        "chat",
+        "text-generation",
         "video-generation"
       ],
       "tags": [
+        "chat",
+        "text-generation",
         "video-generation"
       ],
       "is_reasoning": false,
@@ -302,119 +315,13 @@
       "tier": "medium",
       "speed": "fast",
       "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
         "video-creation"
       ],
       "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "glm-4.6v-flash",
-      "object": "model",
-      "created": 1161885709,
-      "owned_by": "bigmodel",
-      "provider": "bigmodel",
-      "name": "GLM-4.6V-Flash",
-      "description": "GLM-4.6V-Flash 是 GLM-4.6V 的免费版本，是 GLM 系列在多模态方向上的一次重要迭代，支持开启或关闭思考模式。它将训练时上下文窗口提升到128k tokens，在 视觉理解精度上达到同参数规模 SOTA，并首次在模型架构中将 Function Call（工具调用）能力原生融入视觉模型，打通从「视觉感知」到「可执行行动（Action）」的链路，为真实业务场景中的多模态 Agent 提供统一的技术底座。",
-      "context_size": 128000,
-      "context_label": "128K",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "vision",
-        "reasoning",
-        "tool-use",
-        "function-calling"
-      ],
-      "tags": [
-        "tool-use",
-        "chat",
-        "text-generation",
-        "vision",
-        "reasoning",
-        "function-calling",
-        "multimodal"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": true,
-      "has_tool_use": true,
-      "free_mechanism": "permanent",
-      "free_quota": null,
-      "trial_scope": "specific",
-      "model_family": "glm-4.6v-flash",
-      "aliases": [
-        "GLM-4.6V-Flash"
-      ],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance",
-        "image-understanding",
-        "visual-q&a",
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "glm-4.7-flash",
-      "object": "model",
-      "created": 1010454616,
-      "owned_by": "bigmodel",
-      "provider": "bigmodel",
-      "name": "GLM-4.7-Flash",
-      "description": "GLM-4.7-Flash 作为 30B 级 SOTA 模型，提供了一个兼顾性能与效率的新选择。面向 Agentic Coding 场景强化了编码能力、长程任务规划与工具协同，并在多个公开基准的当期榜单中取得同尺寸开源模型中的出色表现。在执行复杂智能体任务，在工具调用时指令遵循更强，Artifacts 与 Agentic Coding 的前端美感和长程任务完成效率进一步提升。",
-      "context_size": 200000,
-      "context_label": "200K",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "reasoning",
-        "tool-use",
-        "function-calling"
-      ],
-      "tags": [
-        "chat",
-        "text-generation",
-        "reasoning",
-        "tool-use",
-        "function-calling"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": false,
-      "has_tool_use": true,
-      "free_mechanism": "permanent",
-      "free_quota": null,
-      "trial_scope": "specific",
-      "model_family": "glm-4.7-flash",
-      "aliases": [
-        "GLM-4.7-Flash",
-        "xingchen/xopglmv47flash"
-      ],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance",
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -490,41 +397,6 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "nsfw-classifier",
-      "object": "model",
-      "created": 332534965,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "色情图片检测",
-      "description": "NSFW Classifier 是一个高精度的深度学习模型，专门用于实时识别和过滤不适合公开环境的敏感图片。",
-      "context_label": "unknown",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "moderation"
-      ],
-      "tags": [
-        "moderation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "permanent",
-      "free_quota": null,
-      "trial_scope": "specific",
-      "model_family": "nsfw-classifier",
-      "aliases": [],
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-filtering",
-        "safety"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
       "id": "SenseVoiceSmall",
       "object": "model",
       "created": 442304562,
@@ -555,42 +427,6 @@
       "use_case": [
         "transcription",
         "voice-input"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "Security-semantic-filtering",
-      "object": "model",
-      "created": 2102253519,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "违规文本检测",
-      "description": "Security-semantic-filtering 是一种用于增强系统安全性的技术，通过对数据语义的过滤和分析，确保敏感信息的保护和合规性。",
-      "context_size": 32000,
-      "context_label": "32K",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "moderation"
-      ],
-      "tags": [
-        "moderation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "permanent",
-      "free_quota": null,
-      "trial_scope": "specific",
-      "model_family": "security-semantic-filtering",
-      "aliases": [],
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-filtering",
-        "safety"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
@@ -1447,116 +1283,6 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "nonescape-v0",
-      "object": "model",
-      "created": 1228285132,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "AI 图片检测",
-      "description": "nonescape-v0 是一款图像分类模型，可检测并区分图片是人工拍摄创作还是由 AI 模型生成。",
-      "context_label": "unknown",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "moderation"
-      ],
-      "tags": [
-        "moderation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "permanent",
-      "free_quota": null,
-      "trial_scope": "specific",
-      "model_family": "nonescape-v0",
-      "aliases": [],
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-filtering",
-        "safety"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "Qwen3Guard-Gen-0.6B",
-      "object": "model",
-      "created": 647577904,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "Qwen3Guard-Gen-0.6B",
-      "description": "Qwen3Guard是阿里巴巴Qwen团队于2025年9月24日发布的人工智能安全审查模型系列。该模型基于Qwen3模型构建，主要用于提供实时高效的人工智能安全保障。",
-      "context_size": 32000,
-      "context_label": "32K",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "permanent",
-      "free_quota": null,
-      "trial_scope": "specific",
-      "model_family": "qwen3guard-gen-0.6b",
-      "aliases": [],
-      "parameter_count": 600000000,
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "GLM-4.6V-Flash",
-      "object": "model",
-      "created": 378048475,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "GLM-4.6V-Flash",
-      "description": "GLM-4.6V-Flash 是 GLM-4.6V 的免费版本，是 GLM 系列在多模态方向上的一次重要迭代，支持开启或关闭思考模式。它将训练时上下文窗口提升到128k tokens。",
-      "context_size": 128000,
-      "context_label": "128K",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "permanent",
-      "free_quota": null,
-      "trial_scope": "specific",
-      "model_family": "glm-4.6v-flash",
-      "aliases": [
-        "bigmodel/glm-4.6v-flash"
-      ],
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
       "id": "HuatuoGPT-o1-7B",
       "object": "model",
       "created": 1693535129,
@@ -1632,15 +1358,82 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "GLM-4.7-Flash",
+      "id": "Qwen3-VL-Embedding-8B",
       "object": "model",
-      "created": 530925946,
+      "created": 1650875019,
       "owned_by": "gitee",
       "provider": "gitee",
-      "name": "GLM-4.7-Flash",
-      "description": "GLM-4.7-Flash 作为 30B 级 SOTA 模型，提供了一个兼顾性能与效率的新选择。面向 Agentic Coding 场景强化了编码能力、长程任务规划与工具协同，并在多个公开基准的当期榜单中取得同尺寸开源模型中的领先表现。在执行复杂智能体任务，在工具调用时指令遵循更强，Artifacts 与 Agentic Coding 的前端美感和长程任务完成效率进一步提升。",
-      "context_size": 200000,
-      "context_label": "200K",
+      "name": "Qwen3-VL-Embedding-8B",
+      "description": "Qwen3-VL-Embedding-8B 是一款基于 Qwen3-VL 的 8B 参数 多模态嵌入（Embedding）模型，用于将文本、图像、截图等多种模态输入编码成语义向量，以支持高效跨模态检索、聚类和相似性计算。",
+      "context_size": 32000,
+      "context_label": "32K",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "embeddings"
+      ],
+      "tags": [
+        "embeddings"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "permanent",
+      "free_quota": null,
+      "trial_scope": "specific",
+      "model_family": "qwen3-vl-embedding-8b",
+      "model_variant": "vl",
+      "aliases": [],
+      "parameter_count": 8000000000,
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "semantic-search",
+        "similarity"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "ip-location",
+      "object": "model",
+      "created": 683603388,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "IP 查询",
+      "description": "快速、准确的IP 地址定位与地理信息查询，适用于风控、个性\n化服务和网络诊断。",
+      "context_label": "unknown",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "ip_location"
+      ],
+      "tags": [],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "permanent",
+      "free_quota": null,
+      "trial_scope": "specific",
+      "model_family": "ip-location",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "Atria-dawn-v2",
+      "object": "model",
+      "created": 1969565218,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "Atria-dawn-v2",
+      "description": "Atria-dawn-v2 面向科研与工程场景，旨在通过推理、工具调用和多步骤协作，辅助完成研究分析、代码开发与成果交付。",
+      "context_label": "unknown",
       "price_input": 0,
       "price_output": 0,
       "is_free": true,
@@ -1656,11 +1449,8 @@
       "free_mechanism": "permanent",
       "free_quota": null,
       "trial_scope": "specific",
-      "model_family": "glm-4.7-flash",
-      "aliases": [
-        "bigmodel/glm-4.7-flash",
-        "xingchen/xopglmv47flash"
-      ],
+      "model_family": "atria-dawn-v2",
+      "aliases": [],
       "tier": "medium",
       "speed": "fast",
       "use_case": [
