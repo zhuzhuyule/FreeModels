@@ -1,8 +1,8 @@
 {
   "object": "list",
   "view": "multimodal",
-  "updated_at": "2026-06-08T13:57:08.127Z",
-  "total": 87,
+  "updated_at": "2026-09-13T07:16:40.160Z",
+  "total": 79,
   "filters": {
     "tags": "vision"
   },
@@ -35,9 +35,7 @@
       "free_quota": null,
       "trial_scope": "none",
       "model_family": "glm-4.5v",
-      "aliases": [
-        "GLM-4_5V"
-      ],
+      "aliases": [],
       "tier": "large",
       "speed": "premium",
       "use_case": [
@@ -58,7 +56,7 @@
       "owned_by": "bigmodel",
       "provider": "bigmodel",
       "name": "GLM-4.1V-Thinking-Flash",
-      "description": "GLM-4.1V-Thinking-Flash 是智谱推出的免费视觉推理模型。它在图表/视频理解、前端 Coding、GUI 任务等场景表现出色，核心能力达到全面新 SOTA。模型引入思维链推理机制，显著提升了复杂场景中的回答精准度与可解释性。",
+      "description": "视觉推理",
       "context_size": 64000,
       "context_label": "64K",
       "price_input": 0,
@@ -110,7 +108,7 @@
       "owned_by": "bigmodel",
       "provider": "bigmodel",
       "name": "GLM-4V-Flash",
-      "description": "GLM-4V-Flash 是智谱推出的首个完全免费的图像理解模型。在图像识别、图像问答、图像推理等多项任务中展现出卓越的性能。在企业应用场景中，GLM-4V-Flash 表现突出，不仅能够帮助企业实现高效图像处理，还能紧密贴合不同垂直领域的实际需求，适配多样化应用场景。",
+      "description": "图像理解",
       "context_size": 4000,
       "context_label": "4K",
       "price_input": 0,
@@ -535,15 +533,14 @@
       "estimated_latency": "3-10s"
     },
     {
-      "id": "glm-4.6v-flash",
+      "id": "cogview-3-flash",
       "object": "model",
-      "created": 1161885709,
+      "created": 586716134,
       "owned_by": "bigmodel",
       "provider": "bigmodel",
-      "name": "GLM-4.6V-Flash",
-      "description": "GLM-4.6V-Flash 是 GLM-4.6V 的免费版本，是 GLM 系列在多模态方向上的一次重要迭代，支持开启或关闭思考模式。它将训练时上下文窗口提升到128k tokens，在 视觉理解精度上达到同参数规模 SOTA，并首次在模型架构中将 Function Call（工具调用）能力原生融入视觉模型，打通从「视觉感知」到「可执行行动（Action）」的链路，为真实业务场景中的多模态 Agent 提供统一的技术底座。",
-      "context_size": 128000,
-      "context_label": "128K",
+      "name": "CogView-3-Flash",
+      "description": "图像生成",
+      "context_label": "unknown",
       "price_input": 0,
       "price_output": 0,
       "is_free": true,
@@ -551,29 +548,23 @@
         "chat",
         "text-generation",
         "vision",
-        "reasoning",
-        "tool-use",
-        "function-calling"
+        "image-generation"
       ],
       "tags": [
-        "tool-use",
         "chat",
         "text-generation",
         "vision",
-        "reasoning",
-        "function-calling",
+        "image-generation",
         "multimodal"
       ],
-      "is_reasoning": true,
+      "is_reasoning": false,
       "is_multimodal": true,
-      "has_tool_use": true,
+      "has_tool_use": false,
       "free_mechanism": "permanent",
       "free_quota": null,
       "trial_scope": "specific",
-      "model_family": "glm-4.6v-flash",
-      "aliases": [
-        "GLM-4.6V-Flash"
-      ],
+      "model_family": "cogview-3-flash",
+      "aliases": [],
       "tier": "large",
       "speed": "fast",
       "use_case": [
@@ -583,6 +574,56 @@
         "writing-assistance",
         "image-understanding",
         "visual-q&a",
+        "creative-generation",
+        "art"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "@cf/moonshotai/kimi-k2.7-code",
+      "object": "model",
+      "created": 541624990,
+      "owned_by": "cloudflare",
+      "provider": "cloudflare",
+      "name": "@cf/moonshotai/kimi-k2.7-code",
+      "description": "Kimi K2.7 is a frontier-scale open-source 1T parameter model with a 262.1k context window, multi-turn tool calling, vision inputs, and structured outputs for agentic workloads.",
+      "context_size": 262144,
+      "context_label": "262K",
+      "price_input": 0.19,
+      "price_output": 4,
+      "is_free": true,
+      "capabilities": [
+        "text-generation",
+        "function-calling",
+        "reasoning"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "tool-use",
+        "function-calling",
+        "reasoning",
+        "multimodal"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": true,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+      },
+      "trial_scope": "all",
+      "model_family": "moonshotai-kimi-k2.7-code",
+      "model_variant": "code",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
         "problem-solving",
         "logical-analysis",
         "math",
@@ -674,6 +715,56 @@
       "estimated_latency": "< 1s"
     },
     {
+      "id": "@cf/zai-org/glm-5.3-flash",
+      "object": "model",
+      "created": 1674197715,
+      "owned_by": "cloudflare",
+      "provider": "cloudflare",
+      "name": "@cf/zai-org/glm-5.3-flash",
+      "description": "The first natively multimodal model in the GLM-5 series. With 320B total parameters and just 18B active parameters, it outperforms GLM-5.2 across benchmarks and real-world workloads at one-tenth the price, while approaching Claude Opus 4.8 on coding and agentic benchmarks.",
+      "context_size": 1310720,
+      "context_label": "1M",
+      "price_input": 0.03,
+      "price_output": 0.5,
+      "is_free": true,
+      "capabilities": [
+        "text-generation",
+        "function-calling",
+        "reasoning"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "function-calling",
+        "reasoning",
+        "multimodal"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": true,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+      },
+      "trial_scope": "all",
+      "model_family": "org-glm-5.3-flash",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
       "id": "@cf/moonshotai/kimi-k2.6",
       "object": "model",
       "created": 1273849035,
@@ -709,8 +800,7 @@
       "trial_scope": "all",
       "model_family": "moonshotai-kimi-k2.6",
       "aliases": [
-        "moonshotai/kimi-k2.6",
-        "moonshotai/kimi-k2.6:free"
+        "moonshotai/kimi-k2.6"
       ],
       "tier": "large",
       "speed": "fast",
@@ -1031,34 +1121,44 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "@cf/runwayml/stable-diffusion-v1-5-img2img",
+      "id": "@cf/qwen/qwen3.8-27b",
       "object": "model",
-      "created": 368345415,
+      "created": 258959613,
       "owned_by": "cloudflare",
       "provider": "cloudflare",
-      "name": "@cf/runwayml/stable-diffusion-v1-5-img2img",
-      "description": "Stable Diffusion is a latent text-to-image diffusion model capable of generating photo-realistic images. Img2img generate a new image from an input image with Stable Diffusion. ",
-      "context_label": "unknown",
+      "name": "@cf/qwen/qwen3.8-27b",
+      "description": "Qwen 3.8 27B is a 27-billion-parameter instruction-tuned language model from Alibaba's Qwen family, designed for vision, efficient general-purpose text generation and agentic workloads.",
+      "context_size": 262144,
+      "context_label": "262K",
+      "price_input": 0.05,
+      "price_output": 3.2,
       "is_free": true,
       "capabilities": [
-        "image-generation"
+        "text-generation",
+        "function-calling",
+        "reasoning"
       ],
       "tags": [
         "vision",
         "text-generation",
-        "image-generation",
+        "function-calling",
+        "reasoning",
         "multimodal"
       ],
-      "is_reasoning": false,
+      "is_reasoning": true,
       "is_multimodal": true,
-      "has_tool_use": false,
+      "has_tool_use": true,
       "free_mechanism": "daily-tokens",
       "free_quota": {
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
       },
       "trial_scope": "all",
-      "model_family": "runwayml-stable-diffusion-v1-5-img2img",
-      "aliases": [],
+      "model_family": "qwen3.8-27b",
+      "aliases": [
+        "qwen3.8-27b",
+        "groq/qwen/qwen3.8-27b"
+      ],
+      "parameter_count": 27000000000,
       "tier": "large",
       "speed": "fast",
       "use_case": [
@@ -1066,8 +1166,57 @@
         "visual-q&a",
         "content-creation",
         "writing-assistance",
-        "creative-generation",
-        "art"
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "@cf/moondream/moondream3.1-9B-A2B",
+      "object": "model",
+      "created": 868867364,
+      "owned_by": "cloudflare",
+      "provider": "cloudflare",
+      "name": "@cf/moondream/moondream3.1-9B-A2B",
+      "description": "Moondream 3 is a fast, efficient 9B mixture-of-experts vision language model (2B active parameters) that delivers frontier-level visual reasoning for tasks like object detection, pointing, OCR, and structured output.",
+      "context_label": "unknown",
+      "price_input": 0.3,
+      "price_output": 1,
+      "is_free": true,
+      "capabilities": [
+        "vision"
+      ],
+      "tags": [
+        "reasoning",
+        "vision",
+        "text-generation",
+        "multimodal"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+      },
+      "trial_scope": "all",
+      "model_family": "moondream-moondream3.1-9b-a2b",
+      "aliases": [],
+      "parameter_count": 9000000000,
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
       ],
       "performance_level": "mid",
       "estimated_latency": "< 1s"
@@ -1148,8 +1297,7 @@
       "model_family": "llama-4-scout-17b-16e",
       "model_variant": "instruct",
       "aliases": [
-        "github/Llama-4-Scout-17B-16E-Instruct",
-        "groq/meta-llama/llama-4-scout-17b-16e-instruct"
+        "github/Llama-4-Scout-17B-16E-Instruct"
       ],
       "parameter_count": 17000000000,
       "tier": "large",
@@ -1399,42 +1547,6 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "GOT-OCR2_0",
-      "object": "model",
-      "created": 298537505,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "GOT-OCR2_0",
-      "description": "GOT-OCR2_0提供功能强大的 OCR 解决方案，能够轻松识别图表、几何图形、公式和音乐符号，并将其转换为可编辑文本。该模型基于先进的深度学习架构，针对多语言文本、复杂排版以及图像噪声进行了全面优化，提供卓越的文字识别精度。",
-      "context_label": "unknown",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": false,
-      "capabilities": [
-        "vision"
-      ],
-      "tags": [
-        "vision",
-        "multimodal"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "got-ocr2_0",
-      "aliases": [],
-      "tier": "large",
-      "speed": "premium",
-      "use_case": [
-        "image-understanding",
-        "visual-q&a"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "3-10s"
-    },
-    {
       "id": "Florence-2-large",
       "object": "model",
       "created": 602781162,
@@ -1505,49 +1617,6 @@
         "image-understanding",
         "visual-q&a",
         "video-creation"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "3-10s"
-    },
-    {
-      "id": "Qwen-Image",
-      "object": "model",
-      "created": 1522268816,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "Qwen-Image",
-      "description": "Qwen‑Image 是一款由阿里云开发的20B参数级 MMDiT 图像生成基础模型，以其卓越的复杂文本渲染能力（尤其在英语和中文中表现出色）和高精度图像编辑功能而著称",
-      "context_label": "unknown",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": false,
-      "capabilities": [
-        "image-generation"
-      ],
-      "tags": [
-        "vision",
-        "image-generation",
-        "multimodal"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "qwen-image",
-      "model_variant": "image",
-      "aliases": [
-        "Qwen-Image-2512",
-        "xingchen/xopqwentti20b"
-      ],
-      "tier": "large",
-      "speed": "premium",
-      "use_case": [
-        "image-understanding",
-        "visual-q&a",
-        "creative-generation",
-        "art"
       ],
       "performance_level": "mid",
       "estimated_latency": "3-10s"
@@ -1662,10 +1731,7 @@
       "trial_scope": "all",
       "model_family": "z-image",
       "model_variant": "image",
-      "aliases": [
-        "Z-Image",
-        "xingchen/xopzimageturbo"
-      ],
+      "aliases": [],
       "tier": "large",
       "speed": "premium",
       "use_case": [
@@ -1937,10 +2003,7 @@
       "trial_scope": "all",
       "model_family": "qwen-image",
       "model_variant": "image",
-      "aliases": [
-        "Qwen-Image",
-        "xingchen/xopqwentti20b"
-      ],
+      "aliases": [],
       "tier": "large",
       "speed": "premium",
       "use_case": [
@@ -1995,53 +2058,13 @@
       "estimated_latency": "3-10s"
     },
     {
-      "id": "Qwen-Image-Layered",
+      "id": "qwen-image-2.0",
       "object": "model",
-      "created": 1056787971,
+      "created": 301621587,
       "owned_by": "gitee",
       "provider": "gitee",
-      "name": "Qwen-Image-Layered",
-      "description": "Qwen-Image-Layered 是一个由 Qwen 团队发布的 图像分层分解模型，它能将一张普通图像自动分解成多个 语义独立的 RGBA 图层，从而让每个图层可以 单独进行移动、重色、缩放、删除等编辑操作而不影响其它内容。",
-      "context_label": "unknown",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": false,
-      "capabilities": [
-        "image-to-image"
-      ],
-      "tags": [
-        "vision",
-        "image-to-image",
-        "multimodal"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "qwen-image-layered",
-      "model_variant": "image",
-      "aliases": [],
-      "tier": "large",
-      "speed": "premium",
-      "use_case": [
-        "image-understanding",
-        "visual-q&a",
-        "image-editing",
-        "style-transfer"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "3-10s"
-    },
-    {
-      "id": "Z-Image",
-      "object": "model",
-      "created": 2112386577,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "Z-Image",
-      "description": "Tongyi-MAI/Z-Image 是阿里通义实验室开发的一款高质量图像生成基础模型，基于高效的单流扩散 Transformer 架构，专注于强可控性、丰富风格覆盖和高视觉质量，适合作为图像创作、研究和下游开发的核心生成引擎。",
+      "name": "Qwen-Image-2.0",
+      "description": "Qwen-Image-2.0系列加速版模型，实现了图片生成和图片编辑的融合；具备更专业的文字渲染1k token指令支持能力、更细腻的真实质感，细腻刻画写实场景、更强的语义遵循能力。加速版有效实现了模型效果和性能的最佳平衡。",
       "context_label": "unknown",
       "price_input": 0,
       "price_output": 0,
@@ -2059,13 +2082,130 @@
       "has_tool_use": false,
       "free_mechanism": null,
       "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "z-image",
+      "trial_scope": "none",
+      "model_family": "qwen-image-2.0",
       "model_variant": "image",
-      "aliases": [
-        "z-image-turbo",
-        "xingchen/xopzimageturbo"
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "creative-generation",
+        "art"
       ],
+      "performance_level": "mid",
+      "estimated_latency": "3-10s"
+    },
+    {
+      "id": "wan2.7-image",
+      "object": "model",
+      "created": 1930086574,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "Wan2.7-Image",
+      "description": "万相 2.7 图像生成与编辑模型，支持组图、多图参考、交互式编辑和最高 2K 输出。",
+      "context_label": "unknown",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": false,
+      "capabilities": [
+        "image-generation"
+      ],
+      "tags": [
+        "vision",
+        "image-generation",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "wan2.7-image",
+      "model_variant": "image",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "creative-generation",
+        "art"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "3-10s"
+    },
+    {
+      "id": "wan2.7-image-pro",
+      "object": "model",
+      "created": 392222480,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "Wan2.7-Image-Pro",
+      "description": "万相 2.7 图像生成与编辑旗舰版，支持组图、多图参考、交互式编辑和最高 4K 输出。",
+      "context_label": "unknown",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": false,
+      "capabilities": [
+        "image-generation"
+      ],
+      "tags": [
+        "vision",
+        "image-generation",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "wan2.7-image-pro",
+      "model_variant": "image",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "creative-generation",
+        "art"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "3-10s"
+    },
+    {
+      "id": "qwen-image-2.0-pro",
+      "object": "model",
+      "created": 1611020853,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "Qwen-Image-2.0-Pro",
+      "description": "Qwen-Image-2.0 满血版，支持图片生成与编辑、专业文字渲染、多图参考和高分辨率输出。",
+      "context_label": "unknown",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": false,
+      "capabilities": [
+        "image-generation"
+      ],
+      "tags": [
+        "vision",
+        "image-generation",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "qwen-image-2.0-pro",
+      "model_variant": "image",
+      "aliases": [],
       "tier": "large",
       "speed": "premium",
       "use_case": [
@@ -2108,9 +2248,7 @@
       "trial_scope": "all",
       "model_family": "phi-4-multimodal",
       "model_variant": "multimodal",
-      "aliases": [
-        "microsoft/phi-4-multimodal-instruct"
-      ],
+      "aliases": [],
       "tier": "large",
       "speed": "fast",
       "use_case": [
@@ -2399,7 +2537,6 @@
       "model_variant": "instruct",
       "quantization": "fp8",
       "aliases": [
-        "meta/llama-4-maverick-17b-128e-instruct",
         "sambanova/Llama-4-Maverick-17B-128E-Instruct"
       ],
       "parameter_count": 17000000000,
@@ -2665,7 +2802,7 @@
       "name": "llama-3.2-11b-vision-instruct",
       "description": "Model: meta/llama-3.2-11b-vision-instruct",
       "context_label": "unknown",
-      "is_free": true,
+      "is_free": false,
       "capabilities": [
         "vision"
       ],
@@ -2677,11 +2814,9 @@
       "is_reasoning": false,
       "is_multimodal": true,
       "has_tool_use": false,
-      "free_mechanism": "trial-credits",
-      "free_quota": {
-        "notes": "NVIDIA NIM free credits, exhaustible"
-      },
-      "trial_scope": "specific",
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
       "model_family": "llama-3.2-11b-vision",
       "model_variant": "vision",
       "aliases": [
@@ -2690,7 +2825,7 @@
       ],
       "parameter_count": 11000000000,
       "tier": "large",
-      "speed": "fast",
+      "speed": "standard",
       "use_case": [
         "image-understanding",
         "visual-q&a",
@@ -2698,7 +2833,7 @@
         "writing-assistance"
       ],
       "performance_level": "mid",
-      "estimated_latency": "< 1s"
+      "estimated_latency": "3-10s"
     },
     {
       "id": "meta/llama-3.2-90b-vision-instruct",
@@ -2709,7 +2844,7 @@
       "name": "llama-3.2-90b-vision-instruct",
       "description": "Model: meta/llama-3.2-90b-vision-instruct",
       "context_label": "unknown",
-      "is_free": true,
+      "is_free": false,
       "capabilities": [
         "vision"
       ],
@@ -2721,11 +2856,9 @@
       "is_reasoning": false,
       "is_multimodal": true,
       "has_tool_use": false,
-      "free_mechanism": "trial-credits",
-      "free_quota": {
-        "notes": "NVIDIA NIM free credits, exhaustible"
-      },
-      "trial_scope": "specific",
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
       "model_family": "llama-3.2-90b-vision",
       "model_variant": "vision",
       "aliases": [
@@ -2733,7 +2866,7 @@
       ],
       "parameter_count": 90000000000,
       "tier": "large",
-      "speed": "fast",
+      "speed": "standard",
       "use_case": [
         "image-understanding",
         "visual-q&a",
@@ -2741,7 +2874,7 @@
         "writing-assistance"
       ],
       "performance_level": "mid",
-      "estimated_latency": "< 1s"
+      "estimated_latency": "3-10s"
     },
     {
       "id": "microsoft/phi-3-vision-128k-instruct",
@@ -2780,89 +2913,6 @@
       ],
       "performance_level": "mid",
       "estimated_latency": "3-10s"
-    },
-    {
-      "id": "microsoft/phi-4-multimodal-instruct",
-      "object": "model",
-      "created": 1596672986,
-      "owned_by": "nvidia",
-      "provider": "nvidia",
-      "name": "phi-4-multimodal-instruct",
-      "description": "Model: microsoft/phi-4-multimodal-instruct",
-      "context_label": "unknown",
-      "is_free": true,
-      "capabilities": [
-        "vision"
-      ],
-      "tags": [
-        "vision",
-        "text-generation",
-        "multimodal"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": "trial-credits",
-      "free_quota": {
-        "notes": "NVIDIA NIM free credits, exhaustible"
-      },
-      "trial_scope": "specific",
-      "model_family": "phi-4-multimodal",
-      "model_variant": "multimodal",
-      "aliases": [
-        "github/Phi-4-multimodal-instruct"
-      ],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "image-understanding",
-        "visual-q&a",
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "llama-3.1-nemotron-nano-vl-8b-v1",
-      "object": "model",
-      "created": 1654189783,
-      "owned_by": "nvidia",
-      "provider": "nvidia",
-      "name": "llama-3.1-nemotron-nano-vl-8b-v1",
-      "description": "Model: nvidia/llama-3.1-nemotron-nano-vl-8b-v1",
-      "context_label": "unknown",
-      "is_free": true,
-      "capabilities": [
-        "vision"
-      ],
-      "tags": [
-        "text-generation",
-        "vision",
-        "multimodal"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": "trial-credits",
-      "free_quota": {
-        "notes": "NVIDIA NIM free credits, exhaustible"
-      },
-      "trial_scope": "specific",
-      "model_family": "llama-3.1-nemotron-nano-vl-8b-v1",
-      "model_variant": "vl",
-      "aliases": [],
-      "parameter_count": 8000000000,
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "image-understanding",
-        "visual-q&a"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
     },
     {
       "id": "llama-3.2-nemoretriever-1b-vlm-embed-v1",
@@ -2951,49 +3001,6 @@
       "estimated_latency": "1-3s"
     },
     {
-      "id": "nemotron-nano-12b-v2-vl",
-      "object": "model",
-      "created": 311795952,
-      "owned_by": "nvidia",
-      "provider": "nvidia",
-      "name": "nemotron-nano-12b-v2-vl",
-      "description": "Model: nvidia/nemotron-nano-12b-v2-vl",
-      "context_label": "unknown",
-      "is_free": true,
-      "capabilities": [
-        "vision"
-      ],
-      "tags": [
-        "text-generation",
-        "vision",
-        "multimodal"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": "trial-credits",
-      "free_quota": {
-        "notes": "NVIDIA NIM free credits, exhaustible"
-      },
-      "trial_scope": "specific",
-      "model_family": "nemotron-nano-12b-v2-vl",
-      "model_variant": "vl",
-      "aliases": [
-        "nvidia/nemotron-nano-12b-v2-vl:free"
-      ],
-      "parameter_count": 12000000000,
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "image-understanding",
-        "visual-q&a"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
       "id": "neva-22b",
       "object": "model",
       "created": 1502960684,
@@ -3030,363 +3037,6 @@
       ],
       "performance_level": "mid",
       "estimated_latency": "3-10s"
-    },
-    {
-      "id": "nvidia/nemotron-3.5-content-safety:free",
-      "object": "model",
-      "created": 109416543,
-      "owned_by": "openrouter",
-      "provider": "openrouter",
-      "name": "NVIDIA: Nemotron 3.5 Content Safety (free)",
-      "description": "NVIDIA Nemotron 3.5 Content Safety is a compact 4B-parameter multimodal guardrail model from NVIDIA, fine-tuned from Google Gemma-3-4B. It moderates both inputs to and responses from LLMs and VLMs, accepting text and image input and returning text output: a safe/unsafe classification for the user prompt and the response, safety category labels, and an optional reasoning trace. It covers 12 languages with a context window of up to 128K tokens.\n\nIt is suited for prompt and response moderation, con",
-      "context_size": 128000,
-      "context_label": "128K",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "vision",
-        "reasoning"
-      ],
-      "tags": [
-        "reasoning",
-        "vision",
-        "text-generation",
-        "chat",
-        "multimodal"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Free tier with rate limits (see openrouter.ai)"
-      },
-      "trial_scope": "specific",
-      "model_family": "nemotron-3.5-content-safety",
-      "model_variant": "safety",
-      "aliases": [
-        "nvidia/nemotron-3.5-content-safety"
-      ],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "image-understanding",
-        "visual-q&a",
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
-      "object": "model",
-      "created": 1904997150,
-      "owned_by": "openrouter",
-      "provider": "openrouter",
-      "name": "NVIDIA: Nemotron 3 Nano Omni (free)",
-      "description": "NVIDIA Nemotron™ 3 Nano Omni is a 30B-A3B open multimodal model designed to function as a perception and context sub-agent in enterprise agent systems. It accepts text, image, video, and audio inputs and produces text output, enabling agents to perceive and reason across modalities in a single inference loop.\n\nBuilt on a hybrid MoE Transformer-Mamba architecture with Conv3D video layers and Efficient Video Sampling (EVS), it delivers approximately 2× higher throughput and 2.5× lower compute for ",
-      "context_size": 256000,
-      "context_label": "256K",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "vision",
-        "speech-recognition",
-        "video-generation",
-        "reasoning"
-      ],
-      "tags": [
-        "reasoning",
-        "vision",
-        "text-generation",
-        "chat",
-        "speech-recognition",
-        "video-generation",
-        "multimodal"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Free tier with rate limits (see openrouter.ai)"
-      },
-      "trial_scope": "specific",
-      "model_family": "nemotron-3-nano-omni-30b-a3b-reasoning",
-      "model_variant": "reasoning",
-      "aliases": [
-        "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning"
-      ],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "image-understanding",
-        "visual-q&a",
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a",
-        "transcription",
-        "voice-input",
-        "video-creation",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "moonshotai/kimi-k2.6:free",
-      "object": "model",
-      "created": 530698313,
-      "owned_by": "openrouter",
-      "provider": "openrouter",
-      "name": "MoonshotAI: Kimi K2.6 (free)",
-      "description": "Kimi K2.6 is Moonshot AI's next-generation multimodal model, designed for long-horizon coding, coding-driven UI/UX generation, and multi-agent orchestration. It handles complex end-to-end coding tasks across Python, Rust, and Go, and can convert prompts and visual inputs into production-ready interfaces. Its agent swarm architecture scales to hundreds of parallel sub-agents for autonomous task decomposition - delivering documents, websites, and spreadsheets in a single run without human oversigh",
-      "context_size": 262144,
-      "context_label": "262K",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "vision",
-        "reasoning"
-      ],
-      "tags": [
-        "vision",
-        "text-generation",
-        "chat",
-        "reasoning",
-        "multimodal"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Free tier with rate limits (see openrouter.ai)"
-      },
-      "trial_scope": "specific",
-      "model_family": "moonshotai-kimi-k2.6",
-      "aliases": [
-        "cloudflare/@cf/moonshotai/kimi-k2.6",
-        "moonshotai/kimi-k2.6"
-      ],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "image-understanding",
-        "visual-q&a",
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a",
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "google/gemma-4-26b-a4b-it:free",
-      "object": "model",
-      "created": 1797759078,
-      "owned_by": "openrouter",
-      "provider": "openrouter",
-      "name": "Google: Gemma 4 26B A4B  (free)",
-      "description": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference — delivering near-31B quality at a fraction of the compute cost. Supports multimodal input including text, images, and video (up to 60s at 1fps). Features a 256K token context window, native function calling, configurable thinking/reasoning mode, and structured output support. Released under Apache 2.0.",
-      "context_size": 262144,
-      "context_label": "262K",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "vision",
-        "video-generation",
-        "reasoning"
-      ],
-      "tags": [
-        "reasoning",
-        "vision",
-        "text-generation",
-        "chat",
-        "video-generation",
-        "multimodal"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Free tier with rate limits (see openrouter.ai)"
-      },
-      "trial_scope": "specific",
-      "model_family": "gemma-4-26b-a4b",
-      "model_variant": "it",
-      "aliases": [
-        "cloudflare/@cf/google/gemma-4-26b-a4b-it",
-        "gemma-4-26B-A4B-it"
-      ],
-      "parameter_count": 26000000000,
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "image-understanding",
-        "visual-q&a",
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a",
-        "video-creation",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "google/gemma-4-31b-it:free",
-      "object": "model",
-      "created": 280595854,
-      "owned_by": "openrouter",
-      "provider": "openrouter",
-      "name": "Google: Gemma 4 31B (free)",
-      "description": "Gemma 4 31B Instruct is Google DeepMind's 30.7B dense multimodal model supporting text and image input with text output. Features a 256K token context window, configurable thinking/reasoning mode, native function calling, and multilingual support across 140+ languages. Strong on coding, reasoning, and document understanding tasks. Apache 2.0 license.",
-      "context_size": 262144,
-      "context_label": "262K",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "vision",
-        "video-generation",
-        "reasoning"
-      ],
-      "tags": [
-        "reasoning",
-        "vision",
-        "text-generation",
-        "chat",
-        "video-generation",
-        "multimodal"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Free tier with rate limits (see openrouter.ai)"
-      },
-      "trial_scope": "specific",
-      "model_family": "gemma-4-31b",
-      "model_variant": "it",
-      "aliases": [
-        "google/gemma-4-31b-it",
-        "sambanova/gemma-4-31B-it"
-      ],
-      "parameter_count": 31000000000,
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "image-understanding",
-        "visual-q&a",
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a",
-        "video-creation",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "nvidia/nemotron-nano-12b-v2-vl:free",
-      "object": "model",
-      "created": 1698899244,
-      "owned_by": "openrouter",
-      "provider": "openrouter",
-      "name": "NVIDIA: Nemotron Nano 12B 2 VL (free)",
-      "description": "NVIDIA Nemotron Nano 2 VL is a 12-billion-parameter open multimodal reasoning model designed for video understanding and document intelligence. It introduces a hybrid Transformer-Mamba architecture, combining transformer-level accuracy with Mamba’s memory-efficient sequence modeling for significantly higher throughput and lower latency.\n\nThe model supports inputs of text and multi-image documents, producing natural-language outputs. It is trained on high-quality NVIDIA-curated synthetic datasets",
-      "context_size": 128000,
-      "context_label": "128K",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "vision",
-        "video-generation",
-        "reasoning"
-      ],
-      "tags": [
-        "reasoning",
-        "vision",
-        "text-generation",
-        "chat",
-        "video-generation",
-        "multimodal"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Free tier with rate limits (see openrouter.ai)"
-      },
-      "trial_scope": "specific",
-      "model_family": "nemotron-nano-12b-v2-vl",
-      "model_variant": "vl",
-      "aliases": [
-        "nvidia/nemotron-nano-12b-v2-vl"
-      ],
-      "parameter_count": 12000000000,
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "image-understanding",
-        "visual-q&a",
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a",
-        "video-creation",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
     },
     {
       "id": "sensenova-u1-fast",
@@ -3433,13 +3083,65 @@
       "estimated_latency": "< 1s"
     },
     {
+      "id": "xopkimik27code",
+      "object": "model",
+      "created": 1996526712,
+      "owned_by": "xingchen",
+      "provider": "xingchen",
+      "name": "Kimi-K2.7-Code",
+      "description": "Kimi-K2.7-Code 是月之暗面于 2026 年 6 月 12 日发布的编程专属大模型，属于 Kimi K2 系列的第三代代码专项迭代版本。\n",
+      "context_size": 262144,
+      "context_label": "262K",
+      "price_input": 6.5,
+      "price_output": 27,
+      "is_free": false,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision",
+        "code-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation",
+        "vision",
+        "code-generation",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "kimi-k2.7-code",
+      "model_variant": "code",
+      "aliases": [
+        "Kimi-K2.7-Code"
+      ],
+      "tier": "large",
+      "speed": "premium",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "image-understanding",
+        "visual-q&a",
+        "software-development",
+        "code-completion"
+      ],
+      "performance_level": "high",
+      "estimated_latency": "3-10s"
+    },
+    {
       "id": "xopkimik26",
       "object": "model",
       "created": 1124126980,
       "owned_by": "xingchen",
       "provider": "xingchen",
       "name": "Kimi-K2.6",
-      "description": "Kimi K2.6 是一款开源原生多模态智能体模型，在长链路代码开发、代码驱动设计、主动自主执行以及集群任务编排等实用能力上实现了全面升级。",
+      "description": "Kimi-K2.6 是一款开源原生多模态智能体模型，在长链路代码开发、代码驱动设计、主动自主执行以及集群任务编排等实用能力上实现了全面升级。",
       "context_size": 262144,
       "context_label": "262K",
       "price_input": 6.5,
@@ -3489,9 +3191,9 @@
       "description": "Qwen3.6-35B-A3B，以稳定性与实用性为核心，在智能体编码、思维上下文保留上显著升级，为 350 亿参数、30 亿激活参数的因果视觉语言模型，编码开发体验更高效流畅。",
       "context_size": 131072,
       "context_label": "131K",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
+      "price_input": 1.08,
+      "price_output": 6.48,
+      "is_free": false,
       "capabilities": [
         "chat",
         "text-generation",
@@ -3506,16 +3208,16 @@
       "is_reasoning": false,
       "is_multimodal": true,
       "has_tool_use": false,
-      "free_mechanism": "rate-limited",
+      "free_mechanism": null,
       "free_quota": null,
-      "trial_scope": "specific",
+      "trial_scope": "none",
       "model_family": "qwen3.6-35b-a3b",
       "aliases": [
         "Qwen3.6-35B-A3B"
       ],
       "parameter_count": 35000000000,
       "tier": "large",
-      "speed": "fast",
+      "speed": "premium",
       "use_case": [
         "conversation",
         "q&a",
@@ -3525,55 +3227,7 @@
         "visual-q&a"
       ],
       "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "xopqwen35v35b",
-      "object": "model",
-      "created": 1040062914,
-      "owned_by": "xingchen",
-      "provider": "xingchen",
-      "name": "Qwen3.5-35B-A3B",
-      "description": "Qwen3.5-35B-A3B 是阿里巴巴通义千问团队于2026 年 2 月 25 日开源的中型 MoE 稀疏架构大模型，隶属于 Qwen3.5 系列中型模型产品线，主打高性能与高效率平衡，被称为 \"中小团队的 AI 利器\"。核心亮点是35B 总参数仅激活 3B 进行推理，在保持旗舰级性能的同时大幅降低部署成本。",
-      "context_size": 131072,
-      "context_label": "131K",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "vision"
-      ],
-      "tags": [
-        "chat",
-        "text-generation",
-        "vision",
-        "multimodal"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": null,
-      "trial_scope": "specific",
-      "model_family": "qwen3.5-35b-a3b",
-      "aliases": [
-        "Qwen3.5-35B-A3B"
-      ],
-      "parameter_count": 35000000000,
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance",
-        "image-understanding",
-        "visual-q&a"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
+      "estimated_latency": "3-10s"
     },
     {
       "id": "xoppaddleocrv16",
@@ -3582,7 +3236,7 @@
       "owned_by": "xingchen",
       "provider": "xingchen",
       "name": "PaddleOCR-VL-1.6",
-      "description": "PaddleOCR-VL-1.6对标业界顶尖多模态视觉语言大模型（VLM）具备强劲竞争力。模型架构与 PaddleOCR-VL-1.5 完全兼容，可零成本即插即用、无缝迁移。",
+      "description": "PaddleOCR-VL-1.6对标业界顶尖多模态视觉语言大模型（VLM），具备强劲竞争力。模型架构与 PaddleOCR-VL-1.5 完全兼容，可零成本即插即用、无缝迁移。",
       "context_size": 32768,
       "context_label": "33K",
       "price_input": 0,
@@ -3629,7 +3283,7 @@
       "owned_by": "xingchen",
       "provider": "xingchen",
       "name": "Qwen3.5-397B-A17B",
-      "description": "Qwen3.5-397B-A17B是阿里巴巴通义千问团队于2026 年 2 月 16 日正式发布并开源的新一代原生多模态智能体基础模型，定位为 \"为 Agentic AI 时代而生\"，以极致稀疏 MoE 架构、混合注意力机制和原生多模态融合三大核心创新，实现了性能与效率的突破性平衡Qwen。",
+      "description": "Qwen3.5-397B-A17B是阿里巴巴通义千问团队于2026 年 2 月 16 日正式发布并开源的新一代原生多模态智能体基础模型，定位为 \"为 Agentic AI 时代而生\"，以极致稀疏 MoE 架构、混合注意力机制和原生多模态融合三大核心创新，实现了性能与效率的突破性平衡。",
       "context_size": 262144,
       "context_label": "262K",
       "price_input": 1.2,
@@ -3653,9 +3307,7 @@
       "free_quota": null,
       "trial_scope": "none",
       "model_family": "qwen3.5-397b-a17b",
-      "aliases": [
-        "qwen/qwen3.5-397b-a17b"
-      ],
+      "aliases": [],
       "parameter_count": 397000000000,
       "tier": "large",
       "speed": "premium",
@@ -3677,7 +3329,7 @@
       "owned_by": "xingchen",
       "provider": "xingchen",
       "name": "Kimi-K2.5",
-      "description": "Kimi K2.5 是一个多模态智能体模型视觉和语言理解与高级智能体功能、即时模式和思考模式以及对话和智能体范式无缝集成。",
+      "description": "Kimi-K2.5是一个多模态智能体模型，具备视觉和语言理解与高级智能体功能、即时模式和思考模式以及对话和智能体范式无缝集成。",
       "context_size": 131072,
       "context_label": "131K",
       "price_input": 4,
@@ -3718,49 +3370,6 @@
       "estimated_latency": "3-10s"
     },
     {
-      "id": "xopqwentti20b",
-      "object": "model",
-      "created": 636859249,
-      "owned_by": "xingchen",
-      "provider": "xingchen",
-      "name": "Qwen-Image-2512",
-      "description": "Qwen-Image-2512 是阿里云通义千问推出的 12 月更新版文本到图像基础模型，相较 8 月版本大幅提升了人物真实感、自然细节精细度与文字渲染质量，在 AI Arena 超 1 万轮盲评中成为当前最强的开源文本生成图像模型，且在闭源模型阵营中也具备较强竞争力。\n",
-      "context_label": "unknown",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "image-generation"
-      ],
-      "tags": [
-        "vision",
-        "image-generation",
-        "multimodal"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": null,
-      "trial_scope": "specific",
-      "model_family": "qwen-image",
-      "model_variant": "image",
-      "aliases": [
-        "Qwen-Image",
-        "Qwen-Image-2512"
-      ],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "image-understanding",
-        "visual-q&a",
-        "creative-generation",
-        "art"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
       "id": "xop3qwen32bvl",
       "object": "model",
       "created": 105851530,
@@ -3792,7 +3401,9 @@
       "trial_scope": "none",
       "model_family": "qwen3-vl-32b",
       "model_variant": "vl",
-      "aliases": [],
+      "aliases": [
+        "Qwen3-VL-32B-Instruct"
+      ],
       "parameter_count": 32000000000,
       "tier": "large",
       "speed": "standard",
@@ -3897,50 +3508,6 @@
         "writing-assistance",
         "image-understanding",
         "visual-q&a"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "xopzimageturbo",
-      "object": "model",
-      "created": 751334248,
-      "owned_by": "xingchen",
-      "provider": "xingchen",
-      "name": "Z-Image-Turbo",
-      "description": "Z-Image 是一款开源、免费的高效图像生成基础模型，参数量为 6B，1秒出图。无需依赖顶级算力和参数堆砌，即可在 16GB 显存的消费级显卡上，生成品质可与顶级商业模型相媲美的超真实图像，尤其在中英双语文本渲染方面效果突出。",
-      "context_size": 512,
-      "context_label": "512",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "image-generation"
-      ],
-      "tags": [
-        "vision",
-        "image-generation",
-        "multimodal"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": null,
-      "trial_scope": "specific",
-      "model_family": "z-image",
-      "model_variant": "image",
-      "aliases": [
-        "z-image-turbo",
-        "Z-Image"
-      ],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "image-understanding",
-        "visual-q&a",
-        "creative-generation",
-        "art"
       ],
       "performance_level": "mid",
       "estimated_latency": "< 1s"

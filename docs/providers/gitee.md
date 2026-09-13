@@ -21,9 +21,9 @@
 
 | 指标 | 数量 |
 |---|---:|
-| 总模型 | 203 |
-| 免费模型 | 39 |
-| 付费可试用 | 138 |
+| 总模型 | 206 |
+| 免费模型 | 36 |
+| 付费可试用 | 100 |
 
 ## 免费策略
 
@@ -34,6 +34,7 @@
 | Provider | Model ID | 名称 | 上下文 | 免费类型 | 限制 |
 |---|---|---|---:|---|---|
 | gitee  | `all-mpnet-base-v2` | all-mpnet-base-v2 | unknown | 永久免费 | — |
+| gitee  | `Atria-dawn-v2` | Atria-dawn-v2 | unknown | 永久免费 | — |
 | gitee  | `bce-embedding-base_v1` | bce-embedding-base_v1 | 500 | 永久免费 | — |
 | gitee  | `bce-reranker-base_v1` | bce-reranker-base_v1 | 500 | 永久免费 | — |
 | gitee  | `bge-large-zh-v1.5` | bge-large-zh-v1.5 | 500 | 永久免费 | — |
@@ -46,18 +47,15 @@
 | gitee  | `DeepSeek-R1-Distill-Qwen-7B` | DeepSeek-R1-Distill-Qwen-7B | 32K | 永久免费 | — |
 | gitee  | `GLM-4-9B-0414` | GLM-4-9B-0414 | 32K | 永久免费 | — |
 | gitee  | `glm-4-9b-chat` | GLM-4-9B-Chat | 32K | 永久免费 | — |
-| gitee  | `GLM-4.6V-Flash` | GLM-4.6V-Flash | 128K | 永久免费 | — |
-| gitee  | `GLM-4.7-Flash` | GLM-4.7-Flash | 200K | 永久免费 | — |
 | gitee  | `GLM-ASR` | GLM-ASR | unknown | 永久免费 | — |
 | gitee  | `HealthGPT-L14` | HealthGPT 医疗大模型 | 32K | 永久免费 | — |
 | gitee  | `HuatuoGPT-o1-7B` | HuatuoGPT-o1-7B 医疗大模型 | 32K | 永久免费 | — |
 | gitee  | `internlm3-8b-instruct` | InternLM3-8B-Instruct | 32K | 永久免费 | — |
+| gitee  | `ip-location` | IP 查询 | unknown | 永久免费 | — |
 | gitee  | `jina-clip-v1` | jina-clip-v1 | 500 | 永久免费 | — |
 | gitee  | `jina-clip-v2` | jina-clip-v2 | 8K | 永久免费 | — |
 | gitee  | `jina-embeddings-v4` | jina-embeddings-v4 | 32K | 永久免费 | — |
 | gitee  | `Lingshu-32B` | Lingshu-32B 医疗大模型 | 32K | 永久免费 | — |
-| gitee  | `nonescape-v0` | AI 图片检测 | unknown | 永久免费 | — |
-| gitee  | `nsfw-classifier` | 色情图片检测 | unknown | 永久免费 | — |
 | gitee  | `Qwen2-7B-Instruct` | Qwen2-7B-Instruct | 24K | 永久免费 | — |
 | gitee  | `Qwen3-0.6B` | Qwen3-0.6B | 32K | 永久免费 | — |
 | gitee  | `Qwen3-4B` | Qwen3-4B | 32K | 永久免费 | — |
@@ -68,7 +66,6 @@
 | gitee  | `Qwen3-Reranker-0.6B` | Qwen3-Reranker-0.6B | 8K | 永久免费 | — |
 | gitee  | `Qwen3-Reranker-4B` | Qwen3-Reranker-4B | 8K | 永久免费 | — |
 | gitee  | `Qwen3-Reranker-8B` | Qwen3-Reranker-8B | 8K | 永久免费 | — |
-| gitee  | `Qwen3Guard-Gen-0.6B` | Qwen3Guard-Gen-0.6B | 32K | 永久免费 | — |
-| gitee  | `Security-semantic-filtering` | 违规文本检测 | 32K | 永久免费 | — |
+| gitee  | `Qwen3-VL-Embedding-8B` | Qwen3-VL-Embedding-8B | 32K | 永久免费 | — |
 | gitee  | `SenseVoiceSmall` | SenseVoiceSmall | unknown | 永久免费 | — |
 | gitee  | `Spark-TTS-0.5B` | Spark-TTS-0.5B | unknown | 永久免费 | — |

@@ -1,8 +1,8 @@
 {
   "object": "list",
   "view": "reasoning",
-  "updated_at": "2026-06-08T13:57:08.126Z",
-  "total": 75,
+  "updated_at": "2026-09-13T07:16:40.158Z",
+  "total": 57,
   "filters": {
     "tags": "reasoning"
   },
@@ -14,7 +14,7 @@
       "owned_by": "bigmodel",
       "provider": "bigmodel",
       "name": "GLM-4.1V-Thinking-Flash",
-      "description": "GLM-4.1V-Thinking-Flash 是智谱推出的免费视觉推理模型。它在图表/视频理解、前端 Coding、GUI 任务等场景表现出色，核心能力达到全面新 SOTA。模型引入思维链推理机制，显著提升了复杂场景中的回答精准度与可解释性。",
+      "description": "视觉推理",
       "context_size": 64000,
       "context_label": "64K",
       "price_input": 0,
@@ -433,116 +433,6 @@
       "estimated_latency": "3-10s"
     },
     {
-      "id": "glm-4.6v-flash",
-      "object": "model",
-      "created": 1161885709,
-      "owned_by": "bigmodel",
-      "provider": "bigmodel",
-      "name": "GLM-4.6V-Flash",
-      "description": "GLM-4.6V-Flash 是 GLM-4.6V 的免费版本，是 GLM 系列在多模态方向上的一次重要迭代，支持开启或关闭思考模式。它将训练时上下文窗口提升到128k tokens，在 视觉理解精度上达到同参数规模 SOTA，并首次在模型架构中将 Function Call（工具调用）能力原生融入视觉模型，打通从「视觉感知」到「可执行行动（Action）」的链路，为真实业务场景中的多模态 Agent 提供统一的技术底座。",
-      "context_size": 128000,
-      "context_label": "128K",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "vision",
-        "reasoning",
-        "tool-use",
-        "function-calling"
-      ],
-      "tags": [
-        "tool-use",
-        "chat",
-        "text-generation",
-        "vision",
-        "reasoning",
-        "function-calling",
-        "multimodal"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": true,
-      "has_tool_use": true,
-      "free_mechanism": "permanent",
-      "free_quota": null,
-      "trial_scope": "specific",
-      "model_family": "glm-4.6v-flash",
-      "aliases": [
-        "GLM-4.6V-Flash"
-      ],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance",
-        "image-understanding",
-        "visual-q&a",
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "glm-4.7-flash",
-      "object": "model",
-      "created": 1010454616,
-      "owned_by": "bigmodel",
-      "provider": "bigmodel",
-      "name": "GLM-4.7-Flash",
-      "description": "GLM-4.7-Flash 作为 30B 级 SOTA 模型，提供了一个兼顾性能与效率的新选择。面向 Agentic Coding 场景强化了编码能力、长程任务规划与工具协同，并在多个公开基准的当期榜单中取得同尺寸开源模型中的出色表现。在执行复杂智能体任务，在工具调用时指令遵循更强，Artifacts 与 Agentic Coding 的前端美感和长程任务完成效率进一步提升。",
-      "context_size": 200000,
-      "context_label": "200K",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "reasoning",
-        "tool-use",
-        "function-calling"
-      ],
-      "tags": [
-        "chat",
-        "text-generation",
-        "reasoning",
-        "tool-use",
-        "function-calling"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": false,
-      "has_tool_use": true,
-      "free_mechanism": "permanent",
-      "free_quota": null,
-      "trial_scope": "specific",
-      "model_family": "glm-4.7-flash",
-      "aliases": [
-        "GLM-4.7-Flash",
-        "xingchen/xopglmv47flash"
-      ],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance",
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
       "id": "qwen-3-235b-a22b-instruct-2507",
       "object": "model",
       "created": 445270153,
@@ -622,13 +512,109 @@
       "model_family": "gpt-oss-120b",
       "aliases": [
         "cerebras/gpt-oss-120b",
-        "gpt-oss-120b",
         "groq/openai/gpt-oss-120b",
-        "openai/gpt-oss-120b",
-        "openai/gpt-oss-120b:free",
         "sambanova/gpt-oss-120b"
       ],
       "parameter_count": 120000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "@cf/moonshotai/kimi-k2.7-code",
+      "object": "model",
+      "created": 541624990,
+      "owned_by": "cloudflare",
+      "provider": "cloudflare",
+      "name": "@cf/moonshotai/kimi-k2.7-code",
+      "description": "Kimi K2.7 is a frontier-scale open-source 1T parameter model with a 262.1k context window, multi-turn tool calling, vision inputs, and structured outputs for agentic workloads.",
+      "context_size": 262144,
+      "context_label": "262K",
+      "price_input": 0.19,
+      "price_output": 4,
+      "is_free": true,
+      "capabilities": [
+        "text-generation",
+        "function-calling",
+        "reasoning"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "tool-use",
+        "function-calling",
+        "reasoning",
+        "multimodal"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": true,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+      },
+      "trial_scope": "all",
+      "model_family": "moonshotai-kimi-k2.7-code",
+      "model_variant": "code",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "@cf/zai-org/glm-5.3",
+      "object": "model",
+      "created": 1600228440,
+      "owned_by": "cloudflare",
+      "provider": "cloudflare",
+      "name": "@cf/zai-org/glm-5.3",
+      "description": "GLM-5.3 is Z.ai's flagship agentic coding model, pairing a 1M-token context window with reasoning, function calling, and structured outputs to power multi-step, tool-driven development workflows.",
+      "context_size": 1310720,
+      "context_label": "1M",
+      "price_input": 0.26,
+      "price_output": 4.4,
+      "is_free": true,
+      "capabilities": [
+        "text-generation",
+        "function-calling",
+        "reasoning"
+      ],
+      "tags": [
+        "reasoning",
+        "text-generation",
+        "tool-use",
+        "function-calling"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+      },
+      "trial_scope": "all",
+      "model_family": "org-glm-5.3",
+      "aliases": [],
       "tier": "large",
       "speed": "fast",
       "use_case": [
@@ -692,6 +678,56 @@
       "estimated_latency": "< 1s"
     },
     {
+      "id": "@cf/zai-org/glm-5.3-flash",
+      "object": "model",
+      "created": 1674197715,
+      "owned_by": "cloudflare",
+      "provider": "cloudflare",
+      "name": "@cf/zai-org/glm-5.3-flash",
+      "description": "The first natively multimodal model in the GLM-5 series. With 320B total parameters and just 18B active parameters, it outperforms GLM-5.2 across benchmarks and real-world workloads at one-tenth the price, while approaching Claude Opus 4.8 on coding and agentic benchmarks.",
+      "context_size": 1310720,
+      "context_label": "1M",
+      "price_input": 0.03,
+      "price_output": 0.5,
+      "is_free": true,
+      "capabilities": [
+        "text-generation",
+        "function-calling",
+        "reasoning"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "function-calling",
+        "reasoning",
+        "multimodal"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": true,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+      },
+      "trial_scope": "all",
+      "model_family": "org-glm-5.3-flash",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
       "id": "@cf/moonshotai/kimi-k2.6",
       "object": "model",
       "created": 1273849035,
@@ -727,8 +763,7 @@
       "trial_scope": "all",
       "model_family": "moonshotai-kimi-k2.6",
       "aliases": [
-        "moonshotai/kimi-k2.6",
-        "moonshotai/kimi-k2.6:free"
+        "moonshotai/kimi-k2.6"
       ],
       "tier": "large",
       "speed": "fast",
@@ -778,6 +813,104 @@
       },
       "trial_scope": "all",
       "model_family": "org-glm-4.7-flash",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "@cf/deepseek-ai/deepseek-v4-flash-0731",
+      "object": "model",
+      "created": 797500887,
+      "owned_by": "cloudflare",
+      "provider": "cloudflare",
+      "name": "@cf/deepseek-ai/deepseek-v4-flash-0731",
+      "description": "DeepSeek-V4-Flash-0731 is the official release of DeepSeek-V4-Flash, superseding the preview version, with substantially enhanced agentic capabilities. ",
+      "context_size": 1310720,
+      "context_label": "1M",
+      "price_input": 0.014,
+      "price_output": 1.32,
+      "is_free": true,
+      "capabilities": [
+        "text-generation",
+        "function-calling",
+        "reasoning"
+      ],
+      "tags": [
+        "text-generation",
+        "function-calling",
+        "reasoning"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+      },
+      "trial_scope": "all",
+      "model_family": "deepseek-v4-flash",
+      "aliases": [
+        "DeepSeek-V4-Flash",
+        "deepseek-v4-flash-0731",
+        "deepseek-ai/deepseek-v4-flash-0731",
+        "xingchen/xopdeepseekv4flash0731",
+        "xingchen/xopdeepseekv4flash"
+      ],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "@cf/zai-org/glm-5.2",
+      "object": "model",
+      "created": 1600228439,
+      "owned_by": "cloudflare",
+      "provider": "cloudflare",
+      "name": "@cf/zai-org/glm-5.2",
+      "description": "Z.ai's flagship agentic coding model",
+      "context_size": 262144,
+      "context_label": "262K",
+      "price_input": 0.26,
+      "price_output": 4.4,
+      "is_free": true,
+      "capabilities": [
+        "text-generation",
+        "function-calling",
+        "reasoning"
+      ],
+      "tags": [
+        "text-generation",
+        "function-calling",
+        "reasoning"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+      },
+      "trial_scope": "all",
+      "model_family": "org-glm-5.2",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -873,7 +1006,6 @@
       "model_family": "qwen3-30b-a3b",
       "quantization": "fp8",
       "aliases": [
-        "Qwen3-30B-A3B-Instruct-2507",
         "xingchen/xop3qwen30b2507",
         "xingchen/xop3qwen30b"
       ],
@@ -925,8 +1057,7 @@
       "model_family": "gemma-4-26b-a4b",
       "model_variant": "it",
       "aliases": [
-        "gemma-4-26B-A4B-it",
-        "google/gemma-4-26b-a4b-it:free"
+        "gemma-4-26B-A4B-it"
       ],
       "parameter_count": 26000000000,
       "tier": "large",
@@ -937,6 +1068,58 @@
         "problem-solving",
         "logical-analysis",
         "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "@cf/deepseek-ai/deepseek-v4-pro-0813",
+      "object": "model",
+      "created": 1483190957,
+      "owned_by": "cloudflare",
+      "provider": "cloudflare",
+      "name": "@cf/deepseek-ai/deepseek-v4-pro-0813",
+      "description": "DeepSeek V4 Pro is a high-capability reasoning model from DeepSeek with a one million token context window, built for long-horizon agentic workflows and complex, multi-step problem-solving",
+      "context_size": 1048576,
+      "context_label": "1M",
+      "price_input": 0.044,
+      "price_output": 3.96,
+      "is_free": true,
+      "capabilities": [
+        "text-generation",
+        "function-calling",
+        "reasoning"
+      ],
+      "tags": [
+        "reasoning",
+        "text-generation",
+        "function-calling"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+      },
+      "trial_scope": "all",
+      "model_family": "deepseek-v4-pro",
+      "aliases": [
+        "DeepSeek-V4-Pro",
+        "DeepSeek-V4-Pro-0813",
+        "deepseek-ai/deepseek-v4-pro-0813",
+        "xingchen/xopdeepseekv4pro0813",
+        "xingchen/xopdeepseekv4pro"
+      ],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
         "complex-reasoning"
       ],
       "performance_level": "mid",
@@ -995,6 +1178,60 @@
       "estimated_latency": "< 1s"
     },
     {
+      "id": "@cf/qwen/qwen3.8-27b",
+      "object": "model",
+      "created": 258959613,
+      "owned_by": "cloudflare",
+      "provider": "cloudflare",
+      "name": "@cf/qwen/qwen3.8-27b",
+      "description": "Qwen 3.8 27B is a 27-billion-parameter instruction-tuned language model from Alibaba's Qwen family, designed for vision, efficient general-purpose text generation and agentic workloads.",
+      "context_size": 262144,
+      "context_label": "262K",
+      "price_input": 0.05,
+      "price_output": 3.2,
+      "is_free": true,
+      "capabilities": [
+        "text-generation",
+        "function-calling",
+        "reasoning"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "function-calling",
+        "reasoning",
+        "multimodal"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": true,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+      },
+      "trial_scope": "all",
+      "model_family": "qwen3.8-27b",
+      "aliases": [
+        "qwen3.8-27b",
+        "groq/qwen/qwen3.8-27b"
+      ],
+      "parameter_count": 27000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
       "id": "@cf/openai/gpt-oss-20b",
       "object": "model",
       "created": 1244320362,
@@ -1028,8 +1265,7 @@
       "model_family": "gpt-oss-20b",
       "aliases": [
         "groq/openai/gpt-oss-20b",
-        "openai/gpt-oss-20b",
-        "openai/gpt-oss-20b:free"
+        "openai/gpt-oss-20b"
       ],
       "parameter_count": 20000000000,
       "tier": "medium",
@@ -1038,6 +1274,53 @@
         "problem-solving",
         "logical-analysis",
         "math",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "@cf/moondream/moondream3.1-9B-A2B",
+      "object": "model",
+      "created": 868867364,
+      "owned_by": "cloudflare",
+      "provider": "cloudflare",
+      "name": "@cf/moondream/moondream3.1-9B-A2B",
+      "description": "Moondream 3 is a fast, efficient 9B mixture-of-experts vision language model (2B active parameters) that delivers frontier-level visual reasoning for tasks like object detection, pointing, OCR, and structured output.",
+      "context_label": "unknown",
+      "price_input": 0.3,
+      "price_output": 1,
+      "is_free": true,
+      "capabilities": [
+        "vision"
+      ],
+      "tags": [
+        "reasoning",
+        "vision",
+        "text-generation",
+        "multimodal"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+      },
+      "trial_scope": "all",
+      "model_family": "moondream-moondream3.1-9b-a2b",
+      "aliases": [],
+      "parameter_count": 9000000000,
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "image-understanding",
+        "visual-q&a",
         "content-creation",
         "writing-assistance",
         "complex-reasoning"
@@ -1313,52 +1596,6 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "DeepSeek-R1",
-      "object": "model",
-      "created": 708100795,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "DeepSeek-R1",
-      "description": "DeepSeek-R1 是一款采用强化学习技术的推理模型，凭借少量标注数据大幅提升推理能力，性能媲美 OpenAI o1。",
-      "context_size": 64000,
-      "context_label": "64K",
-      "price_input": 4,
-      "price_output": 16,
-      "is_free": false,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "reasoning",
-        "text-generation"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "deepseek-r1",
-      "model_variant": "r1",
-      "aliases": [
-        "github/DeepSeek-R1-0528",
-        "github/DeepSeek-R1",
-        "xingchen/xdeepseekr1"
-      ],
-      "tier": "large",
-      "speed": "premium",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "content-creation",
-        "writing-assistance",
-        "complex-reasoning"
-      ],
-      "performance_level": "high",
-      "estimated_latency": "3-10s"
-    },
-    {
       "id": "Fin-R1",
       "object": "model",
       "created": 1294906990,
@@ -1429,49 +1666,6 @@
       "model_family": "dianjin-r1-32b",
       "model_variant": "r1",
       "aliases": [],
-      "tier": "large",
-      "speed": "premium",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "content-creation",
-        "writing-assistance",
-        "complex-reasoning"
-      ],
-      "performance_level": "high",
-      "estimated_latency": "3-10s"
-    },
-    {
-      "id": "Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled",
-      "object": "model",
-      "created": 364348000,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled",
-      "description": "基于 Qwen3.5-27B 深度蒸馏 Claude-4.6 Opus 推理能力的高性能模型，擅长结构化思考与复杂问题分解，兼顾推理深度与效率。",
-      "context_size": 128000,
-      "context_label": "128K",
-      "price_input": 0.6,
-      "price_output": 4.8,
-      "is_free": false,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "reasoning",
-        "text-generation"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "qwen3.5-27b-claude-4.6-opus-reasoning-distilled",
-      "model_variant": "reasoning",
-      "aliases": [],
-      "parameter_count": 27000000000,
       "tier": "large",
       "speed": "premium",
       "use_case": [
@@ -1607,9 +1801,7 @@
       "trial_scope": "all",
       "model_family": "phi-4-mini",
       "model_variant": "instruct",
-      "aliases": [
-        "microsoft/phi-4-mini-instruct"
-      ],
+      "aliases": [],
       "tier": "large",
       "speed": "fast",
       "use_case": [
@@ -1745,11 +1937,7 @@
       "trial_scope": "all",
       "model_family": "llama-3.3-70b",
       "model_variant": "instruct",
-      "aliases": [
-        "groq/llama-3.3-70b-versatile",
-        "meta/llama-3.3-70b-instruct",
-        "meta-llama/llama-3.3-70b-instruct:free"
-      ],
+      "aliases": [],
       "parameter_count": 70000000000,
       "tier": "large",
       "speed": "fast",
@@ -1904,8 +2092,7 @@
       "model_family": "llama-4-scout-17b-16e",
       "model_variant": "instruct",
       "aliases": [
-        "cloudflare/@cf/meta/llama-4-scout-17b-16e-instruct",
-        "groq/meta-llama/llama-4-scout-17b-16e-instruct"
+        "cloudflare/@cf/meta/llama-4-scout-17b-16e-instruct"
       ],
       "parameter_count": 17000000000,
       "tier": "large",
@@ -2002,8 +2189,7 @@
       "trial_scope": "all",
       "model_family": "deepseek-v3",
       "aliases": [
-        "DeepSeek-V3",
-        "xingchen/xdeepseekv3"
+        "sambanova/DeepSeek-V3-0324"
       ],
       "tier": "large",
       "speed": "fast",
@@ -2051,9 +2237,8 @@
       "model_family": "deepseek-r1",
       "model_variant": "r1",
       "aliases": [
-        "DeepSeek-R1",
         "github/DeepSeek-R1",
-        "xingchen/xdeepseekr1"
+        "sambanova/DeepSeek-R1-0528"
       ],
       "tier": "large",
       "speed": "fast",
@@ -2101,9 +2286,8 @@
       "model_family": "deepseek-r1",
       "model_variant": "r1",
       "aliases": [
-        "DeepSeek-R1",
         "github/DeepSeek-R1-0528",
-        "xingchen/xdeepseekr1"
+        "sambanova/DeepSeek-R1-0528"
       ],
       "tier": "large",
       "speed": "fast",
@@ -2308,58 +2492,6 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "qwen/qwen3-32b",
-      "object": "model",
-      "created": 1949760537,
-      "owned_by": "groq",
-      "provider": "groq",
-      "name": "qwen/qwen3-32b",
-      "context_size": 131072,
-      "context_label": "131K",
-      "price_input": 0.29,
-      "price_output": 0.59,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "reasoning"
-      ],
-      "tags": [
-        "chat",
-        "text-generation",
-        "reasoning"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "rpd": 1000,
-        "tpm": 6000
-      },
-      "trial_scope": "all",
-      "model_family": "qwen3-32b",
-      "aliases": [
-        "Qwen3-32B",
-        "xingchen/xop3qwen32b"
-      ],
-      "parameter_count": 32000000000,
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance",
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
       "id": "nemotron-3-nano-omni-30b-a3b-reasoning",
       "object": "model",
       "created": 945254306,
@@ -2368,1199 +2500,15 @@
       "name": "nemotron-3-nano-omni-30b-a3b-reasoning",
       "description": "Model: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
       "context_label": "unknown",
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "reasoning",
-        "text-generation",
-        "chat"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "trial-credits",
-      "free_quota": {
-        "notes": "NVIDIA NIM free credits, exhaustible"
-      },
-      "trial_scope": "specific",
-      "model_family": "nemotron-3-nano-omni-30b-a3b-reasoning",
-      "model_variant": "reasoning",
-      "aliases": [
-        "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
-      ],
-      "parameter_count": 30000000000,
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "nemotron-content-safety-reasoning-4b",
-      "object": "model",
-      "created": 549384392,
-      "owned_by": "nvidia",
-      "provider": "nvidia",
-      "name": "nemotron-content-safety-reasoning-4b",
-      "description": "Model: nvidia/nemotron-content-safety-reasoning-4b",
-      "context_label": "unknown",
-      "is_free": true,
-      "capabilities": [
-        "moderation"
-      ],
-      "tags": [
-        "reasoning",
-        "text-generation",
-        "moderation"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "trial-credits",
-      "free_quota": {
-        "notes": "NVIDIA NIM free credits, exhaustible"
-      },
-      "trial_scope": "specific",
-      "model_family": "nemotron-content-safety-reasoning-4b",
-      "model_variant": "reasoning",
-      "aliases": [],
-      "parameter_count": 4000000000,
-      "tier": "small",
-      "speed": "fast",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "content-creation",
-        "writing-assistance",
-        "content-filtering",
-        "safety",
-        "complex-reasoning"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "nvidia/nemotron-3.5-content-safety:free",
-      "object": "model",
-      "created": 109416543,
-      "owned_by": "openrouter",
-      "provider": "openrouter",
-      "name": "NVIDIA: Nemotron 3.5 Content Safety (free)",
-      "description": "NVIDIA Nemotron 3.5 Content Safety is a compact 4B-parameter multimodal guardrail model from NVIDIA, fine-tuned from Google Gemma-3-4B. It moderates both inputs to and responses from LLMs and VLMs, accepting text and image input and returning text output: a safe/unsafe classification for the user prompt and the response, safety category labels, and an optional reasoning trace. It covers 12 languages with a context window of up to 128K tokens.\n\nIt is suited for prompt and response moderation, con",
-      "context_size": 128000,
-      "context_label": "128K",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "vision",
-        "reasoning"
-      ],
-      "tags": [
-        "reasoning",
-        "vision",
-        "text-generation",
-        "chat",
-        "multimodal"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Free tier with rate limits (see openrouter.ai)"
-      },
-      "trial_scope": "specific",
-      "model_family": "nemotron-3.5-content-safety",
-      "model_variant": "safety",
-      "aliases": [
-        "nvidia/nemotron-3.5-content-safety"
-      ],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "image-understanding",
-        "visual-q&a",
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "nvidia/nemotron-3-ultra-550b-a55b:free",
-      "object": "model",
-      "created": 1180420555,
-      "owned_by": "openrouter",
-      "provider": "openrouter",
-      "name": "NVIDIA: Nemotron 3 Ultra (free)",
-      "description": "NVIDIA Nemotron 3 Ultra is an open frontier-reasoning and orchestration model from NVIDIA, with 55B active parameters out of 550B total (MoE). Built on a hybrid Transformer-Mamba mixture-of-experts architecture, it supports text input and output with a context window of up to 1M tokens. It is suited for long-running agentic workflows, including agent orchestration, coding agents, deep research, and complex enterprise tasks.\n\nIt is particularly strong at multi-step reasoning and planning, with hi",
-      "context_size": 1000000,
-      "context_label": "1M",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "reasoning"
-      ],
-      "tags": [
-        "reasoning",
-        "text-generation",
-        "chat"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Free tier with rate limits (see openrouter.ai)"
-      },
-      "trial_scope": "specific",
-      "model_family": "nemotron-3-ultra-550b-a55b",
-      "aliases": [
-        "nvidia/nemotron-3-ultra-550b-a55b"
-      ],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
-      "object": "model",
-      "created": 1904997150,
-      "owned_by": "openrouter",
-      "provider": "openrouter",
-      "name": "NVIDIA: Nemotron 3 Nano Omni (free)",
-      "description": "NVIDIA Nemotron™ 3 Nano Omni is a 30B-A3B open multimodal model designed to function as a perception and context sub-agent in enterprise agent systems. It accepts text, image, video, and audio inputs and produces text output, enabling agents to perceive and reason across modalities in a single inference loop.\n\nBuilt on a hybrid MoE Transformer-Mamba architecture with Conv3D video layers and Efficient Video Sampling (EVS), it delivers approximately 2× higher throughput and 2.5× lower compute for ",
-      "context_size": 256000,
-      "context_label": "256K",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "vision",
-        "speech-recognition",
-        "video-generation",
-        "reasoning"
-      ],
-      "tags": [
-        "reasoning",
-        "vision",
-        "text-generation",
-        "chat",
-        "speech-recognition",
-        "video-generation",
-        "multimodal"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Free tier with rate limits (see openrouter.ai)"
-      },
-      "trial_scope": "specific",
-      "model_family": "nemotron-3-nano-omni-30b-a3b-reasoning",
-      "model_variant": "reasoning",
-      "aliases": [
-        "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning"
-      ],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "image-understanding",
-        "visual-q&a",
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a",
-        "transcription",
-        "voice-input",
-        "video-creation",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "poolside/laguna-xs.2:free",
-      "object": "model",
-      "created": 2025512609,
-      "owned_by": "openrouter",
-      "provider": "openrouter",
-      "name": "Poolside: Laguna XS.2 (free)",
-      "description": "Laguna XS.2 is the second-generation model in the XS size class from [Poolside](https://poolside.ai), their efficient coding agent series. It combines tool calling and reasoning capabilities with a compact footprint, offering a 128K context window and up to 8K output tokens. Quantized to fp8 for fast, cost-efficient agentic coding workflows.\n\n\nLaguna XS.2 is designed for software engineering and agentic coding use cases, and you are responsible for confirming that it is appropriate for your inte",
-      "context_size": 262144,
-      "context_label": "262K",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "reasoning"
-      ],
-      "tags": [
-        "reasoning",
-        "text-generation",
-        "tool-use",
-        "chat"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": false,
-      "has_tool_use": true,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Free tier with rate limits (see openrouter.ai)"
-      },
-      "trial_scope": "specific",
-      "model_family": "poolside-laguna-xs.2",
-      "aliases": [],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "poolside/laguna-m.1:free",
-      "object": "model",
-      "created": 542510080,
-      "owned_by": "openrouter",
-      "provider": "openrouter",
-      "name": "Poolside: Laguna M.1 (free)",
-      "description": "Laguna M.1 is the flagship coding agent model from [Poolside](https://poolside.ai), optimized for complex software engineering tasks. Designed for agentic coding workflows, it supports tool calling and reasoning, with a 128K context window and up to 8K output tokens. Quantized to fp8 for efficient inference. By using this model, you agree to Poolside’s [End User License Agreement](https://poolside.ai/legal/eula)",
-      "context_size": 262144,
-      "context_label": "262K",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "reasoning"
-      ],
-      "tags": [
-        "reasoning",
-        "text-generation",
-        "tool-use",
-        "chat"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": false,
-      "has_tool_use": true,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Free tier with rate limits (see openrouter.ai)"
-      },
-      "trial_scope": "specific",
-      "model_family": "poolside-laguna-m.1",
-      "aliases": [],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "moonshotai/kimi-k2.6:free",
-      "object": "model",
-      "created": 530698313,
-      "owned_by": "openrouter",
-      "provider": "openrouter",
-      "name": "MoonshotAI: Kimi K2.6 (free)",
-      "description": "Kimi K2.6 is Moonshot AI's next-generation multimodal model, designed for long-horizon coding, coding-driven UI/UX generation, and multi-agent orchestration. It handles complex end-to-end coding tasks across Python, Rust, and Go, and can convert prompts and visual inputs into production-ready interfaces. Its agent swarm architecture scales to hundreds of parallel sub-agents for autonomous task decomposition - delivering documents, websites, and spreadsheets in a single run without human oversigh",
-      "context_size": 262144,
-      "context_label": "262K",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "vision",
-        "reasoning"
-      ],
-      "tags": [
-        "vision",
-        "text-generation",
-        "chat",
-        "reasoning",
-        "multimodal"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Free tier with rate limits (see openrouter.ai)"
-      },
-      "trial_scope": "specific",
-      "model_family": "moonshotai-kimi-k2.6",
-      "aliases": [
-        "cloudflare/@cf/moonshotai/kimi-k2.6",
-        "moonshotai/kimi-k2.6"
-      ],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "image-understanding",
-        "visual-q&a",
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a",
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "google/gemma-4-26b-a4b-it:free",
-      "object": "model",
-      "created": 1797759078,
-      "owned_by": "openrouter",
-      "provider": "openrouter",
-      "name": "Google: Gemma 4 26B A4B  (free)",
-      "description": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference — delivering near-31B quality at a fraction of the compute cost. Supports multimodal input including text, images, and video (up to 60s at 1fps). Features a 256K token context window, native function calling, configurable thinking/reasoning mode, and structured output support. Released under Apache 2.0.",
-      "context_size": 262144,
-      "context_label": "262K",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "vision",
-        "video-generation",
-        "reasoning"
-      ],
-      "tags": [
-        "reasoning",
-        "vision",
-        "text-generation",
-        "chat",
-        "video-generation",
-        "multimodal"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Free tier with rate limits (see openrouter.ai)"
-      },
-      "trial_scope": "specific",
-      "model_family": "gemma-4-26b-a4b",
-      "model_variant": "it",
-      "aliases": [
-        "cloudflare/@cf/google/gemma-4-26b-a4b-it",
-        "gemma-4-26B-A4B-it"
-      ],
-      "parameter_count": 26000000000,
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "image-understanding",
-        "visual-q&a",
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a",
-        "video-creation",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "google/gemma-4-31b-it:free",
-      "object": "model",
-      "created": 280595854,
-      "owned_by": "openrouter",
-      "provider": "openrouter",
-      "name": "Google: Gemma 4 31B (free)",
-      "description": "Gemma 4 31B Instruct is Google DeepMind's 30.7B dense multimodal model supporting text and image input with text output. Features a 256K token context window, configurable thinking/reasoning mode, native function calling, and multilingual support across 140+ languages. Strong on coding, reasoning, and document understanding tasks. Apache 2.0 license.",
-      "context_size": 262144,
-      "context_label": "262K",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "vision",
-        "video-generation",
-        "reasoning"
-      ],
-      "tags": [
-        "reasoning",
-        "vision",
-        "text-generation",
-        "chat",
-        "video-generation",
-        "multimodal"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Free tier with rate limits (see openrouter.ai)"
-      },
-      "trial_scope": "specific",
-      "model_family": "gemma-4-31b",
-      "model_variant": "it",
-      "aliases": [
-        "google/gemma-4-31b-it",
-        "sambanova/gemma-4-31B-it"
-      ],
-      "parameter_count": 31000000000,
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "image-understanding",
-        "visual-q&a",
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a",
-        "video-creation",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "nvidia/nemotron-3-super-120b-a12b:free",
-      "object": "model",
-      "created": 2012354994,
-      "owned_by": "openrouter",
-      "provider": "openrouter",
-      "name": "NVIDIA: Nemotron 3 Super (free)",
-      "description": "NVIDIA Nemotron 3 Super is a 120B-parameter open hybrid MoE model, activating just 12B parameters for maximum compute efficiency and accuracy in complex multi-agent applications. Built on a hybrid Mamba-Transformer Mixture-of-Experts architecture with multi-token prediction (MTP), it delivers over 50% higher token generation compared to leading open models.\n \nThe model features a 1M token context window for long-term agent coherence, cross-document reasoning, and multi-step task planning. Latent",
-      "context_size": 1000000,
-      "context_label": "1M",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "reasoning"
-      ],
-      "tags": [
-        "reasoning",
-        "text-generation",
-        "chat"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "rpm": 0,
-        "notes": "Free tier with rate limits (see openrouter.ai)"
-      },
-      "trial_scope": "specific",
-      "model_family": "nemotron-3-super-120b-a12b",
-      "aliases": [
-        "nvidia/nemotron-3-super-120b-a12b"
-      ],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "liquid/lfm-2.5-1.2b-thinking:free",
-      "object": "model",
-      "created": 556747778,
-      "owned_by": "openrouter",
-      "provider": "openrouter",
-      "name": "LiquidAI: LFM2.5-1.2B-Thinking (free)",
-      "description": "LFM2.5-1.2B-Thinking is a lightweight reasoning-focused model optimized for agentic tasks, data extraction, and RAG—while still running comfortably on edge devices. It supports long context (up to 32K tokens) and is designed to provide higher-quality “thinking” responses in a small 1.2B model.",
-      "context_size": 32768,
-      "context_label": "33K",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "reasoning"
-      ],
-      "tags": [
-        "reasoning",
-        "text-generation",
-        "chat"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Free tier with rate limits (see openrouter.ai)"
-      },
-      "trial_scope": "specific",
-      "model_family": "liquid-lfm-2.5-1.2b-thinking",
-      "model_variant": "thinking",
-      "aliases": [],
-      "parameter_count": 1200000000,
-      "tier": "small",
-      "speed": "fast",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a",
-        "complex-reasoning"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "nvidia/nemotron-3-nano-30b-a3b:free",
-      "object": "model",
-      "created": 1710201109,
-      "owned_by": "openrouter",
-      "provider": "openrouter",
-      "name": "NVIDIA: Nemotron 3 Nano 30B A3B (free)",
-      "description": "NVIDIA Nemotron 3 Nano 30B A3B is a small language MoE model with highest compute efficiency and accuracy for developers to build specialized agentic AI systems.\n\nThe model is fully open with open-weights, datasets and recipes so developers can easily\ncustomize, optimize, and deploy the model on their infrastructure for maximum privacy and\nsecurity.",
-      "context_size": 256000,
-      "context_label": "256K",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "reasoning"
-      ],
-      "tags": [
-        "text-generation",
-        "chat",
-        "reasoning"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Free tier with rate limits (see openrouter.ai)"
-      },
-      "trial_scope": "specific",
-      "model_family": "nemotron-3-nano-30b-a3b",
-      "aliases": [
-        "nvidia/nemotron-3-nano-30b-a3b"
-      ],
-      "parameter_count": 30000000000,
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a",
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "nvidia/nemotron-nano-12b-v2-vl:free",
-      "object": "model",
-      "created": 1698899244,
-      "owned_by": "openrouter",
-      "provider": "openrouter",
-      "name": "NVIDIA: Nemotron Nano 12B 2 VL (free)",
-      "description": "NVIDIA Nemotron Nano 2 VL is a 12-billion-parameter open multimodal reasoning model designed for video understanding and document intelligence. It introduces a hybrid Transformer-Mamba architecture, combining transformer-level accuracy with Mamba’s memory-efficient sequence modeling for significantly higher throughput and lower latency.\n\nThe model supports inputs of text and multi-image documents, producing natural-language outputs. It is trained on high-quality NVIDIA-curated synthetic datasets",
-      "context_size": 128000,
-      "context_label": "128K",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "vision",
-        "video-generation",
-        "reasoning"
-      ],
-      "tags": [
-        "reasoning",
-        "vision",
-        "text-generation",
-        "chat",
-        "video-generation",
-        "multimodal"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Free tier with rate limits (see openrouter.ai)"
-      },
-      "trial_scope": "specific",
-      "model_family": "nemotron-nano-12b-v2-vl",
-      "model_variant": "vl",
-      "aliases": [
-        "nvidia/nemotron-nano-12b-v2-vl"
-      ],
-      "parameter_count": 12000000000,
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "image-understanding",
-        "visual-q&a",
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a",
-        "video-creation",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "qwen/qwen3-next-80b-a3b-instruct:free",
-      "object": "model",
-      "created": 579633928,
-      "owned_by": "openrouter",
-      "provider": "openrouter",
-      "name": "Qwen: Qwen3 Next 80B A3B Instruct (free)",
-      "description": "Qwen3-Next-80B-A3B-Instruct is an instruction-tuned chat model in the Qwen3-Next series optimized for fast, stable responses without “thinking” traces. It targets complex tasks across reasoning, code generation, knowledge QA, and multilingual use, while remaining robust on alignment and formatting. Compared with prior Qwen3 instruct variants, it focuses on higher throughput and stability on ultra-long inputs and multi-turn dialogues, making it well-suited for RAG, tool use, and agentic workflows",
-      "context_size": 262144,
-      "context_label": "262K",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "reasoning",
-        "text-generation",
-        "tool-use",
-        "chat"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": false,
-      "has_tool_use": true,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "rpm": 8,
-        "notes": "Free tier: 8 req/min (per endpoint, basic account)"
-      },
-      "trial_scope": "specific",
-      "model_family": "qwen3-next-80b-a3b",
-      "model_variant": "instruct",
-      "aliases": [
-        "Qwen3-Next-80B-A3B-Instruct",
-        "qwen/qwen3-next-80b-a3b-instruct",
-        "xingchen/xop3qwen80bnext"
-      ],
-      "parameter_count": 80000000000,
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "nvidia/nemotron-nano-9b-v2:free",
-      "object": "model",
-      "created": 927014413,
-      "owned_by": "openrouter",
-      "provider": "openrouter",
-      "name": "NVIDIA: Nemotron Nano 9B V2 (free)",
-      "description": "NVIDIA-Nemotron-Nano-9B-v2 is a large language model (LLM) trained from scratch by NVIDIA, and designed as a unified model for both reasoning and non-reasoning tasks. It responds to user queries and tasks by first generating a reasoning trace and then concluding with a final response. \n\nThe model's reasoning capabilities can be controlled via a system prompt. If the user prefers the model to provide its final answer without intermediate reasoning traces, it can be configured to do so.",
-      "context_size": 128000,
-      "context_label": "128K",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "reasoning"
-      ],
-      "tags": [
-        "reasoning",
-        "text-generation",
-        "chat"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "rpm": 50,
-        "notes": "Free tier: 50 req/min (per endpoint, basic account)"
-      },
-      "trial_scope": "specific",
-      "model_family": "nemotron-nano-9b-v2",
-      "aliases": [
-        "nvidia/nvidia-nemotron-nano-9b-v2"
-      ],
-      "parameter_count": 9000000000,
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "openai/gpt-oss-120b:free",
-      "object": "model",
-      "created": 131890245,
-      "owned_by": "openrouter",
-      "provider": "openrouter",
-      "name": "OpenAI: gpt-oss-120b (free)",
-      "description": "gpt-oss-120b is an open-weight, 117B-parameter Mixture-of-Experts (MoE) language model from OpenAI designed for high-reasoning, agentic, and general-purpose production use cases. It activates 5.1B parameters per forward pass and is optimized to run on a single H100 GPU with native MXFP4 quantization. The model supports configurable reasoning depth, full chain-of-thought access, and native tool use, including function calling, browsing, and structured output generation.",
-      "context_size": 131072,
-      "context_label": "131K",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "reasoning"
-      ],
-      "tags": [
-        "reasoning",
-        "text-generation",
-        "tool-use",
-        "chat"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": false,
-      "has_tool_use": true,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "rpd": 5000,
-        "notes": "Free tier: 5000 req/day (per endpoint, basic account)"
-      },
-      "trial_scope": "specific",
-      "model_family": "gpt-oss-120b",
-      "aliases": [
-        "cerebras/gpt-oss-120b",
-        "cloudflare/@cf/openai/gpt-oss-120b",
-        "gpt-oss-120b",
-        "groq/openai/gpt-oss-120b",
-        "openai/gpt-oss-120b",
-        "sambanova/gpt-oss-120b"
-      ],
-      "parameter_count": 120000000000,
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "openai/gpt-oss-20b:free",
-      "object": "model",
-      "created": 1918289590,
-      "owned_by": "openrouter",
-      "provider": "openrouter",
-      "name": "OpenAI: gpt-oss-20b (free)",
-      "description": "gpt-oss-20b is an open-weight 21B parameter model released by OpenAI under the Apache 2.0 license. It uses a Mixture-of-Experts (MoE) architecture with 3.6B active parameters per forward pass, optimized for lower-latency inference and deployability on consumer or single-GPU hardware. The model is trained in OpenAI’s Harmony response format and supports reasoning level configuration, fine-tuning, and agentic capabilities including function calling, tool use, and structured outputs.",
-      "context_size": 131072,
-      "context_label": "131K",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "reasoning"
-      ],
-      "tags": [
-        "reasoning",
-        "text-generation",
-        "tool-use",
-        "chat"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": false,
-      "has_tool_use": true,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "rpd": 10000,
-        "notes": "Free tier: 10000 req/day (per endpoint, basic account)"
-      },
-      "trial_scope": "specific",
-      "model_family": "gpt-oss-20b",
-      "aliases": [
-        "cloudflare/@cf/openai/gpt-oss-20b",
-        "groq/openai/gpt-oss-20b",
-        "openai/gpt-oss-20b"
-      ],
-      "parameter_count": 20000000000,
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "z-ai/glm-4.5-air:free",
-      "object": "model",
-      "created": 638469138,
-      "owned_by": "openrouter",
-      "provider": "openrouter",
-      "name": "Z.ai: GLM 4.5 Air (free)",
-      "description": "GLM-4.5-Air is the lightweight variant of our latest flagship model family, also purpose-built for agent-centric applications. Like GLM-4.5, it adopts the Mixture-of-Experts (MoE) architecture but with a more compact parameter size. GLM-4.5-Air also supports hybrid inference modes, offering a \"thinking mode\" for advanced reasoning and tool use, and a \"non-thinking mode\" for real-time interaction. Users can control the reasoning behaviour with the `reasoning` `enabled` boolean. [Learn more in our",
-      "context_size": 131072,
-      "context_label": "131K",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "reasoning"
-      ],
-      "tags": [
-        "reasoning",
-        "text-generation",
-        "tool-use",
-        "chat"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": false,
-      "has_tool_use": true,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Free tier with rate limits (see openrouter.ai)"
-      },
-      "trial_scope": "specific",
-      "model_family": "glm-4.5-air",
-      "aliases": [
-        "bigmodel/glm-4.5-air",
-        "GLM-4_5-Air"
-      ],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "qwen/qwen3-coder:free",
-      "object": "model",
-      "created": 713746669,
-      "owned_by": "openrouter",
-      "provider": "openrouter",
-      "name": "Qwen: Qwen3 Coder 480B A35B (free)",
-      "description": "Qwen3-Coder-480B-A35B-Instruct is a Mixture-of-Experts (MoE) code generation model developed by the Qwen team. It is optimized for agentic coding tasks such as function calling, tool use, and long-context reasoning over repositories. The model features 480 billion total parameters, with 35 billion active per forward pass (8 out of 160 experts).\n\nPricing for the Alibaba endpoints varies by context length. Once a request is greater than 128k input tokens, the higher pricing is used.",
-      "context_size": 1048576,
-      "context_label": "1M",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "code-generation"
-      ],
-      "tags": [
-        "reasoning",
-        "text-generation",
-        "tool-use",
-        "chat",
-        "code-generation"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": false,
-      "has_tool_use": true,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "rpm": 8,
-        "notes": "Free tier: 8 req/min (per endpoint, basic account)"
-      },
-      "trial_scope": "specific",
-      "model_family": "qwen:-qwen3-coder-480b-a35b",
-      "model_variant": "coder",
-      "aliases": [],
-      "parameter_count": 480000000000,
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a",
-        "software-development",
-        "code-completion",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "meta-llama/llama-3.2-3b-instruct:free",
-      "object": "model",
-      "created": 1478438307,
-      "owned_by": "openrouter",
-      "provider": "openrouter",
-      "name": "Meta: Llama 3.2 3B Instruct (free)",
-      "description": "Llama 3.2 3B is a 3-billion-parameter multilingual large language model, optimized for advanced natural language processing tasks like dialogue generation, reasoning, and summarization. Designed with the latest transformer architecture, it supports eight languages, including English, Spanish, and Hindi, and is adaptable for additional languages.\n\nTrained on 9 trillion tokens, the Llama 3.2 3B model excels in instruction-following, complex reasoning, and tool use. Its balanced performance makes i",
-      "context_size": 131072,
-      "context_label": "131K",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "reasoning",
-        "text-generation",
-        "tool-use",
-        "chat"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": false,
-      "has_tool_use": true,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "rpm": 8,
-        "notes": "Free tier: 8 req/min (per endpoint, basic account)"
-      },
-      "trial_scope": "specific",
-      "model_family": "llama-3.2-3b",
-      "model_variant": "instruct",
-      "aliases": [
-        "cloudflare/@cf/meta/llama-3.2-3b-instruct",
-        "meta/llama-3.2-3b-instruct"
-      ],
-      "parameter_count": 3000000000,
-      "tier": "small",
-      "speed": "fast",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a",
-        "complex-reasoning"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "nousresearch/hermes-3-llama-3.1-405b:free",
-      "object": "model",
-      "created": 1789287263,
-      "owned_by": "openrouter",
-      "provider": "openrouter",
-      "name": "Nous: Hermes 3 405B Instruct (free)",
-      "description": "Hermes 3 is a generalist language model with many improvements over Hermes 2, including advanced agentic capabilities, much better roleplaying, reasoning, multi-turn conversation, long context coherence, and improvements across the board.\n\nHermes 3 405B is a frontier-level, full-parameter finetune of the Llama-3.1 405B foundation model, focused on aligning LLMs to the user, with powerful steering capabilities and control given to the end user.\n\nThe Hermes 3 series builds and expands on the Herme",
-      "context_size": 131072,
-      "context_label": "131K",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "reasoning",
-        "text-generation",
-        "chat"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "rpm": 8,
-        "notes": "Free tier: 8 req/min (per endpoint, basic account)"
-      },
-      "trial_scope": "specific",
-      "model_family": "nousresearch-hermes-3-llama-3.1-405b",
-      "aliases": [],
-      "parameter_count": 405000000000,
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "xdeepseekr1",
-      "object": "model",
-      "created": 837229335,
-      "owned_by": "xingchen",
-      "provider": "xingchen",
-      "name": "DeepSeek-R1",
-      "description": "该版本通过利用更多的计算资源并在后训练阶段引入算法优化机制，显著提升了其推理能力和深度推理能力。该模型在数学、编程和一般逻辑等多个基准测试中表现出色，整体性能已接近 O3 和 Gemini 2.5 Pro 等领先模型。与之前的版本相比，升级后的模型在处理复杂推理任务方面显示出显著的改进。",
-      "context_size": 32768,
-      "context_label": "33K",
-      "price_input": 3.2,
-      "price_output": 12.8,
       "is_free": false,
       "capabilities": [
         "chat",
-        "text-generation",
-        "reasoning"
+        "text-generation"
       ],
       "tags": [
         "reasoning",
-        "chat",
-        "text-generation"
+        "text-generation",
+        "chat"
       ],
       "is_reasoning": true,
       "is_multimodal": false,
@@ -3568,15 +2516,62 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
+      "model_family": "nemotron-3-nano-omni-30b-a3b-reasoning",
+      "model_variant": "reasoning",
+      "aliases": [],
+      "parameter_count": 30000000000,
+      "tier": "large",
+      "speed": "premium",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "complex-reasoning"
+      ],
+      "performance_level": "high",
+      "estimated_latency": "3-10s"
+    },
+    {
+      "id": "DeepSeek-R1-0528",
+      "object": "model",
+      "created": 437937886,
+      "owned_by": "sambanova",
+      "provider": "sambanova",
+      "name": "deepseek-ai/DeepSeek-R1-0528",
+      "context_label": "unknown",
+      "price_input": 5,
+      "price_output": 7,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "reasoning",
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "total_credits": 5,
+        "notes": "$5 trial credits, valid for 3 months"
+      },
+      "trial_scope": "all",
       "model_family": "deepseek-r1",
       "model_variant": "r1",
       "aliases": [
-        "DeepSeek-R1",
         "github/DeepSeek-R1-0528",
         "github/DeepSeek-R1"
       ],
       "tier": "large",
-      "speed": "premium",
+      "speed": "fast",
       "use_case": [
         "problem-solving",
         "logical-analysis",
@@ -3587,8 +2582,56 @@
         "writing-assistance",
         "complex-reasoning"
       ],
-      "performance_level": "high",
-      "estimated_latency": "3-10s"
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "DeepSeek-R1-Distill-Llama-70B",
+      "object": "model",
+      "created": 392278382,
+      "owned_by": "sambanova",
+      "provider": "sambanova",
+      "name": "deepseek-ai/DeepSeek-R1-Distill-Llama-70B",
+      "context_label": "unknown",
+      "price_input": 0.7,
+      "price_output": 1.4,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "reasoning",
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "total_credits": 5,
+        "notes": "$5 trial credits, valid for 3 months"
+      },
+      "trial_scope": "all",
+      "model_family": "deepseek-r1-distill-llama-70b",
+      "model_variant": "r1",
+      "aliases": [],
+      "parameter_count": 70000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
     },
     {
       "id": "xdeepseekr1qwen32b",
@@ -3648,7 +2691,7 @@
       "owned_by": "xingchen",
       "provider": "xingchen",
       "name": "Kimi-K2-thinking",
-      "description": "kimi-k2-thinking模型是月之暗面提供的具有通用 Agentic能力和推理能力的思考模型，它擅长深度推理，并可通过多步工具调用，帮助解决各类难题。",
+      "description": "Kimi-K2-thinking模型是月之暗面提供的具有通用Agentic能力和推理能力的思考模型，它擅长深度推理，并可通过多步工具调用，帮助解决各类难题。",
       "context_size": 262144,
       "context_label": "262K",
       "price_input": 4,
@@ -3672,9 +2715,7 @@
       "trial_scope": "none",
       "model_family": "kimi-k2-thinking",
       "model_variant": "thinking",
-      "aliases": [
-        "Kimi-K2-Thinking"
-      ],
+      "aliases": [],
       "tier": "large",
       "speed": "premium",
       "use_case": [
@@ -3689,54 +2730,6 @@
       ],
       "performance_level": "high",
       "estimated_latency": "3-10s"
-    },
-    {
-      "id": "xdeepseekr1llama8b",
-      "object": "model",
-      "created": 691182730,
-      "owned_by": "xingchen",
-      "provider": "xingchen",
-      "name": "DeepSeek-R1-Distill-Llama-8B",
-      "description": "DeepSeek-R1-Distill-Llama-8B 是基于 DeepSeek-R1推理数据蒸馏训练的模型，基础模型为Llama-3.1-8B。在数学推理、代码生成等任务中表现卓越。",
-      "context_size": 8192,
-      "context_label": "8K",
-      "price_input": 1,
-      "price_output": 2,
-      "is_free": false,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "reasoning"
-      ],
-      "tags": [
-        "reasoning",
-        "chat",
-        "text-generation"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
-      "model_family": "deepseek-r1-distill-llama-8b",
-      "model_variant": "r1",
-      "aliases": [],
-      "parameter_count": 8000000000,
-      "tier": "medium",
-      "speed": "premium",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "1-3s"
     }
   ]
 }

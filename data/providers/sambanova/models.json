@@ -1,55 +1,9 @@
 {
   "object": "list",
   "provider": "sambanova",
-  "updated_at": "2026-06-08T13:57:08.106Z",
-  "total": 9,
+  "updated_at": "2026-09-13T07:16:40.144Z",
+  "total": 20,
   "data": [
-    {
-      "id": "gemma-4-31B-it",
-      "object": "model",
-      "created": 1392290191,
-      "owned_by": "sambanova",
-      "provider": "sambanova",
-      "name": "google/gemma-4-31B-it",
-      "context_label": "unknown",
-      "price_input": 0.38,
-      "price_output": 1.15,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "chat",
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "trial-credits",
-      "free_quota": {
-        "total_credits": 5,
-        "notes": "$5 trial credits, valid for 3 months"
-      },
-      "trial_scope": "all",
-      "model_family": "gemma-4-31b",
-      "model_variant": "it",
-      "aliases": [
-        "google/gemma-4-31b-it",
-        "google/gemma-4-31b-it:free"
-      ],
-      "parameter_count": 31000000000,
-      "tier": "small",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
     {
       "id": "gemma-4-31b-32",
       "object": "model",
@@ -82,6 +36,179 @@
       "aliases": [],
       "parameter_count": 31000000000,
       "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "DeepSeek-V3.1-Terminus",
+      "object": "model",
+      "created": 1169349077,
+      "owned_by": "sambanova",
+      "provider": "sambanova",
+      "name": "deepseek-ai/DeepSeek-V3.1-Terminus",
+      "context_label": "unknown",
+      "price_input": 3,
+      "price_output": 4.5,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "total_credits": 5,
+        "notes": "$5 trial credits, valid for 3 months"
+      },
+      "trial_scope": "all",
+      "model_family": "deepseek-v3.1-terminus",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "gemma-4-31B-it",
+      "object": "model",
+      "created": 1392290191,
+      "owned_by": "sambanova",
+      "provider": "sambanova",
+      "name": "google/gemma-4-31B-it",
+      "context_label": "unknown",
+      "price_input": 0.22,
+      "price_output": 0.59,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "total_credits": 5,
+        "notes": "$5 trial credits, valid for 3 months"
+      },
+      "trial_scope": "all",
+      "model_family": "gemma-4-31b",
+      "model_variant": "it",
+      "aliases": [
+        "google/gemma-4-31b-it"
+      ],
+      "parameter_count": 31000000000,
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "Qwen3-235B-A22B-Instruct-2507",
+      "object": "model",
+      "created": 2096442811,
+      "owned_by": "sambanova",
+      "provider": "sambanova",
+      "name": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+      "context_label": "unknown",
+      "price_input": 0.4,
+      "price_output": 0.8,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "total_credits": 5,
+        "notes": "$5 trial credits, valid for 3 months"
+      },
+      "trial_scope": "all",
+      "model_family": "qwen3-235b-a22b",
+      "model_variant": "instruct",
+      "aliases": [
+        "xingchen/xop3qwen235b2507",
+        "xingchen/xop3qwen235b"
+      ],
+      "parameter_count": 235000000000,
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "DeepSeek-V3.1",
+      "object": "model",
+      "created": 1211950777,
+      "owned_by": "sambanova",
+      "provider": "sambanova",
+      "name": "deepseek-ai/DeepSeek-V3.1",
+      "context_label": "unknown",
+      "price_input": 3,
+      "price_output": 4.5,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "total_credits": 5,
+        "notes": "$5 trial credits, valid for 3 months"
+      },
+      "trial_scope": "all",
+      "model_family": "deepseek-v3.1",
+      "aliases": [],
+      "tier": "medium",
       "speed": "fast",
       "use_case": [
         "conversation",
@@ -137,6 +264,56 @@
       "estimated_latency": "< 1s"
     },
     {
+      "id": "DeepSeek-R1-0528",
+      "object": "model",
+      "created": 437937886,
+      "owned_by": "sambanova",
+      "provider": "sambanova",
+      "name": "deepseek-ai/DeepSeek-R1-0528",
+      "context_label": "unknown",
+      "price_input": 5,
+      "price_output": 7,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "reasoning",
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "total_credits": 5,
+        "notes": "$5 trial credits, valid for 3 months"
+      },
+      "trial_scope": "all",
+      "model_family": "deepseek-r1",
+      "model_variant": "r1",
+      "aliases": [
+        "github/DeepSeek-R1-0528",
+        "github/DeepSeek-R1"
+      ],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
       "id": "Meta-Llama-3.3-70B-Instruct",
       "object": "model",
       "created": 1912571463,
@@ -180,15 +357,15 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "MiniMax-M2.7",
+      "id": "Llama-3.3-Swallow-70B-Instruct-v0.4",
       "object": "model",
-      "created": 1377797552,
+      "created": 461621090,
       "owned_by": "sambanova",
       "provider": "sambanova",
-      "name": "minimaxai/minimax-m2.7",
+      "name": "Llama 3.3 70B",
       "context_label": "unknown",
       "price_input": 0.6,
-      "price_output": 2.4,
+      "price_output": 1.2,
       "is_free": true,
       "capabilities": [
         "chat",
@@ -207,11 +384,412 @@
         "notes": "$5 trial credits, valid for 3 months"
       },
       "trial_scope": "all",
-      "model_family": "minimax-m2.7",
+      "model_family": "llama-3.3-swallow-70b-v0.4",
+      "model_variant": "instruct",
+      "aliases": [],
+      "parameter_count": 70000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "E5-Mistral-7B-Instruct",
+      "object": "model",
+      "created": 189272062,
+      "owned_by": "sambanova",
+      "provider": "sambanova",
+      "name": "E5-Mistral-7B-Instruct",
+      "context_label": "unknown",
+      "price_input": 0.13,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "total_credits": 5,
+        "notes": "$5 trial credits, valid for 3 months"
+      },
+      "trial_scope": "all",
+      "model_family": "e5-mistral-7b",
+      "model_variant": "instruct",
+      "aliases": [],
+      "parameter_count": 7000000000,
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "Whisper-Large-v3",
+      "object": "model",
+      "created": 191906492,
+      "owned_by": "sambanova",
+      "provider": "sambanova",
+      "name": "Whisper-Large-v3",
+      "context_label": "unknown",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "total_credits": 5,
+        "notes": "$5 trial credits, valid for 3 months"
+      },
+      "trial_scope": "all",
+      "model_family": "whisper-large-v3",
       "aliases": [
-        "MiniMax-M2.7"
+        "cloudflare/@cf/openai/whisper-large-v3-turbo",
+        "whisper-large-v3-turbo",
+        "whisper-large-v3",
+        "groq/whisper-large-v3",
+        "groq/whisper-large-v3-turbo"
       ],
       "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "Llama-4-Maverick-17B-128E-Instruct",
+      "object": "model",
+      "created": 1929449344,
+      "owned_by": "sambanova",
+      "provider": "sambanova",
+      "name": "Llama-4-Maverick-17B-128E-Instruct",
+      "context_label": "unknown",
+      "price_input": 0.63,
+      "price_output": 1.8,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "total_credits": 5,
+        "notes": "$5 trial credits, valid for 3 months"
+      },
+      "trial_scope": "all",
+      "model_family": "llama-4-maverick-17b-128e",
+      "model_variant": "instruct",
+      "aliases": [
+        "github/Llama-4-Maverick-17B-128E-Instruct-FP8"
+      ],
+      "parameter_count": 17000000000,
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "gemma-3-27b-it",
+      "object": "model",
+      "created": 1091930091,
+      "owned_by": "sambanova",
+      "provider": "sambanova",
+      "name": "google/gemma-3-27b-it",
+      "context_label": "unknown",
+      "price_input": 0.22,
+      "price_output": 0.59,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "total_credits": 5,
+        "notes": "$5 trial credits, valid for 3 months"
+      },
+      "trial_scope": "all",
+      "model_family": "gemma-3-27b",
+      "model_variant": "it",
+      "aliases": [],
+      "parameter_count": 27000000000,
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "Qwen3-32B",
+      "object": "model",
+      "created": 1270162322,
+      "owned_by": "sambanova",
+      "provider": "sambanova",
+      "name": "Qwen/Qwen3-32B",
+      "context_label": "unknown",
+      "price_input": 0.4,
+      "price_output": 0.8,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "total_credits": 5,
+        "notes": "$5 trial credits, valid for 3 months"
+      },
+      "trial_scope": "all",
+      "model_family": "qwen3-32b",
+      "aliases": [
+        "Qwen3-32B",
+        "xingchen/xop3qwen32b"
+      ],
+      "parameter_count": 32000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "DeepSeek-V3-0324",
+      "object": "model",
+      "created": 1387111070,
+      "owned_by": "sambanova",
+      "provider": "sambanova",
+      "name": "deepseek-ai/DeepSeek-V3-0324",
+      "context_label": "unknown",
+      "price_input": 3,
+      "price_output": 4.5,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "total_credits": 5,
+        "notes": "$5 trial credits, valid for 3 months"
+      },
+      "trial_scope": "all",
+      "model_family": "deepseek-v3",
+      "aliases": [
+        "github/DeepSeek-V3-0324"
+      ],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "DeepSeek-R1-Distill-Llama-70B",
+      "object": "model",
+      "created": 392278382,
+      "owned_by": "sambanova",
+      "provider": "sambanova",
+      "name": "deepseek-ai/DeepSeek-R1-Distill-Llama-70B",
+      "context_label": "unknown",
+      "price_input": 0.7,
+      "price_output": 1.4,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "reasoning",
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "total_credits": 5,
+        "notes": "$5 trial credits, valid for 3 months"
+      },
+      "trial_scope": "all",
+      "model_family": "deepseek-r1-distill-llama-70b",
+      "model_variant": "r1",
+      "aliases": [],
+      "parameter_count": 70000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "ALLaM-7B-Instruct-preview",
+      "object": "model",
+      "created": 385789167,
+      "owned_by": "sambanova",
+      "provider": "sambanova",
+      "name": "tbd",
+      "context_label": "unknown",
+      "price_input": 0.22,
+      "price_output": 0.59,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "total_credits": 5,
+        "notes": "$5 trial credits, valid for 3 months"
+      },
+      "trial_scope": "all",
+      "model_family": "allam-7b-preview",
+      "model_variant": "instruct",
+      "aliases": [],
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "gemma-3-12b-it",
+      "object": "model",
+      "created": 1136995089,
+      "owned_by": "sambanova",
+      "provider": "sambanova",
+      "name": "google/gemma-3-12b-it",
+      "context_label": "unknown",
+      "price_input": 0.22,
+      "price_output": 0.59,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "total_credits": 5,
+        "notes": "$5 trial credits, valid for 3 months"
+      },
+      "trial_scope": "all",
+      "model_family": "gemma-3-12b",
+      "model_variant": "it",
+      "aliases": [
+        "google/gemma-3-12b-it"
+      ],
+      "parameter_count": 12000000000,
+      "tier": "small",
       "speed": "fast",
       "use_case": [
         "conversation",
@@ -254,10 +832,7 @@
       "aliases": [
         "cerebras/gpt-oss-120b",
         "cloudflare/@cf/openai/gpt-oss-120b",
-        "gpt-oss-120b",
-        "groq/openai/gpt-oss-120b",
-        "openai/gpt-oss-120b",
-        "openai/gpt-oss-120b:free"
+        "groq/openai/gpt-oss-120b"
       ],
       "parameter_count": 120000000000,
       "tier": "small",
@@ -272,15 +847,15 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "Llama-4-Maverick-17B-128E-Instruct",
+      "id": "MiniMax-M2.7",
       "object": "model",
-      "created": 1929449344,
+      "created": 1377797552,
       "owned_by": "sambanova",
       "provider": "sambanova",
-      "name": "Llama-4-Maverick-17B-128E-Instruct",
+      "name": "minimaxai/minimax-m2.7",
       "context_label": "unknown",
-      "price_input": 0.63,
-      "price_output": 1.8,
+      "price_input": 0.6,
+      "price_output": 2.4,
       "is_free": true,
       "capabilities": [
         "chat",
@@ -299,102 +874,11 @@
         "notes": "$5 trial credits, valid for 3 months"
       },
       "trial_scope": "all",
-      "model_family": "llama-4-maverick-17b-128e",
-      "model_variant": "instruct",
+      "model_family": "minimax-m2.7",
       "aliases": [
-        "github/Llama-4-Maverick-17B-128E-Instruct-FP8",
-        "meta/llama-4-maverick-17b-128e-instruct"
-      ],
-      "parameter_count": 17000000000,
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "DeepSeek-V3.1",
-      "object": "model",
-      "created": 1211950777,
-      "owned_by": "sambanova",
-      "provider": "sambanova",
-      "name": "deepseek-ai/DeepSeek-V3.1",
-      "context_label": "unknown",
-      "price_input": 3,
-      "price_output": 4.5,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "chat",
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "trial-credits",
-      "free_quota": {
-        "total_credits": 5,
-        "notes": "$5 trial credits, valid for 3 months"
-      },
-      "trial_scope": "all",
-      "model_family": "deepseek-v3.1",
-      "aliases": [
-        "DeepSeek-V3_1"
+        "MiniMax-M2.7"
       ],
       "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "gemma-3-12b-it",
-      "object": "model",
-      "created": 1136995089,
-      "owned_by": "sambanova",
-      "provider": "sambanova",
-      "name": "google/gemma-3-12b-it",
-      "context_label": "unknown",
-      "price_input": 0.35,
-      "price_output": 0.59,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "chat",
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "trial-credits",
-      "free_quota": {
-        "total_credits": 5,
-        "notes": "$5 trial credits, valid for 3 months"
-      },
-      "trial_scope": "all",
-      "model_family": "gemma-3-12b",
-      "model_variant": "it",
-      "aliases": [
-        "google/gemma-3-12b-it"
-      ],
-      "parameter_count": 12000000000,
-      "tier": "small",
       "speed": "fast",
       "use_case": [
         "conversation",

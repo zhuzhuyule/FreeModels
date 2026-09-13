@@ -36,20 +36,19 @@ curl https://ofind.cn/FreeModels/v1/models.json
 | Provider | 内部 ID | 总模型 | 免费 | 付费可试用 | 免费策略 | 注册 | API Key | 文档 | 数据 |
 |---|---|---:|---:|---:|---|---|---|---|---|
 | —  | `agnes` | 2 | 2 | 0 | — | — | — | — | [JSON](https://ofind.cn/FreeModels/data/providers/agnes/models.json) |
-| [BigModel / 智谱 AI](https://open.bigmodel.cn)  | `bigmodel` | 56 | 9 | 0 | GLM Flash 等部分模型可免费使用，具体以官方价格页和控制台为准。 | [注册](https://open.bigmodel.cn) | [API Key](https://open.bigmodel.cn/usercenter/proj-mgmt/apikeys) | [文档](https://docs.bigmodel.cn) | [JSON](https://ofind.cn/FreeModels/data/providers/bigmodel/models.json) |
+| [BigModel / 智谱 AI](https://open.bigmodel.cn)  | `bigmodel` | 54 | 7 | 0 | GLM Flash 等部分模型可免费使用，具体以官方价格页和控制台为准。 | [注册](https://open.bigmodel.cn) | [API Key](https://open.bigmodel.cn/usercenter/proj-mgmt/apikeys) | [文档](https://docs.bigmodel.cn) | [JSON](https://ofind.cn/FreeModels/data/providers/bigmodel/models.json) |
 | [Cerebras](https://www.cerebras.ai)  | `cerebras` | 4 | 4 | 0 | 部分模型提供免费或限速使用，额度以官方控制台为准。 | [注册](https://cloud.cerebras.ai) | [API Key](https://cloud.cerebras.ai/platform/api-keys) | [文档](https://inference-docs.cerebras.ai) | [JSON](https://ofind.cn/FreeModels/data/providers/cerebras/models.json) |
-| [Cloudflare Workers AI](https://developers.cloudflare.com/workers-ai)  | `cloudflare` | 57 | 57 | 0 | 账户级每日 10,000 neurons 免费额度，所有 Workers AI 模型共享。 | [注册](https://dash.cloudflare.com/sign-up) | [API Key](https://dash.cloudflare.com/profile/api-tokens) | [文档](https://developers.cloudflare.com/workers-ai) | [JSON](https://ofind.cn/FreeModels/data/providers/cloudflare/models.json) |
-| [Cohere](https://cohere.com)  | `cohere` | 30 | 30 | 0 | Trial key 永久免费：20 RPM、1000 requests/月，所有模型共享配额。 | [注册](https://dashboard.cohere.com/welcome/register) | [API Key](https://dashboard.cohere.com/api-keys) | [文档](https://docs.cohere.com) | [JSON](https://ofind.cn/FreeModels/data/providers/cohere/models.json) |
-| [Gitee AI](https://ai.gitee.com)  | `gitee` | 203 | 39 | 138 | 部分模型完全免费，另有一批模型允许体验。 | [注册](https://ai.gitee.com) | — | [文档](https://ai.gitee.com/docs) | [JSON](https://ofind.cn/FreeModels/data/providers/gitee/models.json) |
+| [Cloudflare Workers AI](https://developers.cloudflare.com/workers-ai)  | `cloudflare` | 64 | 64 | 0 | 账户级每日 10,000 neurons 免费额度，所有 Workers AI 模型共享。 | [注册](https://dash.cloudflare.com/sign-up) | [API Key](https://dash.cloudflare.com/profile/api-tokens) | [文档](https://developers.cloudflare.com/workers-ai) | [JSON](https://ofind.cn/FreeModels/data/providers/cloudflare/models.json) |
+| [Cohere](https://cohere.com)  | `cohere` | 32 | 32 | 0 | Trial key 永久免费：20 RPM、1000 requests/月，所有模型共享配额。 | [注册](https://dashboard.cohere.com/welcome/register) | [API Key](https://dashboard.cohere.com/api-keys) | [文档](https://docs.cohere.com) | [JSON](https://ofind.cn/FreeModels/data/providers/cohere/models.json) |
+| [Gitee AI](https://ai.gitee.com)  | `gitee` | 206 | 36 | 100 | 部分模型完全免费，另有一批模型允许体验。 | [注册](https://ai.gitee.com) | — | [文档](https://ai.gitee.com/docs) | [JSON](https://ofind.cn/FreeModels/data/providers/gitee/models.json) |
 | [GitHub Models](https://github.com/marketplace/models)  | `github` | 37 | 37 | 0 | 按 Copilot 订阅层级（Free / Pro / Pro+ / Business / Enterprise）限速，免费层有较严格的 input/output token 限制。 | [注册](https://github.com/join) | [API Key](https://github.com/settings/tokens) | [文档](https://docs.github.com/en/github-models) | [JSON](https://ofind.cn/FreeModels/data/providers/github/models.json) |
 | [Google AI](https://ai.google.dev)  | `google` | 32 | 17 | 0 | Gemini API 部分模型提供免费层，通常带有 RPM / RPD / TPM 限制。 | [注册](https://aistudio.google.com) | [API Key](https://aistudio.google.com/app/apikey) | [文档](https://ai.google.dev/gemini-api/docs) | [JSON](https://ofind.cn/FreeModels/data/providers/google/models.json) |
-| [Groq](https://groq.com)  | `groq` | 16 | 16 | 0 | 常见为开发者免费额度或限速体验，具体以官方控制台和价格页为准。 | [注册](https://console.groq.com) | [API Key](https://console.groq.com/keys) | [文档](https://console.groq.com/docs) | [JSON](https://ofind.cn/FreeModels/data/providers/groq/models.json) |
+| [Groq](https://groq.com)  | `groq` | 14 | 14 | 0 | 常见为开发者免费额度或限速体验，具体以官方控制台和价格页为准。 | [注册](https://console.groq.com) | [API Key](https://console.groq.com/keys) | [文档](https://console.groq.com/docs) | [JSON](https://ofind.cn/FreeModels/data/providers/groq/models.json) |
 | [LongCat](https://longcat.chat)  | `longcat` | 1 | 1 | 0 | 提供每日 token 免费额度，额度和模型范围以官方文档为准。 | [注册](https://longcat.chat) | [API Key](https://longcat.chat/platform/api-keys) | [文档](https://longcat.chat/platform/docs) | [JSON](https://ofind.cn/FreeModels/data/providers/longcat/models.json) |
-| [NVIDIA AI](https://developer.nvidia.com/ai)  | `nvidia` | 120 | 47 | 0 | NIM / build.nvidia.com 通常提供开发体验 credits 或试用额度。 | [注册](https://build.nvidia.com) | [API Key](https://build.nvidia.com/explore/discover) | [文档](https://docs.api.nvidia.com/nim) | [JSON](https://ofind.cn/FreeModels/data/providers/nvidia/models.json) |
-| [OpenRouter](https://openrouter.ai)  | `openrouter` | 24 | 24 | 0 | 免费模型通常带有请求频率或每日请求限制。 | [注册](https://openrouter.ai) | [API Key](https://openrouter.ai/settings/keys) | [文档](https://openrouter.ai/docs) | [JSON](https://ofind.cn/FreeModels/data/providers/openrouter/models.json) |
-| [SambaNova Cloud](https://cloud.sambanova.ai)  | `sambanova` | 9 | 9 | 0 | 新账户提供 $5 trial credits，有效期 3 个月。 | [注册](https://cloud.sambanova.ai) | [API Key](https://cloud.sambanova.ai/apis) | [文档](https://docs.sambanova.ai) | [JSON](https://ofind.cn/FreeModels/data/providers/sambanova/models.json) |
+| [NVIDIA AI](https://developer.nvidia.com/ai)  | `nvidia` | 82 | 0 | 0 | NIM / build.nvidia.com 通常提供开发体验 credits 或试用额度。 | [注册](https://build.nvidia.com) | [API Key](https://build.nvidia.com/explore/discover) | [文档](https://docs.api.nvidia.com/nim) | [JSON](https://ofind.cn/FreeModels/data/providers/nvidia/models.json) |
+| [SambaNova Cloud](https://cloud.sambanova.ai)  | `sambanova` | 20 | 20 | 0 | 新账户提供 $5 trial credits，有效期 3 个月。 | [注册](https://cloud.sambanova.ai) | [API Key](https://cloud.sambanova.ai/apis) | [文档](https://docs.sambanova.ai) | [JSON](https://ofind.cn/FreeModels/data/providers/sambanova/models.json) |
 | —  | `sensenova` | 3 | 3 | 0 | — | — | — | — | [JSON](https://ofind.cn/FreeModels/data/providers/sensenova/models.json) |
-| [iFlytek MaaS / 讯飞星辰](https://maas.xfyun.cn)  | `xingchen` | 51 | 12 | 0 | 第三方模型聚合（GLM/Qwen/DeepSeek 等）；部分模型 0 元开放，具体以控制台为准。 | [注册](https://maas.xfyun.cn) | [API Key](https://maas.xfyun.cn) | [文档](https://maas.xfyun.cn/docs) | [JSON](https://ofind.cn/FreeModels/data/providers/xingchen/models.json) |
+| [iFlytek MaaS / 讯飞星辰](https://maas.xfyun.cn)  | `xingchen` | 51 | 7 | 0 | 第三方模型聚合（GLM/Qwen/DeepSeek 等）；部分模型 0 元开放，具体以控制台为准。 | [注册](https://maas.xfyun.cn) | [API Key](https://maas.xfyun.cn) | [文档](https://maas.xfyun.cn/docs) | [JSON](https://ofind.cn/FreeModels/data/providers/xingchen/models.json) |
 | [iFlytek Spark / 讯飞星火](https://xinghuo.xfyun.cn)  | `xinghuo` | 6 | 1 | 0 | Spark Lite 永久免费但限速（5 并发）；其他 Spark 系列按 token 计费。 | [注册](https://xinghuo.xfyun.cn) | [API Key](https://console.xfyun.cn/services/cbm) | [文档](https://www.xfyun.cn/doc/spark) | [JSON](https://ofind.cn/FreeModels/data/providers/xinghuo/models.json) |
 <!-- AUTO-GENERATED:PROVIDER_INDEX_END -->
 
@@ -60,16 +59,16 @@ curl https://ofind.cn/FreeModels/v1/models.json
 <!-- AUTO-GENERATED:STATS_START -->
 | 维度 | 数量 |
 |------|-----:|
-| Provider | 16 |
-| 模型总数 | 651 |
-| 免费模型 (`is_free=true`) | 308 |
-| 付费可试用 (Gitee 体验等) | 138 |
-| 模型家族 | 530 |
-| 跨 Provider 家族 | 73 |
-| · 限速免费 | 144 |
-| · 日 token 配额 | 58 |
-| · 试用 credits | 56 |
-| · 永久免费 | 48 |
+| Provider | 15 |
+| 模型总数 | 608 |
+| 免费模型 (`is_free=true`) | 245 |
+| 付费可试用 (Gitee 体验等) | 100 |
+| 模型家族 | 523 |
+| 跨 Provider 家族 | 52 |
+| · 限速免费 | 115 |
+| · 日 token 配额 | 65 |
+| · 永久免费 | 43 |
+| · 试用 credits | 20 |
 | · 预览版 | 2 |
 <!-- AUTO-GENERATED:STATS_END -->
 
@@ -78,7 +77,7 @@ curl https://ofind.cn/FreeModels/v1/models.json
 > 该区块由 `npm run generate-docs` 自动更新。
 
 <!-- AUTO-GENERATED:FREE_MODELS_START -->
-共 **308** 个免费模型（限速免费 144 个、日 token 配额 58 个、试用 credits 56 个、永久免费 48 个、预览版 2 个）。
+共 **245** 个免费模型（限速免费 115 个、日 token 配额 65 个、永久免费 43 个、试用 credits 20 个、预览版 2 个）。
 
 完整列表及按机制筛选：
 - [全部免费模型](https://ofind.cn/FreeModels/data/views/free/models.json)

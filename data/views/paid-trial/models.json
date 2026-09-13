@@ -1,52 +1,13 @@
 {
   "object": "list",
   "view": "paid-trial",
-  "updated_at": "2026-06-08T13:57:08.124Z",
-  "total": 138,
+  "updated_at": "2026-09-13T07:16:40.157Z",
+  "total": 100,
   "filters": {
     "isFree": "false",
     "trialScope": "all"
   },
   "data": [
-    {
-      "id": "Qwen2.5-72B-Instruct",
-      "object": "model",
-      "created": 155804854,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "Qwen2.5-72B-Instruct",
-      "description": "Qwen2.5-72B-Instruct  支持 32k 上下文, 生成长文本超过 8K 。支持 function call 与外部系统无缝交互，极大提升了灵活性和扩展性。模型知识明显增加，并且大大提高了编码和数学能力, 多语言支持超过 29 种",
-      "context_size": 32000,
-      "context_label": "32K",
-      "price_input": 4,
-      "price_output": 4,
-      "is_free": false,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "tool-use",
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": true,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "qwen2.5-72b",
-      "model_variant": "instruct",
-      "aliases": [],
-      "parameter_count": 72000000000,
-      "tier": "large",
-      "speed": "standard",
-      "use_case": [
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "3-10s"
-    },
     {
       "id": "Qwen2.5-7B-Instruct",
       "object": "model",
@@ -75,7 +36,9 @@
       "trial_scope": "all",
       "model_family": "qwen2.5-7b",
       "model_variant": "instruct",
-      "aliases": [],
+      "aliases": [
+        "xingchen/xqwen257bchat"
+      ],
       "parameter_count": 7000000000,
       "tier": "medium",
       "speed": "standard",
@@ -118,43 +81,6 @@
       "use_case": [
         "creative-generation",
         "art"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
-    },
-    {
-      "id": "InternVL2.5-26B",
-      "object": "model",
-      "created": 1033737757,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "InternVL2.5-26B",
-      "description": "InternVL2.5-26B是一款强大的视觉语言模型，支持图像与文本的多模态处理，能够精确识别图像内容并生成相关描述或回答。",
-      "context_size": 32000,
-      "context_label": "32K",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": false,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "internvl2.5-26b",
-      "aliases": [],
-      "parameter_count": 26000000000,
-      "tier": "medium",
-      "speed": "standard",
-      "use_case": [
-        "content-creation",
-        "writing-assistance"
       ],
       "performance_level": "entry",
       "estimated_latency": "1-3s"
@@ -220,8 +146,9 @@
       "aliases": [
         "cloudflare/@cf/openai/whisper-large-v3-turbo",
         "whisper-large-v3",
+        "groq/whisper-large-v3",
         "groq/whisper-large-v3-turbo",
-        "groq/whisper-large-v3"
+        "sambanova/Whisper-Large-v3"
       ],
       "tier": "medium",
       "speed": "standard",
@@ -304,23 +231,22 @@
       "estimated_latency": "1-3s"
     },
     {
-      "id": "InternVL2.5-78B",
+      "id": "nsfw-classifier",
       "object": "model",
-      "created": 1033732246,
+      "created": 332534965,
       "owned_by": "gitee",
       "provider": "gitee",
-      "name": "InternVL2.5-78B",
-      "description": "InternVL2.5-78B 是一款大规模视觉语言模型，具备强大的图像理解与文本生成能力，能够高效处理跨模态任务，结合视觉与语言特征提供精准的多模态推理与生成。",
-      "context_size": 32000,
-      "context_label": "32K",
+      "name": "色情图片检测",
+      "description": "NSFW Classifier 是一个高精度的深度学习模型，专门用于实时识别和过滤不适合公开环境的敏感图片。",
+      "context_label": "unknown",
       "price_input": 0,
       "price_output": 0,
       "is_free": false,
       "capabilities": [
-        "text-generation"
+        "moderation"
       ],
       "tags": [
-        "text-generation"
+        "moderation"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
@@ -328,53 +254,52 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "all",
-      "model_family": "internvl2.5-78b",
+      "model_family": "nsfw-classifier",
       "aliases": [],
-      "parameter_count": 78000000000,
       "tier": "medium",
       "speed": "standard",
       "use_case": [
-        "content-creation",
-        "writing-assistance"
+        "content-filtering",
+        "safety"
       ],
       "performance_level": "entry",
       "estimated_latency": "1-3s"
     },
     {
-      "id": "GOT-OCR2_0",
+      "id": "Security-semantic-filtering",
       "object": "model",
-      "created": 298537505,
+      "created": 2102253519,
       "owned_by": "gitee",
       "provider": "gitee",
-      "name": "GOT-OCR2_0",
-      "description": "GOT-OCR2_0提供功能强大的 OCR 解决方案，能够轻松识别图表、几何图形、公式和音乐符号，并将其转换为可编辑文本。该模型基于先进的深度学习架构，针对多语言文本、复杂排版以及图像噪声进行了全面优化，提供卓越的文字识别精度。",
-      "context_label": "unknown",
+      "name": "违规文本检测",
+      "description": "Security-semantic-filtering 是一种用于增强系统安全性的技术，通过对数据语义的过滤和分析，确保敏感信息的保护和合规性。",
+      "context_size": 32000,
+      "context_label": "32K",
       "price_input": 0,
       "price_output": 0,
       "is_free": false,
       "capabilities": [
-        "vision"
+        "moderation"
       ],
       "tags": [
-        "vision",
-        "multimodal"
+        "moderation"
       ],
       "is_reasoning": false,
-      "is_multimodal": true,
+      "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "all",
-      "model_family": "got-ocr2_0",
+      "model_family": "security-semantic-filtering",
       "aliases": [],
-      "tier": "large",
-      "speed": "premium",
+      "tier": "medium",
+      "speed": "standard",
       "use_case": [
-        "image-understanding",
-        "visual-q&a"
+        "content-filtering",
+        "safety"
       ],
-      "performance_level": "mid",
-      "estimated_latency": "3-10s"
+      "performance_level": "entry",
+      "estimated_latency": "1-3s"
     },
     {
       "id": "Florence-2-large",
@@ -445,91 +370,6 @@
         "xingchen/xdeepseekr1qwen32b"
       ],
       "parameter_count": 32000000000,
-      "tier": "large",
-      "speed": "premium",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "content-creation",
-        "writing-assistance",
-        "complex-reasoning"
-      ],
-      "performance_level": "high",
-      "estimated_latency": "3-10s"
-    },
-    {
-      "id": "DeepSeek-V3",
-      "object": "model",
-      "created": 708100929,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "DeepSeek-V3",
-      "description": "【仅限体验】DeepSeek-V3 是 685B 参数的高效 MoE 语言模型，性能优越，训练稳定，超越开源模型，并接近顶级闭源模型。",
-      "context_size": 32000,
-      "context_label": "32K",
-      "price_input": 2,
-      "price_output": 8,
-      "is_free": false,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "deepseek-v3",
-      "aliases": [
-        "github/DeepSeek-V3-0324",
-        "xingchen/xdeepseekv3"
-      ],
-      "tier": "medium",
-      "speed": "standard",
-      "use_case": [
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
-    },
-    {
-      "id": "DeepSeek-R1",
-      "object": "model",
-      "created": 708100795,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "DeepSeek-R1",
-      "description": "DeepSeek-R1 是一款采用强化学习技术的推理模型，凭借少量标注数据大幅提升推理能力，性能媲美 OpenAI o1。",
-      "context_size": 64000,
-      "context_label": "64K",
-      "price_input": 4,
-      "price_output": 16,
-      "is_free": false,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "reasoning",
-        "text-generation"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "deepseek-r1",
-      "model_variant": "r1",
-      "aliases": [
-        "github/DeepSeek-R1-0528",
-        "github/DeepSeek-R1",
-        "xingchen/xdeepseekr1"
-      ],
       "tier": "large",
       "speed": "premium",
       "use_case": [
@@ -717,8 +557,9 @@
       "aliases": [
         "cloudflare/@cf/openai/whisper-large-v3-turbo",
         "whisper-large-v3-turbo",
+        "groq/whisper-large-v3",
         "groq/whisper-large-v3-turbo",
-        "groq/whisper-large-v3"
+        "sambanova/Whisper-Large-v3"
       ],
       "tier": "medium",
       "speed": "standard",
@@ -772,44 +613,6 @@
       "estimated_latency": "3-10s"
     },
     {
-      "id": "Qwen2.5-VL-32B-Instruct",
-      "object": "model",
-      "created": 1487036863,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "Qwen2.5-VL-32B-Instruct",
-      "description": "Qwen2.5-VL-32B-Instruct 是一款拥有 320 亿参数、支持多图输入与复杂图文推理的大规模多模态指令微调模型。",
-      "context_size": 24000,
-      "context_label": "24K",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": false,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "qwen2.5-vl-32b",
-      "model_variant": "vl",
-      "aliases": [],
-      "parameter_count": 32000000000,
-      "tier": "large",
-      "speed": "standard",
-      "use_case": [
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "3-10s"
-    },
-    {
       "id": "Hunyuan3D-2",
       "object": "model",
       "created": 393024067,
@@ -838,41 +641,6 @@
       "tier": "medium",
       "speed": "standard",
       "use_case": [],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
-    },
-    {
-      "id": "MegaTTS3",
-      "object": "model",
-      "created": 511153267,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "MegaTTS3",
-      "description": "MegaTTS3 是一款支持多语种、音色可控，并兼具高保真度和高自然度的端到端语音合成模型。",
-      "context_label": "unknown",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": false,
-      "capabilities": [
-        "speech-synthesis"
-      ],
-      "tags": [
-        "speech-synthesis"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "megatts3",
-      "aliases": [],
-      "tier": "medium",
-      "speed": "standard",
-      "use_case": [
-        "text-to-speech",
-        "voice-output"
-      ],
       "performance_level": "entry",
       "estimated_latency": "1-3s"
     },
@@ -1095,7 +863,7 @@
       "trial_scope": "all",
       "model_family": "qwen3-32b",
       "aliases": [
-        "groq/qwen/qwen3-32b",
+        "sambanova/Qwen3-32B",
         "xingchen/xop3qwen32b"
       ],
       "parameter_count": 32000000000,
@@ -1243,82 +1011,6 @@
       "estimated_latency": "1-3s"
     },
     {
-      "id": "Qwen3-235B-A22B",
-      "object": "model",
-      "created": 864056368,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "Qwen3-235B-A22B",
-      "description": "Qwen3 是 Qwen 系列中的最新一代大型语言模型，提供了一系列密集型和混合专家（MoE）模型。基于在训练数据、模型架构和优化技术方面的广泛进步。",
-      "context_size": 128000,
-      "context_label": "128K",
-      "price_input": 2.5,
-      "price_output": 10,
-      "is_free": false,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "qwen3-235b-a22b",
-      "aliases": [
-        "Qwen3-235B-A22B-Instruct-2507",
-        "xingchen/xop3qwen235b2507",
-        "xingchen/xop3qwen235b"
-      ],
-      "parameter_count": 235000000000,
-      "tier": "medium",
-      "speed": "standard",
-      "use_case": [
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
-    },
-    {
-      "id": "DreamO",
-      "object": "model",
-      "created": 1362770371,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "DreamO",
-      "description": "DreamO 是由字节跳动与北京大学联合研发的开源图像定制生成模型，旨在通过统一架构支持多任务图像生成。它采用高效的组合建模方法，可根据用户指定的身份、主体、风格、背景等多个条件生成高度一致且定制化的图像。",
-      "context_label": "unknown",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": false,
-      "capabilities": [
-        "image-to-image"
-      ],
-      "tags": [
-        "image-to-image"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "dreamo",
-      "aliases": [],
-      "tier": "medium",
-      "speed": "standard",
-      "use_case": [
-        "image-editing",
-        "style-transfer"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
-    },
-    {
       "id": "Real-ESRGAN",
       "object": "model",
       "created": 959478262,
@@ -1349,81 +1041,6 @@
       "use_case": [
         "image-editing",
         "style-transfer"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
-    },
-    {
-      "id": "IndexTTS-1.5",
-      "object": "model",
-      "created": 268955527,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "IndexTTS-1.5",
-      "description": "IndexTTS-1.5 是一款先进的文本转语音（Text-to-Speech, TTS）模型，专为生成高自然度、富有表现力的人类语音而设计。它基于现代神经网络架构，在语音合成的质量、速度和可控性方面均实现了大幅提升。",
-      "context_label": "unknown",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": false,
-      "capabilities": [
-        "speech-synthesis"
-      ],
-      "tags": [
-        "text-generation",
-        "speech-synthesis"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "indextts-1.5",
-      "aliases": [],
-      "tier": "medium",
-      "speed": "standard",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "text-to-speech",
-        "voice-output"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
-    },
-    {
-      "id": "ERNIE-X1-Turbo",
-      "object": "model",
-      "created": 1428603623,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "ERNIE-X1-Turbo",
-      "description": "文心ERNIE X1 Turbo具备更长的思维链，更强的深度思考能力，进一步增强了多模态和工具调用能力，擅长文学创作、逻辑推理等",
-      "context_size": 32000,
-      "context_label": "32K",
-      "price_input": 1,
-      "price_output": 4,
-      "is_free": false,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "ernie-x1",
-      "model_variant": "turbo",
-      "aliases": [],
-      "tier": "medium",
-      "speed": "standard",
-      "use_case": [
-        "content-creation",
-        "writing-assistance"
       ],
       "performance_level": "entry",
       "estimated_latency": "1-3s"
@@ -1503,38 +1120,6 @@
       "estimated_latency": "1-3s"
     },
     {
-      "id": "Duix.Heygem",
-      "object": "model",
-      "created": 991331436,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "Duix.Heygem 数字人大模型",
-      "description": "Duix.HeyGem 是由硅基智能（Duix.AI）开源推出的高质量 数字人生成模型系统，支持快速克隆和高保真视频合成，致力于让每个人都能轻松创建专属的数字分身。",
-      "context_label": "unknown",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": false,
-      "capabilities": [
-        "video-processing"
-      ],
-      "tags": [
-        "video-processing"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "heygem",
-      "aliases": [],
-      "tier": "medium",
-      "speed": "standard",
-      "use_case": [],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
-    },
-    {
       "id": "AnimeSharp",
       "object": "model",
       "created": 384622067,
@@ -1600,240 +1185,6 @@
       "use_case": [
         "image-editing",
         "style-transfer"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
-    },
-    {
-      "id": "Qwen3-14B",
-      "object": "model",
-      "created": 52171783,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "Qwen3-14B",
-      "description": "Qwen3‑14B 是阿里巴巴云推出的 Qwen3 系列中最新一代 14B 参数稠密预训练模型，具备应用混合“思考模式”和“非思考模式”能力，在多语种理解、推理、代码生成和长上下文处理上表现优异。",
-      "context_size": 32000,
-      "context_label": "32K",
-      "price_input": 5,
-      "price_output": 5,
-      "is_free": false,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "qwen3-14b",
-      "aliases": [
-        "xingchen/xop3qwen14b"
-      ],
-      "parameter_count": 14000000000,
-      "tier": "medium",
-      "speed": "standard",
-      "use_case": [
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
-    },
-    {
-      "id": "Qwen2.5-VL-7B-Instruct",
-      "object": "model",
-      "created": 1324736493,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "Qwen2.5-VL-7B-Instruct",
-      "description": "Qwen2.5-VL-7B-Instruct 是多模态大语言模型，基于 Qwen2.5 系列架构开发，具备强大的图文理解与推理能力。该模型支持输入图像与自然语言文本，并生成结构化或自然语言回答，适用于图像问答、图文分析、视觉推理等任务。",
-      "context_label": "unknown",
-      "price_input": 0.175,
-      "price_output": 0.7,
-      "is_free": false,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "qwen2.5-vl-7b",
-      "model_variant": "vl",
-      "aliases": [],
-      "parameter_count": 7000000000,
-      "tier": "medium",
-      "speed": "standard",
-      "use_case": [
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
-    },
-    {
-      "id": "qwen3-coder-480b-a35b-instruct",
-      "object": "model",
-      "created": 776581959,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "Qwen3-Coder",
-      "description": "Qwen3-Coder-480B-A35B-Instruct是一款专为代码生成、代码理解和高效开发场景设计的大型语言模型，在 自主编码、自主浏览器使用 以及其他基础编码任务中，在开放模型中表现出 显著的性能，结果可与 Claude Sonnet 媲美。",
-      "context_size": 64000,
-      "context_label": "64K",
-      "price_input": 4,
-      "price_output": 16,
-      "is_free": false,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "qwen3-coder-480b-a35b",
-      "model_variant": "coder",
-      "aliases": [
-        "qwen/qwen3-coder-480b-a35b-instruct"
-      ],
-      "tier": "medium",
-      "speed": "standard",
-      "use_case": [
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
-    },
-    {
-      "id": "Qwen3-235B-A22B-Instruct-2507",
-      "object": "model",
-      "created": 871121940,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "Qwen3-235B-A22B-Instruct-2507",
-      "description": "Qwen3 是 Qwen 系列中的最新一代大型语言模型，提供了一系列密集型和混合专家（MoE）模型。基于在训练数据、模型架构和优化技术方面的广泛进步。",
-      "context_size": 256000,
-      "context_label": "256K",
-      "price_input": 2.5,
-      "price_output": 10,
-      "is_free": false,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "qwen3-235b-a22b",
-      "model_variant": "instruct",
-      "aliases": [
-        "Qwen3-235B-A22B",
-        "xingchen/xop3qwen235b2507",
-        "xingchen/xop3qwen235b"
-      ],
-      "parameter_count": 235000000000,
-      "tier": "medium",
-      "speed": "standard",
-      "use_case": [
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
-    },
-    {
-      "id": "GLM-4_5",
-      "object": "model",
-      "created": 335117370,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "GLM-4.5",
-      "description": "GLM-4.5 是智谱 AI 推出的专为智能体设计的基础模型。GLM-4.5 拥有 3550 亿总参数量，其中 320 亿活跃参数。该模型统一了推理、编码和智能体能力，以满足智能体应用的复杂需求。",
-      "context_size": 128000,
-      "context_label": "128K",
-      "price_input": 3.5,
-      "price_output": 14,
-      "is_free": false,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "glm-4.5",
-      "aliases": [
-        "bigmodel/glm-4.5"
-      ],
-      "tier": "medium",
-      "speed": "standard",
-      "use_case": [
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
-    },
-    {
-      "id": "GLM-4_5-Air",
-      "object": "model",
-      "created": 814405827,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "GLM-4.5-Air",
-      "description": "GLM-4.5-Air 是智谱 AI 推出的 GLM-4.5 系列中的轻量化版本。GLM-4.5-Air 采用更紧凑的设计，拥有 1060 亿总参数量，其中 120 亿活跃参数。该模型在保持优异效率的同时，仍能提供强大的推理、编码和智能体能力。",
-      "context_size": 128000,
-      "context_label": "128K",
-      "price_input": 1,
-      "price_output": 6,
-      "is_free": false,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "glm-4.5-air",
-      "aliases": [
-        "bigmodel/glm-4.5-air",
-        "z-ai/glm-4.5-air:free"
-      ],
-      "tier": "medium",
-      "speed": "standard",
-      "use_case": [
-        "content-creation",
-        "writing-assistance"
       ],
       "performance_level": "entry",
       "estimated_latency": "1-3s"
@@ -1949,108 +1300,22 @@
       "estimated_latency": "1-3s"
     },
     {
-      "id": "Qwen3-30B-A3B-Instruct-2507",
+      "id": "nonescape-v0",
       "object": "model",
-      "created": 1985126700,
+      "created": 1228285132,
       "owned_by": "gitee",
       "provider": "gitee",
-      "name": "Qwen3-30B-A3B-Instruct-2507",
-      "description": "Qwen3‑30B‑A3B‑Instruct‑2507 是 Qwen 系列 30.5 B 参数的稀疏专家（MoE）大型语言模型，激活 3.3 B 参数、专为非思维模式设计，经过指令微调，显著提升指令遵循能力、逻辑推理、文本理解、数学、科学、编程以及多语言长尾知识表现，同时在人类偏好对齐上也有明显增强",
-      "context_size": 32000,
-      "context_label": "32K",
-      "price_input": 0.7,
-      "price_output": 2.8,
-      "is_free": false,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "qwen3-30b-a3b",
-      "model_variant": "instruct",
-      "aliases": [
-        "cloudflare/@cf/qwen/qwen3-30b-a3b-fp8",
-        "xingchen/xop3qwen30b2507",
-        "xingchen/xop3qwen30b"
-      ],
-      "parameter_count": 30000000000,
-      "tier": "medium",
-      "speed": "standard",
-      "use_case": [
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
-    },
-    {
-      "id": "Qwen-Image",
-      "object": "model",
-      "created": 1522268816,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "Qwen-Image",
-      "description": "Qwen‑Image 是一款由阿里云开发的20B参数级 MMDiT 图像生成基础模型，以其卓越的复杂文本渲染能力（尤其在英语和中文中表现出色）和高精度图像编辑功能而著称",
+      "name": "AI 图片检测",
+      "description": "nonescape-v0 是一款图像分类模型，可检测并区分图片是人工拍摄创作还是由 AI 模型生成。",
       "context_label": "unknown",
       "price_input": 0,
       "price_output": 0,
       "is_free": false,
       "capabilities": [
-        "image-generation"
+        "moderation"
       ],
       "tags": [
-        "vision",
-        "image-generation",
-        "multimodal"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "qwen-image",
-      "model_variant": "image",
-      "aliases": [
-        "Qwen-Image-2512",
-        "xingchen/xopqwentti20b"
-      ],
-      "tier": "large",
-      "speed": "premium",
-      "use_case": [
-        "image-understanding",
-        "visual-q&a",
-        "creative-generation",
-        "art"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "3-10s"
-    },
-    {
-      "id": "gpt-oss-120b",
-      "object": "model",
-      "created": 968481740,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "gpt-oss-120b",
-      "description": "gpt-oss-120b 是 OpenAI 开源权重模型系列中的大型版本，专为生产环境、通用用途和高推理需求设计。该模型拥有 117B 参数，其中 5.1B 为活跃参数，可在单个 H100 GPU 上运行。模型采用 harmony 响应格式训练，必须配合 harmony 格式使用才能正常工作。",
-      "context_size": 128000,
-      "context_label": "128K",
-      "price_input": 0.8,
-      "price_output": 3.2,
-      "is_free": false,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation"
+        "moderation"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
@@ -2058,59 +1323,13 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "all",
-      "model_family": "gpt-oss-120b",
-      "aliases": [
-        "cerebras/gpt-oss-120b",
-        "cloudflare/@cf/openai/gpt-oss-120b",
-        "groq/openai/gpt-oss-120b",
-        "openai/gpt-oss-120b",
-        "openai/gpt-oss-120b:free",
-        "sambanova/gpt-oss-120b"
-      ],
-      "parameter_count": 120000000000,
+      "model_family": "nonescape-v0",
+      "aliases": [],
       "tier": "medium",
       "speed": "standard",
       "use_case": [
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
-    },
-    {
-      "id": "GLM-4_5V",
-      "object": "model",
-      "created": 1826028592,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "GLM-4.5V",
-      "description": "GLM-4.5V 是全球 100B 级效果最佳的开源视觉推理模型 ，支持 64K 长上下文，擅长图像、视频、文档理解及 GUI Agent 等常见任务，比GLM-4.1V-Thinking “更大更强”。模型新增“思考模式”开关，用户可灵活选择快速响应或深度推理，平衡效率与效果。",
-      "context_size": 64000,
-      "context_label": "64K",
-      "price_input": 4,
-      "price_output": 12,
-      "is_free": false,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "glm-4.5v",
-      "aliases": [
-        "bigmodel/glm-4.5v"
-      ],
-      "tier": "medium",
-      "speed": "standard",
-      "use_case": [
-        "content-creation",
-        "writing-assistance"
+        "content-filtering",
+        "safety"
       ],
       "performance_level": "entry",
       "estimated_latency": "1-3s"
@@ -2156,44 +1375,6 @@
       ],
       "performance_level": "mid",
       "estimated_latency": "3-10s"
-    },
-    {
-      "id": "DeepSeek-V3_1",
-      "object": "model",
-      "created": 1972198415,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "DeepSeek-V3.1",
-      "description": "DeepSeek-V3.1 是一个混合模型，支持思考模式和非思考模式。与上一版本相比，这次升级在多个方面带来了改进。",
-      "context_size": 16000,
-      "context_label": "16K",
-      "price_input": 4,
-      "price_output": 12,
-      "is_free": false,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "deepseek-v3.1",
-      "aliases": [
-        "sambanova/DeepSeek-V3.1"
-      ],
-      "tier": "medium",
-      "speed": "standard",
-      "use_case": [
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
     },
     {
       "id": "Hunyuan-MT-Chimera-7B",
@@ -2268,122 +1449,6 @@
       "estimated_latency": "1-3s"
     },
     {
-      "id": "Qwen3-Next-80B-A3B-Instruct",
-      "object": "model",
-      "created": 1466626654,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "Qwen3-Next-80B-A3B-Instruct",
-      "description": "Qwen3-Next-80B-A3B-Instruct 是 Qwen3-Next 系列的首发大型语言模型，总参数约 80B（激活约 3B），非嵌入参数约 79B 亿采用混合注意力（Gated DeltaNet + Gated Attention）与高稀疏度 Mixture-of-Experts（MoE）架构，面向指令遵循与通用对话场景，兼顾参数效率与推理吞吐。",
-      "context_size": 32000,
-      "context_label": "32K",
-      "price_input": 1,
-      "price_output": 4,
-      "is_free": false,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "qwen3-next-80b-a3b",
-      "model_variant": "instruct",
-      "aliases": [
-        "qwen/qwen3-next-80b-a3b-instruct",
-        "qwen/qwen3-next-80b-a3b-instruct:free",
-        "xingchen/xop3qwen80bnext"
-      ],
-      "parameter_count": 80000000000,
-      "tier": "medium",
-      "speed": "standard",
-      "use_case": [
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
-    },
-    {
-      "id": "Qwen3-Next-80B-A3B-Thinking",
-      "object": "model",
-      "created": 372796126,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "Qwen3-Next-80B-A3B-Thinking",
-      "description": "Qwen3-Next-80B-A3B-Thinking 是 Qwen3-Next 系列的首发思考（Thinking）大语言模型。",
-      "context_size": 32000,
-      "context_label": "32K",
-      "price_input": 1,
-      "price_output": 10,
-      "is_free": false,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "qwen3-next-80b-a3b-thinking",
-      "model_variant": "thinking",
-      "aliases": [],
-      "parameter_count": 80000000000,
-      "tier": "medium",
-      "speed": "standard",
-      "use_case": [
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
-    },
-    {
-      "id": "DeepSeek-V3_1-Terminus",
-      "object": "model",
-      "created": 1662799893,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "DeepSeek-V3.1-Terminus",
-      "description": "DeepSeek-V3.1 现已更新至 DeepSeek-V3.1-Terminus 版本。此次更新在保持模型原有能力的基础上，针对用户反馈的问题进行了改进，包括：语言一致性： 缓解了中英文混杂、偶发异常字符等情况；Agent 能力： 进一步优化了 Code Agent 与 Search Agent 的表现。",
-      "context_size": 128000,
-      "context_label": "128K",
-      "price_input": 4,
-      "price_output": 12,
-      "is_free": false,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "deepseek-v3.1-terminus",
-      "aliases": [],
-      "tier": "medium",
-      "speed": "standard",
-      "use_case": [
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
-    },
-    {
       "id": "MinerU2.5",
       "object": "model",
       "created": 370648278,
@@ -2417,156 +1482,6 @@
       ],
       "performance_level": "entry",
       "estimated_latency": "1-3s"
-    },
-    {
-      "id": "GLM-4.6",
-      "object": "model",
-      "created": 335115754,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "GLM-4.6",
-      "description": "GLM-4.6 是智谱最新的旗舰模型，其总参数量 355B，激活参数 32B。GLM-4.6 所有核心能力上均完成了对 GLM-4.5 的超越。",
-      "context_size": 200000,
-      "context_label": "200K",
-      "price_input": 3.5,
-      "price_output": 14,
-      "is_free": false,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "glm-4.6",
-      "aliases": [
-        "bigmodel/glm-4.6"
-      ],
-      "tier": "medium",
-      "speed": "standard",
-      "use_case": [
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
-    },
-    {
-      "id": "DeepSeek-V3.2-Exp",
-      "object": "model",
-      "created": 1745590117,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "DeepSeek-V3.2-Exp",
-      "description": "DeepSeek-V3.2-Exp 是 DeepSeek 系列的实验版本模型，作为迈向下一代架构的中间步骤，V3.2-Exp 在 V3.1-Terminus 的基础上引入了 DeepSeek 稀疏注意力机制——一种旨在探索和验证在长上下文场景中训练和推理效率优化的稀疏注意力机制。",
-      "context_size": 128000,
-      "context_label": "128K",
-      "price_input": 2,
-      "price_output": 3,
-      "is_free": false,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "deepseek-v3.2-exp",
-      "aliases": [],
-      "tier": "medium",
-      "speed": "standard",
-      "use_case": [
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
-    },
-    {
-      "id": "Qwen3-VL-8B-Instruct",
-      "object": "model",
-      "created": 391427342,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "Qwen3-VL-8B-Instruct",
-      "description": "Qwen3-VL-8B-Instruct 是 Qwen 系列的多模态指令模型，具备更强的视觉感知、跨模态推理和长上下文处理能力。",
-      "context_size": 32000,
-      "context_label": "32K",
-      "price_input": 0.35,
-      "price_output": 1.4,
-      "is_free": false,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "qwen3-vl-8b",
-      "model_variant": "vl",
-      "aliases": [],
-      "parameter_count": 8000000000,
-      "tier": "medium",
-      "speed": "standard",
-      "use_case": [
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
-    },
-    {
-      "id": "Qwen3-VL-4B-Instruct",
-      "object": "model",
-      "created": 751274514,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "Qwen3-VL-4B-Instruct",
-      "description": "Qwen3-VL-4B-Instruct 在保持轻量级（4B 级别）模型规模的同时，具备 原生多模态理解 + 指令响应能力，且在视觉-文本对齐、跨模态推理和快速响应效率方面具有其独特优势。",
-      "context_size": 32000,
-      "context_label": "32K",
-      "price_input": 0.175,
-      "price_output": 0.7,
-      "is_free": false,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "qwen3-vl-4b",
-      "model_variant": "vl",
-      "aliases": [],
-      "parameter_count": 4000000000,
-      "tier": "small",
-      "speed": "standard",
-      "use_case": [
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
     },
     {
       "id": "Qwen3-VL-30B-A3B-Instruct",
@@ -2681,6 +1596,43 @@
       "estimated_latency": "< 1s"
     },
     {
+      "id": "Qwen3Guard-Gen-0.6B",
+      "object": "model",
+      "created": 647577904,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "Qwen3Guard-Gen-0.6B",
+      "description": "Qwen3Guard是阿里巴巴Qwen团队于2025年9月24日发布的人工智能安全审查模型系列。该模型基于Qwen3模型构建，主要用于提供实时高效的人工智能安全保障。",
+      "context_size": 32000,
+      "context_label": "32K",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": false,
+      "capabilities": [
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "all",
+      "model_family": "qwen3guard-gen-0.6b",
+      "aliases": [],
+      "parameter_count": 600000000,
+      "tier": "medium",
+      "speed": "standard",
+      "use_case": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "1-3s"
+    },
+    {
       "id": "AudioFly",
       "object": "model",
       "created": 1749672606,
@@ -2713,43 +1665,6 @@
         "voice-output"
       ],
       "performance_level": "entry",
-      "estimated_latency": "1-3s"
-    },
-    {
-      "id": "PaddleOCR-VL",
-      "object": "model",
-      "created": 155120162,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "PaddleOCR-VL",
-      "description": "PaddleOCR-VL 是轻量级多语言视觉语言模型，融合多模态解析能力，在文档理解任务中实现高性能表现。",
-      "context_size": 16000,
-      "context_label": "16K",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": false,
-      "capabilities": [
-        "document-processing"
-      ],
-      "tags": [
-        "document-processing"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "paddleocr-vl",
-      "model_variant": "vl",
-      "aliases": [],
-      "tier": "medium",
-      "speed": "premium",
-      "use_case": [
-        "pdf-processing",
-        "ocr"
-      ],
-      "performance_level": "mid",
       "estimated_latency": "1-3s"
     },
     {
@@ -2927,10 +1842,7 @@
       "trial_scope": "all",
       "model_family": "z-image",
       "model_variant": "image",
-      "aliases": [
-        "Z-Image",
-        "xingchen/xopzimageturbo"
-      ],
+      "aliases": [],
       "tier": "large",
       "speed": "premium",
       "use_case": [
@@ -3020,41 +1932,6 @@
       "estimated_latency": "3-10s"
     },
     {
-      "id": "comfyui",
-      "object": "model",
-      "created": 748672607,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "ComfyUI",
-      "description": "1",
-      "context_label": "unknown",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": false,
-      "capabilities": [
-        "image-generation"
-      ],
-      "tags": [
-        "image-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "comfyui",
-      "aliases": [],
-      "tier": "medium",
-      "speed": "standard",
-      "use_case": [
-        "creative-generation",
-        "art"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
-    },
-    {
       "id": "LongCat-Image",
       "object": "model",
       "created": 1980972893,
@@ -3133,43 +2010,6 @@
       ],
       "performance_level": "mid",
       "estimated_latency": "3-10s"
-    },
-    {
-      "id": "GLM-4.6V",
-      "object": "model",
-      "created": 1826081920,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "GLM-4.6V",
-      "description": "GLM-4.6V 是 GLM 系列在多模态方向上的一次重要迭代，它将训练时上下文窗口提升到128k tokens，在视觉理解精度上达到同参数规模 SOTA，并首次在模型架构中将 Function Call（工具调用）能力原生融入视觉模型，打通从「视觉感知」到「可执行行动（Action）」的链路，为真实业务场景中的多模态 Agent 提供统一的技术底座。",
-      "context_size": 128000,
-      "context_label": "128K",
-      "price_input": 2,
-      "price_output": 6,
-      "is_free": false,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "tool-use",
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": true,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "glm-4.6v",
-      "aliases": [],
-      "tier": "medium",
-      "speed": "standard",
-      "use_case": [
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
     },
     {
       "id": "AutoGLM-Phone-9B-Multilingual",
@@ -3283,40 +2123,6 @@
       "estimated_latency": "1-3s"
     },
     {
-      "id": "InfiniteTalk",
-      "object": "model",
-      "created": 737453607,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "InfiniteTalk 数字人模型",
-      "description": "InfiniteTalk 是由 MeiGen-AI 发布的音频驱动视频生成模型，基于稀疏帧视频配音技术，可以将音频与图像/视频结合，生成无限时长的自然口型同步、头部与身体动作协调的高质量讲述视频。",
-      "context_label": "unknown",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": false,
-      "capabilities": [
-        "video-generation"
-      ],
-      "tags": [
-        "video-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "infinite-talk",
-      "aliases": [],
-      "tier": "medium",
-      "speed": "standard",
-      "use_case": [
-        "video-creation"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
-    },
-    {
       "id": "GLM-TTS",
       "object": "model",
       "created": 335151885,
@@ -3385,81 +2191,6 @@
       "use_case": [
         "creative-generation",
         "art"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
-    },
-    {
-      "id": "GLM-4.7",
-      "object": "model",
-      "created": 335115755,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "GLM-4.7",
-      "description": "GLM-4.7 是由智谱 AI 发布的最新一代大型语言模型，继承并扩展了 GLM-4 系列模型的核心能力，是面向高复杂任务（尤其是编码、推理与代理任务）的旗舰级开源模型。",
-      "context_size": 200000,
-      "context_label": "200K",
-      "price_input": 3.5,
-      "price_output": 14,
-      "is_free": false,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "glm-4.7",
-      "aliases": [
-        "cerebras/zai-glm-4.7",
-        "xingchen/xopglm47blth2"
-      ],
-      "tier": "medium",
-      "speed": "standard",
-      "use_case": [
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
-    },
-    {
-      "id": "MiniMax-M2.1",
-      "object": "model",
-      "created": 1638702365,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "MiniMax-M2.1",
-      "description": "MiniMax-M2.1 是 MiniMax 系列的最新版本，专为多语言编程和真实世界复杂任务优化。作为一款 AI 原生模型，MiniMax-M2.1 在模型性能、智能体框架支持以及多场景适配方面实现了显著提升，旨在帮助企业和个人更快地找到 AI 原生的工作与生活方式。",
-      "context_size": 200000,
-      "context_label": "200K",
-      "price_input": 2.1,
-      "price_output": 8.4,
-      "is_free": false,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "minimax-m2.1",
-      "aliases": [],
-      "tier": "medium",
-      "speed": "standard",
-      "use_case": [
-        "content-creation",
-        "writing-assistance"
       ],
       "performance_level": "entry",
       "estimated_latency": "1-3s"
@@ -3750,10 +2481,7 @@
       "trial_scope": "all",
       "model_family": "qwen-image",
       "model_variant": "image",
-      "aliases": [
-        "Qwen-Image",
-        "xingchen/xopqwentti20b"
-      ],
+      "aliases": [],
       "tier": "large",
       "speed": "premium",
       "use_case": [
@@ -3843,44 +2571,6 @@
       ],
       "performance_level": "mid",
       "estimated_latency": "3-10s"
-    },
-    {
-      "id": "Qwen3-VL-Embedding-8B",
-      "object": "model",
-      "created": 1650875019,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "Qwen3-VL-Embedding-8B",
-      "description": "Qwen3-VL-Embedding-8B 是一款基于 Qwen3-VL 的 8B 参数 多模态嵌入（Embedding）模型，用于将文本、图像、截图等多种模态输入编码成语义向量，以支持高效跨模态检索、聚类和相似性计算。",
-      "context_size": 32000,
-      "context_label": "32K",
-      "price_input": 0.35,
-      "price_output": 0.35,
-      "is_free": false,
-      "capabilities": [
-        "embeddings"
-      ],
-      "tags": [
-        "embeddings"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "qwen3-vl-embedding-8b",
-      "model_variant": "vl",
-      "aliases": [],
-      "parameter_count": 8000000000,
-      "tier": "medium",
-      "speed": "premium",
-      "use_case": [
-        "semantic-search",
-        "similarity"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "1-3s"
     },
     {
       "id": "Qwen3-VL-Reranker-8B",
@@ -4057,46 +2747,6 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "Qwen-Image-Layered",
-      "object": "model",
-      "created": 1056787971,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "Qwen-Image-Layered",
-      "description": "Qwen-Image-Layered 是一个由 Qwen 团队发布的 图像分层分解模型，它能将一张普通图像自动分解成多个 语义独立的 RGBA 图层，从而让每个图层可以 单独进行移动、重色、缩放、删除等编辑操作而不影响其它内容。",
-      "context_label": "unknown",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": false,
-      "capabilities": [
-        "image-to-image"
-      ],
-      "tags": [
-        "vision",
-        "image-to-image",
-        "multimodal"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "qwen-image-layered",
-      "model_variant": "image",
-      "aliases": [],
-      "tier": "large",
-      "speed": "premium",
-      "use_case": [
-        "image-understanding",
-        "visual-q&a",
-        "image-editing",
-        "style-transfer"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "3-10s"
-    },
-    {
       "id": "PaddleOCR-VL-1.5",
       "object": "model",
       "created": 1779910973,
@@ -4106,14 +2756,14 @@
       "description": "PaddleOCR-VL-1.5 是百度 PaddlePaddle 发布的 0.9 B 参数级多任务视觉语言模型，专为复杂文档 OCR 与布局解析设计，在真实世界文档（扫描、倾斜、弯曲等）上实现了先进的识别与结构化输出性能。",
       "context_size": 16000,
       "context_label": "16K",
-      "price_input": 2.8,
-      "price_output": 2.8,
+      "price_input": 0,
+      "price_output": 0,
       "is_free": false,
       "capabilities": [
-        "text-generation"
+        "document-processing"
       ],
       "tags": [
-        "text-generation"
+        "document-processing"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
@@ -4127,46 +2777,10 @@
       "tier": "medium",
       "speed": "premium",
       "use_case": [
-        "content-creation",
-        "writing-assistance"
+        "pdf-processing",
+        "ocr"
       ],
       "performance_level": "mid",
-      "estimated_latency": "1-3s"
-    },
-    {
-      "id": "DeepSeek-OCR-2",
-      "object": "model",
-      "created": 665778949,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "DeepSeek-OCR-2",
-      "description": "DeepSeek-OCR-2 是一款高精度文字识别模型，能够从图片或 PDF 中提取文字，并自动按人类阅读顺序整理内容，特别适合识别表格、多栏文档和复杂排版页面。",
-      "context_size": 8000,
-      "context_label": "8K",
-      "price_input": 2.8,
-      "price_output": 2.8,
-      "is_free": false,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "deepseek-ocr-2",
-      "aliases": [],
-      "tier": "medium",
-      "speed": "standard",
-      "use_case": [
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
       "estimated_latency": "1-3s"
     },
     {
@@ -4278,49 +2892,6 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "Z-Image",
-      "object": "model",
-      "created": 2112386577,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "Z-Image",
-      "description": "Tongyi-MAI/Z-Image 是阿里通义实验室开发的一款高质量图像生成基础模型，基于高效的单流扩散 Transformer 架构，专注于强可控性、丰富风格覆盖和高视觉质量，适合作为图像创作、研究和下游开发的核心生成引擎。",
-      "context_label": "unknown",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": false,
-      "capabilities": [
-        "image-generation"
-      ],
-      "tags": [
-        "vision",
-        "image-generation",
-        "multimodal"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "z-image",
-      "model_variant": "image",
-      "aliases": [
-        "z-image-turbo",
-        "xingchen/xopzimageturbo"
-      ],
-      "tier": "large",
-      "speed": "premium",
-      "use_case": [
-        "image-understanding",
-        "visual-q&a",
-        "creative-generation",
-        "art"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "3-10s"
-    },
-    {
       "id": "Qwen3-Coder-Next",
       "object": "model",
       "created": 1949683001,
@@ -4360,119 +2931,6 @@
       "estimated_latency": "1-3s"
     },
     {
-      "id": "Qwen3-ASR-1.7B",
-      "object": "model",
-      "created": 1260641323,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "Qwen3-ASR-1.7B",
-      "description": "Qwen3-ASR-1.7B 是一个开源的多语言语音识别（ASR）模型，基于 Qwen3-Omni 框架，可自动识别并转录长音频中的语音内容。",
-      "context_label": "unknown",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": false,
-      "capabilities": [
-        "speech-recognition"
-      ],
-      "tags": [
-        "speech-recognition"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "qwen3-asr-1.7b",
-      "model_variant": "asr",
-      "aliases": [],
-      "parameter_count": 1700000000,
-      "tier": "medium",
-      "speed": "standard",
-      "use_case": [
-        "transcription",
-        "voice-input"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
-    },
-    {
-      "id": "Qwen3.5-35B-A3B",
-      "object": "model",
-      "created": 308399120,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "Qwen3.5-35B-A3B",
-      "description": "作为原生视觉-语言模型，Qwen3.5-397B-A17B 在推理、编程、智能体能力与多模态理解等全方位基准评估中表现优异，助力开发者与企业显著提升生产力。",
-      "context_size": 64000,
-      "context_label": "64K",
-      "price_input": 0.4,
-      "price_output": 3.2,
-      "is_free": false,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "qwen3.5-35b-a3b",
-      "aliases": [
-        "xingchen/xopqwen35v35b"
-      ],
-      "parameter_count": 35000000000,
-      "tier": "small",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "Qwen3.5-27B",
-      "object": "model",
-      "created": 1024108814,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "Qwen3.5-27B",
-      "description": "Qwen3.5 代表了一次重大飞跃，融合了多模态学习、架构效率、强化学习规模以及全球可访问性等方面的突破，为开发者和企业带来前所未有的能力与效率。",
-      "context_size": 64000,
-      "context_label": "64K",
-      "price_input": 0.6,
-      "price_output": 4.8,
-      "is_free": false,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "qwen3.5-27b",
-      "aliases": [],
-      "parameter_count": 27000000000,
-      "tier": "medium",
-      "speed": "standard",
-      "use_case": [
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
-    },
-    {
       "id": "Qwen3.5-122B-A10B",
       "object": "model",
       "created": 2144167477,
@@ -4498,9 +2956,7 @@
       "free_quota": null,
       "trial_scope": "all",
       "model_family": "qwen3.5-122b-a10b",
-      "aliases": [
-        "qwen/qwen3.5-122b-a10b"
-      ],
+      "aliases": [],
       "parameter_count": 122000000000,
       "tier": "medium",
       "speed": "standard",
@@ -4510,49 +2966,6 @@
       ],
       "performance_level": "entry",
       "estimated_latency": "1-3s"
-    },
-    {
-      "id": "Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled",
-      "object": "model",
-      "created": 364348000,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled",
-      "description": "基于 Qwen3.5-27B 深度蒸馏 Claude-4.6 Opus 推理能力的高性能模型，擅长结构化思考与复杂问题分解，兼顾推理深度与效率。",
-      "context_size": 128000,
-      "context_label": "128K",
-      "price_input": 0.6,
-      "price_output": 4.8,
-      "is_free": false,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "reasoning",
-        "text-generation"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "qwen3.5-27b-claude-4.6-opus-reasoning-distilled",
-      "model_variant": "reasoning",
-      "aliases": [],
-      "parameter_count": 27000000000,
-      "tier": "large",
-      "speed": "premium",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "content-creation",
-        "writing-assistance",
-        "complex-reasoning"
-      ],
-      "performance_level": "high",
-      "estimated_latency": "3-10s"
     },
     {
       "id": "gemma-4-26B-A4B-it",
@@ -4582,85 +2995,9 @@
       "model_family": "gemma-4-26b-a4b",
       "model_variant": "it",
       "aliases": [
-        "cloudflare/@cf/google/gemma-4-26b-a4b-it",
-        "google/gemma-4-26b-a4b-it:free"
+        "cloudflare/@cf/google/gemma-4-26b-a4b-it"
       ],
       "parameter_count": 26000000000,
-      "tier": "medium",
-      "speed": "standard",
-      "use_case": [
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
-    },
-    {
-      "id": "Qwen3.5-9B",
-      "object": "model",
-      "created": 1722990654,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "Qwen3.5-9B",
-      "description": "Qwen3.5-9B 是一款兼具推理能力、代码生成与多语言理解能力的中型大模型，在复杂任务处理与通用场景中表现稳定。",
-      "context_size": 64000,
-      "context_label": "64K",
-      "price_input": 0.2,
-      "price_output": 1.6,
-      "is_free": false,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "qwen3.5-9b",
-      "aliases": [],
-      "parameter_count": 9000000000,
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "DeepSeek-V4-Flash",
-      "object": "model",
-      "created": 467244771,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "DeepSeek-V4-Flash",
-      "description": "高效轻量化MoE模型，总参284B，激活13B，原生支持百万超长上下文能力。推理速度快、延迟低、调用成本低廉，综合能力均衡，主打高并发、轻量化任务，适合日常对话、内容创作、基础 RAG、批量文案处理等普惠刚需场景。",
-      "context_label": "unknown",
-      "price_input": 1,
-      "price_output": 2,
-      "is_free": false,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "deepseek-v4-flash",
-      "aliases": [
-        "deepseek-ai/deepseek-v4-flash",
-        "xingchen/xopdeepseekv4flash"
-      ],
       "tier": "medium",
       "speed": "standard",
       "use_case": [
@@ -4735,7 +3072,9 @@
       "free_quota": null,
       "trial_scope": "all",
       "model_family": "qwen3.6-27b",
-      "aliases": [],
+      "aliases": [
+        "groq/qwen/qwen3.6-27b"
+      ],
       "parameter_count": 27000000000,
       "tier": "medium",
       "speed": "standard",
@@ -4809,7 +3148,9 @@
       "free_quota": null,
       "trial_scope": "all",
       "model_family": "hy-mt2-7b",
-      "aliases": [],
+      "aliases": [
+        "xingchen/xophunyuan7bmt"
+      ],
       "parameter_count": 7000000000,
       "tier": "medium",
       "speed": "fast",
@@ -4819,6 +3160,266 @@
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
+    },
+    {
+      "id": "MOSS-Audio-8B-Thinking",
+      "object": "model",
+      "created": 1573339594,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "MOSS-Audio-8B-Thinking",
+      "description": "MOSS-Audio-8B-Thinking 模型是一款具备语音理解与语音推理能力的音频大模型，能够对语音内容进行分析、理解和推理，适用于智能语音交互与音频分析场景。",
+      "context_size": 40000,
+      "context_label": "40K",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": false,
+      "capabilities": [
+        "speech-recognition"
+      ],
+      "tags": [
+        "speech-recognition"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "all",
+      "model_family": "moss-audio-8b-thinking",
+      "model_variant": "thinking",
+      "aliases": [],
+      "parameter_count": 8000000000,
+      "tier": "medium",
+      "speed": "standard",
+      "use_case": [
+        "transcription",
+        "voice-input"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "1-3s"
+    },
+    {
+      "id": "Unlimited-OCR",
+      "object": "model",
+      "created": 263335873,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "Unlimited-OCR",
+      "description": "Unlimited-OCR 模型是一款面向长文档解析的智能OCR模型，支持高精度文字识别、版面解析与结构化信息提取，适用于文档数字化及智能文档处理场景。",
+      "context_size": 32000,
+      "context_label": "32K",
+      "price_input": 2.8,
+      "price_output": 2.8,
+      "is_free": false,
+      "capabilities": [
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "all",
+      "model_family": "unlimited-ocr",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "standard",
+      "use_case": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "1-3s"
+    },
+    {
+      "id": "MinerU2.5-Pro",
+      "object": "model",
+      "created": 263188648,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "MinerU2.5-Pro",
+      "description": "MinerU2.5-Pro是一款面向复杂文档解析与 OCR 场景的专业模型，能够从图片和文档中识别文字、理解页面布局，并将非结构化内容转换为便于存储、检索和二次处理的结构化结果。",
+      "context_size": 8000,
+      "context_label": "8K",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": false,
+      "capabilities": [
+        "document-processing"
+      ],
+      "tags": [
+        "document-processing"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "all",
+      "model_family": "mineru2.5-pro",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "premium",
+      "use_case": [
+        "pdf-processing",
+        "ocr"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "1-3s"
+    },
+    {
+      "id": "WeMM-Embedding-2B",
+      "object": "model",
+      "created": 430246488,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "WeMM-Embedding-2B",
+      "description": "WeMM-Embedding-2B 是腾讯微信团队推出的 20 亿参数通用多模态向量模型，可将文本、图像统一编码为高质量向量，适用于跨模态检索、语义搜索和 RAG 等场景。",
+      "context_size": 256000,
+      "context_label": "256K",
+      "price_input": 0.7,
+      "price_output": 0,
+      "is_free": false,
+      "capabilities": [
+        "embeddings"
+      ],
+      "tags": [
+        "embeddings"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "all",
+      "model_family": "wemm-embedding-2b",
+      "model_variant": "embedding",
+      "aliases": [],
+      "parameter_count": 2000000000,
+      "tier": "small",
+      "speed": "standard",
+      "use_case": [
+        "semantic-search",
+        "similarity"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "WeMM-Embedding-4B",
+      "object": "model",
+      "created": 430246422,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "WeMM-Embedding-4B",
+      "description": "WeMM-Embedding-4B 是腾讯微信团队推出的 40 亿参数多模态嵌入模型，可将文本、图像和视觉文档映射到统一向量空间，适用于跨模态检索、语义搜索和多模态 RAG 等场景。",
+      "context_size": 256000,
+      "context_label": "256K",
+      "price_input": 0.8,
+      "price_output": 0,
+      "is_free": false,
+      "capabilities": [
+        "embeddings"
+      ],
+      "tags": [
+        "embeddings"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "all",
+      "model_family": "wemm-embedding-4b",
+      "model_variant": "embedding",
+      "aliases": [],
+      "parameter_count": 4000000000,
+      "tier": "small",
+      "speed": "standard",
+      "use_case": [
+        "semantic-search",
+        "similarity"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "WeMM-Embedding-9B",
+      "object": "model",
+      "created": 430246257,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "WeMM-Embedding-9B",
+      "description": "WeMM-Embedding-9B 是腾讯微信团队推出的 90 亿参数多模态嵌入模型，可将文本、图像和视觉文档映射到统一向量空间，适用于高精度跨模态检索、语义搜索和多模态 RAG 等场景。",
+      "context_size": 256000,
+      "context_label": "256K",
+      "price_input": 0.9,
+      "price_output": 0,
+      "is_free": false,
+      "capabilities": [
+        "embeddings"
+      ],
+      "tags": [
+        "embeddings"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "all",
+      "model_family": "wemm-embedding-9b",
+      "model_variant": "embedding",
+      "aliases": [],
+      "parameter_count": 9000000000,
+      "tier": "medium",
+      "speed": "standard",
+      "use_case": [
+        "semantic-search",
+        "similarity"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "1-3s"
+    },
+    {
+      "id": "Atria-dawn-cmy2-v1",
+      "object": "model",
+      "created": 349764841,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "Atria Dawn Preview",
+      "description": "Atria Dawn Preview （限时免费）是由上海人工智能实验室研发的新一代智能体大模型预览版，旨在协助用户将开放性问题推进为可执行、可验证和可复现的结果。",
+      "context_size": 256000,
+      "context_label": "256K",
+      "price_input": 6,
+      "price_output": 16,
+      "is_free": false,
+      "capabilities": [
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "all",
+      "model_family": "atria-dawn-cmy2-v1",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "premium",
+      "use_case": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "1-3s"
     },
     {
       "id": "ChatTTS",
@@ -4894,41 +3495,6 @@
       "estimated_latency": "1-3s"
     },
     {
-      "id": "fish-speech-1.2-sft",
-      "object": "model",
-      "created": 859634836,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "fish-speech-1.2-sft",
-      "description": "Fish Speech 由 Fish Audio 开源的文本转语音（TTS）模型，支持英语、中文和日语。经过约 15 万小时的数据训练，具有运行内存低、推理速度快、自定义性高的特点。",
-      "context_label": "unknown",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": false,
-      "capabilities": [
-        "speech-synthesis"
-      ],
-      "tags": [
-        "speech-synthesis"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "fish-speech-1.2-sft",
-      "aliases": [],
-      "tier": "medium",
-      "speed": "standard",
-      "use_case": [
-        "text-to-speech",
-        "voice-output"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
-    },
-    {
       "id": "flux-1-schnell",
       "object": "model",
       "created": 317925560,
@@ -4959,41 +3525,6 @@
       "use_case": [
         "creative-generation",
         "art"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
-    },
-    {
-      "id": "FunAudioLLM-CosyVoice-300M",
-      "object": "model",
-      "created": 646173971,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "CosyVoice-300M",
-      "description": "CosyVoice 由阿里通义实验室开源的多语言语音生成模型，支持中文、英语、日语、粤语和韩语。该模型经过超 15 万小时数据训练，具备多语言生成、零样本学习、声音克隆和情感细节调控的能力。",
-      "context_label": "unknown",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": false,
-      "capabilities": [
-        "speech-synthesis"
-      ],
-      "tags": [
-        "speech-synthesis"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "funaudiollm-cosyvoice-300m",
-      "aliases": [],
-      "tier": "medium",
-      "speed": "standard",
-      "use_case": [
-        "text-to-speech",
-        "voice-output"
       ],
       "performance_level": "entry",
       "estimated_latency": "1-3s"

@@ -1,8 +1,8 @@
 {
   "object": "list",
   "provider": "cloudflare",
-  "updated_at": "2026-06-08T13:57:08.101Z",
-  "total": 57,
+  "updated_at": "2026-09-13T07:16:40.140Z",
+  "total": 64,
   "data": [
     {
       "id": "@cf/openai/gpt-oss-120b",
@@ -38,10 +38,7 @@
       "model_family": "gpt-oss-120b",
       "aliases": [
         "cerebras/gpt-oss-120b",
-        "gpt-oss-120b",
         "groq/openai/gpt-oss-120b",
-        "openai/gpt-oss-120b",
-        "openai/gpt-oss-120b:free",
         "sambanova/gpt-oss-120b"
       ],
       "parameter_count": 120000000000,
@@ -86,9 +83,7 @@
       },
       "trial_scope": "all",
       "model_family": "baai-bge-m3",
-      "aliases": [
-        "baai/bge-m3"
-      ],
+      "aliases": [],
       "tier": "small",
       "speed": "fast",
       "use_case": [
@@ -246,10 +241,7 @@
       "trial_scope": "all",
       "model_family": "llama-3.2-3b",
       "model_variant": "instruct",
-      "aliases": [
-        "meta/llama-3.2-3b-instruct",
-        "meta-llama/llama-3.2-3b-instruct:free"
-      ],
+      "aliases": [],
       "parameter_count": 3000000000,
       "tier": "small",
       "speed": "fast",
@@ -459,6 +451,58 @@
       "estimated_latency": "< 1s"
     },
     {
+      "id": "@cf/moonshotai/kimi-k2.7-code",
+      "object": "model",
+      "created": 541624990,
+      "owned_by": "cloudflare",
+      "provider": "cloudflare",
+      "name": "@cf/moonshotai/kimi-k2.7-code",
+      "description": "Kimi K2.7 is a frontier-scale open-source 1T parameter model with a 262.1k context window, multi-turn tool calling, vision inputs, and structured outputs for agentic workloads.",
+      "context_size": 262144,
+      "context_label": "262K",
+      "price_input": 0.19,
+      "price_output": 4,
+      "is_free": true,
+      "capabilities": [
+        "text-generation",
+        "function-calling",
+        "reasoning"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "tool-use",
+        "function-calling",
+        "reasoning",
+        "multimodal"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": true,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+      },
+      "trial_scope": "all",
+      "model_family": "moonshotai-kimi-k2.7-code",
+      "model_variant": "code",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
       "id": "@cf/openai/whisper",
       "object": "model",
       "created": 934041286,
@@ -494,6 +538,53 @@
         "voice-input"
       ],
       "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "@cf/zai-org/glm-5.3",
+      "object": "model",
+      "created": 1600228440,
+      "owned_by": "cloudflare",
+      "provider": "cloudflare",
+      "name": "@cf/zai-org/glm-5.3",
+      "description": "GLM-5.3 is Z.ai's flagship agentic coding model, pairing a 1M-token context window with reasoning, function calling, and structured outputs to power multi-step, tool-driven development workflows.",
+      "context_size": 1310720,
+      "context_label": "1M",
+      "price_input": 0.26,
+      "price_output": 4.4,
+      "is_free": true,
+      "capabilities": [
+        "text-generation",
+        "function-calling",
+        "reasoning"
+      ],
+      "tags": [
+        "reasoning",
+        "text-generation",
+        "tool-use",
+        "function-calling"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+      },
+      "trial_scope": "all",
+      "model_family": "org-glm-5.3",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -812,9 +903,7 @@
       "model_family": "llama-3.1-8b",
       "model_variant": "instruct",
       "quantization": "fp8",
-      "aliases": [
-        "meta/llama-3.1-8b-instruct"
-      ],
+      "aliases": [],
       "parameter_count": 8000000000,
       "tier": "medium",
       "speed": "fast",
@@ -823,6 +912,56 @@
         "writing-assistance"
       ],
       "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "@cf/zai-org/glm-5.3-flash",
+      "object": "model",
+      "created": 1674197715,
+      "owned_by": "cloudflare",
+      "provider": "cloudflare",
+      "name": "@cf/zai-org/glm-5.3-flash",
+      "description": "The first natively multimodal model in the GLM-5 series. With 320B total parameters and just 18B active parameters, it outperforms GLM-5.2 across benchmarks and real-world workloads at one-tenth the price, while approaching Claude Opus 4.8 on coding and agentic benchmarks.",
+      "context_size": 1310720,
+      "context_label": "1M",
+      "price_input": 0.03,
+      "price_output": 0.5,
+      "is_free": true,
+      "capabilities": [
+        "text-generation",
+        "function-calling",
+        "reasoning"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "function-calling",
+        "reasoning",
+        "multimodal"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": true,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+      },
+      "trial_scope": "all",
+      "model_family": "org-glm-5.3-flash",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -854,9 +993,7 @@
       "trial_scope": "all",
       "model_family": "llama-3.2-1b",
       "model_variant": "instruct",
-      "aliases": [
-        "meta/llama-3.2-1b-instruct"
-      ],
+      "aliases": [],
       "parameter_count": 1000000000,
       "tier": "small",
       "speed": "fast",
@@ -903,8 +1040,7 @@
       "trial_scope": "all",
       "model_family": "moonshotai-kimi-k2.6",
       "aliases": [
-        "moonshotai/kimi-k2.6",
-        "moonshotai/kimi-k2.6:free"
+        "moonshotai/kimi-k2.6"
       ],
       "tier": "large",
       "speed": "fast",
@@ -1206,6 +1342,58 @@
       "estimated_latency": "< 1s"
     },
     {
+      "id": "@cf/deepseek-ai/deepseek-v4-flash-0731",
+      "object": "model",
+      "created": 797500887,
+      "owned_by": "cloudflare",
+      "provider": "cloudflare",
+      "name": "@cf/deepseek-ai/deepseek-v4-flash-0731",
+      "description": "DeepSeek-V4-Flash-0731 is the official release of DeepSeek-V4-Flash, superseding the preview version, with substantially enhanced agentic capabilities. ",
+      "context_size": 1310720,
+      "context_label": "1M",
+      "price_input": 0.014,
+      "price_output": 1.32,
+      "is_free": true,
+      "capabilities": [
+        "text-generation",
+        "function-calling",
+        "reasoning"
+      ],
+      "tags": [
+        "text-generation",
+        "function-calling",
+        "reasoning"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+      },
+      "trial_scope": "all",
+      "model_family": "deepseek-v4-flash",
+      "aliases": [
+        "DeepSeek-V4-Flash",
+        "deepseek-v4-flash-0731",
+        "deepseek-ai/deepseek-v4-flash-0731",
+        "xingchen/xopdeepseekv4flash0731",
+        "xingchen/xopdeepseekv4flash"
+      ],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
       "id": "@cf/leonardo/phoenix-1.0",
       "object": "model",
       "created": 616676345,
@@ -1486,6 +1674,52 @@
       "estimated_latency": "< 1s"
     },
     {
+      "id": "@cf/zai-org/glm-5.2",
+      "object": "model",
+      "created": 1600228439,
+      "owned_by": "cloudflare",
+      "provider": "cloudflare",
+      "name": "@cf/zai-org/glm-5.2",
+      "description": "Z.ai's flagship agentic coding model",
+      "context_size": 262144,
+      "context_label": "262K",
+      "price_input": 0.26,
+      "price_output": 4.4,
+      "is_free": true,
+      "capabilities": [
+        "text-generation",
+        "function-calling",
+        "reasoning"
+      ],
+      "tags": [
+        "text-generation",
+        "function-calling",
+        "reasoning"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+      },
+      "trial_scope": "all",
+      "model_family": "org-glm-5.2",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
       "id": "@cf/nvidia/nemotron-3-120b-a12b",
       "object": "model",
       "created": 1408041182,
@@ -1646,7 +1880,6 @@
       "model_family": "qwen3-30b-a3b",
       "quantization": "fp8",
       "aliases": [
-        "Qwen3-30B-A3B-Instruct-2507",
         "xingchen/xop3qwen30b2507",
         "xingchen/xop3qwen30b"
       ],
@@ -1778,8 +2011,7 @@
       "model_family": "gemma-4-26b-a4b",
       "model_variant": "it",
       "aliases": [
-        "gemma-4-26B-A4B-it",
-        "google/gemma-4-26b-a4b-it:free"
+        "gemma-4-26B-A4B-it"
       ],
       "parameter_count": 26000000000,
       "tier": "large",
@@ -1842,6 +2074,58 @@
       "estimated_latency": "< 1s"
     },
     {
+      "id": "@cf/deepseek-ai/deepseek-v4-pro-0813",
+      "object": "model",
+      "created": 1483190957,
+      "owned_by": "cloudflare",
+      "provider": "cloudflare",
+      "name": "@cf/deepseek-ai/deepseek-v4-pro-0813",
+      "description": "DeepSeek V4 Pro is a high-capability reasoning model from DeepSeek with a one million token context window, built for long-horizon agentic workflows and complex, multi-step problem-solving",
+      "context_size": 1048576,
+      "context_label": "1M",
+      "price_input": 0.044,
+      "price_output": 3.96,
+      "is_free": true,
+      "capabilities": [
+        "text-generation",
+        "function-calling",
+        "reasoning"
+      ],
+      "tags": [
+        "reasoning",
+        "text-generation",
+        "function-calling"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+      },
+      "trial_scope": "all",
+      "model_family": "deepseek-v4-pro",
+      "aliases": [
+        "DeepSeek-V4-Pro",
+        "DeepSeek-V4-Pro-0813",
+        "deepseek-ai/deepseek-v4-pro-0813",
+        "xingchen/xopdeepseekv4pro0813",
+        "xingchen/xopdeepseekv4pro"
+      ],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
       "id": "@cf/meta/llama-3.2-11b-vision-instruct",
       "object": "model",
       "created": 1402530999,
@@ -1888,6 +2172,60 @@
         "visual-q&a",
         "content-creation",
         "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "@cf/qwen/qwen3.8-27b",
+      "object": "model",
+      "created": 258959613,
+      "owned_by": "cloudflare",
+      "provider": "cloudflare",
+      "name": "@cf/qwen/qwen3.8-27b",
+      "description": "Qwen 3.8 27B is a 27-billion-parameter instruction-tuned language model from Alibaba's Qwen family, designed for vision, efficient general-purpose text generation and agentic workloads.",
+      "context_size": 262144,
+      "context_label": "262K",
+      "price_input": 0.05,
+      "price_output": 3.2,
+      "is_free": true,
+      "capabilities": [
+        "text-generation",
+        "function-calling",
+        "reasoning"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "function-calling",
+        "reasoning",
+        "multimodal"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": true,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+      },
+      "trial_scope": "all",
+      "model_family": "qwen3.8-27b",
+      "aliases": [
+        "qwen3.8-27b",
+        "groq/qwen/qwen3.8-27b"
+      ],
+      "parameter_count": 27000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "problem-solving",
+        "logical-analysis",
+        "math",
         "complex-reasoning"
       ],
       "performance_level": "mid",
@@ -1961,8 +2299,9 @@
       "aliases": [
         "whisper-large-v3-turbo",
         "whisper-large-v3",
+        "groq/whisper-large-v3",
         "groq/whisper-large-v3-turbo",
-        "groq/whisper-large-v3"
+        "sambanova/Whisper-Large-v3"
       ],
       "tier": "medium",
       "speed": "fast",
@@ -2014,48 +2353,6 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "@cf/runwayml/stable-diffusion-v1-5-img2img",
-      "object": "model",
-      "created": 368345415,
-      "owned_by": "cloudflare",
-      "provider": "cloudflare",
-      "name": "@cf/runwayml/stable-diffusion-v1-5-img2img",
-      "description": "Stable Diffusion is a latent text-to-image diffusion model capable of generating photo-realistic images. Img2img generate a new image from an input image with Stable Diffusion. ",
-      "context_label": "unknown",
-      "is_free": true,
-      "capabilities": [
-        "image-generation"
-      ],
-      "tags": [
-        "vision",
-        "text-generation",
-        "image-generation",
-        "multimodal"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": "daily-tokens",
-      "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
-      },
-      "trial_scope": "all",
-      "model_family": "runwayml-stable-diffusion-v1-5-img2img",
-      "aliases": [],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "image-understanding",
-        "visual-q&a",
-        "content-creation",
-        "writing-assistance",
-        "creative-generation",
-        "art"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
       "id": "@cf/openai/gpt-oss-20b",
       "object": "model",
       "created": 1244320362,
@@ -2089,8 +2386,7 @@
       "model_family": "gpt-oss-20b",
       "aliases": [
         "groq/openai/gpt-oss-20b",
-        "openai/gpt-oss-20b",
-        "openai/gpt-oss-20b:free"
+        "openai/gpt-oss-20b"
       ],
       "parameter_count": 20000000000,
       "tier": "medium",
@@ -2185,6 +2481,53 @@
       "estimated_latency": "< 1s"
     },
     {
+      "id": "@cf/moondream/moondream3.1-9B-A2B",
+      "object": "model",
+      "created": 868867364,
+      "owned_by": "cloudflare",
+      "provider": "cloudflare",
+      "name": "@cf/moondream/moondream3.1-9B-A2B",
+      "description": "Moondream 3 is a fast, efficient 9B mixture-of-experts vision language model (2B active parameters) that delivers frontier-level visual reasoning for tasks like object detection, pointing, OCR, and structured output.",
+      "context_label": "unknown",
+      "price_input": 0.3,
+      "price_output": 1,
+      "is_free": true,
+      "capabilities": [
+        "vision"
+      ],
+      "tags": [
+        "reasoning",
+        "vision",
+        "text-generation",
+        "multimodal"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+      },
+      "trial_scope": "all",
+      "model_family": "moondream-moondream3.1-9b-a2b",
+      "aliases": [],
+      "parameter_count": 9000000000,
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
       "id": "@cf/leonardo/lucid-origin",
       "object": "model",
       "created": 1859467082,
@@ -2260,8 +2603,7 @@
       "model_family": "llama-4-scout-17b-16e",
       "model_variant": "instruct",
       "aliases": [
-        "github/Llama-4-Scout-17B-16E-Instruct",
-        "groq/meta-llama/llama-4-scout-17b-16e-instruct"
+        "github/Llama-4-Scout-17B-16E-Instruct"
       ],
       "parameter_count": 17000000000,
       "tier": "large",

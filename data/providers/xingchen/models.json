@@ -1,9 +1,359 @@
 {
   "object": "list",
   "provider": "xingchen",
-  "updated_at": "2026-06-08T13:57:08.106Z",
+  "updated_at": "2026-09-13T07:16:40.144Z",
   "total": 51,
   "data": [
+    {
+      "id": "spark-x2.5",
+      "object": "model",
+      "created": 1617850915,
+      "owned_by": "xingchen",
+      "provider": "xingchen",
+      "name": "Spark-X2.5",
+      "description": "该模型基于全国产平台训练，采用MoE框架，模型参数293B-A30，支持256K上下文，全面提升代码和智能体能力，同时覆盖 200 余种语言，在语言理解、答题、推理等通用任务上保持优异的效果。",
+      "context_size": 262144,
+      "context_label": "262K",
+      "price_input": 1.6,
+      "price_output": 6,
+      "is_free": false,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "spark-x2.5",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "standard",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "1-3s"
+    },
+    {
+      "id": "spark-x2.5-4b",
+      "object": "model",
+      "created": 263902778,
+      "owned_by": "xingchen",
+      "provider": "xingchen",
+      "name": "Spark-X2.5-4B",
+      "description": "4B级端侧通用语言Dense模型，采用混合注意力架构，原生支持最长 1M token 的上下文，并支持 200 多种语言，在语言理解、文本创作、数学推理、编程、工具调用和智能体工作流等广泛的日常任务中表现优异，领先同尺寸开源模型。",
+      "context_size": 1,
+      "context_label": "1",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": null,
+      "trial_scope": "specific",
+      "model_family": "spark-x2.5-4b",
+      "aliases": [],
+      "parameter_count": 4000000000,
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "spark-x2.5-1.7b",
+      "object": "model",
+      "created": 372521064,
+      "owned_by": "xingchen",
+      "provider": "xingchen",
+      "name": "Spark-X2.5-1.7B",
+      "description": "1.7B级轻量端侧通用语言Dense模型，采用混合注意力架构，原生支持最长 1M token 的上下文，并支持 200 多种语言，在语言理解、文本创作、数学推理、编程、工具调用和智能体工作流等广泛的日常任务中表现优异，领先同尺寸开源模型。",
+      "context_size": 1,
+      "context_label": "1",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": null,
+      "trial_scope": "specific",
+      "model_family": "spark-x2.5-1.7b",
+      "aliases": [],
+      "parameter_count": 1700000000,
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "xopglm53",
+      "object": "model",
+      "created": 865452153,
+      "owned_by": "xingchen",
+      "provider": "xingchen",
+      "name": "GLM-5.3",
+      "description": "GLM‑5.3 沿用与 GLM‑5.2 相同的基座模型，全部性能提升均来自后训练阶段。相较于 GLM‑5.2，该模型在复杂代码编写以及长周期任务上的能力提升显著\n",
+      "context_size": 1,
+      "context_label": "1",
+      "price_input": 8,
+      "price_output": 28,
+      "is_free": false,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "glm-5.3",
+      "aliases": [
+        "GLM-5.3"
+      ],
+      "tier": "medium",
+      "speed": "premium",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "1-3s"
+    },
+    {
+      "id": "xopdeepseekv4pro0813",
+      "object": "model",
+      "created": 1565079308,
+      "owned_by": "xingchen",
+      "provider": "xingchen",
+      "name": "DeepSeek-V4-Pro-0813",
+      "description": "DeepSeek-V4-Pro-0813为 DeepSeek-V4-Pro的官方正式发布版本，取代原预览版本，智能体相关能力得到显著提升。\n",
+      "context_size": 1,
+      "context_label": "1",
+      "price_input": 9,
+      "price_output": 27,
+      "is_free": false,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "deepseek-v4-pro",
+      "aliases": [
+        "cloudflare/@cf/deepseek-ai/deepseek-v4-pro-0813",
+        "DeepSeek-V4-Pro",
+        "DeepSeek-V4-Pro-0813",
+        "deepseek-ai/deepseek-v4-pro-0813",
+        "xingchen/xopdeepseekv4pro"
+      ],
+      "tier": "medium",
+      "speed": "premium",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "1-3s"
+    },
+    {
+      "id": "xopdeepseekv4flash0731",
+      "object": "model",
+      "created": 671757800,
+      "owned_by": "xingchen",
+      "provider": "xingchen",
+      "name": "DeepSeek-V4-Flash-0731",
+      "description": "DeepSeek-V4-Flash-0731 为 DeepSeek-V4-Flash 的官方正式发布版本，取代原预览版本，智能体相关能力得到显著提升。\n",
+      "context_size": 1,
+      "context_label": "1",
+      "price_input": 1,
+      "price_output": 2,
+      "is_free": false,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "deepseek-v4-flash",
+      "aliases": [
+        "cloudflare/@cf/deepseek-ai/deepseek-v4-flash-0731",
+        "DeepSeek-V4-Flash",
+        "deepseek-v4-flash-0731",
+        "deepseek-ai/deepseek-v4-flash-0731",
+        "xingchen/xopdeepseekv4flash"
+      ],
+      "tier": "medium",
+      "speed": "standard",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "1-3s"
+    },
+    {
+      "id": "xopkimik27code",
+      "object": "model",
+      "created": 1996526712,
+      "owned_by": "xingchen",
+      "provider": "xingchen",
+      "name": "Kimi-K2.7-Code",
+      "description": "Kimi-K2.7-Code 是月之暗面于 2026 年 6 月 12 日发布的编程专属大模型，属于 Kimi K2 系列的第三代代码专项迭代版本。\n",
+      "context_size": 262144,
+      "context_label": "262K",
+      "price_input": 6.5,
+      "price_output": 27,
+      "is_free": false,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision",
+        "code-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation",
+        "vision",
+        "code-generation",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "kimi-k2.7-code",
+      "model_variant": "code",
+      "aliases": [
+        "Kimi-K2.7-Code"
+      ],
+      "tier": "large",
+      "speed": "premium",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "image-understanding",
+        "visual-q&a",
+        "software-development",
+        "code-completion"
+      ],
+      "performance_level": "high",
+      "estimated_latency": "3-10s"
+    },
+    {
+      "id": "xopglm52",
+      "object": "model",
+      "created": 865452154,
+      "owned_by": "xingchen",
+      "provider": "xingchen",
+      "name": "GLM-5.2",
+      "description": " GLM-5.2，是面向长程任务的最新旗舰模型。相比前代模型 GLM-5.1，它在长程任务能力上实现了显著飞跃。",
+      "context_size": 1,
+      "context_label": "1",
+      "price_input": 8,
+      "price_output": 28,
+      "is_free": false,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "glm-5.2",
+      "aliases": [
+        "GLM-5.2"
+      ],
+      "tier": "medium",
+      "speed": "premium",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "1-3s"
+    },
     {
       "id": "xopdeepseekv4flash",
       "object": "model",
@@ -33,8 +383,11 @@
       "trial_scope": "none",
       "model_family": "deepseek-v4-flash",
       "aliases": [
+        "cloudflare/@cf/deepseek-ai/deepseek-v4-flash-0731",
         "DeepSeek-V4-Flash",
-        "deepseek-ai/deepseek-v4-flash"
+        "deepseek-v4-flash-0731",
+        "deepseek-ai/deepseek-v4-flash-0731",
+        "xingchen/xopdeepseekv4flash0731"
       ],
       "tier": "medium",
       "speed": "standard",
@@ -54,7 +407,7 @@
       "owned_by": "xingchen",
       "provider": "xingchen",
       "name": "Kimi-K2.6",
-      "description": "Kimi K2.6 是一款开源原生多模态智能体模型，在长链路代码开发、代码驱动设计、主动自主执行以及集群任务编排等实用能力上实现了全面升级。",
+      "description": "Kimi-K2.6 是一款开源原生多模态智能体模型，在长链路代码开发、代码驱动设计、主动自主执行以及集群任务编排等实用能力上实现了全面升级。",
       "context_size": 262144,
       "context_label": "262K",
       "price_input": 6.5,
@@ -123,8 +476,11 @@
       "trial_scope": "none",
       "model_family": "deepseek-v4-pro",
       "aliases": [
+        "cloudflare/@cf/deepseek-ai/deepseek-v4-pro-0813",
         "DeepSeek-V4-Pro",
-        "deepseek-ai/deepseek-v4-pro"
+        "DeepSeek-V4-Pro-0813",
+        "deepseek-ai/deepseek-v4-pro-0813",
+        "xingchen/xopdeepseekv4pro0813"
       ],
       "tier": "large",
       "speed": "premium",
@@ -147,9 +503,9 @@
       "description": "Qwen3.6-35B-A3B，以稳定性与实用性为核心，在智能体编码、思维上下文保留上显著升级，为 350 亿参数、30 亿激活参数的因果视觉语言模型，编码开发体验更高效流畅。",
       "context_size": 131072,
       "context_label": "131K",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
+      "price_input": 1.08,
+      "price_output": 6.48,
+      "is_free": false,
       "capabilities": [
         "chat",
         "text-generation",
@@ -164,16 +520,16 @@
       "is_reasoning": false,
       "is_multimodal": true,
       "has_tool_use": false,
-      "free_mechanism": "rate-limited",
+      "free_mechanism": null,
       "free_quota": null,
-      "trial_scope": "specific",
+      "trial_scope": "none",
       "model_family": "qwen3.6-35b-a3b",
       "aliases": [
         "Qwen3.6-35B-A3B"
       ],
       "parameter_count": 35000000000,
       "tier": "large",
-      "speed": "fast",
+      "speed": "premium",
       "use_case": [
         "conversation",
         "q&a",
@@ -183,55 +539,50 @@
         "visual-q&a"
       ],
       "performance_level": "mid",
-      "estimated_latency": "< 1s"
+      "estimated_latency": "3-10s"
     },
     {
-      "id": "xopqwen35v35b",
+      "id": "xophunyuan7bmt",
       "object": "model",
-      "created": 1040062914,
+      "created": 1019821215,
       "owned_by": "xingchen",
       "provider": "xingchen",
-      "name": "Qwen3.5-35B-A3B",
-      "description": "Qwen3.5-35B-A3B 是阿里巴巴通义千问团队于2026 年 2 月 25 日开源的中型 MoE 稀疏架构大模型，隶属于 Qwen3.5 系列中型模型产品线，主打高性能与高效率平衡，被称为 \"中小团队的 AI 利器\"。核心亮点是35B 总参数仅激活 3B 进行推理，在保持旗舰级性能的同时大幅降低部署成本。",
-      "context_size": 131072,
-      "context_label": "131K",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
+      "name": "Hy-MT2-7B",
+      "description": "Hy-MT2 是一套主打 “快速推理” 的多语言翻译模型系列，专为复杂真实业务场景打造，覆盖从端侧轻量部署到服务器端高性能翻译的全场景需求。该系列在保持翻译质量领先的同时，实现了极致压缩与速度提升",
+      "context_size": 32768,
+      "context_label": "33K",
+      "price_input": 0.5,
+      "price_output": 2,
+      "is_free": false,
       "capabilities": [
         "chat",
-        "text-generation",
-        "vision"
+        "text-generation"
       ],
       "tags": [
         "chat",
-        "text-generation",
-        "vision",
-        "multimodal"
+        "text-generation"
       ],
       "is_reasoning": false,
-      "is_multimodal": true,
+      "is_multimodal": false,
       "has_tool_use": false,
-      "free_mechanism": "rate-limited",
+      "free_mechanism": null,
       "free_quota": null,
-      "trial_scope": "specific",
-      "model_family": "qwen3.5-35b-a3b",
+      "trial_scope": "none",
+      "model_family": "hy-mt2-7b",
       "aliases": [
-        "Qwen3.5-35B-A3B"
+        "HY-MT2-7B"
       ],
-      "parameter_count": 35000000000,
-      "tier": "large",
-      "speed": "fast",
+      "parameter_count": 7000000000,
+      "tier": "medium",
+      "speed": "standard",
       "use_case": [
         "conversation",
         "q&a",
         "content-creation",
-        "writing-assistance",
-        "image-understanding",
-        "visual-q&a"
+        "writing-assistance"
       ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
+      "performance_level": "entry",
+      "estimated_latency": "1-3s"
     },
     {
       "id": "xoppaddleocrv16",
@@ -240,7 +591,7 @@
       "owned_by": "xingchen",
       "provider": "xingchen",
       "name": "PaddleOCR-VL-1.6",
-      "description": "PaddleOCR-VL-1.6对标业界顶尖多模态视觉语言大模型（VLM）具备强劲竞争力。模型架构与 PaddleOCR-VL-1.5 完全兼容，可零成本即插即用、无缝迁移。",
+      "description": "PaddleOCR-VL-1.6对标业界顶尖多模态视觉语言大模型（VLM），具备强劲竞争力。模型架构与 PaddleOCR-VL-1.5 完全兼容，可零成本即插即用、无缝迁移。",
       "context_size": 32768,
       "context_label": "33K",
       "price_input": 0,
@@ -287,7 +638,7 @@
       "owned_by": "xingchen",
       "provider": "xingchen",
       "name": "Spark-X2-Flash",
-      "description": "星火Spark-X2-Flash，面向Agent场景优化效果，星火30B中等尺寸极具性价比又完全基于全国产算力训练和推理的全新模型，智能体和代码等能力显著提升，输入最大长度支持192K。",
+      "description": "Spark-X2-Flash，面向Agent场景优化效果，星火30B中等尺寸极具性价比又完全基于全国产算力训练和推理的全新模型，智能体和代码等能力显著提升，输入最大长度支持192K。",
       "context_size": 262144,
       "context_label": "262K",
       "price_input": 1,
@@ -349,8 +700,7 @@
       "trial_scope": "none",
       "model_family": "glm-5.1",
       "aliases": [
-        "GLM-5.1",
-        "z-ai/glm-5.1"
+        "GLM-5.1"
       ],
       "tier": "medium",
       "speed": "premium",
@@ -370,7 +720,7 @@
       "owned_by": "xingchen",
       "provider": "xingchen",
       "name": "Spark X2",
-      "description": "星火X2整体能力对标国际顶尖模型水平，在数学、推理、语言理解、智能体等能力上媲美国际最优；130+多语言综合能力继续提升，拉美、东盟等地区重点语种效果保持业界领先水平。输入最大长度支持64K，输出最大长度支持128K。",
+      "description": "Spark X2整体能力对标国际顶尖模型水平，在数学、推理、语言理解、智能体等能力上媲美国际最优；130+多语言综合能力继续提升，拉美、东盟等地区重点语种效果保持业界领先水平。输入最大长度支持64K，输出最大长度支持128K。",
       "context_size": 196608,
       "context_label": "197K",
       "price_input": 3,
@@ -413,9 +763,9 @@
       "description": "Qwen3.5-2B是阿里云开源的20亿参数轻量大模型，兼顾小体积与强性能，可在手机、笔记本等端侧设备本地运行，在对话、轻量代码等场景表现均衡。",
       "context_size": 32768,
       "context_label": "33K",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
+      "price_input": 0.2,
+      "price_output": 0.4,
+      "is_free": false,
       "capabilities": [
         "chat",
         "text-generation"
@@ -427,9 +777,9 @@
       "is_reasoning": false,
       "is_multimodal": false,
       "has_tool_use": false,
-      "free_mechanism": "rate-limited",
+      "free_mechanism": null,
       "free_quota": null,
-      "trial_scope": "specific",
+      "trial_scope": "none",
       "model_family": "qwen3.5-2b",
       "aliases": [],
       "parameter_count": 2000000000,
@@ -451,7 +801,7 @@
       "owned_by": "xingchen",
       "provider": "xingchen",
       "name": "Qwen3.5-397B-A17B",
-      "description": "Qwen3.5-397B-A17B是阿里巴巴通义千问团队于2026 年 2 月 16 日正式发布并开源的新一代原生多模态智能体基础模型，定位为 \"为 Agentic AI 时代而生\"，以极致稀疏 MoE 架构、混合注意力机制和原生多模态融合三大核心创新，实现了性能与效率的突破性平衡Qwen。",
+      "description": "Qwen3.5-397B-A17B是阿里巴巴通义千问团队于2026 年 2 月 16 日正式发布并开源的新一代原生多模态智能体基础模型，定位为 \"为 Agentic AI 时代而生\"，以极致稀疏 MoE 架构、混合注意力机制和原生多模态融合三大核心创新，实现了性能与效率的突破性平衡。",
       "context_size": 262144,
       "context_label": "262K",
       "price_input": 1.2,
@@ -475,9 +825,7 @@
       "free_quota": null,
       "trial_scope": "none",
       "model_family": "qwen3.5-397b-a17b",
-      "aliases": [
-        "qwen/qwen3.5-397b-a17b"
-      ],
+      "aliases": [],
       "parameter_count": 397000000000,
       "tier": "large",
       "speed": "premium",
@@ -541,7 +889,7 @@
       "owned_by": "xingchen",
       "provider": "xingchen",
       "name": "GLM-5",
-      "description": "智谱 AI 于 2026 年 2 月 11 日发布的745B 总参数 MoE 稀疏架构旗舰基座模型，面向复杂系统工程与长程 Agent 任务。",
+      "description": "GLM-5是智谱 AI 于 2026 年 2 月 11 日发布的745B 总参数 MoE 稀疏架构旗舰基座模型，面向复杂系统工程与长程 Agent 任务。",
       "context_size": 204800,
       "context_label": "205K",
       "price_input": 6,
@@ -563,8 +911,7 @@
       "trial_scope": "none",
       "model_family": "glm-5",
       "aliases": [
-        "GLM-5",
-        "GLM-5-Turbo"
+        "GLM-5"
       ],
       "tier": "medium",
       "speed": "premium",
@@ -584,7 +931,7 @@
       "owned_by": "xingchen",
       "provider": "xingchen",
       "name": "Kimi-K2.5",
-      "description": "Kimi K2.5 是一个多模态智能体模型视觉和语言理解与高级智能体功能、即时模式和思考模式以及对话和智能体范式无缝集成。",
+      "description": "Kimi-K2.5是一个多模态智能体模型，具备视觉和语言理解与高级智能体功能、即时模式和思考模式以及对话和智能体范式无缝集成。",
       "context_size": 131072,
       "context_label": "131K",
       "price_input": 4,
@@ -630,7 +977,7 @@
       "created": 1967424736,
       "owned_by": "xingchen",
       "provider": "xingchen",
-      "name": "DeepSeek-V3.2",
+      "name": "Deepseek-V3.2",
       "description": "2025 年 12 月发布的正式版，面向日常及生产级应用，核心是平衡推理能力与输出效率，适配日常问答、通用智能体任务等场景",
       "context_size": 131072,
       "context_label": "131K",
@@ -743,10 +1090,7 @@
       "free_quota": null,
       "trial_scope": "none",
       "model_family": "glm-4.7-flash",
-      "aliases": [
-        "bigmodel/glm-4.7-flash",
-        "GLM-4.7-Flash"
-      ],
+      "aliases": [],
       "tier": "medium",
       "speed": "standard",
       "use_case": [
@@ -802,49 +1146,6 @@
       "estimated_latency": "1-3s"
     },
     {
-      "id": "xopqwentti20b",
-      "object": "model",
-      "created": 636859249,
-      "owned_by": "xingchen",
-      "provider": "xingchen",
-      "name": "Qwen-Image-2512",
-      "description": "Qwen-Image-2512 是阿里云通义千问推出的 12 月更新版文本到图像基础模型，相较 8 月版本大幅提升了人物真实感、自然细节精细度与文字渲染质量，在 AI Arena 超 1 万轮盲评中成为当前最强的开源文本生成图像模型，且在闭源模型阵营中也具备较强竞争力。\n",
-      "context_label": "unknown",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "image-generation"
-      ],
-      "tags": [
-        "vision",
-        "image-generation",
-        "multimodal"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": null,
-      "trial_scope": "specific",
-      "model_family": "qwen-image",
-      "model_variant": "image",
-      "aliases": [
-        "Qwen-Image",
-        "Qwen-Image-2512"
-      ],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "image-understanding",
-        "visual-q&a",
-        "creative-generation",
-        "art"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
       "id": "xop3qwen32bvl",
       "object": "model",
       "created": 105851530,
@@ -876,7 +1177,9 @@
       "trial_scope": "none",
       "model_family": "qwen3-vl-32b",
       "model_variant": "vl",
-      "aliases": [],
+      "aliases": [
+        "Qwen3-VL-32B-Instruct"
+      ],
       "parameter_count": 32000000000,
       "tier": "large",
       "speed": "standard",
@@ -986,91 +1289,6 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "xophunyuan7bmt",
-      "object": "model",
-      "created": 1019821215,
-      "owned_by": "xingchen",
-      "provider": "xingchen",
-      "name": "Hunyuan-MT-7B",
-      "description": "文档翻译、跨语言内容生成、多语言客服对话等，支持 “中文与其他语言互译”“非中文语言间互译” 两类模式。7B 参数规模的核心翻译模型，负责将源语言文本精准转换为目标语言，支持 33 种语言互译（含中文、英语、法语等主流语言，以及藏语、哈萨克语等 5 种中国少数民族语言），在同规模模型中性能达行业领先水平。",
-      "context_size": 32768,
-      "context_label": "33K",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "chat",
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": null,
-      "trial_scope": "specific",
-      "model_family": "hunyuan-mt-7b",
-      "aliases": [],
-      "parameter_count": 7000000000,
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "xopzimageturbo",
-      "object": "model",
-      "created": 751334248,
-      "owned_by": "xingchen",
-      "provider": "xingchen",
-      "name": "Z-Image-Turbo",
-      "description": "Z-Image 是一款开源、免费的高效图像生成基础模型，参数量为 6B，1秒出图。无需依赖顶级算力和参数堆砌，即可在 16GB 显存的消费级显卡上，生成品质可与顶级商业模型相媲美的超真实图像，尤其在中英双语文本渲染方面效果突出。",
-      "context_size": 512,
-      "context_label": "512",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "image-generation"
-      ],
-      "tags": [
-        "vision",
-        "image-generation",
-        "multimodal"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": null,
-      "trial_scope": "specific",
-      "model_family": "z-image",
-      "model_variant": "image",
-      "aliases": [
-        "z-image-turbo",
-        "Z-Image"
-      ],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "image-understanding",
-        "visual-q&a",
-        "creative-generation",
-        "art"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
       "id": "xop3qwen80bnext",
       "object": "model",
       "created": 1519355754,
@@ -1100,9 +1318,7 @@
       "model_family": "qwen3-next-80b-a3b",
       "model_variant": "instruct",
       "aliases": [
-        "Qwen3-Next-80B-A3B-Instruct",
-        "qwen/qwen3-next-80b-a3b-instruct",
-        "qwen/qwen3-next-80b-a3b-instruct:free"
+        "Qwen3-Next-80B-A3B-Instruct"
       ],
       "parameter_count": 80000000000,
       "tier": "medium",
@@ -1146,8 +1362,7 @@
       "model_family": "qwen3-235b-a22b",
       "model_variant": "instruct",
       "aliases": [
-        "Qwen3-235B-A22B",
-        "Qwen3-235B-A22B-Instruct-2507",
+        "sambanova/Qwen3-235B-A22B-Instruct-2507",
         "xingchen/xop3qwen235b"
       ],
       "parameter_count": 235000000000,
@@ -1193,7 +1408,6 @@
       "model_variant": "instruct",
       "aliases": [
         "cloudflare/@cf/qwen/qwen3-30b-a3b-fp8",
-        "Qwen3-30B-A3B-Instruct-2507",
         "xingchen/xop3qwen30b"
       ],
       "parameter_count": 30000000000,
@@ -1237,8 +1451,7 @@
       "trial_scope": "none",
       "model_family": "qwen3-235b-a22b",
       "aliases": [
-        "Qwen3-235B-A22B",
-        "Qwen3-235B-A22B-Instruct-2507",
+        "sambanova/Qwen3-235B-A22B-Instruct-2507",
         "xingchen/xop3qwen235b2507"
       ],
       "parameter_count": 235000000000,
@@ -1283,7 +1496,6 @@
       "model_family": "qwen3-30b-a3b",
       "aliases": [
         "cloudflare/@cf/qwen/qwen3-30b-a3b-fp8",
-        "Qwen3-30B-A3B-Instruct-2507",
         "xingchen/xop3qwen30b2507"
       ],
       "parameter_count": 30000000000,
@@ -1328,7 +1540,7 @@
       "model_family": "qwen3-32b",
       "aliases": [
         "Qwen3-32B",
-        "groq/qwen/qwen3-32b"
+        "sambanova/Qwen3-32B"
       ],
       "parameter_count": 32000000000,
       "tier": "large",
@@ -1340,100 +1552,6 @@
         "writing-assistance"
       ],
       "performance_level": "mid",
-      "estimated_latency": "3-10s"
-    },
-    {
-      "id": "xdeepseekv3",
-      "object": "model",
-      "created": 837229201,
-      "owned_by": "xingchen",
-      "provider": "xingchen",
-      "name": "DeepSeek-V3",
-      "description": "DeepSeek-V3 是一款由深度求索公司自研的MoE模型。DeepSeek-V3 多项评测成绩超越了 Qwen2.5-72B 和 Llama-3.1-405B 等其他开源模型，并在性能上和世界顶尖的闭源模型 GPT-4o 以及 Claude-3.5-Sonnet 不分伯仲。",
-      "context_size": 32768,
-      "context_label": "33K",
-      "price_input": 1.6,
-      "price_output": 6.4,
-      "is_free": false,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "chat",
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
-      "model_family": "deepseek-v3",
-      "aliases": [
-        "DeepSeek-V3",
-        "github/DeepSeek-V3-0324"
-      ],
-      "tier": "medium",
-      "speed": "standard",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
-    },
-    {
-      "id": "xdeepseekr1",
-      "object": "model",
-      "created": 837229335,
-      "owned_by": "xingchen",
-      "provider": "xingchen",
-      "name": "DeepSeek-R1",
-      "description": "该版本通过利用更多的计算资源并在后训练阶段引入算法优化机制，显著提升了其推理能力和深度推理能力。该模型在数学、编程和一般逻辑等多个基准测试中表现出色，整体性能已接近 O3 和 Gemini 2.5 Pro 等领先模型。与之前的版本相比，升级后的模型在处理复杂推理任务方面显示出显著的改进。",
-      "context_size": 32768,
-      "context_label": "33K",
-      "price_input": 3.2,
-      "price_output": 12.8,
-      "is_free": false,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "reasoning"
-      ],
-      "tags": [
-        "reasoning",
-        "chat",
-        "text-generation"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
-      "model_family": "deepseek-r1",
-      "model_variant": "r1",
-      "aliases": [
-        "DeepSeek-R1",
-        "github/DeepSeek-R1-0528",
-        "github/DeepSeek-R1"
-      ],
-      "tier": "large",
-      "speed": "premium",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance",
-        "complex-reasoning"
-      ],
-      "performance_level": "high",
       "estimated_latency": "3-10s"
     },
     {
@@ -1494,7 +1612,7 @@
       "owned_by": "xingchen",
       "provider": "xingchen",
       "name": "Kimi-K2-thinking",
-      "description": "kimi-k2-thinking模型是月之暗面提供的具有通用 Agentic能力和推理能力的思考模型，它擅长深度推理，并可通过多步工具调用，帮助解决各类难题。",
+      "description": "Kimi-K2-thinking模型是月之暗面提供的具有通用Agentic能力和推理能力的思考模型，它擅长深度推理，并可通过多步工具调用，帮助解决各类难题。",
       "context_size": 262144,
       "context_label": "262K",
       "price_input": 4,
@@ -1518,9 +1636,7 @@
       "trial_scope": "none",
       "model_family": "kimi-k2-thinking",
       "model_variant": "thinking",
-      "aliases": [
-        "Kimi-K2-Thinking"
-      ],
+      "aliases": [],
       "tier": "large",
       "speed": "premium",
       "use_case": [
@@ -1565,9 +1681,7 @@
       "trial_scope": "none",
       "model_family": "kimi-k2",
       "model_variant": "instruct",
-      "aliases": [
-        "kimi-k2-instruct"
-      ],
+      "aliases": [],
       "tier": "medium",
       "speed": "standard",
       "use_case": [
@@ -1709,7 +1823,7 @@
       "owned_by": "xingchen",
       "provider": "xingchen",
       "name": "Qwen3-4B",
-      "description": "Qwen3-4B 是 Qwen 系列的轻量级因果语言模型，经预训练与后期优化，具备 40 亿参数规模，采用 36 层 Transformer 架构，原生支持 32K tokens 长上下文（通过 YaRN 技术可扩展至 131K tokens），兼顾高效推理与长文本处理能力，适用于中小规模场景的快速部署与多轮对话、文档分析等任务。",
+      "description": "Qwen3-4B 是 Qwen 系列的轻量级因果语言模型，经预训练与后期优化，具备 40 亿参数规模，采用 36 层 Transformer 架构，适用于中小规模场景的快速部署与多轮对话、文档分析等任务。",
       "context_size": 16384,
       "context_label": "16K",
       "price_input": 0.3,
@@ -1751,8 +1865,8 @@
       "created": 734822373,
       "owned_by": "xingchen",
       "provider": "xingchen",
-      "name": "Qwen_v2.5_7b_Instruct",
-      "description": "【可商用】Qwen_v2.5_7b_Instruct是由阿里巴巴集团Qwen团队研发的大型语言模型系列中的新成员。该模型拥有76.1亿参数，通过大规模多语言数据的预训练和高质量数据的后期微调，提高了其在自然语言理解和生成方面的能力。该模型在编程和数学领域表现出较强的知识和能力，能够处理复杂的编程任务和数学问题。Qwen_v2.5_7b_Instruct支持超过29种语言，支持长达128K toke",
+      "name": "Qwen2.5-7B-Instruct",
+      "description": "Qwen2.5-7B-Instruct是由阿里巴巴集团Qwen团队研发的大型语言模型系列中的新成员。该模型拥有76.1亿参数，通过大规模多语言数据的预训练和高质量数据的后期微调，提高了其在自然语言理解和生成方面的能力。该模型在编程和数学领域表现出较强的知识和能力，能够处理复杂的编程任务和数学问题。",
       "context_size": 32768,
       "context_label": "33K",
       "price_input": 0.5,
@@ -1772,9 +1886,12 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "qwen-v2.5-7b",
+      "model_family": "qwen2.5-7b",
       "model_variant": "instruct",
-      "aliases": [],
+      "aliases": [
+        "Qwen2.5-7B-Instruct"
+      ],
+      "parameter_count": 7000000000,
       "tier": "medium",
       "speed": "standard",
       "use_case": [
@@ -1793,7 +1910,7 @@
       "owned_by": "xingchen",
       "provider": "xingchen",
       "name": "Qwen3-14B",
-      "description": "Qwen3-14B 是 Qwen 系列中大型因果语言模型，经预训练与后期优化，具备 148 亿参数规模，采用 40 层 Transformer 架构，原生支持 32K tokens 长上下文（通过 YaRN 技术可扩展至 131K tokens），兼顾模型性能与长文本处理能力，适用于企业级推理、多轮对话及长文档分析等任务。",
+      "description": "Qwen3-14B 是 Qwen 系列中大型因果语言模型，经预训练与后期优化，具备 148 亿参数规模，采用 40 层 Transformer 架构，兼顾模型性能与长文本处理能力，适用于企业级推理、多轮对话及长文档分析等任务。",
       "context_size": 16384,
       "context_label": "16K",
       "price_input": 1,
@@ -1814,9 +1931,7 @@
       "free_quota": null,
       "trial_scope": "none",
       "model_family": "qwen3-14b",
-      "aliases": [
-        "Qwen3-14B"
-      ],
+      "aliases": [],
       "parameter_count": 14000000000,
       "tier": "medium",
       "speed": "standard",
@@ -1836,7 +1951,7 @@
       "owned_by": "xingchen",
       "provider": "xingchen",
       "name": "Qwen3-8B",
-      "description": "Qwen3-8B 是 Qwen 系列中大型因果语言模型，经预训练与后期优化，具备 82 亿参数规模，采用 36 层 Transformer 架构，原生支持 32K tokens 长上下文（通过 YaRN 技术可扩展至 131K tokens），兼顾模型效率与长文本处理能力，适用于企业级推理、多轮对话及长文档分析等任务。",
+      "description": "Qwen3-8B 是 Qwen 系列中大型因果语言模型，经预训练与后期优化，具备 82 亿参数规模，采用 36 层 Transformer 架构，兼顾模型效率与长文本处理能力，适用于企业级推理、多轮对话及长文档分析等任务。",
       "context_size": 16384,
       "context_label": "16K",
       "price_input": 0.5,
@@ -1913,46 +2028,6 @@
       "estimated_latency": "1-3s"
     },
     {
-      "id": "sp8-m70b-4ollm-max",
-      "object": "model",
-      "created": 1854352466,
-      "owned_by": "xingchen",
-      "provider": "xingchen",
-      "name": "星火角色扮演",
-      "description": "本模型专长于角色扮演和拟人回复方向。可多轮稳定保持一个用户自定义的角色人设，迁移性好，设定理解能力强。同时可在依照该角色的三观和语言风格基础上进行思考回复，回复语气和长度也倾向于真人风格。 适用于各种交互，闲聊及娱乐场景，可用于玩具，客服，娱乐软件等内容。",
-      "context_size": 32768,
-      "context_label": "33K",
-      "price_input": 7,
-      "price_output": 15.8,
-      "is_free": false,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "chat",
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
-      "model_family": "sp8-m70b-4ollm-max",
-      "aliases": [],
-      "tier": "medium",
-      "speed": "premium",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "1-3s"
-    },
-    {
       "id": "xspark13b6k",
       "object": "model",
       "created": 561279256,
@@ -1995,54 +2070,6 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "xdeepseekr1llama8b",
-      "object": "model",
-      "created": 691182730,
-      "owned_by": "xingchen",
-      "provider": "xingchen",
-      "name": "DeepSeek-R1-Distill-Llama-8B",
-      "description": "DeepSeek-R1-Distill-Llama-8B 是基于 DeepSeek-R1推理数据蒸馏训练的模型，基础模型为Llama-3.1-8B。在数学推理、代码生成等任务中表现卓越。",
-      "context_size": 8192,
-      "context_label": "8K",
-      "price_input": 1,
-      "price_output": 2,
-      "is_free": false,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "reasoning"
-      ],
-      "tags": [
-        "reasoning",
-        "chat",
-        "text-generation"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
-      "model_family": "deepseek-r1-distill-llama-8b",
-      "model_variant": "r1",
-      "aliases": [],
-      "parameter_count": 8000000000,
-      "tier": "medium",
-      "speed": "premium",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "1-3s"
-    },
-    {
       "id": "xsqwen2d53b",
       "object": "model",
       "created": 1087969650,
@@ -2052,8 +2079,8 @@
       "description": "【可商用】Qwen_v2.5_3b_Instruct是由阿里巴巴集团Qwen团队研发的Qwen2.5系列大型语言模型中的一个版本。该模型支持超过29种语言，支持长达32,768 token的输入，并能生成最多8,192 token的文本。相比于前代模型，Qwen_v2.5_3b_Instruct在自然语言理解、代码编写、数学解题以及多语言处理等多个方面都有显著增强，在指令执行、生成长文本、理解结构",
       "context_size": 8192,
       "context_label": "8K",
-      "price_input": 1,
-      "price_output": 2,
+      "price_input": 2,
+      "price_output": 8,
       "is_free": false,
       "capabilities": [
         "chat",
@@ -2134,8 +2161,8 @@
       "description": "【可商用】Qwen是阿里巴巴集团Qwen团队研发的大语言模型和大型多模态模型系列。目前，大语言模型已升级至Qwen2版本。无论是语言模型还是多模态模型，均在大规模多语言和多模态数据上进行预训练，并通过高质量数据进行后期微调以贴近人类偏好。Qwen具备自然语言理解、文本生成、视觉理解、音频理解、工具使用、角色扮演、作为AI Agent进行互动等多种能力。",
       "context_size": 8192,
       "context_label": "8K",
-      "price_input": 1,
-      "price_output": 2,
+      "price_input": 2,
+      "price_output": 4,
       "is_free": false,
       "capabilities": [
         "chat",
@@ -2164,41 +2191,6 @@
       ],
       "performance_level": "entry",
       "estimated_latency": "1-3s"
-    },
-    {
-      "id": "xssdxl",
-      "object": "model",
-      "created": 796788910,
-      "owned_by": "xingchen",
-      "provider": "xingchen",
-      "name": "StableDiffusion_XL_Base_1",
-      "description": "【可商用】SD XL 1.0由Stability AI研发并开源的文生图模型。",
-      "context_label": "unknown",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "image-generation"
-      ],
-      "tags": [
-        "image-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": null,
-      "trial_scope": "specific",
-      "model_family": "stablediffusion-xl-base-1",
-      "aliases": [],
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "creative-generation",
-        "art"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
     },
     {
       "id": "xqwen14bchat",
