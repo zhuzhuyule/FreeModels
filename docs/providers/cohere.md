@@ -21,8 +21,8 @@
 
 | 指标 | 数量 |
 |---|---:|
-| 总模型 | 30 |
-| 免费模型 | 30 |
+| 总模型 | 32 |
+| 免费模型 | 32 |
 | 付费可试用 | 0 |
 
 ## 免费策略
@@ -54,6 +54,8 @@ Trial key 永久免费：20 RPM、1000 requests/月，所有模型共享配额�
 | cohere  | `embed-multilingual-v3.0` | embed-multilingual-v3.0 | 512 | 限速免费 | 20 RPM / 1000 requests/month shared across all models on trial key |
 | cohere  | `embed-multilingual-v3.0-image` | embed-multilingual-v3.0-image | unknown | 限速免费 | 20 RPM / 1000 requests/month shared across all models on trial key |
 | cohere  | `embed-v4.0` | embed-v4.0 | 8K | 限速免费 | 20 RPM / 1000 requests/month shared across all models on trial key |
+| cohere  | `north-mini-code-1-0` | north-mini-code-1-0 | 436K | 限速免费 | 20 RPM / 1000 requests/month shared across all models on trial key |
+| cohere  | `north-small-translate-09-2026` | north-small-translate-09-2026 | 33K | 限速免费 | 20 RPM / 1000 requests/month shared across all models on trial key |
 | cohere  | `rerank-english-v3.0` | rerank-english-v3.0 | 4K | 限速免费 | 20 RPM / 1000 requests/month shared across all models on trial key |
 | cohere  | `rerank-multilingual-v3.0` | rerank-multilingual-v3.0 | 4K | 限速免费 | 20 RPM / 1000 requests/month shared across all models on trial key |
 | cohere  | `rerank-v3.5` | rerank-v3.5 | 4K | 限速免费 | 20 RPM / 1000 requests/month shared across all models on trial key |
