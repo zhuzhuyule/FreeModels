@@ -16,6 +16,7 @@ export interface NotifyPayload {
   previousTotal?: number;
   previousFreeCount?: number;
   previousByProvider?: Record<string, number>;
+  reviewRequired?: boolean;
 }
 
 const SEPARATOR = '─────────────────────────';
@@ -54,6 +55,8 @@ function groupByProvider(ids: string[]): Map<string, string[]> {
   return map;
 }
 
+const MAX_DETAIL_ITEMS = 50;
+
 function renderProviderGroup(label: string, ids: string[], emoji: string): string[] {
   if (ids.length === 0) return [];
   const groups = groupByProvider(ids);
@@ -61,6 +64,13 @@ function renderProviderGroup(label: string, ids: string[], emoji: string): strin
   const lines: string[] = [];
   lines.push('');
   lines.push(`${emoji} ${label} ${ids.length} 个`);
+  if (ids.length > MAX_DETAIL_ITEMS) {
+    for (const [provider, items] of sorted) {
+      lines.push(`  ${provider}: ${items.length}`);
+    }
+    lines.push('  (增减过大，明细见 commit/PR diff)');
+    return lines;
+  }
   for (const [provider, items] of sorted) {
     lines.push(`  ${provider} (${items.length})`);
     for (const id of trimList(items, 3)) {
@@ -106,6 +116,9 @@ export function formatNotification(p: NotifyPayload): string {
   const lines: string[] = [];
   lines.push(`${headEmoji}  Model Hub 同步完成`);
   lines.push(`${time} UTC · 用时 ${dur}s`);
+  if (p.reviewRequired) {
+    lines.push('🚧 检测到异常：本次改动已转 PR 审核，未直写 master');
+  }
   lines.push(SEPARATOR);
 
   lines.push('📊 数据统计');

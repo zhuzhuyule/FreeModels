@@ -434,8 +434,8 @@ async function main(): Promise<void> {
     console.warn('\n[Aggregator] ⚠ Anomalies detected:');
     for (const w of warnings) console.warn(`  - ${w}`);
     if (strictMode) {
-      console.error('[Aggregator] Strict mode: aborting due to anomalies.');
-      process.exit(2);
+      // 不在这里 exit: 先写数据 + 发通知, main 末尾再以退出码 2 路由到 PR 审核.
+      console.error('[Aggregator] Strict mode: anomalies will gate this run into PR review (exit 2 after output).');
     }
   }
 
@@ -478,8 +478,14 @@ async function main(): Promise<void> {
       previousTotal: previous?.total,
       previousFreeCount: previous?.freeCount,
       previousByProvider: previous?.byProvider,
+      reviewRequired: strictMode && warnings.length > 0,
     };
     await notifyWechat(payload);
+  }
+
+  if (strictMode && warnings.length > 0 && !skipNotify) {
+    console.error('[Aggregator] Strict mode: exiting 2 for PR review gating.');
+    process.exit(2);
   }
 }
 
