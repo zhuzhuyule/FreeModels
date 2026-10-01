@@ -33,18 +33,23 @@ function trimList(items: string[], max = 5): string[] {
   return [...items.slice(0, max), `…还有 ${items.length - max} 个`];
 }
 
-function providerOf(id: string): string {
-  const idx = id.indexOf('/');
-  return idx > 0 ? id.slice(0, idx) : '(未分类)';
+// addedIds/removedIds 是 `provider:modelId` 复合键 (aggregator 构造).
+// 分组必须按第一个 ':' 切, 不能按 '/' — modelId 本身含 '/'
+// (如 cloudflare 的 @cf/openai/gpt-oss-120b, google 的 models/gemini-...).
+function splitComposite(id: string): { provider: string; modelId: string } {
+  const idx = id.indexOf(':');
+  return idx > 0
+    ? { provider: id.slice(0, idx), modelId: id.slice(idx + 1) }
+    : { provider: '(未分类)', modelId: id };
 }
 
 function groupByProvider(ids: string[]): Map<string, string[]> {
   const map = new Map<string, string[]>();
   for (const id of ids) {
-    const p = providerOf(id);
-    const arr = map.get(p) ?? [];
-    arr.push(id);
-    map.set(p, arr);
+    const { provider, modelId } = splitComposite(id);
+    const arr = map.get(provider) ?? [];
+    arr.push(modelId);
+    map.set(provider, arr);
   }
   return map;
 }
@@ -59,8 +64,7 @@ function renderProviderGroup(label: string, ids: string[], emoji: string): strin
   for (const [provider, items] of sorted) {
     lines.push(`  ${provider} (${items.length})`);
     for (const id of trimList(items, 3)) {
-      const short = id.startsWith(provider + '/') ? id.slice(provider.length + 1) : id;
-      lines.push(`    · ${short}`);
+      lines.push(`    · ${id}`);
     }
   }
   return lines;
@@ -86,7 +90,7 @@ function renderProviderDelta(
   const maxName = deltas.reduce((acc, d) => Math.max(acc, d.name.length), 0);
   for (const d of deltas) {
     const sign = d.delta > 0 ? `+${d.delta}` : `${d.delta}`;
-    const tag = d.delta > 0 ? '🆕' : '➖';
+    const tag = d.delta > 0 ? '🔺' : '🔻';
     lines.push(`  ${tag} ${d.name.padEnd(maxName)}  ${d.prev} → ${d.curr}  (${sign})`);
   }
   return lines;
