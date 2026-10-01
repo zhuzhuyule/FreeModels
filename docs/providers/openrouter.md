@@ -21,8 +21,8 @@
 
 | 指标 | 数量 |
 |---|---:|
-| 总模型 | 24 |
-| 免费模型 | 24 |
+| 总模型 | 20 |
+| 免费模型 | 20 |
 | 付费可试用 | 0 |
 
 ## 免费策略
@@ -33,27 +33,23 @@
 
 | Provider | Model ID | 名称 | 上下文 | 免费类型 | 限制 |
 |---|---|---|---:|---|---|
-| openrouter  | `cognitivecomputations/dolphin-mistral-24b-venice-edition:free` | Venice: Uncensored (free) | 33K | 限速免费 | 8 RPM / Free tier: 8 req/min (per endpoint, basic account) |
+| openrouter  | `cohere/north-mini-code:free` | Cohere: North Mini Code (free) | 256K | 限速免费 | Free tier with rate limits (see openrouter.ai) |
+| openrouter  | `dots-studio/dots-3-note-preview:free` | Dots Studio: Dots3-Note Preview (free) | 512K | 限速免费 | Free tier with rate limits (see openrouter.ai) |
+| openrouter  | `free` | Free Models Router | 200K | 限速免费 | Free tier with rate limits (see openrouter.ai) |
 | openrouter  | `google/gemma-4-26b-a4b-it:free` | Google: Gemma 4 26B A4B  (free) | 262K | 限速免费 | Free tier with rate limits (see openrouter.ai) |
 | openrouter  | `google/gemma-4-31b-it:free` | Google: Gemma 4 31B (free) | 262K | 限速免费 | Free tier with rate limits (see openrouter.ai) |
-| openrouter  | `liquid/lfm-2.5-1.2b-instruct:free` | LiquidAI: LFM2.5-1.2B-Instruct (free) | 33K | 限速免费 | Free tier with rate limits (see openrouter.ai) |
-| openrouter  | `liquid/lfm-2.5-1.2b-thinking:free` | LiquidAI: LFM2.5-1.2B-Thinking (free) | 33K | 限速免费 | Free tier with rate limits (see openrouter.ai) |
-| openrouter  | `meta-llama/llama-3.2-3b-instruct:free` | Meta: Llama 3.2 3B Instruct (free) | 131K | 限速免费 | 8 RPM / Free tier: 8 req/min (per endpoint, basic account) |
-| openrouter  | `meta-llama/llama-3.3-70b-instruct:free` | Meta: Llama 3.3 70B Instruct (free) | 131K | 限速免费 | 8 RPM / Free tier: 8 req/min (per endpoint, basic account) |
-| openrouter  | `moonshotai/kimi-k2.6:free` | MoonshotAI: Kimi K2.6 (free) | 262K | 限速免费 | Free tier with rate limits (see openrouter.ai) |
-| openrouter  | `nousresearch/hermes-3-llama-3.1-405b:free` | Nous: Hermes 3 405B Instruct (free) | 131K | 限速免费 | 8 RPM / Free tier: 8 req/min (per endpoint, basic account) |
-| openrouter  | `nvidia/nemotron-3-nano-30b-a3b:free` | NVIDIA: Nemotron 3 Nano 30B A3B (free) | 256K | 限速免费 | Free tier with rate limits (see openrouter.ai) |
+| openrouter  | `google/lyria-3-clip-preview` | Google: Lyria 3 Clip Preview | 1M | 限速免费 | Free tier with rate limits (see openrouter.ai) |
+| openrouter  | `google/lyria-3-pro-preview` | Google: Lyria 3 Pro Preview | 1M | 限速免费 | Free tier with rate limits (see openrouter.ai) |
+| openrouter  | `inclusionai/ling-3.0-flash-sante:free` | inclusionAI: Ling 3.0 Flash Sante (free) | 262K | 限速免费 | Free tier with rate limits (see openrouter.ai) |
+| openrouter  | `liquid/lfm-2.5-2.6b:free` | LiquidAI: LFM2.5-2.6B (free) | 66K | 限速免费 | Free tier with rate limits (see openrouter.ai) |
 | openrouter  | `nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free` | NVIDIA: Nemotron 3 Nano Omni (free) | 256K | 限速免费 | Free tier with rate limits (see openrouter.ai) |
-| openrouter  | `nvidia/nemotron-3-super-120b-a12b:free` | NVIDIA: Nemotron 3 Super (free) | 1M | 限速免费 | Free tier with rate limits (see openrouter.ai) |
+| openrouter  | `nvidia/nemotron-3-super-120b-a12b:free` | NVIDIA: Nemotron 3 Super (free) | 262K | 限速免费 | Free tier with rate limits (see openrouter.ai) |
 | openrouter  | `nvidia/nemotron-3-ultra-550b-a55b:free` | NVIDIA: Nemotron 3 Ultra (free) | 1M | 限速免费 | Free tier with rate limits (see openrouter.ai) |
 | openrouter  | `nvidia/nemotron-3.5-content-safety:free` | NVIDIA: Nemotron 3.5 Content Safety (free) | 128K | 限速免费 | Free tier with rate limits (see openrouter.ai) |
-| openrouter  | `nvidia/nemotron-nano-12b-v2-vl:free` | NVIDIA: Nemotron Nano 12B 2 VL (free) | 128K | 限速免费 | Free tier with rate limits (see openrouter.ai) |
-| openrouter  | `nvidia/nemotron-nano-9b-v2:free` | NVIDIA: Nemotron Nano 9B V2 (free) | 128K | 限速免费 | 50 RPM / Free tier: 50 req/min (per endpoint, basic account) |
-| openrouter  | `openai/gpt-oss-120b:free` | OpenAI: gpt-oss-120b (free) | 131K | 限速免费 | 5000 RPD / Free tier: 5000 req/day (per endpoint, basic account) |
-| openrouter  | `openai/gpt-oss-20b:free` | OpenAI: gpt-oss-20b (free) | 131K | 限速免费 | 10000 RPD / Free tier: 10000 req/day (per endpoint, basic account) |
-| openrouter  | `owl-alpha` | Owl Alpha | 1M | 限速免费 | Free tier with rate limits (see openrouter.ai) |
-| openrouter  | `poolside/laguna-m.1:free` | Poolside: Laguna M.1 (free) | 262K | 限速免费 | Free tier with rate limits (see openrouter.ai) |
-| openrouter  | `poolside/laguna-xs.2:free` | Poolside: Laguna XS.2 (free) | 262K | 限速免费 | Free tier with rate limits (see openrouter.ai) |
-| openrouter  | `qwen/qwen3-coder:free` | Qwen: Qwen3 Coder 480B A35B (free) | 1M | 限速免费 | 8 RPM / Free tier: 8 req/min (per endpoint, basic account) |
-| openrouter  | `qwen/qwen3-next-80b-a3b-instruct:free` | Qwen: Qwen3 Next 80B A3B Instruct (free) | 262K | 限速免费 | 8 RPM / Free tier: 8 req/min (per endpoint, basic account) |
-| openrouter  | `z-ai/glm-4.5-air:free` | Z.ai: GLM 4.5 Air (free) | 131K | 限速免费 | Free tier with rate limits (see openrouter.ai) |
+| openrouter  | `nvidia/nemotron-3.5-lightning:free` | NVIDIA: Nemotron 3.5 Lightning (free) | 1M | 限速免费 | Free tier with rate limits (see openrouter.ai) |
+| openrouter  | `poolside/laguna-s-2.1:free` | Poolside: Laguna S 2.1 (free) | 262K | 限速免费 | Free tier with rate limits (see openrouter.ai) |
+| openrouter  | `poolside/laguna-xs-2.1:free` | Poolside: Laguna XS 2.1 (free) | 262K | 限速免费 | Free tier with rate limits (see openrouter.ai) |
+| openrouter  | `qwen/qwen3.8-27b:free` | Qwen: Qwen3.8 27B (free) | 262K | 限速免费 | Free tier with rate limits (see openrouter.ai) |
+| openrouter  | `stealth/space-bunny-alpha` | Space Bunny Alpha | 1M | 限速免费 | Free tier with rate limits (see openrouter.ai) |
+| openrouter  | `thinkingmachines/inkling-small:free` | Thinking Machines: Inkling Small (free) | 1M | 限速免费 | Free tier with rate limits (see openrouter.ai) |
+| openrouter  | `thinkingmachines/inkling:free` | Thinking Machines: Inkling (free) | 1M | 限速免费 | Free tier with rate limits (see openrouter.ai) |
