@@ -18,7 +18,7 @@ import type {
   ProviderPlugin,
   CachedCapabilities,
 } from './types.js';
-import { toOpenAICompatible } from './types.js';
+import { toOpenAICompatible, toCanonicalId } from './types.js';
 import { groupByFamily } from './family.js';
 import { classifyFamilyWithLlm, getLlmStats, isLlmEnabled, initLlmContext, flushLlmContext } from './llm.js';
 import { notifyWechat, type NotifyPayload } from './notify.js';
@@ -410,9 +410,9 @@ async function main(): Promise<void> {
   let freeCount = 0;
   for (const m of allModels) {
     byProvider[m.provider] = (byProvider[m.provider] ?? 0) + 1;
-    // 复合键, 与 snapshotPrevious 保持一致 (跨 provider 同名 model 合法共存).
-    // 这里用内部 modelId 而非 canonical id, 因为对比的是同 schema 内的标识.
-    currentIds.add(`${m.provider}:${m.modelId}`);
+    // 键必须与 snapshotPrevious 同口径: 外部 canonical id (剥掉 provider
+    // 前缀). 用内部 modelId 会让所有带前缀的模型每天被误报成"新增+移除"成对噪音.
+    currentIds.add(`${m.provider}:${toCanonicalId(m.provider, m.modelId)}`);
     if (m.isFree) freeCount++;
   }
   const current: ProviderSnapshot = {

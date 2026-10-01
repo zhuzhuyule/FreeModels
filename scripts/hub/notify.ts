@@ -126,6 +126,12 @@ export function formatNotification(p: NotifyPayload): string {
   lines.push(`  免费模型：${diffNum(p.freeCount, p.previousFreeCount)}`);
   lines.push(`  模型家族：${p.totalFamilies}（跨家 ${p.crossProviderFamilies}）`);
 
+  // 无增删且无异常的日子: 到此为止, 不铺 provider 明细.
+  if (!hasChange && !hasError) {
+    lines.push('✅ 与上次存量一致，无模型增减');
+    return lines.join('\n');
+  }
+
   lines.push(...renderProviderDelta(p.byProvider, p.previousByProvider));
   lines.push(...renderProviderGroup('新增', p.addedIds, '🆕'));
   lines.push(...renderProviderGroup('移除', p.removedIds, '➖'));
