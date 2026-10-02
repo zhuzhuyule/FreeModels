@@ -21,8 +21,8 @@
 
 | 指标 | 数量 |
 |---|---:|
-| 总模型 | 20 |
-| 免费模型 | 20 |
+| 总模型 | 21 |
+| 免费模型 | 21 |
 | 付费可试用 | 0 |
 
 ## 免费策略
@@ -33,6 +33,7 @@
 
 | Provider | Model ID | 名称 | 上下文 | 免费类型 | 限制 |
 |---|---|---|---:|---|---|
+| openrouter  | `apodex/apodex-1.1-mini:free` | Apodex: Apodex 1.1 Mini (free) | 262K | 限速免费 | Free tier with rate limits (see openrouter.ai) |
 | openrouter  | `cohere/north-mini-code:free` | Cohere: North Mini Code (free) | 256K | 限速免费 | Free tier with rate limits (see openrouter.ai) |
 | openrouter  | `dots-studio/dots-3-note-preview:free` | Dots Studio: Dots3-Note Preview (free) | 512K | 限速免费 | Free tier with rate limits (see openrouter.ai) |
 | openrouter  | `free` | Free Models Router | 200K | 限速免费 | Free tier with rate limits (see openrouter.ai) |

@@ -1,8 +1,8 @@
 {
   "object": "list",
   "view": "multimodal",
-  "updated_at": "2026-10-01T08:29:46.383Z",
-  "total": 93,
+  "updated_at": "2026-10-02T08:05:21.247Z",
+  "total": 86,
   "filters": {
     "tags": "vision"
   },
@@ -818,6 +818,47 @@
       "estimated_latency": "< 1s"
     },
     {
+      "id": "@cf/cloudflare/clef",
+      "object": "model",
+      "created": 1705118153,
+      "owned_by": "cloudflare",
+      "provider": "cloudflare",
+      "name": "@cf/cloudflare/clef",
+      "description": "Clef is a 27B multimodal decision model that turns a state and a schema of typed questions into decisions. It reads the state as text, JSON, images, or video, and returns a probability for every allowed option of every question.",
+      "context_size": 65536,
+      "context_label": "66K",
+      "price_input": 0.24,
+      "is_free": true,
+      "capabilities": [
+        "text-generation"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+      },
+      "trial_scope": "all",
+      "model_family": "clef",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
       "id": "@cf/microsoft/resnet-50",
       "object": "model",
       "created": 1635334283,
@@ -1144,7 +1185,6 @@
       "model_family": "llama-3.2-11b-vision",
       "model_variant": "vision",
       "aliases": [
-        "github/Llama-3-2-11B-Vision-Instruct",
         "meta/llama-3.2-11b-vision-instruct"
       ],
       "parameter_count": 11000000000,
@@ -1340,10 +1380,49 @@
       "trial_scope": "all",
       "model_family": "llama-4-scout-17b-16e",
       "model_variant": "instruct",
-      "aliases": [
-        "github/Llama-4-Scout-17B-16E-Instruct"
-      ],
+      "aliases": [],
       "parameter_count": 17000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "@cf/cloudflare/clef-flash",
+      "object": "model",
+      "created": 1666428942,
+      "owned_by": "cloudflare",
+      "provider": "cloudflare",
+      "name": "@cf/cloudflare/clef-flash",
+      "description": "Clef-flash is a fast 9B multimodal decision model that turns a state and a schema of typed questions into decisions. It reads the state as text, JSON, images, or video, and returns a probability for every allowed option of every question.",
+      "context_size": 65536,
+      "context_label": "66K",
+      "price_input": 0.09,
+      "is_free": true,
+      "capabilities": [
+        "text-generation"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+      },
+      "trial_scope": "all",
+      "model_family": "clef-flash",
+      "aliases": [],
       "tier": "large",
       "speed": "fast",
       "use_case": [
@@ -2303,435 +2382,6 @@
       "estimated_latency": "3-10s"
     },
     {
-      "id": "Phi-4-multimodal-instruct",
-      "object": "model",
-      "created": 1579706809,
-      "owned_by": "github",
-      "provider": "github",
-      "name": "Phi-4-multimodal-instruct",
-      "description": "First small multimodal model to have 3 modality inputs (text, audio, image), excelling in quality and efficiency",
-      "context_size": 128000,
-      "context_label": "128K",
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "vision",
-        "text-generation",
-        "chat",
-        "multimodal"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
-      },
-      "trial_scope": "all",
-      "model_family": "phi-4-multimodal",
-      "model_variant": "multimodal",
-      "aliases": [],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "image-understanding",
-        "visual-q&a",
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "gpt-5-chat",
-      "object": "model",
-      "created": 934274127,
-      "owned_by": "github",
-      "provider": "github",
-      "name": "OpenAI gpt-5-chat (preview)",
-      "description": "gpt-5-chat (preview) is an advanced, natural, multimodal, and context-aware conversations for enterprise applications.",
-      "context_size": 200000,
-      "context_label": "200K",
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "vision",
-        "text-generation",
-        "chat",
-        "multimodal"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
-      },
-      "trial_scope": "all",
-      "model_family": "gpt-5",
-      "model_variant": "chat",
-      "aliases": [
-        "github/gpt-5"
-      ],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "image-understanding",
-        "visual-q&a",
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "gpt-4o-mini",
-      "object": "model",
-      "created": 461341420,
-      "owned_by": "github",
-      "provider": "github",
-      "name": "OpenAI GPT-4o mini",
-      "description": "An affordable, efficient AI solution for diverse text and image tasks.",
-      "context_size": 131072,
-      "context_label": "131K",
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "vision",
-        "text-generation",
-        "chat",
-        "multimodal"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
-      },
-      "trial_scope": "all",
-      "model_family": "gpt-4o-mini",
-      "aliases": [],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "image-understanding",
-        "visual-q&a",
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "gpt-4o",
-      "object": "model",
-      "created": 1254705778,
-      "owned_by": "github",
-      "provider": "github",
-      "name": "OpenAI GPT-4o",
-      "description": "OpenAI's most advanced multimodal model in the gpt-4o family. Can handle both text and image inputs.",
-      "context_size": 131072,
-      "context_label": "131K",
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "vision",
-        "text-generation",
-        "chat",
-        "multimodal"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
-      },
-      "trial_scope": "all",
-      "model_family": "gpt-4o",
-      "aliases": [],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "image-understanding",
-        "visual-q&a",
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "Llama-3-2-90B-Vision-Instruct",
-      "object": "model",
-      "created": 595156925,
-      "owned_by": "github",
-      "provider": "github",
-      "name": "Llama-3.2-90B-Vision-Instruct",
-      "description": "Advanced image reasoning capabilities for visual understanding agentic apps.",
-      "context_size": 128000,
-      "context_label": "128K",
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "reasoning",
-        "vision",
-        "chat",
-        "text-generation",
-        "multimodal"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
-      },
-      "trial_scope": "all",
-      "model_family": "llama-3.2-90b-vision",
-      "model_variant": "vision",
-      "aliases": [
-        "meta/llama-3.2-90b-vision-instruct"
-      ],
-      "parameter_count": 90000000000,
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "image-understanding",
-        "visual-q&a",
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "Llama-3-2-11B-Vision-Instruct",
-      "object": "model",
-      "created": 1137283164,
-      "owned_by": "github",
-      "provider": "github",
-      "name": "Llama-3.2-11B-Vision-Instruct",
-      "description": "Excels in image reasoning capabilities on high-res images for visual understanding apps.",
-      "context_size": 128000,
-      "context_label": "128K",
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "reasoning",
-        "vision",
-        "chat",
-        "text-generation",
-        "multimodal"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
-      },
-      "trial_scope": "all",
-      "model_family": "llama-3.2-11b-vision",
-      "model_variant": "vision",
-      "aliases": [
-        "cloudflare/@cf/meta/llama-3.2-11b-vision-instruct",
-        "meta/llama-3.2-11b-vision-instruct"
-      ],
-      "parameter_count": 11000000000,
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "image-understanding",
-        "visual-q&a",
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "Llama-4-Maverick-17B-128E-Instruct-FP8",
-      "object": "model",
-      "created": 894047558,
-      "owned_by": "github",
-      "provider": "github",
-      "name": "Llama 4 Maverick 17B 128E Instruct FP8",
-      "description": "Llama 4 Maverick 17B 128E Instruct FP8 is great at precise image understanding and creative writing, offering high quality at a lower price compared to Llama 3.3 70B",
-      "context_size": 1000000,
-      "context_label": "1M",
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "vision",
-        "chat",
-        "text-generation",
-        "multimodal"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
-      },
-      "trial_scope": "all",
-      "model_family": "llama-4-maverick-17b-128e",
-      "model_variant": "instruct",
-      "quantization": "fp8",
-      "aliases": [
-        "sambanova/Llama-4-Maverick-17B-128E-Instruct"
-      ],
-      "parameter_count": 17000000000,
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "image-understanding",
-        "visual-q&a",
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "mistral-small-2503",
-      "object": "model",
-      "created": 531792016,
-      "owned_by": "github",
-      "provider": "github",
-      "name": "Mistral Small 3.1",
-      "description": "Enhanced Mistral Small 3 with multimodal capabilities and a 128k context length.",
-      "context_size": 128000,
-      "context_label": "128K",
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "vision",
-        "chat",
-        "text-generation",
-        "multimodal"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
-      },
-      "trial_scope": "all",
-      "model_family": "mistral-small-3.1",
-      "aliases": [],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "image-understanding",
-        "visual-q&a",
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "mistral-medium-2505",
-      "object": "model",
-      "created": 1947813446,
-      "owned_by": "github",
-      "provider": "github",
-      "name": "Mistral Medium 3 (25.05)",
-      "description": "Mistral Medium 3 is an advanced Large Language Model (LLM) with state-of-the-art reasoning, knowledge, coding and vision capabilities.",
-      "context_size": 128000,
-      "context_label": "128K",
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "reasoning",
-        "vision",
-        "text-generation",
-        "chat",
-        "multimodal"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
-      },
-      "trial_scope": "all",
-      "model_family": "mistral-medium-3-(25.05)",
-      "aliases": [],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "image-understanding",
-        "visual-q&a",
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
       "id": "models/gemini-3.1-flash-image-preview",
       "object": "model",
       "created": 713181130,
@@ -2907,8 +2557,7 @@
       "model_family": "llama-3.2-11b-vision",
       "model_variant": "vision",
       "aliases": [
-        "cloudflare/@cf/meta/llama-3.2-11b-vision-instruct",
-        "github/Llama-3-2-11B-Vision-Instruct"
+        "cloudflare/@cf/meta/llama-3.2-11b-vision-instruct"
       ],
       "parameter_count": 11000000000,
       "tier": "large",
@@ -2950,9 +2599,7 @@
       "trial_scope": "specific",
       "model_family": "llama-3.2-90b-vision",
       "model_variant": "vision",
-      "aliases": [
-        "github/Llama-3-2-90B-Vision-Instruct"
-      ],
+      "aliases": [],
       "parameter_count": 90000000000,
       "tier": "large",
       "speed": "fast",

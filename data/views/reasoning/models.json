@@ -1,8 +1,8 @@
 {
   "object": "list",
   "view": "reasoning",
-  "updated_at": "2026-10-01T08:29:46.382Z",
-  "total": 74,
+  "updated_at": "2026-10-02T08:05:21.246Z",
+  "total": 62,
   "filters": {
     "tags": "reasoning"
   },
@@ -1156,7 +1156,6 @@
       "model_family": "llama-3.2-11b-vision",
       "model_variant": "vision",
       "aliases": [
-        "github/Llama-3-2-11B-Vision-Instruct",
         "meta/llama-3.2-11b-vision-instruct"
       ],
       "parameter_count": 11000000000,
@@ -1679,631 +1678,6 @@
       "estimated_latency": "3-10s"
     },
     {
-      "id": "Phi-4-reasoning",
-      "object": "model",
-      "created": 1293811252,
-      "owned_by": "github",
-      "provider": "github",
-      "name": "Phi-4-reasoning",
-      "description": "State-of-the-art open-weight reasoning model.",
-      "context_size": 32768,
-      "context_label": "33K",
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "reasoning",
-        "text-generation",
-        "chat"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
-      },
-      "trial_scope": "all",
-      "model_family": "phi-4-reasoning",
-      "model_variant": "reasoning",
-      "aliases": [],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "Phi-4-mini-reasoning",
-      "object": "model",
-      "created": 1364244698,
-      "owned_by": "github",
-      "provider": "github",
-      "name": "Phi-4-mini-reasoning",
-      "description": "Lightweight math reasoning model optimized for multi-step problem solving",
-      "context_size": 128000,
-      "context_label": "128K",
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "reasoning",
-        "text-generation",
-        "chat"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
-      },
-      "trial_scope": "all",
-      "model_family": "phi-4-mini-reasoning",
-      "model_variant": "reasoning",
-      "aliases": [],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "Phi-4-mini-instruct",
-      "object": "model",
-      "created": 821970876,
-      "owned_by": "github",
-      "provider": "github",
-      "name": "Phi-4-mini-instruct",
-      "description": "3.8B parameters Small Language Model outperforming larger models in reasoning, math, coding, and function-calling",
-      "context_size": 128000,
-      "context_label": "128K",
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "reasoning",
-        "text-generation",
-        "chat"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
-      },
-      "trial_scope": "all",
-      "model_family": "phi-4-mini",
-      "model_variant": "instruct",
-      "aliases": [],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "o1-preview",
-      "object": "model",
-      "created": 1871391782,
-      "owned_by": "github",
-      "provider": "github",
-      "name": "OpenAI o1-preview",
-      "description": "Focused on advanced reasoning and solving complex problems, including math and science tasks. Ideal for applications that require deep contextual understanding and agentic workflows.",
-      "context_size": 128000,
-      "context_label": "128K",
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "reasoning",
-        "chat",
-        "text-generation"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
-      },
-      "trial_scope": "all",
-      "model_family": "o1-preview",
-      "aliases": [],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "o1",
-      "object": "model",
-      "created": 1817828937,
-      "owned_by": "github",
-      "provider": "github",
-      "name": "OpenAI o1",
-      "description": "Focused on advanced reasoning and solving complex problems, including math and science tasks. Ideal for applications that require deep contextual understanding and agentic workflows.",
-      "context_size": 200000,
-      "context_label": "200K",
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "reasoning",
-        "chat",
-        "text-generation"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
-      },
-      "trial_scope": "all",
-      "model_family": "o1",
-      "aliases": [],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "Llama-3-3-70B-Instruct",
-      "object": "model",
-      "created": 1125580093,
-      "owned_by": "github",
-      "provider": "github",
-      "name": "Llama-3.3-70B-Instruct",
-      "description": "Llama 3.3 70B Instruct offers enhanced reasoning, math, and instruction following with performance comparable to Llama 3.1 405B.",
-      "context_size": 128000,
-      "context_label": "128K",
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "reasoning",
-        "chat",
-        "text-generation"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
-      },
-      "trial_scope": "all",
-      "model_family": "llama-3.3-70b",
-      "model_variant": "instruct",
-      "aliases": [],
-      "parameter_count": 70000000000,
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "Llama-3-2-90B-Vision-Instruct",
-      "object": "model",
-      "created": 595156925,
-      "owned_by": "github",
-      "provider": "github",
-      "name": "Llama-3.2-90B-Vision-Instruct",
-      "description": "Advanced image reasoning capabilities for visual understanding agentic apps.",
-      "context_size": 128000,
-      "context_label": "128K",
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "reasoning",
-        "vision",
-        "chat",
-        "text-generation",
-        "multimodal"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
-      },
-      "trial_scope": "all",
-      "model_family": "llama-3.2-90b-vision",
-      "model_variant": "vision",
-      "aliases": [
-        "meta/llama-3.2-90b-vision-instruct"
-      ],
-      "parameter_count": 90000000000,
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "image-understanding",
-        "visual-q&a",
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "Llama-3-2-11B-Vision-Instruct",
-      "object": "model",
-      "created": 1137283164,
-      "owned_by": "github",
-      "provider": "github",
-      "name": "Llama-3.2-11B-Vision-Instruct",
-      "description": "Excels in image reasoning capabilities on high-res images for visual understanding apps.",
-      "context_size": 128000,
-      "context_label": "128K",
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "reasoning",
-        "vision",
-        "chat",
-        "text-generation",
-        "multimodal"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
-      },
-      "trial_scope": "all",
-      "model_family": "llama-3.2-11b-vision",
-      "model_variant": "vision",
-      "aliases": [
-        "cloudflare/@cf/meta/llama-3.2-11b-vision-instruct",
-        "meta/llama-3.2-11b-vision-instruct"
-      ],
-      "parameter_count": 11000000000,
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "image-understanding",
-        "visual-q&a",
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "Llama-4-Scout-17B-16E-Instruct",
-      "object": "model",
-      "created": 1291378253,
-      "owned_by": "github",
-      "provider": "github",
-      "name": "Llama 4 Scout 17B 16E Instruct",
-      "description": "Llama 4 Scout 17B 16E Instruct is great at multi-document summarization, parsing extensive user activity for personalized tasks, and reasoning over vast codebases.",
-      "context_size": 10000000,
-      "context_label": "10M",
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "reasoning",
-        "chat",
-        "text-generation"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
-      },
-      "trial_scope": "all",
-      "model_family": "llama-4-scout-17b-16e",
-      "model_variant": "instruct",
-      "aliases": [
-        "cloudflare/@cf/meta/llama-4-scout-17b-16e-instruct"
-      ],
-      "parameter_count": 17000000000,
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "mistral-medium-2505",
-      "object": "model",
-      "created": 1947813446,
-      "owned_by": "github",
-      "provider": "github",
-      "name": "Mistral Medium 3 (25.05)",
-      "description": "Mistral Medium 3 is an advanced Large Language Model (LLM) with state-of-the-art reasoning, knowledge, coding and vision capabilities.",
-      "context_size": 128000,
-      "context_label": "128K",
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "reasoning",
-        "vision",
-        "text-generation",
-        "chat",
-        "multimodal"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
-      },
-      "trial_scope": "all",
-      "model_family": "mistral-medium-3-(25.05)",
-      "aliases": [],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "image-understanding",
-        "visual-q&a",
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "DeepSeek-V3-0324",
-      "object": "model",
-      "created": 983049015,
-      "owned_by": "github",
-      "provider": "github",
-      "name": "DeepSeek-V3-0324",
-      "description": "DeepSeek-V3-0324 demonstrates notable improvements over its predecessor, DeepSeek-V3, in several key aspects, including enhanced reasoning, improved function calling, and superior code generation capabilities.",
-      "context_size": 128000,
-      "context_label": "128K",
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "reasoning",
-        "chat",
-        "text-generation"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
-      },
-      "trial_scope": "all",
-      "model_family": "deepseek-v3",
-      "aliases": [
-        "sambanova/DeepSeek-V3-0324"
-      ],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "DeepSeek-R1-0528",
-      "object": "model",
-      "created": 1932222199,
-      "owned_by": "github",
-      "provider": "github",
-      "name": "DeepSeek-R1-0528",
-      "description": "The DeepSeek R1 0528 model has improved reasoning capabilities, this version also offers a reduced hallucination rate, enhanced support for function calling, and better experience for vibe coding.",
-      "context_size": 128000,
-      "context_label": "128K",
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "reasoning",
-        "text-generation",
-        "chat"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
-      },
-      "trial_scope": "all",
-      "model_family": "deepseek-r1",
-      "model_variant": "r1",
-      "aliases": [
-        "github/DeepSeek-R1",
-        "sambanova/DeepSeek-R1-0528"
-      ],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "DeepSeek-R1",
-      "object": "model",
-      "created": 197420051,
-      "owned_by": "github",
-      "provider": "github",
-      "name": "DeepSeek-R1",
-      "description": "DeepSeek-R1 excels at reasoning tasks using a step-by-step training process, such as language, scientific reasoning, and coding tasks.",
-      "context_size": 128000,
-      "context_label": "128K",
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "reasoning",
-        "text-generation",
-        "chat"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
-      },
-      "trial_scope": "all",
-      "model_family": "deepseek-r1",
-      "model_variant": "r1",
-      "aliases": [
-        "github/DeepSeek-R1-0528",
-        "sambanova/DeepSeek-R1-0528"
-      ],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
       "id": "models/gemini-3.1-pro-preview",
       "object": "model",
       "created": 2025547191,
@@ -2523,6 +1897,56 @@
         "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
       ],
       "parameter_count": 30000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "apodex/apodex-1.1-mini:free",
+      "object": "model",
+      "created": 1211859017,
+      "owned_by": "openrouter",
+      "provider": "openrouter",
+      "name": "Apodex: Apodex 1.1 Mini (free)",
+      "description": "Apodex 1.1 Mini is a reasoning-first model from Apodex, built for complex, long-horizon research and forecasting tasks. It works directly with files, data, code, and tools to produce verifiable results,...",
+      "context_size": 262144,
+      "context_label": "262K",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "reasoning",
+        "tool-use"
+      ],
+      "tags": [
+        "reasoning",
+        "text-generation",
+        "chat",
+        "tool-use"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Free tier with rate limits (see openrouter.ai)"
+      },
+      "trial_scope": "specific",
+      "model_family": "apodex-apodex-1.1-mini",
+      "aliases": [],
       "tier": "large",
       "speed": "fast",
       "use_case": [
@@ -3516,10 +2940,7 @@
       "trial_scope": "all",
       "model_family": "deepseek-r1",
       "model_variant": "r1",
-      "aliases": [
-        "github/DeepSeek-R1-0528",
-        "github/DeepSeek-R1"
-      ],
+      "aliases": [],
       "tier": "large",
       "speed": "fast",
       "use_case": [
