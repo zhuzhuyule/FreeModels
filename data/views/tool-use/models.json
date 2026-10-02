@@ -1,8 +1,8 @@
 {
   "object": "list",
   "view": "tool-use",
-  "updated_at": "2026-10-01T08:29:46.384Z",
-  "total": 39,
+  "updated_at": "2026-10-02T08:05:21.248Z",
+  "total": 40,
   "filters": {
     "hasToolUse": "true"
   },
@@ -953,9 +953,7 @@
       "trial_scope": "all",
       "model_family": "llama-4-scout-17b-16e",
       "model_variant": "instruct",
-      "aliases": [
-        "github/Llama-4-Scout-17B-16E-Instruct"
-      ],
+      "aliases": [],
       "parameter_count": 17000000000,
       "tier": "large",
       "speed": "fast",
@@ -1008,6 +1006,56 @@
       ],
       "performance_level": "entry",
       "estimated_latency": "1-3s"
+    },
+    {
+      "id": "apodex/apodex-1.1-mini:free",
+      "object": "model",
+      "created": 1211859017,
+      "owned_by": "openrouter",
+      "provider": "openrouter",
+      "name": "Apodex: Apodex 1.1 Mini (free)",
+      "description": "Apodex 1.1 Mini is a reasoning-first model from Apodex, built for complex, long-horizon research and forecasting tasks. It works directly with files, data, code, and tools to produce verifiable results,...",
+      "context_size": 262144,
+      "context_label": "262K",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "reasoning",
+        "tool-use"
+      ],
+      "tags": [
+        "reasoning",
+        "text-generation",
+        "chat",
+        "tool-use"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Free tier with rate limits (see openrouter.ai)"
+      },
+      "trial_scope": "specific",
+      "model_family": "apodex-apodex-1.1-mini",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
     },
     {
       "id": "stealth/space-bunny-alpha",
