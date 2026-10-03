@@ -1,8 +1,8 @@
 {
   "object": "list",
   "provider": "cloudflare",
-  "updated_at": "2026-10-01T08:29:46.368Z",
-  "total": 66,
+  "updated_at": "2026-10-03T07:45:40.288Z",
+  "total": 68,
   "data": [
     {
       "id": "@cf/openai/gpt-oss-120b",
@@ -1098,6 +1098,47 @@
       "estimated_latency": "< 1s"
     },
     {
+      "id": "@cf/cloudflare/clef",
+      "object": "model",
+      "created": 1705118153,
+      "owned_by": "cloudflare",
+      "provider": "cloudflare",
+      "name": "@cf/cloudflare/clef",
+      "description": "Clef is a 27B multimodal decision model that turns a state and a schema of typed questions into decisions. It reads the state as text, JSON, images, or video, and returns a probability for every allowed option of every question.",
+      "context_size": 65536,
+      "context_label": "66K",
+      "price_input": 0.24,
+      "is_free": true,
+      "capabilities": [
+        "text-generation"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+      },
+      "trial_scope": "all",
+      "model_family": "clef",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
       "id": "@cf/zai-org/glm-4.7-flash",
       "object": "model",
       "created": 590789846,
@@ -2068,7 +2109,7 @@
       "description": "Gemma 4 is Google's most intelligent family of open models, built from Gemini 3 research to maximize intelligence-per-parameter.",
       "context_size": 256000,
       "context_label": "256K",
-      "price_input": 0.1,
+      "price_input": 0.05,
       "price_output": 0.3,
       "is_free": true,
       "capabilities": [
@@ -2381,8 +2422,8 @@
       "aliases": [
         "whisper-large-v3-turbo",
         "whisper-large-v3",
-        "groq/whisper-large-v3",
         "groq/whisper-large-v3-turbo",
+        "groq/whisper-large-v3",
         "sambanova/Whisper-Large-v3"
       ],
       "tier": "medium",
@@ -2688,6 +2729,47 @@
         "github/Llama-4-Scout-17B-16E-Instruct"
       ],
       "parameter_count": 17000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "@cf/cloudflare/clef-flash",
+      "object": "model",
+      "created": 1666428942,
+      "owned_by": "cloudflare",
+      "provider": "cloudflare",
+      "name": "@cf/cloudflare/clef-flash",
+      "description": "Clef-flash is a fast 9B multimodal decision model that turns a state and a schema of typed questions into decisions. It reads the state as text, JSON, images, or video, and returns a probability for every allowed option of every question.",
+      "context_size": 65536,
+      "context_label": "66K",
+      "price_input": 0.09,
+      "is_free": true,
+      "capabilities": [
+        "text-generation"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+      },
+      "trial_scope": "all",
+      "model_family": "clef-flash",
+      "aliases": [],
       "tier": "large",
       "speed": "fast",
       "use_case": [
