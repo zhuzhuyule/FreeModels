@@ -1,8 +1,8 @@
 {
   "object": "list",
   "view": "fast",
-  "updated_at": "2026-10-01T08:29:46.386Z",
-  "total": 316,
+  "updated_at": "2026-10-03T07:45:40.309Z",
+  "total": 320,
   "filters": {
     "speed": "fast"
   },
@@ -1666,6 +1666,47 @@
       "estimated_latency": "< 1s"
     },
     {
+      "id": "@cf/cloudflare/clef",
+      "object": "model",
+      "created": 1705118153,
+      "owned_by": "cloudflare",
+      "provider": "cloudflare",
+      "name": "@cf/cloudflare/clef",
+      "description": "Clef is a 27B multimodal decision model that turns a state and a schema of typed questions into decisions. It reads the state as text, JSON, images, or video, and returns a probability for every allowed option of every question.",
+      "context_size": 65536,
+      "context_label": "66K",
+      "price_input": 0.24,
+      "is_free": true,
+      "capabilities": [
+        "text-generation"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+      },
+      "trial_scope": "all",
+      "model_family": "clef",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
       "id": "@cf/zai-org/glm-4.7-flash",
       "object": "model",
       "created": 590789846,
@@ -2636,7 +2677,7 @@
       "description": "Gemma 4 is Google's most intelligent family of open models, built from Gemini 3 research to maximize intelligence-per-parameter.",
       "context_size": 256000,
       "context_label": "256K",
-      "price_input": 0.1,
+      "price_input": 0.05,
       "price_output": 0.3,
       "is_free": true,
       "capabilities": [
@@ -2949,8 +2990,8 @@
       "aliases": [
         "whisper-large-v3-turbo",
         "whisper-large-v3",
-        "groq/whisper-large-v3",
         "groq/whisper-large-v3-turbo",
+        "groq/whisper-large-v3",
         "sambanova/Whisper-Large-v3"
       ],
       "tier": "medium",
@@ -3256,6 +3297,47 @@
         "github/Llama-4-Scout-17B-16E-Instruct"
       ],
       "parameter_count": 17000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "@cf/cloudflare/clef-flash",
+      "object": "model",
+      "created": 1666428942,
+      "owned_by": "cloudflare",
+      "provider": "cloudflare",
+      "name": "@cf/cloudflare/clef-flash",
+      "description": "Clef-flash is a fast 9B multimodal decision model that turns a state and a schema of typed questions into decisions. It reads the state as text, JSON, images, or video, and returns a probability for every allowed option of every question.",
+      "context_size": 65536,
+      "context_label": "66K",
+      "price_input": 0.09,
+      "is_free": true,
+      "capabilities": [
+        "text-generation"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+      },
+      "trial_scope": "all",
+      "model_family": "clef-flash",
+      "aliases": [],
       "tier": "large",
       "speed": "fast",
       "use_case": [
@@ -9339,6 +9421,367 @@
       "estimated_latency": "< 1s"
     },
     {
+      "id": "whisper-large-v3-turbo",
+      "object": "model",
+      "created": 831031114,
+      "owned_by": "groq",
+      "provider": "groq",
+      "name": "whisper-large-v3-turbo",
+      "context_size": 448,
+      "context_label": "448",
+      "price_input": 0.04,
+      "is_free": true,
+      "capabilities": [
+        "speech-recognition"
+      ],
+      "tags": [
+        "speech-recognition"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Rate-limited free tier"
+      },
+      "trial_scope": "all",
+      "model_family": "whisper-large-v3",
+      "model_variant": "turbo",
+      "aliases": [
+        "cloudflare/@cf/openai/whisper-large-v3-turbo",
+        "whisper-large-v3-turbo",
+        "whisper-large-v3",
+        "groq/whisper-large-v3",
+        "sambanova/Whisper-Large-v3"
+      ],
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "transcription",
+        "voice-input"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "openai/gpt-oss-120b",
+      "object": "model",
+      "created": 261834169,
+      "owned_by": "groq",
+      "provider": "groq",
+      "name": "openai/gpt-oss-120b",
+      "context_size": 131072,
+      "context_label": "131K",
+      "price_input": 0.15,
+      "price_output": 0.6,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpd": 1000,
+        "tpm": 8000
+      },
+      "trial_scope": "all",
+      "model_family": "gpt-oss-120b",
+      "aliases": [
+        "cerebras/gpt-oss-120b",
+        "cloudflare/@cf/openai/gpt-oss-120b",
+        "sambanova/gpt-oss-120b"
+      ],
+      "parameter_count": 120000000000,
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "meta-llama/llama-prompt-guard-2-22m",
+      "object": "model",
+      "created": 2021358890,
+      "owned_by": "groq",
+      "provider": "groq",
+      "name": "meta-llama/llama-prompt-guard-2-22m",
+      "context_size": 512,
+      "context_label": "512",
+      "is_free": true,
+      "capabilities": [
+        "moderation"
+      ],
+      "tags": [
+        "moderation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Rate-limited free tier"
+      },
+      "trial_scope": "all",
+      "model_family": "llama-prompt-guard-2-22m",
+      "model_variant": "guard",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-filtering",
+        "safety"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "openai/gpt-oss-safeguard-20b",
+      "object": "model",
+      "created": 573618965,
+      "owned_by": "groq",
+      "provider": "groq",
+      "name": "openai/gpt-oss-safeguard-20b",
+      "context_size": 131072,
+      "context_label": "131K",
+      "price_input": 0.075,
+      "price_output": 0.3,
+      "is_free": true,
+      "capabilities": [
+        "moderation"
+      ],
+      "tags": [
+        "moderation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Rate-limited free tier"
+      },
+      "trial_scope": "all",
+      "model_family": "gpt-oss-safeguard-20b",
+      "aliases": [],
+      "parameter_count": 20000000000,
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-filtering",
+        "safety"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "whisper-large-v3",
+      "object": "model",
+      "created": 821695011,
+      "owned_by": "groq",
+      "provider": "groq",
+      "name": "whisper-large-v3",
+      "context_size": 448,
+      "context_label": "448",
+      "price_input": 0.111,
+      "is_free": true,
+      "capabilities": [
+        "speech-recognition"
+      ],
+      "tags": [
+        "speech-recognition"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Rate-limited free tier"
+      },
+      "trial_scope": "all",
+      "model_family": "whisper-large-v3",
+      "aliases": [
+        "cloudflare/@cf/openai/whisper-large-v3-turbo",
+        "whisper-large-v3-turbo",
+        "whisper-large-v3",
+        "groq/whisper-large-v3-turbo",
+        "sambanova/Whisper-Large-v3"
+      ],
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "transcription",
+        "voice-input"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "canopylabs/orpheus-arabic-saudi",
+      "object": "model",
+      "created": 1964073120,
+      "owned_by": "groq",
+      "provider": "groq",
+      "name": "canopylabs/orpheus-arabic-saudi",
+      "context_size": 4000,
+      "context_label": "4K",
+      "price_input": 40,
+      "is_free": true,
+      "capabilities": [
+        "speech-synthesis",
+        "translation"
+      ],
+      "tags": [
+        "speech-synthesis",
+        "translation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Rate-limited free tier"
+      },
+      "trial_scope": "all",
+      "model_family": "orpheus-arabic-saudi",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "text-to-speech",
+        "voice-output"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "meta-llama/llama-prompt-guard-2-86m",
+      "object": "model",
+      "created": 2021365556,
+      "owned_by": "groq",
+      "provider": "groq",
+      "name": "meta-llama/llama-prompt-guard-2-86m",
+      "context_size": 512,
+      "context_label": "512",
+      "is_free": true,
+      "capabilities": [
+        "moderation"
+      ],
+      "tags": [
+        "moderation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Rate-limited free tier"
+      },
+      "trial_scope": "all",
+      "model_family": "llama-prompt-guard-2-86m",
+      "model_variant": "guard",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-filtering",
+        "safety"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "canopylabs/orpheus-v1-english",
+      "object": "model",
+      "created": 1993843289,
+      "owned_by": "groq",
+      "provider": "groq",
+      "name": "canopylabs/orpheus-v1-english",
+      "context_size": 4000,
+      "context_label": "4K",
+      "price_input": 22,
+      "is_free": true,
+      "capabilities": [
+        "speech-synthesis"
+      ],
+      "tags": [
+        "speech-synthesis"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Rate-limited free tier"
+      },
+      "trial_scope": "all",
+      "model_family": "orpheus-v1-english",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "text-to-speech",
+        "voice-output"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "qwen/qwen3.8-27b",
+      "object": "model",
+      "created": 1620215523,
+      "owned_by": "groq",
+      "provider": "groq",
+      "name": "qwen/qwen3.8-27b",
+      "context_size": 131072,
+      "context_label": "131K",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpd": 1000,
+        "tpm": 8000
+      },
+      "trial_scope": "all",
+      "model_family": "qwen3.8-27b",
+      "aliases": [
+        "cloudflare/@cf/qwen/qwen3.8-27b",
+        "qwen3.8-27b",
+        "qwen/qwen3.8-27b:free"
+      ],
+      "parameter_count": 27000000000,
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
       "id": "openai/gpt-oss-20b",
       "object": "model",
       "created": 772969846,
@@ -9421,367 +9864,6 @@
         "q&a",
         "content-creation",
         "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "canopylabs/orpheus-v1-english",
-      "object": "model",
-      "created": 1993843289,
-      "owned_by": "groq",
-      "provider": "groq",
-      "name": "canopylabs/orpheus-v1-english",
-      "context_size": 4000,
-      "context_label": "4K",
-      "price_input": 22,
-      "is_free": true,
-      "capabilities": [
-        "speech-synthesis"
-      ],
-      "tags": [
-        "speech-synthesis"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Rate-limited free tier"
-      },
-      "trial_scope": "all",
-      "model_family": "orpheus-v1-english",
-      "aliases": [],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "text-to-speech",
-        "voice-output"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "meta-llama/llama-prompt-guard-2-22m",
-      "object": "model",
-      "created": 2021358890,
-      "owned_by": "groq",
-      "provider": "groq",
-      "name": "meta-llama/llama-prompt-guard-2-22m",
-      "context_size": 512,
-      "context_label": "512",
-      "is_free": true,
-      "capabilities": [
-        "moderation"
-      ],
-      "tags": [
-        "moderation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Rate-limited free tier"
-      },
-      "trial_scope": "all",
-      "model_family": "llama-prompt-guard-2-22m",
-      "model_variant": "guard",
-      "aliases": [],
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-filtering",
-        "safety"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "meta-llama/llama-prompt-guard-2-86m",
-      "object": "model",
-      "created": 2021365556,
-      "owned_by": "groq",
-      "provider": "groq",
-      "name": "meta-llama/llama-prompt-guard-2-86m",
-      "context_size": 512,
-      "context_label": "512",
-      "is_free": true,
-      "capabilities": [
-        "moderation"
-      ],
-      "tags": [
-        "moderation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Rate-limited free tier"
-      },
-      "trial_scope": "all",
-      "model_family": "llama-prompt-guard-2-86m",
-      "model_variant": "guard",
-      "aliases": [],
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-filtering",
-        "safety"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "qwen/qwen3.8-27b",
-      "object": "model",
-      "created": 1620215523,
-      "owned_by": "groq",
-      "provider": "groq",
-      "name": "qwen/qwen3.8-27b",
-      "context_size": 131072,
-      "context_label": "131K",
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "chat",
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "rpd": 1000,
-        "tpm": 8000
-      },
-      "trial_scope": "all",
-      "model_family": "qwen3.8-27b",
-      "aliases": [
-        "cloudflare/@cf/qwen/qwen3.8-27b",
-        "qwen3.8-27b",
-        "qwen/qwen3.8-27b:free"
-      ],
-      "parameter_count": 27000000000,
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "whisper-large-v3",
-      "object": "model",
-      "created": 821695011,
-      "owned_by": "groq",
-      "provider": "groq",
-      "name": "whisper-large-v3",
-      "context_size": 448,
-      "context_label": "448",
-      "price_input": 0.111,
-      "is_free": true,
-      "capabilities": [
-        "speech-recognition"
-      ],
-      "tags": [
-        "speech-recognition"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Rate-limited free tier"
-      },
-      "trial_scope": "all",
-      "model_family": "whisper-large-v3",
-      "aliases": [
-        "cloudflare/@cf/openai/whisper-large-v3-turbo",
-        "whisper-large-v3-turbo",
-        "whisper-large-v3",
-        "groq/whisper-large-v3-turbo",
-        "sambanova/Whisper-Large-v3"
-      ],
-      "tier": "small",
-      "speed": "fast",
-      "use_case": [
-        "transcription",
-        "voice-input"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "openai/gpt-oss-safeguard-20b",
-      "object": "model",
-      "created": 573618965,
-      "owned_by": "groq",
-      "provider": "groq",
-      "name": "openai/gpt-oss-safeguard-20b",
-      "context_size": 131072,
-      "context_label": "131K",
-      "price_input": 0.075,
-      "price_output": 0.3,
-      "is_free": true,
-      "capabilities": [
-        "moderation"
-      ],
-      "tags": [
-        "moderation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Rate-limited free tier"
-      },
-      "trial_scope": "all",
-      "model_family": "gpt-oss-safeguard-20b",
-      "aliases": [],
-      "parameter_count": 20000000000,
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-filtering",
-        "safety"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "openai/gpt-oss-120b",
-      "object": "model",
-      "created": 261834169,
-      "owned_by": "groq",
-      "provider": "groq",
-      "name": "openai/gpt-oss-120b",
-      "context_size": 131072,
-      "context_label": "131K",
-      "price_input": 0.15,
-      "price_output": 0.6,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "chat",
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "rpd": 1000,
-        "tpm": 8000
-      },
-      "trial_scope": "all",
-      "model_family": "gpt-oss-120b",
-      "aliases": [
-        "cerebras/gpt-oss-120b",
-        "cloudflare/@cf/openai/gpt-oss-120b",
-        "sambanova/gpt-oss-120b"
-      ],
-      "parameter_count": 120000000000,
-      "tier": "small",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "canopylabs/orpheus-arabic-saudi",
-      "object": "model",
-      "created": 1964073120,
-      "owned_by": "groq",
-      "provider": "groq",
-      "name": "canopylabs/orpheus-arabic-saudi",
-      "context_size": 4000,
-      "context_label": "4K",
-      "price_input": 40,
-      "is_free": true,
-      "capabilities": [
-        "speech-synthesis",
-        "translation"
-      ],
-      "tags": [
-        "speech-synthesis",
-        "translation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Rate-limited free tier"
-      },
-      "trial_scope": "all",
-      "model_family": "orpheus-arabic-saudi",
-      "aliases": [],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "text-to-speech",
-        "voice-output"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "whisper-large-v3-turbo",
-      "object": "model",
-      "created": 831031114,
-      "owned_by": "groq",
-      "provider": "groq",
-      "name": "whisper-large-v3-turbo",
-      "context_size": 448,
-      "context_label": "448",
-      "price_input": 0.04,
-      "is_free": true,
-      "capabilities": [
-        "speech-recognition"
-      ],
-      "tags": [
-        "speech-recognition"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Rate-limited free tier"
-      },
-      "trial_scope": "all",
-      "model_family": "whisper-large-v3",
-      "model_variant": "turbo",
-      "aliases": [
-        "cloudflare/@cf/openai/whisper-large-v3-turbo",
-        "whisper-large-v3-turbo",
-        "whisper-large-v3",
-        "groq/whisper-large-v3",
-        "sambanova/Whisper-Large-v3"
-      ],
-      "tier": "small",
-      "speed": "fast",
-      "use_case": [
-        "transcription",
-        "voice-input"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
@@ -10572,6 +10654,106 @@
         "q&a"
       ],
       "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "inclusionai/ling-3.1-flash",
+      "object": "model",
+      "created": 99340534,
+      "owned_by": "openrouter",
+      "provider": "openrouter",
+      "name": "inclusionAI: Ling 3.1 Flash",
+      "description": "Ling 3.1 Flash is a hybrid reasoning mixture-of-experts model from inclusionAI, with 25B active parameters out of 560B total.",
+      "context_size": 262144,
+      "context_label": "262K",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "reasoning",
+        "tool-use"
+      ],
+      "tags": [
+        "reasoning",
+        "text-generation",
+        "chat",
+        "tool-use"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Free tier with rate limits (see openrouter.ai)"
+      },
+      "trial_scope": "specific",
+      "model_family": "inclusionai-ling-3.1-flash",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "apodex/apodex-1.1-mini:free",
+      "object": "model",
+      "created": 1211859017,
+      "owned_by": "openrouter",
+      "provider": "openrouter",
+      "name": "Apodex: Apodex 1.1 Mini (free)",
+      "description": "Apodex 1.1 Mini is a reasoning-first model from Apodex, built for complex, long-horizon research and forecasting tasks. It works directly with files, data, code, and tools to produce verifiable results,...",
+      "context_size": 262144,
+      "context_label": "262K",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "reasoning",
+        "tool-use"
+      ],
+      "tags": [
+        "reasoning",
+        "text-generation",
+        "chat",
+        "tool-use"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Free tier with rate limits (see openrouter.ai)"
+      },
+      "trial_scope": "specific",
+      "model_family": "apodex-apodex-1.1-mini",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -12052,8 +12234,8 @@
         "cloudflare/@cf/openai/whisper-large-v3-turbo",
         "whisper-large-v3-turbo",
         "whisper-large-v3",
-        "groq/whisper-large-v3",
-        "groq/whisper-large-v3-turbo"
+        "groq/whisper-large-v3-turbo",
+        "groq/whisper-large-v3"
       ],
       "tier": "medium",
       "speed": "fast",
