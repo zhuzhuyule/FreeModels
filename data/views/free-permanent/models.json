@@ -1,8 +1,8 @@
 {
   "object": "list",
   "view": "free-permanent",
-  "updated_at": "2026-10-04T07:54:29.578Z",
-  "total": 45,
+  "updated_at": "2026-10-05T08:35:02.541Z",
+  "total": 39,
   "filters": {
     "freeMechanism": "permanent"
   },
@@ -748,42 +748,6 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "HealthGPT-L14",
-      "object": "model",
-      "created": 696188196,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "HealthGPT 医疗大模型",
-      "description": "HealthGPT 是一个通过微调大语言模型（LLM）来专注于医疗健康领域的智能系统，旨在提供精确的临床症状分析、疾病诊断辅助、治疗建议以及个性化健康咨询，结合医学文献和临床数据进行专业化的知识推理与分析。​该项目由浙江大学、南京大学、浙江大学医学院附属第二医院和新加坡国立大学的研究人员联合开发。\n\nHealthGPT 给出的答案仅供参考，不能替代专业医生的诊断治疗！！！\n",
-      "context_size": 32000,
-      "context_label": "32K",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "permanent",
-      "free_quota": null,
-      "trial_scope": "specific",
-      "model_family": "healthgpt-l14",
-      "aliases": [],
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
       "id": "Qwen3-8B",
       "object": "model",
       "created": 128569318,
@@ -926,46 +890,6 @@
       "trial_scope": "specific",
       "model_family": "deepseek-prover-v2-7b",
       "aliases": [],
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "GLM-4-9B-0414",
-      "object": "model",
-      "created": 1121739548,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "GLM-4-9B-0414",
-      "description": "GLM-4-9B-0414 是清华大学智谱AI发布的一款高性能中英双语通用大语言模型，具备强大的推理、代码生成和中英文理解能力，参数规模为 9B，适用于多种通用任务。",
-      "context_size": 32000,
-      "context_label": "32K",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "permanent",
-      "free_quota": null,
-      "trial_scope": "specific",
-      "model_family": "glm-4-9b",
-      "aliases": [
-        "bigmodel/glm-4-9b",
-        "glm-4-9b-chat"
-      ],
-      "parameter_count": 9000000000,
       "tier": "medium",
       "speed": "fast",
       "use_case": [
@@ -1319,81 +1243,6 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "HuatuoGPT-o1-7B",
-      "object": "model",
-      "created": 1693535129,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "HuatuoGPT-o1-7B 医疗大模型",
-      "description": "HuatuoGPT-o1-7B是由FreedomIntelligence开发的医疗领域大型语言模型（LLM），专为高级医疗推理设计。该模型在提供最终回答之前，会生成复杂的思考过程，反映并完善其推理。",
-      "context_size": 32000,
-      "context_label": "32K",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "permanent",
-      "free_quota": null,
-      "trial_scope": "specific",
-      "model_family": "huatuogpt-o1-7b",
-      "aliases": [],
-      "parameter_count": 7000000000,
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "GLM-ASR",
-      "object": "model",
-      "created": 335131160,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "GLM-ASR",
-      "description": "GLM-ASR是一款超轻量级中文语音识别模型，提供低资源设备上的实时转写能力，适用于移动端、IoT 与本地离线识别场景。",
-      "context_label": "unknown",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "speech-recognition"
-      ],
-      "tags": [
-        "speech-recognition"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "permanent",
-      "free_quota": null,
-      "trial_scope": "specific",
-      "model_family": "glm-asr",
-      "model_variant": "asr",
-      "aliases": [
-        "bigmodel/glm-asr-2512"
-      ],
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "transcription",
-        "voice-input"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
       "id": "Qwen3-VL-Embedding-8B",
       "object": "model",
       "created": 1650875019,
@@ -1606,42 +1455,6 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "bge-m3",
-      "object": "model",
-      "created": 201810368,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "bge-m3",
-      "description": "由智源研究院开源的 bge-m3 模型具有多语言、多粒度和多功能的特点，向量维度为 1024，支持100 多种语言，适用于句子到文档的不同文本粒度，最大输入长度为 8192，并集成了稠密、稀疏和多向量检索功能，在多个评测中表现优异。",
-      "context_size": 8000,
-      "context_label": "8K",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "embeddings"
-      ],
-      "tags": [
-        "embeddings"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "permanent",
-      "free_quota": null,
-      "trial_scope": "specific",
-      "model_family": "bge-m3",
-      "aliases": [],
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "semantic-search",
-        "similarity"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
       "id": "bge-reranker-v2-m3",
       "object": "model",
       "created": 2142599396,
@@ -1674,47 +1487,6 @@
       "use_case": [
         "semantic-search",
         "similarity"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "glm-4-9b-chat",
-      "object": "model",
-      "created": 1110896549,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "GLM-4-9B-Chat",
-      "description": "GLM-4-9B-Chat 在语义、数学、推理、代码和知识等多方面均表现出较高性能。还具备网页浏览、代码执行、自定义工具调用和长文本推理。 支持包括日语，韩语，德语在内的 26 种语言。",
-      "context_size": 32000,
-      "context_label": "32K",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "permanent",
-      "free_quota": null,
-      "trial_scope": "specific",
-      "model_family": "glm-4-9b",
-      "model_variant": "chat",
-      "aliases": [
-        "bigmodel/glm-4-9b",
-        "GLM-4-9B-0414"
-      ],
-      "parameter_count": 9000000000,
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
