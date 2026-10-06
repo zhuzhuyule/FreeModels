@@ -46,7 +46,7 @@ curl https://ofind.cn/FreeModels/v1/models.json
 | [Groq](https://groq.com)  | `groq` | 11 | 11 | 0 | 常见为开发者免费额度或限速体验，具体以官方控制台和价格页为准。 | [注册](https://console.groq.com) | [API Key](https://console.groq.com/keys) | [文档](https://console.groq.com/docs) | [JSON](https://ofind.cn/FreeModels/data/providers/groq/models.json) |
 | [LongCat](https://longcat.chat)  | `longcat` | 1 | 1 | 0 | 提供每日 token 免费额度，额度和模型范围以官方文档为准。 | [注册](https://longcat.chat) | [API Key](https://longcat.chat/platform/api-keys) | [文档](https://longcat.chat/platform/docs) | [JSON](https://ofind.cn/FreeModels/data/providers/longcat/models.json) |
 | [NVIDIA AI](https://developer.nvidia.com/ai)  | `nvidia` | 80 | 18 | 0 | NIM / build.nvidia.com 通常提供开发体验 credits 或试用额度。 | [注册](https://build.nvidia.com) | [API Key](https://build.nvidia.com/explore/discover) | [文档](https://docs.api.nvidia.com/nim) | [JSON](https://ofind.cn/FreeModels/data/providers/nvidia/models.json) |
-| [OpenRouter](https://openrouter.ai)  | `openrouter` | 22 | 22 | 0 | 免费模型通常带有请求频率或每日请求限制。 | [注册](https://openrouter.ai) | [API Key](https://openrouter.ai/settings/keys) | [文档](https://openrouter.ai/docs) | [JSON](https://ofind.cn/FreeModels/data/providers/openrouter/models.json) |
+| [OpenRouter](https://openrouter.ai)  | `openrouter` | 20 | 20 | 0 | 免费模型通常带有请求频率或每日请求限制。 | [注册](https://openrouter.ai) | [API Key](https://openrouter.ai/settings/keys) | [文档](https://openrouter.ai/docs) | [JSON](https://ofind.cn/FreeModels/data/providers/openrouter/models.json) |
 | [SambaNova Cloud](https://cloud.sambanova.ai)  | `sambanova` | 19 | 19 | 0 | 新账户提供 $5 trial credits，有效期 3 个月。 | [注册](https://cloud.sambanova.ai) | [API Key](https://cloud.sambanova.ai/apis) | [文档](https://docs.sambanova.ai) | [JSON](https://ofind.cn/FreeModels/data/providers/sambanova/models.json) |
 | —  | `sensenova` | 3 | 3 | 0 | — | — | — | — | [JSON](https://ofind.cn/FreeModels/data/providers/sensenova/models.json) |
 | [iFlytek MaaS / 讯飞星辰](https://maas.xfyun.cn)  | `xingchen` | 49 | 7 | 0 | 第三方模型聚合（GLM/Qwen/DeepSeek 等）；部分模型 0 元开放，具体以控制台为准。 | [注册](https://maas.xfyun.cn) | [API Key](https://maas.xfyun.cn) | [文档](https://maas.xfyun.cn/docs) | [JSON](https://ofind.cn/FreeModels/data/providers/xingchen/models.json) |
@@ -61,12 +61,12 @@ curl https://ofind.cn/FreeModels/v1/models.json
 | 维度 | 数量 |
 |------|-----:|
 | Provider | 16 |
-| 模型总数 | 615 |
-| 免费模型 (`is_free=true`) | 283 |
+| 模型总数 | 613 |
+| 免费模型 (`is_free=true`) | 281 |
 | 付费可试用 (Gitee 体验等) | 79 |
-| 模型家族 | 527 |
+| 模型家族 | 526 |
 | 跨 Provider 家族 | 56 |
-| · 限速免费 | 136 |
+| · 限速免费 | 134 |
 | · 日 token 配额 | 69 |
 | · 永久免费 | 39 |
 | · 试用 credits | 37 |
@@ -78,7 +78,7 @@ curl https://ofind.cn/FreeModels/v1/models.json
 > 该区块由 `npm run generate-docs` 自动更新。
 
 <!-- AUTO-GENERATED:FREE_MODELS_START -->
-共 **283** 个免费模型（限速免费 136 个、日 token 配额 69 个、永久免费 39 个、试用 credits 37 个、预览版 2 个）。
+共 **281** 个免费模型（限速免费 134 个、日 token 配额 69 个、永久免费 39 个、试用 credits 37 个、预览版 2 个）。
 
 完整列表及按机制筛选：
 - [全部免费模型](https://ofind.cn/FreeModels/data/views/free/models.json)

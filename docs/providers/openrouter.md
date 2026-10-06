@@ -21,8 +21,8 @@
 
 | 指标 | 数量 |
 |---|---:|
-| 总模型 | 22 |
-| 免费模型 | 22 |
+| 总模型 | 20 |
+| 免费模型 | 20 |
 | 付费可试用 | 0 |
 
 ## 免费策略
@@ -51,7 +51,5 @@
 | openrouter  | `nvidia/nemotron-3.5-lightning:free` | NVIDIA: Nemotron 3.5 Lightning (free) | 1M | 限速免费 | Free tier with rate limits (see openrouter.ai) |
 | openrouter  | `poolside/laguna-s-2.1:free` | Poolside: Laguna S 2.1 (free) | 262K | 限速免费 | Free tier with rate limits (see openrouter.ai) |
 | openrouter  | `poolside/laguna-xs-2.1:free` | Poolside: Laguna XS 2.1 (free) | 262K | 限速免费 | Free tier with rate limits (see openrouter.ai) |
-| openrouter  | `qwen/qwen3.8-27b:free` | Qwen: Qwen3.8 27B (free) | 262K | 限速免费 | Free tier with rate limits (see openrouter.ai) |
-| openrouter  | `stealth/space-bunny-alpha` | Space Bunny Alpha | 1M | 限速免费 | Free tier with rate limits (see openrouter.ai) |
 | openrouter  | `thinkingmachines/inkling-small:free` | Thinking Machines: Inkling Small (free) | 1M | 限速免费 | Free tier with rate limits (see openrouter.ai) |
 | openrouter  | `thinkingmachines/inkling:free` | Thinking Machines: Inkling (free) | 1M | 限速免费 | Free tier with rate limits (see openrouter.ai) |
