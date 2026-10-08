@@ -21,9 +21,9 @@
 
 | 指标 | 数量 |
 |---|---:|
-| 总模型 | 193 |
-| 免费模型 | 32 |
-| 付费可试用 | 79 |
+| 总模型 | 221 |
+| 免费模型 | 38 |
+| 付费可试用 | 99 |
 
 ## 免费策略
 
@@ -38,6 +38,7 @@
 | gitee  | `bce-embedding-base_v1` | bce-embedding-base_v1 | 500 | 永久免费 | — |
 | gitee  | `bce-reranker-base_v1` | bce-reranker-base_v1 | 500 | 永久免费 | — |
 | gitee  | `bge-large-zh-v1.5` | bge-large-zh-v1.5 | 500 | 永久免费 | — |
+| gitee  | `bge-m3` | bge-m3 | 8K | 永久免费 | — |
 | gitee  | `bge-reranker-large` | bge-reranker-large | unknown | 永久免费 | — |
 | gitee  | `bge-reranker-v2-m3` | bge-reranker-v2-m3 | 8K | 永久免费 | — |
 | gitee  | `bge-small-zh-v1.5` | bge-small-zh-v1.5 | 500 | 永久免费 | — |
@@ -45,6 +46,11 @@
 | gitee  | `DeepSeek-R1-Distill-Qwen-1.5B` | DeepSeek-R1-Distill-Qwen-1.5B | 32K | 永久免费 | — |
 | gitee  | `DeepSeek-R1-Distill-Qwen-14B` | DeepSeek-R1-Distill-Qwen-14B | 32K | 永久免费 | — |
 | gitee  | `DeepSeek-R1-Distill-Qwen-7B` | DeepSeek-R1-Distill-Qwen-7B | 32K | 永久免费 | — |
+| gitee  | `GLM-4-9B-0414` | GLM-4-9B-0414 | 32K | 永久免费 | — |
+| gitee  | `glm-4-9b-chat` | GLM-4-9B-Chat | 32K | 永久免费 | — |
+| gitee  | `GLM-ASR` | GLM-ASR | unknown | 永久免费 | — |
+| gitee  | `HealthGPT-L14` | HealthGPT 医疗大模型 | 32K | 永久免费 | — |
+| gitee  | `HuatuoGPT-o1-7B` | HuatuoGPT-o1-7B 医疗大模型 | 32K | 永久免费 | — |
 | gitee  | `Intern-S2` | Intern-S2 | 256K | 永久免费 | — |
 | gitee  | `internlm3-8b-instruct` | InternLM3-8B-Instruct | 32K | 永久免费 | — |
 | gitee  | `ip-location` | IP 查询 | unknown | 永久免费 | — |

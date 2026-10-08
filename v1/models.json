@@ -1,7 +1,7 @@
 {
   "object": "list",
-  "updated_at": "2026-10-07T08:16:42.835Z",
-  "total": 613,
+  "updated_at": "2026-10-08T08:32:52.816Z",
+  "total": 641,
   "providers": {
     "agnes": {
       "name": "agnes",
@@ -620,7 +620,10 @@
       "free_quota": null,
       "trial_scope": "none",
       "model_family": "glm-4-9b",
-      "aliases": [],
+      "aliases": [
+        "GLM-4-9B-0414",
+        "glm-4-9b-chat"
+      ],
       "parameter_count": 9000000000,
       "tier": "medium",
       "speed": "standard",
@@ -2183,7 +2186,9 @@
       "trial_scope": "none",
       "model_family": "glm-tts",
       "model_variant": "tts",
-      "aliases": [],
+      "aliases": [
+        "GLM-TTS"
+      ],
       "tier": "medium",
       "speed": "standard",
       "use_case": [
@@ -2269,7 +2274,9 @@
       "trial_scope": "none",
       "model_family": "glm-asr",
       "model_variant": "asr",
-      "aliases": [],
+      "aliases": [
+        "GLM-ASR"
+      ],
       "tier": "medium",
       "speed": "standard",
       "use_case": [
@@ -7269,6 +7276,42 @@
       "estimated_latency": "< 1s"
     },
     {
+      "id": "Security-semantic-filtering",
+      "object": "model",
+      "created": 2102253519,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "违规文本检测",
+      "description": "Security-semantic-filtering 是一种用于增强系统安全性的技术，通过对数据语义的过滤和分析，确保敏感信息的保护和合规性。",
+      "context_size": 32000,
+      "context_label": "32K",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": false,
+      "capabilities": [
+        "moderation"
+      ],
+      "tags": [
+        "moderation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "all",
+      "model_family": "security-semantic-filtering",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "standard",
+      "use_case": [
+        "content-filtering",
+        "safety"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "1-3s"
+    },
+    {
       "id": "bce-embedding-base_v1",
       "object": "model",
       "created": 1438537673,
@@ -7932,6 +7975,43 @@
       "estimated_latency": "< 1s"
     },
     {
+      "id": "GLM-4-32B",
+      "object": "model",
+      "created": 131201542,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "GLM-4-32B",
+      "description": "GLM 家族新一代开源模型，320 亿参数，经过 15T 高质量数据的预训练，其中包含大量推理类的合成数据。在后训练阶段，除了针对对话场景进行了人类偏好对齐外，还通过拒绝采样和强化学习等技术强化了模型在指令遵循、工程代码、函数调用方面的效果，加强了智能体任务所需的原子能力。在工程代码、Artifacts 生成、函数调用、搜索问答及报告等方面都取得了不错的效果。",
+      "context_size": 32000,
+      "context_label": "32K",
+      "price_input": 1.89,
+      "price_output": 1.89,
+      "is_free": false,
+      "capabilities": [
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "all",
+      "model_family": "glm-4-32b",
+      "aliases": [],
+      "parameter_count": 32000000000,
+      "tier": "large",
+      "speed": "standard",
+      "use_case": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "3-10s"
+    },
+    {
       "id": "InternVL3-78B",
       "object": "model",
       "created": 311775752,
@@ -8036,6 +8116,84 @@
       "use_case": [
         "semantic-search",
         "similarity"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "DianJin-R1-32B",
+      "object": "model",
+      "created": 223205722,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "DianJin 金融大模型",
+      "description": "DianJin-R1-32B 是一款拥有 32B 参数、专为金融场景优化的大语言模型，具备强大的金融问答和多步推理能力，能生成结构化答案并在多个金融基准测试中表现优异。",
+      "context_size": 32000,
+      "context_label": "32K",
+      "price_input": 2,
+      "price_output": 8,
+      "is_free": false,
+      "capabilities": [
+        "text-generation"
+      ],
+      "tags": [
+        "reasoning",
+        "text-generation"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "all",
+      "model_family": "dianjin-r1-32b",
+      "model_variant": "r1",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performance_level": "high",
+      "estimated_latency": "3-10s"
+    },
+    {
+      "id": "HealthGPT-L14",
+      "object": "model",
+      "created": 696188196,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "HealthGPT 医疗大模型",
+      "description": "HealthGPT 是一个通过微调大语言模型（LLM）来专注于医疗健康领域的智能系统，旨在提供精确的临床症状分析、疾病诊断辅助、治疗建议以及个性化健康咨询，结合医学文献和临床数据进行专业化的知识推理与分析。​该项目由浙江大学、南京大学、浙江大学医学院附属第二医院和新加坡国立大学的研究人员联合开发。\n\nHealthGPT 给出的答案仅供参考，不能替代专业医生的诊断治疗！！！\n",
+      "context_size": 32000,
+      "context_label": "32K",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "permanent",
+      "free_quota": null,
+      "trial_scope": "specific",
+      "model_family": "healthgpt-l14",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
@@ -8330,6 +8488,46 @@
       "use_case": [],
       "performance_level": "entry",
       "estimated_latency": "1-3s"
+    },
+    {
+      "id": "GLM-4-9B-0414",
+      "object": "model",
+      "created": 1121739548,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "GLM-4-9B-0414",
+      "description": "GLM-4-9B-0414 是清华大学智谱AI发布的一款高性能中英双语通用大语言模型，具备强大的推理、代码生成和中英文理解能力，参数规模为 9B，适用于多种通用任务。",
+      "context_size": 32000,
+      "context_label": "32K",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "permanent",
+      "free_quota": null,
+      "trial_scope": "specific",
+      "model_family": "glm-4-9b",
+      "aliases": [
+        "bigmodel/glm-4-9b",
+        "glm-4-9b-chat"
+      ],
+      "parameter_count": 9000000000,
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
     },
     {
       "id": "FLUX.1-dev",
@@ -9006,6 +9204,42 @@
       "estimated_latency": "< 1s"
     },
     {
+      "id": "CogView4_6B",
+      "object": "model",
+      "created": 1446286820,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "CogView4‑6B",
+      "description": "CogView4‑6B 是一款由清华大学开发的开源文本生成图像模型，支持中英文输入，擅长处理多对象、复杂属性与空间关系的高质量图像生成，广泛应用于创意设计与视觉内容创作场景。",
+      "context_label": "unknown",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": false,
+      "capabilities": [
+        "image-generation"
+      ],
+      "tags": [
+        "image-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "all",
+      "model_family": "cogview4_6b",
+      "aliases": [],
+      "parameter_count": 6000000000,
+      "tier": "medium",
+      "speed": "standard",
+      "use_case": [
+        "creative-generation",
+        "art"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "1-3s"
+    },
+    {
       "id": "Wan2_2-I2V-A14B",
       "object": "model",
       "created": 688595649,
@@ -9043,6 +9277,41 @@
       ],
       "performance_level": "mid",
       "estimated_latency": "3-10s"
+    },
+    {
+      "id": "FLUX_1-Krea-dev",
+      "object": "model",
+      "created": 847813104,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "FLUX.1-Krea-dev",
+      "description": "FLUX.1-Krea-dev 是一个专为图像生成与编辑优化的大型多模态视觉语言模型。",
+      "context_label": "unknown",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": false,
+      "capabilities": [
+        "image-generation"
+      ],
+      "tags": [
+        "image-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "all",
+      "model_family": "flux_1-krea-dev",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "standard",
+      "use_case": [
+        "creative-generation",
+        "art"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "1-3s"
     },
     {
       "id": "nonescape-v0",
@@ -9491,6 +9760,42 @@
       "estimated_latency": "3-10s"
     },
     {
+      "id": "SeedVR2-3B",
+      "object": "model",
+      "created": 1871713502,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "SeedVR2-3B",
+      "description": "SeedVR2‑3B 是由 ByteDance‑Seed 提出的一个 3B 参数级别的一步式扩散对抗后训练模型，专为高分辨率图片修复设计。",
+      "context_label": "unknown",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": false,
+      "capabilities": [
+        "image-to-image"
+      ],
+      "tags": [
+        "image-to-image"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "all",
+      "model_family": "seedvr2-3b",
+      "aliases": [],
+      "parameter_count": 3000000000,
+      "tier": "small",
+      "speed": "standard",
+      "use_case": [
+        "image-editing",
+        "style-transfer"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
       "id": "HunyuanVideo-1.5",
       "object": "model",
       "created": 2011526373,
@@ -9606,6 +9911,197 @@
       "estimated_latency": "3-10s"
     },
     {
+      "id": "HunyuanOCR",
+      "object": "model",
+      "created": 1810167023,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "HunyuanOCR",
+      "description": "HunyuanOCR 是腾讯混元大模型体系下的通用光学字符识别（OCR）能力，基于多模态理解模型构建，具备高精度文本提取、版面还原与复杂场景识别能力。它支持多语言识别、复杂背景下文字提取，以及对表格、票据、证照等结构化信息的解析，适用于金融、政务、电商、教育等多类场景。",
+      "context_label": "unknown",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": false,
+      "capabilities": [
+        "vision"
+      ],
+      "tags": [
+        "vision",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "all",
+      "model_family": "hunyuanocr",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "3-10s"
+    },
+    {
+      "id": "LongCat-Image",
+      "object": "model",
+      "created": 1980972893,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "LongCat-Image",
+      "description": "LongCat-Image 是美团 LongCat 团队开源的轻量级高质量图像生成模型，支持中英文文本生成逼真图像，并具备优秀的中文文字渲染能力。",
+      "context_label": "unknown",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": false,
+      "capabilities": [
+        "image-generation"
+      ],
+      "tags": [
+        "vision",
+        "image-generation",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "all",
+      "model_family": "longcat-image",
+      "model_variant": "image",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "creative-generation",
+        "art"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "3-10s"
+    },
+    {
+      "id": "LongCat-Image-Edit",
+      "object": "model",
+      "created": 188235184,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "LongCat-Image-Edit",
+      "description": "LongCat-Image-Edit 是美团开源的高精度图像编辑模型，支持文本、局部选区与参考图驱动的内容重绘，具备强语义理解、细节一致性和自然编辑效果，适用于创意设计、商品图优化与精细视觉修改。",
+      "context_label": "unknown",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": false,
+      "capabilities": [
+        "image-to-image"
+      ],
+      "tags": [
+        "vision",
+        "image-to-image",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "all",
+      "model_family": "longcat-image-edit",
+      "model_variant": "image",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "image-editing",
+        "style-transfer"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "3-10s"
+    },
+    {
+      "id": "HuatuoGPT-o1-7B",
+      "object": "model",
+      "created": 1693535129,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "HuatuoGPT-o1-7B 医疗大模型",
+      "description": "HuatuoGPT-o1-7B是由FreedomIntelligence开发的医疗领域大型语言模型（LLM），专为高级医疗推理设计。该模型在提供最终回答之前，会生成复杂的思考过程，反映并完善其推理。",
+      "context_size": 32000,
+      "context_label": "32K",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "permanent",
+      "free_quota": null,
+      "trial_scope": "specific",
+      "model_family": "huatuogpt-o1-7b",
+      "aliases": [],
+      "parameter_count": 7000000000,
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "GLM-ASR",
+      "object": "model",
+      "created": 335131160,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "GLM-ASR",
+      "description": "GLM-ASR是一款超轻量级中文语音识别模型，提供低资源设备上的实时转写能力，适用于移动端、IoT 与本地离线识别场景。",
+      "context_label": "unknown",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "speech-recognition"
+      ],
+      "tags": [
+        "speech-recognition"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "permanent",
+      "free_quota": null,
+      "trial_scope": "specific",
+      "model_family": "glm-asr",
+      "model_variant": "asr",
+      "aliases": [
+        "bigmodel/glm-asr-2512"
+      ],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "transcription",
+        "voice-input"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
       "id": "AutoGLM-Phone-9B-Multilingual",
       "object": "model",
       "created": 539375695,
@@ -9641,6 +10137,42 @@
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
+    },
+    {
+      "id": "KAT-Dev",
+      "object": "model",
+      "created": 783851761,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "KAT-Dev",
+      "description": "KAT-Dev 是快手 Kwaipilot 团队推出的开源大模型系列，专注于软件工程任务，其中 KAT-Dev-32B 是一个 32B 参数的模型，在代码生成和智能体编程领域表现出色。‌",
+      "context_size": 32000,
+      "context_label": "32K",
+      "price_input": 1,
+      "price_output": 4,
+      "is_free": false,
+      "capabilities": [
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "all",
+      "model_family": "kat-dev",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "standard",
+      "use_case": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "1-3s"
     },
     {
       "id": "Qwen3-Coder-30B-A3B-Instruct",
@@ -9710,6 +10242,44 @@
       "speed": "standard",
       "use_case": [
         "video-creation"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "1-3s"
+    },
+    {
+      "id": "GLM-TTS",
+      "object": "model",
+      "created": 335151885,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "GLM-TTS",
+      "description": "GLM-TTS 是一个支持零样本克隆音色、情感可控和实时推理的高质量文本到语音（TTS）合成系统。",
+      "context_label": "unknown",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": false,
+      "capabilities": [
+        "speech-synthesis"
+      ],
+      "tags": [
+        "speech-synthesis"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "all",
+      "model_family": "glm-tts",
+      "model_variant": "tts",
+      "aliases": [
+        "bigmodel/glm-tts"
+      ],
+      "tier": "medium",
+      "speed": "standard",
+      "use_case": [
+        "text-to-speech",
+        "voice-output"
       ],
       "performance_level": "entry",
       "estimated_latency": "1-3s"
@@ -9867,6 +10437,78 @@
       "estimated_latency": "3-10s"
     },
     {
+      "id": "Fun-ASR-Nano-2512",
+      "object": "model",
+      "created": 1447328177,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "Fun-ASR-Nano-2512",
+      "description": "Fun-ASR-Nano-2512 是一款高精度、低延迟的多语言语音识别模型，适用于实时语音转写、会议记录和智能语音交互等场景。",
+      "context_label": "unknown",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": false,
+      "capabilities": [
+        "speech-recognition"
+      ],
+      "tags": [
+        "speech-recognition"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "all",
+      "model_family": "fun-asr-nano",
+      "model_variant": "asr",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "standard",
+      "use_case": [
+        "transcription",
+        "voice-input"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "1-3s"
+    },
+    {
+      "id": "sam3",
+      "object": "model",
+      "created": 2090715641,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "SAM 3 图像分割模型",
+      "description": "SAM 3 是一款通用的图像分割模型，可在无需预定义类别的情况下，对图像中的任意目标进行高精度的像素级分割。",
+      "context_label": "unknown",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": false,
+      "capabilities": [
+        "vision"
+      ],
+      "tags": [
+        "vision",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "all",
+      "model_family": "sam-3",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "3-10s"
+    },
+    {
       "id": "CosyVoice3",
       "object": "model",
       "created": 451919564,
@@ -9897,6 +10539,115 @@
       "use_case": [
         "text-to-speech",
         "voice-output"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "1-3s"
+    },
+    {
+      "id": "VajraV1",
+      "object": "model",
+      "created": 908936256,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "VajraV1",
+      "description": "VajraV1 是一个由 VayuAI 提供的、基于 YOLO 体系结构的开源实时视觉模型系列，支持目标检测、图像分割和人体关键点检测等多种计算机视觉任务，具有高效准确的性能表现。",
+      "context_label": "unknown",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": false,
+      "capabilities": [
+        "vision"
+      ],
+      "tags": [
+        "vision",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "all",
+      "model_family": "vajrav1",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "3-10s"
+    },
+    {
+      "id": "HY-MT1.5-7B",
+      "object": "model",
+      "created": 379391918,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "HY-MT1.5-7B 翻译大模型",
+      "description": "HY-MT1.5-7B 是腾讯混元开源的高性能多语言机器翻译模型（7B 参数级别），基于获得 WMT25 翻译冠军的架构优化而来，支持 33 种语言互译、术语干预、上下文理解与格式保留等高级翻译功能，在标准翻译任务上实现高质量与高实用性输出。",
+      "context_size": 32000,
+      "context_label": "32K",
+      "price_input": 0.3,
+      "price_output": 0.3,
+      "is_free": false,
+      "capabilities": [
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "all",
+      "model_family": "hy-mt1.5-7b",
+      "aliases": [],
+      "parameter_count": 7000000000,
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "Sinong1.0-32B",
+      "object": "model",
+      "created": 1850880586,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "司农大模型",
+      "description": "Sinong1.0-32B由 NAULLM 团队发布的 320 亿参数开源农业大语言模型，面向农业生产、农业知识与农业管理等场景，强化农业专业语义理解、领域知识问答与指令跟随能力，适合农业智能应用与行业级落地。",
+      "context_size": 32000,
+      "context_label": "32K",
+      "price_input": 2,
+      "price_output": 2,
+      "is_free": false,
+      "capabilities": [
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "all",
+      "model_family": "sinong1.0-32b",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "standard",
+      "use_case": [
+        "content-creation",
+        "writing-assistance"
       ],
       "performance_level": "entry",
       "estimated_latency": "1-3s"
@@ -10096,6 +10847,42 @@
       "estimated_latency": "1-3s"
     },
     {
+      "id": "FLUX.2-klein-9B",
+      "object": "model",
+      "created": 1793401356,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "FLUX.2-klein-9B",
+      "description": "FLUX.2-klein-9B 是 Black Forest Labs 推出的 9B 参数高效图像生成与编辑模型，主打极速推理与高质量输出。",
+      "context_label": "unknown",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": false,
+      "capabilities": [
+        "image-generation"
+      ],
+      "tags": [
+        "image-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "all",
+      "model_family": "flux.2-klein-9b",
+      "aliases": [],
+      "parameter_count": 9000000000,
+      "tier": "medium",
+      "speed": "standard",
+      "use_case": [
+        "creative-generation",
+        "art"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "1-3s"
+    },
+    {
       "id": "search",
       "object": "model",
       "created": 461050587,
@@ -10124,6 +10911,43 @@
       "use_case": [],
       "performance_level": "entry",
       "estimated_latency": "1-3s"
+    },
+    {
+      "id": "Qwen3-VL-Embedding-2B",
+      "object": "model",
+      "created": 1650875217,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "Qwen3-VL-Embedding-2B",
+      "description": "Qwen3-VL-Embedding-2B 是一个支持文本、图像等多模态输入、用于生成统一高维语义向量的 2 B 参数级多模态嵌入模型，常用于跨模态检索和相似性搜索等任务。",
+      "context_label": "unknown",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": false,
+      "capabilities": [
+        "embeddings"
+      ],
+      "tags": [
+        "embeddings"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "qwen3-vl-embedding-2b",
+      "model_variant": "vl",
+      "aliases": [],
+      "parameter_count": 2000000000,
+      "tier": "small",
+      "speed": "premium",
+      "use_case": [
+        "semantic-search",
+        "similarity"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
     },
     {
       "id": "LTX-2",
@@ -10158,6 +10982,43 @@
       ],
       "performance_level": "entry",
       "estimated_latency": "1-3s"
+    },
+    {
+      "id": "Qwen3-VL-Reranker-2B",
+      "object": "model",
+      "created": 2038695946,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "Qwen3-VL-Reranker-2B",
+      "description": "Qwen3-VL-Reranker-2B 是一个基于 Qwen3-VL 多模态基础模型的 2 B 参数级别、多模态重新排序（Reranker）模型，用于对检索到的文本/图像/视频等候选结果进行精细相关性评分，从而提升多模态检索管道的准确性。",
+      "context_label": "unknown",
+      "price_input": 0.09,
+      "price_output": 0.09,
+      "is_free": false,
+      "capabilities": [
+        "rerank"
+      ],
+      "tags": [
+        "rerank"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "all",
+      "model_family": "qwen3-vl-reranker-2b",
+      "model_variant": "vl",
+      "aliases": [],
+      "parameter_count": 2000000000,
+      "tier": "small",
+      "speed": "premium",
+      "use_case": [
+        "search-improvement",
+        "relevance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
     },
     {
       "id": "Kimi-K2.5",
@@ -10233,6 +11094,114 @@
       ],
       "performance_level": "mid",
       "estimated_latency": "1-3s"
+    },
+    {
+      "id": "LegalOne-8B",
+      "object": "model",
+      "created": 1208625773,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "LegalOne 法律大模型",
+      "description": "LegalOne-8B 是一个专为中文法律领域训练的 8B 参数法律大语言模型，具备法律法规理解、判例推理、咨询与文书生成等专业能力，并在权威法律任务评测中表现出与更大通用模型接近甚至领先的性能。",
+      "context_size": 32000,
+      "context_label": "32K",
+      "price_input": 2,
+      "price_output": 2,
+      "is_free": false,
+      "capabilities": [
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "all",
+      "model_family": "legalone-8b",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "standard",
+      "use_case": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "1-3s"
+    },
+    {
+      "id": "Qwen3-TTS",
+      "object": "model",
+      "created": 52210971,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "Qwen3-TTS",
+      "description": "Qwen3-TTS 是一个由 Qwen 团队开发的开源高质量文本转语音（TTS）生成模型，可用于快速将文本合成为自然、人类般的语音。\n",
+      "context_label": "unknown",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": false,
+      "capabilities": [
+        "speech-synthesis"
+      ],
+      "tags": [
+        "speech-synthesis"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "all",
+      "model_family": "qwen3-tts",
+      "model_variant": "tts",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "standard",
+      "use_case": [
+        "text-to-speech",
+        "voice-output"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "1-3s"
+    },
+    {
+      "id": "FLUX.2-klein-4B",
+      "object": "model",
+      "created": 1793401191,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "FLUX.2-klein-4B",
+      "description": "FLUX.2-klein-4B 是 Black Forest Labs 发布的一款 轻量级、高速推理的图像生成 AI 模型。",
+      "context_label": "unknown",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": false,
+      "capabilities": [
+        "image-generation"
+      ],
+      "tags": [
+        "image-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "all",
+      "model_family": "flux.2-klein-4b",
+      "aliases": [],
+      "parameter_count": 4000000000,
+      "tier": "small",
+      "speed": "standard",
+      "use_case": [
+        "creative-generation",
+        "art"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
     },
     {
       "id": "Qwen3-Coder-Next",
@@ -13508,6 +14477,38 @@
       "estimated_latency": "< 1s"
     },
     {
+      "id": "NeoHorse-Jev-4B",
+      "object": "model",
+      "created": 1303202941,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "NeoHorse-Jev-4B",
+      "description": "NeoHorse-Jev-4B 是 TokenRhythm 发布的 4B 级结构化决策模型，基于 NeoHorse-1-4B 构建，面向 Agent 工作流中的路由、条件判断、工具选择和结果评估等场景。与传统大语言模型通过自回归生成文本不同，NeoHorse-Jev-4B 采用 Prefill-only 推理方式",
+      "context_size": 32000,
+      "context_label": "32K",
+      "price_input": 0.1,
+      "price_output": 1e-8,
+      "is_free": false,
+      "capabilities": [
+        "systemone"
+      ],
+      "tags": [],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "neohorse-jev-4b",
+      "aliases": [],
+      "parameter_count": 4000000000,
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
       "id": "Intern-Decision-4B",
       "object": "model",
       "created": 244784109,
@@ -13656,9 +14657,9 @@
       "description": "由智源研究院开源的 bge-m3 模型具有多语言、多粒度和多功能的特点，向量维度为 1024，支持100 多种语言，适用于句子到文档的不同文本粒度，最大输入长度为 8192，并集成了稠密、稀疏和多向量检索功能，在多个评测中表现优异。",
       "context_size": 8000,
       "context_label": "8K",
-      "price_input": 0.07,
-      "price_output": 0.07,
-      "is_free": false,
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
       "capabilities": [
         "embeddings"
       ],
@@ -13668,12 +14669,12 @@
       "is_reasoning": false,
       "is_multimodal": false,
       "has_tool_use": false,
-      "free_mechanism": null,
+      "free_mechanism": "permanent",
       "free_quota": null,
-      "trial_scope": "all",
+      "trial_scope": "specific",
       "model_family": "bge-m3",
       "aliases": [],
-      "tier": "small",
+      "tier": "medium",
       "speed": "fast",
       "use_case": [
         "semantic-search",
@@ -13791,6 +14792,47 @@
       ],
       "performance_level": "entry",
       "estimated_latency": "1-3s"
+    },
+    {
+      "id": "glm-4-9b-chat",
+      "object": "model",
+      "created": 1110896549,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "GLM-4-9B-Chat",
+      "description": "GLM-4-9B-Chat 在语义、数学、推理、代码和知识等多方面均表现出较高性能。还具备网页浏览、代码执行、自定义工具调用和长文本推理。 支持包括日语，韩语，德语在内的 26 种语言。",
+      "context_size": 32000,
+      "context_label": "32K",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "permanent",
+      "free_quota": null,
+      "trial_scope": "specific",
+      "model_family": "glm-4-9b",
+      "model_variant": "chat",
+      "aliases": [
+        "bigmodel/glm-4-9b",
+        "GLM-4-9B-0414"
+      ],
+      "parameter_count": 9000000000,
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
     },
     {
       "id": "Kolors",
@@ -16892,83 +17934,6 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "meta-llama/llama-prompt-guard-2-86m",
-      "object": "model",
-      "created": 2021365556,
-      "owned_by": "groq",
-      "provider": "groq",
-      "name": "meta-llama/llama-prompt-guard-2-86m",
-      "context_size": 512,
-      "context_label": "512",
-      "is_free": true,
-      "capabilities": [
-        "moderation"
-      ],
-      "tags": [
-        "moderation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Rate-limited free tier"
-      },
-      "trial_scope": "all",
-      "model_family": "llama-prompt-guard-2-86m",
-      "model_variant": "guard",
-      "aliases": [],
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-filtering",
-        "safety"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "allam-2-7b",
-      "object": "model",
-      "created": 1278808711,
-      "owned_by": "groq",
-      "provider": "groq",
-      "name": "allam-2-7b",
-      "context_size": 4096,
-      "context_label": "4K",
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "chat",
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "rpd": 7000,
-        "tpm": 6000
-      },
-      "trial_scope": "all",
-      "model_family": "allam-2-7b",
-      "aliases": [],
-      "parameter_count": 7000000000,
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
       "id": "openai/gpt-oss-120b",
       "object": "model",
       "created": 261834169,
@@ -17062,6 +18027,85 @@
       "estimated_latency": "< 1s"
     },
     {
+      "id": "allam-2-7b",
+      "object": "model",
+      "created": 1278808711,
+      "owned_by": "groq",
+      "provider": "groq",
+      "name": "allam-2-7b",
+      "context_size": 4096,
+      "context_label": "4K",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpd": 7000,
+        "tpm": 6000
+      },
+      "trial_scope": "all",
+      "model_family": "allam-2-7b",
+      "aliases": [],
+      "parameter_count": 7000000000,
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "openai/gpt-oss-safeguard-20b",
+      "object": "model",
+      "created": 573618965,
+      "owned_by": "groq",
+      "provider": "groq",
+      "name": "openai/gpt-oss-safeguard-20b",
+      "context_size": 131072,
+      "context_label": "131K",
+      "price_input": 0.075,
+      "price_output": 0.3,
+      "is_free": true,
+      "capabilities": [
+        "moderation"
+      ],
+      "tags": [
+        "moderation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Rate-limited free tier"
+      },
+      "trial_scope": "all",
+      "model_family": "gpt-oss-safeguard-20b",
+      "aliases": [],
+      "parameter_count": 20000000000,
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-filtering",
+        "safety"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
       "id": "whisper-large-v3",
       "object": "model",
       "created": 821695011,
@@ -17104,21 +18148,20 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "canopylabs/orpheus-v1-english",
+      "id": "meta-llama/llama-prompt-guard-2-86m",
       "object": "model",
-      "created": 1993843289,
+      "created": 2021365556,
       "owned_by": "groq",
       "provider": "groq",
-      "name": "canopylabs/orpheus-v1-english",
-      "context_size": 4000,
-      "context_label": "4K",
-      "price_input": 22,
+      "name": "meta-llama/llama-prompt-guard-2-86m",
+      "context_size": 512,
+      "context_label": "512",
       "is_free": true,
       "capabilities": [
-        "speech-synthesis"
+        "moderation"
       ],
       "tags": [
-        "speech-synthesis"
+        "moderation"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
@@ -17128,13 +18171,14 @@
         "notes": "Rate-limited free tier"
       },
       "trial_scope": "all",
-      "model_family": "orpheus-v1-english",
+      "model_family": "llama-prompt-guard-2-86m",
+      "model_variant": "guard",
       "aliases": [],
-      "tier": "large",
+      "tier": "medium",
       "speed": "fast",
       "use_case": [
-        "text-to-speech",
-        "voice-output"
+        "content-filtering",
+        "safety"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
@@ -17184,6 +18228,44 @@
       "estimated_latency": "< 1s"
     },
     {
+      "id": "canopylabs/orpheus-arabic-saudi",
+      "object": "model",
+      "created": 1964073120,
+      "owned_by": "groq",
+      "provider": "groq",
+      "name": "canopylabs/orpheus-arabic-saudi",
+      "context_size": 4000,
+      "context_label": "4K",
+      "price_input": 40,
+      "is_free": true,
+      "capabilities": [
+        "speech-synthesis",
+        "translation"
+      ],
+      "tags": [
+        "speech-synthesis",
+        "translation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Rate-limited free tier"
+      },
+      "trial_scope": "all",
+      "model_family": "orpheus-arabic-saudi",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "text-to-speech",
+        "voice-output"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
       "id": "meta-llama/llama-prompt-guard-2-22m",
       "object": "model",
       "created": 2021358890,
@@ -17215,6 +18297,42 @@
       "use_case": [
         "content-filtering",
         "safety"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "canopylabs/orpheus-v1-english",
+      "object": "model",
+      "created": 1993843289,
+      "owned_by": "groq",
+      "provider": "groq",
+      "name": "canopylabs/orpheus-v1-english",
+      "context_size": 4000,
+      "context_label": "4K",
+      "price_input": 22,
+      "is_free": true,
+      "capabilities": [
+        "speech-synthesis"
+      ],
+      "tags": [
+        "speech-synthesis"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Rate-limited free tier"
+      },
+      "trial_scope": "all",
+      "model_family": "orpheus-v1-english",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "text-to-speech",
+        "voice-output"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
@@ -17258,82 +18376,6 @@
       "use_case": [
         "transcription",
         "voice-input"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "canopylabs/orpheus-arabic-saudi",
-      "object": "model",
-      "created": 1964073120,
-      "owned_by": "groq",
-      "provider": "groq",
-      "name": "canopylabs/orpheus-arabic-saudi",
-      "context_size": 4000,
-      "context_label": "4K",
-      "price_input": 40,
-      "is_free": true,
-      "capabilities": [
-        "speech-synthesis",
-        "translation"
-      ],
-      "tags": [
-        "speech-synthesis",
-        "translation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Rate-limited free tier"
-      },
-      "trial_scope": "all",
-      "model_family": "orpheus-arabic-saudi",
-      "aliases": [],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "text-to-speech",
-        "voice-output"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "openai/gpt-oss-safeguard-20b",
-      "object": "model",
-      "created": 573618965,
-      "owned_by": "groq",
-      "provider": "groq",
-      "name": "openai/gpt-oss-safeguard-20b",
-      "context_size": 131072,
-      "context_label": "131K",
-      "price_input": 0.075,
-      "price_output": 0.3,
-      "is_free": true,
-      "capabilities": [
-        "moderation"
-      ],
-      "tags": [
-        "moderation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Rate-limited free tier"
-      },
-      "trial_scope": "all",
-      "model_family": "gpt-oss-safeguard-20b",
-      "aliases": [],
-      "parameter_count": 20000000000,
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-filtering",
-        "safety"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
