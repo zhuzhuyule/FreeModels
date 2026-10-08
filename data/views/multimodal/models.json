@@ -1,8 +1,8 @@
 {
   "object": "list",
   "view": "multimodal",
-  "updated_at": "2026-10-07T08:16:42.870Z",
-  "total": 88,
+  "updated_at": "2026-10-08T08:32:52.840Z",
+  "total": 93,
   "filters": {
     "tags": "vision"
   },
@@ -1912,6 +1912,122 @@
       "estimated_latency": "3-10s"
     },
     {
+      "id": "HunyuanOCR",
+      "object": "model",
+      "created": 1810167023,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "HunyuanOCR",
+      "description": "HunyuanOCR 是腾讯混元大模型体系下的通用光学字符识别（OCR）能力，基于多模态理解模型构建，具备高精度文本提取、版面还原与复杂场景识别能力。它支持多语言识别、复杂背景下文字提取，以及对表格、票据、证照等结构化信息的解析，适用于金融、政务、电商、教育等多类场景。",
+      "context_label": "unknown",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": false,
+      "capabilities": [
+        "vision"
+      ],
+      "tags": [
+        "vision",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "all",
+      "model_family": "hunyuanocr",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "3-10s"
+    },
+    {
+      "id": "LongCat-Image",
+      "object": "model",
+      "created": 1980972893,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "LongCat-Image",
+      "description": "LongCat-Image 是美团 LongCat 团队开源的轻量级高质量图像生成模型，支持中英文文本生成逼真图像，并具备优秀的中文文字渲染能力。",
+      "context_label": "unknown",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": false,
+      "capabilities": [
+        "image-generation"
+      ],
+      "tags": [
+        "vision",
+        "image-generation",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "all",
+      "model_family": "longcat-image",
+      "model_variant": "image",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "creative-generation",
+        "art"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "3-10s"
+    },
+    {
+      "id": "LongCat-Image-Edit",
+      "object": "model",
+      "created": 188235184,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "LongCat-Image-Edit",
+      "description": "LongCat-Image-Edit 是美团开源的高精度图像编辑模型，支持文本、局部选区与参考图驱动的内容重绘，具备强语义理解、细节一致性和自然编辑效果，适用于创意设计、商品图优化与精细视觉修改。",
+      "context_label": "unknown",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": false,
+      "capabilities": [
+        "image-to-image"
+      ],
+      "tags": [
+        "vision",
+        "image-to-image",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "all",
+      "model_family": "longcat-image-edit",
+      "model_variant": "image",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "image-editing",
+        "style-transfer"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "3-10s"
+    },
+    {
       "id": "Qwen-Image-Edit-2511",
       "object": "model",
       "created": 683441095,
@@ -1949,6 +2065,78 @@
         "visual-q&a",
         "image-editing",
         "style-transfer"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "3-10s"
+    },
+    {
+      "id": "sam3",
+      "object": "model",
+      "created": 2090715641,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "SAM 3 图像分割模型",
+      "description": "SAM 3 是一款通用的图像分割模型，可在无需预定义类别的情况下，对图像中的任意目标进行高精度的像素级分割。",
+      "context_label": "unknown",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": false,
+      "capabilities": [
+        "vision"
+      ],
+      "tags": [
+        "vision",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "all",
+      "model_family": "sam-3",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "3-10s"
+    },
+    {
+      "id": "VajraV1",
+      "object": "model",
+      "created": 908936256,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "VajraV1",
+      "description": "VajraV1 是一个由 VayuAI 提供的、基于 YOLO 体系结构的开源实时视觉模型系列，支持目标检测、图像分割和人体关键点检测等多种计算机视觉任务，具有高效准确的性能表现。",
+      "context_label": "unknown",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": false,
+      "capabilities": [
+        "vision"
+      ],
+      "tags": [
+        "vision",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "all",
+      "model_family": "vajrav1",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a"
       ],
       "performance_level": "mid",
       "estimated_latency": "3-10s"
