@@ -21,8 +21,8 @@
 
 | 指标 | 数量 |
 |---|---:|
-| 总模型 | 20 |
-| 免费模型 | 20 |
+| 总模型 | 19 |
+| 免费模型 | 19 |
 | 付费可试用 | 0 |
 
 ## 免费策略
@@ -41,7 +41,6 @@
 | openrouter  | `google/gemma-4-31b-it:free` | Google: Gemma 4 31B (free) | 262K | 限速免费 | Free tier with rate limits (see openrouter.ai) |
 | openrouter  | `google/lyria-3-clip-preview` | Google: Lyria 3 Clip Preview | 1M | 限速免费 | Free tier with rate limits (see openrouter.ai) |
 | openrouter  | `google/lyria-3-pro-preview` | Google: Lyria 3 Pro Preview | 1M | 限速免费 | Free tier with rate limits (see openrouter.ai) |
-| openrouter  | `inclusionai/ling-3.0-flash-sante:free` | inclusionAI: Ling 3.0 Flash Sante (free) | 262K | 限速免费 | Free tier with rate limits (see openrouter.ai) |
 | openrouter  | `inclusionai/ling-3.1-flash` | inclusionAI: Ling 3.1 Flash | 262K | 限速免费 | Free tier with rate limits (see openrouter.ai) |
 | openrouter  | `liquid/lfm-2.5-2.6b:free` | LiquidAI: LFM2.5-2.6B (free) | 66K | 限速免费 | Free tier with rate limits (see openrouter.ai) |
 | openrouter  | `nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free` | NVIDIA: Nemotron 3 Nano Omni (free) | 256K | 限速免费 | Free tier with rate limits (see openrouter.ai) |
