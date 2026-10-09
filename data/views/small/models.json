@@ -1,8 +1,8 @@
 {
   "object": "list",
   "view": "small",
-  "updated_at": "2026-10-08T08:32:52.845Z",
-  "total": 79,
+  "updated_at": "2026-10-09T08:36:58.479Z",
+  "total": 78,
   "filters": {
     "tier": "small"
   },
@@ -2195,6 +2195,49 @@
       "estimated_latency": "< 1s"
     },
     {
+      "id": "whisper-large-v3-turbo",
+      "object": "model",
+      "created": 831031114,
+      "owned_by": "groq",
+      "provider": "groq",
+      "name": "whisper-large-v3-turbo",
+      "context_size": 448,
+      "context_label": "448",
+      "price_input": 0.04,
+      "is_free": true,
+      "capabilities": [
+        "speech-recognition"
+      ],
+      "tags": [
+        "speech-recognition"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Rate-limited free tier"
+      },
+      "trial_scope": "all",
+      "model_family": "whisper-large-v3",
+      "model_variant": "turbo",
+      "aliases": [
+        "cloudflare/@cf/openai/whisper-large-v3-turbo",
+        "whisper-large-v3-turbo",
+        "whisper-large-v3",
+        "groq/whisper-large-v3",
+        "sambanova/Whisper-Large-v3"
+      ],
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "transcription",
+        "voice-input"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
       "id": "openai/gpt-oss-120b",
       "object": "model",
       "created": 261834169,
@@ -2272,49 +2315,6 @@
         "whisper-large-v3-turbo",
         "whisper-large-v3",
         "groq/whisper-large-v3-turbo",
-        "sambanova/Whisper-Large-v3"
-      ],
-      "tier": "small",
-      "speed": "fast",
-      "use_case": [
-        "transcription",
-        "voice-input"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "whisper-large-v3-turbo",
-      "object": "model",
-      "created": 831031114,
-      "owned_by": "groq",
-      "provider": "groq",
-      "name": "whisper-large-v3-turbo",
-      "context_size": 448,
-      "context_label": "448",
-      "price_input": 0.04,
-      "is_free": true,
-      "capabilities": [
-        "speech-recognition"
-      ],
-      "tags": [
-        "speech-recognition"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Rate-limited free tier"
-      },
-      "trial_scope": "all",
-      "model_family": "whisper-large-v3",
-      "model_variant": "turbo",
-      "aliases": [
-        "cloudflare/@cf/openai/whisper-large-v3-turbo",
-        "whisper-large-v3-turbo",
-        "whisper-large-v3",
-        "groq/whisper-large-v3",
         "sambanova/Whisper-Large-v3"
       ],
       "tier": "small",
@@ -2631,8 +2631,7 @@
       "model_family": "qwen3-235b-a22b",
       "model_variant": "instruct",
       "aliases": [
-        "xingchen/xop3qwen235b2507",
-        "xingchen/xop3qwen235b"
+        "xingchen/xop3qwen235b2507"
       ],
       "parameter_count": 235000000000,
       "tier": "small",
@@ -2905,51 +2904,6 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "xop3qwen30b2507",
-      "object": "model",
-      "created": 611028064,
-      "owned_by": "xingchen",
-      "provider": "xingchen",
-      "name": "Qwen3-30B-A3B-Instruct-2507",
-      "description": "Qwen3-30B-A3B-Instruct-2507 作为 Qwen3-30B-A3B 非思考模式的更新版本，在通用能力（含指令遵循、逻辑推理等）、多语言长尾知识覆盖、用户偏好对齐及长上下文理解方面均有显著提升。",
-      "context_size": 32768,
-      "context_label": "33K",
-      "price_input": 0.45,
-      "price_output": 4.5,
-      "is_free": false,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "chat",
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
-      "model_family": "qwen3-30b-a3b",
-      "model_variant": "instruct",
-      "aliases": [
-        "cloudflare/@cf/qwen/qwen3-30b-a3b-fp8",
-        "xingchen/xop3qwen30b"
-      ],
-      "parameter_count": 30000000000,
-      "tier": "small",
-      "speed": "standard",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
       "id": "xop3qwen30b",
       "object": "model",
       "created": 761086098,
@@ -2978,8 +2932,7 @@
       "trial_scope": "none",
       "model_family": "qwen3-30b-a3b",
       "aliases": [
-        "cloudflare/@cf/qwen/qwen3-30b-a3b-fp8",
-        "xingchen/xop3qwen30b2507"
+        "cloudflare/@cf/qwen/qwen3-30b-a3b-fp8"
       ],
       "parameter_count": 30000000000,
       "tier": "small",
