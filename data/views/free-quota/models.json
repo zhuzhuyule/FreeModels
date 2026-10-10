@@ -1,8 +1,8 @@
 {
   "object": "list",
   "view": "free-quota",
-  "updated_at": "2026-10-09T08:36:58.468Z",
-  "total": 106,
+  "updated_at": "2026-10-10T03:23:47.037Z",
+  "total": 90,
   "filters": {
     "freeMechanism": [
       "daily-tokens",
@@ -11,6 +11,123 @@
     ]
   },
   "data": [
+    {
+      "id": "gpt-oss-120b",
+      "object": "model",
+      "created": 369610922,
+      "owned_by": "cerebras",
+      "provider": "cerebras",
+      "name": "OpenAI GPT OSS",
+      "description": "Cerebras: This model excels at efficient reasoning across science, math, and coding applications. It's ideal for real-time coding assistance, processing large documents for Q&A and summarization, agentic research workflows, and regulated on-premises workloads.",
+      "context_size": 131072,
+      "context_label": "131K",
+      "price_input": 0.35,
+      "price_output": 0.75,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "reasoning",
+        "function-calling",
+        "tool-use"
+      ],
+      "tags": [
+        "reasoning",
+        "text-generation",
+        "chat",
+        "function-calling",
+        "tool-use"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "total_credits": 5,
+        "notes": "$5 free credits for new accounts (expire after 30 days); Free Trial tier ~5 RPM per model; no permanently free tier"
+      },
+      "trial_scope": "all",
+      "model_family": "gpt-oss-120b",
+      "aliases": [
+        "cloudflare/@cf/openai/gpt-oss-120b",
+        "groq/openai/gpt-oss-120b",
+        "ovh/gpt-oss-120b",
+        "sambanova/gpt-oss-120b"
+      ],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "qwen-3.8-27b",
+      "object": "model",
+      "created": 878015188,
+      "owned_by": "cerebras",
+      "provider": "cerebras",
+      "name": "Qwen 3.8 27B",
+      "description": "Cerebras: This model excels at vision-language understanding, coding, research, and long-horizon agentic tasks.",
+      "context_size": 65536,
+      "context_label": "66K",
+      "price_input": 0.99,
+      "price_output": 1.49,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "reasoning",
+        "vision",
+        "function-calling",
+        "tool-use"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "chat",
+        "reasoning",
+        "function-calling",
+        "tool-use",
+        "multimodal"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": true,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "total_credits": 5,
+        "notes": "$5 free credits for new accounts (expire after 30 days); Free Trial tier ~5 RPM per model; no permanently free tier"
+      },
+      "trial_scope": "all",
+      "model_family": "qwen-3.8-27b",
+      "aliases": [],
+      "parameter_count": 27000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
     {
       "id": "@cf/openai/gpt-oss-120b",
       "object": "model",
@@ -39,13 +156,14 @@
       "has_tool_use": true,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "gpt-oss-120b",
       "aliases": [
         "cerebras/gpt-oss-120b",
         "groq/openai/gpt-oss-120b",
+        "ovh/gpt-oss-120b",
         "sambanova/gpt-oss-120b"
       ],
       "parameter_count": 120000000000,
@@ -86,7 +204,7 @@
       "has_tool_use": false,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "baai-bge-m3",
@@ -125,7 +243,7 @@
       "has_tool_use": false,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "huggingface-distilbert-sst-2",
@@ -164,7 +282,7 @@
       "has_tool_use": false,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "gemma-2b-lora",
@@ -202,7 +320,7 @@
       "has_tool_use": false,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "black-forest-labs-flux-2-klein-9b",
@@ -243,7 +361,7 @@
       "has_tool_use": false,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "llama-3.2-3b",
@@ -283,7 +401,7 @@
       "has_tool_use": false,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "llama-guard-3-8b",
@@ -323,7 +441,7 @@
       "has_tool_use": false,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "qwen3-embedding-0.6b",
@@ -365,7 +483,7 @@
       "has_tool_use": false,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "myshell-ai-melotts",
@@ -403,7 +521,7 @@
       "has_tool_use": false,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "mistral-7b-v0.2-lora",
@@ -441,7 +559,7 @@
       "has_tool_use": false,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "deepgram-aura-2-es",
@@ -455,58 +573,6 @@
         "voice-output"
       ],
       "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "@cf/moonshotai/kimi-k2.7-code",
-      "object": "model",
-      "created": 541624990,
-      "owned_by": "cloudflare",
-      "provider": "cloudflare",
-      "name": "@cf/moonshotai/kimi-k2.7-code",
-      "description": "Kimi K2.7 is a frontier-scale open-source 1T parameter model with a 262.1k context window, multi-turn tool calling, vision inputs, and structured outputs for agentic workloads.",
-      "context_size": 262144,
-      "context_label": "262K",
-      "price_input": 0.19,
-      "price_output": 4,
-      "is_free": true,
-      "capabilities": [
-        "text-generation",
-        "function-calling",
-        "reasoning"
-      ],
-      "tags": [
-        "vision",
-        "text-generation",
-        "tool-use",
-        "function-calling",
-        "reasoning",
-        "multimodal"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": true,
-      "has_tool_use": true,
-      "free_mechanism": "daily-tokens",
-      "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
-      },
-      "trial_scope": "all",
-      "model_family": "moonshotai-kimi-k2.7-code",
-      "model_variant": "code",
-      "aliases": [],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "image-understanding",
-        "visual-q&a",
-        "content-creation",
-        "writing-assistance",
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -531,7 +597,7 @@
       "has_tool_use": false,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "whisper",
@@ -545,53 +611,6 @@
         "voice-input"
       ],
       "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "@cf/zai-org/glm-5.3",
-      "object": "model",
-      "created": 1600228440,
-      "owned_by": "cloudflare",
-      "provider": "cloudflare",
-      "name": "@cf/zai-org/glm-5.3",
-      "description": "GLM-5.3 is Z.ai's flagship agentic coding model, pairing a 1M-token context window with reasoning, function calling, and structured outputs to power multi-step, tool-driven development workflows.",
-      "context_size": 1048576,
-      "context_label": "1M",
-      "price_input": 0.26,
-      "price_output": 4.4,
-      "is_free": true,
-      "capabilities": [
-        "text-generation",
-        "function-calling",
-        "reasoning"
-      ],
-      "tags": [
-        "reasoning",
-        "text-generation",
-        "tool-use",
-        "function-calling"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": false,
-      "has_tool_use": true,
-      "free_mechanism": "daily-tokens",
-      "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
-      },
-      "trial_scope": "all",
-      "model_family": "org-glm-5.3",
-      "aliases": [],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "content-creation",
-        "writing-assistance",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -618,7 +637,7 @@
       "has_tool_use": true,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "utter-project-eurollm-9b",
@@ -657,7 +676,7 @@
       "has_tool_use": false,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "pfnet-plamo-embedding-1b",
@@ -698,7 +717,7 @@
       "has_tool_use": false,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "llava-hf-llava-1.5-7b-hf",
@@ -741,7 +760,7 @@
       "has_tool_use": false,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "deepseek-r1-distill-qwen-32b",
@@ -788,7 +807,7 @@
       "has_tool_use": false,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "runwayml-stable-diffusion-v1-5-inpainting",
@@ -828,7 +847,7 @@
       "has_tool_use": false,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "deepgram-flux",
@@ -866,7 +885,7 @@
       "has_tool_use": false,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "deepgram-nova-3",
@@ -904,7 +923,7 @@
       "has_tool_use": false,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "black-forest-labs-flux-1-schnell",
@@ -944,7 +963,7 @@
       "has_tool_use": false,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "llama-3.1-8b",
@@ -959,56 +978,6 @@
         "writing-assistance"
       ],
       "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "@cf/zai-org/glm-5.3-flash",
-      "object": "model",
-      "created": 1674197715,
-      "owned_by": "cloudflare",
-      "provider": "cloudflare",
-      "name": "@cf/zai-org/glm-5.3-flash",
-      "description": "The first natively multimodal model in the GLM-5 series. With 320B total parameters and just 18B active parameters, it outperforms GLM-5.2 across benchmarks and real-world workloads at one-tenth the price, while approaching Claude Opus 4.8 on coding and agentic benchmarks.",
-      "context_size": 1048576,
-      "context_label": "1M",
-      "price_input": 0.03,
-      "price_output": 0.5,
-      "is_free": true,
-      "capabilities": [
-        "text-generation",
-        "function-calling",
-        "reasoning"
-      ],
-      "tags": [
-        "vision",
-        "text-generation",
-        "function-calling",
-        "reasoning",
-        "multimodal"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": true,
-      "has_tool_use": true,
-      "free_mechanism": "daily-tokens",
-      "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
-      },
-      "trial_scope": "all",
-      "model_family": "org-glm-5.3-flash",
-      "aliases": [],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "image-understanding",
-        "visual-q&a",
-        "content-creation",
-        "writing-assistance",
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -1035,7 +1004,7 @@
       "has_tool_use": false,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "llama-3.2-1b",
@@ -1049,59 +1018,6 @@
         "writing-assistance"
       ],
       "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "@cf/moonshotai/kimi-k2.6",
-      "object": "model",
-      "created": 1273849035,
-      "owned_by": "cloudflare",
-      "provider": "cloudflare",
-      "name": "@cf/moonshotai/kimi-k2.6",
-      "description": "Kimi K2.6 is a frontier-scale open-source 1T parameter model with a 262.1k context window, multi-turn tool calling, vision inputs, and structured outputs for agentic workloads.",
-      "context_size": 262144,
-      "context_label": "262K",
-      "price_input": 0.16,
-      "price_output": 4,
-      "is_free": true,
-      "capabilities": [
-        "text-generation",
-        "function-calling",
-        "reasoning"
-      ],
-      "tags": [
-        "vision",
-        "text-generation",
-        "tool-use",
-        "function-calling",
-        "reasoning",
-        "multimodal"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": true,
-      "has_tool_use": true,
-      "free_mechanism": "daily-tokens",
-      "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
-      },
-      "trial_scope": "all",
-      "model_family": "moonshotai-kimi-k2.6",
-      "aliases": [
-        "moonshotai/kimi-k2.6"
-      ],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "image-understanding",
-        "visual-q&a",
-        "content-creation",
-        "writing-assistance",
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -1129,7 +1045,7 @@
       "has_tool_use": false,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "clef",
@@ -1174,7 +1090,7 @@
       "has_tool_use": true,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "org-glm-4.7-flash",
@@ -1214,7 +1130,7 @@
       "has_tool_use": false,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "resnet-50",
@@ -1252,7 +1168,7 @@
       "has_tool_use": false,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "bytedance-stable-diffusion-xl-lightning",
@@ -1292,7 +1208,7 @@
       "has_tool_use": false,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "llama-2-7b-hf-lora",
@@ -1334,7 +1250,7 @@
       "has_tool_use": true,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "llama-3.3-70b-fast",
@@ -1377,7 +1293,7 @@
       "has_tool_use": true,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "ibm-granite-granite-4.0-h-micro",
@@ -1413,7 +1329,7 @@
       "has_tool_use": false,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "lykon-dreamshaper-8-lcm",
@@ -1427,56 +1343,6 @@
         "art"
       ],
       "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "@cf/deepseek-ai/deepseek-v4-flash-0731",
-      "object": "model",
-      "created": 797500887,
-      "owned_by": "cloudflare",
-      "provider": "cloudflare",
-      "name": "@cf/deepseek-ai/deepseek-v4-flash-0731",
-      "description": "DeepSeek-V4-Flash-0731 is the official release of DeepSeek-V4-Flash, superseding the preview version, with substantially enhanced agentic capabilities. ",
-      "context_size": 1048576,
-      "context_label": "1M",
-      "price_input": 0.014,
-      "price_output": 1.32,
-      "is_free": true,
-      "capabilities": [
-        "text-generation",
-        "function-calling",
-        "reasoning"
-      ],
-      "tags": [
-        "text-generation",
-        "function-calling",
-        "reasoning"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": false,
-      "has_tool_use": true,
-      "free_mechanism": "daily-tokens",
-      "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
-      },
-      "trial_scope": "all",
-      "model_family": "deepseek-v4-flash",
-      "aliases": [
-        "DeepSeek-V4-Flash",
-        "deepseek-v4-flash-0731",
-        "xingchen/xopdeepseekv4flash0731"
-      ],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -1501,7 +1367,7 @@
       "has_tool_use": false,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "leonardo-phoenix-1.0",
@@ -1541,7 +1407,7 @@
       "has_tool_use": false,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "stabilityai-stable-diffusion-xl-base-1.0",
@@ -1583,7 +1449,7 @@
       "has_tool_use": false,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "m2m100-1.2b",
@@ -1622,7 +1488,7 @@
       "has_tool_use": false,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "ai4bharat-indictrans2-en-indic-1b",
@@ -1661,7 +1527,7 @@
       "has_tool_use": false,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "black-forest-labs-flux-2-klein-4b",
@@ -1703,7 +1569,7 @@
       "has_tool_use": false,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "baai-bge-small-en-v1.5",
@@ -1745,7 +1611,7 @@
       "has_tool_use": true,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "swiss-ai-apertus-v1.5-8b",
@@ -1760,6 +1626,47 @@
         "writing-assistance"
       ],
       "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "@cf/cloudflare/clef-omni",
+      "object": "model",
+      "created": 180323433,
+      "owned_by": "cloudflare",
+      "provider": "cloudflare",
+      "name": "@cf/cloudflare/clef-omni",
+      "description": "Clef-omni is a multimodal decision model built on a 30B-parameter mixture-of-experts (3B active) backbone. It turns a state and a schema of typed questions into decisions, reads the state as text, JSON, images, audio, or video, and returns a probability for every allowed option of every question.",
+      "context_size": 65536,
+      "context_label": "66K",
+      "price_input": 0.15,
+      "is_free": true,
+      "capabilities": [
+        "text-generation"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
+      },
+      "trial_scope": "all",
+      "model_family": "clef-omni",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -1786,7 +1693,7 @@
       "has_tool_use": false,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "qwen2.5-coder-32b",
@@ -1800,52 +1707,6 @@
         "writing-assistance"
       ],
       "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "@cf/zai-org/glm-5.2",
-      "object": "model",
-      "created": 1600228439,
-      "owned_by": "cloudflare",
-      "provider": "cloudflare",
-      "name": "@cf/zai-org/glm-5.2",
-      "description": "Z.ai's flagship agentic coding model",
-      "context_size": 262144,
-      "context_label": "262K",
-      "price_input": 0.26,
-      "price_output": 4.4,
-      "is_free": true,
-      "capabilities": [
-        "text-generation",
-        "function-calling",
-        "reasoning"
-      ],
-      "tags": [
-        "text-generation",
-        "function-calling",
-        "reasoning"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": false,
-      "has_tool_use": true,
-      "free_mechanism": "daily-tokens",
-      "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
-      },
-      "trial_scope": "all",
-      "model_family": "org-glm-5.2",
-      "aliases": [],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -1876,7 +1737,7 @@
       "has_tool_use": true,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "nemotron-3-120b-a12b",
@@ -1919,7 +1780,7 @@
       "has_tool_use": false,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "baai-bge-base-en-v1.5",
@@ -1959,7 +1820,7 @@
       "has_tool_use": false,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "aisingapore-gemma-sea-lion-v4-27b",
@@ -2003,7 +1864,7 @@
       "has_tool_use": true,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "qwen3-30b-a3b",
@@ -2049,7 +1910,7 @@
       "has_tool_use": false,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "black-forest-labs-flux-2-dev",
@@ -2089,7 +1950,7 @@
       "has_tool_use": false,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "gemma-7b-lora",
@@ -2133,7 +1994,7 @@
       "has_tool_use": true,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "gemma-4-26b-a4b",
@@ -2184,7 +2045,7 @@
       "has_tool_use": true,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "mistral-small-3.1-24b",
@@ -2198,57 +2059,6 @@
         "visual-q&a",
         "content-creation",
         "writing-assistance"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "@cf/deepseek-ai/deepseek-v4-pro-0813",
-      "object": "model",
-      "created": 1483190957,
-      "owned_by": "cloudflare",
-      "provider": "cloudflare",
-      "name": "@cf/deepseek-ai/deepseek-v4-pro-0813",
-      "description": "DeepSeek V4 Pro is a high-capability reasoning model from DeepSeek with a one million token context window, built for long-horizon agentic workflows and complex, multi-step problem-solving",
-      "context_size": 1048576,
-      "context_label": "1M",
-      "price_input": 0.044,
-      "price_output": 3.96,
-      "is_free": true,
-      "capabilities": [
-        "text-generation",
-        "function-calling",
-        "reasoning"
-      ],
-      "tags": [
-        "reasoning",
-        "text-generation",
-        "function-calling"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": false,
-      "has_tool_use": true,
-      "free_mechanism": "daily-tokens",
-      "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
-      },
-      "trial_scope": "all",
-      "model_family": "deepseek-v4-pro",
-      "aliases": [
-        "DeepSeek-V4-Pro",
-        "DeepSeek-V4-Pro-0813",
-        "xingchen/xopdeepseekv4pro0813",
-        "xingchen/xopdeepseekv4pro"
-      ],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "content-creation",
-        "writing-assistance",
-        "complex-reasoning"
       ],
       "performance_level": "mid",
       "estimated_latency": "< 1s"
@@ -2280,7 +2090,7 @@
       "has_tool_use": false,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "llama-3.2-11b-vision",
@@ -2335,13 +2145,14 @@
       "has_tool_use": true,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "qwen3.8-27b",
       "aliases": [
         "qwen3.8-27b",
-        "groq/qwen/qwen3.8-27b"
+        "groq/qwen/qwen3.8-27b",
+        "ovh/Qwen3.8-27B"
       ],
       "parameter_count": 27000000000,
       "tier": "large",
@@ -2381,7 +2192,7 @@
       "has_tool_use": false,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "whisper-tiny-en",
@@ -2419,7 +2230,7 @@
       "has_tool_use": false,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "whisper-large-v3",
@@ -2429,6 +2240,8 @@
         "whisper-large-v3",
         "groq/whisper-large-v3-turbo",
         "groq/whisper-large-v3",
+        "ovh/whisper-large-v3-turbo",
+        "ovh/whisper-large-v3",
         "sambanova/Whisper-Large-v3"
       ],
       "tier": "medium",
@@ -2464,7 +2277,7 @@
       "has_tool_use": false,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "deepgram-aura-1",
@@ -2508,13 +2321,14 @@
       "has_tool_use": true,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "gpt-oss-20b",
       "aliases": [
         "groq/openai/gpt-oss-20b",
-        "openai/gpt-oss-20b"
+        "openai/gpt-oss-20b",
+        "ovh/gpt-oss-20b"
       ],
       "parameter_count": 20000000000,
       "tier": "medium",
@@ -2552,7 +2366,7 @@
       "has_tool_use": false,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "embeddinggemma-300m",
@@ -2591,7 +2405,7 @@
       "has_tool_use": false,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "baai-bge-reranker-base",
@@ -2634,7 +2448,7 @@
       "has_tool_use": false,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "moondream-moondream3.1-9b-a2b",
@@ -2679,7 +2493,7 @@
       "has_tool_use": false,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "leonardo-lucid-origin",
@@ -2725,7 +2539,7 @@
       "has_tool_use": true,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "llama-4-scout-17b-16e",
@@ -2755,7 +2569,7 @@
       "description": "Clef-flash is a fast 9B multimodal decision model that turns a state and a schema of typed questions into decisions. It reads the state as text, JSON, images, or video, and returns a probability for every allowed option of every question.",
       "context_size": 65536,
       "context_label": "66K",
-      "price_input": 0.09,
+      "price_input": 0.038,
       "is_free": true,
       "capabilities": [
         "text-generation"
@@ -2770,7 +2584,7 @@
       "has_tool_use": false,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "clef-flash",
@@ -2812,7 +2626,7 @@
       "has_tool_use": false,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "qwq-32b",
@@ -2856,7 +2670,7 @@
       "has_tool_use": false,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "baai-bge-large-en-v1.5",
@@ -2894,7 +2708,7 @@
       "has_tool_use": false,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "deepgram-aura-2-en",
@@ -2908,6 +2722,316 @@
         "voice-output"
       ],
       "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "DeepSeek-V4-Flash-0731",
+      "object": "model",
+      "created": 1082237056,
+      "owned_by": "llm7",
+      "provider": "llm7",
+      "name": "DeepSeek-V4-Flash-0731",
+      "description": "LLM7 chat (turbo tier)",
+      "context_size": 400000,
+      "context_label": "400K",
+      "price_input": 0.02,
+      "price_output": 0.04,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "tool-use",
+        "reasoning"
+      ],
+      "tags": [
+        "text-generation",
+        "chat",
+        "tool-use",
+        "reasoning"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "rpm": 60,
+        "tokens_per_day": 100000,
+        "notes": "Free API token from dash.llm7.io (signup required, no payment). 100,000 tokens per 24 hours across input+output 60 requests per minute, 250 per hour. Official docs warn the free-token quota may be reduced without notice. price_input/price_output are LLM7 paid-usage rates (USD per 1M tokens), not what the free tier costs."
+      },
+      "trial_scope": "specific",
+      "model_family": "deepseek-v4-flash",
+      "aliases": [
+        "cloudflare/@cf/deepseek-ai/deepseek-v4-flash-0731",
+        "DeepSeek-V4-Flash",
+        "deepseek-v4-flash-0731",
+        "sensenova/deepseek-v4-flash",
+        "xingchen/xopdeepseekv4flash0731"
+      ],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "GLM-5.3-Flash",
+      "object": "model",
+      "created": 1616888882,
+      "owned_by": "llm7",
+      "provider": "llm7",
+      "name": "GLM-5.3-Flash",
+      "description": "LLM7 chat (turbo tier)",
+      "context_size": 400000,
+      "context_label": "400K",
+      "price_input": 0.02,
+      "price_output": 0.04,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "tool-use",
+        "reasoning"
+      ],
+      "tags": [
+        "text-generation",
+        "chat",
+        "tool-use",
+        "reasoning"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "rpm": 60,
+        "tokens_per_day": 100000,
+        "notes": "Free API token from dash.llm7.io (signup required, no payment). 100,000 tokens per 24 hours across input+output 60 requests per minute, 250 per hour. Official docs warn the free-token quota may be reduced without notice. price_input/price_output are LLM7 paid-usage rates (USD per 1M tokens), not what the free tier costs."
+      },
+      "trial_scope": "specific",
+      "model_family": "glm-5.3-flash",
+      "aliases": [
+        "GLM-5.3-Flash",
+        "z-ai/glm-5.3-flash"
+      ],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "codestral-latest",
+      "object": "model",
+      "created": 1487565173,
+      "owned_by": "llm7",
+      "provider": "llm7",
+      "name": "codestral-latest",
+      "description": "LLM7 chat (turbo tier)",
+      "context_size": 32000,
+      "context_label": "32K",
+      "price_input": 0.01,
+      "price_output": 0.02,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "tool-use",
+        "code-generation"
+      ],
+      "tags": [
+        "text-generation",
+        "chat",
+        "tool-use",
+        "code-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "rpm": 60,
+        "tokens_per_day": 100000,
+        "notes": "Free API token from dash.llm7.io (signup required, no payment). 100,000 tokens per 24 hours across input+output 60 requests per minute, 250 per hour. Official docs warn the free-token quota may be reduced without notice. price_input/price_output are LLM7 paid-usage rates (USD per 1M tokens), not what the free tier costs."
+      },
+      "trial_scope": "specific",
+      "model_family": "codestral-latest",
+      "aliases": [],
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "software-development",
+        "code-completion"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "gpt-oss:20b",
+      "object": "model",
+      "created": 1018220347,
+      "owned_by": "llm7",
+      "provider": "llm7",
+      "name": "gpt-oss:20b",
+      "description": "LLM7 chat (turbo tier)",
+      "context_size": 128000,
+      "context_label": "128K",
+      "price_input": 0.03,
+      "price_output": 0.05,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "tool-use"
+      ],
+      "tags": [
+        "text-generation",
+        "chat",
+        "tool-use"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "rpm": 60,
+        "tokens_per_day": 100000,
+        "notes": "Free API token from dash.llm7.io (signup required, no payment). 100,000 tokens per 24 hours across input+output 60 requests per minute, 250 per hour. Official docs warn the free-token quota may be reduced without notice. price_input/price_output are LLM7 paid-usage rates (USD per 1M tokens), not what the free tier costs."
+      },
+      "trial_scope": "specific",
+      "model_family": "gpt-oss:20b",
+      "aliases": [],
+      "parameter_count": 20000000000,
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "mistral-Nemo-Instruct-2407",
+      "object": "model",
+      "created": 166918731,
+      "owned_by": "llm7",
+      "provider": "llm7",
+      "name": "mistral-Nemo-Instruct-2407",
+      "description": "LLM7 chat (turbo tier)",
+      "context_size": 128000,
+      "context_label": "128K",
+      "price_input": 0.03,
+      "price_output": 0.03,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation",
+        "chat"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "rpm": 60,
+        "tokens_per_day": 100000,
+        "notes": "Free API token from dash.llm7.io (signup required, no payment). 100,000 tokens per 24 hours across input+output 60 requests per minute, 250 per hour. Official docs warn the free-token quota may be reduced without notice. price_input/price_output are LLM7 paid-usage rates (USD per 1M tokens), not what the free tier costs."
+      },
+      "trial_scope": "specific",
+      "model_family": "mistral-nemo",
+      "model_variant": "instruct",
+      "aliases": [
+        "ovh/Mistral-Nemo-Instruct-2407"
+      ],
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "nemotron-3-nano:30b",
+      "object": "model",
+      "created": 707689030,
+      "owned_by": "llm7",
+      "provider": "llm7",
+      "name": "nemotron-3-nano:30b",
+      "description": "LLM7 chat (turbo tier)",
+      "context_size": 1000000,
+      "context_label": "1M",
+      "price_input": 0.03,
+      "price_output": 0.08,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "tool-use",
+        "reasoning"
+      ],
+      "tags": [
+        "text-generation",
+        "chat",
+        "tool-use",
+        "reasoning"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "rpm": 60,
+        "tokens_per_day": 100000,
+        "notes": "Free API token from dash.llm7.io (signup required, no payment). 100,000 tokens per 24 hours across input+output 60 requests per minute, 250 per hour. Official docs warn the free-token quota may be reduced without notice. price_input/price_output are LLM7 paid-usage rates (USD per 1M tokens), not what the free tier costs."
+      },
+      "trial_scope": "specific",
+      "model_family": "nemotron-3-nano:30b",
+      "aliases": [],
+      "parameter_count": 30000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -2953,752 +3077,6 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "deepseek-ai/deepseek-v4.1-flash",
-      "object": "model",
-      "created": 1860085896,
-      "owned_by": "nvidia",
-      "provider": "nvidia",
-      "name": "deepseek-v4.1-flash",
-      "description": "Model: deepseek-ai/deepseek-v4.1-flash",
-      "context_label": "unknown",
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation",
-        "chat"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "trial-credits",
-      "free_quota": {
-        "notes": "NVIDIA NIM free credits, exhaustible"
-      },
-      "trial_scope": "specific",
-      "model_family": "deepseek-v4.1-flash",
-      "aliases": [
-        "deepseek-v4.1-flash"
-      ],
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "google/diffusiongemma-26b-a4b-it",
-      "object": "model",
-      "created": 1786162180,
-      "owned_by": "nvidia",
-      "provider": "nvidia",
-      "name": "diffusiongemma-26b-a4b-it",
-      "description": "Model: google/diffusiongemma-26b-a4b-it",
-      "context_label": "unknown",
-      "is_free": true,
-      "capabilities": [
-        "video-generation"
-      ],
-      "tags": [
-        "text-generation",
-        "video-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "trial-credits",
-      "free_quota": {
-        "notes": "NVIDIA NIM free credits, exhaustible"
-      },
-      "trial_scope": "specific",
-      "model_family": "diffusiongemma-26b-a4b",
-      "model_variant": "it",
-      "aliases": [],
-      "parameter_count": 26000000000,
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "video-creation"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "google/gemma-4-31b-it",
-      "object": "model",
-      "created": 2103702922,
-      "owned_by": "nvidia",
-      "provider": "nvidia",
-      "name": "gemma-4-31b-it",
-      "description": "Model: google/gemma-4-31b-it",
-      "context_label": "unknown",
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation",
-        "chat"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "trial-credits",
-      "free_quota": {
-        "notes": "NVIDIA NIM free credits, exhaustible"
-      },
-      "trial_scope": "specific",
-      "model_family": "gemma-4-31b",
-      "model_variant": "it",
-      "aliases": [
-        "google/gemma-4-31b-it:free"
-      ],
-      "parameter_count": 31000000000,
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "meta/llama-3.2-11b-vision-instruct",
-      "object": "model",
-      "created": 649953281,
-      "owned_by": "nvidia",
-      "provider": "nvidia",
-      "name": "llama-3.2-11b-vision-instruct",
-      "description": "Model: meta/llama-3.2-11b-vision-instruct",
-      "context_label": "unknown",
-      "is_free": true,
-      "capabilities": [
-        "vision"
-      ],
-      "tags": [
-        "vision",
-        "text-generation",
-        "multimodal"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": "trial-credits",
-      "free_quota": {
-        "notes": "NVIDIA NIM free credits, exhaustible"
-      },
-      "trial_scope": "specific",
-      "model_family": "llama-3.2-11b-vision",
-      "model_variant": "vision",
-      "aliases": [
-        "cloudflare/@cf/meta/llama-3.2-11b-vision-instruct",
-        "github/Llama-3-2-11B-Vision-Instruct"
-      ],
-      "parameter_count": 11000000000,
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "image-understanding",
-        "visual-q&a",
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "meta/llama-3.2-90b-vision-instruct",
-      "object": "model",
-      "created": 1082486808,
-      "owned_by": "nvidia",
-      "provider": "nvidia",
-      "name": "llama-3.2-90b-vision-instruct",
-      "description": "Model: meta/llama-3.2-90b-vision-instruct",
-      "context_label": "unknown",
-      "is_free": true,
-      "capabilities": [
-        "vision"
-      ],
-      "tags": [
-        "vision",
-        "text-generation",
-        "multimodal"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": "trial-credits",
-      "free_quota": {
-        "notes": "NVIDIA NIM free credits, exhaustible"
-      },
-      "trial_scope": "specific",
-      "model_family": "llama-3.2-90b-vision",
-      "model_variant": "vision",
-      "aliases": [
-        "github/Llama-3-2-90B-Vision-Instruct"
-      ],
-      "parameter_count": 90000000000,
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "image-understanding",
-        "visual-q&a",
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "meta/llama-guard-4-12b",
-      "object": "model",
-      "created": 1883224875,
-      "owned_by": "nvidia",
-      "provider": "nvidia",
-      "name": "llama-guard-4-12b",
-      "description": "Model: meta/llama-guard-4-12b",
-      "context_label": "unknown",
-      "is_free": true,
-      "capabilities": [
-        "moderation"
-      ],
-      "tags": [
-        "text-generation",
-        "moderation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "trial-credits",
-      "free_quota": {
-        "notes": "NVIDIA NIM free credits, exhaustible"
-      },
-      "trial_scope": "specific",
-      "model_family": "llama-guard-4-12b",
-      "model_variant": "guard",
-      "aliases": [],
-      "parameter_count": 12000000000,
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "content-filtering",
-        "safety"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "meta/muse-glimmer-30b",
-      "object": "model",
-      "created": 1906689855,
-      "owned_by": "nvidia",
-      "provider": "nvidia",
-      "name": "muse-glimmer-30b",
-      "description": "Model: meta/muse-glimmer-30b",
-      "context_label": "unknown",
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation",
-        "chat"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "trial-credits",
-      "free_quota": {
-        "notes": "NVIDIA NIM free credits, exhaustible"
-      },
-      "trial_scope": "specific",
-      "model_family": "muse-glimmer-30b",
-      "aliases": [],
-      "parameter_count": 30000000000,
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "moonshotai/kimi-k3",
-      "object": "model",
-      "created": 987502986,
-      "owned_by": "nvidia",
-      "provider": "nvidia",
-      "name": "kimi-k3",
-      "description": "Model: moonshotai/kimi-k3",
-      "context_label": "unknown",
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation",
-        "chat"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "trial-credits",
-      "free_quota": {
-        "notes": "NVIDIA NIM free credits, exhaustible"
-      },
-      "trial_scope": "specific",
-      "model_family": "moonshotai-kimi-k3",
-      "aliases": [],
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "ising-calibration-1.5-31b",
-      "object": "model",
-      "created": 1830872146,
-      "owned_by": "nvidia",
-      "provider": "nvidia",
-      "name": "ising-calibration-1.5-31b",
-      "description": "Model: nvidia/ising-calibration-1.5-31b",
-      "context_label": "unknown",
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation",
-        "chat"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "trial-credits",
-      "free_quota": {
-        "notes": "NVIDIA NIM free credits, exhaustible"
-      },
-      "trial_scope": "specific",
-      "model_family": "ising-calibration-1.5-31b",
-      "aliases": [],
-      "parameter_count": 31000000000,
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "nemotron-3-embed-1b",
-      "object": "model",
-      "created": 1656936619,
-      "owned_by": "nvidia",
-      "provider": "nvidia",
-      "name": "nemotron-3-embed-1b",
-      "description": "Model: nvidia/nemotron-3-embed-1b",
-      "context_label": "unknown",
-      "is_free": true,
-      "capabilities": [
-        "embeddings"
-      ],
-      "tags": [
-        "text-generation",
-        "embeddings"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "trial-credits",
-      "free_quota": {
-        "notes": "NVIDIA NIM free credits, exhaustible"
-      },
-      "trial_scope": "specific",
-      "model_family": "nemotron-3-embed-1b",
-      "model_variant": "embed",
-      "aliases": [],
-      "parameter_count": 1000000000,
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "semantic-search",
-        "similarity"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "nemotron-3-nano-omni-30b-a3b-reasoning",
-      "object": "model",
-      "created": 945254306,
-      "owned_by": "nvidia",
-      "provider": "nvidia",
-      "name": "nemotron-3-nano-omni-30b-a3b-reasoning",
-      "description": "Model: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
-      "context_label": "unknown",
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "reasoning",
-        "text-generation",
-        "chat"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "trial-credits",
-      "free_quota": {
-        "notes": "NVIDIA NIM free credits, exhaustible"
-      },
-      "trial_scope": "specific",
-      "model_family": "nemotron-3-nano-omni-30b-a3b-reasoning",
-      "model_variant": "reasoning",
-      "aliases": [
-        "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
-      ],
-      "parameter_count": 30000000000,
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "nemotron-3-super-120b-a12b",
-      "object": "model",
-      "created": 1155048658,
-      "owned_by": "nvidia",
-      "provider": "nvidia",
-      "name": "nemotron-3-super-120b-a12b",
-      "description": "Model: nvidia/nemotron-3-super-120b-a12b",
-      "context_label": "unknown",
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation",
-        "chat"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "trial-credits",
-      "free_quota": {
-        "notes": "NVIDIA NIM free credits, exhaustible"
-      },
-      "trial_scope": "specific",
-      "model_family": "nemotron-3-super-120b-a12b",
-      "aliases": [
-        "nvidia/nemotron-3-super-120b-a12b:free"
-      ],
-      "parameter_count": 120000000000,
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "nemotron-3-ultra-550b-a55b",
-      "object": "model",
-      "created": 343103399,
-      "owned_by": "nvidia",
-      "provider": "nvidia",
-      "name": "nemotron-3-ultra-550b-a55b",
-      "description": "Model: nvidia/nemotron-3-ultra-550b-a55b",
-      "context_label": "unknown",
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation",
-        "chat"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "trial-credits",
-      "free_quota": {
-        "notes": "NVIDIA NIM free credits, exhaustible"
-      },
-      "trial_scope": "specific",
-      "model_family": "nemotron-3-ultra-550b-a55b",
-      "aliases": [
-        "nvidia/nemotron-3-ultra-550b-a55b:free"
-      ],
-      "parameter_count": 550000000000,
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "nemotron-3.5-content-safety",
-      "object": "model",
-      "created": 1989299781,
-      "owned_by": "nvidia",
-      "provider": "nvidia",
-      "name": "nemotron-3.5-content-safety",
-      "description": "Model: nvidia/nemotron-3.5-content-safety",
-      "context_label": "unknown",
-      "is_free": true,
-      "capabilities": [
-        "moderation"
-      ],
-      "tags": [
-        "text-generation",
-        "moderation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "trial-credits",
-      "free_quota": {
-        "notes": "NVIDIA NIM free credits, exhaustible"
-      },
-      "trial_scope": "specific",
-      "model_family": "nemotron-3.5-content-safety",
-      "model_variant": "safety",
-      "aliases": [
-        "nvidia/nemotron-3.5-content-safety:free"
-      ],
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "content-filtering",
-        "safety"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "nemotron-3.5-lightning-30b-a3b",
-      "object": "model",
-      "created": 1054313834,
-      "owned_by": "nvidia",
-      "provider": "nvidia",
-      "name": "nemotron-3.5-lightning-30b-a3b",
-      "description": "Model: nvidia/nemotron-3.5-lightning-30b-a3b",
-      "context_label": "unknown",
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation",
-        "chat"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "trial-credits",
-      "free_quota": {
-        "notes": "NVIDIA NIM free credits, exhaustible"
-      },
-      "trial_scope": "specific",
-      "model_family": "nemotron-3.5-lightning-30b-a3b",
-      "aliases": [],
-      "parameter_count": 30000000000,
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "riva-translate-4b-instruct-v2",
-      "object": "model",
-      "created": 16697981,
-      "owned_by": "nvidia",
-      "provider": "nvidia",
-      "name": "riva-translate-4b-instruct-v2",
-      "description": "Model: nvidia/riva-translate-4b-instruct-v2",
-      "context_label": "unknown",
-      "is_free": true,
-      "capabilities": [
-        "speech-synthesis"
-      ],
-      "tags": [
-        "text-generation",
-        "speech-synthesis"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "trial-credits",
-      "free_quota": {
-        "notes": "NVIDIA NIM free credits, exhaustible"
-      },
-      "trial_scope": "specific",
-      "model_family": "riva-translate-4b-v2",
-      "model_variant": "instruct",
-      "aliases": [],
-      "parameter_count": 4000000000,
-      "tier": "small",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "text-to-speech",
-        "voice-output"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "openai/gpt-oss-20b",
-      "object": "model",
-      "created": 51980878,
-      "owned_by": "nvidia",
-      "provider": "nvidia",
-      "name": "gpt-oss-20b",
-      "description": "Model: openai/gpt-oss-20b",
-      "context_label": "unknown",
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation",
-        "chat"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "trial-credits",
-      "free_quota": {
-        "notes": "NVIDIA NIM free credits, exhaustible"
-      },
-      "trial_scope": "specific",
-      "model_family": "gpt-oss-20b",
-      "aliases": [
-        "cloudflare/@cf/openai/gpt-oss-20b",
-        "groq/openai/gpt-oss-20b"
-      ],
-      "parameter_count": 20000000000,
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "poolside/laguna-xs-2.1",
-      "object": "model",
-      "created": 1002813503,
-      "owned_by": "nvidia",
-      "provider": "nvidia",
-      "name": "laguna-xs-2.1",
-      "description": "Model: poolside/laguna-xs-2.1",
-      "context_label": "unknown",
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation",
-        "chat"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "trial-credits",
-      "free_quota": {
-        "notes": "NVIDIA NIM free credits, exhaustible"
-      },
-      "trial_scope": "specific",
-      "model_family": "poolside-laguna-xs-2.1",
-      "aliases": [
-        "poolside/laguna-xs-2.1:free"
-      ],
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
       "id": "gemma-4-31b-32",
       "object": "model",
       "created": 1391142055,
@@ -3723,7 +3101,7 @@
       "free_mechanism": "trial-credits",
       "free_quota": {
         "total_credits": 5,
-        "notes": "$5 trial credits, valid for 3 months"
+        "notes": "$5 trial credits, valid for 3 months; listed prices are pay-as-you-go rates after credits run out"
       },
       "trial_scope": "all",
       "model_family": "gemma-4-31b-32",
@@ -3765,7 +3143,7 @@
       "free_mechanism": "trial-credits",
       "free_quota": {
         "total_credits": 5,
-        "notes": "$5 trial credits, valid for 3 months"
+        "notes": "$5 trial credits, valid for 3 months; listed prices are pay-as-you-go rates after credits run out"
       },
       "trial_scope": "all",
       "model_family": "deepseek-v3.1-terminus",
@@ -3806,7 +3184,7 @@
       "free_mechanism": "trial-credits",
       "free_quota": {
         "total_credits": 5,
-        "notes": "$5 trial credits, valid for 3 months"
+        "notes": "$5 trial credits, valid for 3 months; listed prices are pay-as-you-go rates after credits run out"
       },
       "trial_scope": "all",
       "model_family": "qwen3-235b-a22b",
@@ -3851,7 +3229,7 @@
       "free_mechanism": "trial-credits",
       "free_quota": {
         "total_credits": 5,
-        "notes": "$5 trial credits, valid for 3 months"
+        "notes": "$5 trial credits, valid for 3 months; listed prices are pay-as-you-go rates after credits run out"
       },
       "trial_scope": "all",
       "model_family": "llama-3.3-swallow-70b-v0.4",
@@ -3894,7 +3272,7 @@
       "free_mechanism": "trial-credits",
       "free_quota": {
         "total_credits": 5,
-        "notes": "$5 trial credits, valid for 3 months"
+        "notes": "$5 trial credits, valid for 3 months; listed prices are pay-as-you-go rates after credits run out"
       },
       "trial_scope": "all",
       "model_family": "deepseek-v3.1",
@@ -3936,7 +3314,7 @@
       "free_mechanism": "trial-credits",
       "free_quota": {
         "total_credits": 5,
-        "notes": "$5 trial credits, valid for 3 months"
+        "notes": "$5 trial credits, valid for 3 months; listed prices are pay-as-you-go rates after credits run out"
       },
       "trial_scope": "all",
       "model_family": "deepseek-r1",
@@ -3985,7 +3363,7 @@
       "free_mechanism": "trial-credits",
       "free_quota": {
         "total_credits": 5,
-        "notes": "$5 trial credits, valid for 3 months"
+        "notes": "$5 trial credits, valid for 3 months; listed prices are pay-as-you-go rates after credits run out"
       },
       "trial_scope": "all",
       "model_family": "3.1-8b",
@@ -4030,7 +3408,7 @@
       "free_mechanism": "trial-credits",
       "free_quota": {
         "total_credits": 5,
-        "notes": "$5 trial credits, valid for 3 months"
+        "notes": "$5 trial credits, valid for 3 months; listed prices are pay-as-you-go rates after credits run out"
       },
       "trial_scope": "all",
       "model_family": "3.3-70b",
@@ -4073,7 +3451,7 @@
       "free_mechanism": "trial-credits",
       "free_quota": {
         "total_credits": 5,
-        "notes": "$5 trial credits, valid for 3 months"
+        "notes": "$5 trial credits, valid for 3 months; listed prices are pay-as-you-go rates after credits run out"
       },
       "trial_scope": "all",
       "model_family": "whisper-large-v3",
@@ -4082,7 +3460,9 @@
         "whisper-large-v3-turbo",
         "whisper-large-v3",
         "groq/whisper-large-v3-turbo",
-        "groq/whisper-large-v3"
+        "groq/whisper-large-v3",
+        "ovh/whisper-large-v3-turbo",
+        "ovh/whisper-large-v3"
       ],
       "tier": "medium",
       "speed": "fast",
@@ -4120,7 +3500,7 @@
       "free_mechanism": "trial-credits",
       "free_quota": {
         "total_credits": 5,
-        "notes": "$5 trial credits, valid for 3 months"
+        "notes": "$5 trial credits, valid for 3 months; listed prices are pay-as-you-go rates after credits run out"
       },
       "trial_scope": "all",
       "model_family": "deepseek-v3.2",
@@ -4161,7 +3541,7 @@
       "free_mechanism": "trial-credits",
       "free_quota": {
         "total_credits": 5,
-        "notes": "$5 trial credits, valid for 3 months"
+        "notes": "$5 trial credits, valid for 3 months; listed prices are pay-as-you-go rates after credits run out"
       },
       "trial_scope": "all",
       "model_family": "e5-mistral-7b",
@@ -4204,7 +3584,7 @@
       "free_mechanism": "trial-credits",
       "free_quota": {
         "total_credits": 5,
-        "notes": "$5 trial credits, valid for 3 months"
+        "notes": "$5 trial credits, valid for 3 months; listed prices are pay-as-you-go rates after credits run out"
       },
       "trial_scope": "all",
       "model_family": "llama-4-maverick-17b-128e",
@@ -4249,7 +3629,7 @@
       "free_mechanism": "trial-credits",
       "free_quota": {
         "total_credits": 5,
-        "notes": "$5 trial credits, valid for 3 months"
+        "notes": "$5 trial credits, valid for 3 months; listed prices are pay-as-you-go rates after credits run out"
       },
       "trial_scope": "all",
       "model_family": "gemma-3-27b",
@@ -4292,7 +3672,7 @@
       "free_mechanism": "trial-credits",
       "free_quota": {
         "total_credits": 5,
-        "notes": "$5 trial credits, valid for 3 months"
+        "notes": "$5 trial credits, valid for 3 months; listed prices are pay-as-you-go rates after credits run out"
       },
       "trial_scope": "all",
       "model_family": "qwen3-32b",
@@ -4337,7 +3717,7 @@
       "free_mechanism": "trial-credits",
       "free_quota": {
         "total_credits": 5,
-        "notes": "$5 trial credits, valid for 3 months"
+        "notes": "$5 trial credits, valid for 3 months; listed prices are pay-as-you-go rates after credits run out"
       },
       "trial_scope": "all",
       "model_family": "deepseek-v3",
@@ -4381,7 +3761,7 @@
       "free_mechanism": "trial-credits",
       "free_quota": {
         "total_credits": 5,
-        "notes": "$5 trial credits, valid for 3 months"
+        "notes": "$5 trial credits, valid for 3 months; listed prices are pay-as-you-go rates after credits run out"
       },
       "trial_scope": "all",
       "model_family": "deepseek-r1-distill-llama-70b",
@@ -4428,7 +3808,7 @@
       "free_mechanism": "trial-credits",
       "free_quota": {
         "total_credits": 5,
-        "notes": "$5 trial credits, valid for 3 months"
+        "notes": "$5 trial credits, valid for 3 months; listed prices are pay-as-you-go rates after credits run out"
       },
       "trial_scope": "all",
       "model_family": "allam-7b-preview",
@@ -4470,7 +3850,7 @@
       "free_mechanism": "trial-credits",
       "free_quota": {
         "total_credits": 5,
-        "notes": "$5 trial credits, valid for 3 months"
+        "notes": "$5 trial credits, valid for 3 months; listed prices are pay-as-you-go rates after credits run out"
       },
       "trial_scope": "all",
       "model_family": "gemma-3-12b",
@@ -4515,14 +3895,15 @@
       "free_mechanism": "trial-credits",
       "free_quota": {
         "total_credits": 5,
-        "notes": "$5 trial credits, valid for 3 months"
+        "notes": "$5 trial credits, valid for 3 months; listed prices are pay-as-you-go rates after credits run out"
       },
       "trial_scope": "all",
       "model_family": "gpt-oss-120b",
       "aliases": [
         "cerebras/gpt-oss-120b",
         "cloudflare/@cf/openai/gpt-oss-120b",
-        "groq/openai/gpt-oss-120b"
+        "groq/openai/gpt-oss-120b",
+        "ovh/gpt-oss-120b"
       ],
       "parameter_count": 120000000000,
       "tier": "small",

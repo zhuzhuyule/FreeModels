@@ -1,8 +1,8 @@
 {
   "object": "list",
   "view": "paid-trial",
-  "updated_at": "2026-10-09T08:36:58.469Z",
-  "total": 99,
+  "updated_at": "2026-10-10T03:23:47.038Z",
+  "total": 92,
   "filters": {
     "isFree": "false",
     "trialScope": "all"
@@ -150,6 +150,8 @@
         "whisper-large-v3",
         "groq/whisper-large-v3-turbo",
         "groq/whisper-large-v3",
+        "ovh/whisper-large-v3-turbo",
+        "ovh/whisper-large-v3",
         "sambanova/Whisper-Large-v3"
       ],
       "tier": "medium",
@@ -561,6 +563,8 @@
         "whisper-large-v3-turbo",
         "groq/whisper-large-v3-turbo",
         "groq/whisper-large-v3",
+        "ovh/whisper-large-v3-turbo",
+        "ovh/whisper-large-v3",
         "sambanova/Whisper-Large-v3"
       ],
       "tier": "medium",
@@ -1666,7 +1670,9 @@
       "free_quota": null,
       "trial_scope": "all",
       "model_family": "qwen3guard-gen-8b",
-      "aliases": [],
+      "aliases": [
+        "ovh/Qwen3Guard-Gen-8B"
+      ],
       "parameter_count": 8000000000,
       "tier": "medium",
       "speed": "standard",
@@ -1740,7 +1746,9 @@
       "free_quota": null,
       "trial_scope": "all",
       "model_family": "qwen3guard-gen-0.6b",
-      "aliases": [],
+      "aliases": [
+        "ovh/Qwen3Guard-Gen-0.6B"
+      ],
       "parameter_count": 600000000,
       "tier": "medium",
       "speed": "standard",
@@ -1750,79 +1758,6 @@
       ],
       "performance_level": "entry",
       "estimated_latency": "1-3s"
-    },
-    {
-      "id": "AudioFly",
-      "object": "model",
-      "created": 1749672606,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "AudioFly",
-      "description": "AudioFly模型是科大讯飞推出的，可基于文本描述输入，生成44.1kHz 采样率的高质量音频，在文本与音效的匹配度上表现优异。AudioFly采用了潜在扩散模型（LDM）架构，经海量多元声音数据训练，支持单事件、多事件场景。",
-      "context_label": "unknown",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": false,
-      "capabilities": [
-        "speech-synthesis"
-      ],
-      "tags": [
-        "speech-synthesis"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "audiofly",
-      "aliases": [],
-      "tier": "medium",
-      "speed": "standard",
-      "use_case": [
-        "text-to-speech",
-        "voice-output"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
-    },
-    {
-      "id": "DeepSeek-OCR",
-      "object": "model",
-      "created": 1892487164,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "DeepSeek-OCR",
-      "description": "DeepSeek-OCR 是由 DeepSeek 团队 开发的高精度光学字符识别（OCR, Optical Character Recognition）系统，旨在在复杂场景下实现高效、准确的文字检测与识别。\n它支持 多语言识别、复杂版面分析、表格与公式识别 等多种任务，适用于票据、文档、截图、自然场景图片等多样化输入。",
-      "context_label": "unknown",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": false,
-      "capabilities": [
-        "vision"
-      ],
-      "tags": [
-        "vision",
-        "multimodal"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "deepseek-ocr",
-      "aliases": [
-        "xingchen/xopdeepseekocr"
-      ],
-      "tier": "large",
-      "speed": "premium",
-      "use_case": [
-        "image-understanding",
-        "visual-q&a"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "3-10s"
     },
     {
       "id": "SeedVR2-3B",
@@ -3116,7 +3051,9 @@
       "free_quota": null,
       "trial_scope": "all",
       "model_family": "qwen3.6-27b",
-      "aliases": [],
+      "aliases": [
+        "ovh/Qwen3.6-27B"
+      ],
       "parameter_count": 27000000000,
       "tier": "medium",
       "speed": "standard",
@@ -3425,44 +3362,6 @@
       "estimated_latency": "1-3s"
     },
     {
-      "id": "deepseek-coder-33B-instruct",
-      "object": "model",
-      "created": 1229173277,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "deepseek-coder-33B-instruct",
-      "description": "DeepSeek Coder 33B 是一个代码语言模型， 基于 2 万亿数据训练而成，其中 87% 为代码， 13% 为中英文语言。模型引入 16K 窗口大小和填空任务，提供项目级别的代码补全和片段填充功能。",
-      "context_size": 8000,
-      "context_label": "8K",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": false,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "deepseek-coder-33b",
-      "model_variant": "coder",
-      "aliases": [],
-      "parameter_count": 33000000000,
-      "tier": "medium",
-      "speed": "standard",
-      "use_case": [
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
-    },
-    {
       "id": "flux-1-schnell",
       "object": "model",
       "created": 317925560,
@@ -3528,146 +3427,6 @@
       "use_case": [
         "creative-generation",
         "art"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
-    },
-    {
-      "id": "stable-diffusion-3-medium",
-      "object": "model",
-      "created": 176639458,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "stable-diffusion-3-medium",
-      "description": "由 Stability AI 推出的最新文生图大模型。这一版本在继承了前代的优点上，对图像质量、文本理解和风格多样性等方面进行了显著改进，能够更准确地解读复杂的自然语言提示，并生成更为精确和多样化的图像。",
-      "context_label": "unknown",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": false,
-      "capabilities": [
-        "image-generation"
-      ],
-      "tags": [
-        "image-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "stable-diffusion-3-medium",
-      "aliases": [],
-      "tier": "medium",
-      "speed": "standard",
-      "use_case": [
-        "creative-generation",
-        "art"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
-    },
-    {
-      "id": "stable-diffusion-xl-base-1.0",
-      "object": "model",
-      "created": 934413225,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "stable-diffusion-xl-base-1.0",
-      "description": "由 Stability AI 开发并开源的文生图大模型，其创意图像生成能力位居行业前列。具备出色的指令理解能力，能够支持反向 Prompt 定义来精确生成内容。",
-      "context_label": "unknown",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": false,
-      "capabilities": [
-        "image-generation"
-      ],
-      "tags": [
-        "image-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "stable-diffusion-xl-base-1.0",
-      "aliases": [],
-      "tier": "medium",
-      "speed": "standard",
-      "use_case": [
-        "creative-generation",
-        "art"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
-    },
-    {
-      "id": "whisper-base",
-      "object": "model",
-      "created": 209847023,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "whisper-base",
-      "description": "由 Open AI 开发并开源自动语音识别（ASR）模型。能够很好地处理各种语言、口音和背景噪音。相较于 Large 版，Base 版处理速度更快，具有较少的参数。",
-      "context_label": "unknown",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": false,
-      "capabilities": [
-        "speech-recognition"
-      ],
-      "tags": [
-        "speech-recognition"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "whisper-base",
-      "aliases": [],
-      "tier": "medium",
-      "speed": "standard",
-      "use_case": [
-        "transcription",
-        "voice-input"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
-    },
-    {
-      "id": "whisper-large",
-      "object": "model",
-      "created": 1653124545,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "whisper-large",
-      "description": "由 Open AI 开发并开源自动语音识别（ASR）模型。Whisper 由 68 万小时的多语言数据训练，其能够很好地处理各种语言、口音和背景噪音。",
-      "context_label": "unknown",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": false,
-      "capabilities": [
-        "speech-recognition"
-      ],
-      "tags": [
-        "speech-recognition"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "whisper-large",
-      "aliases": [],
-      "tier": "medium",
-      "speed": "standard",
-      "use_case": [
-        "transcription",
-        "voice-input"
       ],
       "performance_level": "entry",
       "estimated_latency": "1-3s"

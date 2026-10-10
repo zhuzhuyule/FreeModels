@@ -1,77 +1,28 @@
 {
   "object": "list",
   "provider": "google",
-  "updated_at": "2026-10-09T08:36:58.457Z",
-  "total": 32,
+  "updated_at": "2026-10-10T03:23:47.023Z",
+  "total": 38,
   "data": [
     {
-      "id": "models/gemini-3.1-pro-preview",
+      "id": "models/gemini-3.8-flash",
       "object": "model",
-      "created": 2025547191,
+      "created": 879425790,
       "owned_by": "google",
       "provider": "google",
-      "name": "Gemini 3.1 Pro Preview",
-      "description": "Google: 最新性能、智力和可用性改进，支持多模态理解、代理能力和 vibe-coding",
-      "context_size": 2000000,
-      "context_label": "2M",
-      "price_input": 2,
-      "price_output": 12,
-      "is_free": false,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "reasoning",
-        "agentic"
-      ],
-      "tags": [
-        "chat",
-        "text-generation",
-        "reasoning",
-        "agentic"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
-      "model_family": "gemini-3.1-pro-preview",
-      "aliases": [],
-      "tier": "large",
-      "speed": "premium",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance",
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "complex-reasoning"
-      ],
-      "performance_level": "high",
-      "estimated_latency": "3-10s"
-    },
-    {
-      "id": "models/gemini-3.1-flash-lite-preview",
-      "object": "model",
-      "created": 1523377441,
-      "owned_by": "google",
-      "provider": "google",
-      "name": "Gemini 3.1 Flash-Lite Preview",
-      "description": "Google: 最具成本效益的模型，针对高容量代理任务、翻译和简单数据处理优化",
-      "context_size": 1000000,
-      "context_label": "1M",
-      "price_input": 0.25,
-      "price_output": 1.5,
+      "name": "Gemini 3.8 Flash",
+      "description": "Google: Our most intelligent Flash model, engineered for long-horizon software engineering, autonomous agents, and complex enterprise workflows.",
+      "context_label": "unknown",
+      "price_input": 0.75,
+      "price_output": 3.75,
       "is_free": true,
       "capabilities": [
         "chat",
         "text-generation"
       ],
       "tags": [
-        "chat",
-        "text-generation"
+        "text-generation",
+        "chat"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
@@ -79,17 +30,163 @@
       "free_mechanism": "rate-limited",
       "free_quota": null,
       "trial_scope": "fast",
-      "model_family": "gemini-3.1-flash-lite-preview",
+      "model_family": "gemini-3.8-flash",
       "aliases": [],
-      "tier": "small",
+      "tier": "medium",
       "speed": "fast",
       "use_case": [
-        "conversation",
-        "q&a",
         "content-creation",
-        "writing-assistance"
+        "writing-assistance",
+        "conversation",
+        "q&a"
       ],
       "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "models/gemini-3.6-flash",
+      "object": "model",
+      "created": 1703510148,
+      "owned_by": "google",
+      "provider": "google",
+      "name": "Gemini 3.6 Flash",
+      "description": "Google: Our previous generation Flash model, balancing speed and multimodal capabilities across general agentic and everyday tasks.",
+      "context_label": "unknown",
+      "price_input": 0.75,
+      "price_output": 3.75,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "chat",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": null,
+      "trial_scope": "fast",
+      "model_family": "gemini-3.6-flash",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "models/gemini-3.8-live",
+      "object": "model",
+      "created": 1274642944,
+      "owned_by": "google",
+      "provider": "google",
+      "name": "Gemini 3.8 Live",
+      "description": "Google: Our low-latency, audio-to-audio models optimized for real-time voice agents and live dialogue, including background reasoning support with Extended Thinking.",
+      "context_label": "unknown",
+      "price_input": 0.75,
+      "price_output": 4.5,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "speech-recognition",
+        "speech-synthesis"
+      ],
+      "tags": [
+        "reasoning",
+        "chat",
+        "speech-recognition",
+        "speech-synthesis",
+        "text-generation"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": null,
+      "trial_scope": "fast",
+      "model_family": "gemini-3.8-live",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "conversation",
+        "q&a",
+        "transcription",
+        "voice-input",
+        "text-to-speech",
+        "voice-output",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "models/gemini-3.8-live-extended-thinking",
+      "object": "model",
+      "created": 1388654265,
+      "owned_by": "google",
+      "provider": "google",
+      "name": "Gemini 3.8 Live Extended Thinking",
+      "description": "Google: Our low-latency, audio-to-audio models optimized for real-time voice agents and live dialogue, including background reasoning support with Extended Thinking.",
+      "context_label": "unknown",
+      "price_input": 0.75,
+      "price_output": 4.5,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "speech-recognition",
+        "speech-synthesis"
+      ],
+      "tags": [
+        "reasoning",
+        "chat",
+        "speech-recognition",
+        "speech-synthesis",
+        "text-generation"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": null,
+      "trial_scope": "fast",
+      "model_family": "gemini-3.8-live-extended-thinking",
+      "model_variant": "thinking",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "conversation",
+        "q&a",
+        "transcription",
+        "voice-input",
+        "text-to-speech",
+        "voice-output",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -99,19 +196,112 @@
       "owned_by": "google",
       "provider": "google",
       "name": "Gemini 3.1 Flash Live Preview",
-      "description": "Google: 低延迟音频到音频模型，优化实时对话、 acoustic nuance 检测",
-      "context_size": 1000000,
-      "context_label": "1M",
+      "description": "Google: Our low-latency, audio-to-audio models optimized for real-time voice agents and live dialogue, including background reasoning support with Extended Thinking.",
+      "context_label": "unknown",
       "price_input": 0.75,
       "price_output": 4.5,
       "is_free": true,
       "capabilities": [
         "chat",
+        "speech-recognition",
+        "speech-synthesis"
+      ],
+      "tags": [
+        "reasoning",
+        "chat",
+        "speech-recognition",
+        "speech-synthesis",
+        "text-generation"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": null,
+      "trial_scope": "fast",
+      "model_family": "gemini-3.1-flash-live-preview",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "conversation",
+        "q&a",
+        "transcription",
+        "voice-input",
+        "text-to-speech",
+        "voice-output",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "models/gemini-3.5-live-translate-preview",
+      "object": "model",
+      "created": 969878631,
+      "owned_by": "google",
+      "provider": "google",
+      "name": "Gemini 3.5 Live Translate",
+      "description": "Google: Our low-latency, real-time speech to speech translation model that supports 70+ languages.",
+      "context_label": "unknown",
+      "price_input": 3.5,
+      "price_output": 21,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "speech-recognition",
+        "speech-synthesis"
+      ],
+      "tags": [
         "text-generation",
+        "chat",
+        "speech-recognition",
+        "speech-synthesis"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": null,
+      "trial_scope": "fast",
+      "model_family": "gemini-3.5-live-translate-preview",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "transcription",
+        "voice-input",
+        "text-to-speech",
+        "voice-output"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "models/gemini-3.5-transcribe-live",
+      "object": "model",
+      "created": 2128862071,
+      "owned_by": "google",
+      "provider": "google",
+      "name": "Gemini 3.5 Transcribe Live",
+      "description": "Google: Our low-latency, real-time speech-to-text model for bidirectional streaming audio transcription over WebSockets.",
+      "context_label": "unknown",
+      "price_input": 3.5,
+      "price_output": 21,
+      "is_free": true,
+      "capabilities": [
         "speech-recognition"
       ],
       "tags": [
-        "chat",
         "text-generation",
         "speech-recognition"
       ],
@@ -121,13 +311,11 @@
       "free_mechanism": "rate-limited",
       "free_quota": null,
       "trial_scope": "fast",
-      "model_family": "gemini-3.1-flash-live-preview",
+      "model_family": "gemini-3.5-transcribe-live",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
       "use_case": [
-        "conversation",
-        "q&a",
         "content-creation",
         "writing-assistance",
         "transcription",
@@ -137,26 +325,341 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "models/gemini-3.1-flash-image-preview",
+      "id": "models/gemini-3.5-transcribe",
       "object": "model",
-      "created": 713181130,
+      "created": 1462639962,
       "owned_by": "google",
       "provider": "google",
-      "name": "Gemini 3.1 Flash Image Preview",
-      "description": "Google: 为速度和效率设计的图像生成模型",
-      "context_size": 1000000,
-      "context_label": "1M",
+      "name": "Gemini 3.5 Transcribe",
+      "description": "Google: Our speech-to-text model with automatic language detection, speaker diarization, word-level timestamps, and custom vocabulary biasing.",
+      "context_label": "unknown",
+      "price_input": 2,
+      "price_output": 12,
+      "is_free": true,
+      "capabilities": [
+        "speech-recognition"
+      ],
+      "tags": [
+        "text-generation",
+        "speech-recognition"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": null,
+      "trial_scope": "fast",
+      "model_family": "gemini-3.5-transcribe",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "transcription",
+        "voice-input"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "models/gemini-3.5-flash-lite",
+      "object": "model",
+      "created": 954890954,
+      "owned_by": "google",
+      "provider": "google",
+      "name": "Gemini 3.5 Flash-Lite",
+      "description": "Google: A cost-efficient model, optimized for high-volume agentic tasks, translation, and simple data processing.",
+      "context_label": "unknown",
+      "price_input": 0.3,
+      "price_output": 2.5,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation",
+        "chat"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": null,
+      "trial_scope": "fast",
+      "model_family": "gemini-3.5-flash-lite",
+      "aliases": [],
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "models/gemini-3.1-flash-lite",
+      "object": "model",
+      "created": 55054258,
+      "owned_by": "google",
+      "provider": "google",
+      "name": "Gemini 3.1 Flash-Lite",
+      "description": "Google: A cost-efficient model, optimized for high-volume agentic tasks, translation, and simple data processing.",
+      "context_label": "unknown",
+      "price_input": 0.25,
+      "price_output": 1.5,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation",
+        "chat"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": null,
+      "trial_scope": "fast",
+      "model_family": "gemini-3.1-flash-lite",
+      "aliases": [],
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "models/gemini-omni-1.1-flash",
+      "object": "model",
+      "created": 741223125,
+      "owned_by": "google",
+      "provider": "google",
+      "name": "Gemini Omni Flash",
+      "description": "Google: Our next-generation video generation and editing model, now generally available to developers on the paid tier of the Gemini API.",
+      "context_label": "unknown",
+      "price_input": 1.5,
+      "price_output": 9,
+      "is_free": false,
+      "capabilities": [
+        "video-generation"
+      ],
+      "tags": [
+        "text-generation",
+        "video-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "gemini-omni-1.1-flash",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "standard",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "video-creation"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "1-3s"
+    },
+    {
+      "id": "models/gemini-omni-flash-preview",
+      "object": "model",
+      "created": 1162537575,
+      "owned_by": "google",
+      "provider": "google",
+      "name": "Gemini Omni Flash Preview",
+      "description": "Google: Our next-generation video generation and editing model.",
+      "context_label": "unknown",
+      "price_input": 1.5,
+      "price_output": 9,
+      "is_free": false,
+      "capabilities": [
+        "video-generation"
+      ],
+      "tags": [
+        "text-generation",
+        "video-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "gemini-omni-flash-preview",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "standard",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "video-creation"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "1-3s"
+    },
+    {
+      "id": "models/gemini-3.1-pro-preview",
+      "object": "model",
+      "created": 2025547191,
+      "owned_by": "google",
+      "provider": "google",
+      "name": "gemini-3.1-pro-preview",
+      "description": "Google: Our 3rd generation Pro model, built for multimodal understanding, agentic capabilities, and vibe-coding.",
+      "context_label": "unknown",
+      "price_input": 2,
+      "price_output": 12,
+      "is_free": false,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "chat",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "gemini-3.1-pro-preview",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "3-10s"
+    },
+    {
+      "id": "models/gemini-3.1-pro-preview-customtools",
+      "object": "model",
+      "created": 712696514,
+      "owned_by": "google",
+      "provider": "google",
+      "name": "gemini-3.1-pro-preview-customtools",
+      "description": "Google: Our 3rd generation Pro model, built for multimodal understanding, agentic capabilities, and vibe-coding.",
+      "context_label": "unknown",
+      "price_input": 2,
+      "price_output": 12,
+      "is_free": false,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "chat",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "gemini-3.1-pro-preview-customtools",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "3-10s"
+    },
+    {
+      "id": "models/gemini-nano-banana-2.1",
+      "object": "model",
+      "created": 1752598466,
+      "owned_by": "google",
+      "provider": "google",
+      "name": "Gemini Nano Banana 2.1",
+      "description": "Google: An update to Nano Banana 2 (Gemini 3.1 Flash Image), built for high-efficiency image generation and conversational editing with improved visual quality, multi-turn character consistency, accurate text rendering, and search-grounded generation across 1K, 2K, and 4K resolutions.",
+      "context_label": "unknown",
+      "price_input": 1.5,
+      "price_output": 7.5,
+      "is_free": false,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "chat",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "gemini-nano-banana-2.1",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "3-10s"
+    },
+    {
+      "id": "models/gemini-3.1-flash-image",
+      "object": "model",
+      "created": 1813355975,
+      "owned_by": "google",
+      "provider": "google",
+      "name": "Gemini 3.1 Flash Image (Nano Banana 2)",
+      "description": "Google: Designed for speed and efficiency, the Gemini 3.1 Flash Image generation model is effective for quick, interactive responses and high throughput.",
+      "context_label": "unknown",
       "price_input": 0.5,
       "price_output": 3,
       "is_free": false,
       "capabilities": [
-        "chat",
-        "text-generation",
         "image-generation"
       ],
       "tags": [
         "vision",
-        "chat",
         "text-generation",
         "image-generation",
         "multimodal"
@@ -167,7 +670,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "gemini-3.1-flash-image-preview",
+      "model_family": "gemini-3.1-flash-image",
       "model_variant": "image",
       "aliases": [],
       "tier": "large",
@@ -175,8 +678,6 @@
       "use_case": [
         "image-understanding",
         "visual-q&a",
-        "conversation",
-        "q&a",
         "content-creation",
         "writing-assistance",
         "creative-generation",
@@ -186,13 +687,134 @@
       "estimated_latency": "3-10s"
     },
     {
+      "id": "models/gemini-3.1-flash-lite-image",
+      "object": "model",
+      "created": 109629950,
+      "owned_by": "google",
+      "provider": "google",
+      "name": "Gemini 3.1 Flash Lite Image (Nano Banana 2 Lite)",
+      "description": "Google: Designed as the efficiency specialist of the image generation family, the Gemini 3.1 Flash Lite Image model is designed for ultra-low latency and cost-effective image generation and editing.",
+      "context_label": "unknown",
+      "price_input": 0.25,
+      "price_output": 1.5,
+      "is_free": false,
+      "capabilities": [
+        "image-generation"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "image-generation",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "gemini-3.1-flash-lite-image",
+      "model_variant": "image",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "creative-generation",
+        "art"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "models/gemini-3.8-flash-tts",
+      "object": "model",
+      "created": 214568474,
+      "owned_by": "google",
+      "provider": "google",
+      "name": "Gemini 3.8 Flash TTS",
+      "description": "Google: Our 3.8 Flash Text-to-Speech audio model engineered for studio-grade voice fidelity, expressive acting, and long-form stability.",
+      "context_label": "unknown",
+      "price_input": 0.5,
+      "price_output": 9,
+      "is_free": true,
+      "capabilities": [
+        "speech-synthesis"
+      ],
+      "tags": [
+        "text-generation",
+        "speech-synthesis"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": null,
+      "trial_scope": "fast",
+      "model_family": "gemini-3.8-flash-tts",
+      "model_variant": "tts",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "text-to-speech",
+        "voice-output"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "models/gemini-3.8-flash-lite-tts",
+      "object": "model",
+      "created": 656716863,
+      "owned_by": "google",
+      "provider": "google",
+      "name": "Gemini 3.8 Flash-Lite TTS",
+      "description": "Google: Our 3.8 Flash-Lite Text-to-Speech audio model optimized for high-throughput, low-latency, and cost-efficient conversational speech.",
+      "context_label": "unknown",
+      "price_input": 0.5,
+      "price_output": 6,
+      "is_free": true,
+      "capabilities": [
+        "speech-synthesis"
+      ],
+      "tags": [
+        "text-generation",
+        "speech-synthesis"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": null,
+      "trial_scope": "fast",
+      "model_family": "gemini-3.8-flash-lite-tts",
+      "model_variant": "tts",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "text-to-speech",
+        "voice-output"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
       "id": "models/gemini-3.1-flash-tts-preview",
       "object": "model",
       "created": 1765085298,
       "owned_by": "google",
       "provider": "google",
       "name": "Gemini 3.1 Flash TTS Preview",
-      "description": "Google: 3.1 Flash 文本转语音模型，优化价格性能比",
+      "description": "Google: Our 3.1 Flash Text-to-Speech audio model optimized for price-performant, low-latency, controllable speech generation.",
       "context_label": "unknown",
       "price_input": 1,
       "price_output": 20,
@@ -201,6 +823,7 @@
         "speech-synthesis"
       ],
       "tags": [
+        "text-generation",
         "speech-synthesis"
       ],
       "is_reasoning": false,
@@ -215,6 +838,8 @@
       "tier": "medium",
       "speed": "fast",
       "use_case": [
+        "content-creation",
+        "writing-assistance",
         "text-to-speech",
         "voice-output"
       ],
@@ -228,23 +853,20 @@
       "owned_by": "google",
       "provider": "google",
       "name": "Gemini 3 Flash Preview",
-      "description": "Google: 为速度而构建的智能模型，结合前沿智能与卓越搜索",
-      "context_size": 1000000,
-      "context_label": "1M",
+      "description": "Google: Our legacy Flash model, providing baseline speed and intelligence.",
+      "context_label": "unknown",
       "price_input": 0.5,
       "price_output": 3,
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation",
-        "reasoning"
+        "text-generation"
       ],
       "tags": [
-        "chat",
         "text-generation",
-        "reasoning"
+        "chat"
       ],
-      "is_reasoning": true,
+      "is_reasoning": false,
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
@@ -252,42 +874,34 @@
       "trial_scope": "fast",
       "model_family": "gemini-3-flash-preview",
       "aliases": [],
-      "tier": "large",
+      "tier": "medium",
       "speed": "fast",
       "use_case": [
-        "conversation",
-        "q&a",
         "content-creation",
         "writing-assistance",
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "complex-reasoning"
+        "conversation",
+        "q&a"
       ],
-      "performance_level": "mid",
+      "performance_level": "entry",
       "estimated_latency": "< 1s"
     },
     {
-      "id": "models/gemini-3-pro-image-preview",
+      "id": "models/gemini-3-pro-image",
       "object": "model",
-      "created": 1836358790,
+      "created": 1113474315,
       "owned_by": "google",
       "provider": "google",
-      "name": "Gemini 3 Pro Image Preview",
-      "description": "Google: 原生图像生成模型，优化速度、灵活性和上下文理解",
-      "context_size": 2000000,
-      "context_label": "2M",
+      "name": "Gemini 3 Pro Image (Nano Banana Pro)",
+      "description": "Google: Our native image generation model, optimized for speed, flexibility, and contextual understanding. **Text input and output** is priced the same as",
+      "context_label": "unknown",
       "price_input": 2,
       "price_output": 12,
       "is_free": false,
       "capabilities": [
-        "chat",
-        "text-generation",
         "image-generation"
       ],
       "tags": [
         "vision",
-        "chat",
         "text-generation",
         "image-generation",
         "multimodal"
@@ -298,7 +912,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "gemini-3-pro-image-preview",
+      "model_family": "gemini-3-pro-image",
       "model_variant": "image",
       "aliases": [],
       "tier": "large",
@@ -306,8 +920,6 @@
       "use_case": [
         "image-understanding",
         "visual-q&a",
-        "conversation",
-        "q&a",
         "content-creation",
         "writing-assistance",
         "creative-generation",
@@ -323,22 +935,19 @@
       "owned_by": "google",
       "provider": "google",
       "name": "Gemini 2.5 Pro",
-      "description": "Google: 最先进的通用模型，擅长编码和复杂推理任务",
-      "context_size": 1000000,
-      "context_label": "1M",
+      "description": "Google: A Pro model which excels at coding and complex reasoning tasks.",
+      "context_label": "unknown",
       "price_input": 1.25,
       "price_output": 10,
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation",
-        "reasoning",
-        "coding"
+        "text-generation"
       ],
       "tags": [
-        "chat",
+        "reasoning",
         "text-generation",
-        "reasoning"
+        "chat"
       ],
       "is_reasoning": true,
       "is_multimodal": false,
@@ -351,13 +960,13 @@
       "tier": "large",
       "speed": "fast",
       "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance",
         "problem-solving",
         "logical-analysis",
         "math",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
         "complex-reasoning"
       ],
       "performance_level": "mid",
@@ -370,21 +979,19 @@
       "owned_by": "google",
       "provider": "google",
       "name": "Gemini 2.5 Flash",
-      "description": "Google: 首个混合推理模型，支持 1M token 上下文窗口和思考预算",
-      "context_size": 1000000,
-      "context_label": "1M",
+      "description": "Google: Our first hybrid reasoning model which supports a 1M token context window and has thinking budgets.",
+      "context_label": "unknown",
       "price_input": 0.3,
       "price_output": 2.5,
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation",
-        "reasoning"
+        "text-generation"
       ],
       "tags": [
-        "chat",
+        "reasoning",
         "text-generation",
-        "reasoning"
+        "chat"
       ],
       "is_reasoning": true,
       "is_multimodal": false,
@@ -397,13 +1004,13 @@
       "tier": "large",
       "speed": "fast",
       "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance",
         "problem-solving",
         "logical-analysis",
         "math",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
         "complex-reasoning"
       ],
       "performance_level": "mid",
@@ -416,9 +1023,8 @@
       "owned_by": "google",
       "provider": "google",
       "name": "Gemini 2.5 Flash-Lite",
-      "description": "Google: 最小且最具成本效益的模型，为规模化使用而构建",
-      "context_size": 1000000,
-      "context_label": "1M",
+      "description": "Google: A small and cost effective model, built for at scale usage.",
+      "context_label": "unknown",
       "price_input": 0.1,
       "price_output": 0.4,
       "is_free": true,
@@ -427,8 +1033,8 @@
         "text-generation"
       ],
       "tags": [
-        "chat",
-        "text-generation"
+        "text-generation",
+        "chat"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
@@ -441,50 +1047,10 @@
       "tier": "small",
       "speed": "fast",
       "use_case": [
-        "conversation",
-        "q&a",
         "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "models/gemini-2.5-flash-lite-preview-09-2025",
-      "object": "model",
-      "created": 1417576432,
-      "owned_by": "google",
-      "provider": "google",
-      "name": "Gemini 2.5 Flash-Lite Preview",
-      "description": "Google: 基于 Gemini 2.5 Flash Lite 优化成本效益、高吞吐量和高质量",
-      "context_size": 1000000,
-      "context_label": "1M",
-      "price_input": 0.1,
-      "price_output": 0.4,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "chat",
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": null,
-      "trial_scope": "fast",
-      "model_family": "gemini-2.5-flash-lite-preview-09",
-      "aliases": [],
-      "tier": "small",
-      "speed": "fast",
-      "use_case": [
+        "writing-assistance",
         "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance"
+        "q&a"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
@@ -495,21 +1061,20 @@
       "created": 181891358,
       "owned_by": "google",
       "provider": "google",
-      "name": "Gemini 2.5 Flash Native Audio",
-      "description": "Google: 原生音频模型，优化更高质量的音频输出",
-      "context_size": 1000000,
-      "context_label": "1M",
+      "name": "Gemini 2.5 Flash Native Audio (Live API)",
+      "description": "Google: Our Live API native audio models optimized for higher quality audio outputs with better pacing, voice naturalness, verbosity, and mood.",
+      "context_label": "unknown",
       "price_input": 0.5,
       "price_output": 2,
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation",
+        "speech-recognition",
         "speech-synthesis"
       ],
       "tags": [
         "chat",
-        "text-generation",
+        "speech-recognition",
         "speech-synthesis"
       ],
       "is_reasoning": false,
@@ -526,8 +1091,8 @@
       "use_case": [
         "conversation",
         "q&a",
-        "content-creation",
-        "writing-assistance",
+        "transcription",
+        "voice-input",
         "text-to-speech",
         "voice-output"
       ],
@@ -540,21 +1105,17 @@
       "created": 105534986,
       "owned_by": "google",
       "provider": "google",
-      "name": "Gemini 2.5 Flash Image",
-      "description": "Google: 原生图像生成模型，优化速度、灵活性和上下文理解",
-      "context_size": 1000000,
-      "context_label": "1M",
+      "name": "Gemini 2.5 Flash Image (Nano Banana)",
+      "description": "Google: A native image generation model, optimized for speed, flexibility, and contextual understanding. Text input and output is priced the same as",
+      "context_label": "unknown",
       "price_input": 0.3,
       "price_output": 0.039,
       "is_free": false,
       "capabilities": [
-        "chat",
-        "text-generation",
         "image-generation"
       ],
       "tags": [
         "vision",
-        "chat",
         "text-generation",
         "image-generation",
         "multimodal"
@@ -573,8 +1134,6 @@
       "use_case": [
         "image-understanding",
         "visual-q&a",
-        "conversation",
-        "q&a",
         "content-creation",
         "writing-assistance",
         "creative-generation",
@@ -590,7 +1149,7 @@
       "owned_by": "google",
       "provider": "google",
       "name": "Gemini 2.5 Flash Preview TTS",
-      "description": "Google: 2.5 Flash 文本转语音模型，优化价格性能比和低延迟",
+      "description": "Google: Our 2.5 Flash text-to-speech audio model optimized for price-performant, low-latency, controllable speech generation.",
       "context_label": "unknown",
       "price_input": 0.5,
       "price_output": 10,
@@ -599,6 +1158,7 @@
         "speech-synthesis"
       ],
       "tags": [
+        "text-generation",
         "speech-synthesis"
       ],
       "is_reasoning": false,
@@ -613,6 +1173,8 @@
       "tier": "medium",
       "speed": "fast",
       "use_case": [
+        "content-creation",
+        "writing-assistance",
         "text-to-speech",
         "voice-output"
       ],
@@ -626,7 +1188,7 @@
       "owned_by": "google",
       "provider": "google",
       "name": "Gemini 2.5 Pro Preview TTS",
-      "description": "Google: 2.5 Pro 文本转语音模型，优化强大、低延迟语音生成",
+      "description": "Google: Our 2.5 Pro text-to-speech audio model optimized for powerful, low-latency speech generation for more natural outputs and easier to steer prompts.",
       "context_label": "unknown",
       "price_input": 1,
       "price_output": 20,
@@ -635,6 +1197,7 @@
         "speech-synthesis"
       ],
       "tags": [
+        "text-generation",
         "speech-synthesis"
       ],
       "is_reasoning": false,
@@ -649,6 +1212,8 @@
       "tier": "medium",
       "speed": "premium",
       "use_case": [
+        "content-creation",
+        "writing-assistance",
         "text-to-speech",
         "voice-output"
       ],
@@ -656,195 +1221,13 @@
       "estimated_latency": "1-3s"
     },
     {
-      "id": "models/gemini-2.0-flash",
-      "object": "model",
-      "created": 1478271477,
-      "owned_by": "google",
-      "provider": "google",
-      "name": "Gemini 2.0 Flash",
-      "description": "Google: （已弃用，将于 2026 年 6 月 1 日关闭）",
-      "context_size": 1000000,
-      "context_label": "1M",
-      "price_input": 0.1,
-      "price_output": 0.4,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "chat",
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": null,
-      "trial_scope": "fast",
-      "model_family": "gemini-2.0-flash",
-      "aliases": [],
-      "tier": "small",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "models/gemini-2.0-flash-lite",
-      "object": "model",
-      "created": 1760266064,
-      "owned_by": "google",
-      "provider": "google",
-      "name": "Gemini 2.0 Flash-Lite",
-      "description": "Google: （已弃用，将于 2026 年 6 月 1 日关闭）",
-      "context_size": 1000000,
-      "context_label": "1M",
-      "price_input": 0.075,
-      "price_output": 0.3,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "chat",
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": null,
-      "trial_scope": "fast",
-      "model_family": "gemini-2.0-flash-lite",
-      "aliases": [],
-      "tier": "small",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "models/imagen-4.0-generate-001",
-      "object": "model",
-      "created": 1189713098,
-      "owned_by": "google",
-      "provider": "google",
-      "name": "Imagen 4",
-      "description": "Google: 最新图像生成模型，显著更好的文本渲染和整体图像质量",
-      "context_label": "unknown",
-      "price_input": 0.04,
-      "is_free": false,
-      "capabilities": [
-        "image-generation"
-      ],
-      "tags": [
-        "image-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
-      "model_family": "imagen-4.0-generate-001",
-      "aliases": [],
-      "tier": "small",
-      "speed": "fast",
-      "use_case": [
-        "creative-generation",
-        "art"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "models/imagen-4.0-ultra-generate-001",
-      "object": "model",
-      "created": 511942303,
-      "owned_by": "google",
-      "provider": "google",
-      "name": "Imagen 4 Ultra",
-      "description": "Google: 最高质量图像生成",
-      "context_label": "unknown",
-      "price_input": 0.06,
-      "is_free": false,
-      "capabilities": [
-        "image-generation"
-      ],
-      "tags": [
-        "image-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
-      "model_family": "imagen-4.0-ultra-generate-001",
-      "aliases": [],
-      "tier": "small",
-      "speed": "premium",
-      "use_case": [
-        "creative-generation",
-        "art"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "models/imagen-4.0-fast-generate-001",
-      "object": "model",
-      "created": 782806427,
-      "owned_by": "google",
-      "provider": "google",
-      "name": "Imagen 4 Fast",
-      "description": "Google: 快速图像生成",
-      "context_label": "unknown",
-      "price_input": 0.02,
-      "is_free": false,
-      "capabilities": [
-        "image-generation"
-      ],
-      "tags": [
-        "image-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
-      "model_family": "imagen-4.0-fast-generate-001",
-      "aliases": [],
-      "tier": "small",
-      "speed": "fast",
-      "use_case": [
-        "creative-generation",
-        "art"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
       "id": "models/veo-3.1-generate-preview",
       "object": "model",
       "created": 684528492,
       "owned_by": "google",
       "provider": "google",
-      "name": "Veo 3.1",
-      "description": "Google: 最新视频生成模型",
+      "name": "veo-3.1-generate-preview",
+      "description": "Google: A fast video generation model.",
       "context_label": "unknown",
       "price_input": 0.4,
       "is_free": false,
@@ -852,6 +1235,7 @@
         "video-generation"
       ],
       "tags": [
+        "text-generation",
         "video-generation"
       ],
       "is_reasoning": false,
@@ -865,6 +1249,8 @@
       "tier": "small",
       "speed": "fast",
       "use_case": [
+        "content-creation",
+        "writing-assistance",
         "video-creation"
       ],
       "performance_level": "entry",
@@ -876,8 +1262,8 @@
       "created": 1855103823,
       "owned_by": "google",
       "provider": "google",
-      "name": "Veo 3.1 Fast",
-      "description": "Google: 快速视频生成",
+      "name": "veo-3.1-fast-generate-preview",
+      "description": "Google: A fast video generation model.",
       "context_label": "unknown",
       "price_input": 0.1,
       "is_free": false,
@@ -885,6 +1271,7 @@
         "video-generation"
       ],
       "tags": [
+        "text-generation",
         "video-generation"
       ],
       "is_reasoning": false,
@@ -898,26 +1285,29 @@
       "tier": "small",
       "speed": "fast",
       "use_case": [
+        "content-creation",
+        "writing-assistance",
         "video-creation"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
     },
     {
-      "id": "models/veo-3.0-generate-001",
+      "id": "models/veo-3.1-lite-generate-preview",
       "object": "model",
-      "created": 868492450,
+      "created": 1940413359,
       "owned_by": "google",
       "provider": "google",
-      "name": "Veo 3.0",
-      "description": "Google: 稳定版视频生成模型",
+      "name": "veo-3.1-lite-generate-preview",
+      "description": "Google: A fast video generation model.",
       "context_label": "unknown",
-      "price_input": 0.4,
+      "price_input": 0.05,
       "is_free": false,
       "capabilities": [
         "video-generation"
       ],
       "tags": [
+        "text-generation",
         "video-generation"
       ],
       "is_reasoning": false,
@@ -926,32 +1316,36 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "veo-3.0-generate-001",
+      "model_family": "veo-3.1-lite-generate-preview",
       "aliases": [],
       "tier": "small",
       "speed": "fast",
       "use_case": [
+        "content-creation",
+        "writing-assistance",
         "video-creation"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
     },
     {
-      "id": "models/veo-2.0-generate-001",
+      "id": "models/lyria-3.5",
       "object": "model",
-      "created": 663682753,
+      "created": 356100776,
       "owned_by": "google",
       "provider": "google",
-      "name": "Veo 2.0",
-      "description": "Google: 最先进的视频生成模型",
+      "name": "Lyria 3.5",
+      "description": "Google: Google's music generation model.",
       "context_label": "unknown",
-      "price_input": 0.35,
+      "price_input": 0.08,
       "is_free": false,
       "capabilities": [
-        "video-generation"
+        "chat",
+        "text-generation"
       ],
       "tags": [
-        "video-generation"
+        "text-generation",
+        "chat"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
@@ -959,12 +1353,15 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "veo-2.0-generate-001",
+      "model_family": "lyria-3.5",
       "aliases": [],
       "tier": "small",
       "speed": "fast",
       "use_case": [
-        "video-creation"
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
@@ -975,15 +1372,19 @@
       "created": 535765353,
       "owned_by": "google",
       "provider": "google",
-      "name": "Lyria 3 Clip",
-      "description": "Google: 音乐生成模型（30秒）",
+      "name": "lyria-3-clip-preview",
+      "description": "Google: Google's family of legacy music generation models.",
       "context_label": "unknown",
       "price_input": 0.04,
       "is_free": false,
       "capabilities": [
-        "audio-generation"
+        "chat",
+        "text-generation"
       ],
-      "tags": [],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
       "is_reasoning": false,
       "is_multimodal": false,
       "has_tool_use": false,
@@ -996,7 +1397,12 @@
       ],
       "tier": "small",
       "speed": "fast",
-      "use_case": [],
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
     },
@@ -1006,15 +1412,19 @@
       "created": 434083630,
       "owned_by": "google",
       "provider": "google",
-      "name": "Lyria 3 Pro",
-      "description": "Google: 音乐生成模型（全曲）",
+      "name": "lyria-3-pro-preview",
+      "description": "Google: Google's family of legacy music generation models.",
       "context_label": "unknown",
       "price_input": 0.08,
       "is_free": false,
       "capabilities": [
-        "audio-generation"
+        "chat",
+        "text-generation"
       ],
-      "tags": [],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
       "is_reasoning": false,
       "is_multimodal": false,
       "has_tool_use": false,
@@ -1027,7 +1437,12 @@
       ],
       "tier": "small",
       "speed": "premium",
-      "use_case": [],
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
     },
@@ -1038,7 +1453,7 @@
       "owned_by": "google",
       "provider": "google",
       "name": "Gemini Embedding 2",
-      "description": "Google: 首个多模态嵌入模型，将文本、图像、视频、音频和 PDF 映射到统一嵌入空间",
+      "description": "Google: Our first multimodal embedding model, mapping text, images, video, audio, and PDFs into a unified embedding space.",
       "context_label": "unknown",
       "price_input": 0.2,
       "is_free": true,
@@ -1046,10 +1461,13 @@
         "embeddings"
       ],
       "tags": [
-        "embeddings"
+        "vision",
+        "text-generation",
+        "embeddings",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
       "free_quota": null,
@@ -1060,6 +1478,10 @@
       "tier": "small",
       "speed": "fast",
       "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
         "semantic-search",
         "similarity"
       ],
@@ -1067,200 +1489,96 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "models/gemini-embedding-001",
+      "id": "models/gemini-robotics-er-2-preview",
       "object": "model",
-      "created": 1413255911,
+      "created": 1902141793,
       "owned_by": "google",
       "provider": "google",
-      "name": "Gemini Embedding",
-      "description": "Google: 纯文本嵌入模型",
+      "name": "Gemini Robotics ER 2 Preview",
+      "description": "Google: Gemini Robotics ER 2, short for Gemini Robotics Embodied Reasoning 2, is a vision-language model endpoint that enables robots to understand their environments precisely, supporting agentic orchestration of robots, video progress understanding, multi-robot collaboration, and advanced spatial reasoning.",
       "context_label": "unknown",
-      "price_input": 0.15,
-      "is_free": true,
-      "capabilities": [
-        "embeddings"
-      ],
-      "tags": [
-        "embeddings"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": null,
-      "trial_scope": "fast",
-      "model_family": "gemini-embedding-001",
-      "model_variant": "embedding",
-      "aliases": [],
-      "tier": "small",
-      "speed": "fast",
-      "use_case": [
-        "semantic-search",
-        "similarity"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "models/gemini-robotics-er-1.6-preview",
-      "object": "model",
-      "created": 51848508,
-      "owned_by": "google",
-      "provider": "google",
-      "name": "Gemini Robotics-ER 1.6 Preview",
-      "description": "Google: 思考模型，增强机器人理解物理世界并与之交互的能力",
-      "context_size": 1000000,
-      "context_label": "1M",
       "price_input": 1,
       "price_output": 5,
       "is_free": true,
       "capabilities": [
         "chat",
         "text-generation",
-        "robotics"
+        "vision"
       ],
       "tags": [
+        "reasoning",
+        "vision",
+        "text-generation",
         "chat",
-        "text-generation"
+        "multimodal"
       ],
-      "is_reasoning": false,
-      "is_multimodal": false,
+      "is_reasoning": true,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
       "free_quota": null,
       "trial_scope": "fast",
-      "model_family": "gemini-robotics-er-1.6-preview",
+      "model_family": "gemini-robotics-er-2-preview",
       "aliases": [],
-      "tier": "medium",
+      "tier": "large",
       "speed": "fast",
       "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
         "conversation",
         "q&a",
-        "content-creation",
-        "writing-assistance"
+        "complex-reasoning"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
-      "id": "models/gemini-robotics-er-1.5-preview",
+      "id": "models/gemini-robotics-er-2-streaming-preview",
       "object": "model",
-      "created": 2006160957,
+      "created": 554617848,
       "owned_by": "google",
       "provider": "google",
-      "name": "Gemini Robotics-ER 1.5 Preview",
-      "description": "Google: 思考模型，增强机器人理解物理世界并与之交互的能力",
-      "context_size": 1000000,
-      "context_label": "1M",
-      "price_input": 0.3,
-      "price_output": 2.5,
+      "name": "Gemini Robotics ER 2 Streaming Preview",
+      "description": "Google: Gemini Robotics ER 2 Streaming is a vision-language model endpoint for robotics optimized for real-time text streaming using the Live API. It accepts text, image, video, and audio input and supports bidirectional streaming with function calling.",
+      "context_label": "unknown",
+      "price_input": 1,
+      "price_output": 5,
       "is_free": true,
       "capabilities": [
         "chat",
         "text-generation",
-        "robotics"
+        "vision"
       ],
       "tags": [
+        "vision",
+        "text-generation",
         "chat",
-        "text-generation"
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
       "free_quota": null,
       "trial_scope": "fast",
-      "model_family": "gemini-robotics-er-1.5-preview",
+      "model_family": "gemini-robotics-er-2-streaming-preview",
       "aliases": [],
-      "tier": "small",
+      "tier": "large",
       "speed": "fast",
       "use_case": [
-        "conversation",
-        "q&a",
+        "image-understanding",
+        "visual-q&a",
         "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "models/gemini-2.5-computer-use-preview-10-2025",
-      "object": "model",
-      "created": 1071683592,
-      "owned_by": "google",
-      "provider": "google",
-      "name": "Gemini 2.5 Computer Use Preview",
-      "description": "Google: 计算机使用模型，优化构建浏览器控制代理",
-      "context_size": 1000000,
-      "context_label": "1M",
-      "price_input": 1.25,
-      "price_output": 10,
-      "is_free": false,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "agentic"
-      ],
-      "tags": [
-        "chat",
-        "text-generation",
-        "agentic"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
-      "model_family": "gemini-2.5-computer-use-preview-10",
-      "aliases": [],
-      "tier": "medium",
-      "speed": "standard",
-      "use_case": [
+        "writing-assistance",
         "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance"
+        "q&a"
       ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
-    },
-    {
-      "id": "models/gemma-4",
-      "object": "model",
-      "created": 1865030124,
-      "owned_by": "google",
-      "provider": "google",
-      "name": "Gemma 4",
-      "description": "Google: 轻量级、最先进的开放模型",
-      "context_size": 1000000,
-      "context_label": "1M",
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "chat",
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": null,
-      "trial_scope": "fast",
-      "model_family": "gemma-4",
-      "aliases": [],
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     }
   ]
