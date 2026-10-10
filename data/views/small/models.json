@@ -1,7 +1,7 @@
 {
   "object": "list",
   "view": "small",
-  "updated_at": "2026-10-10T03:23:47.046Z",
+  "updated_at": "2026-10-10T08:12:36.496Z",
   "total": 81,
   "filters": {
     "tier": "small"
@@ -1973,6 +1973,56 @@
       "estimated_latency": "< 1s"
     },
     {
+      "id": "openai/gpt-oss-120b",
+      "object": "model",
+      "created": 261834169,
+      "owned_by": "groq",
+      "provider": "groq",
+      "name": "GPT OSS 120B",
+      "context_size": 131072,
+      "context_label": "131K",
+      "price_input": 0.15,
+      "price_output": 0.6,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpd": 1000,
+        "tpm": 8000,
+        "rpm": 30,
+        "tokens_per_day": 200000
+      },
+      "trial_scope": "all",
+      "model_family": "gpt-oss-120b",
+      "aliases": [
+        "cerebras/gpt-oss-120b",
+        "cloudflare/@cf/openai/gpt-oss-120b",
+        "ovh/gpt-oss-120b",
+        "sambanova/gpt-oss-120b"
+      ],
+      "parameter_count": 120000000000,
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
       "id": "meta-llama/llama-prompt-guard-2-22m",
       "object": "model",
       "created": 2021358890,
@@ -2050,56 +2100,6 @@
       "use_case": [
         "content-filtering",
         "safety"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "openai/gpt-oss-120b",
-      "object": "model",
-      "created": 261834169,
-      "owned_by": "groq",
-      "provider": "groq",
-      "name": "GPT OSS 120B",
-      "context_size": 131072,
-      "context_label": "131K",
-      "price_input": 0.15,
-      "price_output": 0.6,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "chat",
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "rpd": 1000,
-        "tpm": 8000,
-        "rpm": 30,
-        "tokens_per_day": 200000
-      },
-      "trial_scope": "all",
-      "model_family": "gpt-oss-120b",
-      "aliases": [
-        "cerebras/gpt-oss-120b",
-        "cloudflare/@cf/openai/gpt-oss-120b",
-        "ovh/gpt-oss-120b",
-        "sambanova/gpt-oss-120b"
-      ],
-      "parameter_count": 120000000000,
-      "tier": "small",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
@@ -2479,235 +2479,6 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "Qwen3.6-27B",
-      "object": "model",
-      "created": 1102402603,
-      "owned_by": "ovh",
-      "provider": "ovh",
-      "name": "Qwen3.6-27B",
-      "context_size": 262144,
-      "context_label": "262K",
-      "price_input": 0.47,
-      "price_output": 3.19,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "chat",
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "rpm": 2,
-        "notes": "Anonymous access (no API key, no signup): 2 requests per minute, per IP and per model. With an API key the same models are billed pay-as-you-go per token (400 RPM per project) — price_input/price_output are those rates, not what the anonymous tier costs."
-      },
-      "trial_scope": "all",
-      "model_family": "qwen3.6-27b",
-      "aliases": [
-        "Qwen3.6-27B"
-      ],
-      "parameter_count": 27000000000,
-      "tier": "small",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "gpt-oss-120b",
-      "object": "model",
-      "created": 1576077904,
-      "owned_by": "ovh",
-      "provider": "ovh",
-      "name": "gpt-oss-120b",
-      "context_size": 131072,
-      "context_label": "131K",
-      "price_input": 0.09,
-      "price_output": 0.47,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "chat",
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "rpm": 2,
-        "notes": "Anonymous access (no API key, no signup): 2 requests per minute, per IP and per model. With an API key the same models are billed pay-as-you-go per token (400 RPM per project) — price_input/price_output are those rates, not what the anonymous tier costs."
-      },
-      "trial_scope": "all",
-      "model_family": "gpt-oss-120b",
-      "aliases": [
-        "cerebras/gpt-oss-120b",
-        "cloudflare/@cf/openai/gpt-oss-120b",
-        "groq/openai/gpt-oss-120b",
-        "sambanova/gpt-oss-120b"
-      ],
-      "parameter_count": 120000000000,
-      "tier": "small",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "Qwen3.8-27B",
-      "object": "model",
-      "created": 1104774445,
-      "owned_by": "ovh",
-      "provider": "ovh",
-      "name": "Qwen3.8-27B",
-      "context_size": 262144,
-      "context_label": "262K",
-      "price_input": 0.47,
-      "price_output": 3.19,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "chat",
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "rpm": 2,
-        "notes": "Anonymous access (no API key, no signup): 2 requests per minute, per IP and per model. With an API key the same models are billed pay-as-you-go per token (400 RPM per project) — price_input/price_output are those rates, not what the anonymous tier costs."
-      },
-      "trial_scope": "all",
-      "model_family": "qwen3.8-27b",
-      "aliases": [
-        "cloudflare/@cf/qwen/qwen3.8-27b",
-        "qwen3.8-27b",
-        "groq/qwen/qwen3.8-27b"
-      ],
-      "parameter_count": 27000000000,
-      "tier": "small",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "Mistral-Small-3.2-24B-Instruct-2506",
-      "object": "model",
-      "created": 1936234523,
-      "owned_by": "ovh",
-      "provider": "ovh",
-      "name": "Mistral-Small-3.2-24B-Instruct-2506",
-      "context_size": 131072,
-      "context_label": "131K",
-      "price_input": 0.1,
-      "price_output": 0.31,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "chat",
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "rpm": 2,
-        "notes": "Anonymous access (no API key, no signup): 2 requests per minute, per IP and per model. With an API key the same models are billed pay-as-you-go per token (400 RPM per project) — price_input/price_output are those rates, not what the anonymous tier costs."
-      },
-      "trial_scope": "all",
-      "model_family": "mistral-small-3.2-24b",
-      "model_variant": "instruct",
-      "aliases": [],
-      "parameter_count": 24000000000,
-      "tier": "small",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "Mistral-Nemo-Instruct-2407",
-      "object": "model",
-      "created": 2044441628,
-      "owned_by": "ovh",
-      "provider": "ovh",
-      "name": "Mistral-Nemo-Instruct-2407",
-      "context_size": 65536,
-      "context_label": "66K",
-      "price_input": 0.14,
-      "price_output": 0.14,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "chat",
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "rpm": 2,
-        "notes": "Anonymous access (no API key, no signup): 2 requests per minute, per IP and per model. With an API key the same models are billed pay-as-you-go per token (400 RPM per project) — price_input/price_output are those rates, not what the anonymous tier costs."
-      },
-      "trial_scope": "all",
-      "model_family": "mistral-nemo",
-      "model_variant": "instruct",
-      "aliases": [
-        "llm7/mistral-Nemo-Instruct-2407"
-      ],
-      "tier": "small",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
       "id": "bge-multilingual-gemma2",
       "object": "model",
       "created": 114565177,
@@ -2779,6 +2550,235 @@
       "use_case": [
         "semantic-search",
         "similarity"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "gpt-oss-120b",
+      "object": "model",
+      "created": 1576077904,
+      "owned_by": "ovh",
+      "provider": "ovh",
+      "name": "gpt-oss-120b",
+      "context_size": 131072,
+      "context_label": "131K",
+      "price_input": 0.09,
+      "price_output": 0.47,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 2,
+        "notes": "Anonymous access (no API key, no signup): 2 requests per minute, per IP and per model. With an API key the same models are billed pay-as-you-go per token (400 RPM per project) — price_input/price_output are those rates, not what the anonymous tier costs."
+      },
+      "trial_scope": "all",
+      "model_family": "gpt-oss-120b",
+      "aliases": [
+        "cerebras/gpt-oss-120b",
+        "cloudflare/@cf/openai/gpt-oss-120b",
+        "groq/openai/gpt-oss-120b",
+        "sambanova/gpt-oss-120b"
+      ],
+      "parameter_count": 120000000000,
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "Qwen3.6-27B",
+      "object": "model",
+      "created": 1102402603,
+      "owned_by": "ovh",
+      "provider": "ovh",
+      "name": "Qwen3.6-27B",
+      "context_size": 262144,
+      "context_label": "262K",
+      "price_input": 0.47,
+      "price_output": 3.19,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 2,
+        "notes": "Anonymous access (no API key, no signup): 2 requests per minute, per IP and per model. With an API key the same models are billed pay-as-you-go per token (400 RPM per project) — price_input/price_output are those rates, not what the anonymous tier costs."
+      },
+      "trial_scope": "all",
+      "model_family": "qwen3.6-27b",
+      "aliases": [
+        "Qwen3.6-27B"
+      ],
+      "parameter_count": 27000000000,
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "Mistral-Small-3.2-24B-Instruct-2506",
+      "object": "model",
+      "created": 1936234523,
+      "owned_by": "ovh",
+      "provider": "ovh",
+      "name": "Mistral-Small-3.2-24B-Instruct-2506",
+      "context_size": 131072,
+      "context_label": "131K",
+      "price_input": 0.1,
+      "price_output": 0.31,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 2,
+        "notes": "Anonymous access (no API key, no signup): 2 requests per minute, per IP and per model. With an API key the same models are billed pay-as-you-go per token (400 RPM per project) — price_input/price_output are those rates, not what the anonymous tier costs."
+      },
+      "trial_scope": "all",
+      "model_family": "mistral-small-3.2-24b",
+      "model_variant": "instruct",
+      "aliases": [],
+      "parameter_count": 24000000000,
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "Qwen3.8-27B",
+      "object": "model",
+      "created": 1104774445,
+      "owned_by": "ovh",
+      "provider": "ovh",
+      "name": "Qwen3.8-27B",
+      "context_size": 262144,
+      "context_label": "262K",
+      "price_input": 0.47,
+      "price_output": 3.19,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 2,
+        "notes": "Anonymous access (no API key, no signup): 2 requests per minute, per IP and per model. With an API key the same models are billed pay-as-you-go per token (400 RPM per project) — price_input/price_output are those rates, not what the anonymous tier costs."
+      },
+      "trial_scope": "all",
+      "model_family": "qwen3.8-27b",
+      "aliases": [
+        "cloudflare/@cf/qwen/qwen3.8-27b",
+        "qwen3.8-27b",
+        "groq/qwen/qwen3.8-27b"
+      ],
+      "parameter_count": 27000000000,
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "Mistral-Nemo-Instruct-2407",
+      "object": "model",
+      "created": 2044441628,
+      "owned_by": "ovh",
+      "provider": "ovh",
+      "name": "Mistral-Nemo-Instruct-2407",
+      "context_size": 65536,
+      "context_label": "66K",
+      "price_input": 0.14,
+      "price_output": 0.14,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 2,
+        "notes": "Anonymous access (no API key, no signup): 2 requests per minute, per IP and per model. With an API key the same models are billed pay-as-you-go per token (400 RPM per project) — price_input/price_output are those rates, not what the anonymous tier costs."
+      },
+      "trial_scope": "all",
+      "model_family": "mistral-nemo",
+      "model_variant": "instruct",
+      "aliases": [
+        "llm7/mistral-Nemo-Instruct-2407"
+      ],
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
