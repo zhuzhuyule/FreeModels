@@ -18,6 +18,7 @@ const PROVIDER_PREFIXES = [
   'groq', 'openrouter', 'cerebras', 'nvidia', 'google',
   'gitee', 'bigmodel', 'xinghuo', 'xingchen', 'longcat',
   'cloudflare', 'cohere', 'github', 'sambanova',
+  'agnes', 'sensenova', 'ovh', 'kilo', 'llm7',
 ];
 
 // 只用 `prefix/` 形式剥离的 owner 前缀。这些字符串本身也常作为模型家族前缀

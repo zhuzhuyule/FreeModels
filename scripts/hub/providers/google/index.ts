@@ -1,386 +1,209 @@
 import type { RawModelData, ProviderPlugin } from '../../types.js';
 
-const PRICING_PAGE = 'https://ai.google.dev/gemini-api/docs/pricing.md.txt?hl=zh-cn';
+// 官方定价文档的 markdown 源. 线上解析而非硬编码, 避免模型列表/价格过期
+// (旧版硬编码表曾把已弃用的 gemini-2.0 系列标成免费).
+const PRICING_DOC_URL = 'https://ai.google.dev/gemini-api/docs/pricing.md.txt';
 
-interface GoogleModel {
-  modelId: string;
-  name: string;
-  description: string;
-  contextSize?: number;
-  priceInput?: number;
-  priceOutput?: number;
-  isFree: boolean;
-  capabilities: string[];
-  category: string;
+const EMOJI_RE_G = /[\p{Extended_Pictographic}\uFE0F]/gu;
+
+interface PriceRow {
+  label: string;
+  free: string;
+  paid: string;
 }
 
-const MODEL_DATA: GoogleModel[] = [
-  {
-    modelId: 'gemini-3.1-pro-preview',
-    name: 'Gemini 3.1 Pro Preview',
-    description: '最新性能、智力和可用性改进，支持多模态理解、代理能力和 vibe-coding',
-    contextSize: 2000000,
-    priceInput: 2.00,
-    priceOutput: 12.00,
-    isFree: false,
-    capabilities: ['chat', 'text-generation', 'reasoning', 'agentic'],
-    category: 'LLM',
-  },
-  {
-    modelId: 'gemini-3.1-flash-lite-preview',
-    name: 'Gemini 3.1 Flash-Lite Preview',
-    description: '最具成本效益的模型，针对高容量代理任务、翻译和简单数据处理优化',
-    contextSize: 1000000,
-    priceInput: 0.25,
-    priceOutput: 1.50,
-    isFree: true,
-    capabilities: ['chat', 'text-generation'],
-    category: 'LLM',
-  },
-  {
-    modelId: 'gemini-3.1-flash-live-preview',
-    name: 'Gemini 3.1 Flash Live Preview',
-    description: '低延迟音频到音频模型，优化实时对话、 acoustic nuance 检测',
-    contextSize: 1000000,
-    priceInput: 0.75,
-    priceOutput: 4.50,
-    isFree: true,
-    capabilities: ['chat', 'text-generation', 'speech-recognition'],
-    category: 'LLM',
-  },
-  {
-    modelId: 'gemini-3.1-flash-image-preview',
-    name: 'Gemini 3.1 Flash Image Preview',
-    description: '为速度和效率设计的图像生成模型',
-    contextSize: 1000000,
-    priceInput: 0.50,
-    priceOutput: 3.00,
-    isFree: false,
-    capabilities: ['chat', 'text-generation', 'image-generation'],
-    category: 'Image',
-  },
-  {
-    modelId: 'gemini-3.1-flash-tts-preview',
-    name: 'Gemini 3.1 Flash TTS Preview',
-    description: '3.1 Flash 文本转语音模型，优化价格性能比',
-    priceInput: 1.00,
-    priceOutput: 20.00,
-    isFree: true,
-    capabilities: ['speech-synthesis'],
-    category: 'TTS',
-  },
-  {
-    modelId: 'gemini-3-flash-preview',
-    name: 'Gemini 3 Flash Preview',
-    description: '为速度而构建的智能模型，结合前沿智能与卓越搜索',
-    contextSize: 1000000,
-    priceInput: 0.50,
-    priceOutput: 3.00,
-    isFree: true,
-    capabilities: ['chat', 'text-generation', 'reasoning'],
-    category: 'LLM',
-  },
-  {
-    modelId: 'gemini-3-pro-image-preview',
-    name: 'Gemini 3 Pro Image Preview',
-    description: '原生图像生成模型，优化速度、灵活性和上下文理解',
-    contextSize: 2000000,
-    priceInput: 2.00,
-    priceOutput: 12.00,
-    isFree: false,
-    capabilities: ['chat', 'text-generation', 'image-generation'],
-    category: 'Image',
-  },
-  {
-    modelId: 'gemini-2.5-pro',
-    name: 'Gemini 2.5 Pro',
-    description: '最先进的通用模型，擅长编码和复杂推理任务',
-    contextSize: 1000000,
-    priceInput: 1.25,
-    priceOutput: 10.00,
-    isFree: true,
-    capabilities: ['chat', 'text-generation', 'reasoning', 'coding'],
-    category: 'LLM',
-  },
-  {
-    modelId: 'gemini-2.5-flash',
-    name: 'Gemini 2.5 Flash',
-    description: '首个混合推理模型，支持 1M token 上下文窗口和思考预算',
-    contextSize: 1000000,
-    priceInput: 0.30,
-    priceOutput: 2.50,
-    isFree: true,
-    capabilities: ['chat', 'text-generation', 'reasoning'],
-    category: 'LLM',
-  },
-  {
-    modelId: 'gemini-2.5-flash-lite',
-    name: 'Gemini 2.5 Flash-Lite',
-    description: '最小且最具成本效益的模型，为规模化使用而构建',
-    contextSize: 1000000,
-    priceInput: 0.10,
-    priceOutput: 0.40,
-    isFree: true,
-    capabilities: ['chat', 'text-generation'],
-    category: 'LLM',
-  },
-  {
-    modelId: 'gemini-2.5-flash-lite-preview-09-2025',
-    name: 'Gemini 2.5 Flash-Lite Preview',
-    description: '基于 Gemini 2.5 Flash Lite 优化成本效益、高吞吐量和高质量',
-    contextSize: 1000000,
-    priceInput: 0.10,
-    priceOutput: 0.40,
-    isFree: true,
-    capabilities: ['chat', 'text-generation'],
-    category: 'LLM',
-  },
-  {
-    modelId: 'gemini-2.5-flash-native-audio-preview-12-2025',
-    name: 'Gemini 2.5 Flash Native Audio',
-    description: '原生音频模型，优化更高质量的音频输出',
-    contextSize: 1000000,
-    priceInput: 0.50,
-    priceOutput: 2.00,
-    isFree: true,
-    capabilities: ['chat', 'text-generation', 'speech-synthesis'],
-    category: 'Audio',
-  },
-  {
-    modelId: 'gemini-2.5-flash-image',
-    name: 'Gemini 2.5 Flash Image',
-    description: '原生图像生成模型，优化速度、灵活性和上下文理解',
-    contextSize: 1000000,
-    priceInput: 0.30,
-    priceOutput: 0.039,
-    isFree: false,
-    capabilities: ['chat', 'text-generation', 'image-generation'],
-    category: 'Image',
-  },
-  {
-    modelId: 'gemini-2.5-flash-preview-tts',
-    name: 'Gemini 2.5 Flash Preview TTS',
-    description: '2.5 Flash 文本转语音模型，优化价格性能比和低延迟',
-    priceInput: 0.50,
-    priceOutput: 10.00,
-    isFree: true,
-    capabilities: ['speech-synthesis'],
-    category: 'TTS',
-  },
-  {
-    modelId: 'gemini-2.5-pro-preview-tts',
-    name: 'Gemini 2.5 Pro Preview TTS',
-    description: '2.5 Pro 文本转语音模型，优化强大、低延迟语音生成',
-    priceInput: 1.00,
-    priceOutput: 20.00,
-    isFree: false,
-    capabilities: ['speech-synthesis'],
-    category: 'TTS',
-  },
-  {
-    modelId: 'gemini-2.0-flash',
-    name: 'Gemini 2.0 Flash',
-    description: '（已弃用，将于 2026 年 6 月 1 日关闭）',
-    contextSize: 1000000,
-    priceInput: 0.10,
-    priceOutput: 0.40,
-    isFree: true,
-    capabilities: ['chat', 'text-generation'],
-    category: 'LLM',
-  },
-  {
-    modelId: 'gemini-2.0-flash-lite',
-    name: 'Gemini 2.0 Flash-Lite',
-    description: '（已弃用，将于 2026 年 6 月 1 日关闭）',
-    contextSize: 1000000,
-    priceInput: 0.075,
-    priceOutput: 0.30,
-    isFree: true,
-    capabilities: ['chat', 'text-generation'],
-    category: 'LLM',
-  },
-  {
-    modelId: 'imagen-4.0-generate-001',
-    name: 'Imagen 4',
-    description: '最新图像生成模型，显著更好的文本渲染和整体图像质量',
-    priceInput: 0.04,
-    priceOutput: 0,
-    isFree: false,
-    capabilities: ['image-generation'],
-    category: 'Image',
-  },
-  {
-    modelId: 'imagen-4.0-ultra-generate-001',
-    name: 'Imagen 4 Ultra',
-    description: '最高质量图像生成',
-    priceInput: 0.06,
-    priceOutput: 0,
-    isFree: false,
-    capabilities: ['image-generation'],
-    category: 'Image',
-  },
-  {
-    modelId: 'imagen-4.0-fast-generate-001',
-    name: 'Imagen 4 Fast',
-    description: '快速图像生成',
-    priceInput: 0.02,
-    priceOutput: 0,
-    isFree: false,
-    capabilities: ['image-generation'],
-    category: 'Image',
-  },
-  {
-    modelId: 'veo-3.1-generate-preview',
-    name: 'Veo 3.1',
-    description: '最新视频生成模型',
-    priceInput: 0.40,
-    priceOutput: 0,
-    isFree: false,
-    capabilities: ['video-generation'],
-    category: 'Video',
-  },
-  {
-    modelId: 'veo-3.1-fast-generate-preview',
-    name: 'Veo 3.1 Fast',
-    description: '快速视频生成',
-    priceInput: 0.10,
-    priceOutput: 0,
-    isFree: false,
-    capabilities: ['video-generation'],
-    category: 'Video',
-  },
-  {
-    modelId: 'veo-3.0-generate-001',
-    name: 'Veo 3.0',
-    description: '稳定版视频生成模型',
-    priceInput: 0.40,
-    priceOutput: 0,
-    isFree: false,
-    capabilities: ['video-generation'],
-    category: 'Video',
-  },
-  {
-    modelId: 'veo-2.0-generate-001',
-    name: 'Veo 2.0',
-    description: '最先进的视频生成模型',
-    priceInput: 0.35,
-    priceOutput: 0,
-    isFree: false,
-    capabilities: ['video-generation'],
-    category: 'Video',
-  },
-  {
-    modelId: 'lyria-3-clip-preview',
-    name: 'Lyria 3 Clip',
-    description: '音乐生成模型（30秒）',
-    priceInput: 0.04,
-    priceOutput: 0,
-    isFree: false,
-    capabilities: ['audio-generation'],
-    category: 'Audio',
-  },
-  {
-    modelId: 'lyria-3-pro-preview',
-    name: 'Lyria 3 Pro',
-    description: '音乐生成模型（全曲）',
-    priceInput: 0.08,
-    priceOutput: 0,
-    isFree: false,
-    capabilities: ['audio-generation'],
-    category: 'Audio',
-  },
-  {
-    modelId: 'gemini-embedding-2',
-    name: 'Gemini Embedding 2',
-    description: '首个多模态嵌入模型，将文本、图像、视频、音频和 PDF 映射到统一嵌入空间',
-    priceInput: 0.20,
-    priceOutput: 0,
-    isFree: true,
-    capabilities: ['embeddings'],
-    category: 'Embedding',
-  },
-  {
-    modelId: 'gemini-embedding-001',
-    name: 'Gemini Embedding',
-    description: '纯文本嵌入模型',
-    priceInput: 0.15,
-    priceOutput: 0,
-    isFree: true,
-    capabilities: ['embeddings'],
-    category: 'Embedding',
-  },
-  {
-    modelId: 'gemini-robotics-er-1.6-preview',
-    name: 'Gemini Robotics-ER 1.6 Preview',
-    description: '思考模型，增强机器人理解物理世界并与之交互的能力',
-    contextSize: 1000000,
-    priceInput: 1.00,
-    priceOutput: 5.00,
-    isFree: true,
-    capabilities: ['chat', 'text-generation', 'robotics'],
-    category: 'Robotics',
-  },
-  {
-    modelId: 'gemini-robotics-er-1.5-preview',
-    name: 'Gemini Robotics-ER 1.5 Preview',
-    description: '思考模型，增强机器人理解物理世界并与之交互的能力',
-    contextSize: 1000000,
-    priceInput: 0.30,
-    priceOutput: 2.50,
-    isFree: true,
-    capabilities: ['chat', 'text-generation', 'robotics'],
-    category: 'Robotics',
-  },
-  {
-    modelId: 'gemini-2.5-computer-use-preview-10-2025',
-    name: 'Gemini 2.5 Computer Use Preview',
-    description: '计算机使用模型，优化构建浏览器控制代理',
-    contextSize: 1000000,
-    priceInput: 1.25,
-    priceOutput: 10.00,
-    isFree: false,
-    capabilities: ['chat', 'text-generation', 'agentic'],
-    category: 'Agent',
-  },
-  {
-    modelId: 'gemma-4',
-    name: 'Gemma 4',
-    description: '轻量级、最先进的开放模型',
-    contextSize: 1000000,
-    isFree: true,
-    capabilities: ['chat', 'text-generation'],
-    category: 'LLM',
-  },
-];
+interface DocSection {
+  title: string;
+  ids: string[];
+  description: string;
+  rows: PriceRow[];
+}
+
+function cleanTitle(raw: string): string {
+  return raw
+    .replace(/\[([^\]]+)\]\([^)]*\)/g, '$1')
+    .replace(EMOJI_RE_G, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+// 促销价形如 "$0.75 through December 31, 2026. $1.50 starting January 1, 2027."
+// — 取第一个数字, 即当前生效价.
+function firstPrice(cell: string | undefined): number | undefined {
+  if (!cell) return undefined;
+  const m = cell.match(/\$\s*([\d.]+)/);
+  return m ? Number.parseFloat(m[1]) : undefined;
+}
+
+function isFreeCell(cell: string): boolean {
+  return /free of charge/i.test(cell);
+}
+
+// 按 ### 小节切表: 有 Standard 时只取 Standard 表 (Batch/Flex/Priority 是折扣变体),
+// 无小节的老式章节取第一张表. 剔除分隔行、表头行和 "Used to improve" 行.
+function pickRows(sectionLines: string[]): PriceRow[] {
+  const hasSubsection = sectionLines.some((l) => /^###\s/.test(l));
+  const tables: Array<{ sub: string; rows: PriceRow[] }> = [];
+  let sub = '';
+  let current: PriceRow[] | null = null;
+  for (const line of sectionLines) {
+    if (/^###\s/.test(line)) {
+      sub = line.replace(/^###\s+/, '').trim().toLowerCase();
+      continue;
+    }
+    if (line.trim().startsWith('|')) {
+      if (!current) current = [];
+      const cells = line.split('|').slice(1, -1).map((c) => c.trim());
+      if (cells.length < 3) continue;
+      if (cells.every((c) => c === '' || /^:?-{2,}:?$/.test(c))) continue;
+      if (/free tier/i.test(cells[1])) continue;
+      const [label, free, paid] = cells;
+      if (!label || /used to improve/i.test(label)) continue;
+      current.push({ label, free, paid });
+    } else if (current) {
+      tables.push({ sub, rows: current });
+      current = null;
+    }
+  }
+  if (current) tables.push({ sub, rows: current });
+  if (tables.length === 0) return [];
+  if (!hasSubsection) return tables[0].rows;
+  return tables.find((t) => t.sub === 'standard')?.rows ?? [];
+}
+
+function extractDescription(lines: string[], startIdx: number): string {
+  const out: string[] = [];
+  let started = false;
+  for (let i = startIdx; i < lines.length; i++) {
+    const l = lines[i].trim();
+    if (!l) {
+      if (started) break;
+      continue;
+    }
+    if (/^\[|^!\[|^>|^\^|^#|^\|/.test(l)) continue;
+    started = true;
+    out.push(l);
+  }
+  return out
+    .join(' ')
+    .replace(/\[([^\]]+)\]\([^)]*\)/g, '$1')
+    .replace(EMOJI_RE_G, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function capabilitiesFor(title: string): { capabilities: string[]; category: string } {
+  const t = title.toLowerCase();
+  if (t.includes('embedding')) return { capabilities: ['embeddings'], category: 'Embedding' };
+  if (t.includes('image')) return { capabilities: ['image-generation'], category: 'Image' };
+  if (/\btts\b/.test(t)) return { capabilities: ['speech-synthesis'], category: 'Audio' };
+  if (t.includes('transcribe')) return { capabilities: ['speech-recognition'], category: 'Audio' };
+  if (t.includes('translate') || t.includes('live')) {
+    return { capabilities: ['chat', 'speech-recognition', 'speech-synthesis'], category: 'Realtime' };
+  }
+  if (t.includes('veo') || t.includes('omni')) return { capabilities: ['video-generation'], category: 'Video' };
+  if (t.includes('robotics')) return { capabilities: ['chat', 'text-generation', 'vision'], category: 'Robotics' };
+  return { capabilities: ['chat', 'text-generation'], category: 'LLM' };
+}
+
+// 多 id 章节 (如 "Gemini 3.8 Live, ... Extended Thinking, and ... Live Preview")
+// 标题按逗号/and 拆开与 id 一一对应; 拆不齐时用模型 id 保证名字唯一.
+function namesFor(section: DocSection): string[] {
+  if (section.ids.length === 1) return [section.title];
+  const parts = section.title
+    .split(/,\s*(?:and\s+)?|\s+and\s+/)
+    .map((p) => p.trim())
+    .filter(Boolean);
+  return section.ids.map((id, i) => (parts.length === section.ids.length ? parts[i] : id));
+}
+
+function parsePricingDoc(md: string): DocSection[] {
+  const sections: DocSection[] = [];
+  for (const chunk of md.split(/^## /m).slice(1)) {
+    const lines = chunk.split('\n');
+    const title = cleanTitle(lines[0]);
+    const idLineIdx = lines.findIndex((l) => /^\s*\*\[/.test(l));
+    const idLine = idLineIdx >= 0 ? lines[idLineIdx] : '';
+    const ids = [...idLine.matchAll(/\[`([^`]+)`\]/g)].map((m) => m[1]);
+    if (ids.length === 0) {
+      // 无内联 id 的章节 (如 Pricing for tools/agents、Gemma 开放模型) 不入库,
+      // 避免编造调用方不存在的 API model id.
+      continue;
+    }
+    const rows = pickRows(lines);
+    if (rows.length === 0) continue;
+    const description = extractDescription(lines, idLineIdx >= 0 ? idLineIdx + 1 : 1);
+    sections.push({ title, ids, description, rows });
+  }
+  return sections;
+}
+
+function buildModel(
+  id: string,
+  name: string,
+  section: DocSection,
+  priceInput: number | undefined,
+  priceOutput: number | undefined,
+  isFree: boolean
+): RawModelData {
+  const { capabilities, category } = capabilitiesFor(section.title);
+  const isFlagship = /pro|ultra/i.test(id);
+  // modelId 带 "models/" 前缀对齐 Gemini OpenAI-compat /v1beta/openai/models 端点格式.
+  return {
+    vendor: 'google',
+    modelId: `google/models/${id}`,
+    name,
+    description: `Google: ${section.description || 'Official model on the Gemini API'}`,
+    priceInput,
+    priceOutput: priceOutput !== undefined && priceOutput > 0 ? priceOutput : undefined,
+    priceCurrency: 'USD',
+    isFree,
+    freeMechanism: isFree ? 'rate-limited' : null,
+    trialScope: isFree ? (isFlagship ? 'flagship' : 'fast') : 'none',
+    capabilities,
+    metadata: {
+      originalId: id,
+      category,
+      provider: 'google',
+    },
+  };
+}
 
 async function fetchGoogleModels(): Promise<RawModelData[]> {
-  console.log('[google] Parsing models from pricing documentation...');
+  console.log('[google] Fetching official pricing documentation...');
+  const res = await fetch(PRICING_DOC_URL);
+  if (!res.ok) throw new Error(`[google] pricing doc fetch failed: HTTP ${res.status}`);
+  const md = await res.text();
+  if (!/^## /m.test(md) || !/free tier/i.test(md)) {
+    throw new Error('[google] pricing doc format unexpected (missing ## sections / Free Tier tables)');
+  }
 
-  return MODEL_DATA.map((m) => {
-    const isFlagship = /pro|ultra/i.test(m.modelId);
-    // modelId 加 "models/" 前缀对齐 Gemini OpenAI-compat /v1beta/openai/models
-    // 端点返回的格式. 不加这个前缀, 消费方 (api-center) 拿上游 /v1/models 跟
-    // Registry id 求交集会 0 命中 (gemini1 free=0 bug).
-    return {
-      vendor: 'google',
-      modelId: `google/models/${m.modelId}`,
-      name: m.name,
-      description: `Google: ${m.description}`,
-      contextSize: m.contextSize,
-      priceInput: m.priceInput,
-      priceOutput: m.priceOutput !== undefined && m.priceOutput > 0 ? m.priceOutput : undefined,
-      priceCurrency: 'USD',
-      isFree: m.isFree,
-      freeMechanism: m.isFree ? 'rate-limited' : null,
-      trialScope: m.isFree ? (isFlagship ? 'flagship' : 'fast') : 'none',
-      capabilities: m.capabilities,
-      metadata: {
-        originalId: m.modelId,
-        category: m.category,
-        provider: 'google',
-      },
-    };
-  });
+  const models: RawModelData[] = [];
+  for (const section of parsePricingDoc(md)) {
+    const names = namesFor(section);
+    const inputRow = section.rows.find((r) => /input price/i.test(r.label));
+    const outputRow = section.rows.find((r) => /output price/i.test(r.label));
+    if (inputRow || outputRow) {
+      // token 计费模型: 同节多 id 共用 Standard 价.
+      const isFree = isFreeCell((inputRow ?? outputRow)!.free);
+      section.ids.forEach((id, i) => {
+        models.push(buildModel(id, names[i], section, firstPrice(inputRow?.paid), firstPrice(outputRow?.paid), isFree));
+      });
+    } else {
+      // 媒体模型按秒/按次计费 (Veo/Lyria): 行与 id 按文档顺序一一对应.
+      section.ids.forEach((id, i) => {
+        const row = section.rows[Math.min(i, section.rows.length - 1)];
+        models.push(buildModel(id, names[i], section, firstPrice(row.paid), undefined, isFreeCell(row.free)));
+      });
+    }
+  }
+
+  // 文档改版导致解析塌方时抛错, 交由 strict 门槛转 PR 人工复核, 不静默发布残缺数据.
+  if (models.length < 5) {
+    throw new Error(`[google] parsed only ${models.length} models — pricing doc likely restructured`);
+  }
+  console.log(`[google] Parsed ${models.length} models from pricing doc.`);
+  return models;
 }
 
 export const fetchModels: ProviderPlugin = fetchGoogleModels;

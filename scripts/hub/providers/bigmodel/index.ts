@@ -1,6 +1,6 @@
 import type { RawModelData, ProviderPlugin } from '../../types.js';
 
-const LLMS_TXT_URL = 'https://docs.bigmodel.cn/llms.txt';
+const MODEL_OVERVIEW_URL = 'https://docs.bigmodel.cn/cn/guide/start/model-overview.md';
 const DOC_BASE = 'https://docs.bigmodel.cn';
 const PRICING_API = 'https://open.bigmodel.cn/api/biz/operation/query?ids=1137,1122,1123,1124,1132,1125,1126';
 
@@ -35,20 +35,22 @@ const MODALITY_MAP: Record<string, string> = {
   '文档': 'document',
 };
 
+// 免费模型索引页 (model-overview.md) 的表格列出了全部 /cn/guide/models/free/<id> 文档页.
+// llms.txt 里曾能抓到这些链接, 2026 改版后 llms.txt 不再收录 free 页面, 改用索引页.
 async function fetchFreeModelUrls(): Promise<string[]> {
-  const response = await fetch(LLMS_TXT_URL);
+  const response = await fetch(MODEL_OVERVIEW_URL);
   if (!response.ok) {
-    console.warn(`[bigmodel] llms.txt HTTP ${response.status}`);
+    console.warn(`[bigmodel] model-overview HTTP ${response.status}`);
     return [];
   }
   const text = await response.text();
-  const urls = new Set<string>();
-  const regex = /https:\/\/docs\.bigmodel\.cn(\/cn\/guide\/models\/free\/[\w.-]+)\.md/gi;
+  const ids = new Set<string>();
+  const regex = /\/cn\/guide\/models\/free\/([\w.-]+)/gi;
   let match: RegExpExecArray | null;
   while ((match = regex.exec(text)) !== null) {
-    urls.add(`${DOC_BASE}${match[1]}.md`);
+    ids.add(match[1]);
   }
-  return Array.from(urls);
+  return Array.from(ids).map((id) => `${DOC_BASE}/cn/guide/models/free/${id}.md`);
 }
 
 function escapeRegex(s: string): string {

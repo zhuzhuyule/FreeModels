@@ -47,7 +47,7 @@ async function fetchSambaNovaModels(): Promise<RawModelData[]> {
       // SambaNova Cloud 给新账户 $5 trial credits, 有效 3 个月.
       isFree: true,
       freeMechanism: 'trial-credits',
-      freeQuota: { total_credits: 5, notes: '$5 trial credits, valid for 3 months' },
+      freeQuota: { total_credits: 5, notes: '$5 trial credits, valid for 3 months; listed prices are pay-as-you-go rates after credits run out' },
       trialScope: 'all',
       capabilities: ['chat', 'text-generation'],
       metadata: { originalId: id },

@@ -152,6 +152,33 @@ export const PROVIDER_META: Record<string, ProviderMeta> = {
     priceCurrency: 'CNY',
     priceUnit: 'per_million_tokens',
   },
+  ovh: {
+    name: 'ovh',
+    displayName: 'OVHcloud AI Endpoints',
+    website: 'https://www.ovhcloud.com/en-gb/public-cloud/ai-endpoints/',
+    apiBaseUrl: 'https://oai.endpoints.kepler.ai.cloud.ovh.net/v1',
+    channelType: 'openai',
+    priceCurrency: 'USD',
+    priceUnit: 'per_million_tokens',
+  },
+  kilo: {
+    name: 'kilo',
+    displayName: 'Kilo Code Gateway',
+    website: 'https://kilo.ai',
+    apiBaseUrl: 'https://api.kilo.ai/api/gateway',
+    channelType: 'openai',
+    priceCurrency: 'USD',
+    priceUnit: 'per_million_tokens',
+  },
+  llm7: {
+    name: 'llm7',
+    displayName: 'LLM7.io',
+    website: 'https://llm7.io',
+    apiBaseUrl: 'https://api.llm7.io/v1',
+    channelType: 'openai',
+    priceCurrency: 'USD',
+    priceUnit: 'per_million_tokens',
+  },
 };
 
 export function loadCache(): Record<string, CachedCapabilities> {

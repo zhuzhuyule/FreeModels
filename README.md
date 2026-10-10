@@ -200,6 +200,8 @@ console.log(`${reasoning.length} 个免费推理模型`);
 
 `free_quota` 给出具体数值（rpm、tokens_per_day、total_credits 等）。
 
+> 注意：`daily-tokens` / `trial-credits` 类免费模型上同时携带的 `price_input` / `price_output` 是**配额用完或 credits 耗尽后的付费价**（如 Cloudflare Workers AI 超出每日 neurons 配额、SambaNova/Cerebras 用尽 $5 试用 credits），与 `is_free = true` 并不矛盾。
+
 完整字段定义：[docs/fields.md](./docs/fields.md)
 
 ## 文档索引

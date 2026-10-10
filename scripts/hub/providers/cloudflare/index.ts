@@ -1,6 +1,8 @@
 import type { RawModelData, ProviderPlugin } from '../../types.js';
 
 const API_URL = 'https://api.cloudflare.com/client/v4/accounts';
+// 官方定价页（Accept: text/markdown 可直接拿 markdown），用于识别「必须付费 billing method」的模型。
+const PRICING_URL = 'https://developers.cloudflare.com/workers-ai/platform/pricing/';
 
 // task.name 来自 Cloudflare 的标准 task 枚举.
 const TASK_TO_CAPABILITY: Record<string, string> = {
@@ -50,6 +52,33 @@ function parsePrice(value: unknown): { input?: number; output?: number } {
   return out;
 }
 
+/**
+ * 官方定价页会点名「requires a paid billing method」的模型：
+ * 这些模型不吃 Workers AI 每日 10,000 neurons 免费额度，需要 Workers Paid 或 AI Gateway 预付 credits。
+ * 用文件名（最后一段）比对，避免版本后缀差异导致漏匹配。
+ */
+async function fetchPaidOnlyModels(): Promise<Set<string>> {
+  const res = await fetch(PRICING_URL, { headers: { Accept: 'text/markdown' } });
+  if (!res.ok) throw new Error(`[cloudflare] pricing page responded with ${res.status}`);
+  const md = await res.text();
+  if (!/neurons per day/i.test(md)) {
+    throw new Error('[cloudflare] pricing page format changed: no neuron allocation text found');
+  }
+
+  const note = md.split('\n').find(line => /requires? a paid billing method/i.test(line));
+  const paidOnly = new Set<string>();
+  if (!note) {
+    console.warn('[cloudflare] pricing page has no paid-billing note; treating all models as free-allocation');
+    return paidOnly;
+  }
+  for (const hit of note.matchAll(/`(@[a-z0-9_.-]+(?:\/[a-z0-9_.-]+)+)`/gi)) {
+    const basename = hit[1].split('/').pop() ?? hit[1];
+    paidOnly.add(basename);
+  }
+  console.log(`[cloudflare] Paid-billing-only models: ${paidOnly.size} (${Array.from(paidOnly).join(', ')})`);
+  return paidOnly;
+}
+
 async function fetchCloudflareModels(): Promise<RawModelData[]> {
   const accountId = process.env.CLOUDFLARE_ACCOUNT_ID;
   const apiKey = process.env.CLOUDFLARE_API_KEY;
@@ -71,6 +100,8 @@ async function fetchCloudflareModels(): Promise<RawModelData[]> {
   const list = json.result ?? [];
   console.log(`[cloudflare] Raw items received: ${list.length}`);
 
+  const paidOnly = await fetchPaidOnlyModels();
+
   const models: RawModelData[] = [];
   for (const m of list) {
     const taskName = m.task?.name ?? '';
@@ -90,9 +121,11 @@ async function fetchCloudflareModels(): Promise<RawModelData[]> {
       : undefined;
 
     const price = parsePrice(props.price);
-
+    const basename = m.name.split('/').pop() ?? m.name;
     // Cloudflare Workers AI 全局免费额度: 10,000 neurons/day.
-    // 超出按 price 字段计费, 所以所有模型在配额内都可视为免费.
+    // 超出按 price 字段计费, 所以配额内的模型可视为免费; 定价页点名的模型则完全不走免费额度.
+    const requiresPaidBilling = paidOnly.has(basename);
+
     models.push({
       vendor: 'cloudflare',
       modelId: `cloudflare/${m.name}`,
@@ -102,10 +135,12 @@ async function fetchCloudflareModels(): Promise<RawModelData[]> {
       priceInput: price.input,
       priceOutput: price.output,
       priceCurrency: 'USD',
-      isFree: true,
-      freeMechanism: 'daily-tokens',
-      freeQuota: { notes: '10,000 neurons/day account-wide (shared across all Workers AI models)' },
-      trialScope: 'all',
+      isFree: !requiresPaidBilling,
+      freeMechanism: requiresPaidBilling ? null : 'daily-tokens',
+      freeQuota: requiresPaidBilling
+        ? { notes: 'Excluded from the 10,000 neurons/day free allocation: requires the Workers Paid plan or prepaid AI Gateway credits' }
+        : { notes: '10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up' },
+      trialScope: requiresPaidBilling ? 'none' : 'all',
       capabilities,
       metadata: {
         cfTask: taskName,
@@ -113,6 +148,7 @@ async function fetchCloudflareModels(): Promise<RawModelData[]> {
         lora: props.lora === 'true' ? true : undefined,
         originalId: m.name,
         cfId: m.id,
+        requiresPaidBilling: requiresPaidBilling || undefined,
       },
     });
   }

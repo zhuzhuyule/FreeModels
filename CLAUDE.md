@@ -49,15 +49,20 @@ Gitee `free_use=true && hasPrice=true` 的 145 个模型 = 「**付费**但开�
 | Provider | 来源 | 注意事项 |
 |---|---|---|
 | Gitee | `ai.gitee.com/api/pay/service/operations` | API 字段已是 per-million；`free_use=true && !hasPrice` → `is_free=true, free_mechanism='permanent'` |
-| BigModel | `open.bigmodel.cn/api/biz/operation/query?ids=...` | 数据嵌套在 `content` JSON 字符串里需二次解析 |
-| OpenRouter | `openrouter.ai/api/frontend/models/find?fmt=cards&max_price=0` | `max_price=0` 直接拿全部免费模型；无认证 |
-| NVIDIA | 三源：`build.nvidia.com` (免费列表) + `docs.api.nvidia.com` (能力) + `integrate.api.nvidia.com/v1/models` (主列表) | 必须用 `fetchWithRetry` |
-| Google | `ai.google.dev/gemini-api/docs/pricing.md.txt` | API 返回 403，用文档而非 API；MODEL_DATA 硬编码 |
+| BigModel | `open.bigmodel.cn/api/biz/operation/query?ids=...` + `docs.bigmodel.cn/cn/guide/start/model-overview.md` | 数据嵌套在 `content` JSON 字符串里需二次解析；免费模型文档链接从 model-overview.md 的 `/cn/guide/models/free/<id>` 相对链接取（llms.txt 已不再列出） |
+| OpenRouter | `openrouter.ai/api/v1/models` + `openrouter.ai/docs/api-reference/limits.md` | 公共无认证；`pricing.prompt/completion` 均为 0 才算免费（id 自带 `:free` 后缀）。限额从官方 limits 文档的 `export const FREE_MODEL_*` 常量解析（20 RPM / 50 RPD，充值 ≥10 USD 升到 1000 RPD）。旧的 `api/frontend/models/find` 已 404 |
+| NVIDIA | 四源：`build.nvidia.com` (免费列表) + `docs.api.nvidia.com` (能力) + `integrate.api.nvidia.com/v1/models` (主列表) + `build.nvidia.com/docs/inference/limits` (免费层限速) | 必须用 `fetchWithRetry`；limits 页是 Next.js RSC 转义 JSON，先 `replace(/\\/g,'')` 再取 `requestsPerMinute`/`requestsPerDay`（Up to 40 rpm / 10,000 requests per day）→ `free_mechanism='rate-limited'`（官方无 "credits" 说法，不要写 trial-credits） |
+| Google | `ai.google.dev/gemini-api/docs/pricing.md.txt` | 全动态解析官方定价文档；API 返回 403 所以只用文档；促销价取价格单元格第一个数字 |
+| Cloudflare | Workers AI 账户接口 + `developers.cloudflare.com/workers-ai/platform/pricing/`（`Accept: text/markdown`） | 定价页 "requires a paid billing method" 那行点名的模型不在 10,000 neurons/天免费额度内 → `is_free=false`；其余 `is_free=true` 时 `price_*` 是超额付费价 |
 | Xinghuo (讯飞星火) | 硬编码 (Spark HTTP API：`spark-api-open.xf-yun.com/v1`) | 讯飞自研 Spark 系列（4.0Ultra / Max / Pro / Lite），并发上限 5；Spark Lite 永久免费 |
 | Xingchen (讯飞星辰 MaaS) | `maas.xfyun.cn/api/v1/gpt-finetune/model/base/list-v2` | 第三方模型聚合（GLM/Qwen/DeepSeek 等）；`function` 字段映射：4=OCR/vision, 8=embeddings, 12=multimodal, 15=reasoning |
-| Groq | `groq.com/pricing` | API 403，硬编码 MODEL_DATA |
-| Cerebras | `inference-docs.cerebras.ai/models/overview` | 硬编码 |
+| Groq | `console.groq.com/docs/models.md` (价格/上下文) + `docs/rate-limits.md` (免费层 RPM/RPD/TPM/TPD) + 带 key 的 `/openai/v1/models` | 官方提供 `.md` 机器可读目录，价格表已不再手工维护；Enterprise/ContactSales 行标 `is_free=false`；whisper/orpheus 价格单位是 per-hour / per-1M-characters，原样留在 `metadata.price_raw` |
+| Cerebras | `api.cerebras.ai/public/v1/models` | 无鉴权公开端点；官方无永久免费层，只有 $5/30 天试用 credits → `free_mechanism='trial-credits'` |
+| Agnes | `agnes-ai.com/doc/models` (目录) + 各模型文档页 | 解析 Next.js SSR 里的转义 JSON；`price_*` 用 List price（算费用），Current Price 存 `metadata.current_price_*` |
 | LongCat | `longcat.chat/platform/docs/zh/` | 硬编码；rateLimits.notes 存 "500K tokens/天" 之类 |
+| OVHcloud | `oai.endpoints.kepler.ai.cloud.ovh.net/v1/models` + `docs.ovhcloud.com/.../ai-endpoints-capabilities.md` | 匿名可调（无 key、无注册），官方 "Anonymous: 2 requests per minute, per IP and per model"；目录价是 per-token 字符串，需 ×1e6 换算成 per-million |
+| Kilo | `api.kilo.ai/api/gateway/models` + `kilo.ai/docs/gateway/models-and-providers` | 目录 390 条里官方 `isFree` 标记的才收（约 16 条）；匿名 200 requests/hour/IP；`mayTrainOnYourPrompts` 原样存 metadata |
+| LLM7 | `api.llm7.io/v1/models` + `docs.llm7.io/limits.md` | 只取 `tier==='turbo'`；其中 `usage_based_only=true` 的（当前 gemma4:31b）标 `is_free=false`。官方免费档 = 1/s · 60/min · 250/hour · 100,000 tokens/24h，需在 dash.llm7.io 领取 free token（注册免费、无需付费），实测 keyless 请求也能通但官方文档未承诺 |
 
 ## 命令
 

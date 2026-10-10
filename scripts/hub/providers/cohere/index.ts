@@ -79,7 +79,7 @@ async function fetchCohereModels(): Promise<RawModelData[]> {
       // Cohere trial key: 20 RPM, 1000 requests/month shared across all models.
       isFree: true,
       freeMechanism: 'rate-limited',
-      freeQuota: { rpm: 20, notes: '1000 requests/month shared across all models on trial key' },
+      freeQuota: { rpm: 20, notes: 'Trial API key: 1,000 requests/month shared across all models (20 RPM); beyond that a paid key is required' },
       trialScope: 'all',
       capabilities: Array.from(capabilities),
       metadata: {

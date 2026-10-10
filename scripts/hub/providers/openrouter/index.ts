@@ -3,6 +3,35 @@ import type { RawModelData, ProviderPlugin } from '../../types.js';
 // 公共 API 无鉴权. 旧端点 /api/frontend/models/find 已下线 (404),
 // 且该端点返回的 endpoint 级 rpm/rpd 限额在公共 API 中没有对应字段.
 const API_URL = 'https://openrouter.ai/api/v1/models';
+// 免费层限额不在公共 API 里，从官方限额文档的导出常量取。
+const LIMITS_DOC_URL = 'https://openrouter.ai/docs/api-reference/limits.md';
+
+interface OpenRouterFreeLimits {
+  rpm: number;
+  rpdWithoutCredits: number;
+  rpdWithCredits: number;
+  creditsThreshold: number;
+}
+
+function parseLimitConstant(md: string, name: string): number | undefined {
+  const m = md.match(new RegExp(`export const ${name}\\s*=\\s*(\\d+)`));
+  return m ? parseInt(m[1], 10) : undefined;
+}
+
+async function fetchFreeLimits(): Promise<OpenRouterFreeLimits> {
+  const res = await fetch(LIMITS_DOC_URL);
+  if (!res.ok) throw new Error(`[openrouter] limits doc responded with ${res.status}`);
+  const md = await res.text();
+  const rpm = parseLimitConstant(md, 'FREE_MODEL_RATE_LIMIT_RPM');
+  const rpdWithoutCredits = parseLimitConstant(md, 'FREE_MODEL_NO_CREDITS_RPD');
+  const rpdWithCredits = parseLimitConstant(md, 'FREE_MODEL_HAS_CREDITS_RPD');
+  const creditsThreshold = parseLimitConstant(md, 'FREE_MODEL_CREDITS_THRESHOLD');
+  if (!rpm || !rpdWithoutCredits || !rpdWithCredits || !creditsThreshold) {
+    throw new Error('[openrouter] limits doc format changed: constants missing');
+  }
+  console.log(`[openrouter] Free-model limits: ${rpm} RPM / ${rpdWithoutCredits} RPD (${rpdWithCredits} RPD once ${creditsThreshold}+ credits purchased)`);
+  return { rpm, rpdWithoutCredits, rpdWithCredits, creditsThreshold };
+}
 
 interface OpenRouterArchitecture {
   input_modalities?: string[];
@@ -48,6 +77,7 @@ function inferCapabilities(model: OpenRouterModel): string[] {
 async function fetchOpenRouterModels(): Promise<RawModelData[]> {
   console.log('[openrouter] Fetching models from OpenRouter public API...');
 
+  const limitsPromise = fetchFreeLimits();
   const response = await fetch(API_URL, {
     headers: {
       Accept: 'application/json',
@@ -70,6 +100,8 @@ async function fetchOpenRouterModels(): Promise<RawModelData[]> {
 
   console.log(`[openrouter] Fetched ${models.length} free models from OpenRouter`);
 
+  const limits = await limitsPromise;
+
   return models.map((m) => {
     const capabilities = inferCapabilities(m);
     const inputModalities = m.architecture?.input_modalities ?? [];
@@ -91,7 +123,11 @@ async function fetchOpenRouterModels(): Promise<RawModelData[]> {
       priceCurrency: 'USD',
       isFree: true,
       freeMechanism: 'rate-limited',
-      freeQuota: { notes: 'Free tier with rate limits (see openrouter.ai)' },
+      freeQuota: {
+        rpm: limits.rpm,
+        rpd: limits.rpdWithoutCredits,
+        notes: `Free-variant limit is ${limits.rpm} RPM and ${limits.rpdWithoutCredits} requests/day; a one-time purchase of ${limits.creditsThreshold}+ USD credits raises the daily ceiling to ${limits.rpdWithCredits}. Providers may log prompts for training on free routes.`,
+      },
       trialScope: 'specific',
       capabilities,
       metadata: {

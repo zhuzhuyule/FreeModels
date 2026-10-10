@@ -1,4 +1,4 @@
-import type { RawModelData, ProviderPlugin } from '../../types.js';
+import type { RawModelData, ProviderPlugin, FreeQuota } from '../../types.js';
 
 interface NvidiaModel {
   id: string;
@@ -9,6 +9,8 @@ interface NvidiaModel {
 
 const FREE_ENDPOINT_URL = 'https://build.nvidia.com/models?filters=nimType%3Anim_type_preview&_rsc=9wvz6';
 const DOCS_API_URL = 'https://docs.api.nvidia.com/nim/reference/llm-apis';
+// 官方免费层速率页（内容以转义 JSON 嵌在 RSC payload 里）。
+const FREE_LIMITS_URL = 'https://build.nvidia.com/docs/inference/limits';
 
 const CAPABILITY_MAP: Record<string, string[]> = {
   'chat completion': ['chat', 'text-generation'],
@@ -56,6 +58,27 @@ async function fetchWithRetry(
   }
   console.error(`[nvidia] All retries exhausted for ${url}`);
   return null;
+}
+
+async function fetchFreeTierLimits(): Promise<{ rpm?: number; rpd?: number; rpmRaw?: string; rpdRaw?: string }> {
+  const html = await fetchWithRetry(FREE_LIMITS_URL);
+  if (!html) return {};
+
+  // RSC payload 里的 JSON 是转义过的，剥掉反斜杠后再取字段。
+  const flat = html.replace(/\\/g, '');
+  const rpmRaw = flat.match(/"requestsPerMinute":\s*"([^"]*)"/)?.[1];
+  const rpdRaw = flat.match(/"requestsPerDay":\s*"([^"]*)"/)?.[1];
+  if (!rpmRaw && !rpdRaw) {
+    console.warn('[nvidia] limits page did not expose requestsPerMinute/requestsPerDay');
+    return {};
+  }
+  const number = (text?: string) => {
+    if (!text) return undefined;
+    const m = text.replace(/,/g, '').match(/(\d+)/);
+    return m ? parseInt(m[1], 10) : undefined;
+  };
+  console.log(`[nvidia] Free-tier limits: ${rpmRaw ?? '?'} / ${rpdRaw ?? '?'}`);
+  return { rpm: number(rpmRaw), rpd: number(rpdRaw), rpmRaw, rpdRaw };
 }
 
 async function fetchFreeModelIds(): Promise<Set<string>> {
@@ -129,12 +152,21 @@ async function fetchNvidiaModels(): Promise<RawModelData[]> {
     return [];
   }
 
-  const [freeModelIds, nvidiaCaps] = await Promise.all([
+  const [freeModelIds, nvidiaCaps, limits] = await Promise.all([
     fetchFreeModelIds(),
     fetchNvidiaCapabilities(),
+    fetchFreeTierLimits(),
   ]);
 
   console.log(`[nvidia] Found ${freeModelIds.size} free endpoint models`);
+
+  const freeQuota: FreeQuota = {
+    notes: limits.rpmRaw && limits.rpdRaw
+      ? `Public NIM endpoints: ${limits.rpmRaw} and ${limits.rpdRaw}; limits may vary by model and by traffic`
+      : 'Public NIM endpoints are rate-limited; see build.nvidia.com/docs/inference/limits',
+  };
+  if (limits.rpm !== undefined) freeQuota.rpm = limits.rpm;
+  if (limits.rpd !== undefined) freeQuota.rpd = limits.rpd;
 
   const data = (await modelsResponse.json()) as { data: NvidiaModel[] };
 
@@ -155,8 +187,8 @@ async function fetchNvidiaModels(): Promise<RawModelData[]> {
       priceOutput: undefined,
       priceCurrency: 'USD',
       isFree,
-      freeMechanism: isFree ? 'trial-credits' : null,
-      freeQuota: isFree ? { notes: 'NVIDIA NIM free credits, exhaustible' } : null,
+      freeMechanism: isFree ? 'rate-limited' : null,
+      freeQuota: isFree ? freeQuota : null,
       trialScope: isFree ? 'specific' : 'none',
       capabilities,
       metadata: { ...m, is_free_endpoint: isFree },
