@@ -1,50 +1,9 @@
 {
   "object": "list",
   "provider": "cerebras",
-  "updated_at": "2026-10-09T08:36:58.454Z",
-  "total": 4,
+  "updated_at": "2026-10-10T03:23:47.020Z",
+  "total": 2,
   "data": [
-    {
-      "id": "llama3.1-8b",
-      "object": "model",
-      "created": 649137691,
-      "owned_by": "cerebras",
-      "provider": "cerebras",
-      "name": "Llama 3.1 8B",
-      "description": "Cerebras model: Llama 3.1 8B - 8B parameters - 2200 tokens/sec",
-      "context_size": 8192,
-      "context_label": "8K",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation",
-        "chat"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": null,
-      "trial_scope": "specific",
-      "model_family": "llama3.1-8b",
-      "aliases": [],
-      "parameter_count": 8000000000,
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
     {
       "id": "gpt-oss-120b",
       "object": "model",
@@ -52,76 +11,104 @@
       "owned_by": "cerebras",
       "provider": "cerebras",
       "name": "OpenAI GPT OSS",
-      "description": "Cerebras model: OpenAI GPT OSS - 120B parameters - 3000 tokens/sec",
-      "context_label": "unknown",
-      "price_input": 0,
-      "price_output": 0,
+      "description": "Cerebras: This model excels at efficient reasoning across science, math, and coding applications. It's ideal for real-time coding assistance, processing large documents for Q&A and summarization, agentic research workflows, and regulated on-premises workloads.",
+      "context_size": 131072,
+      "context_label": "131K",
+      "price_input": 0.35,
+      "price_output": 0.75,
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "reasoning",
+        "function-calling",
+        "tool-use"
       ],
       "tags": [
+        "reasoning",
         "text-generation",
-        "chat"
+        "chat",
+        "function-calling",
+        "tool-use"
       ],
-      "is_reasoning": false,
+      "is_reasoning": true,
       "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": null,
-      "trial_scope": "specific",
+      "has_tool_use": true,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "total_credits": 5,
+        "notes": "$5 free credits for new accounts (expire after 30 days); Free Trial tier ~5 RPM per model; no permanently free tier"
+      },
+      "trial_scope": "all",
       "model_family": "gpt-oss-120b",
       "aliases": [
         "cloudflare/@cf/openai/gpt-oss-120b",
         "groq/openai/gpt-oss-120b",
+        "ovh/gpt-oss-120b",
         "sambanova/gpt-oss-120b"
       ],
-      "tier": "medium",
+      "tier": "large",
       "speed": "fast",
       "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
         "content-creation",
         "writing-assistance",
         "conversation",
-        "q&a"
+        "q&a",
+        "complex-reasoning"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
-      "id": "qwen-3-235b-a22b-instruct-2507",
+      "id": "qwen-3.8-27b",
       "object": "model",
-      "created": 445270153,
+      "created": 878015188,
       "owned_by": "cerebras",
       "provider": "cerebras",
-      "name": "Qwen 3 235B Instruct",
-      "description": "Cerebras Preview model: Qwen 3 235B Instruct - 235B parameters - 1400 tokens/sec",
+      "name": "Qwen 3.8 27B",
+      "description": "Cerebras: This model excels at vision-language understanding, coding, research, and long-horizon agentic tasks.",
       "context_size": 65536,
       "context_label": "66K",
+      "price_input": 0.99,
+      "price_output": 1.49,
       "is_free": true,
       "capabilities": [
         "chat",
         "text-generation",
-        "reasoning"
+        "reasoning",
+        "vision",
+        "function-calling",
+        "tool-use"
       ],
       "tags": [
+        "vision",
         "text-generation",
         "chat",
-        "reasoning"
+        "reasoning",
+        "function-calling",
+        "tool-use",
+        "multimodal"
       ],
       "is_reasoning": true,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "preview",
-      "free_quota": null,
-      "trial_scope": "specific",
-      "model_family": "qwen-3-235b-a22b",
-      "model_variant": "instruct",
+      "is_multimodal": true,
+      "has_tool_use": true,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "total_credits": 5,
+        "notes": "$5 free credits for new accounts (expire after 30 days); Free Trial tier ~5 RPM per model; no permanently free tier"
+      },
+      "trial_scope": "all",
+      "model_family": "qwen-3.8-27b",
       "aliases": [],
-      "parameter_count": 235000000000,
+      "parameter_count": 27000000000,
       "tier": "large",
       "speed": "fast",
       "use_case": [
+        "image-understanding",
+        "visual-q&a",
         "content-creation",
         "writing-assistance",
         "conversation",
@@ -132,45 +119,6 @@
         "complex-reasoning"
       ],
       "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "zai-glm-4.7",
-      "object": "model",
-      "created": 805467634,
-      "owned_by": "cerebras",
-      "provider": "cerebras",
-      "name": "Z.ai GLM 4.7",
-      "description": "Cerebras Preview model: Z.ai GLM 4.7 - 355B parameters - 1000 tokens/sec",
-      "context_label": "unknown",
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation",
-        "chat"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "preview",
-      "free_quota": null,
-      "trial_scope": "specific",
-      "model_family": "glm-4.7",
-      "aliases": [
-        "GLM-4.7"
-      ],
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a"
-      ],
-      "performance_level": "entry",
       "estimated_latency": "< 1s"
     }
   ]

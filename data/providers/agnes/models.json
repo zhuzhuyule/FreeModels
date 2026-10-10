@@ -1,86 +1,258 @@
 {
   "object": "list",
   "provider": "agnes",
-  "updated_at": "2026-10-09T08:36:58.453Z",
-  "total": 2,
+  "updated_at": "2026-10-10T03:23:47.019Z",
+  "total": 5,
   "data": [
     {
-      "id": "agnes-1.5-flash",
+      "id": "agnes-2.5-flash",
       "object": "model",
-      "created": 964887404,
+      "created": 1375767443,
       "owned_by": "agnes",
       "provider": "agnes",
-      "name": "Agnes 1.5 Flash",
-      "description": "Agnes AI: 默认对话模型",
-      "context_label": "unknown",
+      "name": "Agnes 2.5 Flash",
+      "description": "Agnes AI: Generally available upgrade of Agnes 2.0 Flash with improved coding capability, agent workflows, tool calling, and multimodal understanding.",
+      "context_size": 512000,
+      "context_label": "512K",
+      "price_input": 0.05,
+      "price_output": 0.15,
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "function-calling",
+        "tool-use"
       ],
       "tags": [
+        "vision",
+        "tool-use",
         "chat",
-        "text-generation"
+        "text-generation",
+        "function-calling",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
+      "is_multimodal": true,
+      "has_tool_use": true,
       "free_mechanism": "rate-limited",
       "free_quota": {
-        "notes": "免费 AI Gateway, 注册即用; 具体限速以平台公告为准"
+        "notes": "限时 $0 Current Price (List price 为正常单价); 免费档 RPM 限制见 docs/tokenplan"
       },
       "trial_scope": "all",
-      "model_family": "agnes-agnes-1.5-flash",
+      "model_family": "agnes-2.5-flash",
       "aliases": [],
-      "tier": "medium",
+      "tier": "large",
       "speed": "fast",
       "use_case": [
+        "image-understanding",
+        "visual-q&a",
         "conversation",
         "q&a",
         "content-creation",
         "writing-assistance"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
-      "id": "agnes-2.0-flash",
+      "id": "agnes-2.5-pro",
       "object": "model",
-      "created": 756827304,
+      "created": 606116880,
       "owned_by": "agnes",
       "provider": "agnes",
-      "name": "Agnes 2.0 Flash",
-      "description": "Agnes AI: 新版对话模型",
-      "context_label": "unknown",
+      "name": "Agnes 2.5 Pro",
+      "description": "Agnes AI: The commercial stable version of the benchmark-listed Agnes 2.5 Pro Beta model for advanced coding, scientific reasoning, long-context analysis, agentic workflows, and multimodal understanding.",
+      "context_size": 1000000,
+      "context_label": "1M",
+      "price_input": 0.45,
+      "price_output": 0.9,
+      "is_free": false,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision",
+        "function-calling",
+        "tool-use"
+      ],
+      "tags": [
+        "reasoning",
+        "vision",
+        "text-generation",
+        "chat",
+        "function-calling",
+        "tool-use",
+        "multimodal"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": true,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "agnes-2.5-pro",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "complex-reasoning"
+      ],
+      "performance_level": "high",
+      "estimated_latency": "3-10s"
+    },
+    {
+      "id": "agnes-3.0-flash",
+      "object": "model",
+      "created": 1583827543,
+      "owned_by": "agnes",
+      "provider": "agnes",
+      "name": "Agnes 3.0 Flash",
+      "description": "Agnes AI: A new-generation Agnes AI text model with stronger Agnes Code task execution, tool orchestration, and trustworthy delivery.",
+      "context_size": 512000,
+      "context_label": "512K",
+      "price_input": 0.05,
+      "price_output": 0.15,
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "vision",
+        "function-calling",
+        "tool-use"
       ],
       "tags": [
+        "text-generation",
+        "tool-use",
         "chat",
-        "text-generation"
+        "vision",
+        "function-calling",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "限时 $0 Current Price (List price 为正常单价); 免费档 RPM 限制见 docs/tokenplan"
+      },
+      "trial_scope": "all",
+      "model_family": "agnes-3.0-flash",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "agnes-3.0-flash-max",
+      "object": "model",
+      "created": 2064127012,
+      "owned_by": "agnes",
+      "provider": "agnes",
+      "name": "Agnes 3.0 Flash Max",
+      "description": "Agnes AI: API integration, request and response examples, and USD pricing for the paid Agnes 3.0 Flash Max text model.",
+      "context_label": "unknown",
+      "price_output": 0.4,
+      "is_free": false,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "function-calling",
+        "tool-use"
+      ],
+      "tags": [
+        "text-generation",
+        "chat",
+        "function-calling",
+        "tool-use"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "免费 AI Gateway, 注册即用; 具体限速以平台公告为准"
-      },
-      "trial_scope": "all",
-      "model_family": "agnes-agnes-2.0-flash",
+      "has_tool_use": true,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "agnes-3.0-flash-max",
       "aliases": [],
       "tier": "medium",
-      "speed": "fast",
+      "speed": "standard",
       "use_case": [
-        "conversation",
-        "q&a",
         "content-creation",
-        "writing-assistance"
+        "writing-assistance",
+        "conversation",
+        "q&a"
       ],
       "performance_level": "entry",
-      "estimated_latency": "< 1s"
+      "estimated_latency": "1-3s"
+    },
+    {
+      "id": "agnes-3.0-pro",
+      "object": "model",
+      "created": 1891655244,
+      "owned_by": "agnes",
+      "provider": "agnes",
+      "name": "Agnes 3.0 Pro",
+      "description": "Agnes AI: A new-generation Pro model, coming soon, for agentic work, professional document analysis, scientific coding, and long-context reasoning.",
+      "context_label": "unknown",
+      "price_input": 0.45,
+      "price_output": 0.9,
+      "is_free": false,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision",
+        "function-calling",
+        "tool-use"
+      ],
+      "tags": [
+        "reasoning",
+        "text-generation",
+        "chat",
+        "vision",
+        "function-calling",
+        "tool-use",
+        "multimodal"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": true,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "agnes-3.0-pro",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "image-understanding",
+        "visual-q&a",
+        "complex-reasoning"
+      ],
+      "performance_level": "high",
+      "estimated_latency": "3-10s"
     }
   ]
 }

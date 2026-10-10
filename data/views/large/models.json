@@ -1,12 +1,220 @@
 {
   "object": "list",
   "view": "large",
-  "updated_at": "2026-10-09T08:36:58.480Z",
-  "total": 162,
+  "updated_at": "2026-10-10T03:23:47.047Z",
+  "total": 194,
   "filters": {
     "tier": "large"
   },
   "data": [
+    {
+      "id": "agnes-2.5-flash",
+      "object": "model",
+      "created": 1375767443,
+      "owned_by": "agnes",
+      "provider": "agnes",
+      "name": "Agnes 2.5 Flash",
+      "description": "Agnes AI: Generally available upgrade of Agnes 2.0 Flash with improved coding capability, agent workflows, tool calling, and multimodal understanding.",
+      "context_size": 512000,
+      "context_label": "512K",
+      "price_input": 0.05,
+      "price_output": 0.15,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "function-calling",
+        "tool-use"
+      ],
+      "tags": [
+        "vision",
+        "tool-use",
+        "chat",
+        "text-generation",
+        "function-calling",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "限时 $0 Current Price (List price 为正常单价); 免费档 RPM 限制见 docs/tokenplan"
+      },
+      "trial_scope": "all",
+      "model_family": "agnes-2.5-flash",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "agnes-2.5-pro",
+      "object": "model",
+      "created": 606116880,
+      "owned_by": "agnes",
+      "provider": "agnes",
+      "name": "Agnes 2.5 Pro",
+      "description": "Agnes AI: The commercial stable version of the benchmark-listed Agnes 2.5 Pro Beta model for advanced coding, scientific reasoning, long-context analysis, agentic workflows, and multimodal understanding.",
+      "context_size": 1000000,
+      "context_label": "1M",
+      "price_input": 0.45,
+      "price_output": 0.9,
+      "is_free": false,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision",
+        "function-calling",
+        "tool-use"
+      ],
+      "tags": [
+        "reasoning",
+        "vision",
+        "text-generation",
+        "chat",
+        "function-calling",
+        "tool-use",
+        "multimodal"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": true,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "agnes-2.5-pro",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "complex-reasoning"
+      ],
+      "performance_level": "high",
+      "estimated_latency": "3-10s"
+    },
+    {
+      "id": "agnes-3.0-flash",
+      "object": "model",
+      "created": 1583827543,
+      "owned_by": "agnes",
+      "provider": "agnes",
+      "name": "Agnes 3.0 Flash",
+      "description": "Agnes AI: A new-generation Agnes AI text model with stronger Agnes Code task execution, tool orchestration, and trustworthy delivery.",
+      "context_size": 512000,
+      "context_label": "512K",
+      "price_input": 0.05,
+      "price_output": 0.15,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision",
+        "function-calling",
+        "tool-use"
+      ],
+      "tags": [
+        "text-generation",
+        "tool-use",
+        "chat",
+        "vision",
+        "function-calling",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "限时 $0 Current Price (List price 为正常单价); 免费档 RPM 限制见 docs/tokenplan"
+      },
+      "trial_scope": "all",
+      "model_family": "agnes-3.0-flash",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "agnes-3.0-pro",
+      "object": "model",
+      "created": 1891655244,
+      "owned_by": "agnes",
+      "provider": "agnes",
+      "name": "Agnes 3.0 Pro",
+      "description": "Agnes AI: A new-generation Pro model, coming soon, for agentic work, professional document analysis, scientific coding, and long-context reasoning.",
+      "context_label": "unknown",
+      "price_input": 0.45,
+      "price_output": 0.9,
+      "is_free": false,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision",
+        "function-calling",
+        "tool-use"
+      ],
+      "tags": [
+        "reasoning",
+        "text-generation",
+        "chat",
+        "vision",
+        "function-calling",
+        "tool-use",
+        "multimodal"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": true,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "agnes-3.0-pro",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "image-understanding",
+        "visual-q&a",
+        "complex-reasoning"
+      ],
+      "performance_level": "high",
+      "estimated_latency": "3-10s"
+    },
     {
       "id": "glm-4.5v",
       "object": "model",
@@ -56,7 +264,7 @@
       "owned_by": "bigmodel",
       "provider": "bigmodel",
       "name": "GLM-4.1V-Thinking-Flash",
-      "description": "视觉推理",
+      "description": "GLM-4.1V-Thinking-Flash 是智谱推出的免费视觉推理模型。它在图表/视频理解、前端 Coding、GUI 任务等场景表现出色，核心能力达到全面新 SOTA。模型引入思维链推理机制，显著提升了复杂场景中的回答精准度与可解释性。",
       "context_size": 64000,
       "context_label": "64K",
       "price_input": 0,
@@ -108,7 +316,7 @@
       "owned_by": "bigmodel",
       "provider": "bigmodel",
       "name": "GLM-4V-Flash",
-      "description": "图像理解",
+      "description": "GLM-4V-Flash 是智谱推出的首个完全免费的图像理解模型。在图像识别、图像问答、图像推理等多项任务中展现出卓越的性能。在企业应用场景中，GLM-4V-Flash 表现突出，不仅能够帮助企业实现高效图像处理，还能紧密贴合不同垂直领域的实际需求，适配多样化应用场景。",
       "context_size": 4000,
       "context_label": "4K",
       "price_input": 0,
@@ -711,14 +919,109 @@
       "estimated_latency": "3-10s"
     },
     {
-      "id": "cogview-3-flash",
+      "id": "glm-4.7-flash",
       "object": "model",
-      "created": 586716134,
+      "created": 1010454616,
       "owned_by": "bigmodel",
       "provider": "bigmodel",
-      "name": "CogView-3-Flash",
-      "description": "图像生成",
-      "context_label": "unknown",
+      "name": "GLM-4.7-Flash",
+      "description": "GLM-4.7-Flash 作为 30B 级 SOTA 模型，提供了一个兼顾性能与效率的新选择。面向 Agentic Coding 场景强化了编码能力、长程任务规划与工具协同，并在多个公开基准的当期榜单中取得同尺寸开源模型中的出色表现。在执行复杂智能体任务，在工具调用时指令遵循更强，Artifacts 与 Agentic Coding 的前端美感和长程任务完成效率进一步提升。",
+      "context_size": 200000,
+      "context_label": "200K",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "reasoning"
+      ],
+      "tags": [
+        "chat",
+        "text-generation",
+        "reasoning"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "permanent",
+      "free_quota": null,
+      "trial_scope": "specific",
+      "model_family": "glm-4.7-flash",
+      "aliases": [
+        "xingchen/xopglmv47flash"
+      ],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "glm-4.5-flash",
+      "object": "model",
+      "created": 1572481322,
+      "owned_by": "bigmodel",
+      "provider": "bigmodel",
+      "name": "GLM-4.5-Flash",
+      "description": "GLM-4.5-Flash 将于2026 年 1 月 30 日下线，请您及时将模型编码更新为最新版本。正式下线后，相关请求将会自动路由至 GLM-4.7-Flash。",
+      "context_size": 128000,
+      "context_label": "128K",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "reasoning"
+      ],
+      "tags": [
+        "chat",
+        "text-generation",
+        "reasoning"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "permanent",
+      "free_quota": null,
+      "trial_scope": "specific",
+      "model_family": "glm-4.5-flash",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "glm-4.6v-flash",
+      "object": "model",
+      "created": 1161885709,
+      "owned_by": "bigmodel",
+      "provider": "bigmodel",
+      "name": "GLM-4.6V-Flash",
+      "description": "GLM-4.6V-Flash 是 GLM-4.6V 的免费版本，是 GLM 系列在多模态方向上的一次重要迭代，支持开启或关闭思考模式。它将训练时上下文窗口提升到 128K Tokens，在视觉理解精度上达到同参数规模 SOTA，并首次在模型架构中将 Function Calling（工具调用）能力原生融入视觉模型，打通从「视觉感知」到「可执行行动（Action）」的链路，为真实业务场景中的多模态 Agent 提供统一的技术底座。",
+      "context_size": 128000,
+      "context_label": "128K",
       "price_input": 0,
       "price_output": 0,
       "is_free": true,
@@ -726,22 +1029,22 @@
         "chat",
         "text-generation",
         "vision",
-        "image-generation"
+        "reasoning"
       ],
       "tags": [
         "chat",
         "text-generation",
         "vision",
-        "image-generation",
+        "reasoning",
         "multimodal"
       ],
-      "is_reasoning": false,
+      "is_reasoning": true,
       "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": "permanent",
       "free_quota": null,
       "trial_scope": "specific",
-      "model_family": "cogview-3-flash",
+      "model_family": "glm-4.6v-flash",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -752,46 +1055,119 @@
         "writing-assistance",
         "image-understanding",
         "visual-q&a",
-        "creative-generation",
-        "art"
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
       ],
       "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
-      "id": "qwen-3-235b-a22b-instruct-2507",
+      "id": "gpt-oss-120b",
       "object": "model",
-      "created": 445270153,
+      "created": 369610922,
       "owned_by": "cerebras",
       "provider": "cerebras",
-      "name": "Qwen 3 235B Instruct",
-      "description": "Cerebras Preview model: Qwen 3 235B Instruct - 235B parameters - 1400 tokens/sec",
-      "context_size": 65536,
-      "context_label": "66K",
+      "name": "OpenAI GPT OSS",
+      "description": "Cerebras: This model excels at efficient reasoning across science, math, and coding applications. It's ideal for real-time coding assistance, processing large documents for Q&A and summarization, agentic research workflows, and regulated on-premises workloads.",
+      "context_size": 131072,
+      "context_label": "131K",
+      "price_input": 0.35,
+      "price_output": 0.75,
       "is_free": true,
       "capabilities": [
         "chat",
         "text-generation",
-        "reasoning"
+        "reasoning",
+        "function-calling",
+        "tool-use"
       ],
       "tags": [
+        "reasoning",
         "text-generation",
         "chat",
-        "reasoning"
+        "function-calling",
+        "tool-use"
       ],
       "is_reasoning": true,
       "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "preview",
-      "free_quota": null,
-      "trial_scope": "specific",
-      "model_family": "qwen-3-235b-a22b",
-      "model_variant": "instruct",
-      "aliases": [],
-      "parameter_count": 235000000000,
+      "has_tool_use": true,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "total_credits": 5,
+        "notes": "$5 free credits for new accounts (expire after 30 days); Free Trial tier ~5 RPM per model; no permanently free tier"
+      },
+      "trial_scope": "all",
+      "model_family": "gpt-oss-120b",
+      "aliases": [
+        "cloudflare/@cf/openai/gpt-oss-120b",
+        "groq/openai/gpt-oss-120b",
+        "ovh/gpt-oss-120b",
+        "sambanova/gpt-oss-120b"
+      ],
       "tier": "large",
       "speed": "fast",
       "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "qwen-3.8-27b",
+      "object": "model",
+      "created": 878015188,
+      "owned_by": "cerebras",
+      "provider": "cerebras",
+      "name": "Qwen 3.8 27B",
+      "description": "Cerebras: This model excels at vision-language understanding, coding, research, and long-horizon agentic tasks.",
+      "context_size": 65536,
+      "context_label": "66K",
+      "price_input": 0.99,
+      "price_output": 1.49,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "reasoning",
+        "vision",
+        "function-calling",
+        "tool-use"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "chat",
+        "reasoning",
+        "function-calling",
+        "tool-use",
+        "multimodal"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": true,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "total_credits": 5,
+        "notes": "$5 free credits for new accounts (expire after 30 days); Free Trial tier ~5 RPM per model; no permanently free tier"
+      },
+      "trial_scope": "all",
+      "model_family": "qwen-3.8-27b",
+      "aliases": [],
+      "parameter_count": 27000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
         "content-creation",
         "writing-assistance",
         "conversation",
@@ -832,13 +1208,14 @@
       "has_tool_use": true,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "gpt-oss-120b",
       "aliases": [
         "cerebras/gpt-oss-120b",
         "groq/openai/gpt-oss-120b",
+        "ovh/gpt-oss-120b",
         "sambanova/gpt-oss-120b"
       ],
       "parameter_count": 120000000000,
@@ -867,7 +1244,7 @@
       "context_label": "262K",
       "price_input": 0.19,
       "price_output": 4,
-      "is_free": true,
+      "is_free": false,
       "capabilities": [
         "text-generation",
         "function-calling",
@@ -884,16 +1261,16 @@
       "is_reasoning": true,
       "is_multimodal": true,
       "has_tool_use": true,
-      "free_mechanism": "daily-tokens",
+      "free_mechanism": null,
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "Excluded from the 10,000 neurons/day free allocation: requires the Workers Paid plan or prepaid AI Gateway credits"
       },
-      "trial_scope": "all",
+      "trial_scope": "none",
       "model_family": "moonshotai-kimi-k2.7-code",
       "model_variant": "code",
       "aliases": [],
       "tier": "large",
-      "speed": "fast",
+      "speed": "premium",
       "use_case": [
         "image-understanding",
         "visual-q&a",
@@ -904,8 +1281,8 @@
         "math",
         "complex-reasoning"
       ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
+      "performance_level": "high",
+      "estimated_latency": "3-10s"
     },
     {
       "id": "@cf/zai-org/glm-5.3",
@@ -919,7 +1296,7 @@
       "context_label": "1M",
       "price_input": 0.26,
       "price_output": 4.4,
-      "is_free": true,
+      "is_free": false,
       "capabilities": [
         "text-generation",
         "function-calling",
@@ -934,15 +1311,15 @@
       "is_reasoning": true,
       "is_multimodal": false,
       "has_tool_use": true,
-      "free_mechanism": "daily-tokens",
+      "free_mechanism": null,
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "Excluded from the 10,000 neurons/day free allocation: requires the Workers Paid plan or prepaid AI Gateway credits"
       },
-      "trial_scope": "all",
+      "trial_scope": "none",
       "model_family": "org-glm-5.3",
       "aliases": [],
       "tier": "large",
-      "speed": "fast",
+      "speed": "premium",
       "use_case": [
         "problem-solving",
         "logical-analysis",
@@ -951,8 +1328,8 @@
         "writing-assistance",
         "complex-reasoning"
       ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
+      "performance_level": "high",
+      "estimated_latency": "3-10s"
     },
     {
       "id": "@cf/deepseek-ai/deepseek-r1-distill-qwen-32b",
@@ -980,7 +1357,7 @@
       "has_tool_use": false,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "deepseek-r1-distill-qwen-32b",
@@ -1027,7 +1404,7 @@
       "has_tool_use": false,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "runwayml-stable-diffusion-v1-5-inpainting",
@@ -1057,7 +1434,7 @@
       "context_label": "1M",
       "price_input": 0.03,
       "price_output": 0.5,
-      "is_free": true,
+      "is_free": false,
       "capabilities": [
         "text-generation",
         "function-calling",
@@ -1073,15 +1450,15 @@
       "is_reasoning": true,
       "is_multimodal": true,
       "has_tool_use": true,
-      "free_mechanism": "daily-tokens",
+      "free_mechanism": null,
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "Excluded from the 10,000 neurons/day free allocation: requires the Workers Paid plan or prepaid AI Gateway credits"
       },
-      "trial_scope": "all",
+      "trial_scope": "none",
       "model_family": "org-glm-5.3-flash",
       "aliases": [],
       "tier": "large",
-      "speed": "fast",
+      "speed": "premium",
       "use_case": [
         "image-understanding",
         "visual-q&a",
@@ -1092,8 +1469,8 @@
         "math",
         "complex-reasoning"
       ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
+      "performance_level": "high",
+      "estimated_latency": "3-10s"
     },
     {
       "id": "@cf/moonshotai/kimi-k2.6",
@@ -1107,7 +1484,7 @@
       "context_label": "262K",
       "price_input": 0.16,
       "price_output": 4,
-      "is_free": true,
+      "is_free": false,
       "capabilities": [
         "text-generation",
         "function-calling",
@@ -1124,17 +1501,17 @@
       "is_reasoning": true,
       "is_multimodal": true,
       "has_tool_use": true,
-      "free_mechanism": "daily-tokens",
+      "free_mechanism": null,
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "Excluded from the 10,000 neurons/day free allocation: requires the Workers Paid plan or prepaid AI Gateway credits"
       },
-      "trial_scope": "all",
+      "trial_scope": "none",
       "model_family": "moonshotai-kimi-k2.6",
       "aliases": [
         "moonshotai/kimi-k2.6"
       ],
       "tier": "large",
-      "speed": "fast",
+      "speed": "premium",
       "use_case": [
         "image-understanding",
         "visual-q&a",
@@ -1145,8 +1522,8 @@
         "math",
         "complex-reasoning"
       ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
+      "performance_level": "high",
+      "estimated_latency": "3-10s"
     },
     {
       "id": "@cf/cloudflare/clef",
@@ -1173,7 +1550,7 @@
       "has_tool_use": false,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "clef",
@@ -1218,7 +1595,7 @@
       "has_tool_use": true,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "org-glm-4.7-flash",
@@ -1258,7 +1635,7 @@
       "has_tool_use": false,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "resnet-50",
@@ -1296,7 +1673,7 @@
       "has_tool_use": false,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "bytedance-stable-diffusion-xl-lightning",
@@ -1340,7 +1717,7 @@
       "has_tool_use": true,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "llama-3.3-70b-fast",
@@ -1369,7 +1746,7 @@
       "context_label": "1M",
       "price_input": 0.014,
       "price_output": 1.32,
-      "is_free": true,
+      "is_free": false,
       "capabilities": [
         "text-generation",
         "function-calling",
@@ -1383,19 +1760,21 @@
       "is_reasoning": true,
       "is_multimodal": false,
       "has_tool_use": true,
-      "free_mechanism": "daily-tokens",
+      "free_mechanism": null,
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "Excluded from the 10,000 neurons/day free allocation: requires the Workers Paid plan or prepaid AI Gateway credits"
       },
-      "trial_scope": "all",
+      "trial_scope": "none",
       "model_family": "deepseek-v4-flash",
       "aliases": [
         "DeepSeek-V4-Flash",
         "deepseek-v4-flash-0731",
+        "llm7/DeepSeek-V4-Flash-0731",
+        "sensenova/deepseek-v4-flash",
         "xingchen/xopdeepseekv4flash0731"
       ],
       "tier": "large",
-      "speed": "fast",
+      "speed": "premium",
       "use_case": [
         "content-creation",
         "writing-assistance",
@@ -1404,8 +1783,8 @@
         "math",
         "complex-reasoning"
       ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
+      "performance_level": "high",
+      "estimated_latency": "3-10s"
     },
     {
       "id": "@cf/stabilityai/stable-diffusion-xl-base-1.0",
@@ -1431,7 +1810,7 @@
       "has_tool_use": false,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "stabilityai-stable-diffusion-xl-base-1.0",
@@ -1445,6 +1824,47 @@
         "writing-assistance",
         "creative-generation",
         "art"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "@cf/cloudflare/clef-omni",
+      "object": "model",
+      "created": 180323433,
+      "owned_by": "cloudflare",
+      "provider": "cloudflare",
+      "name": "@cf/cloudflare/clef-omni",
+      "description": "Clef-omni is a multimodal decision model built on a 30B-parameter mixture-of-experts (3B active) backbone. It turns a state and a schema of typed questions into decisions, reads the state as text, JSON, images, audio, or video, and returns a probability for every allowed option of every question.",
+      "context_size": 65536,
+      "context_label": "66K",
+      "price_input": 0.15,
+      "is_free": true,
+      "capabilities": [
+        "text-generation"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
+      },
+      "trial_scope": "all",
+      "model_family": "clef-omni",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance"
       ],
       "performance_level": "mid",
       "estimated_latency": "< 1s"
@@ -1473,7 +1893,7 @@
       "has_tool_use": false,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "qwen2.5-coder-32b",
@@ -1501,7 +1921,7 @@
       "context_label": "262K",
       "price_input": 0.26,
       "price_output": 4.4,
-      "is_free": true,
+      "is_free": false,
       "capabilities": [
         "text-generation",
         "function-calling",
@@ -1515,15 +1935,15 @@
       "is_reasoning": true,
       "is_multimodal": false,
       "has_tool_use": true,
-      "free_mechanism": "daily-tokens",
+      "free_mechanism": null,
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "Excluded from the 10,000 neurons/day free allocation: requires the Workers Paid plan or prepaid AI Gateway credits"
       },
-      "trial_scope": "all",
+      "trial_scope": "none",
       "model_family": "org-glm-5.2",
       "aliases": [],
       "tier": "large",
-      "speed": "fast",
+      "speed": "premium",
       "use_case": [
         "content-creation",
         "writing-assistance",
@@ -1532,8 +1952,8 @@
         "math",
         "complex-reasoning"
       ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
+      "performance_level": "high",
+      "estimated_latency": "3-10s"
     },
     {
       "id": "@cf/nvidia/nemotron-3-120b-a12b",
@@ -1563,7 +1983,7 @@
       "has_tool_use": true,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "nemotron-3-120b-a12b",
@@ -1610,7 +2030,7 @@
       "has_tool_use": true,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "qwen3-30b-a3b",
@@ -1656,7 +2076,7 @@
       "has_tool_use": false,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "black-forest-labs-flux-2-dev",
@@ -1702,7 +2122,7 @@
       "has_tool_use": true,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "gemma-4-26b-a4b",
@@ -1753,7 +2173,7 @@
       "has_tool_use": true,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "mistral-small-3.1-24b",
@@ -1783,7 +2203,7 @@
       "context_label": "1M",
       "price_input": 0.044,
       "price_output": 3.96,
-      "is_free": true,
+      "is_free": false,
       "capabilities": [
         "text-generation",
         "function-calling",
@@ -1797,11 +2217,11 @@
       "is_reasoning": true,
       "is_multimodal": false,
       "has_tool_use": true,
-      "free_mechanism": "daily-tokens",
+      "free_mechanism": null,
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "Excluded from the 10,000 neurons/day free allocation: requires the Workers Paid plan or prepaid AI Gateway credits"
       },
-      "trial_scope": "all",
+      "trial_scope": "none",
       "model_family": "deepseek-v4-pro",
       "aliases": [
         "DeepSeek-V4-Pro",
@@ -1810,7 +2230,7 @@
         "xingchen/xopdeepseekv4pro"
       ],
       "tier": "large",
-      "speed": "fast",
+      "speed": "premium",
       "use_case": [
         "problem-solving",
         "logical-analysis",
@@ -1819,8 +2239,8 @@
         "writing-assistance",
         "complex-reasoning"
       ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
+      "performance_level": "high",
+      "estimated_latency": "3-10s"
     },
     {
       "id": "@cf/meta/llama-3.2-11b-vision-instruct",
@@ -1849,7 +2269,7 @@
       "has_tool_use": false,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "llama-3.2-11b-vision",
@@ -1904,13 +2324,14 @@
       "has_tool_use": true,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "qwen3.8-27b",
       "aliases": [
         "qwen3.8-27b",
-        "groq/qwen/qwen3.8-27b"
+        "groq/qwen/qwen3.8-27b",
+        "ovh/Qwen3.8-27B"
       ],
       "parameter_count": 27000000000,
       "tier": "large",
@@ -1952,7 +2373,7 @@
       "has_tool_use": false,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "leonardo-lucid-origin",
@@ -1998,7 +2419,7 @@
       "has_tool_use": true,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "llama-4-scout-17b-16e",
@@ -2028,7 +2449,7 @@
       "description": "Clef-flash is a fast 9B multimodal decision model that turns a state and a schema of typed questions into decisions. It reads the state as text, JSON, images, or video, and returns a probability for every allowed option of every question.",
       "context_size": 65536,
       "context_label": "66K",
-      "price_input": 0.09,
+      "price_input": 0.038,
       "is_free": true,
       "capabilities": [
         "text-generation"
@@ -2043,7 +2464,7 @@
       "has_tool_use": false,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "clef-flash",
@@ -2085,7 +2506,7 @@
       "has_tool_use": false,
       "free_mechanism": "daily-tokens",
       "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models)"
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
       "model_family": "qwq-32b",
@@ -2130,7 +2551,7 @@
       "free_mechanism": "rate-limited",
       "free_quota": {
         "rpm": 20,
-        "notes": "1000 requests/month shared across all models on trial key"
+        "notes": "Trial API key: 1,000 requests/month shared across all models (20 RPM); beyond that a paid key is required"
       },
       "trial_scope": "all",
       "model_family": "c4ai-aya-expanse-32b",
@@ -2171,7 +2592,7 @@
       "free_mechanism": "rate-limited",
       "free_quota": {
         "rpm": 20,
-        "notes": "1000 requests/month shared across all models on trial key"
+        "notes": "Trial API key: 1,000 requests/month shared across all models (20 RPM); beyond that a paid key is required"
       },
       "trial_scope": "all",
       "model_family": "c4ai-aya-vision-32b",
@@ -2213,7 +2634,7 @@
       "free_mechanism": "rate-limited",
       "free_quota": {
         "rpm": 20,
-        "notes": "1000 requests/month shared across all models on trial key"
+        "notes": "Trial API key: 1,000 requests/month shared across all models (20 RPM); beyond that a paid key is required"
       },
       "trial_scope": "all",
       "model_family": "command-a-reasoning-08",
@@ -2258,7 +2679,7 @@
       "free_mechanism": "rate-limited",
       "free_quota": {
         "rpm": 20,
-        "notes": "1000 requests/month shared across all models on trial key"
+        "notes": "Trial API key: 1,000 requests/month shared across all models (20 RPM); beyond that a paid key is required"
       },
       "trial_scope": "all",
       "model_family": "command-a-vision-07",
@@ -2298,7 +2719,7 @@
       "free_mechanism": "rate-limited",
       "free_quota": {
         "rpm": 20,
-        "notes": "1000 requests/month shared across all models on trial key"
+        "notes": "Trial API key: 1,000 requests/month shared across all models (20 RPM); beyond that a paid key is required"
       },
       "trial_scope": "all",
       "model_family": "embed-english-light-v3.0-image",
@@ -2336,7 +2757,7 @@
       "free_mechanism": "rate-limited",
       "free_quota": {
         "rpm": 20,
-        "notes": "1000 requests/month shared across all models on trial key"
+        "notes": "Trial API key: 1,000 requests/month shared across all models (20 RPM); beyond that a paid key is required"
       },
       "trial_scope": "all",
       "model_family": "embed-english-v3.0-image",
@@ -2374,7 +2795,7 @@
       "free_mechanism": "rate-limited",
       "free_quota": {
         "rpm": 20,
-        "notes": "1000 requests/month shared across all models on trial key"
+        "notes": "Trial API key: 1,000 requests/month shared across all models (20 RPM); beyond that a paid key is required"
       },
       "trial_scope": "all",
       "model_family": "embed-multilingual-light-v3.0-image",
@@ -2412,7 +2833,7 @@
       "free_mechanism": "rate-limited",
       "free_quota": {
         "rpm": 20,
-        "notes": "1000 requests/month shared across all models on trial key"
+        "notes": "Trial API key: 1,000 requests/month shared across all models (20 RPM); beyond that a paid key is required"
       },
       "trial_scope": "all",
       "model_family": "embed-multilingual-v3.0-image",
@@ -2864,44 +3285,6 @@
         "visual-q&a",
         "image-editing",
         "style-transfer"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "3-10s"
-    },
-    {
-      "id": "DeepSeek-OCR",
-      "object": "model",
-      "created": 1892487164,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "DeepSeek-OCR",
-      "description": "DeepSeek-OCR 是由 DeepSeek 团队 开发的高精度光学字符识别（OCR, Optical Character Recognition）系统，旨在在复杂场景下实现高效、准确的文字检测与识别。\n它支持 多语言识别、复杂版面分析、表格与公式识别 等多种任务，适用于票据、文档、截图、自然场景图片等多样化输入。",
-      "context_label": "unknown",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": false,
-      "capabilities": [
-        "vision"
-      ],
-      "tags": [
-        "vision",
-        "multimodal"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "deepseek-ocr",
-      "aliases": [
-        "xingchen/xopdeepseekocr"
-      ],
-      "tier": "large",
-      "speed": "premium",
-      "use_case": [
-        "image-understanding",
-        "visual-q&a"
       ],
       "performance_level": "mid",
       "estimated_latency": "3-10s"
@@ -3408,45 +3791,6 @@
       "parameter_count": 32000000000,
       "tier": "large",
       "speed": "premium",
-      "use_case": [
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "3-10s"
-    },
-    {
-      "id": "Qwen3-VL-32B-Instruct",
-      "object": "model",
-      "created": 1573861473,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "Qwen3-VL-32B-Instruct",
-      "description": "Qwen3-VL-32B-Instruct 是一款高性能多模态指令模型，具备图像理解、文档解析、OCR、图表分析、视觉定位和自然语言生成能力，适用于多模态对话、内容分析及智能视觉助手。",
-      "context_label": "unknown",
-      "price_input": 2,
-      "price_output": 8,
-      "is_free": false,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
-      "model_family": "qwen3-vl-32b",
-      "model_variant": "vl",
-      "aliases": [
-        "xingchen/xop3qwen32bvl"
-      ],
-      "parameter_count": 32000000000,
-      "tier": "large",
-      "speed": "standard",
       "use_case": [
         "content-creation",
         "writing-assistance"
@@ -4585,32 +4929,226 @@
       "estimated_latency": "< 1s"
     },
     {
+      "id": "models/gemini-3.6-flash",
+      "object": "model",
+      "created": 1703510148,
+      "owned_by": "google",
+      "provider": "google",
+      "name": "Gemini 3.6 Flash",
+      "description": "Google: Our previous generation Flash model, balancing speed and multimodal capabilities across general agentic and everyday tasks.",
+      "context_label": "unknown",
+      "price_input": 0.75,
+      "price_output": 3.75,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "chat",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": null,
+      "trial_scope": "fast",
+      "model_family": "gemini-3.6-flash",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "models/gemini-3.8-live",
+      "object": "model",
+      "created": 1274642944,
+      "owned_by": "google",
+      "provider": "google",
+      "name": "Gemini 3.8 Live",
+      "description": "Google: Our low-latency, audio-to-audio models optimized for real-time voice agents and live dialogue, including background reasoning support with Extended Thinking.",
+      "context_label": "unknown",
+      "price_input": 0.75,
+      "price_output": 4.5,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "speech-recognition",
+        "speech-synthesis"
+      ],
+      "tags": [
+        "reasoning",
+        "chat",
+        "speech-recognition",
+        "speech-synthesis",
+        "text-generation"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": null,
+      "trial_scope": "fast",
+      "model_family": "gemini-3.8-live",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "conversation",
+        "q&a",
+        "transcription",
+        "voice-input",
+        "text-to-speech",
+        "voice-output",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "models/gemini-3.8-live-extended-thinking",
+      "object": "model",
+      "created": 1388654265,
+      "owned_by": "google",
+      "provider": "google",
+      "name": "Gemini 3.8 Live Extended Thinking",
+      "description": "Google: Our low-latency, audio-to-audio models optimized for real-time voice agents and live dialogue, including background reasoning support with Extended Thinking.",
+      "context_label": "unknown",
+      "price_input": 0.75,
+      "price_output": 4.5,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "speech-recognition",
+        "speech-synthesis"
+      ],
+      "tags": [
+        "reasoning",
+        "chat",
+        "speech-recognition",
+        "speech-synthesis",
+        "text-generation"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": null,
+      "trial_scope": "fast",
+      "model_family": "gemini-3.8-live-extended-thinking",
+      "model_variant": "thinking",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "conversation",
+        "q&a",
+        "transcription",
+        "voice-input",
+        "text-to-speech",
+        "voice-output",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "models/gemini-3.1-flash-live-preview",
+      "object": "model",
+      "created": 1658980195,
+      "owned_by": "google",
+      "provider": "google",
+      "name": "Gemini 3.1 Flash Live Preview",
+      "description": "Google: Our low-latency, audio-to-audio models optimized for real-time voice agents and live dialogue, including background reasoning support with Extended Thinking.",
+      "context_label": "unknown",
+      "price_input": 0.75,
+      "price_output": 4.5,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "speech-recognition",
+        "speech-synthesis"
+      ],
+      "tags": [
+        "reasoning",
+        "chat",
+        "speech-recognition",
+        "speech-synthesis",
+        "text-generation"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": null,
+      "trial_scope": "fast",
+      "model_family": "gemini-3.1-flash-live-preview",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "conversation",
+        "q&a",
+        "transcription",
+        "voice-input",
+        "text-to-speech",
+        "voice-output",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
       "id": "models/gemini-3.1-pro-preview",
       "object": "model",
       "created": 2025547191,
       "owned_by": "google",
       "provider": "google",
-      "name": "Gemini 3.1 Pro Preview",
-      "description": "Google: 最新性能、智力和可用性改进，支持多模态理解、代理能力和 vibe-coding",
-      "context_size": 2000000,
-      "context_label": "2M",
+      "name": "gemini-3.1-pro-preview",
+      "description": "Google: Our 3rd generation Pro model, built for multimodal understanding, agentic capabilities, and vibe-coding.",
+      "context_label": "unknown",
       "price_input": 2,
       "price_output": 12,
       "is_free": false,
       "capabilities": [
         "chat",
-        "text-generation",
-        "reasoning",
-        "agentic"
+        "text-generation"
       ],
       "tags": [
-        "chat",
+        "vision",
         "text-generation",
-        "reasoning",
-        "agentic"
+        "chat",
+        "multimodal"
       ],
-      "is_reasoning": true,
-      "is_multimodal": false,
+      "is_reasoning": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": null,
       "free_quota": null,
@@ -4620,39 +5158,119 @@
       "tier": "large",
       "speed": "premium",
       "use_case": [
-        "conversation",
-        "q&a",
+        "image-understanding",
+        "visual-q&a",
         "content-creation",
         "writing-assistance",
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "complex-reasoning"
+        "conversation",
+        "q&a"
       ],
-      "performance_level": "high",
+      "performance_level": "mid",
       "estimated_latency": "3-10s"
     },
     {
-      "id": "models/gemini-3.1-flash-image-preview",
+      "id": "models/gemini-3.1-pro-preview-customtools",
       "object": "model",
-      "created": 713181130,
+      "created": 712696514,
       "owned_by": "google",
       "provider": "google",
-      "name": "Gemini 3.1 Flash Image Preview",
-      "description": "Google: 为速度和效率设计的图像生成模型",
-      "context_size": 1000000,
-      "context_label": "1M",
+      "name": "gemini-3.1-pro-preview-customtools",
+      "description": "Google: Our 3rd generation Pro model, built for multimodal understanding, agentic capabilities, and vibe-coding.",
+      "context_label": "unknown",
+      "price_input": 2,
+      "price_output": 12,
+      "is_free": false,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "chat",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "gemini-3.1-pro-preview-customtools",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "3-10s"
+    },
+    {
+      "id": "models/gemini-nano-banana-2.1",
+      "object": "model",
+      "created": 1752598466,
+      "owned_by": "google",
+      "provider": "google",
+      "name": "Gemini Nano Banana 2.1",
+      "description": "Google: An update to Nano Banana 2 (Gemini 3.1 Flash Image), built for high-efficiency image generation and conversational editing with improved visual quality, multi-turn character consistency, accurate text rendering, and search-grounded generation across 1K, 2K, and 4K resolutions.",
+      "context_label": "unknown",
+      "price_input": 1.5,
+      "price_output": 7.5,
+      "is_free": false,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "chat",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "gemini-nano-banana-2.1",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "3-10s"
+    },
+    {
+      "id": "models/gemini-3.1-flash-image",
+      "object": "model",
+      "created": 1813355975,
+      "owned_by": "google",
+      "provider": "google",
+      "name": "Gemini 3.1 Flash Image (Nano Banana 2)",
+      "description": "Google: Designed for speed and efficiency, the Gemini 3.1 Flash Image generation model is effective for quick, interactive responses and high throughput.",
+      "context_label": "unknown",
       "price_input": 0.5,
       "price_output": 3,
       "is_free": false,
       "capabilities": [
-        "chat",
-        "text-generation",
         "image-generation"
       ],
       "tags": [
         "vision",
-        "chat",
         "text-generation",
         "image-generation",
         "multimodal"
@@ -4663,7 +5281,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "gemini-3.1-flash-image-preview",
+      "model_family": "gemini-3.1-flash-image",
       "model_variant": "image",
       "aliases": [],
       "tier": "large",
@@ -4671,8 +5289,6 @@
       "use_case": [
         "image-understanding",
         "visual-q&a",
-        "conversation",
-        "q&a",
         "content-creation",
         "writing-assistance",
         "creative-generation",
@@ -4682,72 +5298,22 @@
       "estimated_latency": "3-10s"
     },
     {
-      "id": "models/gemini-3-flash-preview",
+      "id": "models/gemini-3.1-flash-lite-image",
       "object": "model",
-      "created": 892719481,
+      "created": 109629950,
       "owned_by": "google",
       "provider": "google",
-      "name": "Gemini 3 Flash Preview",
-      "description": "Google: 为速度而构建的智能模型，结合前沿智能与卓越搜索",
-      "context_size": 1000000,
-      "context_label": "1M",
-      "price_input": 0.5,
-      "price_output": 3,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "reasoning"
-      ],
-      "tags": [
-        "chat",
-        "text-generation",
-        "reasoning"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": null,
-      "trial_scope": "fast",
-      "model_family": "gemini-3-flash-preview",
-      "aliases": [],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance",
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "models/gemini-3-pro-image-preview",
-      "object": "model",
-      "created": 1836358790,
-      "owned_by": "google",
-      "provider": "google",
-      "name": "Gemini 3 Pro Image Preview",
-      "description": "Google: 原生图像生成模型，优化速度、灵活性和上下文理解",
-      "context_size": 2000000,
-      "context_label": "2M",
-      "price_input": 2,
-      "price_output": 12,
+      "name": "Gemini 3.1 Flash Lite Image (Nano Banana 2 Lite)",
+      "description": "Google: Designed as the efficiency specialist of the image generation family, the Gemini 3.1 Flash Lite Image model is designed for ultra-low latency and cost-effective image generation and editing.",
+      "context_label": "unknown",
+      "price_input": 0.25,
+      "price_output": 1.5,
       "is_free": false,
       "capabilities": [
-        "chat",
-        "text-generation",
         "image-generation"
       ],
       "tags": [
         "vision",
-        "chat",
         "text-generation",
         "image-generation",
         "multimodal"
@@ -4758,7 +5324,50 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "gemini-3-pro-image-preview",
+      "model_family": "gemini-3.1-flash-lite-image",
+      "model_variant": "image",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "creative-generation",
+        "art"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "models/gemini-3-pro-image",
+      "object": "model",
+      "created": 1113474315,
+      "owned_by": "google",
+      "provider": "google",
+      "name": "Gemini 3 Pro Image (Nano Banana Pro)",
+      "description": "Google: Our native image generation model, optimized for speed, flexibility, and contextual understanding. **Text input and output** is priced the same as",
+      "context_label": "unknown",
+      "price_input": 2,
+      "price_output": 12,
+      "is_free": false,
+      "capabilities": [
+        "image-generation"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "image-generation",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "gemini-3-pro-image",
       "model_variant": "image",
       "aliases": [],
       "tier": "large",
@@ -4766,8 +5375,6 @@
       "use_case": [
         "image-understanding",
         "visual-q&a",
-        "conversation",
-        "q&a",
         "content-creation",
         "writing-assistance",
         "creative-generation",
@@ -4783,22 +5390,19 @@
       "owned_by": "google",
       "provider": "google",
       "name": "Gemini 2.5 Pro",
-      "description": "Google: 最先进的通用模型，擅长编码和复杂推理任务",
-      "context_size": 1000000,
-      "context_label": "1M",
+      "description": "Google: A Pro model which excels at coding and complex reasoning tasks.",
+      "context_label": "unknown",
       "price_input": 1.25,
       "price_output": 10,
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation",
-        "reasoning",
-        "coding"
+        "text-generation"
       ],
       "tags": [
-        "chat",
+        "reasoning",
         "text-generation",
-        "reasoning"
+        "chat"
       ],
       "is_reasoning": true,
       "is_multimodal": false,
@@ -4811,13 +5415,13 @@
       "tier": "large",
       "speed": "fast",
       "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance",
         "problem-solving",
         "logical-analysis",
         "math",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
         "complex-reasoning"
       ],
       "performance_level": "mid",
@@ -4830,21 +5434,19 @@
       "owned_by": "google",
       "provider": "google",
       "name": "Gemini 2.5 Flash",
-      "description": "Google: 首个混合推理模型，支持 1M token 上下文窗口和思考预算",
-      "context_size": 1000000,
-      "context_label": "1M",
+      "description": "Google: Our first hybrid reasoning model which supports a 1M token context window and has thinking budgets.",
+      "context_label": "unknown",
       "price_input": 0.3,
       "price_output": 2.5,
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation",
-        "reasoning"
+        "text-generation"
       ],
       "tags": [
-        "chat",
+        "reasoning",
         "text-generation",
-        "reasoning"
+        "chat"
       ],
       "is_reasoning": true,
       "is_multimodal": false,
@@ -4857,13 +5459,13 @@
       "tier": "large",
       "speed": "fast",
       "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance",
         "problem-solving",
         "logical-analysis",
         "math",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
         "complex-reasoning"
       ],
       "performance_level": "mid",
@@ -4875,21 +5477,17 @@
       "created": 105534986,
       "owned_by": "google",
       "provider": "google",
-      "name": "Gemini 2.5 Flash Image",
-      "description": "Google: 原生图像生成模型，优化速度、灵活性和上下文理解",
-      "context_size": 1000000,
-      "context_label": "1M",
+      "name": "Gemini 2.5 Flash Image (Nano Banana)",
+      "description": "Google: A native image generation model, optimized for speed, flexibility, and contextual understanding. Text input and output is priced the same as",
+      "context_label": "unknown",
       "price_input": 0.3,
       "price_output": 0.039,
       "is_free": false,
       "capabilities": [
-        "chat",
-        "text-generation",
         "image-generation"
       ],
       "tags": [
         "vision",
-        "chat",
         "text-generation",
         "image-generation",
         "multimodal"
@@ -4908,8 +5506,6 @@
       "use_case": [
         "image-understanding",
         "visual-q&a",
-        "conversation",
-        "q&a",
         "content-creation",
         "writing-assistance",
         "creative-generation",
@@ -4919,77 +5515,1084 @@
       "estimated_latency": "3-10s"
     },
     {
-      "id": "canopylabs/orpheus-v1-english",
+      "id": "models/gemini-robotics-er-2-preview",
       "object": "model",
-      "created": 1993843289,
-      "owned_by": "groq",
-      "provider": "groq",
-      "name": "canopylabs/orpheus-v1-english",
-      "context_size": 4000,
-      "context_label": "4K",
-      "price_input": 22,
+      "created": 1902141793,
+      "owned_by": "google",
+      "provider": "google",
+      "name": "Gemini Robotics ER 2 Preview",
+      "description": "Google: Gemini Robotics ER 2, short for Gemini Robotics Embodied Reasoning 2, is a vision-language model endpoint that enables robots to understand their environments precisely, supporting agentic orchestration of robots, video progress understanding, multi-robot collaboration, and advanced spatial reasoning.",
+      "context_label": "unknown",
+      "price_input": 1,
+      "price_output": 5,
       "is_free": true,
       "capabilities": [
-        "speech-synthesis"
+        "chat",
+        "text-generation",
+        "vision"
       ],
       "tags": [
-        "speech-synthesis"
+        "reasoning",
+        "vision",
+        "text-generation",
+        "chat",
+        "multimodal"
       ],
-      "is_reasoning": false,
-      "is_multimodal": false,
+      "is_reasoning": true,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Rate-limited free tier"
-      },
-      "trial_scope": "all",
-      "model_family": "orpheus-v1-english",
+      "free_quota": null,
+      "trial_scope": "fast",
+      "model_family": "gemini-robotics-er-2-preview",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
       "use_case": [
-        "text-to-speech",
-        "voice-output"
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "complex-reasoning"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
-      "id": "canopylabs/orpheus-arabic-saudi",
+      "id": "models/gemini-robotics-er-2-streaming-preview",
       "object": "model",
-      "created": 1964073120,
-      "owned_by": "groq",
-      "provider": "groq",
-      "name": "canopylabs/orpheus-arabic-saudi",
-      "context_size": 4000,
-      "context_label": "4K",
-      "price_input": 40,
+      "created": 554617848,
+      "owned_by": "google",
+      "provider": "google",
+      "name": "Gemini Robotics ER 2 Streaming Preview",
+      "description": "Google: Gemini Robotics ER 2 Streaming is a vision-language model endpoint for robotics optimized for real-time text streaming using the Live API. It accepts text, image, video, and audio input and supports bidirectional streaming with function calling.",
+      "context_label": "unknown",
+      "price_input": 1,
+      "price_output": 5,
       "is_free": true,
       "capabilities": [
-        "speech-synthesis",
-        "translation"
+        "chat",
+        "text-generation",
+        "vision"
       ],
       "tags": [
-        "speech-synthesis",
-        "translation"
+        "vision",
+        "text-generation",
+        "chat",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Rate-limited free tier"
-      },
-      "trial_scope": "all",
-      "model_family": "orpheus-arabic-saudi",
+      "free_quota": null,
+      "trial_scope": "fast",
+      "model_family": "gemini-robotics-er-2-streaming-preview",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
       "use_case": [
-        "text-to-speech",
-        "voice-output"
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "stepfun/step-5-preview-free",
+      "object": "model",
+      "created": 493256365,
+      "owned_by": "kilo",
+      "provider": "kilo",
+      "name": "StepFun: Step 5 Preview (free)",
+      "description": "Step 5 Preview is StepFun's flagship model for agentic work, with strong capabilities in software engineering, professional knowledge work, and finance. It natively supports text, image, and video input with a 1M-token context window and up to 64K output tokens. The model supports tool calling, structured outputs, and selectable reasoning levels (low/medium/high) for long-context research, coding, and multi-step workflows.",
+      "context_size": 1000000,
+      "context_label": "1M",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision",
+        "tool-use",
+        "reasoning"
+      ],
+      "tags": [
+        "reasoning",
+        "vision",
+        "text-generation",
+        "tool-use",
+        "chat",
+        "multimodal"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "200 requests per hour per IP (anonymous, no API key required)"
+      },
+      "trial_scope": "specific",
+      "model_family": "stepfun-step-5-preview-free",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "kilo-auto/free",
+      "object": "model",
+      "created": 2052545975,
+      "owned_by": "kilo",
+      "provider": "kilo",
+      "name": "Auto Free",
+      "description": "Rotates through available free models. Limited capability and no credits required. [Learn more](https://kilo.ai/docs/code-with-ai/agents/auto-model)\n\n**Warning** Prompts may be logged by the upstream provider and used to improve their services. Not suitable for production or sensitive data workloads.",
+      "context_size": 256000,
+      "context_label": "256K",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "tool-use",
+        "reasoning"
+      ],
+      "tags": [
+        "text-generation",
+        "chat",
+        "tool-use",
+        "reasoning"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "200 requests per hour per IP (anonymous, no API key required)"
+      },
+      "trial_scope": "specific",
+      "model_family": "kilo-auto-free",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "object": "model",
+      "created": 590732147,
+      "owned_by": "kilo",
+      "provider": "kilo",
+      "name": "NVIDIA: Nemotron 3 Ultra (free)",
+      "description": "NVIDIA Nemotron 3 Ultra is an open frontier-reasoning and orchestration model from NVIDIA, with 55B active parameters out of 550B total (MoE). Built on a hybrid Transformer-Mamba mixture-of-experts architecture, it...\n\n**Terms of service** For NVIDIA free endpoints (Super/Ultra/etc): Trial use only - do not submit personal or confidential data. Your use is logged for security purposes and to improve NVIDIA products and services. The logged session data for improvement purposes is not linked to y",
+      "context_size": 1000000,
+      "context_label": "1M",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "tool-use",
+        "reasoning"
+      ],
+      "tags": [
+        "reasoning",
+        "text-generation",
+        "chat",
+        "tool-use"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "200 requests per hour per IP (anonymous, no API key required)"
+      },
+      "trial_scope": "specific",
+      "model_family": "nemotron-3-ultra-550b-a55b",
+      "aliases": [
+        "nvidia/nemotron-3-ultra-550b-a55b",
+        "nvidia/nemotron-3-ultra-550b-a55b:free"
+      ],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "dots-studio/dots-3-note-preview:free",
+      "object": "model",
+      "created": 1664052281,
+      "owned_by": "kilo",
+      "provider": "kilo",
+      "name": "Dots Studio: Dots3-Note Preview (free)",
+      "description": "Dots3-Note Preview is an open-weight mixture-of-experts model from Dots Studio, with 16B active parameters out of 280B total. It is the lightest model in the Dots 3 family and is...",
+      "context_size": 512000,
+      "context_label": "512K",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision",
+        "tool-use",
+        "reasoning"
+      ],
+      "tags": [
+        "text-generation",
+        "chat",
+        "vision",
+        "tool-use",
+        "reasoning",
+        "multimodal"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "200 requests per hour per IP (anonymous, no API key required)"
+      },
+      "trial_scope": "specific",
+      "model_family": "dots-studio-dots-3-note-preview",
+      "aliases": [
+        "dots-studio/dots-3-note-preview:free"
+      ],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "image-understanding",
+        "visual-q&a",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "inclusionai/ling-3.1-flash",
+      "object": "model",
+      "created": 1783289548,
+      "owned_by": "kilo",
+      "provider": "kilo",
+      "name": "inclusionAI: Ling 3.1 Flash",
+      "description": "Ling 3.1 Flash is a hybrid reasoning mixture-of-experts model from inclusionAI, with 25B active parameters out of 560B total.",
+      "context_size": 262144,
+      "context_label": "262K",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "tool-use",
+        "reasoning"
+      ],
+      "tags": [
+        "reasoning",
+        "text-generation",
+        "chat",
+        "tool-use"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "200 requests per hour per IP (anonymous, no API key required)"
+      },
+      "trial_scope": "specific",
+      "model_family": "inclusionai-ling-3.1-flash",
+      "aliases": [
+        "inclusionai/ling-3.1-flash"
+      ],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "poolside/laguna-s-2.1:free",
+      "object": "model",
+      "created": 1987332451,
+      "owned_by": "kilo",
+      "provider": "kilo",
+      "name": "Poolside: Laguna S 2.1 (free)",
+      "description": "Laguna S 2.1 is the latest coding agent model from [Poolside](<https://poolside.ai/>). Laguna S 2.1 is a 118B total parameter model with 8B active parameters, scoring 70.2% on Terminal-Bench 2.1 and...",
+      "context_size": 262144,
+      "context_label": "262K",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "tool-use",
+        "reasoning"
+      ],
+      "tags": [
+        "text-generation",
+        "chat",
+        "tool-use",
+        "reasoning"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "200 requests per hour per IP (anonymous, no API key required)"
+      },
+      "trial_scope": "specific",
+      "model_family": "poolside-laguna-s-2.1",
+      "aliases": [
+        "poolside/laguna-s-2.1:free"
+      ],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "stealth/glyph-cluster",
+      "object": "model",
+      "created": 1623554298,
+      "owned_by": "kilo",
+      "provider": "kilo",
+      "name": "Stealth: Glyph Cluster (free)",
+      "description": "Your prompts and completions may be retained and used to train or improve the provider's services. Glyph Cluster is a reasoning model for coding and long-context analysis, served through Vercel AI Gateway during its stealth period at no cost. It supports function calling and streaming, takes text input only, and does not support structured outputs. Zero Data Retention is not available for this model.",
+      "context_size": 256000,
+      "context_label": "256K",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "tool-use",
+        "reasoning"
+      ],
+      "tags": [
+        "reasoning",
+        "text-generation",
+        "chat",
+        "tool-use"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "200 requests per hour per IP (anonymous, no API key required)"
+      },
+      "trial_scope": "specific",
+      "model_family": "stealth-glyph-cluster",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "nvidia/nemotron-3.5-lightning:free",
+      "object": "model",
+      "created": 520937521,
+      "owned_by": "kilo",
+      "provider": "kilo",
+      "name": "NVIDIA: Nemotron 3.5 Lightning (free)",
+      "description": "NVIDIA Nemotron 3.5 Lightning is an open mixture-of-experts model from NVIDIA, with 3B active parameters out of 30B total. It is suited for high-throughput agentic workloads and specialized tasks that...\n\n**Terms of service** For NVIDIA free endpoints (Super/Ultra/etc): Trial use only - do not submit personal or confidential data. Your use is logged for security purposes and to improve NVIDIA products and services. The logged session data for improvement purposes is not linked to your identity o",
+      "context_size": 1000000,
+      "context_label": "1M",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "tool-use",
+        "reasoning"
+      ],
+      "tags": [
+        "text-generation",
+        "chat",
+        "tool-use",
+        "reasoning"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "200 requests per hour per IP (anonymous, no API key required)"
+      },
+      "trial_scope": "specific",
+      "model_family": "nemotron-3.5-lightning",
+      "aliases": [
+        "nvidia/nemotron-3.5-lightning:free"
+      ],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "thinkingmachines/inkling-small:free",
+      "object": "model",
+      "created": 1784353244,
+      "owned_by": "kilo",
+      "provider": "kilo",
+      "name": "Thinking Machines: Inkling Small (free)",
+      "description": "Inkling Small is an open-weight multimodal mixture-of-experts model from Thinking Machines Lab, with 12B active parameters out of 276B total. It is positioned as the smaller, more efficient member of...",
+      "context_size": 1048576,
+      "context_label": "1M",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision",
+        "speech-recognition",
+        "tool-use",
+        "reasoning"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "chat",
+        "speech-recognition",
+        "tool-use",
+        "reasoning",
+        "multimodal"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "200 requests per hour per IP (anonymous, no API key required)"
+      },
+      "trial_scope": "specific",
+      "model_family": "thinkingmachines-inkling-small",
+      "aliases": [
+        "thinkingmachines/inkling-small:free"
+      ],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "transcription",
+        "voice-input",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "poolside/laguna-xs-2.1:free",
+      "object": "model",
+      "created": 1715082907,
+      "owned_by": "kilo",
+      "provider": "kilo",
+      "name": "Poolside: Laguna XS 2.1 (free)",
+      "description": "Laguna XS 2.1 is the latest coding agent model in the 33B-A3B category from [Poolside](https://poolside.ai/) and a step forward from their Laguna XS.2 model (released in April 2026). It combines...",
+      "context_size": 262144,
+      "context_label": "262K",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "tool-use",
+        "reasoning"
+      ],
+      "tags": [
+        "text-generation",
+        "chat",
+        "tool-use",
+        "reasoning"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "200 requests per hour per IP (anonymous, no API key required)"
+      },
+      "trial_scope": "specific",
+      "model_family": "poolside-laguna-xs-2.1",
+      "aliases": [
+        "poolside/laguna-xs-2.1",
+        "poolside/laguna-xs-2.1:free"
+      ],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "cohere/north-mini-code:free",
+      "object": "model",
+      "created": 107930801,
+      "owned_by": "kilo",
+      "provider": "kilo",
+      "name": "Cohere: North Mini Code (free)",
+      "description": "North Mini Code is Cohere's first agentic coding model and the debut of its North family. A sparse mixture-of-experts model with 30B total parameters and 3B active, it is optimized...",
+      "context_size": 256000,
+      "context_label": "256K",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "tool-use",
+        "reasoning",
+        "code-generation"
+      ],
+      "tags": [
+        "text-generation",
+        "chat",
+        "tool-use",
+        "reasoning",
+        "code-generation"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "200 requests per hour per IP (anonymous, no API key required)"
+      },
+      "trial_scope": "specific",
+      "model_family": "north-mini-code",
+      "model_variant": "code",
+      "aliases": [
+        "cohere/north-mini-code:free"
+      ],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "software-development",
+        "code-completion",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "nvidia/nemotron-3.5-content-safety:free",
+      "object": "model",
+      "created": 1790919521,
+      "owned_by": "kilo",
+      "provider": "kilo",
+      "name": "NVIDIA: Nemotron 3.5 Content Safety (free)",
+      "description": "NVIDIA Nemotron 3.5 Content Safety is a compact 4B-parameter multimodal guardrail model from NVIDIA, fine-tuned from Google Gemma-3-4B. It moderates both inputs to and responses from LLMs and VLMs, accepting...\n\n**Terms of service** For NVIDIA free endpoints (Super/Ultra/etc): Trial use only - do not submit personal or confidential data. Your use is logged for security purposes and to improve NVIDIA products and services. The logged session data for improvement purposes is not linked to your ide",
+      "context_size": 128000,
+      "context_label": "128K",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision",
+        "reasoning"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "chat",
+        "reasoning",
+        "multimodal"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "200 requests per hour per IP (anonymous, no API key required)"
+      },
+      "trial_scope": "specific",
+      "model_family": "nemotron-3.5-content-safety",
+      "model_variant": "safety",
+      "aliases": [
+        "nvidia/nemotron-3.5-content-safety",
+        "nvidia/nemotron-3.5-content-safety:free"
+      ],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+      "object": "model",
+      "created": 918644060,
+      "owned_by": "kilo",
+      "provider": "kilo",
+      "name": "NVIDIA: Nemotron 3 Nano Omni (free)",
+      "description": "NVIDIA Nemotron™ 3 Nano Omni is a 30B-A3B open multimodal model designed to function as a perception and context sub-agent in enterprise agent systems. It accepts text, image, video, and...\n\n**Terms of service** For NVIDIA free endpoints (Super/Ultra/etc): Trial use only - do not submit personal or confidential data. Your use is logged for security purposes and to improve NVIDIA products and services. The logged session data for improvement purposes is not linked to your identity or any persiste",
+      "context_size": 256000,
+      "context_label": "256K",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision",
+        "speech-recognition",
+        "video-processing",
+        "tool-use",
+        "reasoning"
+      ],
+      "tags": [
+        "reasoning",
+        "vision",
+        "text-generation",
+        "chat",
+        "speech-recognition",
+        "video-processing",
+        "tool-use",
+        "multimodal"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "200 requests per hour per IP (anonymous, no API key required)"
+      },
+      "trial_scope": "specific",
+      "model_family": "nemotron-3-nano-omni-30b-a3b-reasoning",
+      "model_variant": "reasoning",
+      "aliases": [
+        "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
+      ],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "transcription",
+        "voice-input",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "nvidia/nemotron-3-super-120b-a12b:free",
+      "object": "model",
+      "created": 241202292,
+      "owned_by": "kilo",
+      "provider": "kilo",
+      "name": "NVIDIA: Nemotron 3 Super (free)",
+      "description": "NVIDIA Nemotron 3 Super is a 120B-parameter open hybrid MoE model, activating just 12B parameters for maximum compute efficiency and accuracy in complex multi-agent applications. Built on a hybrid Mamba-Transformer...\n\n**Terms of service** For NVIDIA free endpoints (Super/Ultra/etc): Trial use only - do not submit personal or confidential data. Your use is logged for security purposes and to improve NVIDIA products and services. The logged session data for improvement purposes is not linked to y",
+      "context_size": 262144,
+      "context_label": "262K",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "tool-use",
+        "reasoning"
+      ],
+      "tags": [
+        "text-generation",
+        "chat",
+        "tool-use",
+        "reasoning"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "200 requests per hour per IP (anonymous, no API key required)"
+      },
+      "trial_scope": "specific",
+      "model_family": "nemotron-3-super-120b-a12b",
+      "aliases": [
+        "nvidia/nemotron-3-super-120b-a12b",
+        "nvidia/nemotron-3-super-120b-a12b:free"
+      ],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "openrouter/free",
+      "object": "model",
+      "created": 885390777,
+      "owned_by": "kilo",
+      "provider": "kilo",
+      "name": "OpenRouter Free Models Router",
+      "description": "The simplest way to get free inference. openrouter/free is a router that selects free models at random from the models available on OpenRouter. The router smartly filters for models that...",
+      "context_size": 200000,
+      "context_label": "200K",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision",
+        "tool-use",
+        "reasoning"
+      ],
+      "tags": [
+        "chat",
+        "text-generation",
+        "vision",
+        "tool-use",
+        "reasoning",
+        "multimodal"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "200 requests per hour per IP (anonymous, no API key required)"
+      },
+      "trial_scope": "specific",
+      "model_family": "openrouter-free-models-router",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "image-understanding",
+        "visual-q&a",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "DeepSeek-V4-Flash-0731",
+      "object": "model",
+      "created": 1082237056,
+      "owned_by": "llm7",
+      "provider": "llm7",
+      "name": "DeepSeek-V4-Flash-0731",
+      "description": "LLM7 chat (turbo tier)",
+      "context_size": 400000,
+      "context_label": "400K",
+      "price_input": 0.02,
+      "price_output": 0.04,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "tool-use",
+        "reasoning"
+      ],
+      "tags": [
+        "text-generation",
+        "chat",
+        "tool-use",
+        "reasoning"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "rpm": 60,
+        "tokens_per_day": 100000,
+        "notes": "Free API token from dash.llm7.io (signup required, no payment). 100,000 tokens per 24 hours across input+output 60 requests per minute, 250 per hour. Official docs warn the free-token quota may be reduced without notice. price_input/price_output are LLM7 paid-usage rates (USD per 1M tokens), not what the free tier costs."
+      },
+      "trial_scope": "specific",
+      "model_family": "deepseek-v4-flash",
+      "aliases": [
+        "cloudflare/@cf/deepseek-ai/deepseek-v4-flash-0731",
+        "DeepSeek-V4-Flash",
+        "deepseek-v4-flash-0731",
+        "sensenova/deepseek-v4-flash",
+        "xingchen/xopdeepseekv4flash0731"
+      ],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "GLM-5.3-Flash",
+      "object": "model",
+      "created": 1616888882,
+      "owned_by": "llm7",
+      "provider": "llm7",
+      "name": "GLM-5.3-Flash",
+      "description": "LLM7 chat (turbo tier)",
+      "context_size": 400000,
+      "context_label": "400K",
+      "price_input": 0.02,
+      "price_output": 0.04,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "tool-use",
+        "reasoning"
+      ],
+      "tags": [
+        "text-generation",
+        "chat",
+        "tool-use",
+        "reasoning"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "rpm": 60,
+        "tokens_per_day": 100000,
+        "notes": "Free API token from dash.llm7.io (signup required, no payment). 100,000 tokens per 24 hours across input+output 60 requests per minute, 250 per hour. Official docs warn the free-token quota may be reduced without notice. price_input/price_output are LLM7 paid-usage rates (USD per 1M tokens), not what the free tier costs."
+      },
+      "trial_scope": "specific",
+      "model_family": "glm-5.3-flash",
+      "aliases": [
+        "GLM-5.3-Flash",
+        "z-ai/glm-5.3-flash"
+      ],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "nemotron-3-nano:30b",
+      "object": "model",
+      "created": 707689030,
+      "owned_by": "llm7",
+      "provider": "llm7",
+      "name": "nemotron-3-nano:30b",
+      "description": "LLM7 chat (turbo tier)",
+      "context_size": 1000000,
+      "context_label": "1M",
+      "price_input": 0.03,
+      "price_output": 0.08,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "tool-use",
+        "reasoning"
+      ],
+      "tags": [
+        "text-generation",
+        "chat",
+        "tool-use",
+        "reasoning"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "rpm": 60,
+        "tokens_per_day": 100000,
+        "notes": "Free API token from dash.llm7.io (signup required, no payment). 100,000 tokens per 24 hours across input+output 60 requests per minute, 250 per hour. Official docs warn the free-token quota may be reduced without notice. price_input/price_output are LLM7 paid-usage rates (USD per 1M tokens), not what the free tier costs."
+      },
+      "trial_scope": "specific",
+      "model_family": "nemotron-3-nano:30b",
+      "aliases": [],
+      "parameter_count": 30000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -5090,9 +6693,11 @@
       "is_reasoning": false,
       "is_multimodal": true,
       "has_tool_use": false,
-      "free_mechanism": "trial-credits",
+      "free_mechanism": "rate-limited",
       "free_quota": {
-        "notes": "NVIDIA NIM free credits, exhaustible"
+        "notes": "Public NIM endpoints: Up to 40 rpm and 10,000 requests per day; limits may vary by model and by traffic",
+        "rpm": 40,
+        "rpd": 10000
       },
       "trial_scope": "specific",
       "model_family": "llama-3.2-11b-vision",
@@ -5134,9 +6739,11 @@
       "is_reasoning": false,
       "is_multimodal": true,
       "has_tool_use": false,
-      "free_mechanism": "trial-credits",
+      "free_mechanism": "rate-limited",
       "free_quota": {
-        "notes": "NVIDIA NIM free credits, exhaustible"
+        "notes": "Public NIM endpoints: Up to 40 rpm and 10,000 requests per day; limits may vary by model and by traffic",
+        "rpm": 40,
+        "rpd": 10000
       },
       "trial_scope": "specific",
       "model_family": "llama-3.2-90b-vision",
@@ -5331,14 +6938,17 @@
       "is_reasoning": true,
       "is_multimodal": false,
       "has_tool_use": false,
-      "free_mechanism": "trial-credits",
+      "free_mechanism": "rate-limited",
       "free_quota": {
-        "notes": "NVIDIA NIM free credits, exhaustible"
+        "notes": "Public NIM endpoints: Up to 40 rpm and 10,000 requests per day; limits may vary by model and by traffic",
+        "rpm": 40,
+        "rpd": 10000
       },
       "trial_scope": "specific",
       "model_family": "nemotron-3-nano-omni-30b-a3b-reasoning",
       "model_variant": "reasoning",
       "aliases": [
+        "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
         "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
       ],
       "parameter_count": 30000000000,
@@ -5539,11 +7149,15 @@
       "has_tool_use": true,
       "free_mechanism": "rate-limited",
       "free_quota": {
-        "notes": "Free tier with rate limits (see openrouter.ai)"
+        "rpm": 20,
+        "rpd": 50,
+        "notes": "Free-variant limit is 20 RPM and 50 requests/day; a one-time purchase of 10+ USD credits raises the daily ceiling to 1000. Providers may log prompts for training on free routes."
       },
       "trial_scope": "specific",
       "model_family": "inclusionai-ling-3.1-flash",
-      "aliases": [],
+      "aliases": [
+        "kilo/inclusionai/ling-3.1-flash"
+      ],
       "tier": "large",
       "speed": "fast",
       "use_case": [
@@ -5589,7 +7203,9 @@
       "has_tool_use": true,
       "free_mechanism": "rate-limited",
       "free_quota": {
-        "notes": "Free tier with rate limits (see openrouter.ai)"
+        "rpm": 20,
+        "rpd": 50,
+        "notes": "Free-variant limit is 20 RPM and 50 requests/day; a one-time purchase of 10+ USD credits raises the daily ceiling to 1000. Providers may log prompts for training on free routes."
       },
       "trial_scope": "specific",
       "model_family": "apodex-apodex-1.1-mini",
@@ -5642,11 +7258,15 @@
       "has_tool_use": true,
       "free_mechanism": "rate-limited",
       "free_quota": {
-        "notes": "Free tier with rate limits (see openrouter.ai)"
+        "rpm": 20,
+        "rpd": 50,
+        "notes": "Free-variant limit is 20 RPM and 50 requests/day; a one-time purchase of 10+ USD credits raises the daily ceiling to 1000. Providers may log prompts for training on free routes."
       },
       "trial_scope": "specific",
       "model_family": "dots-studio-dots-3-note-preview",
-      "aliases": [],
+      "aliases": [
+        "kilo/dots-studio/dots-3-note-preview:free"
+      ],
       "tier": "large",
       "speed": "fast",
       "use_case": [
@@ -5694,11 +7314,15 @@
       "has_tool_use": true,
       "free_mechanism": "rate-limited",
       "free_quota": {
-        "notes": "Free tier with rate limits (see openrouter.ai)"
+        "rpm": 20,
+        "rpd": 50,
+        "notes": "Free-variant limit is 20 RPM and 50 requests/day; a one-time purchase of 10+ USD credits raises the daily ceiling to 1000. Providers may log prompts for training on free routes."
       },
       "trial_scope": "specific",
       "model_family": "nemotron-3.5-lightning",
-      "aliases": [],
+      "aliases": [
+        "kilo/nvidia/nemotron-3.5-lightning:free"
+      ],
       "tier": "large",
       "speed": "fast",
       "use_case": [
@@ -5749,11 +7373,15 @@
       "has_tool_use": true,
       "free_mechanism": "rate-limited",
       "free_quota": {
-        "notes": "Free tier with rate limits (see openrouter.ai)"
+        "rpm": 20,
+        "rpd": 50,
+        "notes": "Free-variant limit is 20 RPM and 50 requests/day; a one-time purchase of 10+ USD credits raises the daily ceiling to 1000. Providers may log prompts for training on free routes."
       },
       "trial_scope": "specific",
       "model_family": "thinkingmachines-inkling-small",
-      "aliases": [],
+      "aliases": [
+        "kilo/thinkingmachines/inkling-small:free"
+      ],
       "tier": "large",
       "speed": "fast",
       "use_case": [
@@ -5803,11 +7431,15 @@
       "has_tool_use": true,
       "free_mechanism": "rate-limited",
       "free_quota": {
-        "notes": "Free tier with rate limits (see openrouter.ai)"
+        "rpm": 20,
+        "rpd": 50,
+        "notes": "Free-variant limit is 20 RPM and 50 requests/day; a one-time purchase of 10+ USD credits raises the daily ceiling to 1000. Providers may log prompts for training on free routes."
       },
       "trial_scope": "specific",
       "model_family": "poolside-laguna-s-2.1",
-      "aliases": [],
+      "aliases": [
+        "kilo/poolside/laguna-s-2.1:free"
+      ],
       "tier": "large",
       "speed": "fast",
       "use_case": [
@@ -5858,7 +7490,9 @@
       "has_tool_use": true,
       "free_mechanism": "rate-limited",
       "free_quota": {
-        "notes": "Free tier with rate limits (see openrouter.ai)"
+        "rpm": 20,
+        "rpd": 50,
+        "notes": "Free-variant limit is 20 RPM and 50 requests/day; a one-time purchase of 10+ USD credits raises the daily ceiling to 1000. Providers may log prompts for training on free routes."
       },
       "trial_scope": "specific",
       "model_family": "thinkingmachines-inkling",
@@ -5912,11 +7546,14 @@
       "has_tool_use": true,
       "free_mechanism": "rate-limited",
       "free_quota": {
-        "notes": "Free tier with rate limits (see openrouter.ai)"
+        "rpm": 20,
+        "rpd": 50,
+        "notes": "Free-variant limit is 20 RPM and 50 requests/day; a one-time purchase of 10+ USD credits raises the daily ceiling to 1000. Providers may log prompts for training on free routes."
       },
       "trial_scope": "specific",
       "model_family": "poolside-laguna-xs-2.1",
       "aliases": [
+        "kilo/poolside/laguna-xs-2.1:free",
         "poolside/laguna-xs-2.1"
       ],
       "tier": "large",
@@ -5966,12 +7603,16 @@
       "has_tool_use": true,
       "free_mechanism": "rate-limited",
       "free_quota": {
-        "notes": "Free tier with rate limits (see openrouter.ai)"
+        "rpm": 20,
+        "rpd": 50,
+        "notes": "Free-variant limit is 20 RPM and 50 requests/day; a one-time purchase of 10+ USD credits raises the daily ceiling to 1000. Providers may log prompts for training on free routes."
       },
       "trial_scope": "specific",
       "model_family": "north-mini-code",
       "model_variant": "code",
-      "aliases": [],
+      "aliases": [
+        "kilo/cohere/north-mini-code:free"
+      ],
       "tier": "large",
       "speed": "fast",
       "use_case": [
@@ -6020,12 +7661,15 @@
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
       "free_quota": {
-        "notes": "Free tier with rate limits (see openrouter.ai)"
+        "rpm": 20,
+        "rpd": 50,
+        "notes": "Free-variant limit is 20 RPM and 50 requests/day; a one-time purchase of 10+ USD credits raises the daily ceiling to 1000. Providers may log prompts for training on free routes."
       },
       "trial_scope": "specific",
       "model_family": "nemotron-3.5-content-safety",
       "model_variant": "safety",
       "aliases": [
+        "kilo/nvidia/nemotron-3.5-content-safety:free",
         "nvidia/nemotron-3.5-content-safety"
       ],
       "tier": "large",
@@ -6075,11 +7719,14 @@
       "has_tool_use": true,
       "free_mechanism": "rate-limited",
       "free_quota": {
-        "notes": "Free tier with rate limits (see openrouter.ai)"
+        "rpm": 20,
+        "rpd": 50,
+        "notes": "Free-variant limit is 20 RPM and 50 requests/day; a one-time purchase of 10+ USD credits raises the daily ceiling to 1000. Providers may log prompts for training on free routes."
       },
       "trial_scope": "specific",
       "model_family": "nemotron-3-ultra-550b-a55b",
       "aliases": [
+        "kilo/nvidia/nemotron-3-ultra-550b-a55b:free",
         "nvidia/nemotron-3-ultra-550b-a55b"
       ],
       "tier": "large",
@@ -6134,12 +7781,15 @@
       "has_tool_use": true,
       "free_mechanism": "rate-limited",
       "free_quota": {
-        "notes": "Free tier with rate limits (see openrouter.ai)"
+        "rpm": 20,
+        "rpd": 50,
+        "notes": "Free-variant limit is 20 RPM and 50 requests/day; a one-time purchase of 10+ USD credits raises the daily ceiling to 1000. Providers may log prompts for training on free routes."
       },
       "trial_scope": "specific",
       "model_family": "nemotron-3-nano-omni-30b-a3b-reasoning",
       "model_variant": "reasoning",
       "aliases": [
+        "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
         "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning"
       ],
       "tier": "large",
@@ -6196,7 +7846,9 @@
       "has_tool_use": true,
       "free_mechanism": "rate-limited",
       "free_quota": {
-        "notes": "Free tier with rate limits (see openrouter.ai)"
+        "rpm": 20,
+        "rpd": 50,
+        "notes": "Free-variant limit is 20 RPM and 50 requests/day; a one-time purchase of 10+ USD credits raises the daily ceiling to 1000. Providers may log prompts for training on free routes."
       },
       "trial_scope": "specific",
       "model_family": "gemma-4-26b-a4b",
@@ -6258,7 +7910,9 @@
       "has_tool_use": true,
       "free_mechanism": "rate-limited",
       "free_quota": {
-        "notes": "Free tier with rate limits (see openrouter.ai)"
+        "rpm": 20,
+        "rpd": 50,
+        "notes": "Free-variant limit is 20 RPM and 50 requests/day; a one-time purchase of 10+ USD credits raises the daily ceiling to 1000. Providers may log prompts for training on free routes."
       },
       "trial_scope": "specific",
       "model_family": "gemma-4-31b",
@@ -6313,7 +7967,9 @@
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
       "free_quota": {
-        "notes": "Free tier with rate limits (see openrouter.ai)"
+        "rpm": 20,
+        "rpd": 50,
+        "notes": "Free-variant limit is 20 RPM and 50 requests/day; a one-time purchase of 10+ USD credits raises the daily ceiling to 1000. Providers may log prompts for training on free routes."
       },
       "trial_scope": "specific",
       "model_family": "lyria-3-pro-preview",
@@ -6362,7 +8018,9 @@
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
       "free_quota": {
-        "notes": "Free tier with rate limits (see openrouter.ai)"
+        "rpm": 20,
+        "rpd": 50,
+        "notes": "Free-variant limit is 20 RPM and 50 requests/day; a one-time purchase of 10+ USD credits raises the daily ceiling to 1000. Providers may log prompts for training on free routes."
       },
       "trial_scope": "specific",
       "model_family": "lyria-3-clip-preview",
@@ -6412,11 +8070,14 @@
       "has_tool_use": true,
       "free_mechanism": "rate-limited",
       "free_quota": {
-        "notes": "Free tier with rate limits (see openrouter.ai)"
+        "rpm": 20,
+        "rpd": 50,
+        "notes": "Free-variant limit is 20 RPM and 50 requests/day; a one-time purchase of 10+ USD credits raises the daily ceiling to 1000. Providers may log prompts for training on free routes."
       },
       "trial_scope": "specific",
       "model_family": "nemotron-3-super-120b-a12b",
       "aliases": [
+        "kilo/nvidia/nemotron-3-super-120b-a12b:free",
         "nvidia/nemotron-3-super-120b-a12b"
       ],
       "tier": "large",
@@ -6465,7 +8126,9 @@
       "has_tool_use": true,
       "free_mechanism": "rate-limited",
       "free_quota": {
-        "notes": "Free tier with rate limits (see openrouter.ai)"
+        "rpm": 20,
+        "rpd": 50,
+        "notes": "Free-variant limit is 20 RPM and 50 requests/day; a one-time purchase of 10+ USD credits raises the daily ceiling to 1000. Providers may log prompts for training on free routes."
       },
       "trial_scope": "specific",
       "model_family": "free-models-router",
@@ -6481,6 +8144,99 @@
         "visual-q&a"
       ],
       "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "Qwen2.5-VL-72B-Instruct",
+      "object": "model",
+      "created": 1525125023,
+      "owned_by": "ovh",
+      "provider": "ovh",
+      "name": "Qwen2.5-VL-72B-Instruct",
+      "context_size": 32768,
+      "context_label": "33K",
+      "price_input": 1.01,
+      "price_output": 1.01,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision"
+      ],
+      "tags": [
+        "chat",
+        "text-generation",
+        "vision",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 2,
+        "notes": "Anonymous access (no API key, no signup): 2 requests per minute, per IP and per model. With an API key the same models are billed pay-as-you-go per token (400 RPM per project) — price_input/price_output are those rates, not what the anonymous tier costs."
+      },
+      "trial_scope": "all",
+      "model_family": "qwen2.5-vl-72b",
+      "model_variant": "vl",
+      "aliases": [],
+      "parameter_count": 72000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "Meta-Llama-3_3-70B-Instruct",
+      "object": "model",
+      "created": 1740013843,
+      "owned_by": "ovh",
+      "provider": "ovh",
+      "name": "Meta-Llama-3_3-70B-Instruct",
+      "context_size": 131072,
+      "context_label": "131K",
+      "price_input": 0.74,
+      "price_output": 0.74,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 2,
+        "notes": "Anonymous access (no API key, no signup): 2 requests per minute, per IP and per model. With an API key the same models are billed pay-as-you-go per token (400 RPM per project) — price_input/price_output are those rates, not what the anonymous tier costs."
+      },
+      "trial_scope": "all",
+      "model_family": "3_3-70b",
+      "model_variant": "instruct",
+      "aliases": [],
+      "parameter_count": 70000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
       "estimated_latency": "< 1s"
     },
     {
@@ -6508,7 +8264,7 @@
       "free_mechanism": "trial-credits",
       "free_quota": {
         "total_credits": 5,
-        "notes": "$5 trial credits, valid for 3 months"
+        "notes": "$5 trial credits, valid for 3 months; listed prices are pay-as-you-go rates after credits run out"
       },
       "trial_scope": "all",
       "model_family": "llama-3.3-swallow-70b-v0.4",
@@ -6552,7 +8308,7 @@
       "free_mechanism": "trial-credits",
       "free_quota": {
         "total_credits": 5,
-        "notes": "$5 trial credits, valid for 3 months"
+        "notes": "$5 trial credits, valid for 3 months; listed prices are pay-as-you-go rates after credits run out"
       },
       "trial_scope": "all",
       "model_family": "deepseek-r1",
@@ -6601,7 +8357,7 @@
       "free_mechanism": "trial-credits",
       "free_quota": {
         "total_credits": 5,
-        "notes": "$5 trial credits, valid for 3 months"
+        "notes": "$5 trial credits, valid for 3 months; listed prices are pay-as-you-go rates after credits run out"
       },
       "trial_scope": "all",
       "model_family": "3.3-70b",
@@ -6644,7 +8400,7 @@
       "free_mechanism": "trial-credits",
       "free_quota": {
         "total_credits": 5,
-        "notes": "$5 trial credits, valid for 3 months"
+        "notes": "$5 trial credits, valid for 3 months; listed prices are pay-as-you-go rates after credits run out"
       },
       "trial_scope": "all",
       "model_family": "qwen3-32b",
@@ -6690,7 +8446,7 @@
       "free_mechanism": "trial-credits",
       "free_quota": {
         "total_credits": 5,
-        "notes": "$5 trial credits, valid for 3 months"
+        "notes": "$5 trial credits, valid for 3 months; listed prices are pay-as-you-go rates after credits run out"
       },
       "trial_scope": "all",
       "model_family": "deepseek-r1-distill-llama-70b",
@@ -6741,7 +8497,7 @@
         "notes": "1500 次 / 5 小时"
       },
       "trial_scope": "all",
-      "model_family": "sensenova-sensenova-u1-fast",
+      "model_family": "sensenova-u1-fast",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -7026,7 +8782,9 @@
       "free_quota": null,
       "trial_scope": "none",
       "model_family": "qwen3.5-397b-a17b",
-      "aliases": [],
+      "aliases": [
+        "ovh/Qwen3.5-397B-A17B"
+      ],
       "parameter_count": 397000000000,
       "tier": "large",
       "speed": "premium",
@@ -7120,9 +8878,7 @@
       "trial_scope": "none",
       "model_family": "qwen3-vl-32b",
       "model_variant": "vl",
-      "aliases": [
-        "Qwen3-VL-32B-Instruct"
-      ],
+      "aliases": [],
       "parameter_count": 32000000000,
       "tier": "large",
       "speed": "standard",
@@ -7169,9 +8925,7 @@
       "free_quota": null,
       "trial_scope": "specific",
       "model_family": "deepseek-ocr",
-      "aliases": [
-        "DeepSeek-OCR"
-      ],
+      "aliases": [],
       "tier": "large",
       "speed": "fast",
       "use_case": [

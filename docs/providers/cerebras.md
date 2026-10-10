@@ -21,8 +21,8 @@
 
 | 指标 | 数量 |
 |---|---:|
-| 总模型 | 4 |
-| 免费模型 | 4 |
+| 总模型 | 2 |
+| 免费模型 | 2 |
 | 付费可试用 | 0 |
 
 ## 免费策略
@@ -33,7 +33,5 @@
 
 | Provider | Model ID | 名称 | 上下文 | 免费类型 | 限制 |
 |---|---|---|---:|---|---|
-| cerebras  | `gpt-oss-120b` | OpenAI GPT OSS | unknown | 限速免费 | — |
-| cerebras  | `llama3.1-8b` | Llama 3.1 8B | 8K | 限速免费 | — |
-| cerebras  | `qwen-3-235b-a22b-instruct-2507` | Qwen 3 235B Instruct | 66K | 预览版 | — |
-| cerebras  | `zai-glm-4.7` | Z.ai GLM 4.7 | unknown | 预览版 | — |
+| cerebras  | `gpt-oss-120b` | OpenAI GPT OSS | 131K | 试用 credits | 5 credits / $5 free credits for new accounts (expire after 30 days); Free Trial tier ~5 RPM per model; no permanently free tier |
+| cerebras  | `qwen-3.8-27b` | Qwen 3.8 27B | 66K | 试用 credits | 5 credits / $5 free credits for new accounts (expire after 30 days); Free Trial tier ~5 RPM per model; no permanently free tier |

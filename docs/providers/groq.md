@@ -34,13 +34,13 @@
 | Provider | Model ID | 名称 | 上下文 | 免费类型 | 限制 |
 |---|---|---|---:|---|---|
 | groq  | `allam-2-7b` | allam-2-7b | 4K | 限速免费 | 7000 RPD / 6000 TPM |
-| groq  | `canopylabs/orpheus-arabic-saudi` | canopylabs/orpheus-arabic-saudi | 4K | 限速免费 | Rate-limited free tier |
-| groq  | `canopylabs/orpheus-v1-english` | canopylabs/orpheus-v1-english | 4K | 限速免费 | Rate-limited free tier |
-| groq  | `meta-llama/llama-prompt-guard-2-22m` | meta-llama/llama-prompt-guard-2-22m | 512 | 限速免费 | Rate-limited free tier |
-| groq  | `meta-llama/llama-prompt-guard-2-86m` | meta-llama/llama-prompt-guard-2-86m | 512 | 限速免费 | Rate-limited free tier |
-| groq  | `openai/gpt-oss-120b` | openai/gpt-oss-120b | 131K | 限速免费 | 1000 RPD / 8000 TPM |
-| groq  | `openai/gpt-oss-20b` | openai/gpt-oss-20b | 131K | 限速免费 | 1000 RPD / 8000 TPM |
-| groq  | `openai/gpt-oss-safeguard-20b` | openai/gpt-oss-safeguard-20b | 131K | 限速免费 | Rate-limited free tier |
-| groq  | `qwen/qwen3.8-27b` | qwen/qwen3.8-27b | 131K | 限速免费 | 1000 RPD / 8000 TPM |
-| groq  | `whisper-large-v3` | whisper-large-v3 | 448 | 限速免费 | Rate-limited free tier |
-| groq  | `whisper-large-v3-turbo` | whisper-large-v3-turbo | 448 | 限速免费 | Rate-limited free tier |
+| groq  | `canopylabs/orpheus-arabic-saudi` | Canopy Labs Orpheus Arabic Saudi | 4K | 限速免费 | 10 RPM / 100 RPD / 1200 TPM / 3,600 tokens/天 |
+| groq  | `canopylabs/orpheus-v1-english` | Canopy Labs Orpheus V1 English | 4K | 限速免费 | 10 RPM / 100 RPD / 1200 TPM / 3,600 tokens/天 |
+| groq  | `meta-llama/llama-prompt-guard-2-22m` | Llama Prompt Guard 2 22M | 512 | 限速免费 | 30 RPM / 14400 RPD / 15000 TPM / 500,000 tokens/天 |
+| groq  | `meta-llama/llama-prompt-guard-2-86m` | Prompt Guard 2 86M | 512 | 限速免费 | 30 RPM / 14400 RPD / 15000 TPM / 500,000 tokens/天 |
+| groq  | `openai/gpt-oss-120b` | GPT OSS 120B | 131K | 限速免费 | 30 RPM / 1000 RPD / 8000 TPM / 200,000 tokens/天 |
+| groq  | `openai/gpt-oss-20b` | GPT OSS 20B | 131K | 限速免费 | 30 RPM / 1000 RPD / 8000 TPM / 200,000 tokens/天 |
+| groq  | `openai/gpt-oss-safeguard-20b` | Safety GPT OSS 20B | 131K | 限速免费 | 3 RPM / 1000 RPD / 2000 TPM / 200,000 tokens/天 |
+| groq  | `qwen/qwen3.8-27b` | Qwen/Qwen3.8-27B | 131K | 限速免费 | 30 RPM / 1000 RPD / 8000 TPM / 200,000 tokens/天 |
+| groq  | `whisper-large-v3` | Whisper | 448 | 限速免费 | 20 RPM / 2000 RPD |
+| groq  | `whisper-large-v3-turbo` | Whisper Large V3 Turbo | 448 | 限速免费 | 20 RPM / 2000 RPD |

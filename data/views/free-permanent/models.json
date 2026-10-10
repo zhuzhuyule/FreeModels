@@ -1,8 +1,8 @@
 {
   "object": "list",
   "view": "free-permanent",
-  "updated_at": "2026-10-09T08:36:58.466Z",
-  "total": 45,
+  "updated_at": "2026-10-10T03:23:47.035Z",
+  "total": 46,
   "filters": {
     "freeMechanism": "permanent"
   },
@@ -98,7 +98,7 @@
       "owned_by": "bigmodel",
       "provider": "bigmodel",
       "name": "GLM-4.1V-Thinking-Flash",
-      "description": "视觉推理",
+      "description": "GLM-4.1V-Thinking-Flash 是智谱推出的免费视觉推理模型。它在图表/视频理解、前端 Coding、GUI 任务等场景表现出色，核心能力达到全面新 SOTA。模型引入思维链推理机制，显著提升了复杂场景中的回答精准度与可解释性。",
       "context_size": 64000,
       "context_label": "64K",
       "price_input": 0,
@@ -150,7 +150,7 @@
       "owned_by": "bigmodel",
       "provider": "bigmodel",
       "name": "GLM-4V-Flash",
-      "description": "图像理解",
+      "description": "GLM-4V-Flash 是智谱推出的首个完全免费的图像理解模型。在图像识别、图像问答、图像推理等多项任务中展现出卓越的性能。在企业应用场景中，GLM-4V-Flash 表现突出，不仅能够帮助企业实现高效图像处理，还能紧密贴合不同垂直领域的实际需求，适配多样化应用场景。",
       "context_size": 4000,
       "context_label": "4K",
       "price_input": 0,
@@ -240,46 +240,33 @@
       "created": 586716134,
       "owned_by": "bigmodel",
       "provider": "bigmodel",
-      "name": "CogView-3-Flash",
-      "description": "图像生成",
+      "name": "Cogview-3-Flash",
+      "description": "CogView-3-Flash 是智谱推出的免费图像生成模型，能够根据用户指令生成符合要求且美学评分更高的图像。CogView-3-Flash 主要应用于艺术创作、设计参考、游戏开发、虚拟现实等领域，帮助用户快速实现从文本到图像的转换需求。",
       "context_label": "unknown",
       "price_input": 0,
       "price_output": 0,
       "is_free": true,
       "capabilities": [
-        "chat",
-        "text-generation",
-        "vision",
         "image-generation"
       ],
       "tags": [
-        "chat",
-        "text-generation",
-        "vision",
-        "image-generation",
-        "multimodal"
+        "image-generation"
       ],
       "is_reasoning": false,
-      "is_multimodal": true,
+      "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "permanent",
       "free_quota": null,
       "trial_scope": "specific",
       "model_family": "cogview-3-flash",
       "aliases": [],
-      "tier": "large",
+      "tier": "medium",
       "speed": "fast",
       "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance",
-        "image-understanding",
-        "visual-q&a",
         "creative-generation",
         "art"
       ],
-      "performance_level": "mid",
+      "performance_level": "entry",
       "estimated_latency": "< 1s"
     },
     {
@@ -289,19 +276,15 @@
       "owned_by": "bigmodel",
       "provider": "bigmodel",
       "name": "CogVideoX-Flash",
-      "description": "视频生成",
+      "description": "CogVideoX-Flash 是智谱推出的免费视频生成模型，能够根据用户指令生成符合要求且美学评分更高的视频。",
       "context_label": "unknown",
       "price_input": 0,
       "price_output": 0,
       "is_free": true,
       "capabilities": [
-        "chat",
-        "text-generation",
         "video-generation"
       ],
       "tags": [
-        "chat",
-        "text-generation",
         "video-generation"
       ],
       "is_reasoning": false,
@@ -315,85 +298,154 @@
       "tier": "medium",
       "speed": "fast",
       "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance",
         "video-creation"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
     },
     {
-      "id": "jina-clip-v1",
+      "id": "glm-4.7-flash",
       "object": "model",
-      "created": 2146547664,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "jina-clip-v1",
-      "description": "Jina-CLIP-V1 是由 Jina AI 团队开发的多模态检索模型。基于数十亿参数的训练，Jina-CLIP-V1 在视觉理解、跨模态文本匹配以及语义检索方面表现出色。得益于其强大的文本和图像特征学习能力，该模型能够在多种应用场景中提供高质量的跨模态搜索体验。",
-      "context_size": 500,
-      "context_label": "500",
+      "created": 1010454616,
+      "owned_by": "bigmodel",
+      "provider": "bigmodel",
+      "name": "GLM-4.7-Flash",
+      "description": "GLM-4.7-Flash 作为 30B 级 SOTA 模型，提供了一个兼顾性能与效率的新选择。面向 Agentic Coding 场景强化了编码能力、长程任务规划与工具协同，并在多个公开基准的当期榜单中取得同尺寸开源模型中的出色表现。在执行复杂智能体任务，在工具调用时指令遵循更强，Artifacts 与 Agentic Coding 的前端美感和长程任务完成效率进一步提升。",
+      "context_size": 200000,
+      "context_label": "200K",
       "price_input": 0,
       "price_output": 0,
       "is_free": true,
       "capabilities": [
-        "embeddings"
+        "chat",
+        "text-generation",
+        "reasoning"
       ],
       "tags": [
-        "embeddings"
+        "chat",
+        "text-generation",
+        "reasoning"
       ],
-      "is_reasoning": false,
+      "is_reasoning": true,
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "permanent",
       "free_quota": null,
       "trial_scope": "specific",
-      "model_family": "jina-clip-v1",
-      "aliases": [],
-      "tier": "medium",
+      "model_family": "glm-4.7-flash",
+      "aliases": [
+        "xingchen/xopglmv47flash"
+      ],
+      "tier": "large",
       "speed": "fast",
       "use_case": [
-        "semantic-search",
-        "similarity"
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
-      "id": "jina-clip-v2",
+      "id": "glm-4.5-flash",
       "object": "model",
-      "created": 2146547663,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "jina-clip-v2",
-      "description": "Jina-CLIP-V2 是一款支持 8k 上下文和强大图片处理能力的多模态对齐模型，适用于长文本分析和图文检索等任务。",
-      "context_size": 8000,
-      "context_label": "8K",
+      "created": 1572481322,
+      "owned_by": "bigmodel",
+      "provider": "bigmodel",
+      "name": "GLM-4.5-Flash",
+      "description": "GLM-4.5-Flash 将于2026 年 1 月 30 日下线，请您及时将模型编码更新为最新版本。正式下线后，相关请求将会自动路由至 GLM-4.7-Flash。",
+      "context_size": 128000,
+      "context_label": "128K",
       "price_input": 0,
       "price_output": 0,
       "is_free": true,
       "capabilities": [
-        "embeddings"
+        "chat",
+        "text-generation",
+        "reasoning"
       ],
       "tags": [
-        "embeddings"
+        "chat",
+        "text-generation",
+        "reasoning"
       ],
-      "is_reasoning": false,
+      "is_reasoning": true,
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "permanent",
       "free_quota": null,
       "trial_scope": "specific",
-      "model_family": "jina-clip-v2",
+      "model_family": "glm-4.5-flash",
       "aliases": [],
-      "tier": "medium",
+      "tier": "large",
       "speed": "fast",
       "use_case": [
-        "semantic-search",
-        "similarity"
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "glm-4.6v-flash",
+      "object": "model",
+      "created": 1161885709,
+      "owned_by": "bigmodel",
+      "provider": "bigmodel",
+      "name": "GLM-4.6V-Flash",
+      "description": "GLM-4.6V-Flash 是 GLM-4.6V 的免费版本，是 GLM 系列在多模态方向上的一次重要迭代，支持开启或关闭思考模式。它将训练时上下文窗口提升到 128K Tokens，在视觉理解精度上达到同参数规模 SOTA，并首次在模型架构中将 Function Calling（工具调用）能力原生融入视觉模型，打通从「视觉感知」到「可执行行动（Action）」的链路，为真实业务场景中的多模态 Agent 提供统一的技术底座。",
+      "context_size": 128000,
+      "context_label": "128K",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision",
+        "reasoning"
+      ],
+      "tags": [
+        "chat",
+        "text-generation",
+        "vision",
+        "reasoning",
+        "multimodal"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": "permanent",
+      "free_quota": null,
+      "trial_scope": "specific",
+      "model_family": "glm-4.6v-flash",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "image-understanding",
+        "visual-q&a",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -1081,6 +1133,7 @@
       "model_family": "qwen3-embedding-8b",
       "model_variant": "embedding",
       "aliases": [
+        "ovh/Qwen3-Embedding-8B",
         "xingchen/xop3qwen8bembedding"
       ],
       "parameter_count": 8000000000,
@@ -1631,7 +1684,9 @@
       "free_quota": null,
       "trial_scope": "specific",
       "model_family": "bge-m3",
-      "aliases": [],
+      "aliases": [
+        "ovh/bge-m3"
+      ],
       "tier": "medium",
       "speed": "fast",
       "use_case": [

@@ -27,27 +27,27 @@
 
 ## 免费策略
 
-NIM / build.nvidia.com 通常提供开发体验 credits 或试用额度。
+公共 NIM 端点（build.nvidia.com 标记的免费模型）限速约 40 RPM / 10,000 requests/天，限速内不收费；官方 limits 页为准。
 
 ## 当前免费模型
 
 | Provider | Model ID | 名称 | 上下文 | 免费类型 | 限制 |
 |---|---|---|---:|---|---|
-| nvidia  | `deepseek-ai/deepseek-v4.1-flash` | deepseek-v4.1-flash | unknown | 试用 credits | NVIDIA NIM free credits, exhaustible |
-| nvidia  | `google/diffusiongemma-26b-a4b-it` | diffusiongemma-26b-a4b-it | unknown | 试用 credits | NVIDIA NIM free credits, exhaustible |
-| nvidia  | `google/gemma-4-31b-it` | gemma-4-31b-it | unknown | 试用 credits | NVIDIA NIM free credits, exhaustible |
-| nvidia  | `ising-calibration-1.5-31b` | ising-calibration-1.5-31b | unknown | 试用 credits | NVIDIA NIM free credits, exhaustible |
-| nvidia  | `meta/llama-3.2-11b-vision-instruct` | llama-3.2-11b-vision-instruct | unknown | 试用 credits | NVIDIA NIM free credits, exhaustible |
-| nvidia  | `meta/llama-3.2-90b-vision-instruct` | llama-3.2-90b-vision-instruct | unknown | 试用 credits | NVIDIA NIM free credits, exhaustible |
-| nvidia  | `meta/llama-guard-4-12b` | llama-guard-4-12b | unknown | 试用 credits | NVIDIA NIM free credits, exhaustible |
-| nvidia  | `meta/muse-glimmer-30b` | muse-glimmer-30b | unknown | 试用 credits | NVIDIA NIM free credits, exhaustible |
-| nvidia  | `moonshotai/kimi-k3` | kimi-k3 | unknown | 试用 credits | NVIDIA NIM free credits, exhaustible |
-| nvidia  | `nemotron-3-embed-1b` | nemotron-3-embed-1b | unknown | 试用 credits | NVIDIA NIM free credits, exhaustible |
-| nvidia  | `nemotron-3-nano-omni-30b-a3b-reasoning` | nemotron-3-nano-omni-30b-a3b-reasoning | unknown | 试用 credits | NVIDIA NIM free credits, exhaustible |
-| nvidia  | `nemotron-3-super-120b-a12b` | nemotron-3-super-120b-a12b | unknown | 试用 credits | NVIDIA NIM free credits, exhaustible |
-| nvidia  | `nemotron-3-ultra-550b-a55b` | nemotron-3-ultra-550b-a55b | unknown | 试用 credits | NVIDIA NIM free credits, exhaustible |
-| nvidia  | `nemotron-3.5-content-safety` | nemotron-3.5-content-safety | unknown | 试用 credits | NVIDIA NIM free credits, exhaustible |
-| nvidia  | `nemotron-3.5-lightning-30b-a3b` | nemotron-3.5-lightning-30b-a3b | unknown | 试用 credits | NVIDIA NIM free credits, exhaustible |
-| nvidia  | `openai/gpt-oss-20b` | gpt-oss-20b | unknown | 试用 credits | NVIDIA NIM free credits, exhaustible |
-| nvidia  | `poolside/laguna-xs-2.1` | laguna-xs-2.1 | unknown | 试用 credits | NVIDIA NIM free credits, exhaustible |
-| nvidia  | `riva-translate-4b-instruct-v2` | riva-translate-4b-instruct-v2 | unknown | 试用 credits | NVIDIA NIM free credits, exhaustible |
+| nvidia  | `deepseek-ai/deepseek-v4.1-flash` | deepseek-v4.1-flash | unknown | 限速免费 | 40 RPM / 10000 RPD / Public NIM endpoints: Up to 40 rpm and 10,000 requests per day; limits may vary by model and by traffic |
+| nvidia  | `google/diffusiongemma-26b-a4b-it` | diffusiongemma-26b-a4b-it | unknown | 限速免费 | 40 RPM / 10000 RPD / Public NIM endpoints: Up to 40 rpm and 10,000 requests per day; limits may vary by model and by traffic |
+| nvidia  | `google/gemma-4-31b-it` | gemma-4-31b-it | unknown | 限速免费 | 40 RPM / 10000 RPD / Public NIM endpoints: Up to 40 rpm and 10,000 requests per day; limits may vary by model and by traffic |
+| nvidia  | `ising-calibration-1.5-31b` | ising-calibration-1.5-31b | unknown | 限速免费 | 40 RPM / 10000 RPD / Public NIM endpoints: Up to 40 rpm and 10,000 requests per day; limits may vary by model and by traffic |
+| nvidia  | `meta/llama-3.2-11b-vision-instruct` | llama-3.2-11b-vision-instruct | unknown | 限速免费 | 40 RPM / 10000 RPD / Public NIM endpoints: Up to 40 rpm and 10,000 requests per day; limits may vary by model and by traffic |
+| nvidia  | `meta/llama-3.2-90b-vision-instruct` | llama-3.2-90b-vision-instruct | unknown | 限速免费 | 40 RPM / 10000 RPD / Public NIM endpoints: Up to 40 rpm and 10,000 requests per day; limits may vary by model and by traffic |
+| nvidia  | `meta/llama-guard-4-12b` | llama-guard-4-12b | unknown | 限速免费 | 40 RPM / 10000 RPD / Public NIM endpoints: Up to 40 rpm and 10,000 requests per day; limits may vary by model and by traffic |
+| nvidia  | `meta/muse-glimmer-30b` | muse-glimmer-30b | unknown | 限速免费 | 40 RPM / 10000 RPD / Public NIM endpoints: Up to 40 rpm and 10,000 requests per day; limits may vary by model and by traffic |
+| nvidia  | `moonshotai/kimi-k3` | kimi-k3 | unknown | 限速免费 | 40 RPM / 10000 RPD / Public NIM endpoints: Up to 40 rpm and 10,000 requests per day; limits may vary by model and by traffic |
+| nvidia  | `nemotron-3-embed-1b` | nemotron-3-embed-1b | unknown | 限速免费 | 40 RPM / 10000 RPD / Public NIM endpoints: Up to 40 rpm and 10,000 requests per day; limits may vary by model and by traffic |
+| nvidia  | `nemotron-3-nano-omni-30b-a3b-reasoning` | nemotron-3-nano-omni-30b-a3b-reasoning | unknown | 限速免费 | 40 RPM / 10000 RPD / Public NIM endpoints: Up to 40 rpm and 10,000 requests per day; limits may vary by model and by traffic |
+| nvidia  | `nemotron-3-super-120b-a12b` | nemotron-3-super-120b-a12b | unknown | 限速免费 | 40 RPM / 10000 RPD / Public NIM endpoints: Up to 40 rpm and 10,000 requests per day; limits may vary by model and by traffic |
+| nvidia  | `nemotron-3-ultra-550b-a55b` | nemotron-3-ultra-550b-a55b | unknown | 限速免费 | 40 RPM / 10000 RPD / Public NIM endpoints: Up to 40 rpm and 10,000 requests per day; limits may vary by model and by traffic |
+| nvidia  | `nemotron-3.5-content-safety` | nemotron-3.5-content-safety | unknown | 限速免费 | 40 RPM / 10000 RPD / Public NIM endpoints: Up to 40 rpm and 10,000 requests per day; limits may vary by model and by traffic |
+| nvidia  | `nemotron-3.5-lightning-30b-a3b` | nemotron-3.5-lightning-30b-a3b | unknown | 限速免费 | 40 RPM / 10000 RPD / Public NIM endpoints: Up to 40 rpm and 10,000 requests per day; limits may vary by model and by traffic |
+| nvidia  | `openai/gpt-oss-20b` | gpt-oss-20b | unknown | 限速免费 | 40 RPM / 10000 RPD / Public NIM endpoints: Up to 40 rpm and 10,000 requests per day; limits may vary by model and by traffic |
+| nvidia  | `poolside/laguna-xs-2.1` | laguna-xs-2.1 | unknown | 限速免费 | 40 RPM / 10000 RPD / Public NIM endpoints: Up to 40 rpm and 10,000 requests per day; limits may vary by model and by traffic |
+| nvidia  | `riva-translate-4b-instruct-v2` | riva-translate-4b-instruct-v2 | unknown | 限速免费 | 40 RPM / 10000 RPD / Public NIM endpoints: Up to 40 rpm and 10,000 requests per day; limits may vary by model and by traffic |

@@ -21,9 +21,9 @@
 
 | 指标 | 数量 |
 |---|---:|
-| 总模型 | 221 |
-| 免费模型 | 38 |
-| 付费可试用 | 99 |
+| 总模型 | 205 |
+| 免费模型 | 36 |
+| 付费可试用 | 92 |
 
 ## 免费策略
 
@@ -54,8 +54,6 @@
 | gitee  | `Intern-S2` | Intern-S2 | 256K | 永久免费 | — |
 | gitee  | `internlm3-8b-instruct` | InternLM3-8B-Instruct | 32K | 永久免费 | — |
 | gitee  | `ip-location` | IP 查询 | unknown | 永久免费 | — |
-| gitee  | `jina-clip-v1` | jina-clip-v1 | 500 | 永久免费 | — |
-| gitee  | `jina-clip-v2` | jina-clip-v2 | 8K | 永久免费 | — |
 | gitee  | `jina-embeddings-v4` | jina-embeddings-v4 | 32K | 永久免费 | — |
 | gitee  | `Lingshu-32B` | Lingshu-32B 医疗大模型 | 32K | 永久免费 | — |
 | gitee  | `Qwen2-7B-Instruct` | Qwen2-7B-Instruct | 24K | 永久免费 | — |

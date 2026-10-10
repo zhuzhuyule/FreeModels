@@ -1,0 +1,361 @@
+{
+  "object": "list",
+  "provider": "llm7",
+  "updated_at": "2026-10-10T03:23:47.024Z",
+  "total": 7,
+  "data": [
+    {
+      "id": "DeepSeek-V4-Flash-0731",
+      "object": "model",
+      "created": 1082237056,
+      "owned_by": "llm7",
+      "provider": "llm7",
+      "name": "DeepSeek-V4-Flash-0731",
+      "description": "LLM7 chat (turbo tier)",
+      "context_size": 400000,
+      "context_label": "400K",
+      "price_input": 0.02,
+      "price_output": 0.04,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "tool-use",
+        "reasoning"
+      ],
+      "tags": [
+        "text-generation",
+        "chat",
+        "tool-use",
+        "reasoning"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "rpm": 60,
+        "tokens_per_day": 100000,
+        "notes": "Free API token from dash.llm7.io (signup required, no payment). 100,000 tokens per 24 hours across input+output 60 requests per minute, 250 per hour. Official docs warn the free-token quota may be reduced without notice. price_input/price_output are LLM7 paid-usage rates (USD per 1M tokens), not what the free tier costs."
+      },
+      "trial_scope": "specific",
+      "model_family": "deepseek-v4-flash",
+      "aliases": [
+        "cloudflare/@cf/deepseek-ai/deepseek-v4-flash-0731",
+        "DeepSeek-V4-Flash",
+        "deepseek-v4-flash-0731",
+        "sensenova/deepseek-v4-flash",
+        "xingchen/xopdeepseekv4flash0731"
+      ],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "GLM-5.3-Flash",
+      "object": "model",
+      "created": 1616888882,
+      "owned_by": "llm7",
+      "provider": "llm7",
+      "name": "GLM-5.3-Flash",
+      "description": "LLM7 chat (turbo tier)",
+      "context_size": 400000,
+      "context_label": "400K",
+      "price_input": 0.02,
+      "price_output": 0.04,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "tool-use",
+        "reasoning"
+      ],
+      "tags": [
+        "text-generation",
+        "chat",
+        "tool-use",
+        "reasoning"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "rpm": 60,
+        "tokens_per_day": 100000,
+        "notes": "Free API token from dash.llm7.io (signup required, no payment). 100,000 tokens per 24 hours across input+output 60 requests per minute, 250 per hour. Official docs warn the free-token quota may be reduced without notice. price_input/price_output are LLM7 paid-usage rates (USD per 1M tokens), not what the free tier costs."
+      },
+      "trial_scope": "specific",
+      "model_family": "glm-5.3-flash",
+      "aliases": [
+        "GLM-5.3-Flash",
+        "z-ai/glm-5.3-flash"
+      ],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "codestral-latest",
+      "object": "model",
+      "created": 1487565173,
+      "owned_by": "llm7",
+      "provider": "llm7",
+      "name": "codestral-latest",
+      "description": "LLM7 chat (turbo tier)",
+      "context_size": 32000,
+      "context_label": "32K",
+      "price_input": 0.01,
+      "price_output": 0.02,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "tool-use",
+        "code-generation"
+      ],
+      "tags": [
+        "text-generation",
+        "chat",
+        "tool-use",
+        "code-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "rpm": 60,
+        "tokens_per_day": 100000,
+        "notes": "Free API token from dash.llm7.io (signup required, no payment). 100,000 tokens per 24 hours across input+output 60 requests per minute, 250 per hour. Official docs warn the free-token quota may be reduced without notice. price_input/price_output are LLM7 paid-usage rates (USD per 1M tokens), not what the free tier costs."
+      },
+      "trial_scope": "specific",
+      "model_family": "codestral-latest",
+      "aliases": [],
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "software-development",
+        "code-completion"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "gemma4:31b",
+      "object": "model",
+      "created": 539212523,
+      "owned_by": "llm7",
+      "provider": "llm7",
+      "name": "gemma4:31b",
+      "description": "LLM7 chat (turbo tier)",
+      "context_size": 262000,
+      "context_label": "262K",
+      "price_input": 0.07,
+      "price_output": 0.23,
+      "is_free": false,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "tool-use"
+      ],
+      "tags": [
+        "text-generation",
+        "chat",
+        "tool-use"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "gemma4:31b",
+      "aliases": [],
+      "parameter_count": 31000000000,
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "gpt-oss:20b",
+      "object": "model",
+      "created": 1018220347,
+      "owned_by": "llm7",
+      "provider": "llm7",
+      "name": "gpt-oss:20b",
+      "description": "LLM7 chat (turbo tier)",
+      "context_size": 128000,
+      "context_label": "128K",
+      "price_input": 0.03,
+      "price_output": 0.05,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "tool-use"
+      ],
+      "tags": [
+        "text-generation",
+        "chat",
+        "tool-use"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "rpm": 60,
+        "tokens_per_day": 100000,
+        "notes": "Free API token from dash.llm7.io (signup required, no payment). 100,000 tokens per 24 hours across input+output 60 requests per minute, 250 per hour. Official docs warn the free-token quota may be reduced without notice. price_input/price_output are LLM7 paid-usage rates (USD per 1M tokens), not what the free tier costs."
+      },
+      "trial_scope": "specific",
+      "model_family": "gpt-oss:20b",
+      "aliases": [],
+      "parameter_count": 20000000000,
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "mistral-Nemo-Instruct-2407",
+      "object": "model",
+      "created": 166918731,
+      "owned_by": "llm7",
+      "provider": "llm7",
+      "name": "mistral-Nemo-Instruct-2407",
+      "description": "LLM7 chat (turbo tier)",
+      "context_size": 128000,
+      "context_label": "128K",
+      "price_input": 0.03,
+      "price_output": 0.03,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation",
+        "chat"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "rpm": 60,
+        "tokens_per_day": 100000,
+        "notes": "Free API token from dash.llm7.io (signup required, no payment). 100,000 tokens per 24 hours across input+output 60 requests per minute, 250 per hour. Official docs warn the free-token quota may be reduced without notice. price_input/price_output are LLM7 paid-usage rates (USD per 1M tokens), not what the free tier costs."
+      },
+      "trial_scope": "specific",
+      "model_family": "mistral-nemo",
+      "model_variant": "instruct",
+      "aliases": [
+        "ovh/Mistral-Nemo-Instruct-2407"
+      ],
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "nemotron-3-nano:30b",
+      "object": "model",
+      "created": 707689030,
+      "owned_by": "llm7",
+      "provider": "llm7",
+      "name": "nemotron-3-nano:30b",
+      "description": "LLM7 chat (turbo tier)",
+      "context_size": 1000000,
+      "context_label": "1M",
+      "price_input": 0.03,
+      "price_output": 0.08,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "tool-use",
+        "reasoning"
+      ],
+      "tags": [
+        "text-generation",
+        "chat",
+        "tool-use",
+        "reasoning"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "rpm": 60,
+        "tokens_per_day": 100000,
+        "notes": "Free API token from dash.llm7.io (signup required, no payment). 100,000 tokens per 24 hours across input+output 60 requests per minute, 250 per hour. Official docs warn the free-token quota may be reduced without notice. price_input/price_output are LLM7 paid-usage rates (USD per 1M tokens), not what the free tier costs."
+      },
+      "trial_scope": "specific",
+      "model_family": "nemotron-3-nano:30b",
+      "aliases": [],
+      "parameter_count": 30000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    }
+  ]
+}

@@ -1,12 +1,119 @@
 {
   "object": "list",
   "view": "premium",
-  "updated_at": "2026-10-09T08:36:58.478Z",
-  "total": 97,
+  "updated_at": "2026-10-10T03:23:47.045Z",
+  "total": 104,
   "filters": {
     "speed": "premium"
   },
   "data": [
+    {
+      "id": "agnes-2.5-pro",
+      "object": "model",
+      "created": 606116880,
+      "owned_by": "agnes",
+      "provider": "agnes",
+      "name": "Agnes 2.5 Pro",
+      "description": "Agnes AI: The commercial stable version of the benchmark-listed Agnes 2.5 Pro Beta model for advanced coding, scientific reasoning, long-context analysis, agentic workflows, and multimodal understanding.",
+      "context_size": 1000000,
+      "context_label": "1M",
+      "price_input": 0.45,
+      "price_output": 0.9,
+      "is_free": false,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision",
+        "function-calling",
+        "tool-use"
+      ],
+      "tags": [
+        "reasoning",
+        "vision",
+        "text-generation",
+        "chat",
+        "function-calling",
+        "tool-use",
+        "multimodal"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": true,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "agnes-2.5-pro",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "complex-reasoning"
+      ],
+      "performance_level": "high",
+      "estimated_latency": "3-10s"
+    },
+    {
+      "id": "agnes-3.0-pro",
+      "object": "model",
+      "created": 1891655244,
+      "owned_by": "agnes",
+      "provider": "agnes",
+      "name": "Agnes 3.0 Pro",
+      "description": "Agnes AI: A new-generation Pro model, coming soon, for agentic work, professional document analysis, scientific coding, and long-context reasoning.",
+      "context_label": "unknown",
+      "price_input": 0.45,
+      "price_output": 0.9,
+      "is_free": false,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision",
+        "function-calling",
+        "tool-use"
+      ],
+      "tags": [
+        "reasoning",
+        "text-generation",
+        "chat",
+        "vision",
+        "function-calling",
+        "tool-use",
+        "multimodal"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": true,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "agnes-3.0-pro",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "image-understanding",
+        "visual-q&a",
+        "complex-reasoning"
+      ],
+      "performance_level": "high",
+      "estimated_latency": "3-10s"
+    },
     {
       "id": "glm-4-plus",
       "object": "model",
@@ -774,6 +881,357 @@
       "estimated_latency": "3-10s"
     },
     {
+      "id": "@cf/moonshotai/kimi-k2.7-code",
+      "object": "model",
+      "created": 541624990,
+      "owned_by": "cloudflare",
+      "provider": "cloudflare",
+      "name": "@cf/moonshotai/kimi-k2.7-code",
+      "description": "Kimi K2.7 is a frontier-scale open-source 1T parameter model with a 262.1k context window, multi-turn tool calling, vision inputs, and structured outputs for agentic workloads.",
+      "context_size": 262144,
+      "context_label": "262K",
+      "price_input": 0.19,
+      "price_output": 4,
+      "is_free": false,
+      "capabilities": [
+        "text-generation",
+        "function-calling",
+        "reasoning"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "tool-use",
+        "function-calling",
+        "reasoning",
+        "multimodal"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": true,
+      "free_mechanism": null,
+      "free_quota": {
+        "notes": "Excluded from the 10,000 neurons/day free allocation: requires the Workers Paid plan or prepaid AI Gateway credits"
+      },
+      "trial_scope": "none",
+      "model_family": "moonshotai-kimi-k2.7-code",
+      "model_variant": "code",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "high",
+      "estimated_latency": "3-10s"
+    },
+    {
+      "id": "@cf/zai-org/glm-5.3",
+      "object": "model",
+      "created": 1600228440,
+      "owned_by": "cloudflare",
+      "provider": "cloudflare",
+      "name": "@cf/zai-org/glm-5.3",
+      "description": "GLM-5.3 is Z.ai's flagship agentic coding model, pairing a 1M-token context window with reasoning, function calling, and structured outputs to power multi-step, tool-driven development workflows.",
+      "context_size": 1048576,
+      "context_label": "1M",
+      "price_input": 0.26,
+      "price_output": 4.4,
+      "is_free": false,
+      "capabilities": [
+        "text-generation",
+        "function-calling",
+        "reasoning"
+      ],
+      "tags": [
+        "reasoning",
+        "text-generation",
+        "tool-use",
+        "function-calling"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": null,
+      "free_quota": {
+        "notes": "Excluded from the 10,000 neurons/day free allocation: requires the Workers Paid plan or prepaid AI Gateway credits"
+      },
+      "trial_scope": "none",
+      "model_family": "org-glm-5.3",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performance_level": "high",
+      "estimated_latency": "3-10s"
+    },
+    {
+      "id": "@cf/zai-org/glm-5.3-flash",
+      "object": "model",
+      "created": 1674197715,
+      "owned_by": "cloudflare",
+      "provider": "cloudflare",
+      "name": "@cf/zai-org/glm-5.3-flash",
+      "description": "The first natively multimodal model in the GLM-5 series. With 320B total parameters and just 18B active parameters, it outperforms GLM-5.2 across benchmarks and real-world workloads at one-tenth the price, while approaching Claude Opus 4.8 on coding and agentic benchmarks.",
+      "context_size": 1048576,
+      "context_label": "1M",
+      "price_input": 0.03,
+      "price_output": 0.5,
+      "is_free": false,
+      "capabilities": [
+        "text-generation",
+        "function-calling",
+        "reasoning"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "function-calling",
+        "reasoning",
+        "multimodal"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": true,
+      "free_mechanism": null,
+      "free_quota": {
+        "notes": "Excluded from the 10,000 neurons/day free allocation: requires the Workers Paid plan or prepaid AI Gateway credits"
+      },
+      "trial_scope": "none",
+      "model_family": "org-glm-5.3-flash",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "high",
+      "estimated_latency": "3-10s"
+    },
+    {
+      "id": "@cf/moonshotai/kimi-k2.6",
+      "object": "model",
+      "created": 1273849035,
+      "owned_by": "cloudflare",
+      "provider": "cloudflare",
+      "name": "@cf/moonshotai/kimi-k2.6",
+      "description": "Kimi K2.6 is a frontier-scale open-source 1T parameter model with a 262.1k context window, multi-turn tool calling, vision inputs, and structured outputs for agentic workloads.",
+      "context_size": 262144,
+      "context_label": "262K",
+      "price_input": 0.16,
+      "price_output": 4,
+      "is_free": false,
+      "capabilities": [
+        "text-generation",
+        "function-calling",
+        "reasoning"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "tool-use",
+        "function-calling",
+        "reasoning",
+        "multimodal"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": true,
+      "free_mechanism": null,
+      "free_quota": {
+        "notes": "Excluded from the 10,000 neurons/day free allocation: requires the Workers Paid plan or prepaid AI Gateway credits"
+      },
+      "trial_scope": "none",
+      "model_family": "moonshotai-kimi-k2.6",
+      "aliases": [
+        "moonshotai/kimi-k2.6"
+      ],
+      "tier": "large",
+      "speed": "premium",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "high",
+      "estimated_latency": "3-10s"
+    },
+    {
+      "id": "@cf/deepseek-ai/deepseek-v4-flash-0731",
+      "object": "model",
+      "created": 797500887,
+      "owned_by": "cloudflare",
+      "provider": "cloudflare",
+      "name": "@cf/deepseek-ai/deepseek-v4-flash-0731",
+      "description": "DeepSeek-V4-Flash-0731 is the official release of DeepSeek-V4-Flash, superseding the preview version, with substantially enhanced agentic capabilities. ",
+      "context_size": 1048576,
+      "context_label": "1M",
+      "price_input": 0.014,
+      "price_output": 1.32,
+      "is_free": false,
+      "capabilities": [
+        "text-generation",
+        "function-calling",
+        "reasoning"
+      ],
+      "tags": [
+        "text-generation",
+        "function-calling",
+        "reasoning"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": null,
+      "free_quota": {
+        "notes": "Excluded from the 10,000 neurons/day free allocation: requires the Workers Paid plan or prepaid AI Gateway credits"
+      },
+      "trial_scope": "none",
+      "model_family": "deepseek-v4-flash",
+      "aliases": [
+        "DeepSeek-V4-Flash",
+        "deepseek-v4-flash-0731",
+        "llm7/DeepSeek-V4-Flash-0731",
+        "sensenova/deepseek-v4-flash",
+        "xingchen/xopdeepseekv4flash0731"
+      ],
+      "tier": "large",
+      "speed": "premium",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "high",
+      "estimated_latency": "3-10s"
+    },
+    {
+      "id": "@cf/zai-org/glm-5.2",
+      "object": "model",
+      "created": 1600228439,
+      "owned_by": "cloudflare",
+      "provider": "cloudflare",
+      "name": "@cf/zai-org/glm-5.2",
+      "description": "Z.ai's flagship agentic coding model",
+      "context_size": 262144,
+      "context_label": "262K",
+      "price_input": 0.26,
+      "price_output": 4.4,
+      "is_free": false,
+      "capabilities": [
+        "text-generation",
+        "function-calling",
+        "reasoning"
+      ],
+      "tags": [
+        "text-generation",
+        "function-calling",
+        "reasoning"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": null,
+      "free_quota": {
+        "notes": "Excluded from the 10,000 neurons/day free allocation: requires the Workers Paid plan or prepaid AI Gateway credits"
+      },
+      "trial_scope": "none",
+      "model_family": "org-glm-5.2",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "high",
+      "estimated_latency": "3-10s"
+    },
+    {
+      "id": "@cf/deepseek-ai/deepseek-v4-pro-0813",
+      "object": "model",
+      "created": 1483190957,
+      "owned_by": "cloudflare",
+      "provider": "cloudflare",
+      "name": "@cf/deepseek-ai/deepseek-v4-pro-0813",
+      "description": "DeepSeek V4 Pro is a high-capability reasoning model from DeepSeek with a one million token context window, built for long-horizon agentic workflows and complex, multi-step problem-solving",
+      "context_size": 1048576,
+      "context_label": "1M",
+      "price_input": 0.044,
+      "price_output": 3.96,
+      "is_free": false,
+      "capabilities": [
+        "text-generation",
+        "function-calling",
+        "reasoning"
+      ],
+      "tags": [
+        "reasoning",
+        "text-generation",
+        "function-calling"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": null,
+      "free_quota": {
+        "notes": "Excluded from the 10,000 neurons/day free allocation: requires the Workers Paid plan or prepaid AI Gateway credits"
+      },
+      "trial_scope": "none",
+      "model_family": "deepseek-v4-pro",
+      "aliases": [
+        "DeepSeek-V4-Pro",
+        "DeepSeek-V4-Pro-0813",
+        "xingchen/xopdeepseekv4pro0813",
+        "xingchen/xopdeepseekv4pro"
+      ],
+      "tier": "large",
+      "speed": "premium",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performance_level": "high",
+      "estimated_latency": "3-10s"
+    },
+    {
       "id": "Florence-2-large",
       "object": "model",
       "created": 602781162,
@@ -1094,44 +1552,6 @@
         "visual-q&a",
         "image-editing",
         "style-transfer"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "3-10s"
-    },
-    {
-      "id": "DeepSeek-OCR",
-      "object": "model",
-      "created": 1892487164,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "DeepSeek-OCR",
-      "description": "DeepSeek-OCR 是由 DeepSeek 团队 开发的高精度光学字符识别（OCR, Optical Character Recognition）系统，旨在在复杂场景下实现高效、准确的文字检测与识别。\n它支持 多语言识别、复杂版面分析、表格与公式识别 等多种任务，适用于票据、文档、截图、自然场景图片等多样化输入。",
-      "context_label": "unknown",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": false,
-      "capabilities": [
-        "vision"
-      ],
-      "tags": [
-        "vision",
-        "multimodal"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "deepseek-ocr",
-      "aliases": [
-        "xingchen/xopdeepseekocr"
-      ],
-      "tier": "large",
-      "speed": "premium",
-      "use_case": [
-        "image-understanding",
-        "visual-q&a"
       ],
       "performance_level": "mid",
       "estimated_latency": "3-10s"
@@ -2156,80 +2576,6 @@
       "estimated_latency": "3-10s"
     },
     {
-      "id": "Qwen3-VL-8B-Thinking",
-      "object": "model",
-      "created": 702403186,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "Qwen3-VL-8B-Thinking",
-      "description": "Qwen3-VL-8B-Thinking 是一款兼顾部署效率与深度视觉推理能力的多模态模型，支持图片、文档和图表理解，并可通过思考模式处理数学题、空间关系、视觉逻辑及多步骤问答任务。",
-      "context_label": "unknown",
-      "price_input": 0.5,
-      "price_output": 5,
-      "is_free": false,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
-      "model_family": "qwen3-vl-8b-thinking",
-      "model_variant": "thinking",
-      "aliases": [],
-      "parameter_count": 8000000000,
-      "tier": "medium",
-      "speed": "premium",
-      "use_case": [
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "1-3s"
-    },
-    {
-      "id": "Qwen3-VL-235B-A22B-Thinking",
-      "object": "model",
-      "created": 196446216,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "Qwen3-VL-235B-A22B-Thinking",
-      "description": "Qwen3-VL-235B-A22B-Thinking 是 Qwen3-VL 系列的大规模混合专家思考模型，具备强大的视觉感知、跨模态推理、复杂文档理解、视频分析和智能体能力，适用于高难度多模态推理任务。",
-      "context_label": "unknown",
-      "price_input": 2,
-      "price_output": 20,
-      "is_free": false,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
-      "model_family": "qwen3-vl-235b-a22b-thinking",
-      "model_variant": "thinking",
-      "aliases": [],
-      "parameter_count": 235000000000,
-      "tier": "medium",
-      "speed": "premium",
-      "use_case": [
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "1-3s"
-    },
-    {
       "id": "kimi-k3",
       "object": "model",
       "created": 758348858,
@@ -2799,27 +3145,24 @@
       "created": 2025547191,
       "owned_by": "google",
       "provider": "google",
-      "name": "Gemini 3.1 Pro Preview",
-      "description": "Google: 最新性能、智力和可用性改进，支持多模态理解、代理能力和 vibe-coding",
-      "context_size": 2000000,
-      "context_label": "2M",
+      "name": "gemini-3.1-pro-preview",
+      "description": "Google: Our 3rd generation Pro model, built for multimodal understanding, agentic capabilities, and vibe-coding.",
+      "context_label": "unknown",
       "price_input": 2,
       "price_output": 12,
       "is_free": false,
       "capabilities": [
         "chat",
-        "text-generation",
-        "reasoning",
-        "agentic"
+        "text-generation"
       ],
       "tags": [
-        "chat",
+        "vision",
         "text-generation",
-        "reasoning",
-        "agentic"
+        "chat",
+        "multimodal"
       ],
-      "is_reasoning": true,
-      "is_multimodal": false,
+      "is_reasoning": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": null,
       "free_quota": null,
@@ -2829,39 +3172,119 @@
       "tier": "large",
       "speed": "premium",
       "use_case": [
-        "conversation",
-        "q&a",
+        "image-understanding",
+        "visual-q&a",
         "content-creation",
         "writing-assistance",
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "complex-reasoning"
+        "conversation",
+        "q&a"
       ],
-      "performance_level": "high",
+      "performance_level": "mid",
       "estimated_latency": "3-10s"
     },
     {
-      "id": "models/gemini-3.1-flash-image-preview",
+      "id": "models/gemini-3.1-pro-preview-customtools",
       "object": "model",
-      "created": 713181130,
+      "created": 712696514,
       "owned_by": "google",
       "provider": "google",
-      "name": "Gemini 3.1 Flash Image Preview",
-      "description": "Google: 为速度和效率设计的图像生成模型",
-      "context_size": 1000000,
-      "context_label": "1M",
+      "name": "gemini-3.1-pro-preview-customtools",
+      "description": "Google: Our 3rd generation Pro model, built for multimodal understanding, agentic capabilities, and vibe-coding.",
+      "context_label": "unknown",
+      "price_input": 2,
+      "price_output": 12,
+      "is_free": false,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "chat",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "gemini-3.1-pro-preview-customtools",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "3-10s"
+    },
+    {
+      "id": "models/gemini-nano-banana-2.1",
+      "object": "model",
+      "created": 1752598466,
+      "owned_by": "google",
+      "provider": "google",
+      "name": "Gemini Nano Banana 2.1",
+      "description": "Google: An update to Nano Banana 2 (Gemini 3.1 Flash Image), built for high-efficiency image generation and conversational editing with improved visual quality, multi-turn character consistency, accurate text rendering, and search-grounded generation across 1K, 2K, and 4K resolutions.",
+      "context_label": "unknown",
+      "price_input": 1.5,
+      "price_output": 7.5,
+      "is_free": false,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "chat",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "gemini-nano-banana-2.1",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "3-10s"
+    },
+    {
+      "id": "models/gemini-3.1-flash-image",
+      "object": "model",
+      "created": 1813355975,
+      "owned_by": "google",
+      "provider": "google",
+      "name": "Gemini 3.1 Flash Image (Nano Banana 2)",
+      "description": "Google: Designed for speed and efficiency, the Gemini 3.1 Flash Image generation model is effective for quick, interactive responses and high throughput.",
+      "context_label": "unknown",
       "price_input": 0.5,
       "price_output": 3,
       "is_free": false,
       "capabilities": [
-        "chat",
-        "text-generation",
         "image-generation"
       ],
       "tags": [
         "vision",
-        "chat",
         "text-generation",
         "image-generation",
         "multimodal"
@@ -2872,7 +3295,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "gemini-3.1-flash-image-preview",
+      "model_family": "gemini-3.1-flash-image",
       "model_variant": "image",
       "aliases": [],
       "tier": "large",
@@ -2880,8 +3303,6 @@
       "use_case": [
         "image-understanding",
         "visual-q&a",
-        "conversation",
-        "q&a",
         "content-creation",
         "writing-assistance",
         "creative-generation",
@@ -2891,26 +3312,22 @@
       "estimated_latency": "3-10s"
     },
     {
-      "id": "models/gemini-3-pro-image-preview",
+      "id": "models/gemini-3-pro-image",
       "object": "model",
-      "created": 1836358790,
+      "created": 1113474315,
       "owned_by": "google",
       "provider": "google",
-      "name": "Gemini 3 Pro Image Preview",
-      "description": "Google: 原生图像生成模型，优化速度、灵活性和上下文理解",
-      "context_size": 2000000,
-      "context_label": "2M",
+      "name": "Gemini 3 Pro Image (Nano Banana Pro)",
+      "description": "Google: Our native image generation model, optimized for speed, flexibility, and contextual understanding. **Text input and output** is priced the same as",
+      "context_label": "unknown",
       "price_input": 2,
       "price_output": 12,
       "is_free": false,
       "capabilities": [
-        "chat",
-        "text-generation",
         "image-generation"
       ],
       "tags": [
         "vision",
-        "chat",
         "text-generation",
         "image-generation",
         "multimodal"
@@ -2921,7 +3338,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "gemini-3-pro-image-preview",
+      "model_family": "gemini-3-pro-image",
       "model_variant": "image",
       "aliases": [],
       "tier": "large",
@@ -2929,8 +3346,6 @@
       "use_case": [
         "image-understanding",
         "visual-q&a",
-        "conversation",
-        "q&a",
         "content-creation",
         "writing-assistance",
         "creative-generation",
@@ -2945,21 +3360,17 @@
       "created": 105534986,
       "owned_by": "google",
       "provider": "google",
-      "name": "Gemini 2.5 Flash Image",
-      "description": "Google: 原生图像生成模型，优化速度、灵活性和上下文理解",
-      "context_size": 1000000,
-      "context_label": "1M",
+      "name": "Gemini 2.5 Flash Image (Nano Banana)",
+      "description": "Google: A native image generation model, optimized for speed, flexibility, and contextual understanding. Text input and output is priced the same as",
+      "context_label": "unknown",
       "price_input": 0.3,
       "price_output": 0.039,
       "is_free": false,
       "capabilities": [
-        "chat",
-        "text-generation",
         "image-generation"
       ],
       "tags": [
         "vision",
-        "chat",
         "text-generation",
         "image-generation",
         "multimodal"
@@ -2978,8 +3389,6 @@
       "use_case": [
         "image-understanding",
         "visual-q&a",
-        "conversation",
-        "q&a",
         "content-creation",
         "writing-assistance",
         "creative-generation",
@@ -2995,7 +3404,7 @@
       "owned_by": "google",
       "provider": "google",
       "name": "Gemini 2.5 Pro Preview TTS",
-      "description": "Google: 2.5 Pro 文本转语音模型，优化强大、低延迟语音生成",
+      "description": "Google: Our 2.5 Pro text-to-speech audio model optimized for powerful, low-latency speech generation for more natural outputs and easier to steer prompts.",
       "context_label": "unknown",
       "price_input": 1,
       "price_output": 20,
@@ -3004,6 +3413,7 @@
         "speech-synthesis"
       ],
       "tags": [
+        "text-generation",
         "speech-synthesis"
       ],
       "is_reasoning": false,
@@ -3018,6 +3428,8 @@
       "tier": "medium",
       "speed": "premium",
       "use_case": [
+        "content-creation",
+        "writing-assistance",
         "text-to-speech",
         "voice-output"
       ],
@@ -3025,54 +3437,24 @@
       "estimated_latency": "1-3s"
     },
     {
-      "id": "models/imagen-4.0-ultra-generate-001",
-      "object": "model",
-      "created": 511942303,
-      "owned_by": "google",
-      "provider": "google",
-      "name": "Imagen 4 Ultra",
-      "description": "Google: 最高质量图像生成",
-      "context_label": "unknown",
-      "price_input": 0.06,
-      "is_free": false,
-      "capabilities": [
-        "image-generation"
-      ],
-      "tags": [
-        "image-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
-      "model_family": "imagen-4.0-ultra-generate-001",
-      "aliases": [],
-      "tier": "small",
-      "speed": "premium",
-      "use_case": [
-        "creative-generation",
-        "art"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
       "id": "models/lyria-3-pro-preview",
       "object": "model",
       "created": 434083630,
       "owned_by": "google",
       "provider": "google",
-      "name": "Lyria 3 Pro",
-      "description": "Google: 音乐生成模型（全曲）",
+      "name": "lyria-3-pro-preview",
+      "description": "Google: Google's family of legacy music generation models.",
       "context_label": "unknown",
       "price_input": 0.08,
       "is_free": false,
       "capabilities": [
-        "audio-generation"
+        "chat",
+        "text-generation"
       ],
-      "tags": [],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
       "is_reasoning": false,
       "is_multimodal": false,
       "has_tool_use": false,
@@ -3085,7 +3467,12 @@
       ],
       "tier": "small",
       "speed": "premium",
-      "use_case": [],
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
     },
@@ -3646,7 +4033,9 @@
       "free_quota": null,
       "trial_scope": "none",
       "model_family": "qwen3.5-397b-a17b",
-      "aliases": [],
+      "aliases": [
+        "ovh/Qwen3.5-397B-A17B"
+      ],
       "parameter_count": 397000000000,
       "tier": "large",
       "speed": "premium",

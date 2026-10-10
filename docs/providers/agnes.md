@@ -21,7 +21,7 @@
 
 | 指标 | 数量 |
 |---|---:|
-| 总模型 | 2 |
+| 总模型 | 5 |
 | 免费模型 | 2 |
 | 付费可试用 | 0 |
 
@@ -33,5 +33,5 @@
 
 | Provider | Model ID | 名称 | 上下文 | 免费类型 | 限制 |
 |---|---|---|---:|---|---|
-| agnes  | `agnes-1.5-flash` | Agnes 1.5 Flash | unknown | 限速免费 | 免费 AI Gateway, 注册即用; 具体限速以平台公告为准 |
-| agnes  | `agnes-2.0-flash` | Agnes 2.0 Flash | unknown | 限速免费 | 免费 AI Gateway, 注册即用; 具体限速以平台公告为准 |
+| agnes  | `agnes-2.5-flash` | Agnes 2.5 Flash | 512K | 限速免费 | 限时 $0 Current Price (List price 为正常单价); 免费档 RPM 限制见 docs/tokenplan |
+| agnes  | `agnes-3.0-flash` | Agnes 3.0 Flash | 512K | 限速免费 | 限时 $0 Current Price (List price 为正常单价); 免费档 RPM 限制见 docs/tokenplan |
