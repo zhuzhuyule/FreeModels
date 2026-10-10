@@ -1,7 +1,7 @@
 {
   "object": "list",
   "view": "large",
-  "updated_at": "2026-10-10T03:23:47.047Z",
+  "updated_at": "2026-10-10T08:12:36.497Z",
   "total": 194,
   "filters": {
     "tier": "large"
@@ -8147,6 +8147,50 @@
       "estimated_latency": "< 1s"
     },
     {
+      "id": "Meta-Llama-3_3-70B-Instruct",
+      "object": "model",
+      "created": 1740013843,
+      "owned_by": "ovh",
+      "provider": "ovh",
+      "name": "Meta-Llama-3_3-70B-Instruct",
+      "context_size": 131072,
+      "context_label": "131K",
+      "price_input": 0.74,
+      "price_output": 0.74,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 2,
+        "notes": "Anonymous access (no API key, no signup): 2 requests per minute, per IP and per model. With an API key the same models are billed pay-as-you-go per token (400 RPM per project) — price_input/price_output are those rates, not what the anonymous tier costs."
+      },
+      "trial_scope": "all",
+      "model_family": "3_3-70b",
+      "model_variant": "instruct",
+      "aliases": [],
+      "parameter_count": 70000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
       "id": "Qwen2.5-VL-72B-Instruct",
       "object": "model",
       "created": 1525125023,
@@ -8193,50 +8237,6 @@
         "visual-q&a"
       ],
       "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "Meta-Llama-3_3-70B-Instruct",
-      "object": "model",
-      "created": 1740013843,
-      "owned_by": "ovh",
-      "provider": "ovh",
-      "name": "Meta-Llama-3_3-70B-Instruct",
-      "context_size": 131072,
-      "context_label": "131K",
-      "price_input": 0.74,
-      "price_output": 0.74,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "chat",
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "rpm": 2,
-        "notes": "Anonymous access (no API key, no signup): 2 requests per minute, per IP and per model. With an API key the same models are billed pay-as-you-go per token (400 RPM per project) — price_input/price_output are those rates, not what the anonymous tier costs."
-      },
-      "trial_scope": "all",
-      "model_family": "3_3-70b",
-      "model_variant": "instruct",
-      "aliases": [],
-      "parameter_count": 70000000000,
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
       "estimated_latency": "< 1s"
     },
     {
