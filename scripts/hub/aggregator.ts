@@ -30,6 +30,10 @@ const OUTPUT_PATH = path.resolve('data/models.json');
 
 const ANOMALY_THRESHOLD = 0.5;
 const TOTAL_DROP_THRESHOLD = 0.1;
+// 免费占比 / is_free 翻转的阈值. 单个模型转付费是正常的, 成片翻转通常是
+// 上游字段改名或 provider 解析分支写错, 必须被拦住而不是静默落 master.
+const FREE_RATIO_SWING_THRESHOLD = 0.1;
+const FREE_FLIP_THRESHOLD = 0.05;
 
 // OpenAI /v1/models drop-in 端点的物理路径. 让 OpenAI client 配置
 // BaseURL = "https://ofind.cn/FreeModels/v1" 后直接拉到 model 列表.
@@ -265,7 +269,9 @@ interface ProviderSnapshot {
   total: number;
   freeCount: number;
   byProvider: Record<string, number>;
+  freeByProvider: Record<string, number>;
   ids: Set<string>;
+  freeIds: Set<string>;
 }
 
 function snapshotPrevious(): ProviderSnapshot | null {
@@ -279,7 +285,9 @@ function snapshotPrevious(): ProviderSnapshot | null {
       return null;
     }
     const byProvider: Record<string, number> = {};
+    const freeByProvider: Record<string, number> = {};
     const ids = new Set<string>();
+    const freeIds = new Set<string>();
     let freeCount = 0;
     for (const m of previous.data) {
       // owned_by 是新 schema 的字段名, provider 是历史字段 (同值, 二者并存).
@@ -287,10 +295,15 @@ function snapshotPrevious(): ProviderSnapshot | null {
       const owner = m.owned_by ?? m.provider ?? '';
       byProvider[owner] = (byProvider[owner] ?? 0) + 1;
       // 复合键: 跨 provider 同 id 是合法共存, 必须用 (owner, id) 才唯一.
-      ids.add(`${owner}:${m.id}`);
-      if (m.is_free) freeCount++;
+      const key = `${owner}:${m.id}`;
+      ids.add(key);
+      if (m.is_free) {
+        freeCount++;
+        freeByProvider[owner] = (freeByProvider[owner] ?? 0) + 1;
+        freeIds.add(key);
+      }
     }
-    return { total: previous.data.length, freeCount, byProvider, ids };
+    return { total: previous.data.length, freeCount, byProvider, freeByProvider, ids, freeIds };
   } catch (err) {
     console.warn(
       `[Aggregator] ⚠ Failed to parse previous models.json (${err instanceof Error ? err.message : err}) — anomaly detection disabled.`
@@ -302,12 +315,19 @@ function snapshotPrevious(): ProviderSnapshot | null {
 function detectAnomalies(
   current: ProviderSnapshot,
   previous: ProviderSnapshot | null,
-  failedProviders: string[]
+  failedProviders: string[],
+  emptyProviders: string[]
 ): string[] {
   const warnings: string[] = [];
 
   if (failedProviders.length > 0) {
     warnings.push(`Provider(s) failed: ${failedProviders.join(', ')}`);
+  }
+
+  // 返回 0 条同样要拦: 上游改版/字段改名时 fetch 是"成功"的, 只靠抛错抓不住,
+  // 而它的破坏方式与失败一模一样 (该 provider 的模型全部从列表里消失).
+  if (emptyProviders.length > 0) {
+    warnings.push(`Provider(s) returned 0 models: ${emptyProviders.join(', ')}`);
   }
 
   if (!previous) return warnings;
@@ -319,15 +339,66 @@ function detectAnomalies(
     );
   }
 
-  for (const [name, prevCount] of Object.entries(previous.byProvider)) {
+  // 对称检查: 只盯"掉"会漏掉解析分支变宽的情况 (例如把付费模型一起收进来),
+  // 那同样是脏数据, 而且会直接把非免费条目冒充成免费列表.
+  for (const name of new Set([...Object.keys(previous.byProvider), ...Object.keys(current.byProvider)])) {
+    const prevCount = previous.byProvider[name] ?? 0;
     const currCount = current.byProvider[name] ?? 0;
-    if (prevCount === 0) continue;
-    const drop = (prevCount - currCount) / prevCount;
-    if (drop > ANOMALY_THRESHOLD) {
+    if (prevCount === 0) continue; // 新接入 provider 没有基线, 不与阈值比较
+    const delta = (currCount - prevCount) / prevCount;
+    if (delta < -ANOMALY_THRESHOLD) {
       warnings.push(
-        `Provider "${name}" dropped ${(drop * 100).toFixed(1)}% (${prevCount} -> ${currCount})`
+        `Provider "${name}" dropped ${(delta * 100).toFixed(1)}% (${prevCount} -> ${currCount})`
+      );
+    } else if (delta > ANOMALY_THRESHOLD) {
+      warnings.push(
+        `Provider "${name}" grew ${(delta * 100).toFixed(1)}% (${prevCount} -> ${currCount})`
       );
     }
+  }
+
+  // 单个 provider 的免费数单独查: 某个小 provider 的 is_free 全丢时, 全局免费
+  // 占比只动一两个百分点、翻转数也不到 5%, 只有按家看才拦得住.
+  // 基数小于 3 条不做比较, 否则上游新增/下线一个模型就会天天误报.
+  for (const name of new Set([...Object.keys(previous.freeByProvider), ...Object.keys(current.freeByProvider)])) {
+    const prevFree = previous.freeByProvider[name] ?? 0;
+    const currFree = current.freeByProvider[name] ?? 0;
+    const change = currFree - prevFree;
+    if (prevFree < 3 || Math.abs(change) < 3) continue;
+    const delta = change / prevFree;
+    if (Math.abs(delta) > ANOMALY_THRESHOLD) {
+      warnings.push(
+        `Provider "${name}" free models ${delta > 0 ? 'grew' : 'dropped'} ${(delta * 100).toFixed(1)}% ` +
+        `(${prevFree} -> ${currFree})`
+      );
+    }
+  }
+
+  const prevFreeRatio = previous.freeCount / previous.total;
+  const currFreeRatio = current.freeCount / current.total;
+  const freeSwing = currFreeRatio - prevFreeRatio;
+  if (Math.abs(freeSwing) > FREE_RATIO_SWING_THRESHOLD) {
+    warnings.push(
+      `Free share swung ${(freeSwing * 100).toFixed(1)}pp ` +
+      `(${(prevFreeRatio * 100).toFixed(1)}% -> ${(currFreeRatio * 100).toFixed(1)}%)`
+    );
+  }
+
+  // is_free 翻转: 总量不变但免费标记成片翻转时, 上面的比值检查可能看不出来
+  // (例如同时有一批转付费、一批转免费). 只在两批共有的模型上比较.
+  let overlap = 0;
+  const flipped: string[] = [];
+  for (const key of current.ids) {
+    if (!previous.ids.has(key)) continue;
+    overlap++;
+    if (previous.freeIds.has(key) !== current.freeIds.has(key)) flipped.push(key);
+  }
+  if (overlap > 0 && flipped.length / overlap > FREE_FLIP_THRESHOLD) {
+    const shown = flipped.slice(0, 5).join(', ');
+    warnings.push(
+      `${flipped.length} model(s) flipped is_free out of ${overlap} unchanged entries (>5%): ${shown}` +
+      (flipped.length > 5 ? `, …还有 ${flipped.length - 5} 个` : '')
+    );
   }
 
   return warnings;
@@ -355,7 +426,12 @@ async function main(): Promise<void> {
   );
 
   const cache = loadCache();
-  const previous = snapshotPrevious();
+  // 单 provider 跑时, 上一版聚合文件里含所有 provider, 拿它当基线会把其它
+  // provider 全部算成"移除"并要求审核. 单 provider 的护栏是它自己的 0 条/抛错.
+  const previous = targetProvider ? null : snapshotPrevious();
+  if (targetProvider) {
+    console.log(`[Aggregator] --provider=${targetProvider}: diff baseline skipped (aggregate not rewritten).`);
+  }
 
   const results = await Promise.all(filteredProviders.map(p => runProvider(p, cache)));
 
@@ -379,7 +455,7 @@ async function main(): Promise<void> {
   const availableProviders = results
     .filter(r => r.models.length > 0)
     .map(r => r.provider);
-  // 失败 = provider 抛错; 合法返回空数组不算失败 (provider 可能临时没数据).
+  // 失败 = provider 抛错; 返回空数组不是"失败"但同样是脏数据 (见 detectAnomalies).
   const failedProviders = results
     .filter(r => r.error)
     .map(r => r.provider);
@@ -387,7 +463,7 @@ async function main(): Promise<void> {
     .filter(r => !r.error && r.models.length === 0)
     .map(r => r.provider);
   if (emptyProviders.length > 0) {
-    console.warn(`[Aggregator] Provider(s) returned 0 models (not treated as failure): ${emptyProviders.join(', ')}`);
+    console.warn(`[Aggregator] Provider(s) returned 0 models: ${emptyProviders.join(', ')}`);
   }
 
   const providerMeta: Record<string, typeof PROVIDER_META[string]> = {};
@@ -406,20 +482,29 @@ async function main(): Promise<void> {
   output.providers = providerMeta;
 
   const byProvider: Record<string, number> = {};
+  const freeByProvider: Record<string, number> = {};
   const currentIds = new Set<string>();
+  const currentFreeIds = new Set<string>();
   let freeCount = 0;
   for (const m of allModels) {
     byProvider[m.provider] = (byProvider[m.provider] ?? 0) + 1;
     // 键必须与 snapshotPrevious 同口径: 外部 canonical id (剥掉 provider
     // 前缀). 用内部 modelId 会让所有带前缀的模型每天被误报成"新增+移除"成对噪音.
-    currentIds.add(`${m.provider}:${toCanonicalId(m.provider, m.modelId)}`);
-    if (m.isFree) freeCount++;
+    const key = `${m.provider}:${toCanonicalId(m.provider, m.modelId)}`;
+    currentIds.add(key);
+    if (m.isFree) {
+      freeCount++;
+      freeByProvider[m.provider] = (freeByProvider[m.provider] ?? 0) + 1;
+      currentFreeIds.add(key);
+    }
   }
   const current: ProviderSnapshot = {
     total: allModels.length,
     freeCount,
     byProvider,
+    freeByProvider,
     ids: currentIds,
+    freeIds: currentFreeIds,
   };
 
   const addedIds: string[] = [];
@@ -429,7 +514,7 @@ async function main(): Promise<void> {
     for (const id of previous.ids) if (!currentIds.has(id)) removedIds.push(id);
   }
 
-  const warnings = detectAnomalies(current, previous, failedProviders);
+  const warnings = detectAnomalies(current, previous, failedProviders, emptyProviders);
   if (warnings.length > 0) {
     console.warn('\n[Aggregator] ⚠ Anomalies detected:');
     for (const w of warnings) console.warn(`  - ${w}`);
@@ -440,14 +525,22 @@ async function main(): Promise<void> {
   }
 
   const outputJson = JSON.stringify(output, null, 2);
-  fs.writeFileSync(OUTPUT_PATH, outputJson);
-  console.log(`[Aggregator] Saved ${allModels.length} models to ${OUTPUT_PATH}`);
 
-  // OpenAI /v1/models drop-in: 写两份, 详见 V1_MODELS_PATH 常量注释.
-  fs.mkdirSync(path.dirname(V1_MODELS_PATH), { recursive: true });
-  fs.writeFileSync(V1_MODELS_PATH, outputJson);
-  fs.writeFileSync(V1_MODELS_JSON_PATH, outputJson);
-  console.log(`[Aggregator] Saved OpenAI /v1/models drop-in to ${V1_MODELS_PATH} (+ .json variant)`);
+  // 聚合文件 (data/models.json、/v1/models、views) 是全 provider 的产物;
+  // --provider=X 的 output 只含那一家, 无条件写会把线上列表覆盖成单家子集.
+  // 单家调试只落 data/providers/<name>/models.json.
+  if (targetProvider) {
+    console.log(`[Aggregator] --provider=${targetProvider}: skipped ${OUTPUT_PATH}, ${V1_MODELS_PATH} and views.`);
+  } else {
+    fs.writeFileSync(OUTPUT_PATH, outputJson);
+    console.log(`[Aggregator] Saved ${allModels.length} models to ${OUTPUT_PATH}`);
+
+    // OpenAI /v1/models drop-in: 写两份, 详见 V1_MODELS_PATH 常量注释.
+    fs.mkdirSync(path.dirname(V1_MODELS_PATH), { recursive: true });
+    fs.writeFileSync(V1_MODELS_PATH, outputJson);
+    fs.writeFileSync(V1_MODELS_JSON_PATH, outputJson);
+    console.log(`[Aggregator] Saved OpenAI /v1/models drop-in to ${V1_MODELS_PATH} (+ .json variant)`);
+  }
 
   for (const provider of availableProviders) {
     const providerModels = allModels.filter(m => m.provider === provider);
@@ -455,11 +548,13 @@ async function main(): Promise<void> {
   }
   console.log(`[Aggregator] Wrote per-provider files for ${availableProviders.length} provider(s).`);
 
-  for (const { view, filters } of buildViews(allModels)) {
-    const viewModels = filterModels(allModels, filters);
-    saveViewOutput(view, viewModels, filters);
+  if (!targetProvider) {
+    for (const { view, filters } of buildViews(allModels)) {
+      const viewModels = filterModels(allModels, filters);
+      saveViewOutput(view, viewModels, filters);
+    }
+    console.log(`[Aggregator] Wrote view files.`);
   }
-  console.log(`[Aggregator] Wrote view files.`);
 
   if (!skipNotify) {
     const payload: NotifyPayload = {
@@ -483,7 +578,9 @@ async function main(): Promise<void> {
     await notifyWechat(payload);
   }
 
-  if (strictMode && warnings.length > 0 && !skipNotify) {
+  // --strict 的语义只跟异常有关, 跟发不发通知无关: 单 provider 调试
+  // (--provider=X --strict) 也要能靠 0 条/抛错拿到非 0 退出码.
+  if (strictMode && warnings.length > 0) {
     console.error('[Aggregator] Strict mode: exiting 2 for PR review gating.');
     process.exit(2);
   }

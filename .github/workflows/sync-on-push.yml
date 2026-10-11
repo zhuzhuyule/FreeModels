@@ -12,6 +12,7 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write
   models: read
 
 jobs:
@@ -30,7 +31,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Sync models and docs
+      - name: Sync models and docs (strict)
+        id: sync
+        continue-on-error: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           WECHAT_QYAPI_ID: ${{ secrets.WECHAT_QYAPI_ID }}
@@ -38,10 +41,38 @@ jobs:
           CLOUDFLARE_API_KEY: ${{ secrets.CLOUDFLARE_API_KEY }}
           COHERE_API_KEY: ${{ secrets.COHERE_API_KEY }}
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
-        run: npm run sync
+        # 与 daily-model-sync 同一套门禁: 代码改动后重抓的数据同样要和上一版
+        # 比对, 异常 (provider 失败/返回 0 条/涨跌超阈值) 不能无人值守写 master.
+        run: |
+          set +e
+          npm run sync-models -- --strict
+          status=$?
+          set -e
+          npm run generate-docs
+          exit $status
 
-      - name: Commit and push changes
+      - name: Commit and push changes (clean run)
+        if: steps.sync.outcome == 'success'
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: 'chore: sync models after code update'
           file_pattern: 'data README.md docs/providers v1'
+
+      - name: Open PR with changes (anomalous run)
+        if: steps.sync.outcome != 'success'
+        uses: peter-evans/create-pull-request@v7
+        with:
+          commit-message: 'chore: sync models after code update (anomalies detected)'
+          title: 'chore: sync after code update — 异常待审核'
+          body: |
+            Code-push sync detected anomalies (provider failures, 0-model responses, or >50% swings), so these changes were **not** committed to master directly.
+
+            Check whether the code change was expected to move the model list before merging.
+          branch: bot/sync-on-push-review
+          base: master
+          delete-branch: true
+          add-paths: |
+            data
+            v1
+            README.md
+            docs/providers

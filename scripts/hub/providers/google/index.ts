@@ -159,6 +159,14 @@ function buildModel(
     priceCurrency: 'USD',
     isFree,
     freeMechanism: isFree ? 'rate-limited' : null,
+    // 免费层确实只有速率限制，但 Google 的每模型 RPM/TPM/RPD 只登录 AI Studio
+    // 的 rate-limit 页可查，公开文档（rate-limits.md.txt / pricing.md.txt）里
+    // 一个数字都没有。没有官方出处就不写数：只说明限制类型和查询入口。
+    freeQuota: isFree
+      ? {
+          notes: 'Free tier is limited per project by requests/min, input tokens/min and requests/day. Google publishes the per-model numbers only in AI Studio (https://aistudio.google.com/rate-limit); the public docs state limits "are not guaranteed and actual capacity may vary".',
+        }
+      : null,
     trialScope: isFree ? (isFlagship ? 'flagship' : 'fast') : 'none',
     capabilities,
     metadata: {

@@ -11,6 +11,10 @@ const FREE_ENDPOINT_URL = 'https://build.nvidia.com/models?filters=nimType%3Anim
 const DOCS_API_URL = 'https://docs.api.nvidia.com/nim/reference/llm-apis';
 // 官方免费层速率页（内容以转义 JSON 嵌在 RSC payload 里）。
 const FREE_LIMITS_URL = 'https://build.nvidia.com/docs/inference/limits';
+// 官方模型目录的 Markdown 版: 每行 "[名称](路径.md) — 一句话简介", 名称是端点
+// 尾段 (与 integrate api 的 "<org>/<name>" 的 name 对齐)。用于补 description,
+// 简介里的 vision / reasoning / multimodal 等措辞才能被能力推断吃到。
+const MODELS_MD_URL = 'https://build.nvidia.com/models.md';
 
 const CAPABILITY_MAP: Record<string, string[]> = {
   'chat completion': ['chat', 'text-generation'],
@@ -140,6 +144,23 @@ async function fetchNvidiaCapabilities(): Promise<Map<string, string[]>> {
   return capabilities;
 }
 
+async function fetchModelDescriptions(): Promise<Map<string, string>> {
+  const md = await fetchWithRetry(MODELS_MD_URL);
+  if (!md) {
+    console.warn('[nvidia] models.md unavailable; descriptions fall back to the model id');
+    return new Map();
+  }
+  const out = new Map<string, string>();
+  for (const line of md.split('\n')) {
+    const m = line.match(/^-\s+\[([^\]]+)\]\([^)]*\.md\)\s*[—–-]\s*(.+)$/);
+    if (!m) continue;
+    const key = m[1].trim().toLowerCase();
+    if (!out.has(key)) out.set(key, m[2].trim());
+  }
+  console.log(`[nvidia] Parsed ${out.size} model descriptions from models.md`);
+  return out;
+}
+
 async function fetchNvidiaModels(): Promise<RawModelData[]> {
   console.log(`[nvidia] Fetching models from integrate.api.nvidia.com...`);
 
@@ -148,17 +169,25 @@ async function fetchNvidiaModels(): Promise<RawModelData[]> {
   });
 
   if (!modelsResponse.ok) {
-    console.error(`[nvidia] API responded with ${modelsResponse.status}`);
-    return [];
+    throw new Error(`[nvidia] model list responded with ${modelsResponse.status}`);
   }
 
-  const [freeModelIds, nvidiaCaps, limits] = await Promise.all([
+  const [freeModelIds, nvidiaCaps, limits, descriptions] = await Promise.all([
     fetchFreeModelIds(),
     fetchNvidiaCapabilities(),
     fetchFreeTierLimits(),
+    fetchModelDescriptions(),
   ]);
 
   console.log(`[nvidia] Found ${freeModelIds.size} free endpoint models`);
+  // 抓不到免费清单时必须报错, 不能继续返回全部模型: 那样每条都会带上
+  // isFree=false, 线上列表会把 NVIDIA 的免费额度整体抹掉, 而且看上去"成功"了。
+  if (freeModelIds.size === 0) {
+    throw new Error(
+      `[nvidia] free-model scrape returned 0 ids from ${FREE_ENDPOINT_URL}; ` +
+      'refusing to publish NVIDIA as all-paid (upstream page layout or _rsc token changed)'
+    );
+  }
 
   const freeQuota: FreeQuota = {
     notes: limits.rpmRaw && limits.rpdRaw
@@ -176,12 +205,14 @@ async function fetchNvidiaModels(): Promise<RawModelData[]> {
     const inferredCaps = inferCapabilities(modelId);
     const docCaps = nvidiaCaps.get(modelId);
     const capabilities = docCaps?.length ? docCaps : inferredCaps;
+    const tail = modelId.split('/').pop() || modelId;
+    const description = descriptions.get(tail.toLowerCase());
 
     return {
       vendor: 'nvidia',
       modelId,
-      name: modelId.split('/').pop() || modelId,
-      description: `Model: ${modelId}`,
+      name: tail,
+      description: description ? `NVIDIA: ${description}` : `Model: ${modelId}`,
       contextSize: undefined,
       priceInput: undefined,
       priceOutput: undefined,
@@ -191,6 +222,9 @@ async function fetchNvidiaModels(): Promise<RawModelData[]> {
       freeQuota: isFree ? freeQuota : null,
       trialScope: isFree ? 'specific' : 'none',
       capabilities,
+      // docs 表覆盖到的模型能力是官方字段; 只有走 id 猜测的那些才允许
+      // enhancer 再用 models.md 简介补标签.
+      capabilitiesAuthoritative: !!docCaps?.length,
       metadata: { ...m, is_free_endpoint: isFree },
     };
   });

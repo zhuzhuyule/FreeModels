@@ -74,6 +74,13 @@ async function fetchXingchenModels(): Promise<RawModelData[]> {
         priceCurrency: 'CNY',
         isFree,
         freeMechanism: isFree ? 'rate-limited' : null,
+        // list-v2 不提供任何并发/QPS 字段（rows 里没有 qps/concurrency/limit 类字段），
+        // 免费额度只在登录后的控制台按账号展示。没有官方出处就不编数字。
+        freeQuota: isFree
+          ? {
+              notes: '讯飞星辰 MaaS 免费模型（inferencePrice 输入/输出均为 0）；平台按账号限并发，具体数值只在 maas.xfyun.cn 登录后的控制台展示，公开模型列表 API 不返回该字段',
+            }
+          : null,
         trialScope: isFree ? 'specific' : 'none',
         capabilities: [...caps],
         metadata: {

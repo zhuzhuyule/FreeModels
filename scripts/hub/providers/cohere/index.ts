@@ -13,6 +13,19 @@ const ENDPOINT_TO_CAPABILITY: Record<string, string> = {
   transcriptions: 'speech-recognition',
 };
 
+// 同一个 /v1/models 响应里 features 才是能力字段 (endpoints 只说明能走哪个路由).
+// 不读它的话 command-a 系列会只剩 chat + text-generation 两个默认标签.
+const FEATURE_TO_CAPABILITY: Record<string, string> = {
+  tools: 'tool-use',
+  tool_choice: 'tool-use',
+  strict_tools: 'tool-use',
+  tool_images: 'vision',
+  reasoning: 'reasoning',
+  vision: 'vision',
+  audio: 'speech-recognition',
+  web_search: 'web-search',
+};
+
 interface CohereModel {
   name?: string;
   endpoints?: string[];
@@ -68,6 +81,10 @@ async function fetchCohereModels(): Promise<RawModelData[]> {
       const cap = ENDPOINT_TO_CAPABILITY[ep];
       if (cap) capabilities.add(cap);
     }
+    for (const feat of m.features ?? []) {
+      const cap = FEATURE_TO_CAPABILITY[feat];
+      if (cap) capabilities.add(cap);
+    }
     if (capabilities.size === 0) continue;
 
     models.push({
@@ -82,6 +99,8 @@ async function fetchCohereModels(): Promise<RawModelData[]> {
       freeQuota: { rpm: 20, notes: 'Trial API key: 1,000 requests/month shared across all models (20 RPM); beyond that a paid key is required' },
       trialScope: 'all',
       capabilities: Array.from(capabilities),
+      // 不设 capabilitiesAuthoritative: 本地无 COHERE_API_KEY 拿不到 features,
+      // 无法证明它覆盖全部能力; 保留关键词推断兜底, 只让官方 features 额外加标签。
       metadata: {
         endpoints: Array.from(endpoints),
         features: m.features ?? undefined,

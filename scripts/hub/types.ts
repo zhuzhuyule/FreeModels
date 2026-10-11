@@ -94,6 +94,12 @@ export interface RawModelData {
   priceCurrency?: PriceCurrency;
   isFree?: boolean;
   capabilities?: string[];
+  /**
+   * true = capabilities 取自官方结构化字段（cohere features / github tags /
+   * ovh catalog / nvidia docs），能力口径已经确定，enhancer 不再用 description
+   * 的散文关键词补标签。未设置表示 provider 没给权威来源，仍走关键词推断。
+   */
+  capabilitiesAuthoritative?: boolean;
   freeMechanism?: FreeMechanism | null;
   freeQuota?: FreeQuota | null;
   trialScope?: TrialScope;

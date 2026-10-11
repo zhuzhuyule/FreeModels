@@ -21,6 +21,18 @@ const TASK_TO_CAPABILITY: Record<string, string[]> = {
   embeddings: ['embeddings'],
 };
 
+// Marketplace 条目自带的 tags 是 GitHub 官方标的能力的信号, 现在只塞进 metadata
+// 却没参与能力推断, 于是 o3-mini / Phi-4 / gpt-5-nano 只剩默认两个标签.
+// 只映射确实是能力的标签; multilingual/low latency/multipurpose/understanding/rag
+// 这类是用途或性能描述, 不收进能力口径.
+const TAG_TO_CAPABILITY: Record<string, string> = {
+  reasoning: 'reasoning',
+  vision: 'vision',
+  multimodal: 'multimodal',
+  coding: 'code-generation',
+  agents: 'agentic',
+};
+
 async function fetchPage(page: number): Promise<{ models: MarketplaceModel[]; totalPages: number }> {
   const url = `${MARKETPLACE_URL}?type=models&page=${page}`;
   const res = await fetch(url, {
@@ -50,7 +62,11 @@ async function fetchGithubModels(): Promise<RawModelData[]> {
   const models: RawModelData[] = [];
   for (const m of all) {
     if (!m.name || !m.task) continue;
-    const capabilities = TASK_TO_CAPABILITY[m.task] ?? ['text-generation'];
+    const capabilities = new Set<string>(TASK_TO_CAPABILITY[m.task] ?? ['text-generation']);
+    for (const tag of m.tags ?? []) {
+      const cap = TAG_TO_CAPABILITY[tag.toLowerCase()];
+      if (cap) capabilities.add(cap);
+    }
 
     models.push({
       vendor: 'github',
@@ -64,7 +80,9 @@ async function fetchGithubModels(): Promise<RawModelData[]> {
       freeMechanism: 'rate-limited',
       freeQuota: { notes: 'Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)' },
       trialScope: 'all',
-      capabilities,
+      capabilities: Array.from(capabilities),
+      // 不设 capabilitiesAuthoritative: Marketplace 的 tags 是稀疏标签, 不是完整能力
+      // 声明 (gpt-4o / Llama-3-2-Vision 都不标 vision)。关掉关键词推断会把这些真标签丢掉。
       metadata: {
         publisher: m.publisher,
         registry: m.registry,
