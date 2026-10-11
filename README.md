@@ -39,7 +39,7 @@ curl https://ofind.cn/FreeModels/v1/models.json
 | [BigModel / 智谱 AI](https://open.bigmodel.cn)  | `bigmodel` | 57 | 10 | 0 | GLM Flash 等部分模型可免费使用，具体以官方价格页和控制台为准。 | [注册](https://open.bigmodel.cn) | [API Key](https://open.bigmodel.cn/usercenter/proj-mgmt/apikeys) | [文档](https://docs.bigmodel.cn) | [JSON](https://ofind.cn/FreeModels/data/providers/bigmodel/models.json) |
 | [Cerebras](https://www.cerebras.ai)  | `cerebras` | 2 | 2 | 0 | 部分模型提供免费或限速使用，额度以官方控制台为准。 | [注册](https://cloud.cerebras.ai) | [API Key](https://cloud.cerebras.ai/platform/api-keys) | [文档](https://inference-docs.cerebras.ai) | [JSON](https://ofind.cn/FreeModels/data/providers/cerebras/models.json) |
 | [Cloudflare Workers AI](https://developers.cloudflare.com/workers-ai)  | `cloudflare` | 69 | 62 | 0 | 账户级每日 10,000 neurons 免费额度，所有 Workers AI 模型共享。 | [注册](https://dash.cloudflare.com/sign-up) | [API Key](https://dash.cloudflare.com/profile/api-tokens) | [文档](https://developers.cloudflare.com/workers-ai) | [JSON](https://ofind.cn/FreeModels/data/providers/cloudflare/models.json) |
-| [Cohere](https://cohere.com)  | `cohere` | 34 | 34 | 0 | Trial key 永久免费：20 RPM、1000 requests/月，所有模型共享配额。 | [注册](https://dashboard.cohere.com/welcome/register) | [API Key](https://dashboard.cohere.com/api-keys) | [文档](https://docs.cohere.com) | [JSON](https://ofind.cn/FreeModels/data/providers/cohere/models.json) |
+| [Cohere](https://cohere.com)  | `cohere` | 35 | 35 | 0 | Trial key 永久免费：20 RPM、1000 requests/月，所有模型共享配额。 | [注册](https://dashboard.cohere.com/welcome/register) | [API Key](https://dashboard.cohere.com/api-keys) | [文档](https://docs.cohere.com) | [JSON](https://ofind.cn/FreeModels/data/providers/cohere/models.json) |
 | [Gitee AI](https://ai.gitee.com)  | `gitee` | 205 | 36 | 92 | 部分模型完全免费，另有一批模型允许体验。 | [注册](https://ai.gitee.com) | — | [文档](https://ai.gitee.com/docs) | [JSON](https://ofind.cn/FreeModels/data/providers/gitee/models.json) |
 | [GitHub Models](https://github.com/marketplace/models)  | `github` | 37 | 37 | 0 | 按 Copilot 订阅层级（Free / Pro / Pro+ / Business / Enterprise）限速，免费层有较严格的 input/output token 限制。 | [注册](https://github.com/join) | [API Key](https://github.com/settings/tokens) | [文档](https://docs.github.com/en/github-models) | [JSON](https://ofind.cn/FreeModels/data/providers/github/models.json) |
 | [Google AI](https://ai.google.dev)  | `google` | 38 | 22 | 0 | Gemini API 部分模型提供免费层，通常带有 RPM / RPD / TPM 限制。 | [注册](https://aistudio.google.com) | [API Key](https://aistudio.google.com/app/apikey) | [文档](https://ai.google.dev/gemini-api/docs) | [JSON](https://ofind.cn/FreeModels/data/providers/google/models.json) |
@@ -64,12 +64,12 @@ curl https://ofind.cn/FreeModels/v1/models.json
 | 维度 | 数量 |
 |------|-----:|
 | Provider | 19 |
-| 模型总数 | 676 |
-| 免费模型 (`is_free=true`) | 329 |
+| 模型总数 | 677 |
+| 免费模型 (`is_free=true`) | 330 |
 | 付费可试用 (Gitee 体验等) | 92 |
-| 模型家族 | 563 |
+| 模型家族 | 564 |
 | 跨 Provider 家族 | 70 |
-| · 限速免费 | 193 |
+| · 限速免费 | 194 |
 | · 日 token 配额 | 69 |
 | · 永久免费 | 46 |
 | · 试用 credits | 21 |
@@ -80,7 +80,7 @@ curl https://ofind.cn/FreeModels/v1/models.json
 > 该区块由 `npm run generate-docs` 自动更新。
 
 <!-- AUTO-GENERATED:FREE_MODELS_START -->
-共 **329** 个免费模型（限速免费 193 个、日 token 配额 69 个、永久免费 46 个、试用 credits 21 个）。
+共 **330** 个免费模型（限速免费 194 个、日 token 配额 69 个、永久免费 46 个、试用 credits 21 个）。
 
 完整列表及按机制筛选：
 - [全部免费模型](https://ofind.cn/FreeModels/data/views/free/models.json)

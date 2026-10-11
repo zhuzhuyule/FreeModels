@@ -33,10 +33,10 @@
 
 | Provider | Model ID | 名称 | 上下文 | 免费类型 | 限制 |
 |---|---|---|---:|---|---|
-| xingchen  | `spark-x2.5-1.7b` | Spark-X2.5-1.7B | 1 | 限速免费 | — |
-| xingchen  | `spark-x2.5-4b` | Spark-X2.5-4B | 1 | 限速免费 | — |
-| xingchen  | `xop3qwen8bembedding` | Qwen3-Embedding-8B | 33K | 限速免费 | — |
-| xingchen  | `xop3qwen8breranker` | Qwen3-Reranker-8B | 33K | 限速免费 | — |
-| xingchen  | `xopdeepseekocr` | DeepSeek-OCR | 8K | 限速免费 | — |
-| xingchen  | `xophunyuanocr` | HunyuanOCR | 33K | 限速免费 | — |
-| xingchen  | `xoppaddleocrv16` | PaddleOCR-VL-1.6 | 33K | 限速免费 | — |
+| xingchen  | `spark-x2.5-1.7b` | Spark-X2.5-1.7B | 1 | 限速免费 | 讯飞星辰 MaaS 免费模型（inferencePrice 输入/输出均为 0）；平台按账号限并发，具体数值只在 maas.xfyun.cn 登录后的控制台展示，公开模型列表 API 不返回该字段 |
+| xingchen  | `spark-x2.5-4b` | Spark-X2.5-4B | 1 | 限速免费 | 讯飞星辰 MaaS 免费模型（inferencePrice 输入/输出均为 0）；平台按账号限并发，具体数值只在 maas.xfyun.cn 登录后的控制台展示，公开模型列表 API 不返回该字段 |
+| xingchen  | `xop3qwen8bembedding` | Qwen3-Embedding-8B | 33K | 限速免费 | 讯飞星辰 MaaS 免费模型（inferencePrice 输入/输出均为 0）；平台按账号限并发，具体数值只在 maas.xfyun.cn 登录后的控制台展示，公开模型列表 API 不返回该字段 |
+| xingchen  | `xop3qwen8breranker` | Qwen3-Reranker-8B | 33K | 限速免费 | 讯飞星辰 MaaS 免费模型（inferencePrice 输入/输出均为 0）；平台按账号限并发，具体数值只在 maas.xfyun.cn 登录后的控制台展示，公开模型列表 API 不返回该字段 |
+| xingchen  | `xopdeepseekocr` | DeepSeek-OCR | 8K | 限速免费 | 讯飞星辰 MaaS 免费模型（inferencePrice 输入/输出均为 0）；平台按账号限并发，具体数值只在 maas.xfyun.cn 登录后的控制台展示，公开模型列表 API 不返回该字段 |
+| xingchen  | `xophunyuanocr` | HunyuanOCR | 33K | 限速免费 | 讯飞星辰 MaaS 免费模型（inferencePrice 输入/输出均为 0）；平台按账号限并发，具体数值只在 maas.xfyun.cn 登录后的控制台展示，公开模型列表 API 不返回该字段 |
+| xingchen  | `xoppaddleocrv16` | PaddleOCR-VL-1.6 | 33K | 限速免费 | 讯飞星辰 MaaS 免费模型（inferencePrice 输入/输出均为 0）；平台按账号限并发，具体数值只在 maas.xfyun.cn 登录后的控制台展示，公开模型列表 API 不返回该字段 |

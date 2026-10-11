@@ -1,7 +1,7 @@
 {
   "object": "list",
   "view": "free-permanent",
-  "updated_at": "2026-10-11T08:25:56.586Z",
+  "updated_at": "2026-10-11T09:53:38.094Z",
   "total": 46,
   "filters": {
     "freeMechanism": "permanent"
@@ -25,8 +25,8 @@
         "text-generation"
       ],
       "tags": [
-        "chat",
-        "text-generation"
+        "text-generation",
+        "chat"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
@@ -41,10 +41,10 @@
       "tier": "medium",
       "speed": "fast",
       "use_case": [
-        "conversation",
-        "q&a",
         "content-creation",
-        "writing-assistance"
+        "writing-assistance",
+        "conversation",
+        "q&a"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
@@ -111,10 +111,11 @@
         "reasoning"
       ],
       "tags": [
+        "reasoning",
+        "vision",
+        "code-generation",
         "chat",
         "text-generation",
-        "vision",
-        "reasoning",
         "multimodal"
       ],
       "is_reasoning": true,
@@ -129,18 +130,20 @@
       "tier": "large",
       "speed": "fast",
       "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "image-understanding",
+        "visual-q&a",
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "content-creation",
         "writing-assistance",
-        "image-understanding",
-        "visual-q&a",
-        "problem-solving",
-        "logical-analysis",
-        "math",
         "complex-reasoning"
       ],
-      "performance_level": "mid",
+      "performance_level": "high",
       "estimated_latency": "< 1s"
     },
     {
@@ -162,9 +165,9 @@
         "vision"
       ],
       "tags": [
+        "vision",
         "chat",
         "text-generation",
-        "vision",
         "multimodal"
       ],
       "is_reasoning": false,
@@ -178,12 +181,12 @@
       "tier": "large",
       "speed": "fast",
       "use_case": [
+        "image-understanding",
+        "visual-q&a",
         "conversation",
         "q&a",
         "content-creation",
-        "writing-assistance",
-        "image-understanding",
-        "visual-q&a"
+        "writing-assistance"
       ],
       "performance_level": "mid",
       "estimated_latency": "< 1s"
@@ -207,9 +210,9 @@
         "reasoning"
       ],
       "tags": [
+        "reasoning",
         "chat",
-        "text-generation",
-        "reasoning"
+        "text-generation"
       ],
       "is_reasoning": true,
       "is_multimodal": false,
@@ -222,13 +225,13 @@
       "tier": "large",
       "speed": "fast",
       "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
         "conversation",
         "q&a",
         "content-creation",
         "writing-assistance",
-        "problem-solving",
-        "logical-analysis",
-        "math",
         "complex-reasoning"
       ],
       "performance_level": "mid",
@@ -250,23 +253,30 @@
         "image-generation"
       ],
       "tags": [
-        "image-generation"
+        "vision",
+        "text-generation",
+        "image-generation",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": "permanent",
       "free_quota": null,
       "trial_scope": "specific",
       "model_family": "cogview-3-flash",
       "aliases": [],
-      "tier": "medium",
+      "tier": "large",
       "speed": "fast",
       "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
         "creative-generation",
         "art"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -322,13 +332,15 @@
         "reasoning"
       ],
       "tags": [
+        "tool-use",
+        "code-generation",
         "chat",
         "text-generation",
         "reasoning"
       ],
       "is_reasoning": true,
       "is_multimodal": false,
-      "has_tool_use": false,
+      "has_tool_use": true,
       "free_mechanism": "permanent",
       "free_quota": null,
       "trial_scope": "specific",
@@ -339,6 +351,8 @@
       "tier": "large",
       "speed": "fast",
       "use_case": [
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "content-creation",
@@ -417,15 +431,16 @@
         "reasoning"
       ],
       "tags": [
+        "reasoning",
+        "vision",
+        "tool-use",
         "chat",
         "text-generation",
-        "vision",
-        "reasoning",
         "multimodal"
       ],
       "is_reasoning": true,
       "is_multimodal": true,
-      "has_tool_use": false,
+      "has_tool_use": true,
       "free_mechanism": "permanent",
       "free_quota": null,
       "trial_scope": "specific",
@@ -434,15 +449,15 @@
       "tier": "large",
       "speed": "fast",
       "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "image-understanding",
+        "visual-q&a",
         "conversation",
         "q&a",
         "content-creation",
         "writing-assistance",
-        "image-understanding",
-        "visual-q&a",
-        "problem-solving",
-        "logical-analysis",
-        "math",
         "complex-reasoning"
       ],
       "performance_level": "mid",
@@ -500,6 +515,7 @@
         "embeddings"
       ],
       "tags": [
+        "text-generation",
         "embeddings"
       ],
       "is_reasoning": false,
@@ -514,6 +530,8 @@
       "tier": "medium",
       "speed": "fast",
       "use_case": [
+        "content-creation",
+        "writing-assistance",
         "semantic-search",
         "similarity"
       ],
@@ -537,6 +555,7 @@
         "rerank"
       ],
       "tags": [
+        "text-generation",
         "rerank"
       ],
       "is_reasoning": false,
@@ -551,6 +570,8 @@
       "tier": "medium",
       "speed": "fast",
       "use_case": [
+        "content-creation",
+        "writing-assistance",
         "search-improvement",
         "relevance"
       ],
@@ -780,6 +801,7 @@
         "embeddings"
       ],
       "tags": [
+        "text-generation",
         "embeddings"
       ],
       "is_reasoning": false,
@@ -793,6 +815,8 @@
       "tier": "medium",
       "speed": "fast",
       "use_case": [
+        "content-creation",
+        "writing-assistance",
         "semantic-search",
         "similarity"
       ],
@@ -968,9 +992,10 @@
         "text-generation"
       ],
       "tags": [
+        "reasoning",
         "text-generation"
       ],
-      "is_reasoning": false,
+      "is_reasoning": true,
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "permanent",
@@ -978,13 +1003,17 @@
       "trial_scope": "specific",
       "model_family": "deepseek-prover-v2-7b",
       "aliases": [],
-      "tier": "medium",
+      "tier": "large",
       "speed": "fast",
       "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
         "content-creation",
-        "writing-assistance"
+        "writing-assistance",
+        "complex-reasoning"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -1004,7 +1033,8 @@
         "text-generation"
       ],
       "tags": [
-        "text-generation"
+        "text-generation",
+        "code-generation"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
@@ -1022,7 +1052,9 @@
       "speed": "fast",
       "use_case": [
         "content-creation",
-        "writing-assistance"
+        "writing-assistance",
+        "software-development",
+        "code-completion"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
@@ -1044,7 +1076,10 @@
         "embeddings"
       ],
       "tags": [
-        "embeddings"
+        "text-generation",
+        "code-generation",
+        "embeddings",
+        "rerank"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
@@ -1061,8 +1096,14 @@
       "tier": "medium",
       "speed": "fast",
       "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "software-development",
+        "code-completion",
         "semantic-search",
-        "similarity"
+        "similarity",
+        "search-improvement",
+        "relevance"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
@@ -1084,10 +1125,14 @@
         "embeddings"
       ],
       "tags": [
-        "embeddings"
+        "vision",
+        "text-generation",
+        "code-generation",
+        "embeddings",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": "permanent",
       "free_quota": null,
@@ -1099,6 +1144,12 @@
       "tier": "small",
       "speed": "fast",
       "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "software-development",
+        "code-completion",
         "semantic-search",
         "similarity"
       ],
@@ -1122,6 +1173,8 @@
         "embeddings"
       ],
       "tags": [
+        "text-generation",
+        "code-generation",
         "embeddings"
       ],
       "is_reasoning": false,
@@ -1140,6 +1193,10 @@
       "tier": "medium",
       "speed": "fast",
       "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "software-development",
+        "code-completion",
         "semantic-search",
         "similarity"
       ],
@@ -1279,10 +1336,12 @@
         "text-generation"
       ],
       "tags": [
-        "text-generation"
+        "vision",
+        "text-generation",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": "permanent",
       "free_quota": null,
@@ -1293,10 +1352,12 @@
       "tier": "large",
       "speed": "fast",
       "use_case": [
+        "image-understanding",
+        "visual-q&a",
         "content-creation",
         "writing-assistance"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -1316,10 +1377,13 @@
         "embeddings"
       ],
       "tags": [
-        "embeddings"
+        "vision",
+        "text-generation",
+        "embeddings",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": "permanent",
       "free_quota": null,
@@ -1329,6 +1393,10 @@
       "tier": "medium",
       "speed": "fast",
       "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
         "semantic-search",
         "similarity"
       ],
@@ -1351,6 +1419,8 @@
         "embeddings"
       ],
       "tags": [
+        "text-generation",
+        "rerank",
         "embeddings"
       ],
       "is_reasoning": false,
@@ -1365,6 +1435,10 @@
       "tier": "medium",
       "speed": "fast",
       "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "search-improvement",
+        "relevance",
         "semantic-search",
         "similarity"
       ],
@@ -1463,10 +1537,13 @@
         "embeddings"
       ],
       "tags": [
-        "embeddings"
+        "vision",
+        "text-generation",
+        "embeddings",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": "permanent",
       "free_quota": null,
@@ -1478,6 +1555,10 @@
       "tier": "medium",
       "speed": "fast",
       "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
         "semantic-search",
         "similarity"
       ],
@@ -1567,23 +1648,27 @@
         "text-generation"
       ],
       "tags": [
-        "text-generation"
+        "vision",
+        "text-generation",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": "permanent",
       "free_quota": null,
       "trial_scope": "specific",
       "model_family": "intern-s2",
       "aliases": [],
-      "tier": "medium",
+      "tier": "large",
       "speed": "fast",
       "use_case": [
+        "image-understanding",
+        "visual-q&a",
         "content-creation",
         "writing-assistance"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -1603,6 +1688,7 @@
         "embeddings"
       ],
       "tags": [
+        "text-generation",
         "embeddings"
       ],
       "is_reasoning": false,
@@ -1616,6 +1702,8 @@
       "tier": "medium",
       "speed": "fast",
       "use_case": [
+        "content-creation",
+        "writing-assistance",
         "semantic-search",
         "similarity"
       ],
@@ -1639,6 +1727,7 @@
         "embeddings"
       ],
       "tags": [
+        "text-generation",
         "embeddings"
       ],
       "is_reasoning": false,
@@ -1652,6 +1741,8 @@
       "tier": "medium",
       "speed": "fast",
       "use_case": [
+        "content-creation",
+        "writing-assistance",
         "semantic-search",
         "similarity"
       ],
@@ -1675,6 +1766,7 @@
         "embeddings"
       ],
       "tags": [
+        "text-generation",
         "embeddings"
       ],
       "is_reasoning": false,
@@ -1690,6 +1782,8 @@
       "tier": "medium",
       "speed": "fast",
       "use_case": [
+        "content-creation",
+        "writing-assistance",
         "semantic-search",
         "similarity"
       ],
@@ -1713,6 +1807,8 @@
         "embeddings"
       ],
       "tags": [
+        "text-generation",
+        "rerank",
         "embeddings"
       ],
       "is_reasoning": false,
@@ -1727,6 +1823,10 @@
       "tier": "medium",
       "speed": "fast",
       "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "search-improvement",
+        "relevance",
         "semantic-search",
         "similarity"
       ],
@@ -1750,11 +1850,13 @@
         "text-generation"
       ],
       "tags": [
-        "text-generation"
+        "text-generation",
+        "tool-use",
+        "code-generation"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
-      "has_tool_use": false,
+      "has_tool_use": true,
       "free_mechanism": "permanent",
       "free_quota": null,
       "trial_scope": "specific",
@@ -1769,7 +1871,9 @@
       "speed": "fast",
       "use_case": [
         "content-creation",
-        "writing-assistance"
+        "writing-assistance",
+        "software-development",
+        "code-completion"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
@@ -1791,6 +1895,7 @@
         "text-generation"
       ],
       "tags": [
+        "code-generation",
         "text-generation"
       ],
       "is_reasoning": false,
@@ -1806,6 +1911,8 @@
       "tier": "medium",
       "speed": "fast",
       "use_case": [
+        "software-development",
+        "code-completion",
         "content-creation",
         "writing-assistance"
       ],

@@ -21,8 +21,8 @@
 
 | 指标 | 数量 |
 |---|---:|
-| 总模型 | 34 |
-| 免费模型 | 34 |
+| 总模型 | 35 |
+| 免费模型 | 35 |
 | 付费可试用 | 0 |
 
 ## 免费策略
@@ -58,6 +58,7 @@ Trial key 永久免费：20 RPM、1000 requests/月，所有模型共享配额�
 | cohere  | `embed-v5.0-pro` | embed-v5.0-pro | 8K | 限速免费 | 20 RPM / Trial API key: 1,000 requests/month shared across all models (20 RPM); beyond that a paid key is required |
 | cohere  | `north-mini-code-1-0` | north-mini-code-1-0 | 436K | 限速免费 | 20 RPM / Trial API key: 1,000 requests/month shared across all models (20 RPM); beyond that a paid key is required |
 | cohere  | `north-small-translate-09-2026` | north-small-translate-09-2026 | 33K | 限速免费 | 20 RPM / Trial API key: 1,000 requests/month shared across all models (20 RPM); beyond that a paid key is required |
+| cohere  | `parse-v5.0` | parse-v5.0 | 16K | 限速免费 | 20 RPM / Trial API key: 1,000 requests/month shared across all models (20 RPM); beyond that a paid key is required |
 | cohere  | `rerank-english-v3.0` | rerank-english-v3.0 | 4K | 限速免费 | 20 RPM / Trial API key: 1,000 requests/month shared across all models (20 RPM); beyond that a paid key is required |
 | cohere  | `rerank-multilingual-v3.0` | rerank-multilingual-v3.0 | 4K | 限速免费 | 20 RPM / Trial API key: 1,000 requests/month shared across all models (20 RPM); beyond that a paid key is required |
 | cohere  | `rerank-v3.5` | rerank-v3.5 | 4K | 限速免费 | 20 RPM / Trial API key: 1,000 requests/month shared across all models (20 RPM); beyond that a paid key is required |

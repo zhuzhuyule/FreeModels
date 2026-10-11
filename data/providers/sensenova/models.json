@@ -1,7 +1,7 @@
 {
   "object": "list",
   "provider": "sensenova",
-  "updated_at": "2026-10-11T08:25:56.460Z",
+  "updated_at": "2026-10-11T09:53:38.086Z",
   "total": 3,
   "data": [
     {
@@ -20,12 +20,14 @@
         "tool-use"
       ],
       "tags": [
+        "vision",
         "chat",
         "text-generation",
-        "tool-use"
+        "tool-use",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": true,
       "free_mechanism": "rate-limited",
       "free_quota": {
@@ -34,15 +36,17 @@
       "trial_scope": "all",
       "model_family": "sensenova-6.7-flash-lite",
       "aliases": [],
-      "tier": "medium",
+      "tier": "large",
       "speed": "fast",
       "use_case": [
+        "image-understanding",
+        "visual-q&a",
         "conversation",
         "q&a",
         "content-creation",
         "writing-assistance"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -61,9 +65,9 @@
         "vision"
       ],
       "tags": [
+        "vision",
         "chat",
         "text-generation",
-        "vision",
         "multimodal"
       ],
       "is_reasoning": false,
@@ -79,12 +83,12 @@
       "tier": "large",
       "speed": "fast",
       "use_case": [
+        "image-understanding",
+        "visual-q&a",
         "conversation",
         "q&a",
         "content-creation",
-        "writing-assistance",
-        "image-understanding",
-        "visual-q&a"
+        "writing-assistance"
       ],
       "performance_level": "mid",
       "estimated_latency": "< 1s"

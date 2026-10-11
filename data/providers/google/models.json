@@ -1,7 +1,7 @@
 {
   "object": "list",
   "provider": "google",
-  "updated_at": "2026-10-11T08:25:56.341Z",
+  "updated_at": "2026-10-11T09:53:38.083Z",
   "total": 38,
   "data": [
     {
@@ -28,7 +28,9 @@
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
-      "free_quota": null,
+      "free_quota": {
+        "notes": "Free tier is limited per project by requests/min, input tokens/min and requests/day. Google publishes the per-model numbers only in AI Studio (https://aistudio.google.com/rate-limit); the public docs state limits \"are not guaranteed and actual capacity may vary\"."
+      },
       "trial_scope": "fast",
       "model_family": "gemini-3.8-flash",
       "aliases": [],
@@ -69,7 +71,9 @@
       "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
-      "free_quota": null,
+      "free_quota": {
+        "notes": "Free tier is limited per project by requests/min, input tokens/min and requests/day. Google publishes the per-model numbers only in AI Studio (https://aistudio.google.com/rate-limit); the public docs state limits \"are not guaranteed and actual capacity may vary\"."
+      },
       "trial_scope": "fast",
       "model_family": "gemini-3.6-flash",
       "aliases": [],
@@ -114,7 +118,9 @@
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
-      "free_quota": null,
+      "free_quota": {
+        "notes": "Free tier is limited per project by requests/min, input tokens/min and requests/day. Google publishes the per-model numbers only in AI Studio (https://aistudio.google.com/rate-limit); the public docs state limits \"are not guaranteed and actual capacity may vary\"."
+      },
       "trial_scope": "fast",
       "model_family": "gemini-3.8-live",
       "aliases": [],
@@ -165,7 +171,9 @@
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
-      "free_quota": null,
+      "free_quota": {
+        "notes": "Free tier is limited per project by requests/min, input tokens/min and requests/day. Google publishes the per-model numbers only in AI Studio (https://aistudio.google.com/rate-limit); the public docs state limits \"are not guaranteed and actual capacity may vary\"."
+      },
       "trial_scope": "fast",
       "model_family": "gemini-3.8-live-extended-thinking",
       "model_variant": "thinking",
@@ -217,7 +225,9 @@
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
-      "free_quota": null,
+      "free_quota": {
+        "notes": "Free tier is limited per project by requests/min, input tokens/min and requests/day. Google publishes the per-model numbers only in AI Studio (https://aistudio.google.com/rate-limit); the public docs state limits \"are not guaranteed and actual capacity may vary\"."
+      },
       "trial_scope": "fast",
       "model_family": "gemini-3.1-flash-live-preview",
       "aliases": [],
@@ -259,6 +269,7 @@
       ],
       "tags": [
         "text-generation",
+        "translation",
         "chat",
         "speech-recognition",
         "speech-synthesis"
@@ -267,7 +278,9 @@
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
-      "free_quota": null,
+      "free_quota": {
+        "notes": "Free tier is limited per project by requests/min, input tokens/min and requests/day. Google publishes the per-model numbers only in AI Studio (https://aistudio.google.com/rate-limit); the public docs state limits \"are not guaranteed and actual capacity may vary\"."
+      },
       "trial_scope": "fast",
       "model_family": "gemini-3.5-live-translate-preview",
       "aliases": [],
@@ -309,7 +322,9 @@
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
-      "free_quota": null,
+      "free_quota": {
+        "notes": "Free tier is limited per project by requests/min, input tokens/min and requests/day. Google publishes the per-model numbers only in AI Studio (https://aistudio.google.com/rate-limit); the public docs state limits \"are not guaranteed and actual capacity may vary\"."
+      },
       "trial_scope": "fast",
       "model_family": "gemini-3.5-transcribe-live",
       "aliases": [],
@@ -347,7 +362,9 @@
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
-      "free_quota": null,
+      "free_quota": {
+        "notes": "Free tier is limited per project by requests/min, input tokens/min and requests/day. Google publishes the per-model numbers only in AI Studio (https://aistudio.google.com/rate-limit); the public docs state limits \"are not guaranteed and actual capacity may vary\"."
+      },
       "trial_scope": "fast",
       "model_family": "gemini-3.5-transcribe",
       "aliases": [],
@@ -380,13 +397,16 @@
       ],
       "tags": [
         "text-generation",
+        "translation",
         "chat"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
-      "free_quota": null,
+      "free_quota": {
+        "notes": "Free tier is limited per project by requests/min, input tokens/min and requests/day. Google publishes the per-model numbers only in AI Studio (https://aistudio.google.com/rate-limit); the public docs state limits \"are not guaranteed and actual capacity may vary\"."
+      },
       "trial_scope": "fast",
       "model_family": "gemini-3.5-flash-lite",
       "aliases": [],
@@ -419,13 +439,16 @@
       ],
       "tags": [
         "text-generation",
+        "translation",
         "chat"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
-      "free_quota": null,
+      "free_quota": {
+        "notes": "Free tier is limited per project by requests/min, input tokens/min and requests/day. Google publishes the per-model numbers only in AI Studio (https://aistudio.google.com/rate-limit); the public docs state limits \"are not guaranteed and actual capacity may vary\"."
+      },
       "trial_scope": "fast",
       "model_family": "gemini-3.1-flash-lite",
       "aliases": [],
@@ -533,6 +556,7 @@
       "tags": [
         "vision",
         "text-generation",
+        "code-generation",
         "chat",
         "multimodal"
       ],
@@ -551,10 +575,12 @@
         "visual-q&a",
         "content-creation",
         "writing-assistance",
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a"
       ],
-      "performance_level": "mid",
+      "performance_level": "high",
       "estimated_latency": "3-10s"
     },
     {
@@ -576,6 +602,7 @@
       "tags": [
         "vision",
         "text-generation",
+        "code-generation",
         "chat",
         "multimodal"
       ],
@@ -594,10 +621,12 @@
         "visual-q&a",
         "content-creation",
         "writing-assistance",
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a"
       ],
-      "performance_level": "mid",
+      "performance_level": "high",
       "estimated_latency": "3-10s"
     },
     {
@@ -619,6 +648,7 @@
       "tags": [
         "vision",
         "text-generation",
+        "image-generation",
         "chat",
         "multimodal"
       ],
@@ -637,6 +667,8 @@
         "visual-q&a",
         "content-creation",
         "writing-assistance",
+        "creative-generation",
+        "art",
         "conversation",
         "q&a"
       ],
@@ -752,7 +784,9 @@
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
-      "free_quota": null,
+      "free_quota": {
+        "notes": "Free tier is limited per project by requests/min, input tokens/min and requests/day. Google publishes the per-model numbers only in AI Studio (https://aistudio.google.com/rate-limit); the public docs state limits \"are not guaranteed and actual capacity may vary\"."
+      },
       "trial_scope": "fast",
       "model_family": "gemini-3.8-flash-tts",
       "model_variant": "tts",
@@ -791,7 +825,9 @@
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
-      "free_quota": null,
+      "free_quota": {
+        "notes": "Free tier is limited per project by requests/min, input tokens/min and requests/day. Google publishes the per-model numbers only in AI Studio (https://aistudio.google.com/rate-limit); the public docs state limits \"are not guaranteed and actual capacity may vary\"."
+      },
       "trial_scope": "fast",
       "model_family": "gemini-3.8-flash-lite-tts",
       "model_variant": "tts",
@@ -830,7 +866,9 @@
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
-      "free_quota": null,
+      "free_quota": {
+        "notes": "Free tier is limited per project by requests/min, input tokens/min and requests/day. Google publishes the per-model numbers only in AI Studio (https://aistudio.google.com/rate-limit); the public docs state limits \"are not guaranteed and actual capacity may vary\"."
+      },
       "trial_scope": "fast",
       "model_family": "gemini-3.1-flash-tts-preview",
       "model_variant": "tts",
@@ -870,7 +908,9 @@
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
-      "free_quota": null,
+      "free_quota": {
+        "notes": "Free tier is limited per project by requests/min, input tokens/min and requests/day. Google publishes the per-model numbers only in AI Studio (https://aistudio.google.com/rate-limit); the public docs state limits \"are not guaranteed and actual capacity may vary\"."
+      },
       "trial_scope": "fast",
       "model_family": "gemini-3-flash-preview",
       "aliases": [],
@@ -947,13 +987,16 @@
       "tags": [
         "reasoning",
         "text-generation",
+        "code-generation",
         "chat"
       ],
       "is_reasoning": true,
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
-      "free_quota": null,
+      "free_quota": {
+        "notes": "Free tier is limited per project by requests/min, input tokens/min and requests/day. Google publishes the per-model numbers only in AI Studio (https://aistudio.google.com/rate-limit); the public docs state limits \"are not guaranteed and actual capacity may vary\"."
+      },
       "trial_scope": "flagship",
       "model_family": "gemini-2.5-pro",
       "aliases": [],
@@ -965,6 +1008,8 @@
         "math",
         "content-creation",
         "writing-assistance",
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "complex-reasoning"
@@ -997,7 +1042,9 @@
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
-      "free_quota": null,
+      "free_quota": {
+        "notes": "Free tier is limited per project by requests/min, input tokens/min and requests/day. Google publishes the per-model numbers only in AI Studio (https://aistudio.google.com/rate-limit); the public docs state limits \"are not guaranteed and actual capacity may vary\"."
+      },
       "trial_scope": "fast",
       "model_family": "gemini-2.5-flash",
       "aliases": [],
@@ -1040,7 +1087,9 @@
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
-      "free_quota": null,
+      "free_quota": {
+        "notes": "Free tier is limited per project by requests/min, input tokens/min and requests/day. Google publishes the per-model numbers only in AI Studio (https://aistudio.google.com/rate-limit); the public docs state limits \"are not guaranteed and actual capacity may vary\"."
+      },
       "trial_scope": "fast",
       "model_family": "gemini-2.5-flash-lite",
       "aliases": [],
@@ -1081,7 +1130,9 @@
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
-      "free_quota": null,
+      "free_quota": {
+        "notes": "Free tier is limited per project by requests/min, input tokens/min and requests/day. Google publishes the per-model numbers only in AI Studio (https://aistudio.google.com/rate-limit); the public docs state limits \"are not guaranteed and actual capacity may vary\"."
+      },
       "trial_scope": "fast",
       "model_family": "gemini-2.5-flash-native-audio-preview-12",
       "model_variant": "audio",
@@ -1165,7 +1216,9 @@
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
-      "free_quota": null,
+      "free_quota": {
+        "notes": "Free tier is limited per project by requests/min, input tokens/min and requests/day. Google publishes the per-model numbers only in AI Studio (https://aistudio.google.com/rate-limit); the public docs state limits \"are not guaranteed and actual capacity may vary\"."
+      },
       "trial_scope": "fast",
       "model_family": "gemini-2.5-flash-preview-tts",
       "model_variant": "tts",
@@ -1470,7 +1523,9 @@
       "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
-      "free_quota": null,
+      "free_quota": {
+        "notes": "Free tier is limited per project by requests/min, input tokens/min and requests/day. Google publishes the per-model numbers only in AI Studio (https://aistudio.google.com/rate-limit); the public docs state limits \"are not guaranteed and actual capacity may vary\"."
+      },
       "trial_scope": "fast",
       "model_family": "gemini-embedding-2",
       "model_variant": "embedding",
@@ -1516,7 +1571,9 @@
       "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
-      "free_quota": null,
+      "free_quota": {
+        "notes": "Free tier is limited per project by requests/min, input tokens/min and requests/day. Google publishes the per-model numbers only in AI Studio (https://aistudio.google.com/rate-limit); the public docs state limits \"are not guaranteed and actual capacity may vary\"."
+      },
       "trial_scope": "fast",
       "model_family": "gemini-robotics-er-2-preview",
       "aliases": [],
@@ -1557,14 +1614,17 @@
       "tags": [
         "vision",
         "text-generation",
+        "tool-use",
         "chat",
         "multimodal"
       ],
       "is_reasoning": false,
       "is_multimodal": true,
-      "has_tool_use": false,
+      "has_tool_use": true,
       "free_mechanism": "rate-limited",
-      "free_quota": null,
+      "free_quota": {
+        "notes": "Free tier is limited per project by requests/min, input tokens/min and requests/day. Google publishes the per-model numbers only in AI Studio (https://aistudio.google.com/rate-limit); the public docs state limits \"are not guaranteed and actual capacity may vary\"."
+      },
       "trial_scope": "fast",
       "model_family": "gemini-robotics-er-2-streaming-preview",
       "aliases": [],
