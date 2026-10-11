@@ -1,8 +1,8 @@
 {
   "object": "list",
   "provider": "cohere",
-  "updated_at": "2026-10-11T08:25:56.217Z",
-  "total": 34,
+  "updated_at": "2026-10-11T09:53:38.081Z",
+  "total": 35,
   "data": [
     {
       "id": "c4ai-aya-expanse-32b",
@@ -56,7 +56,8 @@
       "context_label": "16K",
       "is_free": true,
       "capabilities": [
-        "chat"
+        "chat",
+        "vision"
       ],
       "tags": [
         "vision",
@@ -135,15 +136,17 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "tool-use"
       ],
       "tags": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "tool-use"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
-      "has_tool_use": false,
+      "has_tool_use": true,
       "free_mechanism": "rate-limited",
       "free_quota": {
         "rpm": 20,
@@ -175,15 +178,22 @@
       "is_free": true,
       "capabilities": [
         "text-generation",
-        "chat"
+        "chat",
+        "tool-use",
+        "reasoning",
+        "vision"
       ],
       "tags": [
         "text-generation",
-        "chat"
+        "chat",
+        "tool-use",
+        "reasoning",
+        "vision",
+        "multimodal"
       ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": true,
       "free_mechanism": "rate-limited",
       "free_quota": {
         "rpm": 20,
@@ -192,15 +202,21 @@
       "trial_scope": "all",
       "model_family": "command-a-plus-05",
       "aliases": [],
-      "tier": "medium",
+      "tier": "large",
       "speed": "fast",
       "use_case": [
         "content-creation",
         "writing-assistance",
         "conversation",
-        "q&a"
+        "q&a",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "image-understanding",
+        "visual-q&a",
+        "complex-reasoning"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -214,16 +230,19 @@
       "context_label": "289K",
       "is_free": true,
       "capabilities": [
-        "chat"
+        "chat",
+        "tool-use",
+        "reasoning"
       ],
       "tags": [
         "reasoning",
         "chat",
+        "tool-use",
         "text-generation"
       ],
       "is_reasoning": true,
       "is_multimodal": false,
-      "has_tool_use": false,
+      "has_tool_use": true,
       "free_mechanism": "rate-limited",
       "free_quota": {
         "rpm": 20,
@@ -259,14 +278,17 @@
       "context_label": "9K",
       "is_free": true,
       "capabilities": [
-        "chat"
+        "chat",
+        "tool-use"
       ],
       "tags": [
-        "chat"
+        "translation",
+        "chat",
+        "tool-use"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
-      "has_tool_use": false,
+      "has_tool_use": true,
       "free_mechanism": "rate-limited",
       "free_quota": {
         "rpm": 20,
@@ -295,16 +317,19 @@
       "context_label": "128K",
       "is_free": true,
       "capabilities": [
-        "chat"
+        "chat",
+        "vision",
+        "tool-use"
       ],
       "tags": [
         "vision",
         "chat",
+        "tool-use",
         "multimodal"
       ],
       "is_reasoning": false,
       "is_multimodal": true,
-      "has_tool_use": false,
+      "has_tool_use": true,
       "free_mechanism": "rate-limited",
       "free_quota": {
         "rpm": 20,
@@ -337,15 +362,17 @@
       "is_free": true,
       "capabilities": [
         "text-generation",
-        "chat"
+        "chat",
+        "tool-use"
       ],
       "tags": [
         "text-generation",
-        "chat"
+        "chat",
+        "tool-use"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
-      "has_tool_use": false,
+      "has_tool_use": true,
       "free_mechanism": "rate-limited",
       "free_quota": {
         "rpm": 20,
@@ -377,15 +404,17 @@
       "is_free": true,
       "capabilities": [
         "text-generation",
-        "chat"
+        "chat",
+        "tool-use"
       ],
       "tags": [
         "text-generation",
-        "chat"
+        "chat",
+        "tool-use"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
-      "has_tool_use": false,
+      "has_tool_use": true,
       "free_mechanism": "rate-limited",
       "free_quota": {
         "rpm": 20,
@@ -417,15 +446,17 @@
       "is_free": true,
       "capabilities": [
         "text-generation",
-        "chat"
+        "chat",
+        "tool-use"
       ],
       "tags": [
         "text-generation",
-        "chat"
+        "chat",
+        "tool-use"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
-      "has_tool_use": false,
+      "has_tool_use": true,
       "free_mechanism": "rate-limited",
       "free_quota": {
         "rpm": 20,
@@ -457,15 +488,17 @@
       "is_free": true,
       "capabilities": [
         "text-generation",
-        "chat"
+        "chat",
+        "tool-use"
       ],
       "tags": [
         "text-generation",
-        "chat"
+        "chat",
+        "tool-use"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
-      "has_tool_use": false,
+      "has_tool_use": true,
       "free_mechanism": "rate-limited",
       "free_quota": {
         "rpm": 20,
@@ -536,6 +569,7 @@
       ],
       "tags": [
         "vision",
+        "embeddings",
         "multimodal"
       ],
       "is_reasoning": false,
@@ -550,13 +584,15 @@
       "model_family": "embed-english-light-v3.0-image",
       "model_variant": "image",
       "aliases": [],
-      "tier": "large",
+      "tier": "medium",
       "speed": "fast",
       "use_case": [
         "image-understanding",
-        "visual-q&a"
+        "visual-q&a",
+        "semantic-search",
+        "similarity"
       ],
-      "performance_level": "mid",
+      "performance_level": "entry",
       "estimated_latency": "< 1s"
     },
     {
@@ -610,6 +646,7 @@
       ],
       "tags": [
         "vision",
+        "embeddings",
         "multimodal"
       ],
       "is_reasoning": false,
@@ -624,13 +661,15 @@
       "model_family": "embed-english-v3.0-image",
       "model_variant": "image",
       "aliases": [],
-      "tier": "large",
+      "tier": "medium",
       "speed": "fast",
       "use_case": [
         "image-understanding",
-        "visual-q&a"
+        "visual-q&a",
+        "semantic-search",
+        "similarity"
       ],
-      "performance_level": "mid",
+      "performance_level": "entry",
       "estimated_latency": "< 1s"
     },
     {
@@ -684,6 +723,7 @@
       ],
       "tags": [
         "vision",
+        "embeddings",
         "multimodal"
       ],
       "is_reasoning": false,
@@ -698,13 +738,15 @@
       "model_family": "embed-multilingual-light-v3.0-image",
       "model_variant": "image",
       "aliases": [],
-      "tier": "large",
+      "tier": "medium",
       "speed": "fast",
       "use_case": [
         "image-understanding",
-        "visual-q&a"
+        "visual-q&a",
+        "semantic-search",
+        "similarity"
       ],
-      "performance_level": "mid",
+      "performance_level": "entry",
       "estimated_latency": "< 1s"
     },
     {
@@ -758,6 +800,7 @@
       ],
       "tags": [
         "vision",
+        "embeddings",
         "multimodal"
       ],
       "is_reasoning": false,
@@ -772,13 +815,15 @@
       "model_family": "embed-multilingual-v3.0-image",
       "model_variant": "image",
       "aliases": [],
-      "tier": "large",
+      "tier": "medium",
       "speed": "fast",
       "use_case": [
         "image-understanding",
-        "visual-q&a"
+        "visual-q&a",
+        "semantic-search",
+        "similarity"
       ],
-      "performance_level": "mid",
+      "performance_level": "entry",
       "estimated_latency": "< 1s"
     },
     {
@@ -901,15 +946,20 @@
       "is_free": true,
       "capabilities": [
         "text-generation",
-        "chat"
+        "chat",
+        "tool-use",
+        "reasoning"
       ],
       "tags": [
+        "code-generation",
         "text-generation",
-        "chat"
+        "chat",
+        "tool-use",
+        "reasoning"
       ],
-      "is_reasoning": false,
+      "is_reasoning": true,
       "is_multimodal": false,
-      "has_tool_use": false,
+      "has_tool_use": true,
       "free_mechanism": "rate-limited",
       "free_quota": {
         "rpm": 20,
@@ -919,15 +969,21 @@
       "model_family": "north-mini-code-1-0",
       "model_variant": "code",
       "aliases": [],
-      "tier": "medium",
+      "tier": "large",
       "speed": "fast",
       "use_case": [
+        "software-development",
+        "code-completion",
         "content-creation",
         "writing-assistance",
         "conversation",
-        "q&a"
+        "q&a",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -945,6 +1001,7 @@
         "chat"
       ],
       "tags": [
+        "translation",
         "text-generation",
         "chat"
       ],
@@ -968,6 +1025,43 @@
         "q&a"
       ],
       "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "parse-v5.0",
+      "object": "model",
+      "created": 113850459,
+      "owned_by": "cohere",
+      "provider": "cohere",
+      "name": "parse-v5.0",
+      "context_size": 16384,
+      "context_label": "16K",
+      "is_free": true,
+      "capabilities": [
+        "vision"
+      ],
+      "tags": [
+        "vision",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "notes": "Trial API key: 1,000 requests/month shared across all models (20 RPM); beyond that a paid key is required"
+      },
+      "trial_scope": "all",
+      "model_family": "parse-v5.0",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -1162,15 +1256,17 @@
       "is_free": true,
       "capabilities": [
         "text-generation",
-        "chat"
+        "chat",
+        "tool-use"
       ],
       "tags": [
         "text-generation",
-        "chat"
+        "chat",
+        "tool-use"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
-      "has_tool_use": false,
+      "has_tool_use": true,
       "free_mechanism": "rate-limited",
       "free_quota": {
         "rpm": 20,
@@ -1202,15 +1298,17 @@
       "is_free": true,
       "capabilities": [
         "text-generation",
-        "chat"
+        "chat",
+        "tool-use"
       ],
       "tags": [
         "text-generation",
-        "chat"
+        "chat",
+        "tool-use"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
-      "has_tool_use": false,
+      "has_tool_use": true,
       "free_mechanism": "rate-limited",
       "free_quota": {
         "rpm": 20,
@@ -1242,15 +1340,17 @@
       "is_free": true,
       "capabilities": [
         "text-generation",
-        "chat"
+        "chat",
+        "tool-use"
       ],
       "tags": [
         "text-generation",
-        "chat"
+        "chat",
+        "tool-use"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
-      "has_tool_use": false,
+      "has_tool_use": true,
       "free_mechanism": "rate-limited",
       "free_quota": {
         "rpm": 20,
@@ -1282,15 +1382,17 @@
       "is_free": true,
       "capabilities": [
         "text-generation",
-        "chat"
+        "chat",
+        "tool-use"
       ],
       "tags": [
         "text-generation",
-        "chat"
+        "chat",
+        "tool-use"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
-      "has_tool_use": false,
+      "has_tool_use": true,
       "free_mechanism": "rate-limited",
       "free_quota": {
         "rpm": 20,

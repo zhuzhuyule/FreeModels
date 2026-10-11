@@ -1,8 +1,8 @@
 {
   "object": "list",
   "view": "tool-use",
-  "updated_at": "2026-10-11T08:25:56.594Z",
-  "total": 66,
+  "updated_at": "2026-10-11T09:53:38.104Z",
+  "total": 111,
   "filters": {
     "hasToolUse": "true"
   },
@@ -28,10 +28,11 @@
       ],
       "tags": [
         "vision",
-        "tool-use",
+        "code-generation",
         "chat",
         "text-generation",
         "function-calling",
+        "tool-use",
         "multimodal"
       ],
       "is_reasoning": false,
@@ -49,6 +50,8 @@
       "use_case": [
         "image-understanding",
         "visual-q&a",
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "content-creation",
@@ -81,6 +84,7 @@
         "reasoning",
         "vision",
         "text-generation",
+        "code-generation",
         "chat",
         "function-calling",
         "tool-use",
@@ -104,6 +108,8 @@
         "visual-q&a",
         "content-creation",
         "writing-assistance",
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "complex-reasoning"
@@ -133,10 +139,11 @@
       ],
       "tags": [
         "text-generation",
-        "tool-use",
+        "code-generation",
         "chat",
         "vision",
         "function-calling",
+        "tool-use",
         "multimodal"
       ],
       "is_reasoning": false,
@@ -154,6 +161,8 @@
       "use_case": [
         "content-creation",
         "writing-assistance",
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "image-understanding",
@@ -226,6 +235,7 @@
       "tags": [
         "reasoning",
         "text-generation",
+        "code-generation",
         "chat",
         "vision",
         "function-calling",
@@ -248,6 +258,8 @@
         "math",
         "content-creation",
         "writing-assistance",
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "image-understanding",
@@ -256,6 +268,110 @@
       ],
       "performance_level": "high",
       "estimated_latency": "3-10s"
+    },
+    {
+      "id": "glm-4.7-flash",
+      "object": "model",
+      "created": 1010454616,
+      "owned_by": "bigmodel",
+      "provider": "bigmodel",
+      "name": "GLM-4.7-Flash",
+      "description": "GLM-4.7-Flash 作为 30B 级 SOTA 模型，提供了一个兼顾性能与效率的新选择。面向 Agentic Coding 场景强化了编码能力、长程任务规划与工具协同，并在多个公开基准的当期榜单中取得同尺寸开源模型中的出色表现。在执行复杂智能体任务，在工具调用时指令遵循更强，Artifacts 与 Agentic Coding 的前端美感和长程任务完成效率进一步提升。",
+      "context_size": 200000,
+      "context_label": "200K",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "reasoning"
+      ],
+      "tags": [
+        "tool-use",
+        "code-generation",
+        "chat",
+        "text-generation",
+        "reasoning"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "permanent",
+      "free_quota": null,
+      "trial_scope": "specific",
+      "model_family": "glm-4.7-flash",
+      "aliases": [
+        "xingchen/xopglmv47flash"
+      ],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "software-development",
+        "code-completion",
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "glm-4.6v-flash",
+      "object": "model",
+      "created": 1161885709,
+      "owned_by": "bigmodel",
+      "provider": "bigmodel",
+      "name": "GLM-4.6V-Flash",
+      "description": "GLM-4.6V-Flash 是 GLM-4.6V 的免费版本，是 GLM 系列在多模态方向上的一次重要迭代，支持开启或关闭思考模式。它将训练时上下文窗口提升到 128K Tokens，在视觉理解精度上达到同参数规模 SOTA，并首次在模型架构中将 Function Calling（工具调用）能力原生融入视觉模型，打通从「视觉感知」到「可执行行动（Action）」的链路，为真实业务场景中的多模态 Agent 提供统一的技术底座。",
+      "context_size": 128000,
+      "context_label": "128K",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision",
+        "reasoning"
+      ],
+      "tags": [
+        "reasoning",
+        "vision",
+        "tool-use",
+        "chat",
+        "text-generation",
+        "multimodal"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": true,
+      "free_mechanism": "permanent",
+      "free_quota": null,
+      "trial_scope": "specific",
+      "model_family": "glm-4.6v-flash",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "image-understanding",
+        "visual-q&a",
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
     },
     {
       "id": "gpt-oss-120b",
@@ -280,6 +396,7 @@
       "tags": [
         "reasoning",
         "text-generation",
+        "code-generation",
         "chat",
         "function-calling",
         "tool-use"
@@ -308,6 +425,8 @@
         "math",
         "content-creation",
         "writing-assistance",
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "complex-reasoning"
@@ -339,6 +458,7 @@
       "tags": [
         "vision",
         "text-generation",
+        "code-generation",
         "chat",
         "reasoning",
         "function-calling",
@@ -364,6 +484,8 @@
         "visual-q&a",
         "content-creation",
         "writing-assistance",
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "problem-solving",
@@ -371,7 +493,7 @@
         "math",
         "complex-reasoning"
       ],
-      "performance_level": "mid",
+      "performance_level": "high",
       "estimated_latency": "< 1s"
     },
     {
@@ -447,7 +569,7 @@
       "tags": [
         "vision",
         "text-generation",
-        "tool-use",
+        "code-generation",
         "function-calling",
         "reasoning",
         "multimodal"
@@ -470,6 +592,8 @@
         "visual-q&a",
         "content-creation",
         "writing-assistance",
+        "software-development",
+        "code-completion",
         "problem-solving",
         "logical-analysis",
         "math",
@@ -500,6 +624,7 @@
         "reasoning",
         "text-generation",
         "tool-use",
+        "code-generation",
         "function-calling"
       ],
       "is_reasoning": true,
@@ -520,6 +645,8 @@
         "math",
         "content-creation",
         "writing-assistance",
+        "software-development",
+        "code-completion",
         "complex-reasoning"
       ],
       "performance_level": "high",
@@ -586,6 +713,7 @@
       "tags": [
         "vision",
         "text-generation",
+        "code-generation",
         "function-calling",
         "reasoning",
         "multimodal"
@@ -607,6 +735,8 @@
         "visual-q&a",
         "content-creation",
         "writing-assistance",
+        "software-development",
+        "code-completion",
         "problem-solving",
         "logical-analysis",
         "math",
@@ -636,7 +766,6 @@
       "tags": [
         "vision",
         "text-generation",
-        "tool-use",
         "function-calling",
         "reasoning",
         "multimodal"
@@ -688,7 +817,6 @@
       ],
       "tags": [
         "text-generation",
-        "tool-use",
         "function-calling",
         "reasoning"
       ],
@@ -776,6 +904,7 @@
         "function-calling"
       ],
       "tags": [
+        "tool-use",
         "text-generation",
         "function-calling"
       ],
@@ -913,6 +1042,7 @@
       ],
       "tags": [
         "text-generation",
+        "code-generation",
         "function-calling",
         "reasoning"
       ],
@@ -931,6 +1061,8 @@
       "use_case": [
         "content-creation",
         "writing-assistance",
+        "software-development",
+        "code-completion",
         "problem-solving",
         "logical-analysis",
         "math",
@@ -1339,6 +1471,620 @@
       "estimated_latency": "< 1s"
     },
     {
+      "id": "command-a-03-2025",
+      "object": "model",
+      "created": 2000245501,
+      "owned_by": "cohere",
+      "provider": "cohere",
+      "name": "command-a-03-2025",
+      "context_size": 288000,
+      "context_label": "288K",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "tool-use"
+      ],
+      "tags": [
+        "chat",
+        "text-generation",
+        "tool-use"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "notes": "Trial API key: 1,000 requests/month shared across all models (20 RPM); beyond that a paid key is required"
+      },
+      "trial_scope": "all",
+      "model_family": "command-a-03",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "command-a-plus-05-2026",
+      "object": "model",
+      "created": 1046248527,
+      "owned_by": "cohere",
+      "provider": "cohere",
+      "name": "command-a-plus-05-2026",
+      "context_size": 436000,
+      "context_label": "436K",
+      "is_free": true,
+      "capabilities": [
+        "text-generation",
+        "chat",
+        "tool-use",
+        "reasoning",
+        "vision"
+      ],
+      "tags": [
+        "text-generation",
+        "chat",
+        "tool-use",
+        "reasoning",
+        "vision",
+        "multimodal"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "notes": "Trial API key: 1,000 requests/month shared across all models (20 RPM); beyond that a paid key is required"
+      },
+      "trial_scope": "all",
+      "model_family": "command-a-plus-05",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "image-understanding",
+        "visual-q&a",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "command-a-reasoning-08-2025",
+      "object": "model",
+      "created": 1261656011,
+      "owned_by": "cohere",
+      "provider": "cohere",
+      "name": "command-a-reasoning-08-2025",
+      "context_size": 288768,
+      "context_label": "289K",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "tool-use",
+        "reasoning"
+      ],
+      "tags": [
+        "reasoning",
+        "chat",
+        "tool-use",
+        "text-generation"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "notes": "Trial API key: 1,000 requests/month shared across all models (20 RPM); beyond that a paid key is required"
+      },
+      "trial_scope": "all",
+      "model_family": "command-a-reasoning-08",
+      "model_variant": "reasoning",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "command-a-translate-08-2025",
+      "object": "model",
+      "created": 820543101,
+      "owned_by": "cohere",
+      "provider": "cohere",
+      "name": "command-a-translate-08-2025",
+      "context_size": 8992,
+      "context_label": "9K",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "tool-use"
+      ],
+      "tags": [
+        "translation",
+        "chat",
+        "tool-use"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "notes": "Trial API key: 1,000 requests/month shared across all models (20 RPM); beyond that a paid key is required"
+      },
+      "trial_scope": "all",
+      "model_family": "command-a-translate-08",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "command-a-vision-07-2025",
+      "object": "model",
+      "created": 1738664102,
+      "owned_by": "cohere",
+      "provider": "cohere",
+      "name": "command-a-vision-07-2025",
+      "context_size": 128000,
+      "context_label": "128K",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "vision",
+        "tool-use"
+      ],
+      "tags": [
+        "vision",
+        "chat",
+        "tool-use",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "notes": "Trial API key: 1,000 requests/month shared across all models (20 RPM); beyond that a paid key is required"
+      },
+      "trial_scope": "all",
+      "model_family": "command-a-vision-07",
+      "model_variant": "vision",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "command-r-08-2024",
+      "object": "model",
+      "created": 1059495730,
+      "owned_by": "cohere",
+      "provider": "cohere",
+      "name": "command-r-08-2024",
+      "context_size": 128000,
+      "context_label": "128K",
+      "is_free": true,
+      "capabilities": [
+        "text-generation",
+        "chat",
+        "tool-use"
+      ],
+      "tags": [
+        "text-generation",
+        "chat",
+        "tool-use"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "notes": "Trial API key: 1,000 requests/month shared across all models (20 RPM); beyond that a paid key is required"
+      },
+      "trial_scope": "all",
+      "model_family": "command-r-08",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "command-r-plus-08-2024",
+      "object": "model",
+      "created": 1209609917,
+      "owned_by": "cohere",
+      "provider": "cohere",
+      "name": "command-r-plus-08-2024",
+      "context_size": 128000,
+      "context_label": "128K",
+      "is_free": true,
+      "capabilities": [
+        "text-generation",
+        "chat",
+        "tool-use"
+      ],
+      "tags": [
+        "text-generation",
+        "chat",
+        "tool-use"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "notes": "Trial API key: 1,000 requests/month shared across all models (20 RPM); beyond that a paid key is required"
+      },
+      "trial_scope": "all",
+      "model_family": "command-r-plus-08",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "command-r7b-12-2024",
+      "object": "model",
+      "created": 1730057562,
+      "owned_by": "cohere",
+      "provider": "cohere",
+      "name": "command-r7b-12-2024",
+      "context_size": 132000,
+      "context_label": "132K",
+      "is_free": true,
+      "capabilities": [
+        "text-generation",
+        "chat",
+        "tool-use"
+      ],
+      "tags": [
+        "text-generation",
+        "chat",
+        "tool-use"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "notes": "Trial API key: 1,000 requests/month shared across all models (20 RPM); beyond that a paid key is required"
+      },
+      "trial_scope": "all",
+      "model_family": "command-r7b-12",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "command-r7b-arabic-02-2025",
+      "object": "model",
+      "created": 1335142987,
+      "owned_by": "cohere",
+      "provider": "cohere",
+      "name": "command-r7b-arabic-02-2025",
+      "context_size": 128000,
+      "context_label": "128K",
+      "is_free": true,
+      "capabilities": [
+        "text-generation",
+        "chat",
+        "tool-use"
+      ],
+      "tags": [
+        "text-generation",
+        "chat",
+        "tool-use"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "notes": "Trial API key: 1,000 requests/month shared across all models (20 RPM); beyond that a paid key is required"
+      },
+      "trial_scope": "all",
+      "model_family": "command-r7b-arabic-02",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "north-mini-code-1-0",
+      "object": "model",
+      "created": 1628690670,
+      "owned_by": "cohere",
+      "provider": "cohere",
+      "name": "north-mini-code-1-0",
+      "context_size": 436000,
+      "context_label": "436K",
+      "is_free": true,
+      "capabilities": [
+        "text-generation",
+        "chat",
+        "tool-use",
+        "reasoning"
+      ],
+      "tags": [
+        "code-generation",
+        "text-generation",
+        "chat",
+        "tool-use",
+        "reasoning"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "notes": "Trial API key: 1,000 requests/month shared across all models (20 RPM); beyond that a paid key is required"
+      },
+      "trial_scope": "all",
+      "model_family": "north-mini-code-1-0",
+      "model_variant": "code",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "software-development",
+        "code-completion",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "tiny-aya-earth",
+      "object": "model",
+      "created": 875815337,
+      "owned_by": "cohere",
+      "provider": "cohere",
+      "name": "tiny-aya-earth",
+      "context_size": 8192,
+      "context_label": "8K",
+      "is_free": true,
+      "capabilities": [
+        "text-generation",
+        "chat",
+        "tool-use"
+      ],
+      "tags": [
+        "text-generation",
+        "chat",
+        "tool-use"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "notes": "Trial API key: 1,000 requests/month shared across all models (20 RPM); beyond that a paid key is required"
+      },
+      "trial_scope": "all",
+      "model_family": "tiny-aya-earth",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "tiny-aya-fire",
+      "object": "model",
+      "created": 884558441,
+      "owned_by": "cohere",
+      "provider": "cohere",
+      "name": "tiny-aya-fire",
+      "context_size": 8192,
+      "context_label": "8K",
+      "is_free": true,
+      "capabilities": [
+        "text-generation",
+        "chat",
+        "tool-use"
+      ],
+      "tags": [
+        "text-generation",
+        "chat",
+        "tool-use"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "notes": "Trial API key: 1,000 requests/month shared across all models (20 RPM); beyond that a paid key is required"
+      },
+      "trial_scope": "all",
+      "model_family": "tiny-aya-fire",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "tiny-aya-global",
+      "object": "model",
+      "created": 1254053332,
+      "owned_by": "cohere",
+      "provider": "cohere",
+      "name": "tiny-aya-global",
+      "context_size": 8192,
+      "context_label": "8K",
+      "is_free": true,
+      "capabilities": [
+        "text-generation",
+        "chat",
+        "tool-use"
+      ],
+      "tags": [
+        "text-generation",
+        "chat",
+        "tool-use"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "notes": "Trial API key: 1,000 requests/month shared across all models (20 RPM); beyond that a paid key is required"
+      },
+      "trial_scope": "all",
+      "model_family": "tiny-aya-global",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "tiny-aya-water",
+      "object": "model",
+      "created": 854467066,
+      "owned_by": "cohere",
+      "provider": "cohere",
+      "name": "tiny-aya-water",
+      "context_size": 8192,
+      "context_label": "8K",
+      "is_free": true,
+      "capabilities": [
+        "text-generation",
+        "chat",
+        "tool-use"
+      ],
+      "tags": [
+        "text-generation",
+        "chat",
+        "tool-use"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "notes": "Trial API key: 1,000 requests/month shared across all models (20 RPM); beyond that a paid key is required"
+      },
+      "trial_scope": "all",
+      "model_family": "tiny-aya-water",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
       "id": "Qwen2.5-7B-Instruct",
       "object": "model",
       "created": 1228510948,
@@ -1355,8 +2101,8 @@
         "text-generation"
       ],
       "tags": [
-        "tool-use",
-        "text-generation"
+        "text-generation",
+        "tool-use"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
@@ -1378,6 +2124,627 @@
       ],
       "performance_level": "entry",
       "estimated_latency": "1-3s"
+    },
+    {
+      "id": "GLM-4-32B",
+      "object": "model",
+      "created": 131201542,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "GLM-4-32B",
+      "description": "GLM 家族新一代开源模型，320 亿参数，经过 15T 高质量数据的预训练，其中包含大量推理类的合成数据。在后训练阶段，除了针对对话场景进行了人类偏好对齐外，还通过拒绝采样和强化学习等技术强化了模型在指令遵循、工程代码、函数调用方面的效果，加强了智能体任务所需的原子能力。在工程代码、Artifacts 生成、函数调用、搜索问答及报告等方面都取得了不错的效果。",
+      "context_size": 32000,
+      "context_label": "32K",
+      "price_input": 1.89,
+      "price_output": 1.89,
+      "is_free": false,
+      "capabilities": [
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation",
+        "tool-use",
+        "code-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "all",
+      "model_family": "glm-4-32b",
+      "aliases": [],
+      "parameter_count": 32000000000,
+      "tier": "large",
+      "speed": "standard",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "software-development",
+        "code-completion"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "3-10s"
+    },
+    {
+      "id": "Qwen3-Coder-Next",
+      "object": "model",
+      "created": 1949683001,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "Qwen3-Coder-Next",
+      "description": "Qwen3-Coder-Next 是一款开放权重的高效编程语言模型，专为代码生成、复杂工具调用与本地开发代理任务设计。",
+      "context_size": 32000,
+      "context_label": "32K",
+      "price_input": 4,
+      "price_output": 4,
+      "is_free": false,
+      "capabilities": [
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation",
+        "tool-use",
+        "code-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "all",
+      "model_family": "qwen3-coder-next",
+      "model_variant": "coder",
+      "aliases": [
+        "xingchen/xop3qwencodernext"
+      ],
+      "tier": "medium",
+      "speed": "standard",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "software-development",
+        "code-completion"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "1-3s"
+    },
+    {
+      "id": "MiniMax-M2.7",
+      "object": "model",
+      "created": 1638702359,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "MiniMax-M2.7",
+      "description": "MiniMax-M2.7 在编程、工具调用与搜索、办公生产力及其他多个场景下达到或刷新了最新的 SOTA 基准，正式开启了模型递归自我提升（recursive self-improvement）的旅程。",
+      "context_size": 200000,
+      "context_label": "200K",
+      "price_input": 2.1,
+      "price_output": 8.4,
+      "is_free": false,
+      "capabilities": [
+        "text-generation"
+      ],
+      "tags": [
+        "tool-use",
+        "code-generation",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "minimax-m2.7",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "standard",
+      "use_case": [
+        "software-development",
+        "code-completion",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "1-3s"
+    },
+    {
+      "id": "Qwen3.7-Plus",
+      "object": "model",
+      "created": 484739095,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "Qwen3.7-Plus",
+      "description": "Qwen3.7系列中高性价比Plus模型，在强大文本能力的基础上全面升级了视觉-语言能力，同时保持了在编码、工具使用和生产力工作流方面的完整智能体能力。其核心特色为多模态交互混合智能体能力，能够感知真实世界场景、读取屏幕并操作 GUI、基于视觉参考生成代码、端到端导航移动应用。",
+      "context_size": 1000000,
+      "context_label": "1M",
+      "price_input": 2,
+      "price_output": 8,
+      "is_free": false,
+      "capabilities": [
+        "text-generation"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "tool-use",
+        "code-generation",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": true,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "qwen3.7-plus",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "software-development",
+        "code-completion"
+      ],
+      "performance_level": "high",
+      "estimated_latency": "3-10s"
+    },
+    {
+      "id": "Qwen3.5-Plus",
+      "object": "model",
+      "created": 563009881,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "Qwen3.5-Plus",
+      "description": "Qwen3.5 Plus 是通义千问新一代高性能通用模型，融合文本与视觉理解能力，在复杂推理、指令遵循、代码生成、工具调用和多语言任务中表现出色，适合智能助手、知识问答及企业级智能体应用。",
+      "context_label": "unknown",
+      "price_input": 0.8,
+      "price_output": 4.8,
+      "is_free": false,
+      "capabilities": [
+        "text-generation"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "tool-use",
+        "code-generation",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": true,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "qwen3.5-plus",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "software-development",
+        "code-completion"
+      ],
+      "performance_level": "high",
+      "estimated_latency": "3-10s"
+    },
+    {
+      "id": "Qwen3-Coder-Flash",
+      "object": "model",
+      "created": 94231192,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "Qwen3-Coder-Flash",
+      "description": "Qwen3-Coder-Flash 是一款面向高频编程任务优化的代码模型，兼顾代码生成质量与响应速度，支持代码补全、调试、重构、仓库级理解、工具调用和智能体编程，适合在线开发助手及自动化研发工作流。",
+      "context_label": "unknown",
+      "price_input": 1,
+      "price_output": 4,
+      "is_free": false,
+      "capabilities": [
+        "text-generation"
+      ],
+      "tags": [
+        "tool-use",
+        "code-generation",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "qwen3-coder-flash",
+      "model_variant": "coder",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "standard",
+      "use_case": [
+        "software-development",
+        "code-completion",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "1-3s"
+    },
+    {
+      "id": "qwen3-coder-plus",
+      "object": "model",
+      "created": 2084532158,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "qwen3-coder-plus",
+      "description": "基于Qwen3的代码生成模型，具有强大的Coding Agent能力，擅长工具调用和环境交互，能够实现自主编程、代码能力卓越的同时兼具通用能力。",
+      "context_label": "unknown",
+      "price_input": 4,
+      "price_output": 16,
+      "is_free": false,
+      "capabilities": [
+        "text-generation"
+      ],
+      "tags": [
+        "tool-use",
+        "code-generation",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "qwen3-coder-plus",
+      "model_variant": "coder",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "premium",
+      "use_case": [
+        "software-development",
+        "code-completion",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "1-3s"
+    },
+    {
+      "id": "gui-plus-2026-02-26",
+      "object": "model",
+      "created": 523062070,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "GUI-Plus-2026-02-26",
+      "description": "GUI 系列图形界面交互模型，2026 年 2 月 26 日快照。支持思考与非思考模式、工具调用，增强跨平台、多应用任务的理解与执行。",
+      "context_size": 32000,
+      "context_label": "32K",
+      "price_input": 1.5,
+      "price_output": 4.5,
+      "is_free": false,
+      "capabilities": [
+        "text-generation"
+      ],
+      "tags": [
+        "tool-use",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "gui-plus-2026-02-26",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "premium",
+      "use_case": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "1-3s"
+    },
+    {
+      "id": "qwen-plus-2025-12-01",
+      "object": "model",
+      "created": 1817307173,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "Qwen-Plus-2025-12-01",
+      "description": "Qwen3 系列增强语言模型，2025 年 12 月 1 日快照。提升推理、智能体、多轮工具调用及主观创作能力，支持思考与非思考模式。",
+      "context_size": 32000,
+      "context_label": "32K",
+      "price_input": 0.8,
+      "price_output": 2,
+      "is_free": false,
+      "capabilities": [
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation",
+        "tool-use"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "qwen-plus-2025-12-01",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "premium",
+      "use_case": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "1-3s"
+    },
+    {
+      "id": "glm-4-9b-chat",
+      "object": "model",
+      "created": 1110896549,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "GLM-4-9B-Chat",
+      "description": "GLM-4-9B-Chat 在语义、数学、推理、代码和知识等多方面均表现出较高性能。还具备网页浏览、代码执行、自定义工具调用和长文本推理。 支持包括日语，韩语，德语在内的 26 种语言。",
+      "context_size": 32000,
+      "context_label": "32K",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation",
+        "tool-use",
+        "code-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "permanent",
+      "free_quota": null,
+      "trial_scope": "specific",
+      "model_family": "glm-4-9b",
+      "model_variant": "chat",
+      "aliases": [
+        "bigmodel/glm-4-9b",
+        "GLM-4-9B-0414"
+      ],
+      "parameter_count": 9000000000,
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "software-development",
+        "code-completion"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "Phi-4-mini-instruct",
+      "object": "model",
+      "created": 821970876,
+      "owned_by": "github",
+      "provider": "github",
+      "name": "Phi-4-mini-instruct",
+      "description": "3.8B parameters Small Language Model outperforming larger models in reasoning, math, coding, and function-calling",
+      "context_size": 128000,
+      "context_label": "128K",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "reasoning",
+        "agentic"
+      ],
+      "tags": [
+        "reasoning",
+        "text-generation",
+        "tool-use",
+        "code-generation",
+        "chat",
+        "agentic"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
+      },
+      "trial_scope": "all",
+      "model_family": "phi-4-mini",
+      "model_variant": "instruct",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "software-development",
+        "code-completion",
+        "conversation",
+        "q&a",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "DeepSeek-V3-0324",
+      "object": "model",
+      "created": 983049015,
+      "owned_by": "github",
+      "provider": "github",
+      "name": "DeepSeek-V3-0324",
+      "description": "DeepSeek-V3-0324 demonstrates notable improvements over its predecessor, DeepSeek-V3, in several key aspects, including enhanced reasoning, improved function calling, and superior code generation capabilities.",
+      "context_size": 128000,
+      "context_label": "128K",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "code-generation",
+        "agentic"
+      ],
+      "tags": [
+        "reasoning",
+        "tool-use",
+        "code-generation",
+        "chat",
+        "text-generation",
+        "agentic"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
+      },
+      "trial_scope": "all",
+      "model_family": "deepseek-v3",
+      "aliases": [
+        "sambanova/DeepSeek-V3-0324"
+      ],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "software-development",
+        "code-completion",
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "DeepSeek-R1-0528",
+      "object": "model",
+      "created": 1932222199,
+      "owned_by": "github",
+      "provider": "github",
+      "name": "DeepSeek-R1-0528",
+      "description": "The DeepSeek R1 0528 model has improved reasoning capabilities, this version also offers a reduced hallucination rate, enhanced support for function calling, and better experience for vibe coding.",
+      "context_size": 128000,
+      "context_label": "128K",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "reasoning",
+        "code-generation",
+        "agentic"
+      ],
+      "tags": [
+        "reasoning",
+        "text-generation",
+        "tool-use",
+        "code-generation",
+        "chat",
+        "agentic"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
+      },
+      "trial_scope": "all",
+      "model_family": "deepseek-r1",
+      "model_variant": "r1",
+      "aliases": [
+        "github/DeepSeek-R1",
+        "sambanova/DeepSeek-R1-0528"
+      ],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "software-development",
+        "code-completion",
+        "conversation",
+        "q&a",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "models/gemini-robotics-er-2-streaming-preview",
+      "object": "model",
+      "created": 554617848,
+      "owned_by": "google",
+      "provider": "google",
+      "name": "Gemini Robotics ER 2 Streaming Preview",
+      "description": "Google: Gemini Robotics ER 2 Streaming is a vision-language model endpoint for robotics optimized for real-time text streaming using the Live API. It accepts text, image, video, and audio input and supports bidirectional streaming with function calling.",
+      "context_label": "unknown",
+      "price_input": 1,
+      "price_output": 5,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "tool-use",
+        "chat",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Free tier is limited per project by requests/min, input tokens/min and requests/day. Google publishes the per-model numbers only in AI Studio (https://aistudio.google.com/rate-limit); the public docs state limits \"are not guaranteed and actual capacity may vary\"."
+      },
+      "trial_scope": "fast",
+      "model_family": "gemini-robotics-er-2-streaming-preview",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
     },
     {
       "id": "stepfun/step-5-preview-free",
@@ -1403,8 +2770,9 @@
         "reasoning",
         "vision",
         "text-generation",
-        "tool-use",
+        "code-generation",
         "chat",
+        "tool-use",
         "multimodal"
       ],
       "is_reasoning": true,
@@ -1427,11 +2795,13 @@
         "visual-q&a",
         "content-creation",
         "writing-assistance",
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "complex-reasoning"
       ],
-      "performance_level": "mid",
+      "performance_level": "high",
       "estimated_latency": "< 1s"
     },
     {
@@ -1455,6 +2825,7 @@
       ],
       "tags": [
         "text-generation",
+        "code-generation",
         "chat",
         "tool-use",
         "reasoning"
@@ -1474,6 +2845,8 @@
       "use_case": [
         "content-creation",
         "writing-assistance",
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "problem-solving",
@@ -1667,6 +3040,7 @@
       ],
       "tags": [
         "text-generation",
+        "code-generation",
         "chat",
         "tool-use",
         "reasoning"
@@ -1688,6 +3062,8 @@
       "use_case": [
         "content-creation",
         "writing-assistance",
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "problem-solving",
@@ -1720,8 +3096,9 @@
       "tags": [
         "reasoning",
         "text-generation",
-        "chat",
-        "tool-use"
+        "tool-use",
+        "code-generation",
+        "chat"
       ],
       "is_reasoning": true,
       "is_multimodal": false,
@@ -1741,6 +3118,8 @@
         "math",
         "content-creation",
         "writing-assistance",
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "complex-reasoning"
@@ -1770,6 +3149,7 @@
       "tags": [
         "reasoning",
         "text-generation",
+        "code-generation",
         "chat",
         "tool-use"
       ],
@@ -1794,6 +3174,8 @@
         "math",
         "content-creation",
         "writing-assistance",
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "complex-reasoning"
@@ -1875,12 +3257,12 @@
         "reasoning"
       ],
       "tags": [
+        "reasoning",
         "vision",
         "text-generation",
         "chat",
         "speech-recognition",
         "tool-use",
-        "reasoning",
         "multimodal"
       ],
       "is_reasoning": true,
@@ -1898,6 +3280,9 @@
       "tier": "large",
       "speed": "fast",
       "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
         "image-understanding",
         "visual-q&a",
         "content-creation",
@@ -1906,9 +3291,6 @@
         "q&a",
         "transcription",
         "voice-input",
-        "problem-solving",
-        "logical-analysis",
-        "math",
         "complex-reasoning"
       ],
       "performance_level": "mid",
@@ -1935,6 +3317,7 @@
       ],
       "tags": [
         "text-generation",
+        "code-generation",
         "chat",
         "tool-use",
         "reasoning"
@@ -1957,6 +3340,8 @@
       "use_case": [
         "content-creation",
         "writing-assistance",
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "problem-solving",
@@ -1989,10 +3374,10 @@
       ],
       "tags": [
         "text-generation",
+        "code-generation",
         "chat",
         "tool-use",
-        "reasoning",
-        "code-generation"
+        "reasoning"
       ],
       "is_reasoning": true,
       "is_multimodal": false,
@@ -2012,13 +3397,13 @@
       "use_case": [
         "content-creation",
         "writing-assistance",
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "problem-solving",
         "logical-analysis",
         "math",
-        "software-development",
-        "code-completion",
         "complex-reasoning"
       ],
       "performance_level": "mid",
@@ -2504,6 +3889,55 @@
       "estimated_latency": "< 1s"
     },
     {
+      "id": "moonshotai/kimi-k3",
+      "object": "model",
+      "created": 987502986,
+      "owned_by": "nvidia",
+      "provider": "nvidia",
+      "name": "kimi-k3",
+      "description": "NVIDIA: ~2.8T hybrid KDA+MLA multimodal MoE for long-horizon coding, agentic tool use, and image understanding.",
+      "context_label": "unknown",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "vision",
+        "tool-use",
+        "code-generation",
+        "chat",
+        "text-generation",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Public NIM endpoints: Up to 40 rpm and 10,000 requests per day; limits may vary by model and by traffic",
+        "rpm": 40,
+        "rpd": 10000
+      },
+      "trial_scope": "specific",
+      "model_family": "moonshotai-kimi-k3",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "software-development",
+        "code-completion",
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
       "id": "inclusionai/ling-3.1-flash",
       "object": "model",
       "created": 99340534,
@@ -2579,8 +4013,9 @@
       "tags": [
         "reasoning",
         "text-generation",
-        "chat",
-        "tool-use"
+        "tool-use",
+        "code-generation",
+        "chat"
       ],
       "is_reasoning": true,
       "is_multimodal": false,
@@ -2602,6 +4037,8 @@
         "math",
         "content-creation",
         "writing-assistance",
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "complex-reasoning"
@@ -2690,6 +4127,7 @@
       "tags": [
         "reasoning",
         "text-generation",
+        "code-generation",
         "chat",
         "tool-use"
       ],
@@ -2716,6 +4154,8 @@
         "math",
         "content-creation",
         "writing-assistance",
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "complex-reasoning"
@@ -2799,11 +4239,11 @@
         "tool-use"
       ],
       "tags": [
+        "reasoning",
         "vision",
         "text-generation",
         "chat",
         "speech-recognition",
-        "reasoning",
         "tool-use",
         "multimodal"
       ],
@@ -2824,6 +4264,9 @@
       "tier": "large",
       "speed": "fast",
       "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
         "image-understanding",
         "visual-q&a",
         "content-creation",
@@ -2832,9 +4275,6 @@
         "q&a",
         "transcription",
         "voice-input",
-        "problem-solving",
-        "logical-analysis",
-        "math",
         "complex-reasoning"
       ],
       "performance_level": "mid",
@@ -2861,6 +4301,7 @@
       ],
       "tags": [
         "text-generation",
+        "code-generation",
         "chat",
         "reasoning",
         "tool-use"
@@ -2884,6 +4325,8 @@
       "use_case": [
         "content-creation",
         "writing-assistance",
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "problem-solving",
@@ -2920,6 +4363,7 @@
         "vision",
         "text-generation",
         "tool-use",
+        "code-generation",
         "chat",
         "speech-recognition",
         "multimodal"
@@ -2946,13 +4390,15 @@
         "visual-q&a",
         "content-creation",
         "writing-assistance",
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "transcription",
         "voice-input",
         "complex-reasoning"
       ],
-      "performance_level": "mid",
+      "performance_level": "high",
       "estimated_latency": "< 1s"
     },
     {
@@ -2976,6 +4422,7 @@
       ],
       "tags": [
         "text-generation",
+        "code-generation",
         "chat",
         "reasoning",
         "tool-use"
@@ -3000,6 +4447,8 @@
       "use_case": [
         "content-creation",
         "writing-assistance",
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "problem-solving",
@@ -3032,10 +4481,10 @@
       ],
       "tags": [
         "text-generation",
+        "code-generation",
         "chat",
         "reasoning",
-        "tool-use",
-        "code-generation"
+        "tool-use"
       ],
       "is_reasoning": true,
       "is_multimodal": false,
@@ -3057,13 +4506,13 @@
       "use_case": [
         "content-creation",
         "writing-assistance",
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "problem-solving",
         "logical-analysis",
         "math",
-        "software-development",
-        "code-completion",
         "complex-reasoning"
       ],
       "performance_level": "mid",
@@ -3425,14 +4874,69 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "sensenova-6.7-flash-lite",
+      "id": "Mistral-Small-3.2-24B-Instruct-2506",
       "object": "model",
-      "created": 220257270,
-      "owned_by": "sensenova",
-      "provider": "sensenova",
-      "name": "SenseNova 6.7 Flash-Lite",
-      "description": "SenseNova: 轻量多模态智能体模型, Cowork-Skills 办公场景特化",
-      "context_label": "unknown",
+      "created": 1936234523,
+      "owned_by": "ovh",
+      "provider": "ovh",
+      "name": "Mistral-Small-3.2-24B-Instruct-2506",
+      "description": "Building upon Mistral Small 3 (2501), Mistral Small 3.2 (2506) adds state-of-the-art vision understanding and enhances long context capabilities up to 128k tokens without compromising text performance.\nWith 24 billion parameters, this model achieves top-tier capabilities in both text and vision tasks.\nThis model is a minor update of Mistral-Small-3.1-24B-Instruct-2503, which is an instruction-finetuned version of: Mistral-Small-3.1-24B-Base-2503.",
+      "context_size": 131072,
+      "context_label": "131K",
+      "price_input": 0.1,
+      "price_output": 0.31,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision",
+        "tool-use"
+      ],
+      "tags": [
+        "chat",
+        "text-generation",
+        "vision",
+        "tool-use",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 2,
+        "notes": "Anonymous access (no API key, no signup): 2 requests per minute, per IP and per model. With an API key the same models are billed pay-as-you-go per token (400 RPM per project) — price_input/price_output are those rates, not what the anonymous tier costs."
+      },
+      "trial_scope": "all",
+      "model_family": "mistral-small-3.2-24b",
+      "model_variant": "instruct",
+      "aliases": [],
+      "parameter_count": 24000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "Mistral-7B-Instruct-v0.3",
+      "object": "model",
+      "created": 759365312,
+      "owned_by": "ovh",
+      "provider": "ovh",
+      "name": "Mistral-7B-Instruct-v0.3",
+      "description": "The Mistral-7B-Instruct-v0.3 model, developed by Mistral AI, is a fine-tuned version of the Mistral 7B base model, optimized for instruction-following tasks. Released in 2023, it is intended for demonstration purposes and does not include built-in guardrails or moderation features.",
+      "context_size": 65536,
+      "context_label": "66K",
+      "price_input": 0.11,
+      "price_output": 0.11,
       "is_free": true,
       "capabilities": [
         "chat",
@@ -3449,11 +4953,16 @@
       "has_tool_use": true,
       "free_mechanism": "rate-limited",
       "free_quota": {
-        "notes": "1500 次 / 5 小时"
+        "rpm": 2,
+        "notes": "Anonymous access (no API key, no signup): 2 requests per minute, per IP and per model. With an API key the same models are billed pay-as-you-go per token (400 RPM per project) — price_input/price_output are those rates, not what the anonymous tier costs."
       },
       "trial_scope": "all",
-      "model_family": "sensenova-6.7-flash-lite",
-      "aliases": [],
+      "model_family": "mistral-7b-v0.3",
+      "model_variant": "instruct",
+      "aliases": [
+        "mistralai/mistral-7b-instruct-v0.3"
+      ],
+      "parameter_count": 7000000000,
       "tier": "medium",
       "speed": "fast",
       "use_case": [
@@ -3464,6 +4973,691 @@
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
+    },
+    {
+      "id": "gpt-oss-120b",
+      "object": "model",
+      "created": 1576077904,
+      "owned_by": "ovh",
+      "provider": "ovh",
+      "name": "gpt-oss-120b",
+      "description": "gpt-oss-120b is a cutting-edge model designed for high-level reasoning, instruction-following, and advanced agent capabilities. It excels in versatile use cases, offering powerful performance for both general-purpose and specialized applications.",
+      "context_size": 131072,
+      "context_label": "131K",
+      "price_input": 0.09,
+      "price_output": 0.47,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "reasoning",
+        "tool-use"
+      ],
+      "tags": [
+        "chat",
+        "text-generation",
+        "reasoning",
+        "tool-use"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 2,
+        "notes": "Anonymous access (no API key, no signup): 2 requests per minute, per IP and per model. With an API key the same models are billed pay-as-you-go per token (400 RPM per project) — price_input/price_output are those rates, not what the anonymous tier costs."
+      },
+      "trial_scope": "all",
+      "model_family": "gpt-oss-120b",
+      "aliases": [
+        "cerebras/gpt-oss-120b",
+        "cloudflare/@cf/openai/gpt-oss-120b",
+        "groq/openai/gpt-oss-120b",
+        "sambanova/gpt-oss-120b"
+      ],
+      "parameter_count": 120000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "Qwen3.5-397B-A17B",
+      "object": "model",
+      "created": 362190396,
+      "owned_by": "ovh",
+      "provider": "ovh",
+      "name": "Qwen3.5-397B-A17B",
+      "description": "Qwen3.5-397B-A17B is a highly efficient, reasoning focused MoE (Mixture of Experts) model delivering state-of-the-art performance in language, vision, and multimodal tasks, with strong capabilities in code, reasoning, and real-world adaptability.",
+      "context_size": 262144,
+      "context_label": "262K",
+      "price_input": 0.71,
+      "price_output": 4.25,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision",
+        "reasoning",
+        "tool-use"
+      ],
+      "tags": [
+        "chat",
+        "text-generation",
+        "vision",
+        "reasoning",
+        "tool-use",
+        "multimodal"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 2,
+        "notes": "Anonymous access (no API key, no signup): 2 requests per minute, per IP and per model. With an API key the same models are billed pay-as-you-go per token (400 RPM per project) — price_input/price_output are those rates, not what the anonymous tier costs."
+      },
+      "trial_scope": "all",
+      "model_family": "qwen3.5-397b-a17b",
+      "aliases": [
+        "xingchen/xopqwen35397b"
+      ],
+      "parameter_count": 397000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "image-understanding",
+        "visual-q&a",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "Qwen3.5-9B",
+      "object": "model",
+      "created": 487231654,
+      "owned_by": "ovh",
+      "provider": "ovh",
+      "name": "Qwen3.5-9B",
+      "description": "Qwen3.5 9B is a highly efficient, reasoning focused model delivering state of the art performance in language, vision, and multimodal tasks, with strong capabilities in code, reasoning, and real-world adaptability.",
+      "context_size": 262144,
+      "context_label": "262K",
+      "price_input": 0.12,
+      "price_output": 0.18,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision",
+        "reasoning",
+        "tool-use"
+      ],
+      "tags": [
+        "chat",
+        "text-generation",
+        "vision",
+        "reasoning",
+        "tool-use",
+        "multimodal"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 2,
+        "notes": "Anonymous access (no API key, no signup): 2 requests per minute, per IP and per model. With an API key the same models are billed pay-as-you-go per token (400 RPM per project) — price_input/price_output are those rates, not what the anonymous tier costs."
+      },
+      "trial_scope": "all",
+      "model_family": "qwen3.5-9b",
+      "aliases": [],
+      "parameter_count": 9000000000,
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "image-understanding",
+        "visual-q&a",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "gpt-oss-20b",
+      "object": "model",
+      "created": 568363103,
+      "owned_by": "ovh",
+      "provider": "ovh",
+      "name": "gpt-oss-20b",
+      "description": "gpt-oss-20b delivers strong performance with fast inference and efficient reasoning. Ideal for a wide range of tasks, it offers flexible deployment for developers seeking powerful, customizable AI solutions.",
+      "context_size": 131072,
+      "context_label": "131K",
+      "price_input": 0.05,
+      "price_output": 0.18,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "reasoning",
+        "tool-use"
+      ],
+      "tags": [
+        "chat",
+        "text-generation",
+        "reasoning",
+        "tool-use"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 2,
+        "notes": "Anonymous access (no API key, no signup): 2 requests per minute, per IP and per model. With an API key the same models are billed pay-as-you-go per token (400 RPM per project) — price_input/price_output are those rates, not what the anonymous tier costs."
+      },
+      "trial_scope": "all",
+      "model_family": "gpt-oss-20b",
+      "aliases": [
+        "cloudflare/@cf/openai/gpt-oss-20b",
+        "groq/openai/gpt-oss-20b",
+        "openai/gpt-oss-20b"
+      ],
+      "parameter_count": 20000000000,
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "Meta-Llama-3_3-70B-Instruct",
+      "object": "model",
+      "created": 1740013843,
+      "owned_by": "ovh",
+      "provider": "ovh",
+      "name": "Meta-Llama-3_3-70B-Instruct",
+      "description": "Llama 3.3 is an instruction-tuned generative language model optimized for multilingual dialogue use cases. It was released by Meta AI on December 6, 2024, and utilizes an advanced transformer architecture and is designed to align with human preferences for helpfulness and safety through supervised fine-tuning (SFT) and reinforcement learning with human feedback (RLHF). The knowledge cutoff for this 70B model is December 31, 2023.",
+      "context_size": 131072,
+      "context_label": "131K",
+      "price_input": 0.74,
+      "price_output": 0.74,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "tool-use"
+      ],
+      "tags": [
+        "chat",
+        "text-generation",
+        "tool-use"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 2,
+        "notes": "Anonymous access (no API key, no signup): 2 requests per minute, per IP and per model. With an API key the same models are billed pay-as-you-go per token (400 RPM per project) — price_input/price_output are those rates, not what the anonymous tier costs."
+      },
+      "trial_scope": "all",
+      "model_family": "3_3-70b",
+      "model_variant": "instruct",
+      "aliases": [],
+      "parameter_count": 70000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "Mistral-Nemo-Instruct-2407",
+      "object": "model",
+      "created": 2044441628,
+      "owned_by": "ovh",
+      "provider": "ovh",
+      "name": "Mistral-Nemo-Instruct-2407",
+      "description": "The Mistral-Nemo-Instruct-2407 model, developed collaboratively by Mistral AI and NVIDIA, is an instruction-tuned LLM released in 2024. Designed for multilingual applications, it excels in tasks such as conversational dialogue, code generation, and instructional comprehension across various languages.",
+      "context_size": 65536,
+      "context_label": "66K",
+      "price_input": 0.14,
+      "price_output": 0.14,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "tool-use"
+      ],
+      "tags": [
+        "chat",
+        "text-generation",
+        "tool-use"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 2,
+        "notes": "Anonymous access (no API key, no signup): 2 requests per minute, per IP and per model. With an API key the same models are billed pay-as-you-go per token (400 RPM per project) — price_input/price_output are those rates, not what the anonymous tier costs."
+      },
+      "trial_scope": "all",
+      "model_family": "mistral-nemo",
+      "model_variant": "instruct",
+      "aliases": [
+        "llm7/mistral-Nemo-Instruct-2407"
+      ],
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "Qwen3.6-27B",
+      "object": "model",
+      "created": 1102402603,
+      "owned_by": "ovh",
+      "provider": "ovh",
+      "name": "Qwen3.6-27B",
+      "description": "Qwen3.6-27B is a 27-billion-parameter multimodal causal language model developed by Alibaba's Qwen team, released as an open-weight variant following the February release of the Qwen3.5 series. It is built as an Image-Text-to-Text model.",
+      "context_size": 262144,
+      "context_label": "262K",
+      "price_input": 0.47,
+      "price_output": 3.19,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision",
+        "reasoning",
+        "tool-use"
+      ],
+      "tags": [
+        "chat",
+        "text-generation",
+        "vision",
+        "reasoning",
+        "tool-use",
+        "multimodal"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 2,
+        "notes": "Anonymous access (no API key, no signup): 2 requests per minute, per IP and per model. With an API key the same models are billed pay-as-you-go per token (400 RPM per project) — price_input/price_output are those rates, not what the anonymous tier costs."
+      },
+      "trial_scope": "all",
+      "model_family": "qwen3.6-27b",
+      "aliases": [
+        "Qwen3.6-27B"
+      ],
+      "parameter_count": 27000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "image-understanding",
+        "visual-q&a",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "Qwen3.8-27B",
+      "object": "model",
+      "created": 1104774445,
+      "owned_by": "ovh",
+      "provider": "ovh",
+      "name": "Qwen3.8-27B",
+      "description": "Qwen3.8-27B is a 27-billion-parameter multimodal causal language model developed by Alibaba's Qwen team. It is the most capable generation in the Qwen open-model family, built as a native vision-language model that understands images and videos, with flexible thinking control, designed to carry complex, multi-step agentic tasks through to completion with greater reliability.",
+      "context_size": 262144,
+      "context_label": "262K",
+      "price_input": 0.47,
+      "price_output": 3.19,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision",
+        "reasoning",
+        "tool-use"
+      ],
+      "tags": [
+        "chat",
+        "text-generation",
+        "vision",
+        "reasoning",
+        "tool-use",
+        "multimodal"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 2,
+        "notes": "Anonymous access (no API key, no signup): 2 requests per minute, per IP and per model. With an API key the same models are billed pay-as-you-go per token (400 RPM per project) — price_input/price_output are those rates, not what the anonymous tier costs."
+      },
+      "trial_scope": "all",
+      "model_family": "qwen3.8-27b",
+      "aliases": [
+        "cloudflare/@cf/qwen/qwen3.8-27b",
+        "qwen3.8-27b",
+        "groq/qwen/qwen3.8-27b"
+      ],
+      "parameter_count": 27000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "image-understanding",
+        "visual-q&a",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "sensenova-6.7-flash-lite",
+      "object": "model",
+      "created": 220257270,
+      "owned_by": "sensenova",
+      "provider": "sensenova",
+      "name": "SenseNova 6.7 Flash-Lite",
+      "description": "SenseNova: 轻量多模态智能体模型, Cowork-Skills 办公场景特化",
+      "context_label": "unknown",
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "tool-use"
+      ],
+      "tags": [
+        "vision",
+        "chat",
+        "text-generation",
+        "tool-use",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "1500 次 / 5 小时"
+      },
+      "trial_scope": "all",
+      "model_family": "sensenova-6.7-flash-lite",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "spark-x2.5-4b",
+      "object": "model",
+      "created": 263902778,
+      "owned_by": "xingchen",
+      "provider": "xingchen",
+      "name": "Spark-X2.5-4B",
+      "description": "4B级端侧通用语言Dense模型，采用混合注意力架构，原生支持最长 1M token 的上下文，并支持 200 多种语言，在语言理解、文本创作、数学推理、编程、工具调用和智能体工作流等广泛的日常任务中表现优异，领先同尺寸开源模型。",
+      "context_size": 1,
+      "context_label": "1",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "reasoning",
+        "text-generation",
+        "tool-use",
+        "code-generation",
+        "chat"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "讯飞星辰 MaaS 免费模型（inferencePrice 输入/输出均为 0）；平台按账号限并发，具体数值只在 maas.xfyun.cn 登录后的控制台展示，公开模型列表 API 不返回该字段"
+      },
+      "trial_scope": "specific",
+      "model_family": "spark-x2.5-4b",
+      "aliases": [],
+      "parameter_count": 4000000000,
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "software-development",
+        "code-completion",
+        "conversation",
+        "q&a",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "spark-x2.5-1.7b",
+      "object": "model",
+      "created": 372521064,
+      "owned_by": "xingchen",
+      "provider": "xingchen",
+      "name": "Spark-X2.5-1.7B",
+      "description": "1.7B级轻量端侧通用语言Dense模型，采用混合注意力架构，原生支持最长 1M token 的上下文，并支持 200 多种语言，在语言理解、文本创作、数学推理、编程、工具调用和智能体工作流等广泛的日常任务中表现优异，领先同尺寸开源模型。",
+      "context_size": 1,
+      "context_label": "1",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "reasoning",
+        "text-generation",
+        "tool-use",
+        "code-generation",
+        "chat"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "讯飞星辰 MaaS 免费模型（inferencePrice 输入/输出均为 0）；平台按账号限并发，具体数值只在 maas.xfyun.cn 登录后的控制台展示，公开模型列表 API 不返回该字段"
+      },
+      "trial_scope": "specific",
+      "model_family": "spark-x2.5-1.7b",
+      "aliases": [],
+      "parameter_count": 1700000000,
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "software-development",
+        "code-completion",
+        "conversation",
+        "q&a",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "xsqwenv2s1b5c",
+      "object": "model",
+      "created": 649188244,
+      "owned_by": "xingchen",
+      "provider": "xingchen",
+      "name": "Qwen_v2_1.5b_Instruct",
+      "description": "【可商用】Qwen是阿里巴巴集团Qwen团队研发的大语言模型和大型多模态模型系列。目前，大语言模型已升级至Qwen2版本。无论是语言模型还是多模态模型，均在大规模多语言和多模态数据上进行预训练，并通过高质量数据进行后期微调以贴近人类偏好。Qwen具备自然语言理解、文本生成、视觉理解、音频理解、工具使用、角色扮演、作为AI Agent进行互动等多种能力。",
+      "context_size": 8192,
+      "context_label": "8K",
+      "price_input": 1,
+      "price_output": 2,
+      "is_free": false,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "tool-use",
+        "chat",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": true,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "qwen-v2-1.5b",
+      "model_variant": "instruct",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "3-10s"
+    },
+    {
+      "id": "xsqwenv2s0b5c",
+      "object": "model",
+      "created": 649152307,
+      "owned_by": "xingchen",
+      "provider": "xingchen",
+      "name": "Qwen_v2_0.5b_Instruct",
+      "description": "【可商用】Qwen是阿里巴巴集团Qwen团队研发的大语言模型和大型多模态模型系列。目前，大语言模型已升级至Qwen2版本。无论是语言模型还是多模态模型，均在大规模多语言和多模态数据上进行预训练，并通过高质量数据进行后期微调以贴近人类偏好。Qwen具备自然语言理解、文本生成、视觉理解、音频理解、工具使用、角色扮演、作为AI Agent进行互动等多种能力。",
+      "context_size": 8192,
+      "context_label": "8K",
+      "price_input": 2,
+      "price_output": 4,
+      "is_free": false,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "tool-use",
+        "chat",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": true,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "qwen-v2-0.5b",
+      "model_variant": "instruct",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "3-10s"
     }
   ]
 }

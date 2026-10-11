@@ -1,7 +1,7 @@
 {
   "object": "list",
   "view": "free-quota",
-  "updated_at": "2026-10-11T08:25:56.591Z",
+  "updated_at": "2026-10-11T09:53:38.098Z",
   "total": 90,
   "filters": {
     "freeMechanism": [
@@ -34,6 +34,7 @@
       "tags": [
         "reasoning",
         "text-generation",
+        "code-generation",
         "chat",
         "function-calling",
         "tool-use"
@@ -62,6 +63,8 @@
         "math",
         "content-creation",
         "writing-assistance",
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "complex-reasoning"
@@ -93,6 +96,7 @@
       "tags": [
         "vision",
         "text-generation",
+        "code-generation",
         "chat",
         "reasoning",
         "function-calling",
@@ -118,6 +122,8 @@
         "visual-q&a",
         "content-creation",
         "writing-assistance",
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "problem-solving",
@@ -125,7 +131,7 @@
         "math",
         "complex-reasoning"
       ],
-      "performance_level": "mid",
+      "performance_level": "high",
       "estimated_latency": "< 1s"
     },
     {
@@ -394,7 +400,8 @@
         "text-generation"
       ],
       "tags": [
-        "text-generation"
+        "text-generation",
+        "moderation"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
@@ -412,7 +419,9 @@
       "speed": "fast",
       "use_case": [
         "content-creation",
-        "writing-assistance"
+        "writing-assistance",
+        "content-filtering",
+        "safety"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
@@ -590,6 +599,7 @@
       ],
       "tags": [
         "text-generation",
+        "translation",
         "speech-recognition"
       ],
       "is_reasoning": false,
@@ -1081,7 +1091,6 @@
       ],
       "tags": [
         "text-generation",
-        "tool-use",
         "function-calling",
         "reasoning"
       ],
@@ -1285,6 +1294,7 @@
         "function-calling"
       ],
       "tags": [
+        "tool-use",
         "text-generation",
         "function-calling"
       ],
@@ -1686,7 +1696,8 @@
         "text-generation"
       ],
       "tags": [
-        "text-generation"
+        "text-generation",
+        "code-generation"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
@@ -1704,9 +1715,11 @@
       "speed": "fast",
       "use_case": [
         "content-creation",
-        "writing-assistance"
+        "writing-assistance",
+        "software-development",
+        "code-completion"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -2185,7 +2198,8 @@
       ],
       "tags": [
         "text-generation",
-        "speech-recognition"
+        "speech-recognition",
+        "translation"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
@@ -2223,7 +2237,8 @@
       ],
       "tags": [
         "text-generation",
-        "speech-recognition"
+        "speech-recognition",
+        "translation"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
@@ -2398,6 +2413,8 @@
       ],
       "tags": [
         "text-generation",
+        "embeddings",
+        "rerank",
         "moderation"
       ],
       "is_reasoning": false,
@@ -2416,6 +2433,10 @@
       "use_case": [
         "content-creation",
         "writing-assistance",
+        "semantic-search",
+        "similarity",
+        "search-improvement",
+        "relevance",
         "content-filtering",
         "safety"
       ],
@@ -2441,6 +2462,7 @@
         "reasoning",
         "vision",
         "text-generation",
+        "document-processing",
         "multimodal"
       ],
       "is_reasoning": true,
@@ -2464,6 +2486,8 @@
         "visual-q&a",
         "content-creation",
         "writing-assistance",
+        "pdf-processing",
+        "ocr",
         "complex-reasoning"
       ],
       "performance_level": "mid",

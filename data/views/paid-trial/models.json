@@ -1,7 +1,7 @@
 {
   "object": "list",
   "view": "paid-trial",
-  "updated_at": "2026-10-11T08:25:56.591Z",
+  "updated_at": "2026-10-11T09:53:38.099Z",
   "total": 92,
   "filters": {
     "isFree": "false",
@@ -25,8 +25,8 @@
         "text-generation"
       ],
       "tags": [
-        "tool-use",
-        "text-generation"
+        "text-generation",
+        "tool-use"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
@@ -65,10 +65,12 @@
         "image-generation"
       ],
       "tags": [
-        "image-generation"
+        "vision",
+        "image-generation",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": null,
       "free_quota": null,
@@ -78,14 +80,16 @@
       "aliases": [
         "stable-diffusion-3.5-large"
       ],
-      "tier": "medium",
-      "speed": "standard",
+      "tier": "large",
+      "speed": "premium",
       "use_case": [
+        "image-understanding",
+        "visual-q&a",
         "creative-generation",
         "art"
       ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
+      "performance_level": "mid",
+      "estimated_latency": "3-10s"
     },
     {
       "id": "RMBG-2.0",
@@ -135,6 +139,7 @@
         "speech-recognition"
       ],
       "tags": [
+        "text-generation",
         "speech-recognition"
       ],
       "is_reasoning": false,
@@ -157,6 +162,8 @@
       "tier": "medium",
       "speed": "standard",
       "use_case": [
+        "content-creation",
+        "writing-assistance",
         "transcription",
         "voice-input"
       ],
@@ -215,24 +222,34 @@
         "image-to-image"
       ],
       "tags": [
-        "image-to-image"
+        "vision",
+        "text-generation",
+        "document-processing",
+        "image-to-image",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "all",
       "model_family": "uvdoc",
       "aliases": [],
-      "tier": "medium",
-      "speed": "standard",
+      "tier": "large",
+      "speed": "premium",
       "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "pdf-processing",
+        "ocr",
         "image-editing",
         "style-transfer"
       ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
+      "performance_level": "mid",
+      "estimated_latency": "3-10s"
     },
     {
       "id": "nsfw-classifier",
@@ -250,24 +267,28 @@
         "moderation"
       ],
       "tags": [
-        "moderation"
+        "vision",
+        "moderation",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "all",
       "model_family": "nsfw-classifier",
       "aliases": [],
-      "tier": "medium",
-      "speed": "standard",
+      "tier": "large",
+      "speed": "premium",
       "use_case": [
+        "image-understanding",
+        "visual-q&a",
         "content-filtering",
         "safety"
       ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
+      "performance_level": "mid",
+      "estimated_latency": "3-10s"
     },
     {
       "id": "Security-semantic-filtering",
@@ -286,6 +307,7 @@
         "moderation"
       ],
       "tags": [
+        "text-generation",
         "moderation"
       ],
       "is_reasoning": false,
@@ -299,6 +321,8 @@
       "tier": "medium",
       "speed": "standard",
       "use_case": [
+        "content-creation",
+        "writing-assistance",
         "content-filtering",
         "safety"
       ],
@@ -322,6 +346,7 @@
       ],
       "tags": [
         "vision",
+        "text-generation",
         "multimodal"
       ],
       "is_reasoning": false,
@@ -336,7 +361,9 @@
       "speed": "premium",
       "use_case": [
         "image-understanding",
-        "visual-q&a"
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance"
       ],
       "performance_level": "mid",
       "estimated_latency": "3-10s"
@@ -403,6 +430,7 @@
         "speech-synthesis"
       ],
       "tags": [
+        "text-generation",
         "speech-synthesis"
       ],
       "is_reasoning": false,
@@ -418,6 +446,8 @@
       "tier": "small",
       "speed": "standard",
       "use_case": [
+        "content-creation",
+        "writing-assistance",
         "text-to-speech",
         "voice-output"
       ],
@@ -440,6 +470,7 @@
         "video-generation"
       ],
       "tags": [
+        "text-generation",
         "video-generation"
       ],
       "is_reasoning": false,
@@ -454,6 +485,8 @@
       "tier": "medium",
       "speed": "standard",
       "use_case": [
+        "content-creation",
+        "writing-assistance",
         "video-creation"
       ],
       "performance_level": "entry",
@@ -476,9 +509,10 @@
         "text-generation"
       ],
       "tags": [
+        "reasoning",
         "text-generation"
       ],
-      "is_reasoning": false,
+      "is_reasoning": true,
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": null,
@@ -490,12 +524,16 @@
       ],
       "parameter_count": 32000000000,
       "tier": "large",
-      "speed": "standard",
+      "speed": "premium",
       "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
         "content-creation",
-        "writing-assistance"
+        "writing-assistance",
+        "complex-reasoning"
       ],
-      "performance_level": "mid",
+      "performance_level": "high",
       "estimated_latency": "3-10s"
     },
     {
@@ -634,21 +672,29 @@
         "3d-generation"
       ],
       "tags": [
-        "3d-generation"
+        "vision",
+        "text-generation",
+        "3d-generation",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "all",
       "model_family": "hunyuan3d-2",
       "aliases": [],
-      "tier": "medium",
-      "speed": "standard",
-      "use_case": [],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
+      "tier": "large",
+      "speed": "premium",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "3-10s"
     },
     {
       "id": "moark-text-moderation",
@@ -706,11 +752,13 @@
         "text-generation"
       ],
       "tags": [
-        "text-generation"
+        "text-generation",
+        "tool-use",
+        "code-generation"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
-      "has_tool_use": false,
+      "has_tool_use": true,
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "all",
@@ -721,7 +769,9 @@
       "speed": "standard",
       "use_case": [
         "content-creation",
-        "writing-assistance"
+        "writing-assistance",
+        "software-development",
+        "code-completion"
       ],
       "performance_level": "mid",
       "estimated_latency": "3-10s"
@@ -743,10 +793,12 @@
         "text-generation"
       ],
       "tags": [
-        "text-generation"
+        "vision",
+        "text-generation",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": null,
       "free_quota": null,
@@ -754,14 +806,16 @@
       "model_family": "internvl3-78b",
       "aliases": [],
       "parameter_count": 78000000000,
-      "tier": "medium",
-      "speed": "standard",
+      "tier": "large",
+      "speed": "premium",
       "use_case": [
+        "image-understanding",
+        "visual-q&a",
         "content-creation",
         "writing-assistance"
       ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
+      "performance_level": "mid",
+      "estimated_latency": "3-10s"
     },
     {
       "id": "InternVL3-38B",
@@ -780,10 +834,12 @@
         "text-generation"
       ],
       "tags": [
-        "text-generation"
+        "vision",
+        "text-generation",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": null,
       "free_quota": null,
@@ -791,14 +847,16 @@
       "model_family": "internvl3-38b",
       "aliases": [],
       "parameter_count": 38000000000,
-      "tier": "medium",
-      "speed": "standard",
+      "tier": "large",
+      "speed": "premium",
       "use_case": [
+        "image-understanding",
+        "visual-q&a",
         "content-creation",
         "writing-assistance"
       ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
+      "performance_level": "mid",
+      "estimated_latency": "3-10s"
     },
     {
       "id": "DianJin-R1-32B",
@@ -898,24 +956,28 @@
         "image-generation"
       ],
       "tags": [
-        "image-generation"
+        "vision",
+        "image-generation",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "all",
       "model_family": "hidream-i1-full",
       "aliases": [],
-      "tier": "medium",
-      "speed": "standard",
+      "tier": "large",
+      "speed": "premium",
       "use_case": [
+        "image-understanding",
+        "visual-q&a",
         "creative-generation",
         "art"
       ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
+      "performance_level": "mid",
+      "estimated_latency": "3-10s"
     },
     {
       "id": "Hi3DGen",
@@ -933,21 +995,26 @@
         "3d-generation"
       ],
       "tags": [
-        "3d-generation"
+        "vision",
+        "3d-generation",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "all",
       "model_family": "hi3dgen",
       "aliases": [],
-      "tier": "medium",
-      "speed": "standard",
-      "use_case": [],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
+      "tier": "large",
+      "speed": "premium",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "3-10s"
     },
     {
       "id": "ACE-Step-v1-3.5B",
@@ -965,6 +1032,7 @@
         "music-generation"
       ],
       "tags": [
+        "text-generation",
         "music-generation"
       ],
       "is_reasoning": false,
@@ -977,7 +1045,10 @@
       "aliases": [],
       "tier": "medium",
       "speed": "standard",
-      "use_case": [],
+      "use_case": [
+        "content-creation",
+        "writing-assistance"
+      ],
       "performance_level": "entry",
       "estimated_latency": "1-3s"
     },
@@ -997,24 +1068,31 @@
         "image-generation"
       ],
       "tags": [
-        "image-generation"
+        "vision",
+        "text-generation",
+        "image-generation",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "all",
       "model_family": "flux.1-dev",
       "aliases": [],
-      "tier": "medium",
-      "speed": "standard",
+      "tier": "large",
+      "speed": "premium",
       "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
         "creative-generation",
         "art"
       ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
+      "performance_level": "mid",
+      "estimated_latency": "3-10s"
     },
     {
       "id": "Real-ESRGAN",
@@ -1032,24 +1110,28 @@
         "image-to-image"
       ],
       "tags": [
-        "image-to-image"
+        "vision",
+        "image-to-image",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "all",
       "model_family": "real-esrgan",
       "aliases": [],
-      "tier": "medium",
-      "speed": "standard",
+      "tier": "large",
+      "speed": "premium",
       "use_case": [
+        "image-understanding",
+        "visual-q&a",
         "image-editing",
         "style-transfer"
       ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
+      "performance_level": "mid",
+      "estimated_latency": "3-10s"
     },
     {
       "id": "ERNIE-4.5-Turbo-VL",
@@ -1068,10 +1150,14 @@
         "text-generation"
       ],
       "tags": [
-        "text-generation"
+        "vision",
+        "text-generation",
+        "code-generation",
+        "translation",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": null,
       "free_quota": null,
@@ -1079,14 +1165,18 @@
       "model_family": "ernie-4.5-vl",
       "model_variant": "vl",
       "aliases": [],
-      "tier": "medium",
+      "tier": "large",
       "speed": "premium",
       "use_case": [
+        "image-understanding",
+        "visual-q&a",
         "content-creation",
-        "writing-assistance"
+        "writing-assistance",
+        "software-development",
+        "code-completion"
       ],
-      "performance_level": "mid",
-      "estimated_latency": "1-3s"
+      "performance_level": "high",
+      "estimated_latency": "3-10s"
     },
     {
       "id": "ERNIE-4.5-Turbo",
@@ -1105,6 +1195,7 @@
         "text-generation"
       ],
       "tags": [
+        "code-generation",
         "text-generation"
       ],
       "is_reasoning": false,
@@ -1119,10 +1210,12 @@
       "tier": "medium",
       "speed": "standard",
       "use_case": [
+        "software-development",
+        "code-completion",
         "content-creation",
         "writing-assistance"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "1-3s"
     },
     {
@@ -1141,24 +1234,28 @@
         "image-to-image"
       ],
       "tags": [
-        "image-to-image"
+        "vision",
+        "image-to-image",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "all",
       "model_family": "animesharp",
       "aliases": [],
-      "tier": "medium",
-      "speed": "standard",
+      "tier": "large",
+      "speed": "premium",
       "use_case": [
+        "image-understanding",
+        "visual-q&a",
         "image-editing",
         "style-transfer"
       ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
+      "performance_level": "mid",
+      "estimated_latency": "3-10s"
     },
     {
       "id": "stable-diffusion-3.5-large",
@@ -1177,6 +1274,7 @@
       ],
       "tags": [
         "vision",
+        "text-generation",
         "image-generation",
         "multimodal"
       ],
@@ -1195,6 +1293,8 @@
       "use_case": [
         "image-understanding",
         "visual-q&a",
+        "content-creation",
+        "writing-assistance",
         "creative-generation",
         "art"
       ],
@@ -1217,24 +1317,31 @@
         "image-to-image"
       ],
       "tags": [
-        "image-to-image"
+        "vision",
+        "image-generation",
+        "image-to-image",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "all",
       "model_family": "flux.1-kontext-dev",
       "aliases": [],
-      "tier": "medium",
-      "speed": "standard",
+      "tier": "large",
+      "speed": "premium",
       "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "creative-generation",
+        "art",
         "image-editing",
         "style-transfer"
       ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
+      "performance_level": "mid",
+      "estimated_latency": "3-10s"
     },
     {
       "id": "Qwen3-14B",
@@ -1253,9 +1360,11 @@
         "text-generation"
       ],
       "tags": [
+        "reasoning",
+        "code-generation",
         "text-generation"
       ],
-      "is_reasoning": false,
+      "is_reasoning": true,
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": null,
@@ -1267,12 +1376,18 @@
       ],
       "parameter_count": 14000000000,
       "tier": "medium",
-      "speed": "standard",
+      "speed": "premium",
       "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "software-development",
+        "code-completion",
         "content-creation",
-        "writing-assistance"
+        "writing-assistance",
+        "complex-reasoning"
       ],
-      "performance_level": "entry",
+      "performance_level": "high",
       "estimated_latency": "1-3s"
     },
     {
@@ -1291,10 +1406,12 @@
         "text-generation"
       ],
       "tags": [
-        "text-generation"
+        "vision",
+        "text-generation",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": null,
       "free_quota": null,
@@ -1306,10 +1423,12 @@
       "tier": "medium",
       "speed": "standard",
       "use_case": [
+        "image-understanding",
+        "visual-q&a",
         "content-creation",
         "writing-assistance"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "1-3s"
     },
     {
@@ -1328,10 +1447,13 @@
         "image-generation"
       ],
       "tags": [
-        "image-generation"
+        "vision",
+        "text-generation",
+        "image-generation",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": null,
       "free_quota": null,
@@ -1340,12 +1462,16 @@
       "aliases": [],
       "parameter_count": 6000000000,
       "tier": "medium",
-      "speed": "standard",
+      "speed": "premium",
       "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
         "creative-generation",
         "art"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "1-3s"
     },
     {
@@ -1403,24 +1529,31 @@
         "image-generation"
       ],
       "tags": [
-        "image-generation"
+        "vision",
+        "text-generation",
+        "image-generation",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "all",
       "model_family": "flux_1-krea-dev",
       "aliases": [],
-      "tier": "medium",
-      "speed": "standard",
+      "tier": "large",
+      "speed": "premium",
       "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
         "creative-generation",
         "art"
       ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
+      "performance_level": "mid",
+      "estimated_latency": "3-10s"
     },
     {
       "id": "nonescape-v0",
@@ -1438,24 +1571,28 @@
         "moderation"
       ],
       "tags": [
-        "moderation"
+        "vision",
+        "moderation",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "all",
       "model_family": "nonescape-v0",
       "aliases": [],
-      "tier": "medium",
-      "speed": "standard",
+      "tier": "large",
+      "speed": "premium",
       "use_case": [
+        "image-understanding",
+        "visual-q&a",
         "content-filtering",
         "safety"
       ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
+      "performance_level": "mid",
+      "estimated_latency": "3-10s"
     },
     {
       "id": "Qwen-Image-Edit",
@@ -1516,7 +1653,8 @@
         "text-generation"
       ],
       "tags": [
-        "text-generation"
+        "text-generation",
+        "translation"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
@@ -1552,6 +1690,7 @@
         "speech-synthesis"
       ],
       "tags": [
+        "text-generation",
         "speech-synthesis"
       ],
       "is_reasoning": false,
@@ -1565,6 +1704,8 @@
       "tier": "medium",
       "speed": "standard",
       "use_case": [
+        "content-creation",
+        "writing-assistance",
         "text-to-speech",
         "voice-output"
       ],
@@ -1587,24 +1728,31 @@
         "document-processing"
       ],
       "tags": [
-        "document-processing"
+        "vision",
+        "text-generation",
+        "document-processing",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "all",
       "model_family": "mineru-2.5",
       "aliases": [],
-      "tier": "medium",
-      "speed": "standard",
+      "tier": "large",
+      "speed": "premium",
       "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
         "pdf-processing",
         "ocr"
       ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
+      "performance_level": "mid",
+      "estimated_latency": "3-10s"
     },
     {
       "id": "Qwen3-VL-30B-A3B-Instruct",
@@ -1623,10 +1771,12 @@
         "text-generation"
       ],
       "tags": [
-        "text-generation"
+        "vision",
+        "text-generation",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": null,
       "free_quota": null,
@@ -1635,14 +1785,16 @@
       "model_variant": "vl",
       "aliases": [],
       "parameter_count": 30000000000,
-      "tier": "medium",
+      "tier": "large",
       "speed": "standard",
       "use_case": [
+        "image-understanding",
+        "visual-q&a",
         "content-creation",
         "writing-assistance"
       ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
+      "performance_level": "mid",
+      "estimated_latency": "3-10s"
     },
     {
       "id": "Qwen3Guard-Gen-8B",
@@ -1775,10 +1927,12 @@
         "image-to-image"
       ],
       "tags": [
-        "image-to-image"
+        "vision",
+        "image-to-image",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": null,
       "free_quota": null,
@@ -1787,12 +1941,14 @@
       "aliases": [],
       "parameter_count": 3000000000,
       "tier": "small",
-      "speed": "standard",
+      "speed": "premium",
       "use_case": [
+        "image-understanding",
+        "visual-q&a",
         "image-editing",
         "style-transfer"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -1846,10 +2002,13 @@
         "text-generation"
       ],
       "tags": [
-        "text-generation"
+        "reasoning",
+        "vision",
+        "text-generation",
+        "multimodal"
       ],
-      "is_reasoning": false,
-      "is_multimodal": false,
+      "is_reasoning": true,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": null,
       "free_quota": null,
@@ -1857,14 +2016,20 @@
       "model_family": "ernie-5.0-thinking",
       "model_variant": "thinking",
       "aliases": [],
-      "tier": "medium",
-      "speed": "standard",
+      "tier": "large",
+      "speed": "premium",
       "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "image-understanding",
+        "visual-q&a",
         "content-creation",
-        "writing-assistance"
+        "writing-assistance",
+        "complex-reasoning"
       ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
+      "performance_level": "high",
+      "estimated_latency": "3-10s"
     },
     {
       "id": "z-image-turbo",
@@ -1927,6 +2092,8 @@
       ],
       "tags": [
         "vision",
+        "text-generation",
+        "document-processing",
         "multimodal"
       ],
       "is_reasoning": false,
@@ -1941,7 +2108,11 @@
       "speed": "premium",
       "use_case": [
         "image-understanding",
-        "visual-q&a"
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "pdf-processing",
+        "ocr"
       ],
       "performance_level": "mid",
       "estimated_latency": "3-10s"
@@ -1963,6 +2134,7 @@
       ],
       "tags": [
         "vision",
+        "text-generation",
         "image-generation",
         "multimodal"
       ],
@@ -1980,6 +2152,8 @@
       "use_case": [
         "image-understanding",
         "visual-q&a",
+        "content-creation",
+        "writing-assistance",
         "creative-generation",
         "art"
       ],
@@ -2003,6 +2177,7 @@
       ],
       "tags": [
         "vision",
+        "text-generation",
         "image-to-image",
         "multimodal"
       ],
@@ -2020,6 +2195,8 @@
       "use_case": [
         "image-understanding",
         "visual-q&a",
+        "content-creation",
+        "writing-assistance",
         "image-editing",
         "style-transfer"
       ],
@@ -2043,10 +2220,12 @@
         "text-generation"
       ],
       "tags": [
-        "text-generation"
+        "vision",
+        "text-generation",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": null,
       "free_quota": null,
@@ -2055,13 +2234,15 @@
       "aliases": [],
       "parameter_count": 9000000000,
       "tier": "medium",
-      "speed": "fast",
+      "speed": "premium",
       "use_case": [
+        "image-understanding",
+        "visual-q&a",
         "content-creation",
         "writing-assistance"
       ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
+      "performance_level": "mid",
+      "estimated_latency": "1-3s"
     },
     {
       "id": "KAT-Dev",
@@ -2080,7 +2261,8 @@
         "text-generation"
       ],
       "tags": [
-        "text-generation"
+        "text-generation",
+        "code-generation"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
@@ -2094,9 +2276,11 @@
       "speed": "standard",
       "use_case": [
         "content-creation",
-        "writing-assistance"
+        "writing-assistance",
+        "software-development",
+        "code-completion"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "1-3s"
     },
     {
@@ -2116,7 +2300,8 @@
         "text-generation"
       ],
       "tags": [
-        "text-generation"
+        "text-generation",
+        "code-generation"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
@@ -2132,9 +2317,11 @@
       "speed": "standard",
       "use_case": [
         "content-creation",
-        "writing-assistance"
+        "writing-assistance",
+        "software-development",
+        "code-completion"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "1-3s"
     },
     {
@@ -2153,6 +2340,7 @@
         "speech-synthesis"
       ],
       "tags": [
+        "text-generation",
         "speech-synthesis"
       ],
       "is_reasoning": false,
@@ -2169,6 +2357,8 @@
       "tier": "medium",
       "speed": "standard",
       "use_case": [
+        "content-creation",
+        "writing-assistance",
         "text-to-speech",
         "voice-output"
       ],
@@ -2191,24 +2381,31 @@
         "image-generation"
       ],
       "tags": [
-        "image-generation"
+        "vision",
+        "text-generation",
+        "image-generation",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "all",
       "model_family": "flux.2-dev",
       "aliases": [],
-      "tier": "medium",
-      "speed": "standard",
+      "tier": "large",
+      "speed": "premium",
       "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
         "creative-generation",
         "art"
       ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
+      "performance_level": "mid",
+      "estimated_latency": "3-10s"
     },
     {
       "id": "Qwen-Image-Edit-2511",
@@ -2340,6 +2537,7 @@
         "speech-synthesis"
       ],
       "tags": [
+        "text-generation",
         "speech-synthesis"
       ],
       "is_reasoning": false,
@@ -2353,6 +2551,8 @@
       "tier": "medium",
       "speed": "standard",
       "use_case": [
+        "content-creation",
+        "writing-assistance",
         "text-to-speech",
         "voice-output"
       ],
@@ -2412,7 +2612,8 @@
         "text-generation"
       ],
       "tags": [
-        "text-generation"
+        "text-generation",
+        "translation"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
@@ -2485,6 +2686,7 @@
       ],
       "tags": [
         "vision",
+        "text-generation",
         "image-generation",
         "multimodal"
       ],
@@ -2502,6 +2704,8 @@
       "use_case": [
         "image-understanding",
         "visual-q&a",
+        "content-creation",
+        "writing-assistance",
         "creative-generation",
         "art"
       ],
@@ -2525,10 +2729,12 @@
         "text-generation"
       ],
       "tags": [
-        "text-generation"
+        "vision",
+        "text-generation",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": null,
       "free_quota": null,
@@ -2537,12 +2743,14 @@
       "aliases": [],
       "parameter_count": 8000000000,
       "tier": "medium",
-      "speed": "standard",
+      "speed": "premium",
       "use_case": [
+        "image-understanding",
+        "visual-q&a",
         "content-creation",
         "writing-assistance"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "1-3s"
     },
     {
@@ -2562,6 +2770,7 @@
       ],
       "tags": [
         "vision",
+        "text-generation",
         "image-generation",
         "multimodal"
       ],
@@ -2581,6 +2790,8 @@
       "use_case": [
         "image-understanding",
         "visual-q&a",
+        "content-creation",
+        "writing-assistance",
         "creative-generation",
         "art"
       ],
@@ -2603,10 +2814,13 @@
         "rerank"
       ],
       "tags": [
-        "rerank"
+        "vision",
+        "text-generation",
+        "rerank",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": null,
       "free_quota": null,
@@ -2618,6 +2832,10 @@
       "tier": "medium",
       "speed": "premium",
       "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
         "search-improvement",
         "relevance"
       ],
@@ -2640,10 +2858,12 @@
         "image-generation"
       ],
       "tags": [
-        "image-generation"
+        "vision",
+        "image-generation",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": null,
       "free_quota": null,
@@ -2652,12 +2872,14 @@
       "aliases": [],
       "parameter_count": 9000000000,
       "tier": "medium",
-      "speed": "standard",
+      "speed": "premium",
       "use_case": [
+        "image-understanding",
+        "visual-q&a",
         "creative-generation",
         "art"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "1-3s"
     },
     {
@@ -2675,20 +2897,26 @@
       "capabilities": [
         "web_search_v2"
       ],
-      "tags": [],
+      "tags": [
+        "vision",
+        "multimodal"
+      ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "all",
       "model_family": "search",
       "aliases": [],
-      "tier": "medium",
-      "speed": "standard",
-      "use_case": [],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
+      "tier": "large",
+      "speed": "premium",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "3-10s"
     },
     {
       "id": "LTX-2",
@@ -2740,10 +2968,13 @@
         "rerank"
       ],
       "tags": [
-        "rerank"
+        "vision",
+        "text-generation",
+        "rerank",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": null,
       "free_quota": null,
@@ -2755,10 +2986,14 @@
       "tier": "small",
       "speed": "premium",
       "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
         "search-improvement",
         "relevance"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -2778,10 +3013,13 @@
         "document-processing"
       ],
       "tags": [
-        "document-processing"
+        "vision",
+        "text-generation",
+        "document-processing",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": null,
       "free_quota": null,
@@ -2789,14 +3027,18 @@
       "model_family": "paddleocr-vl-1.5",
       "model_variant": "vl",
       "aliases": [],
-      "tier": "medium",
+      "tier": "large",
       "speed": "premium",
       "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
         "pdf-processing",
         "ocr"
       ],
       "performance_level": "mid",
-      "estimated_latency": "1-3s"
+      "estimated_latency": "3-10s"
     },
     {
       "id": "LegalOne-8B",
@@ -2850,6 +3092,7 @@
         "speech-synthesis"
       ],
       "tags": [
+        "text-generation",
         "speech-synthesis"
       ],
       "is_reasoning": false,
@@ -2864,6 +3107,8 @@
       "tier": "medium",
       "speed": "standard",
       "use_case": [
+        "content-creation",
+        "writing-assistance",
         "text-to-speech",
         "voice-output"
       ],
@@ -2886,10 +3131,12 @@
         "image-generation"
       ],
       "tags": [
-        "image-generation"
+        "vision",
+        "image-generation",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": null,
       "free_quota": null,
@@ -2898,12 +3145,14 @@
       "aliases": [],
       "parameter_count": 4000000000,
       "tier": "small",
-      "speed": "standard",
+      "speed": "premium",
       "use_case": [
+        "image-understanding",
+        "visual-q&a",
         "creative-generation",
         "art"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -2923,11 +3172,13 @@
         "text-generation"
       ],
       "tags": [
-        "text-generation"
+        "text-generation",
+        "tool-use",
+        "code-generation"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
-      "has_tool_use": false,
+      "has_tool_use": true,
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "all",
@@ -2940,9 +3191,11 @@
       "speed": "standard",
       "use_case": [
         "content-creation",
-        "writing-assistance"
+        "writing-assistance",
+        "software-development",
+        "code-completion"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "1-3s"
     },
     {
@@ -2962,10 +3215,12 @@
         "text-generation"
       ],
       "tags": [
-        "text-generation"
+        "vision",
+        "text-generation",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": null,
       "free_quota": null,
@@ -2977,14 +3232,16 @@
         "google/gemma-4-26b-a4b-it:free"
       ],
       "parameter_count": 26000000000,
-      "tier": "medium",
-      "speed": "standard",
+      "tier": "large",
+      "speed": "premium",
       "use_case": [
+        "image-understanding",
+        "visual-q&a",
         "content-creation",
         "writing-assistance"
       ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
+      "performance_level": "mid",
+      "estimated_latency": "3-10s"
     },
     {
       "id": "Qwen3.6-35B-A3B",
@@ -3081,7 +3338,8 @@
         "text-generation"
       ],
       "tags": [
-        "text-generation"
+        "text-generation",
+        "translation"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
@@ -3118,7 +3376,8 @@
         "text-generation"
       ],
       "tags": [
-        "text-generation"
+        "text-generation",
+        "translation"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
@@ -3157,6 +3416,7 @@
         "text-generation"
       ],
       "tags": [
+        "document-processing",
         "text-generation"
       ],
       "is_reasoning": false,
@@ -3170,6 +3430,8 @@
       "tier": "medium",
       "speed": "standard",
       "use_case": [
+        "pdf-processing",
+        "ocr",
         "content-creation",
         "writing-assistance"
       ],
@@ -3193,24 +3455,28 @@
         "document-processing"
       ],
       "tags": [
-        "document-processing"
+        "vision",
+        "document-processing",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "all",
       "model_family": "mineru2.5-pro",
       "aliases": [],
-      "tier": "medium",
+      "tier": "large",
       "speed": "premium",
       "use_case": [
+        "image-understanding",
+        "visual-q&a",
         "pdf-processing",
         "ocr"
       ],
       "performance_level": "mid",
-      "estimated_latency": "1-3s"
+      "estimated_latency": "3-10s"
     },
     {
       "id": "WeMM-Embedding-2B",
@@ -3229,10 +3495,13 @@
         "embeddings"
       ],
       "tags": [
-        "embeddings"
+        "vision",
+        "text-generation",
+        "embeddings",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": null,
       "free_quota": null,
@@ -3242,12 +3511,16 @@
       "aliases": [],
       "parameter_count": 2000000000,
       "tier": "small",
-      "speed": "standard",
+      "speed": "premium",
       "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
         "semantic-search",
         "similarity"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -3267,10 +3540,13 @@
         "embeddings"
       ],
       "tags": [
-        "embeddings"
+        "vision",
+        "text-generation",
+        "embeddings",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": null,
       "free_quota": null,
@@ -3280,12 +3556,16 @@
       "aliases": [],
       "parameter_count": 4000000000,
       "tier": "small",
-      "speed": "standard",
+      "speed": "premium",
       "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
         "semantic-search",
         "similarity"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -3305,10 +3585,13 @@
         "embeddings"
       ],
       "tags": [
-        "embeddings"
+        "vision",
+        "text-generation",
+        "embeddings",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": null,
       "free_quota": null,
@@ -3318,12 +3601,16 @@
       "aliases": [],
       "parameter_count": 9000000000,
       "tier": "medium",
-      "speed": "standard",
+      "speed": "premium",
       "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
         "semantic-search",
         "similarity"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "1-3s"
     },
     {
@@ -3342,6 +3629,7 @@
         "speech-synthesis"
       ],
       "tags": [
+        "text-generation",
         "speech-synthesis"
       ],
       "is_reasoning": false,
@@ -3355,6 +3643,8 @@
       "tier": "medium",
       "speed": "standard",
       "use_case": [
+        "content-creation",
+        "writing-assistance",
         "text-to-speech",
         "voice-output"
       ],
@@ -3377,24 +3667,28 @@
         "image-generation"
       ],
       "tags": [
-        "image-generation"
+        "vision",
+        "image-generation",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "all",
       "model_family": "flux-1-schnell",
       "aliases": [],
-      "tier": "medium",
-      "speed": "standard",
+      "tier": "large",
+      "speed": "premium",
       "use_case": [
+        "image-understanding",
+        "visual-q&a",
         "creative-generation",
         "art"
       ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
+      "performance_level": "mid",
+      "estimated_latency": "3-10s"
     },
     {
       "id": "Kolors",
@@ -3412,24 +3706,31 @@
         "image-generation"
       ],
       "tags": [
-        "image-generation"
+        "vision",
+        "text-generation",
+        "image-generation",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "all",
       "model_family": "kolors",
       "aliases": [],
-      "tier": "medium",
-      "speed": "standard",
+      "tier": "large",
+      "speed": "premium",
       "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
         "creative-generation",
         "art"
       ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
+      "performance_level": "mid",
+      "estimated_latency": "3-10s"
     }
   ]
 }

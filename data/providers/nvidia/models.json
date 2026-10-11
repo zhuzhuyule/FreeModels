@@ -1,7 +1,7 @@
 {
   "object": "list",
   "provider": "nvidia",
-  "updated_at": "2026-10-11T08:25:56.342Z",
+  "updated_at": "2026-10-11T09:53:38.084Z",
   "total": 80,
   "data": [
     {
@@ -277,7 +277,7 @@
       "owned_by": "nvidia",
       "provider": "nvidia",
       "name": "deepseek-v4.1-flash",
-      "description": "Model: deepseek-ai/deepseek-v4.1-flash",
+      "description": "NVIDIA: 552B MoE, 8B active params with native multimodal support and lower API cost using smaller KV cache",
       "context_label": "unknown",
       "is_free": true,
       "capabilities": [
@@ -285,11 +285,13 @@
         "text-generation"
       ],
       "tags": [
+        "vision",
+        "chat",
         "text-generation",
-        "chat"
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
       "free_quota": {
@@ -302,15 +304,17 @@
       "aliases": [
         "deepseek-v4.1-flash"
       ],
-      "tier": "medium",
+      "tier": "large",
       "speed": "fast",
       "use_case": [
-        "content-creation",
-        "writing-assistance",
+        "image-understanding",
+        "visual-q&a",
         "conversation",
-        "q&a"
+        "q&a",
+        "content-creation",
+        "writing-assistance"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -431,7 +435,7 @@
       "owned_by": "nvidia",
       "provider": "nvidia",
       "name": "diffusiongemma-26b-a4b-it",
-      "description": "Model: google/diffusiongemma-26b-a4b-it",
+      "description": "NVIDIA: Diffusion-based 26B parameter LLM enabling parallel token generation for real-time text apps",
       "context_label": "unknown",
       "is_free": true,
       "capabilities": [
@@ -590,7 +594,7 @@
       "owned_by": "nvidia",
       "provider": "nvidia",
       "name": "gemma-4-31b-it",
-      "description": "Model: google/gemma-4-31b-it",
+      "description": "NVIDIA: Dense 31B model delivering frontier reasoning for coding, agentic workflows, and fine-tuning.",
       "context_label": "unknown",
       "is_free": true,
       "capabilities": [
@@ -598,10 +602,12 @@
         "text-generation"
       ],
       "tags": [
+        "reasoning",
         "text-generation",
+        "code-generation",
         "chat"
       ],
-      "is_reasoning": false,
+      "is_reasoning": true,
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
@@ -617,15 +623,21 @@
         "google/gemma-4-31b-it:free"
       ],
       "parameter_count": 31000000000,
-      "tier": "medium",
+      "tier": "large",
       "speed": "fast",
       "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
         "content-creation",
         "writing-assistance",
+        "software-development",
+        "code-completion",
         "conversation",
-        "q&a"
+        "q&a",
+        "complex-reasoning"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -760,6 +772,7 @@
       ],
       "tags": [
         "text-generation",
+        "code-generation",
         "chat"
       ],
       "is_reasoning": false,
@@ -777,6 +790,8 @@
       "use_case": [
         "content-creation",
         "writing-assistance",
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a"
       ],
@@ -799,6 +814,7 @@
       ],
       "tags": [
         "text-generation",
+        "code-generation",
         "chat"
       ],
       "is_reasoning": false,
@@ -816,10 +832,12 @@
       "use_case": [
         "content-creation",
         "writing-assistance",
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "1-3s"
     },
     {
@@ -867,18 +885,19 @@
       "owned_by": "nvidia",
       "provider": "nvidia",
       "name": "llama-3.2-11b-vision-instruct",
-      "description": "Model: meta/llama-3.2-11b-vision-instruct",
+      "description": "NVIDIA: Cutting-edge vision-language model exceling in high-quality reasoning from images.",
       "context_label": "unknown",
       "is_free": true,
       "capabilities": [
         "vision"
       ],
       "tags": [
+        "reasoning",
         "vision",
         "text-generation",
         "multimodal"
       ],
-      "is_reasoning": false,
+      "is_reasoning": true,
       "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
@@ -898,10 +917,14 @@
       "tier": "large",
       "speed": "fast",
       "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
         "image-understanding",
         "visual-q&a",
         "content-creation",
-        "writing-assistance"
+        "writing-assistance",
+        "complex-reasoning"
       ],
       "performance_level": "mid",
       "estimated_latency": "< 1s"
@@ -913,18 +936,19 @@
       "owned_by": "nvidia",
       "provider": "nvidia",
       "name": "llama-3.2-90b-vision-instruct",
-      "description": "Model: meta/llama-3.2-90b-vision-instruct",
+      "description": "NVIDIA: Cutting-edge vision-Language model exceling in high-quality reasoning from images.",
       "context_label": "unknown",
       "is_free": true,
       "capabilities": [
         "vision"
       ],
       "tags": [
+        "reasoning",
         "vision",
         "text-generation",
         "multimodal"
       ],
-      "is_reasoning": false,
+      "is_reasoning": true,
       "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
@@ -943,10 +967,14 @@
       "tier": "large",
       "speed": "fast",
       "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
         "image-understanding",
         "visual-q&a",
         "content-creation",
-        "writing-assistance"
+        "writing-assistance",
+        "complex-reasoning"
       ],
       "performance_level": "mid",
       "estimated_latency": "< 1s"
@@ -958,7 +986,7 @@
       "owned_by": "nvidia",
       "provider": "nvidia",
       "name": "llama-guard-4-12b",
-      "description": "Model: meta/llama-guard-4-12b",
+      "description": "NVIDIA: Multi-modal model to classify safety for input prompts as well output responses.",
       "context_label": "unknown",
       "is_free": true,
       "capabilities": [
@@ -1038,7 +1066,7 @@
       "owned_by": "nvidia",
       "provider": "nvidia",
       "name": "muse-glimmer-30b",
-      "description": "Model: meta/muse-glimmer-30b",
+      "description": "NVIDIA: Muse Glimmer 30B is a multimodal reasoning model accepting text and images, with native tool-calling and separate reasoning output.",
       "context_label": "unknown",
       "is_free": true,
       "capabilities": [
@@ -1046,11 +1074,14 @@
         "text-generation"
       ],
       "tags": [
+        "reasoning",
+        "vision",
         "text-generation",
-        "chat"
+        "chat",
+        "multimodal"
       ],
-      "is_reasoning": false,
-      "is_multimodal": false,
+      "is_reasoning": true,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
       "free_quota": {
@@ -1062,15 +1093,21 @@
       "model_family": "muse-glimmer-30b",
       "aliases": [],
       "parameter_count": 30000000000,
-      "tier": "medium",
+      "tier": "large",
       "speed": "fast",
       "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "image-understanding",
+        "visual-q&a",
         "content-creation",
         "writing-assistance",
         "conversation",
-        "q&a"
+        "q&a",
+        "complex-reasoning"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -1424,7 +1461,7 @@
       "owned_by": "nvidia",
       "provider": "nvidia",
       "name": "kimi-k3",
-      "description": "Model: moonshotai/kimi-k3",
+      "description": "NVIDIA: ~2.8T hybrid KDA+MLA multimodal MoE for long-horizon coding, agentic tool use, and image understanding.",
       "context_label": "unknown",
       "is_free": true,
       "capabilities": [
@@ -1432,12 +1469,16 @@
         "text-generation"
       ],
       "tags": [
+        "vision",
+        "tool-use",
+        "code-generation",
+        "chat",
         "text-generation",
-        "chat"
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
+      "is_multimodal": true,
+      "has_tool_use": true,
       "free_mechanism": "rate-limited",
       "free_quota": {
         "notes": "Public NIM endpoints: Up to 40 rpm and 10,000 requests per day; limits may vary by model and by traffic",
@@ -1447,15 +1488,19 @@
       "trial_scope": "specific",
       "model_family": "moonshotai-kimi-k3",
       "aliases": [],
-      "tier": "medium",
+      "tier": "large",
       "speed": "fast",
       "use_case": [
-        "content-creation",
-        "writing-assistance",
+        "image-understanding",
+        "visual-q&a",
+        "software-development",
+        "code-completion",
         "conversation",
-        "q&a"
+        "q&a",
+        "content-creation",
+        "writing-assistance"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -1612,7 +1657,7 @@
       "owned_by": "nvidia",
       "provider": "nvidia",
       "name": "ising-calibration-1.5-31b",
-      "description": "Model: nvidia/ising-calibration-1.5-31b",
+      "description": "NVIDIA: NVIDIA-Ising-Calibration-1.5 is a dense multimodal vision-language model built on Gemma 4 31B. It analyzes quantum computing calibration experiment plots and generates structured technical text.",
       "context_label": "unknown",
       "is_free": true,
       "capabilities": [
@@ -1620,11 +1665,13 @@
         "text-generation"
       ],
       "tags": [
+        "vision",
         "text-generation",
-        "chat"
+        "chat",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
       "free_quota": {
@@ -1636,15 +1683,17 @@
       "model_family": "ising-calibration-1.5-31b",
       "aliases": [],
       "parameter_count": 31000000000,
-      "tier": "medium",
+      "tier": "large",
       "speed": "fast",
       "use_case": [
+        "image-understanding",
+        "visual-q&a",
         "content-creation",
         "writing-assistance",
         "conversation",
         "q&a"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -1654,7 +1703,7 @@
       "owned_by": "nvidia",
       "provider": "nvidia",
       "name": "llama-3.1-nemoguard-8b-content-safety",
-      "description": "Model: nvidia/llama-3.1-nemoguard-8b-content-safety",
+      "description": "NVIDIA: Leading content safety model for enhancing the safety and moderation capabilities of LLMs",
       "context_label": "unknown",
       "is_free": false,
       "capabilities": [
@@ -1692,7 +1741,7 @@
       "owned_by": "nvidia",
       "provider": "nvidia",
       "name": "llama-3.1-nemoguard-8b-topic-control",
-      "description": "Model: nvidia/llama-3.1-nemoguard-8b-topic-control",
+      "description": "NVIDIA: Topic control model to keep conversations focused on approved topics, avoiding inappropriate content.",
       "context_label": "unknown",
       "is_free": false,
       "capabilities": [
@@ -1807,7 +1856,7 @@
       "owned_by": "nvidia",
       "provider": "nvidia",
       "name": "llama-3.1-nemotron-safety-guard-8b-v3",
-      "description": "Model: nvidia/llama-3.1-nemotron-safety-guard-8b-v3",
+      "description": "NVIDIA: Leading multilingual content safety model for enhancing the safety and moderation capabilities of LLMs",
       "context_label": "unknown",
       "is_free": false,
       "capabilities": [
@@ -1891,9 +1940,9 @@
         "vision"
       ],
       "tags": [
+        "vision",
         "text-generation",
         "embeddings",
-        "vision",
         "multimodal"
       ],
       "is_reasoning": false,
@@ -1909,12 +1958,12 @@
       "tier": "medium",
       "speed": "premium",
       "use_case": [
+        "image-understanding",
+        "visual-q&a",
         "content-creation",
         "writing-assistance",
         "semantic-search",
-        "similarity",
-        "image-understanding",
-        "visual-q&a"
+        "similarity"
       ],
       "performance_level": "mid",
       "estimated_latency": "1-3s"
@@ -1963,7 +2012,7 @@
       "owned_by": "nvidia",
       "provider": "nvidia",
       "name": "llama-nemotron-embed-vl-1b-v2",
-      "description": "Model: nvidia/llama-nemotron-embed-vl-1b-v2",
+      "description": "NVIDIA: Multimodal question-answer retrieval representing user queries as text and documents as images.",
       "context_label": "unknown",
       "is_free": false,
       "capabilities": [
@@ -1971,9 +2020,9 @@
         "vision"
       ],
       "tags": [
+        "vision",
         "text-generation",
         "embeddings",
-        "vision",
         "multimodal"
       ],
       "is_reasoning": false,
@@ -1989,12 +2038,12 @@
       "tier": "medium",
       "speed": "premium",
       "use_case": [
+        "image-understanding",
+        "visual-q&a",
         "content-creation",
         "writing-assistance",
         "semantic-search",
-        "similarity",
-        "image-understanding",
-        "visual-q&a"
+        "similarity"
       ],
       "performance_level": "mid",
       "estimated_latency": "1-3s"
@@ -2083,7 +2132,7 @@
       "owned_by": "nvidia",
       "provider": "nvidia",
       "name": "nemotron-3-embed-1b",
-      "description": "Model: nvidia/nemotron-3-embed-1b",
+      "description": "NVIDIA: 1B embedding model for semantic search, retrieval, and RAG applications.",
       "context_label": "unknown",
       "is_free": true,
       "capabilities": [
@@ -2125,7 +2174,7 @@
       "owned_by": "nvidia",
       "provider": "nvidia",
       "name": "nemotron-3-nano-omni-30b-a3b-reasoning",
-      "description": "Model: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "description": "NVIDIA: Nemotron 3 Nano Omni is an omni-modal reasoning model that understands images, video, speech, text.",
       "context_label": "unknown",
       "is_free": true,
       "capabilities": [
@@ -2176,7 +2225,7 @@
       "owned_by": "nvidia",
       "provider": "nvidia",
       "name": "nemotron-3-super-120b-a12b",
-      "description": "Model: nvidia/nemotron-3-super-120b-a12b",
+      "description": "NVIDIA: Open, efficient hybrid Mamba-Transformer MoE with 1M context, excelling in agentic reasoning, coding, planning, tool calling, and more",
       "context_label": "unknown",
       "is_free": true,
       "capabilities": [
@@ -2184,10 +2233,12 @@
         "text-generation"
       ],
       "tags": [
-        "text-generation",
-        "chat"
+        "reasoning",
+        "code-generation",
+        "chat",
+        "text-generation"
       ],
-      "is_reasoning": false,
+      "is_reasoning": true,
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
@@ -2203,15 +2254,21 @@
         "nvidia/nemotron-3-super-120b-a12b:free"
       ],
       "parameter_count": 120000000000,
-      "tier": "medium",
+      "tier": "large",
       "speed": "fast",
       "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "software-development",
+        "code-completion",
+        "conversation",
+        "q&a",
         "content-creation",
         "writing-assistance",
-        "conversation",
-        "q&a"
+        "complex-reasoning"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -2221,7 +2278,7 @@
       "owned_by": "nvidia",
       "provider": "nvidia",
       "name": "nemotron-3-ultra-550b-a55b",
-      "description": "Model: nvidia/nemotron-3-ultra-550b-a55b",
+      "description": "NVIDIA: Open, efficient hybrid Mamba-Transformer MoE with 1M context, excelling in agentic reasoning, coding, planning, tool calling, and more",
       "context_label": "unknown",
       "is_free": true,
       "capabilities": [
@@ -2229,10 +2286,12 @@
         "text-generation"
       ],
       "tags": [
-        "text-generation",
-        "chat"
+        "reasoning",
+        "code-generation",
+        "chat",
+        "text-generation"
       ],
-      "is_reasoning": false,
+      "is_reasoning": true,
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
@@ -2248,15 +2307,21 @@
         "nvidia/nemotron-3-ultra-550b-a55b:free"
       ],
       "parameter_count": 550000000000,
-      "tier": "medium",
+      "tier": "large",
       "speed": "fast",
       "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "software-development",
+        "code-completion",
+        "conversation",
+        "q&a",
         "content-creation",
         "writing-assistance",
-        "conversation",
-        "q&a"
+        "complex-reasoning"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -2266,18 +2331,20 @@
       "owned_by": "nvidia",
       "provider": "nvidia",
       "name": "nemotron-3.5-content-safety",
-      "description": "Model: nvidia/nemotron-3.5-content-safety",
+      "description": "NVIDIA: Multilingual, multimodal model for detecting unsafe and toxic content.",
       "context_label": "unknown",
       "is_free": true,
       "capabilities": [
         "moderation"
       ],
       "tags": [
+        "vision",
         "text-generation",
-        "moderation"
+        "moderation",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
       "free_quota": {
@@ -2292,15 +2359,17 @@
         "kilo/nvidia/nemotron-3.5-content-safety:free",
         "nvidia/nemotron-3.5-content-safety:free"
       ],
-      "tier": "medium",
+      "tier": "large",
       "speed": "fast",
       "use_case": [
+        "image-understanding",
+        "visual-q&a",
         "content-creation",
         "writing-assistance",
         "content-filtering",
         "safety"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -2310,7 +2379,7 @@
       "owned_by": "nvidia",
       "provider": "nvidia",
       "name": "nemotron-3.5-lightning-30b-a3b",
-      "description": "Model: nvidia/nemotron-3.5-lightning-30b-a3b",
+      "description": "NVIDIA: Fastest 30B A3B MoE model with leading domain accuracy for specialized agentic tasks",
       "context_label": "unknown",
       "is_free": true,
       "capabilities": [
@@ -2467,7 +2536,7 @@
       "owned_by": "nvidia",
       "provider": "nvidia",
       "name": "nemotron-parse",
-      "description": "Model: nvidia/nemotron-parse",
+      "description": "NVIDIA: Cutting-edge vision-language model exceling in retrieving text and metadata from images.",
       "context_label": "unknown",
       "is_free": false,
       "capabilities": [
@@ -2475,27 +2544,31 @@
         "text-generation"
       ],
       "tags": [
+        "vision",
         "text-generation",
-        "chat"
+        "chat",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
       "model_family": "nemotron-parse",
       "aliases": [],
-      "tier": "medium",
-      "speed": "standard",
+      "tier": "large",
+      "speed": "premium",
       "use_case": [
+        "image-understanding",
+        "visual-q&a",
         "content-creation",
         "writing-assistance",
         "conversation",
         "q&a"
       ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
+      "performance_level": "mid",
+      "estimated_latency": "3-10s"
     },
     {
       "id": "nemotron-parse-2.0",
@@ -2504,7 +2577,7 @@
       "owned_by": "nvidia",
       "provider": "nvidia",
       "name": "nemotron-parse-2.0",
-      "description": "Model: nvidia/nemotron-parse-2.0",
+      "description": "NVIDIA: Cutting-edge vision-language model excelling in retrieving text and metadata from images.",
       "context_label": "unknown",
       "is_free": false,
       "capabilities": [
@@ -2512,27 +2585,31 @@
         "text-generation"
       ],
       "tags": [
+        "vision",
         "text-generation",
-        "chat"
+        "chat",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
       "model_family": "nemotron-parse-2.0",
       "aliases": [],
-      "tier": "medium",
-      "speed": "standard",
+      "tier": "large",
+      "speed": "premium",
       "use_case": [
+        "image-understanding",
+        "visual-q&a",
         "content-creation",
         "writing-assistance",
         "conversation",
         "q&a"
       ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
+      "performance_level": "mid",
+      "estimated_latency": "3-10s"
     },
     {
       "id": "neva-22b",
@@ -2661,6 +2738,7 @@
       ],
       "tags": [
         "text-generation",
+        "translation",
         "speech-synthesis"
       ],
       "is_reasoning": false,
@@ -2691,7 +2769,7 @@
       "owned_by": "nvidia",
       "provider": "nvidia",
       "name": "riva-translate-4b-instruct-v2",
-      "description": "Model: nvidia/riva-translate-4b-instruct-v2",
+      "description": "NVIDIA: Translation model in 37 languages with few-shots example prompts capability.",
       "context_label": "unknown",
       "is_free": true,
       "capabilities": [
@@ -2699,6 +2777,7 @@
       ],
       "tags": [
         "text-generation",
+        "translation",
         "speech-synthesis"
       ],
       "is_reasoning": false,
@@ -2770,7 +2849,7 @@
       "owned_by": "nvidia",
       "provider": "nvidia",
       "name": "gpt-oss-20b",
-      "description": "Model: openai/gpt-oss-20b",
+      "description": "NVIDIA: Smaller Mixture of Experts (MoE) text-only LLM for efficient AI reasoning and math",
       "context_label": "unknown",
       "is_free": true,
       "capabilities": [
@@ -2778,10 +2857,11 @@
         "text-generation"
       ],
       "tags": [
+        "reasoning",
         "text-generation",
         "chat"
       ],
-      "is_reasoning": false,
+      "is_reasoning": true,
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
@@ -2801,12 +2881,16 @@
       "tier": "medium",
       "speed": "fast",
       "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
         "content-creation",
         "writing-assistance",
         "conversation",
-        "q&a"
+        "q&a",
+        "complex-reasoning"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -2816,7 +2900,7 @@
       "owned_by": "nvidia",
       "provider": "nvidia",
       "name": "laguna-xs-2.1",
-      "description": "Model: poolside/laguna-xs-2.1",
+      "description": "NVIDIA: Efficient 33B MoE for local, long-horizon agentic coding and terminal tasks",
       "context_label": "unknown",
       "is_free": true,
       "capabilities": [
@@ -2824,8 +2908,9 @@
         "text-generation"
       ],
       "tags": [
-        "text-generation",
-        "chat"
+        "code-generation",
+        "chat",
+        "text-generation"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
@@ -2845,10 +2930,12 @@
       "tier": "medium",
       "speed": "fast",
       "use_case": [
-        "content-creation",
-        "writing-assistance",
+        "software-development",
+        "code-completion",
         "conversation",
-        "q&a"
+        "q&a",
+        "content-creation",
+        "writing-assistance"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"

@@ -1,7 +1,7 @@
 {
   "object": "list",
   "provider": "github",
-  "updated_at": "2026-10-11T08:25:56.341Z",
+  "updated_at": "2026-10-11T09:53:38.083Z",
   "total": 37,
   "data": [
     {
@@ -17,7 +17,8 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "reasoning"
       ],
       "tags": [
         "reasoning",
@@ -63,7 +64,8 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "vision"
       ],
       "tags": [
         "vision",
@@ -108,7 +110,8 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "reasoning"
       ],
       "tags": [
         "reasoning",
@@ -154,16 +157,21 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "reasoning",
+        "agentic"
       ],
       "tags": [
         "reasoning",
         "text-generation",
-        "chat"
+        "tool-use",
+        "code-generation",
+        "chat",
+        "agentic"
       ],
       "is_reasoning": true,
       "is_multimodal": false,
-      "has_tool_use": false,
+      "has_tool_use": true,
       "free_mechanism": "rate-limited",
       "free_quota": {
         "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
@@ -180,6 +188,8 @@
         "math",
         "content-creation",
         "writing-assistance",
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "complex-reasoning"
@@ -200,13 +210,15 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "reasoning"
       ],
       "tags": [
         "text-generation",
-        "chat"
+        "chat",
+        "reasoning"
       ],
-      "is_reasoning": false,
+      "is_reasoning": true,
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
@@ -216,15 +228,19 @@
       "trial_scope": "all",
       "model_family": "phi-4",
       "aliases": [],
-      "tier": "medium",
+      "tier": "large",
       "speed": "fast",
       "use_case": [
         "content-creation",
         "writing-assistance",
         "conversation",
-        "q&a"
+        "q&a",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -320,14 +336,17 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "multimodal"
       ],
       "tags": [
+        "moderation",
         "chat",
-        "text-generation"
+        "text-generation",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
       "free_quota": {
@@ -339,6 +358,8 @@
       "tier": "medium",
       "speed": "fast",
       "use_case": [
+        "content-filtering",
+        "safety",
         "conversation",
         "q&a",
         "content-creation",
@@ -360,13 +381,17 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "reasoning",
+        "code-generation"
       ],
       "tags": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "reasoning",
+        "code-generation"
       ],
-      "is_reasoning": false,
+      "is_reasoning": true,
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
@@ -376,15 +401,21 @@
       "trial_scope": "all",
       "model_family": "o3-mini",
       "aliases": [],
-      "tier": "medium",
+      "tier": "large",
       "speed": "fast",
       "use_case": [
         "conversation",
         "q&a",
         "content-creation",
-        "writing-assistance"
+        "writing-assistance",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "software-development",
+        "code-completion",
+        "complex-reasoning"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -400,14 +431,17 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "multimodal"
       ],
       "tags": [
+        "moderation",
         "chat",
-        "text-generation"
+        "text-generation",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
       "free_quota": {
@@ -419,6 +453,8 @@
       "tier": "medium",
       "speed": "fast",
       "use_case": [
+        "content-filtering",
+        "safety",
         "conversation",
         "q&a",
         "content-creation",
@@ -440,12 +476,15 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "reasoning",
+        "code-generation"
       ],
       "tags": [
         "reasoning",
         "chat",
-        "text-generation"
+        "text-generation",
+        "code-generation"
       ],
       "is_reasoning": true,
       "is_multimodal": false,
@@ -467,6 +506,8 @@
         "q&a",
         "content-creation",
         "writing-assistance",
+        "software-development",
+        "code-completion",
         "complex-reasoning"
       ],
       "performance_level": "mid",
@@ -485,13 +526,17 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "reasoning",
+        "code-generation"
       ],
       "tags": [
+        "code-generation",
         "chat",
-        "text-generation"
+        "text-generation",
+        "reasoning"
       ],
-      "is_reasoning": false,
+      "is_reasoning": true,
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
@@ -501,15 +546,21 @@
       "trial_scope": "all",
       "model_family": "o1-mini",
       "aliases": [],
-      "tier": "medium",
+      "tier": "large",
       "speed": "fast",
       "use_case": [
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "content-creation",
-        "writing-assistance"
+        "writing-assistance",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -525,12 +576,15 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "reasoning",
+        "code-generation"
       ],
       "tags": [
         "reasoning",
         "chat",
-        "text-generation"
+        "text-generation",
+        "code-generation"
       ],
       "is_reasoning": true,
       "is_multimodal": false,
@@ -552,6 +606,8 @@
         "q&a",
         "content-creation",
         "writing-assistance",
+        "software-development",
+        "code-completion",
         "complex-reasoning"
       ],
       "performance_level": "mid",
@@ -570,14 +626,16 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "multimodal"
       ],
       "tags": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
       "free_quota": {
@@ -610,14 +668,16 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "multimodal"
       ],
       "tags": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
       "free_quota": {
@@ -650,7 +710,8 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "multimodal"
       ],
       "tags": [
         "vision",
@@ -697,14 +758,16 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "multimodal"
       ],
       "tags": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
       "free_quota": {
@@ -739,7 +802,8 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "multimodal"
       ],
       "tags": [
         "vision",
@@ -783,7 +847,8 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "multimodal"
       ],
       "tags": [
         "vision",
@@ -827,14 +892,17 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "multimodal"
       ],
       "tags": [
+        "code-generation",
         "chat",
-        "text-generation"
+        "text-generation",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
       "free_quota": {
@@ -846,6 +914,8 @@
       "tier": "medium",
       "speed": "fast",
       "use_case": [
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "content-creation",
@@ -867,14 +937,17 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "multimodal"
       ],
       "tags": [
+        "code-generation",
         "chat",
-        "text-generation"
+        "text-generation",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
       "free_quota": {
@@ -886,6 +959,8 @@
       "tier": "medium",
       "speed": "fast",
       "use_case": [
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "content-creation",
@@ -907,14 +982,17 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "multimodal"
       ],
       "tags": [
+        "code-generation",
         "chat",
-        "text-generation"
+        "text-generation",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
       "free_quota": {
@@ -926,6 +1004,8 @@
       "tier": "medium",
       "speed": "fast",
       "use_case": [
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "content-creation",
@@ -1080,7 +1160,9 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "multimodal",
+        "reasoning"
       ],
       "tags": [
         "reasoning",
@@ -1133,7 +1215,9 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "multimodal",
+        "reasoning"
       ],
       "tags": [
         "reasoning",
@@ -1187,15 +1271,17 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "multimodal"
       ],
       "tags": [
         "reasoning",
         "chat",
-        "text-generation"
+        "text-generation",
+        "multimodal"
       ],
       "is_reasoning": true,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
       "free_quota": {
@@ -1236,7 +1322,8 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "multimodal"
       ],
       "tags": [
         "vision",
@@ -1325,7 +1412,9 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "vision",
+        "multimodal"
       ],
       "tags": [
         "vision",
@@ -1369,13 +1458,17 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "reasoning",
+        "code-generation"
       ],
       "tags": [
+        "code-generation",
         "chat",
-        "text-generation"
+        "text-generation",
+        "reasoning"
       ],
-      "is_reasoning": false,
+      "is_reasoning": true,
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
@@ -1385,15 +1478,21 @@
       "trial_scope": "all",
       "model_family": "codestral-25.01",
       "aliases": [],
-      "tier": "medium",
+      "tier": "large",
       "speed": "fast",
       "use_case": [
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "content-creation",
-        "writing-assistance"
+        "writing-assistance",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -1409,12 +1508,14 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "vision"
       ],
       "tags": [
         "reasoning",
         "vision",
         "text-generation",
+        "code-generation",
         "chat",
         "multimodal"
       ],
@@ -1438,11 +1539,13 @@
         "visual-q&a",
         "content-creation",
         "writing-assistance",
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "complex-reasoning"
       ],
-      "performance_level": "mid",
+      "performance_level": "high",
       "estimated_latency": "< 1s"
     },
     {
@@ -1458,13 +1561,17 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "agentic",
+        "reasoning"
       ],
       "tags": [
         "text-generation",
-        "chat"
+        "chat",
+        "agentic",
+        "reasoning"
       ],
-      "is_reasoning": false,
+      "is_reasoning": true,
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
@@ -1481,7 +1588,11 @@
         "content-creation",
         "writing-assistance",
         "conversation",
-        "q&a"
+        "q&a",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
@@ -1499,16 +1610,21 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "code-generation",
+        "agentic"
       ],
       "tags": [
         "reasoning",
+        "tool-use",
+        "code-generation",
         "chat",
-        "text-generation"
+        "text-generation",
+        "agentic"
       ],
       "is_reasoning": true,
       "is_multimodal": false,
-      "has_tool_use": false,
+      "has_tool_use": true,
       "free_mechanism": "rate-limited",
       "free_quota": {
         "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
@@ -1524,6 +1640,8 @@
         "problem-solving",
         "logical-analysis",
         "math",
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "content-creation",
@@ -1546,16 +1664,22 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "reasoning",
+        "code-generation",
+        "agentic"
       ],
       "tags": [
         "reasoning",
         "text-generation",
-        "chat"
+        "tool-use",
+        "code-generation",
+        "chat",
+        "agentic"
       ],
       "is_reasoning": true,
       "is_multimodal": false,
-      "has_tool_use": false,
+      "has_tool_use": true,
       "free_mechanism": "rate-limited",
       "free_quota": {
         "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
@@ -1575,6 +1699,8 @@
         "math",
         "content-creation",
         "writing-assistance",
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "complex-reasoning"
@@ -1595,12 +1721,17 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "reasoning",
+        "code-generation",
+        "agentic"
       ],
       "tags": [
         "reasoning",
         "text-generation",
-        "chat"
+        "code-generation",
+        "chat",
+        "agentic"
       ],
       "is_reasoning": true,
       "is_multimodal": false,
@@ -1624,6 +1755,8 @@
         "math",
         "content-creation",
         "writing-assistance",
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "complex-reasoning"

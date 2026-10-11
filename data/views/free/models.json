@@ -1,8 +1,8 @@
 {
   "object": "list",
   "view": "free",
-  "updated_at": "2026-10-11T08:25:56.584Z",
-  "total": 329,
+  "updated_at": "2026-10-11T09:53:38.092Z",
+  "total": 330,
   "filters": {
     "isFree": "true"
   },
@@ -28,10 +28,11 @@
       ],
       "tags": [
         "vision",
-        "tool-use",
+        "code-generation",
         "chat",
         "text-generation",
         "function-calling",
+        "tool-use",
         "multimodal"
       ],
       "is_reasoning": false,
@@ -49,6 +50,8 @@
       "use_case": [
         "image-understanding",
         "visual-q&a",
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "content-creation",
@@ -79,10 +82,11 @@
       ],
       "tags": [
         "text-generation",
-        "tool-use",
+        "code-generation",
         "chat",
         "vision",
         "function-calling",
+        "tool-use",
         "multimodal"
       ],
       "is_reasoning": false,
@@ -100,6 +104,8 @@
       "use_case": [
         "content-creation",
         "writing-assistance",
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "image-understanding",
@@ -126,8 +132,8 @@
         "text-generation"
       ],
       "tags": [
-        "chat",
-        "text-generation"
+        "text-generation",
+        "chat"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
@@ -142,10 +148,10 @@
       "tier": "medium",
       "speed": "fast",
       "use_case": [
-        "conversation",
-        "q&a",
         "content-creation",
-        "writing-assistance"
+        "writing-assistance",
+        "conversation",
+        "q&a"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
@@ -212,10 +218,11 @@
         "reasoning"
       ],
       "tags": [
+        "reasoning",
+        "vision",
+        "code-generation",
         "chat",
         "text-generation",
-        "vision",
-        "reasoning",
         "multimodal"
       ],
       "is_reasoning": true,
@@ -230,18 +237,20 @@
       "tier": "large",
       "speed": "fast",
       "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "image-understanding",
+        "visual-q&a",
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "content-creation",
         "writing-assistance",
-        "image-understanding",
-        "visual-q&a",
-        "problem-solving",
-        "logical-analysis",
-        "math",
         "complex-reasoning"
       ],
-      "performance_level": "mid",
+      "performance_level": "high",
       "estimated_latency": "< 1s"
     },
     {
@@ -263,9 +272,9 @@
         "vision"
       ],
       "tags": [
+        "vision",
         "chat",
         "text-generation",
-        "vision",
         "multimodal"
       ],
       "is_reasoning": false,
@@ -279,12 +288,12 @@
       "tier": "large",
       "speed": "fast",
       "use_case": [
+        "image-understanding",
+        "visual-q&a",
         "conversation",
         "q&a",
         "content-creation",
-        "writing-assistance",
-        "image-understanding",
-        "visual-q&a"
+        "writing-assistance"
       ],
       "performance_level": "mid",
       "estimated_latency": "< 1s"
@@ -308,9 +317,9 @@
         "reasoning"
       ],
       "tags": [
+        "reasoning",
         "chat",
-        "text-generation",
-        "reasoning"
+        "text-generation"
       ],
       "is_reasoning": true,
       "is_multimodal": false,
@@ -323,13 +332,13 @@
       "tier": "large",
       "speed": "fast",
       "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
         "conversation",
         "q&a",
         "content-creation",
         "writing-assistance",
-        "problem-solving",
-        "logical-analysis",
-        "math",
         "complex-reasoning"
       ],
       "performance_level": "mid",
@@ -351,23 +360,30 @@
         "image-generation"
       ],
       "tags": [
-        "image-generation"
+        "vision",
+        "text-generation",
+        "image-generation",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": "permanent",
       "free_quota": null,
       "trial_scope": "specific",
       "model_family": "cogview-3-flash",
       "aliases": [],
-      "tier": "medium",
+      "tier": "large",
       "speed": "fast",
       "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
         "creative-generation",
         "art"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -423,13 +439,15 @@
         "reasoning"
       ],
       "tags": [
+        "tool-use",
+        "code-generation",
         "chat",
         "text-generation",
         "reasoning"
       ],
       "is_reasoning": true,
       "is_multimodal": false,
-      "has_tool_use": false,
+      "has_tool_use": true,
       "free_mechanism": "permanent",
       "free_quota": null,
       "trial_scope": "specific",
@@ -440,6 +458,8 @@
       "tier": "large",
       "speed": "fast",
       "use_case": [
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "content-creation",
@@ -518,15 +538,16 @@
         "reasoning"
       ],
       "tags": [
+        "reasoning",
+        "vision",
+        "tool-use",
         "chat",
         "text-generation",
-        "vision",
-        "reasoning",
         "multimodal"
       ],
       "is_reasoning": true,
       "is_multimodal": true,
-      "has_tool_use": false,
+      "has_tool_use": true,
       "free_mechanism": "permanent",
       "free_quota": null,
       "trial_scope": "specific",
@@ -535,15 +556,15 @@
       "tier": "large",
       "speed": "fast",
       "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "image-understanding",
+        "visual-q&a",
         "conversation",
         "q&a",
         "content-creation",
         "writing-assistance",
-        "image-understanding",
-        "visual-q&a",
-        "problem-solving",
-        "logical-analysis",
-        "math",
         "complex-reasoning"
       ],
       "performance_level": "mid",
@@ -572,6 +593,7 @@
       "tags": [
         "reasoning",
         "text-generation",
+        "code-generation",
         "chat",
         "function-calling",
         "tool-use"
@@ -600,6 +622,8 @@
         "math",
         "content-creation",
         "writing-assistance",
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "complex-reasoning"
@@ -631,6 +655,7 @@
       "tags": [
         "vision",
         "text-generation",
+        "code-generation",
         "chat",
         "reasoning",
         "function-calling",
@@ -656,6 +681,8 @@
         "visual-q&a",
         "content-creation",
         "writing-assistance",
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "problem-solving",
@@ -663,7 +690,7 @@
         "math",
         "complex-reasoning"
       ],
-      "performance_level": "mid",
+      "performance_level": "high",
       "estimated_latency": "< 1s"
     },
     {
@@ -932,7 +959,8 @@
         "text-generation"
       ],
       "tags": [
-        "text-generation"
+        "text-generation",
+        "moderation"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
@@ -950,7 +978,9 @@
       "speed": "fast",
       "use_case": [
         "content-creation",
-        "writing-assistance"
+        "writing-assistance",
+        "content-filtering",
+        "safety"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
@@ -1128,6 +1158,7 @@
       ],
       "tags": [
         "text-generation",
+        "translation",
         "speech-recognition"
       ],
       "is_reasoning": false,
@@ -1619,7 +1650,6 @@
       ],
       "tags": [
         "text-generation",
-        "tool-use",
         "function-calling",
         "reasoning"
       ],
@@ -1823,6 +1853,7 @@
         "function-calling"
       ],
       "tags": [
+        "tool-use",
         "text-generation",
         "function-calling"
       ],
@@ -2224,7 +2255,8 @@
         "text-generation"
       ],
       "tags": [
-        "text-generation"
+        "text-generation",
+        "code-generation"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
@@ -2242,9 +2274,11 @@
       "speed": "fast",
       "use_case": [
         "content-creation",
-        "writing-assistance"
+        "writing-assistance",
+        "software-development",
+        "code-completion"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -2723,7 +2757,8 @@
       ],
       "tags": [
         "text-generation",
-        "speech-recognition"
+        "speech-recognition",
+        "translation"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
@@ -2761,7 +2796,8 @@
       ],
       "tags": [
         "text-generation",
-        "speech-recognition"
+        "speech-recognition",
+        "translation"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
@@ -2936,6 +2972,8 @@
       ],
       "tags": [
         "text-generation",
+        "embeddings",
+        "rerank",
         "moderation"
       ],
       "is_reasoning": false,
@@ -2954,6 +2992,10 @@
       "use_case": [
         "content-creation",
         "writing-assistance",
+        "semantic-search",
+        "similarity",
+        "search-improvement",
+        "relevance",
         "content-filtering",
         "safety"
       ],
@@ -2979,6 +3021,7 @@
         "reasoning",
         "vision",
         "text-generation",
+        "document-processing",
         "multimodal"
       ],
       "is_reasoning": true,
@@ -3002,6 +3045,8 @@
         "visual-q&a",
         "content-creation",
         "writing-assistance",
+        "pdf-processing",
+        "ocr",
         "complex-reasoning"
       ],
       "performance_level": "mid",
@@ -3314,7 +3359,8 @@
       "context_label": "16K",
       "is_free": true,
       "capabilities": [
-        "chat"
+        "chat",
+        "vision"
       ],
       "tags": [
         "vision",
@@ -3393,15 +3439,17 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "tool-use"
       ],
       "tags": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "tool-use"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
-      "has_tool_use": false,
+      "has_tool_use": true,
       "free_mechanism": "rate-limited",
       "free_quota": {
         "rpm": 20,
@@ -3433,15 +3481,22 @@
       "is_free": true,
       "capabilities": [
         "text-generation",
-        "chat"
+        "chat",
+        "tool-use",
+        "reasoning",
+        "vision"
       ],
       "tags": [
         "text-generation",
-        "chat"
+        "chat",
+        "tool-use",
+        "reasoning",
+        "vision",
+        "multimodal"
       ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": true,
       "free_mechanism": "rate-limited",
       "free_quota": {
         "rpm": 20,
@@ -3450,15 +3505,21 @@
       "trial_scope": "all",
       "model_family": "command-a-plus-05",
       "aliases": [],
-      "tier": "medium",
+      "tier": "large",
       "speed": "fast",
       "use_case": [
         "content-creation",
         "writing-assistance",
         "conversation",
-        "q&a"
+        "q&a",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "image-understanding",
+        "visual-q&a",
+        "complex-reasoning"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -3472,16 +3533,19 @@
       "context_label": "289K",
       "is_free": true,
       "capabilities": [
-        "chat"
+        "chat",
+        "tool-use",
+        "reasoning"
       ],
       "tags": [
         "reasoning",
         "chat",
+        "tool-use",
         "text-generation"
       ],
       "is_reasoning": true,
       "is_multimodal": false,
-      "has_tool_use": false,
+      "has_tool_use": true,
       "free_mechanism": "rate-limited",
       "free_quota": {
         "rpm": 20,
@@ -3517,14 +3581,17 @@
       "context_label": "9K",
       "is_free": true,
       "capabilities": [
-        "chat"
+        "chat",
+        "tool-use"
       ],
       "tags": [
-        "chat"
+        "translation",
+        "chat",
+        "tool-use"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
-      "has_tool_use": false,
+      "has_tool_use": true,
       "free_mechanism": "rate-limited",
       "free_quota": {
         "rpm": 20,
@@ -3553,16 +3620,19 @@
       "context_label": "128K",
       "is_free": true,
       "capabilities": [
-        "chat"
+        "chat",
+        "vision",
+        "tool-use"
       ],
       "tags": [
         "vision",
         "chat",
+        "tool-use",
         "multimodal"
       ],
       "is_reasoning": false,
       "is_multimodal": true,
-      "has_tool_use": false,
+      "has_tool_use": true,
       "free_mechanism": "rate-limited",
       "free_quota": {
         "rpm": 20,
@@ -3595,15 +3665,17 @@
       "is_free": true,
       "capabilities": [
         "text-generation",
-        "chat"
+        "chat",
+        "tool-use"
       ],
       "tags": [
         "text-generation",
-        "chat"
+        "chat",
+        "tool-use"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
-      "has_tool_use": false,
+      "has_tool_use": true,
       "free_mechanism": "rate-limited",
       "free_quota": {
         "rpm": 20,
@@ -3635,15 +3707,17 @@
       "is_free": true,
       "capabilities": [
         "text-generation",
-        "chat"
+        "chat",
+        "tool-use"
       ],
       "tags": [
         "text-generation",
-        "chat"
+        "chat",
+        "tool-use"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
-      "has_tool_use": false,
+      "has_tool_use": true,
       "free_mechanism": "rate-limited",
       "free_quota": {
         "rpm": 20,
@@ -3675,15 +3749,17 @@
       "is_free": true,
       "capabilities": [
         "text-generation",
-        "chat"
+        "chat",
+        "tool-use"
       ],
       "tags": [
         "text-generation",
-        "chat"
+        "chat",
+        "tool-use"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
-      "has_tool_use": false,
+      "has_tool_use": true,
       "free_mechanism": "rate-limited",
       "free_quota": {
         "rpm": 20,
@@ -3715,15 +3791,17 @@
       "is_free": true,
       "capabilities": [
         "text-generation",
-        "chat"
+        "chat",
+        "tool-use"
       ],
       "tags": [
         "text-generation",
-        "chat"
+        "chat",
+        "tool-use"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
-      "has_tool_use": false,
+      "has_tool_use": true,
       "free_mechanism": "rate-limited",
       "free_quota": {
         "rpm": 20,
@@ -3794,6 +3872,7 @@
       ],
       "tags": [
         "vision",
+        "embeddings",
         "multimodal"
       ],
       "is_reasoning": false,
@@ -3808,13 +3887,15 @@
       "model_family": "embed-english-light-v3.0-image",
       "model_variant": "image",
       "aliases": [],
-      "tier": "large",
+      "tier": "medium",
       "speed": "fast",
       "use_case": [
         "image-understanding",
-        "visual-q&a"
+        "visual-q&a",
+        "semantic-search",
+        "similarity"
       ],
-      "performance_level": "mid",
+      "performance_level": "entry",
       "estimated_latency": "< 1s"
     },
     {
@@ -3868,6 +3949,7 @@
       ],
       "tags": [
         "vision",
+        "embeddings",
         "multimodal"
       ],
       "is_reasoning": false,
@@ -3882,13 +3964,15 @@
       "model_family": "embed-english-v3.0-image",
       "model_variant": "image",
       "aliases": [],
-      "tier": "large",
+      "tier": "medium",
       "speed": "fast",
       "use_case": [
         "image-understanding",
-        "visual-q&a"
+        "visual-q&a",
+        "semantic-search",
+        "similarity"
       ],
-      "performance_level": "mid",
+      "performance_level": "entry",
       "estimated_latency": "< 1s"
     },
     {
@@ -3942,6 +4026,7 @@
       ],
       "tags": [
         "vision",
+        "embeddings",
         "multimodal"
       ],
       "is_reasoning": false,
@@ -3956,13 +4041,15 @@
       "model_family": "embed-multilingual-light-v3.0-image",
       "model_variant": "image",
       "aliases": [],
-      "tier": "large",
+      "tier": "medium",
       "speed": "fast",
       "use_case": [
         "image-understanding",
-        "visual-q&a"
+        "visual-q&a",
+        "semantic-search",
+        "similarity"
       ],
-      "performance_level": "mid",
+      "performance_level": "entry",
       "estimated_latency": "< 1s"
     },
     {
@@ -4016,6 +4103,7 @@
       ],
       "tags": [
         "vision",
+        "embeddings",
         "multimodal"
       ],
       "is_reasoning": false,
@@ -4030,13 +4118,15 @@
       "model_family": "embed-multilingual-v3.0-image",
       "model_variant": "image",
       "aliases": [],
-      "tier": "large",
+      "tier": "medium",
       "speed": "fast",
       "use_case": [
         "image-understanding",
-        "visual-q&a"
+        "visual-q&a",
+        "semantic-search",
+        "similarity"
       ],
-      "performance_level": "mid",
+      "performance_level": "entry",
       "estimated_latency": "< 1s"
     },
     {
@@ -4159,15 +4249,20 @@
       "is_free": true,
       "capabilities": [
         "text-generation",
-        "chat"
+        "chat",
+        "tool-use",
+        "reasoning"
       ],
       "tags": [
+        "code-generation",
         "text-generation",
-        "chat"
+        "chat",
+        "tool-use",
+        "reasoning"
       ],
-      "is_reasoning": false,
+      "is_reasoning": true,
       "is_multimodal": false,
-      "has_tool_use": false,
+      "has_tool_use": true,
       "free_mechanism": "rate-limited",
       "free_quota": {
         "rpm": 20,
@@ -4177,15 +4272,21 @@
       "model_family": "north-mini-code-1-0",
       "model_variant": "code",
       "aliases": [],
-      "tier": "medium",
+      "tier": "large",
       "speed": "fast",
       "use_case": [
+        "software-development",
+        "code-completion",
         "content-creation",
         "writing-assistance",
         "conversation",
-        "q&a"
+        "q&a",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -4203,6 +4304,7 @@
         "chat"
       ],
       "tags": [
+        "translation",
         "text-generation",
         "chat"
       ],
@@ -4226,6 +4328,43 @@
         "q&a"
       ],
       "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "parse-v5.0",
+      "object": "model",
+      "created": 113850459,
+      "owned_by": "cohere",
+      "provider": "cohere",
+      "name": "parse-v5.0",
+      "context_size": 16384,
+      "context_label": "16K",
+      "is_free": true,
+      "capabilities": [
+        "vision"
+      ],
+      "tags": [
+        "vision",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "notes": "Trial API key: 1,000 requests/month shared across all models (20 RPM); beyond that a paid key is required"
+      },
+      "trial_scope": "all",
+      "model_family": "parse-v5.0",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -4420,15 +4559,17 @@
       "is_free": true,
       "capabilities": [
         "text-generation",
-        "chat"
+        "chat",
+        "tool-use"
       ],
       "tags": [
         "text-generation",
-        "chat"
+        "chat",
+        "tool-use"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
-      "has_tool_use": false,
+      "has_tool_use": true,
       "free_mechanism": "rate-limited",
       "free_quota": {
         "rpm": 20,
@@ -4460,15 +4601,17 @@
       "is_free": true,
       "capabilities": [
         "text-generation",
-        "chat"
+        "chat",
+        "tool-use"
       ],
       "tags": [
         "text-generation",
-        "chat"
+        "chat",
+        "tool-use"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
-      "has_tool_use": false,
+      "has_tool_use": true,
       "free_mechanism": "rate-limited",
       "free_quota": {
         "rpm": 20,
@@ -4500,15 +4643,17 @@
       "is_free": true,
       "capabilities": [
         "text-generation",
-        "chat"
+        "chat",
+        "tool-use"
       ],
       "tags": [
         "text-generation",
-        "chat"
+        "chat",
+        "tool-use"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
-      "has_tool_use": false,
+      "has_tool_use": true,
       "free_mechanism": "rate-limited",
       "free_quota": {
         "rpm": 20,
@@ -4540,15 +4685,17 @@
       "is_free": true,
       "capabilities": [
         "text-generation",
-        "chat"
+        "chat",
+        "tool-use"
       ],
       "tags": [
         "text-generation",
-        "chat"
+        "chat",
+        "tool-use"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
-      "has_tool_use": false,
+      "has_tool_use": true,
       "free_mechanism": "rate-limited",
       "free_quota": {
         "rpm": 20,
@@ -4620,6 +4767,7 @@
         "embeddings"
       ],
       "tags": [
+        "text-generation",
         "embeddings"
       ],
       "is_reasoning": false,
@@ -4634,6 +4782,8 @@
       "tier": "medium",
       "speed": "fast",
       "use_case": [
+        "content-creation",
+        "writing-assistance",
         "semantic-search",
         "similarity"
       ],
@@ -4657,6 +4807,7 @@
         "rerank"
       ],
       "tags": [
+        "text-generation",
         "rerank"
       ],
       "is_reasoning": false,
@@ -4671,6 +4822,8 @@
       "tier": "medium",
       "speed": "fast",
       "use_case": [
+        "content-creation",
+        "writing-assistance",
         "search-improvement",
         "relevance"
       ],
@@ -4900,6 +5053,7 @@
         "embeddings"
       ],
       "tags": [
+        "text-generation",
         "embeddings"
       ],
       "is_reasoning": false,
@@ -4913,6 +5067,8 @@
       "tier": "medium",
       "speed": "fast",
       "use_case": [
+        "content-creation",
+        "writing-assistance",
         "semantic-search",
         "similarity"
       ],
@@ -5088,9 +5244,10 @@
         "text-generation"
       ],
       "tags": [
+        "reasoning",
         "text-generation"
       ],
-      "is_reasoning": false,
+      "is_reasoning": true,
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "permanent",
@@ -5098,13 +5255,17 @@
       "trial_scope": "specific",
       "model_family": "deepseek-prover-v2-7b",
       "aliases": [],
-      "tier": "medium",
+      "tier": "large",
       "speed": "fast",
       "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
         "content-creation",
-        "writing-assistance"
+        "writing-assistance",
+        "complex-reasoning"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -5124,7 +5285,8 @@
         "text-generation"
       ],
       "tags": [
-        "text-generation"
+        "text-generation",
+        "code-generation"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
@@ -5142,7 +5304,9 @@
       "speed": "fast",
       "use_case": [
         "content-creation",
-        "writing-assistance"
+        "writing-assistance",
+        "software-development",
+        "code-completion"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
@@ -5164,7 +5328,10 @@
         "embeddings"
       ],
       "tags": [
-        "embeddings"
+        "text-generation",
+        "code-generation",
+        "embeddings",
+        "rerank"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
@@ -5181,8 +5348,14 @@
       "tier": "medium",
       "speed": "fast",
       "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "software-development",
+        "code-completion",
         "semantic-search",
-        "similarity"
+        "similarity",
+        "search-improvement",
+        "relevance"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
@@ -5204,10 +5377,14 @@
         "embeddings"
       ],
       "tags": [
-        "embeddings"
+        "vision",
+        "text-generation",
+        "code-generation",
+        "embeddings",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": "permanent",
       "free_quota": null,
@@ -5219,6 +5396,12 @@
       "tier": "small",
       "speed": "fast",
       "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "software-development",
+        "code-completion",
         "semantic-search",
         "similarity"
       ],
@@ -5242,6 +5425,8 @@
         "embeddings"
       ],
       "tags": [
+        "text-generation",
+        "code-generation",
         "embeddings"
       ],
       "is_reasoning": false,
@@ -5260,6 +5445,10 @@
       "tier": "medium",
       "speed": "fast",
       "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "software-development",
+        "code-completion",
         "semantic-search",
         "similarity"
       ],
@@ -5399,10 +5588,12 @@
         "text-generation"
       ],
       "tags": [
-        "text-generation"
+        "vision",
+        "text-generation",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": "permanent",
       "free_quota": null,
@@ -5413,10 +5604,12 @@
       "tier": "large",
       "speed": "fast",
       "use_case": [
+        "image-understanding",
+        "visual-q&a",
         "content-creation",
         "writing-assistance"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -5436,10 +5629,13 @@
         "embeddings"
       ],
       "tags": [
-        "embeddings"
+        "vision",
+        "text-generation",
+        "embeddings",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": "permanent",
       "free_quota": null,
@@ -5449,6 +5645,10 @@
       "tier": "medium",
       "speed": "fast",
       "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
         "semantic-search",
         "similarity"
       ],
@@ -5471,6 +5671,8 @@
         "embeddings"
       ],
       "tags": [
+        "text-generation",
+        "rerank",
         "embeddings"
       ],
       "is_reasoning": false,
@@ -5485,6 +5687,10 @@
       "tier": "medium",
       "speed": "fast",
       "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "search-improvement",
+        "relevance",
         "semantic-search",
         "similarity"
       ],
@@ -5583,10 +5789,13 @@
         "embeddings"
       ],
       "tags": [
-        "embeddings"
+        "vision",
+        "text-generation",
+        "embeddings",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": "permanent",
       "free_quota": null,
@@ -5598,6 +5807,10 @@
       "tier": "medium",
       "speed": "fast",
       "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
         "semantic-search",
         "similarity"
       ],
@@ -5687,23 +5900,27 @@
         "text-generation"
       ],
       "tags": [
-        "text-generation"
+        "vision",
+        "text-generation",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": "permanent",
       "free_quota": null,
       "trial_scope": "specific",
       "model_family": "intern-s2",
       "aliases": [],
-      "tier": "medium",
+      "tier": "large",
       "speed": "fast",
       "use_case": [
+        "image-understanding",
+        "visual-q&a",
         "content-creation",
         "writing-assistance"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -5723,6 +5940,7 @@
         "embeddings"
       ],
       "tags": [
+        "text-generation",
         "embeddings"
       ],
       "is_reasoning": false,
@@ -5736,6 +5954,8 @@
       "tier": "medium",
       "speed": "fast",
       "use_case": [
+        "content-creation",
+        "writing-assistance",
         "semantic-search",
         "similarity"
       ],
@@ -5759,6 +5979,7 @@
         "embeddings"
       ],
       "tags": [
+        "text-generation",
         "embeddings"
       ],
       "is_reasoning": false,
@@ -5772,6 +5993,8 @@
       "tier": "medium",
       "speed": "fast",
       "use_case": [
+        "content-creation",
+        "writing-assistance",
         "semantic-search",
         "similarity"
       ],
@@ -5795,6 +6018,7 @@
         "embeddings"
       ],
       "tags": [
+        "text-generation",
         "embeddings"
       ],
       "is_reasoning": false,
@@ -5810,6 +6034,8 @@
       "tier": "medium",
       "speed": "fast",
       "use_case": [
+        "content-creation",
+        "writing-assistance",
         "semantic-search",
         "similarity"
       ],
@@ -5833,6 +6059,8 @@
         "embeddings"
       ],
       "tags": [
+        "text-generation",
+        "rerank",
         "embeddings"
       ],
       "is_reasoning": false,
@@ -5847,6 +6075,10 @@
       "tier": "medium",
       "speed": "fast",
       "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "search-improvement",
+        "relevance",
         "semantic-search",
         "similarity"
       ],
@@ -5870,11 +6102,13 @@
         "text-generation"
       ],
       "tags": [
-        "text-generation"
+        "text-generation",
+        "tool-use",
+        "code-generation"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
-      "has_tool_use": false,
+      "has_tool_use": true,
       "free_mechanism": "permanent",
       "free_quota": null,
       "trial_scope": "specific",
@@ -5889,7 +6123,9 @@
       "speed": "fast",
       "use_case": [
         "content-creation",
-        "writing-assistance"
+        "writing-assistance",
+        "software-development",
+        "code-completion"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
@@ -5911,6 +6147,7 @@
         "text-generation"
       ],
       "tags": [
+        "code-generation",
         "text-generation"
       ],
       "is_reasoning": false,
@@ -5926,6 +6163,8 @@
       "tier": "medium",
       "speed": "fast",
       "use_case": [
+        "software-development",
+        "code-completion",
         "content-creation",
         "writing-assistance"
       ],
@@ -5945,7 +6184,8 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "reasoning"
       ],
       "tags": [
         "reasoning",
@@ -5991,7 +6231,8 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "vision"
       ],
       "tags": [
         "vision",
@@ -6036,7 +6277,8 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "reasoning"
       ],
       "tags": [
         "reasoning",
@@ -6082,16 +6324,21 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "reasoning",
+        "agentic"
       ],
       "tags": [
         "reasoning",
         "text-generation",
-        "chat"
+        "tool-use",
+        "code-generation",
+        "chat",
+        "agentic"
       ],
       "is_reasoning": true,
       "is_multimodal": false,
-      "has_tool_use": false,
+      "has_tool_use": true,
       "free_mechanism": "rate-limited",
       "free_quota": {
         "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
@@ -6108,6 +6355,8 @@
         "math",
         "content-creation",
         "writing-assistance",
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "complex-reasoning"
@@ -6128,13 +6377,15 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "reasoning"
       ],
       "tags": [
         "text-generation",
-        "chat"
+        "chat",
+        "reasoning"
       ],
-      "is_reasoning": false,
+      "is_reasoning": true,
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
@@ -6144,15 +6395,19 @@
       "trial_scope": "all",
       "model_family": "phi-4",
       "aliases": [],
-      "tier": "medium",
+      "tier": "large",
       "speed": "fast",
       "use_case": [
         "content-creation",
         "writing-assistance",
         "conversation",
-        "q&a"
+        "q&a",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -6248,14 +6503,17 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "multimodal"
       ],
       "tags": [
+        "moderation",
         "chat",
-        "text-generation"
+        "text-generation",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
       "free_quota": {
@@ -6267,6 +6525,8 @@
       "tier": "medium",
       "speed": "fast",
       "use_case": [
+        "content-filtering",
+        "safety",
         "conversation",
         "q&a",
         "content-creation",
@@ -6288,13 +6548,17 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "reasoning",
+        "code-generation"
       ],
       "tags": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "reasoning",
+        "code-generation"
       ],
-      "is_reasoning": false,
+      "is_reasoning": true,
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
@@ -6304,15 +6568,21 @@
       "trial_scope": "all",
       "model_family": "o3-mini",
       "aliases": [],
-      "tier": "medium",
+      "tier": "large",
       "speed": "fast",
       "use_case": [
         "conversation",
         "q&a",
         "content-creation",
-        "writing-assistance"
+        "writing-assistance",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "software-development",
+        "code-completion",
+        "complex-reasoning"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -6328,14 +6598,17 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "multimodal"
       ],
       "tags": [
+        "moderation",
         "chat",
-        "text-generation"
+        "text-generation",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
       "free_quota": {
@@ -6347,6 +6620,8 @@
       "tier": "medium",
       "speed": "fast",
       "use_case": [
+        "content-filtering",
+        "safety",
         "conversation",
         "q&a",
         "content-creation",
@@ -6368,12 +6643,15 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "reasoning",
+        "code-generation"
       ],
       "tags": [
         "reasoning",
         "chat",
-        "text-generation"
+        "text-generation",
+        "code-generation"
       ],
       "is_reasoning": true,
       "is_multimodal": false,
@@ -6395,6 +6673,8 @@
         "q&a",
         "content-creation",
         "writing-assistance",
+        "software-development",
+        "code-completion",
         "complex-reasoning"
       ],
       "performance_level": "mid",
@@ -6413,13 +6693,17 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "reasoning",
+        "code-generation"
       ],
       "tags": [
+        "code-generation",
         "chat",
-        "text-generation"
+        "text-generation",
+        "reasoning"
       ],
-      "is_reasoning": false,
+      "is_reasoning": true,
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
@@ -6429,15 +6713,21 @@
       "trial_scope": "all",
       "model_family": "o1-mini",
       "aliases": [],
-      "tier": "medium",
+      "tier": "large",
       "speed": "fast",
       "use_case": [
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "content-creation",
-        "writing-assistance"
+        "writing-assistance",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -6453,12 +6743,15 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "reasoning",
+        "code-generation"
       ],
       "tags": [
         "reasoning",
         "chat",
-        "text-generation"
+        "text-generation",
+        "code-generation"
       ],
       "is_reasoning": true,
       "is_multimodal": false,
@@ -6480,6 +6773,8 @@
         "q&a",
         "content-creation",
         "writing-assistance",
+        "software-development",
+        "code-completion",
         "complex-reasoning"
       ],
       "performance_level": "mid",
@@ -6498,14 +6793,16 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "multimodal"
       ],
       "tags": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
       "free_quota": {
@@ -6538,14 +6835,16 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "multimodal"
       ],
       "tags": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
       "free_quota": {
@@ -6578,7 +6877,8 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "multimodal"
       ],
       "tags": [
         "vision",
@@ -6625,14 +6925,16 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "multimodal"
       ],
       "tags": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
       "free_quota": {
@@ -6667,7 +6969,8 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "multimodal"
       ],
       "tags": [
         "vision",
@@ -6711,7 +7014,8 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "multimodal"
       ],
       "tags": [
         "vision",
@@ -6755,14 +7059,17 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "multimodal"
       ],
       "tags": [
+        "code-generation",
         "chat",
-        "text-generation"
+        "text-generation",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
       "free_quota": {
@@ -6774,6 +7081,8 @@
       "tier": "medium",
       "speed": "fast",
       "use_case": [
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "content-creation",
@@ -6795,14 +7104,17 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "multimodal"
       ],
       "tags": [
+        "code-generation",
         "chat",
-        "text-generation"
+        "text-generation",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
       "free_quota": {
@@ -6814,6 +7126,8 @@
       "tier": "medium",
       "speed": "fast",
       "use_case": [
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "content-creation",
@@ -6835,14 +7149,17 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "multimodal"
       ],
       "tags": [
+        "code-generation",
         "chat",
-        "text-generation"
+        "text-generation",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
       "free_quota": {
@@ -6854,6 +7171,8 @@
       "tier": "medium",
       "speed": "fast",
       "use_case": [
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "content-creation",
@@ -7008,7 +7327,9 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "multimodal",
+        "reasoning"
       ],
       "tags": [
         "reasoning",
@@ -7061,7 +7382,9 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "multimodal",
+        "reasoning"
       ],
       "tags": [
         "reasoning",
@@ -7115,15 +7438,17 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "multimodal"
       ],
       "tags": [
         "reasoning",
         "chat",
-        "text-generation"
+        "text-generation",
+        "multimodal"
       ],
       "is_reasoning": true,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
       "free_quota": {
@@ -7164,7 +7489,8 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "multimodal"
       ],
       "tags": [
         "vision",
@@ -7253,7 +7579,9 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "vision",
+        "multimodal"
       ],
       "tags": [
         "vision",
@@ -7297,13 +7625,17 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "reasoning",
+        "code-generation"
       ],
       "tags": [
+        "code-generation",
         "chat",
-        "text-generation"
+        "text-generation",
+        "reasoning"
       ],
-      "is_reasoning": false,
+      "is_reasoning": true,
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
@@ -7313,15 +7645,21 @@
       "trial_scope": "all",
       "model_family": "codestral-25.01",
       "aliases": [],
-      "tier": "medium",
+      "tier": "large",
       "speed": "fast",
       "use_case": [
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "content-creation",
-        "writing-assistance"
+        "writing-assistance",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -7337,12 +7675,14 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "vision"
       ],
       "tags": [
         "reasoning",
         "vision",
         "text-generation",
+        "code-generation",
         "chat",
         "multimodal"
       ],
@@ -7366,11 +7706,13 @@
         "visual-q&a",
         "content-creation",
         "writing-assistance",
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "complex-reasoning"
       ],
-      "performance_level": "mid",
+      "performance_level": "high",
       "estimated_latency": "< 1s"
     },
     {
@@ -7386,13 +7728,17 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "agentic",
+        "reasoning"
       ],
       "tags": [
         "text-generation",
-        "chat"
+        "chat",
+        "agentic",
+        "reasoning"
       ],
-      "is_reasoning": false,
+      "is_reasoning": true,
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
@@ -7409,7 +7755,11 @@
         "content-creation",
         "writing-assistance",
         "conversation",
-        "q&a"
+        "q&a",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
@@ -7427,16 +7777,21 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "code-generation",
+        "agentic"
       ],
       "tags": [
         "reasoning",
+        "tool-use",
+        "code-generation",
         "chat",
-        "text-generation"
+        "text-generation",
+        "agentic"
       ],
       "is_reasoning": true,
       "is_multimodal": false,
-      "has_tool_use": false,
+      "has_tool_use": true,
       "free_mechanism": "rate-limited",
       "free_quota": {
         "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
@@ -7452,6 +7807,8 @@
         "problem-solving",
         "logical-analysis",
         "math",
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "content-creation",
@@ -7474,16 +7831,22 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "reasoning",
+        "code-generation",
+        "agentic"
       ],
       "tags": [
         "reasoning",
         "text-generation",
-        "chat"
+        "tool-use",
+        "code-generation",
+        "chat",
+        "agentic"
       ],
       "is_reasoning": true,
       "is_multimodal": false,
-      "has_tool_use": false,
+      "has_tool_use": true,
       "free_mechanism": "rate-limited",
       "free_quota": {
         "notes": "Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)"
@@ -7503,6 +7866,8 @@
         "math",
         "content-creation",
         "writing-assistance",
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "complex-reasoning"
@@ -7523,12 +7888,17 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "reasoning",
+        "code-generation",
+        "agentic"
       ],
       "tags": [
         "reasoning",
         "text-generation",
-        "chat"
+        "code-generation",
+        "chat",
+        "agentic"
       ],
       "is_reasoning": true,
       "is_multimodal": false,
@@ -7552,6 +7922,8 @@
         "math",
         "content-creation",
         "writing-assistance",
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "complex-reasoning"
@@ -7583,7 +7955,9 @@
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
-      "free_quota": null,
+      "free_quota": {
+        "notes": "Free tier is limited per project by requests/min, input tokens/min and requests/day. Google publishes the per-model numbers only in AI Studio (https://aistudio.google.com/rate-limit); the public docs state limits \"are not guaranteed and actual capacity may vary\"."
+      },
       "trial_scope": "fast",
       "model_family": "gemini-3.8-flash",
       "aliases": [],
@@ -7624,7 +7998,9 @@
       "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
-      "free_quota": null,
+      "free_quota": {
+        "notes": "Free tier is limited per project by requests/min, input tokens/min and requests/day. Google publishes the per-model numbers only in AI Studio (https://aistudio.google.com/rate-limit); the public docs state limits \"are not guaranteed and actual capacity may vary\"."
+      },
       "trial_scope": "fast",
       "model_family": "gemini-3.6-flash",
       "aliases": [],
@@ -7669,7 +8045,9 @@
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
-      "free_quota": null,
+      "free_quota": {
+        "notes": "Free tier is limited per project by requests/min, input tokens/min and requests/day. Google publishes the per-model numbers only in AI Studio (https://aistudio.google.com/rate-limit); the public docs state limits \"are not guaranteed and actual capacity may vary\"."
+      },
       "trial_scope": "fast",
       "model_family": "gemini-3.8-live",
       "aliases": [],
@@ -7720,7 +8098,9 @@
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
-      "free_quota": null,
+      "free_quota": {
+        "notes": "Free tier is limited per project by requests/min, input tokens/min and requests/day. Google publishes the per-model numbers only in AI Studio (https://aistudio.google.com/rate-limit); the public docs state limits \"are not guaranteed and actual capacity may vary\"."
+      },
       "trial_scope": "fast",
       "model_family": "gemini-3.8-live-extended-thinking",
       "model_variant": "thinking",
@@ -7772,7 +8152,9 @@
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
-      "free_quota": null,
+      "free_quota": {
+        "notes": "Free tier is limited per project by requests/min, input tokens/min and requests/day. Google publishes the per-model numbers only in AI Studio (https://aistudio.google.com/rate-limit); the public docs state limits \"are not guaranteed and actual capacity may vary\"."
+      },
       "trial_scope": "fast",
       "model_family": "gemini-3.1-flash-live-preview",
       "aliases": [],
@@ -7814,6 +8196,7 @@
       ],
       "tags": [
         "text-generation",
+        "translation",
         "chat",
         "speech-recognition",
         "speech-synthesis"
@@ -7822,7 +8205,9 @@
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
-      "free_quota": null,
+      "free_quota": {
+        "notes": "Free tier is limited per project by requests/min, input tokens/min and requests/day. Google publishes the per-model numbers only in AI Studio (https://aistudio.google.com/rate-limit); the public docs state limits \"are not guaranteed and actual capacity may vary\"."
+      },
       "trial_scope": "fast",
       "model_family": "gemini-3.5-live-translate-preview",
       "aliases": [],
@@ -7864,7 +8249,9 @@
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
-      "free_quota": null,
+      "free_quota": {
+        "notes": "Free tier is limited per project by requests/min, input tokens/min and requests/day. Google publishes the per-model numbers only in AI Studio (https://aistudio.google.com/rate-limit); the public docs state limits \"are not guaranteed and actual capacity may vary\"."
+      },
       "trial_scope": "fast",
       "model_family": "gemini-3.5-transcribe-live",
       "aliases": [],
@@ -7902,7 +8289,9 @@
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
-      "free_quota": null,
+      "free_quota": {
+        "notes": "Free tier is limited per project by requests/min, input tokens/min and requests/day. Google publishes the per-model numbers only in AI Studio (https://aistudio.google.com/rate-limit); the public docs state limits \"are not guaranteed and actual capacity may vary\"."
+      },
       "trial_scope": "fast",
       "model_family": "gemini-3.5-transcribe",
       "aliases": [],
@@ -7935,13 +8324,16 @@
       ],
       "tags": [
         "text-generation",
+        "translation",
         "chat"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
-      "free_quota": null,
+      "free_quota": {
+        "notes": "Free tier is limited per project by requests/min, input tokens/min and requests/day. Google publishes the per-model numbers only in AI Studio (https://aistudio.google.com/rate-limit); the public docs state limits \"are not guaranteed and actual capacity may vary\"."
+      },
       "trial_scope": "fast",
       "model_family": "gemini-3.5-flash-lite",
       "aliases": [],
@@ -7974,13 +8366,16 @@
       ],
       "tags": [
         "text-generation",
+        "translation",
         "chat"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
-      "free_quota": null,
+      "free_quota": {
+        "notes": "Free tier is limited per project by requests/min, input tokens/min and requests/day. Google publishes the per-model numbers only in AI Studio (https://aistudio.google.com/rate-limit); the public docs state limits \"are not guaranteed and actual capacity may vary\"."
+      },
       "trial_scope": "fast",
       "model_family": "gemini-3.1-flash-lite",
       "aliases": [],
@@ -8018,7 +8413,9 @@
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
-      "free_quota": null,
+      "free_quota": {
+        "notes": "Free tier is limited per project by requests/min, input tokens/min and requests/day. Google publishes the per-model numbers only in AI Studio (https://aistudio.google.com/rate-limit); the public docs state limits \"are not guaranteed and actual capacity may vary\"."
+      },
       "trial_scope": "fast",
       "model_family": "gemini-3.8-flash-tts",
       "model_variant": "tts",
@@ -8057,7 +8454,9 @@
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
-      "free_quota": null,
+      "free_quota": {
+        "notes": "Free tier is limited per project by requests/min, input tokens/min and requests/day. Google publishes the per-model numbers only in AI Studio (https://aistudio.google.com/rate-limit); the public docs state limits \"are not guaranteed and actual capacity may vary\"."
+      },
       "trial_scope": "fast",
       "model_family": "gemini-3.8-flash-lite-tts",
       "model_variant": "tts",
@@ -8096,7 +8495,9 @@
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
-      "free_quota": null,
+      "free_quota": {
+        "notes": "Free tier is limited per project by requests/min, input tokens/min and requests/day. Google publishes the per-model numbers only in AI Studio (https://aistudio.google.com/rate-limit); the public docs state limits \"are not guaranteed and actual capacity may vary\"."
+      },
       "trial_scope": "fast",
       "model_family": "gemini-3.1-flash-tts-preview",
       "model_variant": "tts",
@@ -8136,7 +8537,9 @@
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
-      "free_quota": null,
+      "free_quota": {
+        "notes": "Free tier is limited per project by requests/min, input tokens/min and requests/day. Google publishes the per-model numbers only in AI Studio (https://aistudio.google.com/rate-limit); the public docs state limits \"are not guaranteed and actual capacity may vary\"."
+      },
       "trial_scope": "fast",
       "model_family": "gemini-3-flash-preview",
       "aliases": [],
@@ -8170,13 +8573,16 @@
       "tags": [
         "reasoning",
         "text-generation",
+        "code-generation",
         "chat"
       ],
       "is_reasoning": true,
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
-      "free_quota": null,
+      "free_quota": {
+        "notes": "Free tier is limited per project by requests/min, input tokens/min and requests/day. Google publishes the per-model numbers only in AI Studio (https://aistudio.google.com/rate-limit); the public docs state limits \"are not guaranteed and actual capacity may vary\"."
+      },
       "trial_scope": "flagship",
       "model_family": "gemini-2.5-pro",
       "aliases": [],
@@ -8188,6 +8594,8 @@
         "math",
         "content-creation",
         "writing-assistance",
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "complex-reasoning"
@@ -8220,7 +8628,9 @@
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
-      "free_quota": null,
+      "free_quota": {
+        "notes": "Free tier is limited per project by requests/min, input tokens/min and requests/day. Google publishes the per-model numbers only in AI Studio (https://aistudio.google.com/rate-limit); the public docs state limits \"are not guaranteed and actual capacity may vary\"."
+      },
       "trial_scope": "fast",
       "model_family": "gemini-2.5-flash",
       "aliases": [],
@@ -8263,7 +8673,9 @@
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
-      "free_quota": null,
+      "free_quota": {
+        "notes": "Free tier is limited per project by requests/min, input tokens/min and requests/day. Google publishes the per-model numbers only in AI Studio (https://aistudio.google.com/rate-limit); the public docs state limits \"are not guaranteed and actual capacity may vary\"."
+      },
       "trial_scope": "fast",
       "model_family": "gemini-2.5-flash-lite",
       "aliases": [],
@@ -8304,7 +8716,9 @@
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
-      "free_quota": null,
+      "free_quota": {
+        "notes": "Free tier is limited per project by requests/min, input tokens/min and requests/day. Google publishes the per-model numbers only in AI Studio (https://aistudio.google.com/rate-limit); the public docs state limits \"are not guaranteed and actual capacity may vary\"."
+      },
       "trial_scope": "fast",
       "model_family": "gemini-2.5-flash-native-audio-preview-12",
       "model_variant": "audio",
@@ -8345,7 +8759,9 @@
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
-      "free_quota": null,
+      "free_quota": {
+        "notes": "Free tier is limited per project by requests/min, input tokens/min and requests/day. Google publishes the per-model numbers only in AI Studio (https://aistudio.google.com/rate-limit); the public docs state limits \"are not guaranteed and actual capacity may vary\"."
+      },
       "trial_scope": "fast",
       "model_family": "gemini-2.5-flash-preview-tts",
       "model_variant": "tts",
@@ -8385,7 +8801,9 @@
       "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
-      "free_quota": null,
+      "free_quota": {
+        "notes": "Free tier is limited per project by requests/min, input tokens/min and requests/day. Google publishes the per-model numbers only in AI Studio (https://aistudio.google.com/rate-limit); the public docs state limits \"are not guaranteed and actual capacity may vary\"."
+      },
       "trial_scope": "fast",
       "model_family": "gemini-embedding-2",
       "model_variant": "embedding",
@@ -8431,7 +8849,9 @@
       "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
-      "free_quota": null,
+      "free_quota": {
+        "notes": "Free tier is limited per project by requests/min, input tokens/min and requests/day. Google publishes the per-model numbers only in AI Studio (https://aistudio.google.com/rate-limit); the public docs state limits \"are not guaranteed and actual capacity may vary\"."
+      },
       "trial_scope": "fast",
       "model_family": "gemini-robotics-er-2-preview",
       "aliases": [],
@@ -8472,14 +8892,17 @@
       "tags": [
         "vision",
         "text-generation",
+        "tool-use",
         "chat",
         "multimodal"
       ],
       "is_reasoning": false,
       "is_multimodal": true,
-      "has_tool_use": false,
+      "has_tool_use": true,
       "free_mechanism": "rate-limited",
-      "free_quota": null,
+      "free_quota": {
+        "notes": "Free tier is limited per project by requests/min, input tokens/min and requests/day. Google publishes the per-model numbers only in AI Studio (https://aistudio.google.com/rate-limit); the public docs state limits \"are not guaranteed and actual capacity may vary\"."
+      },
       "trial_scope": "fast",
       "model_family": "gemini-robotics-er-2-streaming-preview",
       "aliases": [],
@@ -8546,16 +8969,16 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "meta-llama/llama-prompt-guard-2-86m",
+      "id": "meta-llama/llama-prompt-guard-2-22m",
       "object": "model",
-      "created": 2021365556,
+      "created": 2021358890,
       "owned_by": "groq",
       "provider": "groq",
-      "name": "Prompt Guard 2 86M",
+      "name": "Llama Prompt Guard 2 22M",
       "context_size": 512,
       "context_label": "512",
-      "price_input": 0.04,
-      "price_output": 0.04,
+      "price_input": 0.03,
+      "price_output": 0.03,
       "is_free": true,
       "capabilities": [
         "moderation"
@@ -8574,7 +8997,7 @@
         "tokens_per_day": 500000
       },
       "trial_scope": "all",
-      "model_family": "llama-prompt-guard-2-86m",
+      "model_family": "llama-prompt-guard-2-22m",
       "model_variant": "guard",
       "aliases": [],
       "tier": "small",
@@ -8637,41 +9060,49 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "canopylabs/orpheus-arabic-saudi",
+      "id": "openai/gpt-oss-safeguard-20b",
       "object": "model",
-      "created": 1964073120,
+      "created": 573618965,
       "owned_by": "groq",
       "provider": "groq",
-      "name": "Canopy Labs Orpheus Arabic Saudi",
-      "context_size": 4000,
-      "context_label": "4K",
+      "name": "Safety GPT OSS 20B",
+      "context_size": 131072,
+      "context_label": "131K",
+      "price_input": 0.075,
+      "price_output": 0.3,
       "is_free": true,
       "capabilities": [
-        "speech-synthesis",
-        "translation"
+        "chat",
+        "text-generation"
       ],
       "tags": [
-        "speech-synthesis",
-        "translation"
+        "moderation",
+        "chat",
+        "text-generation"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
       "free_quota": {
-        "rpd": 100,
-        "tpm": 1200,
-        "rpm": 10,
-        "tokens_per_day": 3600
+        "rpd": 1000,
+        "tpm": 2000,
+        "rpm": 3,
+        "tokens_per_day": 200000
       },
       "trial_scope": "all",
-      "model_family": "orpheus-arabic-saudi",
+      "model_family": "gpt-oss-safeguard-20b",
       "aliases": [],
+      "parameter_count": 20000000000,
       "tier": "medium",
       "speed": "fast",
       "use_case": [
-        "text-to-speech",
-        "voice-output"
+        "content-filtering",
+        "safety",
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
@@ -8706,137 +9137,6 @@
       "model_family": "allam-2-7b",
       "aliases": [],
       "parameter_count": 7000000000,
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "meta-llama/llama-prompt-guard-2-22m",
-      "object": "model",
-      "created": 2021358890,
-      "owned_by": "groq",
-      "provider": "groq",
-      "name": "Llama Prompt Guard 2 22M",
-      "context_size": 512,
-      "context_label": "512",
-      "price_input": 0.03,
-      "price_output": 0.03,
-      "is_free": true,
-      "capabilities": [
-        "moderation"
-      ],
-      "tags": [
-        "moderation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "rpd": 14400,
-        "tpm": 15000,
-        "rpm": 30,
-        "tokens_per_day": 500000
-      },
-      "trial_scope": "all",
-      "model_family": "llama-prompt-guard-2-22m",
-      "model_variant": "guard",
-      "aliases": [],
-      "tier": "small",
-      "speed": "fast",
-      "use_case": [
-        "content-filtering",
-        "safety"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "whisper-large-v3-turbo",
-      "object": "model",
-      "created": 831031114,
-      "owned_by": "groq",
-      "provider": "groq",
-      "name": "Whisper Large V3 Turbo",
-      "context_size": 448,
-      "context_label": "448",
-      "is_free": true,
-      "capabilities": [
-        "speech-recognition"
-      ],
-      "tags": [
-        "speech-recognition"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "rpd": 2000,
-        "rpm": 20
-      },
-      "trial_scope": "all",
-      "model_family": "whisper-large-v3",
-      "model_variant": "turbo",
-      "aliases": [
-        "cloudflare/@cf/openai/whisper-large-v3-turbo",
-        "whisper-large-v3-turbo",
-        "whisper-large-v3",
-        "groq/whisper-large-v3",
-        "ovh/whisper-large-v3-turbo",
-        "ovh/whisper-large-v3",
-        "sambanova/Whisper-Large-v3"
-      ],
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "transcription",
-        "voice-input"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "openai/gpt-oss-safeguard-20b",
-      "object": "model",
-      "created": 573618965,
-      "owned_by": "groq",
-      "provider": "groq",
-      "name": "Safety GPT OSS 20B",
-      "context_size": 131072,
-      "context_label": "131K",
-      "price_input": 0.075,
-      "price_output": 0.3,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "chat",
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "rpd": 1000,
-        "tpm": 2000,
-        "rpm": 3,
-        "tokens_per_day": 200000
-      },
-      "trial_scope": "all",
-      "model_family": "gpt-oss-safeguard-20b",
-      "aliases": [],
-      "parameter_count": 20000000000,
       "tier": "medium",
       "speed": "fast",
       "use_case": [
@@ -8893,6 +9193,132 @@
         "q&a",
         "content-creation",
         "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "canopylabs/orpheus-arabic-saudi",
+      "object": "model",
+      "created": 1964073120,
+      "owned_by": "groq",
+      "provider": "groq",
+      "name": "Canopy Labs Orpheus Arabic Saudi",
+      "context_size": 4000,
+      "context_label": "4K",
+      "is_free": true,
+      "capabilities": [
+        "speech-synthesis",
+        "translation"
+      ],
+      "tags": [
+        "speech-synthesis",
+        "translation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpd": 100,
+        "tpm": 1200,
+        "rpm": 10,
+        "tokens_per_day": 3600
+      },
+      "trial_scope": "all",
+      "model_family": "orpheus-arabic-saudi",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "text-to-speech",
+        "voice-output"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "whisper-large-v3-turbo",
+      "object": "model",
+      "created": 831031114,
+      "owned_by": "groq",
+      "provider": "groq",
+      "name": "Whisper Large V3 Turbo",
+      "context_size": 448,
+      "context_label": "448",
+      "is_free": true,
+      "capabilities": [
+        "speech-recognition"
+      ],
+      "tags": [
+        "speech-recognition"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpd": 2000,
+        "rpm": 20
+      },
+      "trial_scope": "all",
+      "model_family": "whisper-large-v3",
+      "model_variant": "turbo",
+      "aliases": [
+        "cloudflare/@cf/openai/whisper-large-v3-turbo",
+        "whisper-large-v3-turbo",
+        "whisper-large-v3",
+        "groq/whisper-large-v3",
+        "ovh/whisper-large-v3-turbo",
+        "ovh/whisper-large-v3",
+        "sambanova/Whisper-Large-v3"
+      ],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "transcription",
+        "voice-input"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "meta-llama/llama-prompt-guard-2-86m",
+      "object": "model",
+      "created": 2021365556,
+      "owned_by": "groq",
+      "provider": "groq",
+      "name": "Prompt Guard 2 86M",
+      "context_size": 512,
+      "context_label": "512",
+      "price_input": 0.04,
+      "price_output": 0.04,
+      "is_free": true,
+      "capabilities": [
+        "moderation"
+      ],
+      "tags": [
+        "moderation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpd": 14400,
+        "tpm": 15000,
+        "rpm": 30,
+        "tokens_per_day": 500000
+      },
+      "trial_scope": "all",
+      "model_family": "llama-prompt-guard-2-86m",
+      "model_variant": "guard",
+      "aliases": [],
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "content-filtering",
+        "safety"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
@@ -9003,8 +9429,9 @@
         "reasoning",
         "vision",
         "text-generation",
-        "tool-use",
+        "code-generation",
         "chat",
+        "tool-use",
         "multimodal"
       ],
       "is_reasoning": true,
@@ -9027,11 +9454,13 @@
         "visual-q&a",
         "content-creation",
         "writing-assistance",
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "complex-reasoning"
       ],
-      "performance_level": "mid",
+      "performance_level": "high",
       "estimated_latency": "< 1s"
     },
     {
@@ -9055,6 +9484,7 @@
       ],
       "tags": [
         "text-generation",
+        "code-generation",
         "chat",
         "tool-use",
         "reasoning"
@@ -9074,6 +9504,8 @@
       "use_case": [
         "content-creation",
         "writing-assistance",
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "problem-solving",
@@ -9267,6 +9699,7 @@
       ],
       "tags": [
         "text-generation",
+        "code-generation",
         "chat",
         "tool-use",
         "reasoning"
@@ -9288,6 +9721,8 @@
       "use_case": [
         "content-creation",
         "writing-assistance",
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "problem-solving",
@@ -9320,8 +9755,9 @@
       "tags": [
         "reasoning",
         "text-generation",
-        "chat",
-        "tool-use"
+        "tool-use",
+        "code-generation",
+        "chat"
       ],
       "is_reasoning": true,
       "is_multimodal": false,
@@ -9341,6 +9777,8 @@
         "math",
         "content-creation",
         "writing-assistance",
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "complex-reasoning"
@@ -9370,6 +9808,7 @@
       "tags": [
         "reasoning",
         "text-generation",
+        "code-generation",
         "chat",
         "tool-use"
       ],
@@ -9394,6 +9833,8 @@
         "math",
         "content-creation",
         "writing-assistance",
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "complex-reasoning"
@@ -9475,12 +9916,12 @@
         "reasoning"
       ],
       "tags": [
+        "reasoning",
         "vision",
         "text-generation",
         "chat",
         "speech-recognition",
         "tool-use",
-        "reasoning",
         "multimodal"
       ],
       "is_reasoning": true,
@@ -9498,6 +9939,9 @@
       "tier": "large",
       "speed": "fast",
       "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
         "image-understanding",
         "visual-q&a",
         "content-creation",
@@ -9506,9 +9950,6 @@
         "q&a",
         "transcription",
         "voice-input",
-        "problem-solving",
-        "logical-analysis",
-        "math",
         "complex-reasoning"
       ],
       "performance_level": "mid",
@@ -9535,6 +9976,7 @@
       ],
       "tags": [
         "text-generation",
+        "code-generation",
         "chat",
         "tool-use",
         "reasoning"
@@ -9557,6 +9999,8 @@
       "use_case": [
         "content-creation",
         "writing-assistance",
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "problem-solving",
@@ -9589,10 +10033,10 @@
       ],
       "tags": [
         "text-generation",
+        "code-generation",
         "chat",
         "tool-use",
-        "reasoning",
-        "code-generation"
+        "reasoning"
       ],
       "is_reasoning": true,
       "is_multimodal": false,
@@ -9612,13 +10056,13 @@
       "use_case": [
         "content-creation",
         "writing-assistance",
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "problem-solving",
         "logical-analysis",
         "math",
-        "software-development",
-        "code-completion",
         "complex-reasoning"
       ],
       "performance_level": "mid",
@@ -9646,6 +10090,7 @@
       "tags": [
         "vision",
         "text-generation",
+        "moderation",
         "chat",
         "reasoning",
         "multimodal"
@@ -9671,6 +10116,8 @@
         "visual-q&a",
         "content-creation",
         "writing-assistance",
+        "content-filtering",
+        "safety",
         "conversation",
         "q&a",
         "problem-solving",
@@ -10213,7 +10660,7 @@
       "owned_by": "nvidia",
       "provider": "nvidia",
       "name": "deepseek-v4.1-flash",
-      "description": "Model: deepseek-ai/deepseek-v4.1-flash",
+      "description": "NVIDIA: 552B MoE, 8B active params with native multimodal support and lower API cost using smaller KV cache",
       "context_label": "unknown",
       "is_free": true,
       "capabilities": [
@@ -10221,11 +10668,13 @@
         "text-generation"
       ],
       "tags": [
+        "vision",
+        "chat",
         "text-generation",
-        "chat"
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
       "free_quota": {
@@ -10238,15 +10687,17 @@
       "aliases": [
         "deepseek-v4.1-flash"
       ],
-      "tier": "medium",
+      "tier": "large",
       "speed": "fast",
       "use_case": [
-        "content-creation",
-        "writing-assistance",
+        "image-understanding",
+        "visual-q&a",
         "conversation",
-        "q&a"
+        "q&a",
+        "content-creation",
+        "writing-assistance"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -10256,7 +10707,7 @@
       "owned_by": "nvidia",
       "provider": "nvidia",
       "name": "diffusiongemma-26b-a4b-it",
-      "description": "Model: google/diffusiongemma-26b-a4b-it",
+      "description": "NVIDIA: Diffusion-based 26B parameter LLM enabling parallel token generation for real-time text apps",
       "context_label": "unknown",
       "is_free": true,
       "capabilities": [
@@ -10297,7 +10748,7 @@
       "owned_by": "nvidia",
       "provider": "nvidia",
       "name": "gemma-4-31b-it",
-      "description": "Model: google/gemma-4-31b-it",
+      "description": "NVIDIA: Dense 31B model delivering frontier reasoning for coding, agentic workflows, and fine-tuning.",
       "context_label": "unknown",
       "is_free": true,
       "capabilities": [
@@ -10305,10 +10756,12 @@
         "text-generation"
       ],
       "tags": [
+        "reasoning",
         "text-generation",
+        "code-generation",
         "chat"
       ],
-      "is_reasoning": false,
+      "is_reasoning": true,
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
@@ -10324,15 +10777,21 @@
         "google/gemma-4-31b-it:free"
       ],
       "parameter_count": 31000000000,
-      "tier": "medium",
+      "tier": "large",
       "speed": "fast",
       "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
         "content-creation",
         "writing-assistance",
+        "software-development",
+        "code-completion",
         "conversation",
-        "q&a"
+        "q&a",
+        "complex-reasoning"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -10342,18 +10801,19 @@
       "owned_by": "nvidia",
       "provider": "nvidia",
       "name": "llama-3.2-11b-vision-instruct",
-      "description": "Model: meta/llama-3.2-11b-vision-instruct",
+      "description": "NVIDIA: Cutting-edge vision-language model exceling in high-quality reasoning from images.",
       "context_label": "unknown",
       "is_free": true,
       "capabilities": [
         "vision"
       ],
       "tags": [
+        "reasoning",
         "vision",
         "text-generation",
         "multimodal"
       ],
-      "is_reasoning": false,
+      "is_reasoning": true,
       "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
@@ -10373,10 +10833,14 @@
       "tier": "large",
       "speed": "fast",
       "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
         "image-understanding",
         "visual-q&a",
         "content-creation",
-        "writing-assistance"
+        "writing-assistance",
+        "complex-reasoning"
       ],
       "performance_level": "mid",
       "estimated_latency": "< 1s"
@@ -10388,18 +10852,19 @@
       "owned_by": "nvidia",
       "provider": "nvidia",
       "name": "llama-3.2-90b-vision-instruct",
-      "description": "Model: meta/llama-3.2-90b-vision-instruct",
+      "description": "NVIDIA: Cutting-edge vision-Language model exceling in high-quality reasoning from images.",
       "context_label": "unknown",
       "is_free": true,
       "capabilities": [
         "vision"
       ],
       "tags": [
+        "reasoning",
         "vision",
         "text-generation",
         "multimodal"
       ],
-      "is_reasoning": false,
+      "is_reasoning": true,
       "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
@@ -10418,10 +10883,14 @@
       "tier": "large",
       "speed": "fast",
       "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
         "image-understanding",
         "visual-q&a",
         "content-creation",
-        "writing-assistance"
+        "writing-assistance",
+        "complex-reasoning"
       ],
       "performance_level": "mid",
       "estimated_latency": "< 1s"
@@ -10433,7 +10902,7 @@
       "owned_by": "nvidia",
       "provider": "nvidia",
       "name": "llama-guard-4-12b",
-      "description": "Model: meta/llama-guard-4-12b",
+      "description": "NVIDIA: Multi-modal model to classify safety for input prompts as well output responses.",
       "context_label": "unknown",
       "is_free": true,
       "capabilities": [
@@ -10475,7 +10944,7 @@
       "owned_by": "nvidia",
       "provider": "nvidia",
       "name": "muse-glimmer-30b",
-      "description": "Model: meta/muse-glimmer-30b",
+      "description": "NVIDIA: Muse Glimmer 30B is a multimodal reasoning model accepting text and images, with native tool-calling and separate reasoning output.",
       "context_label": "unknown",
       "is_free": true,
       "capabilities": [
@@ -10483,11 +10952,14 @@
         "text-generation"
       ],
       "tags": [
+        "reasoning",
+        "vision",
         "text-generation",
-        "chat"
+        "chat",
+        "multimodal"
       ],
-      "is_reasoning": false,
-      "is_multimodal": false,
+      "is_reasoning": true,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
       "free_quota": {
@@ -10499,15 +10971,21 @@
       "model_family": "muse-glimmer-30b",
       "aliases": [],
       "parameter_count": 30000000000,
-      "tier": "medium",
+      "tier": "large",
       "speed": "fast",
       "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "image-understanding",
+        "visual-q&a",
         "content-creation",
         "writing-assistance",
         "conversation",
-        "q&a"
+        "q&a",
+        "complex-reasoning"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -10517,7 +10995,7 @@
       "owned_by": "nvidia",
       "provider": "nvidia",
       "name": "kimi-k3",
-      "description": "Model: moonshotai/kimi-k3",
+      "description": "NVIDIA: ~2.8T hybrid KDA+MLA multimodal MoE for long-horizon coding, agentic tool use, and image understanding.",
       "context_label": "unknown",
       "is_free": true,
       "capabilities": [
@@ -10525,12 +11003,16 @@
         "text-generation"
       ],
       "tags": [
+        "vision",
+        "tool-use",
+        "code-generation",
+        "chat",
         "text-generation",
-        "chat"
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
+      "is_multimodal": true,
+      "has_tool_use": true,
       "free_mechanism": "rate-limited",
       "free_quota": {
         "notes": "Public NIM endpoints: Up to 40 rpm and 10,000 requests per day; limits may vary by model and by traffic",
@@ -10540,15 +11022,19 @@
       "trial_scope": "specific",
       "model_family": "moonshotai-kimi-k3",
       "aliases": [],
-      "tier": "medium",
+      "tier": "large",
       "speed": "fast",
       "use_case": [
-        "content-creation",
-        "writing-assistance",
+        "image-understanding",
+        "visual-q&a",
+        "software-development",
+        "code-completion",
         "conversation",
-        "q&a"
+        "q&a",
+        "content-creation",
+        "writing-assistance"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -10558,7 +11044,7 @@
       "owned_by": "nvidia",
       "provider": "nvidia",
       "name": "ising-calibration-1.5-31b",
-      "description": "Model: nvidia/ising-calibration-1.5-31b",
+      "description": "NVIDIA: NVIDIA-Ising-Calibration-1.5 is a dense multimodal vision-language model built on Gemma 4 31B. It analyzes quantum computing calibration experiment plots and generates structured technical text.",
       "context_label": "unknown",
       "is_free": true,
       "capabilities": [
@@ -10566,11 +11052,13 @@
         "text-generation"
       ],
       "tags": [
+        "vision",
         "text-generation",
-        "chat"
+        "chat",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
       "free_quota": {
@@ -10582,15 +11070,17 @@
       "model_family": "ising-calibration-1.5-31b",
       "aliases": [],
       "parameter_count": 31000000000,
-      "tier": "medium",
+      "tier": "large",
       "speed": "fast",
       "use_case": [
+        "image-understanding",
+        "visual-q&a",
         "content-creation",
         "writing-assistance",
         "conversation",
         "q&a"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -10600,7 +11090,7 @@
       "owned_by": "nvidia",
       "provider": "nvidia",
       "name": "nemotron-3-embed-1b",
-      "description": "Model: nvidia/nemotron-3-embed-1b",
+      "description": "NVIDIA: 1B embedding model for semantic search, retrieval, and RAG applications.",
       "context_label": "unknown",
       "is_free": true,
       "capabilities": [
@@ -10642,7 +11132,7 @@
       "owned_by": "nvidia",
       "provider": "nvidia",
       "name": "nemotron-3-nano-omni-30b-a3b-reasoning",
-      "description": "Model: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "description": "NVIDIA: Nemotron 3 Nano Omni is an omni-modal reasoning model that understands images, video, speech, text.",
       "context_label": "unknown",
       "is_free": true,
       "capabilities": [
@@ -10693,7 +11183,7 @@
       "owned_by": "nvidia",
       "provider": "nvidia",
       "name": "nemotron-3-super-120b-a12b",
-      "description": "Model: nvidia/nemotron-3-super-120b-a12b",
+      "description": "NVIDIA: Open, efficient hybrid Mamba-Transformer MoE with 1M context, excelling in agentic reasoning, coding, planning, tool calling, and more",
       "context_label": "unknown",
       "is_free": true,
       "capabilities": [
@@ -10701,10 +11191,12 @@
         "text-generation"
       ],
       "tags": [
-        "text-generation",
-        "chat"
+        "reasoning",
+        "code-generation",
+        "chat",
+        "text-generation"
       ],
-      "is_reasoning": false,
+      "is_reasoning": true,
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
@@ -10720,15 +11212,21 @@
         "nvidia/nemotron-3-super-120b-a12b:free"
       ],
       "parameter_count": 120000000000,
-      "tier": "medium",
+      "tier": "large",
       "speed": "fast",
       "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "software-development",
+        "code-completion",
+        "conversation",
+        "q&a",
         "content-creation",
         "writing-assistance",
-        "conversation",
-        "q&a"
+        "complex-reasoning"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -10738,7 +11236,7 @@
       "owned_by": "nvidia",
       "provider": "nvidia",
       "name": "nemotron-3-ultra-550b-a55b",
-      "description": "Model: nvidia/nemotron-3-ultra-550b-a55b",
+      "description": "NVIDIA: Open, efficient hybrid Mamba-Transformer MoE with 1M context, excelling in agentic reasoning, coding, planning, tool calling, and more",
       "context_label": "unknown",
       "is_free": true,
       "capabilities": [
@@ -10746,10 +11244,12 @@
         "text-generation"
       ],
       "tags": [
-        "text-generation",
-        "chat"
+        "reasoning",
+        "code-generation",
+        "chat",
+        "text-generation"
       ],
-      "is_reasoning": false,
+      "is_reasoning": true,
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
@@ -10765,15 +11265,21 @@
         "nvidia/nemotron-3-ultra-550b-a55b:free"
       ],
       "parameter_count": 550000000000,
-      "tier": "medium",
+      "tier": "large",
       "speed": "fast",
       "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "software-development",
+        "code-completion",
+        "conversation",
+        "q&a",
         "content-creation",
         "writing-assistance",
-        "conversation",
-        "q&a"
+        "complex-reasoning"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -10783,18 +11289,20 @@
       "owned_by": "nvidia",
       "provider": "nvidia",
       "name": "nemotron-3.5-content-safety",
-      "description": "Model: nvidia/nemotron-3.5-content-safety",
+      "description": "NVIDIA: Multilingual, multimodal model for detecting unsafe and toxic content.",
       "context_label": "unknown",
       "is_free": true,
       "capabilities": [
         "moderation"
       ],
       "tags": [
+        "vision",
         "text-generation",
-        "moderation"
+        "moderation",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
       "free_quota": {
@@ -10809,15 +11317,17 @@
         "kilo/nvidia/nemotron-3.5-content-safety:free",
         "nvidia/nemotron-3.5-content-safety:free"
       ],
-      "tier": "medium",
+      "tier": "large",
       "speed": "fast",
       "use_case": [
+        "image-understanding",
+        "visual-q&a",
         "content-creation",
         "writing-assistance",
         "content-filtering",
         "safety"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -10827,7 +11337,7 @@
       "owned_by": "nvidia",
       "provider": "nvidia",
       "name": "nemotron-3.5-lightning-30b-a3b",
-      "description": "Model: nvidia/nemotron-3.5-lightning-30b-a3b",
+      "description": "NVIDIA: Fastest 30B A3B MoE model with leading domain accuracy for specialized agentic tasks",
       "context_label": "unknown",
       "is_free": true,
       "capabilities": [
@@ -10869,7 +11379,7 @@
       "owned_by": "nvidia",
       "provider": "nvidia",
       "name": "riva-translate-4b-instruct-v2",
-      "description": "Model: nvidia/riva-translate-4b-instruct-v2",
+      "description": "NVIDIA: Translation model in 37 languages with few-shots example prompts capability.",
       "context_label": "unknown",
       "is_free": true,
       "capabilities": [
@@ -10877,6 +11387,7 @@
       ],
       "tags": [
         "text-generation",
+        "translation",
         "speech-synthesis"
       ],
       "is_reasoning": false,
@@ -10911,7 +11422,7 @@
       "owned_by": "nvidia",
       "provider": "nvidia",
       "name": "gpt-oss-20b",
-      "description": "Model: openai/gpt-oss-20b",
+      "description": "NVIDIA: Smaller Mixture of Experts (MoE) text-only LLM for efficient AI reasoning and math",
       "context_label": "unknown",
       "is_free": true,
       "capabilities": [
@@ -10919,10 +11430,11 @@
         "text-generation"
       ],
       "tags": [
+        "reasoning",
         "text-generation",
         "chat"
       ],
-      "is_reasoning": false,
+      "is_reasoning": true,
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
@@ -10942,12 +11454,16 @@
       "tier": "medium",
       "speed": "fast",
       "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
         "content-creation",
         "writing-assistance",
         "conversation",
-        "q&a"
+        "q&a",
+        "complex-reasoning"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -10957,7 +11473,7 @@
       "owned_by": "nvidia",
       "provider": "nvidia",
       "name": "laguna-xs-2.1",
-      "description": "Model: poolside/laguna-xs-2.1",
+      "description": "NVIDIA: Efficient 33B MoE for local, long-horizon agentic coding and terminal tasks",
       "context_label": "unknown",
       "is_free": true,
       "capabilities": [
@@ -10965,8 +11481,9 @@
         "text-generation"
       ],
       "tags": [
-        "text-generation",
-        "chat"
+        "code-generation",
+        "chat",
+        "text-generation"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
@@ -10986,10 +11503,12 @@
       "tier": "medium",
       "speed": "fast",
       "use_case": [
-        "content-creation",
-        "writing-assistance",
+        "software-development",
+        "code-completion",
         "conversation",
-        "q&a"
+        "q&a",
+        "content-creation",
+        "writing-assistance"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
@@ -11070,8 +11589,9 @@
       "tags": [
         "reasoning",
         "text-generation",
-        "chat",
-        "tool-use"
+        "tool-use",
+        "code-generation",
+        "chat"
       ],
       "is_reasoning": true,
       "is_multimodal": false,
@@ -11093,6 +11613,8 @@
         "math",
         "content-creation",
         "writing-assistance",
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "complex-reasoning"
@@ -11181,6 +11703,7 @@
       "tags": [
         "reasoning",
         "text-generation",
+        "code-generation",
         "chat",
         "tool-use"
       ],
@@ -11207,6 +11730,8 @@
         "math",
         "content-creation",
         "writing-assistance",
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "complex-reasoning"
@@ -11290,11 +11815,11 @@
         "tool-use"
       ],
       "tags": [
+        "reasoning",
         "vision",
         "text-generation",
         "chat",
         "speech-recognition",
-        "reasoning",
         "tool-use",
         "multimodal"
       ],
@@ -11315,6 +11840,9 @@
       "tier": "large",
       "speed": "fast",
       "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
         "image-understanding",
         "visual-q&a",
         "content-creation",
@@ -11323,9 +11851,6 @@
         "q&a",
         "transcription",
         "voice-input",
-        "problem-solving",
-        "logical-analysis",
-        "math",
         "complex-reasoning"
       ],
       "performance_level": "mid",
@@ -11352,6 +11877,7 @@
       ],
       "tags": [
         "text-generation",
+        "code-generation",
         "chat",
         "reasoning",
         "tool-use"
@@ -11375,6 +11901,8 @@
       "use_case": [
         "content-creation",
         "writing-assistance",
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "problem-solving",
@@ -11411,6 +11939,7 @@
         "vision",
         "text-generation",
         "tool-use",
+        "code-generation",
         "chat",
         "speech-recognition",
         "multimodal"
@@ -11437,13 +11966,15 @@
         "visual-q&a",
         "content-creation",
         "writing-assistance",
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "transcription",
         "voice-input",
         "complex-reasoning"
       ],
-      "performance_level": "mid",
+      "performance_level": "high",
       "estimated_latency": "< 1s"
     },
     {
@@ -11467,6 +11998,7 @@
       ],
       "tags": [
         "text-generation",
+        "code-generation",
         "chat",
         "reasoning",
         "tool-use"
@@ -11491,6 +12023,8 @@
       "use_case": [
         "content-creation",
         "writing-assistance",
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "problem-solving",
@@ -11523,10 +12057,10 @@
       ],
       "tags": [
         "text-generation",
+        "code-generation",
         "chat",
         "reasoning",
-        "tool-use",
-        "code-generation"
+        "tool-use"
       ],
       "is_reasoning": true,
       "is_multimodal": false,
@@ -11548,13 +12082,13 @@
       "use_case": [
         "content-creation",
         "writing-assistance",
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "problem-solving",
         "logical-analysis",
         "math",
-        "software-development",
-        "code-completion",
         "complex-reasoning"
       ],
       "performance_level": "mid",
@@ -11582,6 +12116,7 @@
       "tags": [
         "vision",
         "text-generation",
+        "moderation",
         "chat",
         "reasoning",
         "multimodal"
@@ -11609,6 +12144,8 @@
         "visual-q&a",
         "content-creation",
         "writing-assistance",
+        "content-filtering",
+        "safety",
         "conversation",
         "q&a",
         "problem-solving",
@@ -12083,6 +12620,7 @@
       "owned_by": "ovh",
       "provider": "ovh",
       "name": "Qwen3-Embedding-8B",
+      "description": "State-of-the-art text embedding model with 100+ language support and customizable dimensional outputs. Perfect for retrieval, classification, and multilingual applications. The flexible output dimensionality lets you optimize for your specific use case, whether you need compact vectors for fast retrieval or high dimensional representations for complex semantic tasks.",
       "context_size": 32768,
       "context_label": "33K",
       "price_input": 0.12,
@@ -12125,6 +12663,7 @@
       "owned_by": "ovh",
       "provider": "ovh",
       "name": "bge-multilingual-gemma2",
+      "description": "BGE-Multilingual-Gemma2 is a LLM-based multilingual embedding model. It is trained on a diverse range of languages and tasks. BGE-Multilingual-Gemma2 primarily demonstrates the following advancements:\nDiverse training data: The model's training data spans a broad range of languages, including English, Chinese, Japanese, Korean, French, and more.Additionally, the data covers a variety of task types, such as retrieval, classification, and clustering.\nOutstanding performance: The model exhibits state-of-the-art (SOTA) results on multilingual benchmarks like MIRACL, MTEB-pl, and MTEB-fr. It also achieves excellent performance on other major evaluations, including MTEB, C-MTEB and AIR-Bench.",
       "context_size": 8192,
       "context_label": "8K",
       "price_input": 0.01,
@@ -12162,6 +12701,7 @@
       "owned_by": "ovh",
       "provider": "ovh",
       "name": "bge-m3",
+      "description": "The BGE-M3 model, developed by the BAAI and released in early 2024, is a powerful multilingual and multigranular embedding model. It supports texts of varying lengths across over 100 languages and produces dense embeddings optimized for semantic search and retrieval applications.",
       "context_size": 8192,
       "context_label": "8K",
       "price_input": 0.01,
@@ -12201,6 +12741,7 @@
       "owned_by": "ovh",
       "provider": "ovh",
       "name": "Qwen3Guard-Gen-0.6B",
+      "description": "Qwen3Guard is a series of safety moderation models built upon Qwen3 and trained on a dataset of 1.19 million prompts and responses labeled for safety. The series includes models of three sizes (0.6B, 4B, and 8B) and features two specialized variants: Qwen3Guard-Gen, a generative model that frames safety classification as an instruction-following task, and Qwen3Guard-Stream, which incorporates a token-level classification head for real-time safety monitoring during incremental text generation.",
       "context_size": 32768,
       "context_label": "33K",
       "is_free": true,
@@ -12240,6 +12781,7 @@
       "owned_by": "ovh",
       "provider": "ovh",
       "name": "Mistral-Small-3.2-24B-Instruct-2506",
+      "description": "Building upon Mistral Small 3 (2501), Mistral Small 3.2 (2506) adds state-of-the-art vision understanding and enhances long context capabilities up to 128k tokens without compromising text performance.\nWith 24 billion parameters, this model achieves top-tier capabilities in both text and vision tasks.\nThis model is a minor update of Mistral-Small-3.1-24B-Instruct-2503, which is an instruction-finetuned version of: Mistral-Small-3.1-24B-Base-2503.",
       "context_size": 131072,
       "context_label": "131K",
       "price_input": 0.1,
@@ -12247,15 +12789,20 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "vision",
+        "tool-use"
       ],
       "tags": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "vision",
+        "tool-use",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
+      "is_multimodal": true,
+      "has_tool_use": true,
       "free_mechanism": "rate-limited",
       "free_quota": {
         "rpm": 2,
@@ -12266,15 +12813,17 @@
       "model_variant": "instruct",
       "aliases": [],
       "parameter_count": 24000000000,
-      "tier": "small",
+      "tier": "large",
       "speed": "fast",
       "use_case": [
         "conversation",
         "q&a",
         "content-creation",
-        "writing-assistance"
+        "writing-assistance",
+        "image-understanding",
+        "visual-q&a"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -12284,6 +12833,7 @@
       "owned_by": "ovh",
       "provider": "ovh",
       "name": "Mistral-7B-Instruct-v0.3",
+      "description": "The Mistral-7B-Instruct-v0.3 model, developed by Mistral AI, is a fine-tuned version of the Mistral 7B base model, optimized for instruction-following tasks. Released in 2023, it is intended for demonstration purposes and does not include built-in guardrails or moderation features.",
       "context_size": 65536,
       "context_label": "66K",
       "price_input": 0.11,
@@ -12291,15 +12841,17 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "tool-use"
       ],
       "tags": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "tool-use"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
-      "has_tool_use": false,
+      "has_tool_use": true,
       "free_mechanism": "rate-limited",
       "free_quota": {
         "rpm": 2,
@@ -12330,6 +12882,7 @@
       "owned_by": "ovh",
       "provider": "ovh",
       "name": "gpt-oss-120b",
+      "description": "gpt-oss-120b is a cutting-edge model designed for high-level reasoning, instruction-following, and advanced agent capabilities. It excels in versatile use cases, offering powerful performance for both general-purpose and specialized applications.",
       "context_size": 131072,
       "context_label": "131K",
       "price_input": 0.09,
@@ -12337,15 +12890,19 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "reasoning",
+        "tool-use"
       ],
       "tags": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "reasoning",
+        "tool-use"
       ],
-      "is_reasoning": false,
+      "is_reasoning": true,
       "is_multimodal": false,
-      "has_tool_use": false,
+      "has_tool_use": true,
       "free_mechanism": "rate-limited",
       "free_quota": {
         "rpm": 2,
@@ -12360,15 +12917,19 @@
         "sambanova/gpt-oss-120b"
       ],
       "parameter_count": 120000000000,
-      "tier": "small",
+      "tier": "large",
       "speed": "fast",
       "use_case": [
         "conversation",
         "q&a",
         "content-creation",
-        "writing-assistance"
+        "writing-assistance",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -12378,6 +12939,7 @@
       "owned_by": "ovh",
       "provider": "ovh",
       "name": "Qwen3.5-397B-A17B",
+      "description": "Qwen3.5-397B-A17B is a highly efficient, reasoning focused MoE (Mixture of Experts) model delivering state-of-the-art performance in language, vision, and multimodal tasks, with strong capabilities in code, reasoning, and real-world adaptability.",
       "context_size": 262144,
       "context_label": "262K",
       "price_input": 0.71,
@@ -12385,15 +12947,22 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "vision",
+        "reasoning",
+        "tool-use"
       ],
       "tags": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "vision",
+        "reasoning",
+        "tool-use",
+        "multimodal"
       ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": true,
       "free_mechanism": "rate-limited",
       "free_quota": {
         "rpm": 2,
@@ -12405,15 +12974,21 @@
         "xingchen/xopqwen35397b"
       ],
       "parameter_count": 397000000000,
-      "tier": "medium",
+      "tier": "large",
       "speed": "fast",
       "use_case": [
         "conversation",
         "q&a",
         "content-creation",
-        "writing-assistance"
+        "writing-assistance",
+        "image-understanding",
+        "visual-q&a",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -12423,6 +12998,7 @@
       "owned_by": "ovh",
       "provider": "ovh",
       "name": "Qwen3.5-9B",
+      "description": "Qwen3.5 9B is a highly efficient, reasoning focused model delivering state of the art performance in language, vision, and multimodal tasks, with strong capabilities in code, reasoning, and real-world adaptability.",
       "context_size": 262144,
       "context_label": "262K",
       "price_input": 0.12,
@@ -12430,15 +13006,22 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "vision",
+        "reasoning",
+        "tool-use"
       ],
       "tags": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "vision",
+        "reasoning",
+        "tool-use",
+        "multimodal"
       ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": true,
       "free_mechanism": "rate-limited",
       "free_quota": {
         "rpm": 2,
@@ -12454,9 +13037,15 @@
         "conversation",
         "q&a",
         "content-creation",
-        "writing-assistance"
+        "writing-assistance",
+        "image-understanding",
+        "visual-q&a",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -12466,6 +13055,7 @@
       "owned_by": "ovh",
       "provider": "ovh",
       "name": "gpt-oss-20b",
+      "description": "gpt-oss-20b delivers strong performance with fast inference and efficient reasoning. Ideal for a wide range of tasks, it offers flexible deployment for developers seeking powerful, customizable AI solutions.",
       "context_size": 131072,
       "context_label": "131K",
       "price_input": 0.05,
@@ -12473,15 +13063,19 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "reasoning",
+        "tool-use"
       ],
       "tags": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "reasoning",
+        "tool-use"
       ],
-      "is_reasoning": false,
+      "is_reasoning": true,
       "is_multimodal": false,
-      "has_tool_use": false,
+      "has_tool_use": true,
       "free_mechanism": "rate-limited",
       "free_quota": {
         "rpm": 2,
@@ -12501,9 +13095,13 @@
         "conversation",
         "q&a",
         "content-creation",
-        "writing-assistance"
+        "writing-assistance",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -12513,6 +13111,7 @@
       "owned_by": "ovh",
       "provider": "ovh",
       "name": "Meta-Llama-3_3-70B-Instruct",
+      "description": "Llama 3.3 is an instruction-tuned generative language model optimized for multilingual dialogue use cases. It was released by Meta AI on December 6, 2024, and utilizes an advanced transformer architecture and is designed to align with human preferences for helpfulness and safety through supervised fine-tuning (SFT) and reinforcement learning with human feedback (RLHF). The knowledge cutoff for this 70B model is December 31, 2023.",
       "context_size": 131072,
       "context_label": "131K",
       "price_input": 0.74,
@@ -12520,15 +13119,17 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "tool-use"
       ],
       "tags": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "tool-use"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
-      "has_tool_use": false,
+      "has_tool_use": true,
       "free_mechanism": "rate-limited",
       "free_quota": {
         "rpm": 2,
@@ -12557,6 +13158,7 @@
       "owned_by": "ovh",
       "provider": "ovh",
       "name": "Mistral-Nemo-Instruct-2407",
+      "description": "The Mistral-Nemo-Instruct-2407 model, developed collaboratively by Mistral AI and NVIDIA, is an instruction-tuned LLM released in 2024. Designed for multilingual applications, it excels in tasks such as conversational dialogue, code generation, and instructional comprehension across various languages.",
       "context_size": 65536,
       "context_label": "66K",
       "price_input": 0.14,
@@ -12564,15 +13166,17 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "tool-use"
       ],
       "tags": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "tool-use"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
-      "has_tool_use": false,
+      "has_tool_use": true,
       "free_mechanism": "rate-limited",
       "free_quota": {
         "rpm": 2,
@@ -12602,6 +13206,7 @@
       "owned_by": "ovh",
       "provider": "ovh",
       "name": "Qwen3.6-27B",
+      "description": "Qwen3.6-27B is a 27-billion-parameter multimodal causal language model developed by Alibaba's Qwen team, released as an open-weight variant following the February release of the Qwen3.5 series. It is built as an Image-Text-to-Text model.",
       "context_size": 262144,
       "context_label": "262K",
       "price_input": 0.47,
@@ -12609,15 +13214,22 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "vision",
+        "reasoning",
+        "tool-use"
       ],
       "tags": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "vision",
+        "reasoning",
+        "tool-use",
+        "multimodal"
       ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": true,
       "free_mechanism": "rate-limited",
       "free_quota": {
         "rpm": 2,
@@ -12629,15 +13241,21 @@
         "Qwen3.6-27B"
       ],
       "parameter_count": 27000000000,
-      "tier": "small",
+      "tier": "large",
       "speed": "fast",
       "use_case": [
         "conversation",
         "q&a",
         "content-creation",
-        "writing-assistance"
+        "writing-assistance",
+        "image-understanding",
+        "visual-q&a",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -12647,6 +13265,7 @@
       "owned_by": "ovh",
       "provider": "ovh",
       "name": "Qwen2.5-VL-72B-Instruct",
+      "description": "Qwen2.5-VL is a powerful vision-language model, designed for advanced image understanding. It can generate detailed image captions, analyze documents, OCR, detect objects, and answer questions based on visuals, making it useful for AI assistants, RAG and Agents.",
       "context_size": 32768,
       "context_label": "33K",
       "price_input": 1.01,
@@ -12696,6 +13315,7 @@
       "owned_by": "ovh",
       "provider": "ovh",
       "name": "Qwen3.8-27B",
+      "description": "Qwen3.8-27B is a 27-billion-parameter multimodal causal language model developed by Alibaba's Qwen team. It is the most capable generation in the Qwen open-model family, built as a native vision-language model that understands images and videos, with flexible thinking control, designed to carry complex, multi-step agentic tasks through to completion with greater reliability.",
       "context_size": 262144,
       "context_label": "262K",
       "price_input": 0.47,
@@ -12703,15 +13323,22 @@
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "vision",
+        "reasoning",
+        "tool-use"
       ],
       "tags": [
         "chat",
-        "text-generation"
+        "text-generation",
+        "vision",
+        "reasoning",
+        "tool-use",
+        "multimodal"
       ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": true,
       "free_mechanism": "rate-limited",
       "free_quota": {
         "rpm": 2,
@@ -12725,15 +13352,21 @@
         "groq/qwen/qwen3.8-27b"
       ],
       "parameter_count": 27000000000,
-      "tier": "small",
+      "tier": "large",
       "speed": "fast",
       "use_case": [
         "conversation",
         "q&a",
         "content-creation",
-        "writing-assistance"
+        "writing-assistance",
+        "image-understanding",
+        "visual-q&a",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -12743,6 +13376,7 @@
       "owned_by": "ovh",
       "provider": "ovh",
       "name": "Qwen3Guard-Gen-8B",
+      "description": "Qwen3Guard is a series of safety moderation models built upon Qwen3 and trained on a dataset of 1.19 million prompts and responses labeled for safety. The series includes models of three sizes (0.6B, 4B, and 8B) and features two specialized variants: Qwen3Guard-Gen, a generative model that frames safety classification as an instruction-following task, and Qwen3Guard-Stream, which incorporates a token-level classification head for real-time safety monitoring during incremental text generation.",
       "context_size": 32768,
       "context_label": "33K",
       "is_free": true,
@@ -12782,6 +13416,7 @@
       "owned_by": "ovh",
       "provider": "ovh",
       "name": "nvr-tts-en-us",
+      "description": "This NVIDIA TTS model generates natural-sounding American English speech from raw text without requiring additional information.",
       "context_label": "unknown",
       "is_free": true,
       "capabilities": [
@@ -12818,6 +13453,7 @@
       "owned_by": "ovh",
       "provider": "ovh",
       "name": "nvr-tts-it-it",
+      "description": "This NVIDIA TTS model generates natural-sounding Italian speech from raw text without requiring additional information.",
       "context_label": "unknown",
       "is_free": true,
       "capabilities": [
@@ -12854,6 +13490,7 @@
       "owned_by": "ovh",
       "provider": "ovh",
       "name": "nvr-tts-de-de",
+      "description": "This NVIDIA TTS model generates natural-sounding German speech from raw text without requiring additional information.",
       "context_label": "unknown",
       "is_free": true,
       "capabilities": [
@@ -12890,6 +13527,7 @@
       "owned_by": "ovh",
       "provider": "ovh",
       "name": "nvr-tts-es-es",
+      "description": "This NVIDIA TTS model generates natural-sounding European Spanish speech from raw text without requiring additional information.",
       "context_label": "unknown",
       "is_free": true,
       "capabilities": [
@@ -12926,13 +13564,16 @@
       "owned_by": "ovh",
       "provider": "ovh",
       "name": "whisper-large-v3-turbo",
+      "description": "Whisper is a state-of-the-art model for automatic speech recognition (ASR) and speech translation, proposed in the paper \"Robust Speech Recognition via Large-Scale Weak Supervision\" by Alec Radford et al. from OpenAI. Trained on >5M hours of labeled data, Whisper demonstrates a strong ability to generalise to many datasets and domains in a zero-shot setting.\nWhisper large-v3-turbo is a finetuned version of a pruned Whisper large-v3. In other words, it's the exact same model, except that the number of decoding layers have reduced from 32 to 4. As a result, the model is way faster, at the expense of a minor quality degradation.",
       "context_label": "unknown",
       "is_free": true,
       "capabilities": [
-        "speech-recognition"
+        "speech-recognition",
+        "translation"
       ],
       "tags": [
-        "speech-recognition"
+        "speech-recognition",
+        "translation"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
@@ -12970,13 +13611,16 @@
       "owned_by": "ovh",
       "provider": "ovh",
       "name": "whisper-large-v3",
+      "description": "Whisper is a state-of-the-art model for automatic speech recognition (ASR) and speech translation, proposed in the paper \"Robust Speech Recognition via Large-Scale Weak Supervision\" by Alec Radford et al. from OpenAI. Trained on >5M hours of labeled data, Whisper demonstrates a strong ability to generalise to many datasets and domains in a zero-shot setting.",
       "context_label": "unknown",
       "is_free": true,
       "capabilities": [
-        "speech-recognition"
+        "speech-recognition",
+        "translation"
       ],
       "tags": [
-        "speech-recognition"
+        "speech-recognition",
+        "translation"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
@@ -13013,6 +13657,7 @@
       "owned_by": "ovh",
       "provider": "ovh",
       "name": "stable-diffusion-xl-base-v10",
+      "description": "SDXL, developed by Stability AI, is an advanced text-to-image model released in July 2023, offering enhanced image generation capabilities.",
       "context_label": "unknown",
       "is_free": true,
       "capabilities": [
@@ -13898,12 +14543,14 @@
         "tool-use"
       ],
       "tags": [
+        "vision",
         "chat",
         "text-generation",
-        "tool-use"
+        "tool-use",
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
+      "is_multimodal": true,
       "has_tool_use": true,
       "free_mechanism": "rate-limited",
       "free_quota": {
@@ -13912,15 +14559,17 @@
       "trial_scope": "all",
       "model_family": "sensenova-6.7-flash-lite",
       "aliases": [],
-      "tier": "medium",
+      "tier": "large",
       "speed": "fast",
       "use_case": [
+        "image-understanding",
+        "visual-q&a",
         "conversation",
         "q&a",
         "content-creation",
         "writing-assistance"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -13939,9 +14588,9 @@
         "vision"
       ],
       "tags": [
+        "vision",
         "chat",
         "text-generation",
-        "vision",
         "multimodal"
       ],
       "is_reasoning": false,
@@ -13957,12 +14606,12 @@
       "tier": "large",
       "speed": "fast",
       "use_case": [
+        "image-understanding",
+        "visual-q&a",
         "conversation",
         "q&a",
         "content-creation",
-        "writing-assistance",
-        "image-understanding",
-        "visual-q&a"
+        "writing-assistance"
       ],
       "performance_level": "mid",
       "estimated_latency": "< 1s"
@@ -14031,14 +14680,19 @@
         "text-generation"
       ],
       "tags": [
-        "chat",
-        "text-generation"
+        "reasoning",
+        "text-generation",
+        "tool-use",
+        "code-generation",
+        "chat"
       ],
-      "is_reasoning": false,
+      "is_reasoning": true,
       "is_multimodal": false,
-      "has_tool_use": false,
+      "has_tool_use": true,
       "free_mechanism": "rate-limited",
-      "free_quota": null,
+      "free_quota": {
+        "notes": "讯飞星辰 MaaS 免费模型（inferencePrice 输入/输出均为 0）；平台按账号限并发，具体数值只在 maas.xfyun.cn 登录后的控制台展示，公开模型列表 API 不返回该字段"
+      },
       "trial_scope": "specific",
       "model_family": "spark-x2.5-4b",
       "aliases": [],
@@ -14046,12 +14700,18 @@
       "tier": "small",
       "speed": "fast",
       "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
-        "content-creation",
-        "writing-assistance"
+        "complex-reasoning"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -14072,14 +14732,19 @@
         "text-generation"
       ],
       "tags": [
-        "chat",
-        "text-generation"
+        "reasoning",
+        "text-generation",
+        "tool-use",
+        "code-generation",
+        "chat"
       ],
-      "is_reasoning": false,
+      "is_reasoning": true,
       "is_multimodal": false,
-      "has_tool_use": false,
+      "has_tool_use": true,
       "free_mechanism": "rate-limited",
-      "free_quota": null,
+      "free_quota": {
+        "notes": "讯飞星辰 MaaS 免费模型（inferencePrice 输入/输出均为 0）；平台按账号限并发，具体数值只在 maas.xfyun.cn 登录后的控制台展示，公开模型列表 API 不返回该字段"
+      },
       "trial_scope": "specific",
       "model_family": "spark-x2.5-1.7b",
       "aliases": [],
@@ -14087,12 +14752,18 @@
       "tier": "medium",
       "speed": "fast",
       "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
-        "content-creation",
-        "writing-assistance"
+        "complex-reasoning"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -14115,16 +14786,18 @@
         "ocr"
       ],
       "tags": [
-        "chat",
-        "text-generation",
         "vision",
+        "text-generation",
+        "chat",
         "multimodal"
       ],
       "is_reasoning": false,
       "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
-      "free_quota": null,
+      "free_quota": {
+        "notes": "讯飞星辰 MaaS 免费模型（inferencePrice 输入/输出均为 0）；平台按账号限并发，具体数值只在 maas.xfyun.cn 登录后的控制台展示，公开模型列表 API 不返回该字段"
+      },
       "trial_scope": "specific",
       "model_family": "paddleocr-vl-1.6",
       "model_variant": "vl",
@@ -14132,12 +14805,12 @@
       "tier": "large",
       "speed": "fast",
       "use_case": [
-        "conversation",
-        "q&a",
+        "image-understanding",
+        "visual-q&a",
         "content-creation",
         "writing-assistance",
-        "image-understanding",
-        "visual-q&a"
+        "conversation",
+        "q&a"
       ],
       "performance_level": "mid",
       "estimated_latency": "< 1s"
@@ -14162,8 +14835,9 @@
         "ocr"
       ],
       "tags": [
-        "chat",
         "text-generation",
+        "document-processing",
+        "chat",
         "vision",
         "multimodal"
       ],
@@ -14171,17 +14845,21 @@
       "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
-      "free_quota": null,
+      "free_quota": {
+        "notes": "讯飞星辰 MaaS 免费模型（inferencePrice 输入/输出均为 0）；平台按账号限并发，具体数值只在 maas.xfyun.cn 登录后的控制台展示，公开模型列表 API 不返回该字段"
+      },
       "trial_scope": "specific",
       "model_family": "deepseek-ocr",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
       "use_case": [
-        "conversation",
-        "q&a",
         "content-creation",
         "writing-assistance",
+        "pdf-processing",
+        "ocr",
+        "conversation",
+        "q&a",
         "image-understanding",
         "visual-q&a"
       ],
@@ -14208,28 +14886,33 @@
         "ocr"
       ],
       "tags": [
-        "chat",
-        "text-generation",
         "vision",
+        "text-generation",
+        "document-processing",
+        "chat",
         "multimodal"
       ],
       "is_reasoning": false,
       "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
-      "free_quota": null,
+      "free_quota": {
+        "notes": "讯飞星辰 MaaS 免费模型（inferencePrice 输入/输出均为 0）；平台按账号限并发，具体数值只在 maas.xfyun.cn 登录后的控制台展示，公开模型列表 API 不返回该字段"
+      },
       "trial_scope": "specific",
       "model_family": "xophunyuanocr",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
       "use_case": [
-        "conversation",
-        "q&a",
+        "image-understanding",
+        "visual-q&a",
         "content-creation",
         "writing-assistance",
-        "image-understanding",
-        "visual-q&a"
+        "pdf-processing",
+        "ocr",
+        "conversation",
+        "q&a"
       ],
       "performance_level": "mid",
       "estimated_latency": "< 1s"
@@ -14251,13 +14934,18 @@
         "rerank"
       ],
       "tags": [
+        "text-generation",
+        "code-generation",
+        "embeddings",
         "rerank"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
-      "free_quota": null,
+      "free_quota": {
+        "notes": "讯飞星辰 MaaS 免费模型（inferencePrice 输入/输出均为 0）；平台按账号限并发，具体数值只在 maas.xfyun.cn 登录后的控制台展示，公开模型列表 API 不返回该字段"
+      },
       "trial_scope": "specific",
       "model_family": "qwen3-reranker-8b",
       "model_variant": "reranker",
@@ -14268,6 +14956,12 @@
       "tier": "medium",
       "speed": "fast",
       "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "software-development",
+        "code-completion",
+        "semantic-search",
+        "similarity",
         "search-improvement",
         "relevance"
       ],
@@ -14291,13 +14985,17 @@
         "embeddings"
       ],
       "tags": [
+        "text-generation",
+        "code-generation",
         "embeddings"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
-      "free_quota": null,
+      "free_quota": {
+        "notes": "讯飞星辰 MaaS 免费模型（inferencePrice 输入/输出均为 0）；平台按账号限并发，具体数值只在 maas.xfyun.cn 登录后的控制台展示，公开模型列表 API 不返回该字段"
+      },
       "trial_scope": "specific",
       "model_family": "qwen3-embedding-8b",
       "model_variant": "embedding",
@@ -14309,6 +15007,10 @@
       "tier": "medium",
       "speed": "fast",
       "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "software-development",
+        "code-completion",
         "semantic-search",
         "similarity"
       ],

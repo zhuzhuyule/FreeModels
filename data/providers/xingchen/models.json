@@ -1,7 +1,7 @@
 {
   "object": "list",
   "provider": "xingchen",
-  "updated_at": "2026-10-11T08:25:56.460Z",
+  "updated_at": "2026-10-11T09:53:38.086Z",
   "total": 44,
   "data": [
     {
@@ -22,6 +22,7 @@
         "text-generation"
       ],
       "tags": [
+        "code-generation",
         "chat",
         "text-generation"
       ],
@@ -36,12 +37,14 @@
       "tier": "medium",
       "speed": "standard",
       "use_case": [
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "content-creation",
         "writing-assistance"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "1-3s"
     },
     {
@@ -62,14 +65,19 @@
         "text-generation"
       ],
       "tags": [
-        "chat",
-        "text-generation"
+        "reasoning",
+        "text-generation",
+        "tool-use",
+        "code-generation",
+        "chat"
       ],
-      "is_reasoning": false,
+      "is_reasoning": true,
       "is_multimodal": false,
-      "has_tool_use": false,
+      "has_tool_use": true,
       "free_mechanism": "rate-limited",
-      "free_quota": null,
+      "free_quota": {
+        "notes": "讯飞星辰 MaaS 免费模型（inferencePrice 输入/输出均为 0）；平台按账号限并发，具体数值只在 maas.xfyun.cn 登录后的控制台展示，公开模型列表 API 不返回该字段"
+      },
       "trial_scope": "specific",
       "model_family": "spark-x2.5-4b",
       "aliases": [],
@@ -77,12 +85,18 @@
       "tier": "small",
       "speed": "fast",
       "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
-        "content-creation",
-        "writing-assistance"
+        "complex-reasoning"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -103,14 +117,19 @@
         "text-generation"
       ],
       "tags": [
-        "chat",
-        "text-generation"
+        "reasoning",
+        "text-generation",
+        "tool-use",
+        "code-generation",
+        "chat"
       ],
-      "is_reasoning": false,
+      "is_reasoning": true,
       "is_multimodal": false,
-      "has_tool_use": false,
+      "has_tool_use": true,
       "free_mechanism": "rate-limited",
-      "free_quota": null,
+      "free_quota": {
+        "notes": "讯飞星辰 MaaS 免费模型（inferencePrice 输入/输出均为 0）；平台按账号限并发，具体数值只在 maas.xfyun.cn 登录后的控制台展示，公开模型列表 API 不返回该字段"
+      },
       "trial_scope": "specific",
       "model_family": "spark-x2.5-1.7b",
       "aliases": [],
@@ -118,12 +137,18 @@
       "tier": "medium",
       "speed": "fast",
       "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
-        "content-creation",
-        "writing-assistance"
+        "complex-reasoning"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -144,6 +169,7 @@
         "text-generation"
       ],
       "tags": [
+        "code-generation",
         "chat",
         "text-generation"
       ],
@@ -159,8 +185,10 @@
         "z-ai/glm-5.3"
       ],
       "tier": "medium",
-      "speed": "premium",
+      "speed": "standard",
       "use_case": [
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "content-creation",
@@ -280,10 +308,10 @@
         "code-generation"
       ],
       "tags": [
-        "chat",
         "text-generation",
-        "vision",
         "code-generation",
+        "chat",
+        "vision",
         "multimodal"
       ],
       "is_reasoning": false,
@@ -300,14 +328,14 @@
       "tier": "large",
       "speed": "premium",
       "use_case": [
-        "conversation",
-        "q&a",
         "content-creation",
         "writing-assistance",
-        "image-understanding",
-        "visual-q&a",
         "software-development",
-        "code-completion"
+        "code-completion",
+        "conversation",
+        "q&a",
+        "image-understanding",
+        "visual-q&a"
       ],
       "performance_level": "high",
       "estimated_latency": "3-10s"
@@ -373,9 +401,10 @@
         "vision"
       ],
       "tags": [
+        "vision",
+        "code-generation",
         "chat",
         "text-generation",
-        "vision",
         "multimodal"
       ],
       "is_reasoning": false,
@@ -391,14 +420,16 @@
       "tier": "large",
       "speed": "premium",
       "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "content-creation",
-        "writing-assistance",
-        "image-understanding",
-        "visual-q&a"
+        "writing-assistance"
       ],
-      "performance_level": "mid",
+      "performance_level": "high",
       "estimated_latency": "3-10s"
     },
     {
@@ -465,9 +496,9 @@
         "vision"
       ],
       "tags": [
-        "chat",
-        "text-generation",
         "vision",
+        "text-generation",
+        "chat",
         "multimodal"
       ],
       "is_reasoning": false,
@@ -484,12 +515,12 @@
       "tier": "large",
       "speed": "premium",
       "use_case": [
-        "conversation",
-        "q&a",
+        "image-understanding",
+        "visual-q&a",
         "content-creation",
         "writing-assistance",
-        "image-understanding",
-        "visual-q&a"
+        "conversation",
+        "q&a"
       ],
       "performance_level": "mid",
       "estimated_latency": "3-10s"
@@ -512,6 +543,7 @@
         "text-generation"
       ],
       "tags": [
+        "translation",
         "chat",
         "text-generation"
       ],
@@ -557,16 +589,18 @@
         "ocr"
       ],
       "tags": [
-        "chat",
-        "text-generation",
         "vision",
+        "text-generation",
+        "chat",
         "multimodal"
       ],
       "is_reasoning": false,
       "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
-      "free_quota": null,
+      "free_quota": {
+        "notes": "讯飞星辰 MaaS 免费模型（inferencePrice 输入/输出均为 0）；平台按账号限并发，具体数值只在 maas.xfyun.cn 登录后的控制台展示，公开模型列表 API 不返回该字段"
+      },
       "trial_scope": "specific",
       "model_family": "paddleocr-vl-1.6",
       "model_variant": "vl",
@@ -574,12 +608,12 @@
       "tier": "large",
       "speed": "fast",
       "use_case": [
-        "conversation",
-        "q&a",
+        "image-understanding",
+        "visual-q&a",
         "content-creation",
         "writing-assistance",
-        "image-understanding",
-        "visual-q&a"
+        "conversation",
+        "q&a"
       ],
       "performance_level": "mid",
       "estimated_latency": "< 1s"
@@ -602,6 +636,7 @@
         "text-generation"
       ],
       "tags": [
+        "code-generation",
         "chat",
         "text-generation"
       ],
@@ -616,12 +651,14 @@
       "tier": "medium",
       "speed": "standard",
       "use_case": [
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "content-creation",
         "writing-assistance"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "1-3s"
     },
     {
@@ -642,10 +679,12 @@
         "text-generation"
       ],
       "tags": [
-        "chat",
-        "text-generation"
+        "reasoning",
+        "text-generation",
+        "code-generation",
+        "chat"
       ],
-      "is_reasoning": false,
+      "is_reasoning": true,
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": null,
@@ -655,16 +694,22 @@
       "aliases": [
         "GLM-5.1"
       ],
-      "tier": "medium",
+      "tier": "large",
       "speed": "premium",
       "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
-        "content-creation",
-        "writing-assistance"
+        "complex-reasoning"
       ],
-      "performance_level": "mid",
-      "estimated_latency": "1-3s"
+      "performance_level": "high",
+      "estimated_latency": "3-10s"
     },
     {
       "id": "xsparkx2",
@@ -724,8 +769,9 @@
         "text-generation"
       ],
       "tags": [
-        "chat",
-        "text-generation"
+        "text-generation",
+        "code-generation",
+        "chat"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
@@ -737,12 +783,14 @@
       "aliases": [],
       "parameter_count": 2000000000,
       "tier": "small",
-      "speed": "fast",
+      "speed": "standard",
       "use_case": [
-        "conversation",
-        "q&a",
         "content-creation",
-        "writing-assistance"
+        "writing-assistance",
+        "software-development",
+        "code-completion",
+        "conversation",
+        "q&a"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
@@ -766,9 +814,9 @@
         "vision"
       ],
       "tags": [
+        "vision",
         "chat",
         "text-generation",
-        "vision",
         "multimodal"
       ],
       "is_reasoning": false,
@@ -785,12 +833,12 @@
       "tier": "large",
       "speed": "premium",
       "use_case": [
+        "image-understanding",
+        "visual-q&a",
         "conversation",
         "q&a",
         "content-creation",
-        "writing-assistance",
-        "image-understanding",
-        "visual-q&a"
+        "writing-assistance"
       ],
       "performance_level": "mid",
       "estimated_latency": "3-10s"
@@ -813,8 +861,8 @@
         "text-generation"
       ],
       "tags": [
-        "chat",
-        "text-generation"
+        "text-generation",
+        "chat"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
@@ -829,10 +877,10 @@
       "tier": "medium",
       "speed": "standard",
       "use_case": [
-        "conversation",
-        "q&a",
         "content-creation",
-        "writing-assistance"
+        "writing-assistance",
+        "conversation",
+        "q&a"
       ],
       "performance_level": "entry",
       "estimated_latency": "1-3s"
@@ -898,12 +946,13 @@
         "vision"
       ],
       "tags": [
-        "chat",
-        "text-generation",
+        "reasoning",
         "vision",
+        "text-generation",
+        "chat",
         "multimodal"
       ],
-      "is_reasoning": false,
+      "is_reasoning": true,
       "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": null,
@@ -916,14 +965,18 @@
       "tier": "large",
       "speed": "premium",
       "use_case": [
-        "conversation",
-        "q&a",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "image-understanding",
+        "visual-q&a",
         "content-creation",
         "writing-assistance",
-        "image-understanding",
-        "visual-q&a"
+        "conversation",
+        "q&a",
+        "complex-reasoning"
       ],
-      "performance_level": "mid",
+      "performance_level": "high",
       "estimated_latency": "3-10s"
     },
     {
@@ -945,11 +998,12 @@
         "code-generation"
       ],
       "tags": [
-        "chat",
+        "reasoning",
         "text-generation",
+        "chat",
         "code-generation"
       ],
-      "is_reasoning": false,
+      "is_reasoning": true,
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": null,
@@ -961,18 +1015,22 @@
       "aliases": [
         "Qwen3-Coder-Next"
       ],
-      "tier": "medium",
-      "speed": "standard",
+      "tier": "large",
+      "speed": "premium",
       "use_case": [
-        "conversation",
-        "q&a",
+        "problem-solving",
+        "logical-analysis",
+        "math",
         "content-creation",
         "writing-assistance",
+        "conversation",
+        "q&a",
         "software-development",
-        "code-completion"
+        "code-completion",
+        "complex-reasoning"
       ],
-      "performance_level": "mid",
-      "estimated_latency": "1-3s"
+      "performance_level": "high",
+      "estimated_latency": "3-10s"
     },
     {
       "id": "xopglmv47flash",
@@ -992,6 +1050,7 @@
         "text-generation"
       ],
       "tags": [
+        "code-generation",
         "chat",
         "text-generation"
       ],
@@ -1008,12 +1067,14 @@
       "tier": "medium",
       "speed": "standard",
       "use_case": [
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "content-creation",
         "writing-assistance"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "1-3s"
     },
     {
@@ -1035,9 +1096,10 @@
         "vision"
       ],
       "tags": [
-        "chat",
-        "text-generation",
         "vision",
+        "text-generation",
+        "document-processing",
+        "chat",
         "multimodal"
       ],
       "is_reasoning": false,
@@ -1053,12 +1115,14 @@
       "tier": "large",
       "speed": "standard",
       "use_case": [
-        "conversation",
-        "q&a",
+        "image-understanding",
+        "visual-q&a",
         "content-creation",
         "writing-assistance",
-        "image-understanding",
-        "visual-q&a"
+        "pdf-processing",
+        "ocr",
+        "conversation",
+        "q&a"
       ],
       "performance_level": "mid",
       "estimated_latency": "3-10s"
@@ -1083,8 +1147,9 @@
         "ocr"
       ],
       "tags": [
-        "chat",
         "text-generation",
+        "document-processing",
+        "chat",
         "vision",
         "multimodal"
       ],
@@ -1092,17 +1157,21 @@
       "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
-      "free_quota": null,
+      "free_quota": {
+        "notes": "讯飞星辰 MaaS 免费模型（inferencePrice 输入/输出均为 0）；平台按账号限并发，具体数值只在 maas.xfyun.cn 登录后的控制台展示，公开模型列表 API 不返回该字段"
+      },
       "trial_scope": "specific",
       "model_family": "deepseek-ocr",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
       "use_case": [
-        "conversation",
-        "q&a",
         "content-creation",
         "writing-assistance",
+        "pdf-processing",
+        "ocr",
+        "conversation",
+        "q&a",
         "image-understanding",
         "visual-q&a"
       ],
@@ -1129,28 +1198,33 @@
         "ocr"
       ],
       "tags": [
-        "chat",
-        "text-generation",
         "vision",
+        "text-generation",
+        "document-processing",
+        "chat",
         "multimodal"
       ],
       "is_reasoning": false,
       "is_multimodal": true,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
-      "free_quota": null,
+      "free_quota": {
+        "notes": "讯飞星辰 MaaS 免费模型（inferencePrice 输入/输出均为 0）；平台按账号限并发，具体数值只在 maas.xfyun.cn 登录后的控制台展示，公开模型列表 API 不返回该字段"
+      },
       "trial_scope": "specific",
       "model_family": "xophunyuanocr",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
       "use_case": [
-        "conversation",
-        "q&a",
+        "image-understanding",
+        "visual-q&a",
         "content-creation",
         "writing-assistance",
-        "image-understanding",
-        "visual-q&a"
+        "pdf-processing",
+        "ocr",
+        "conversation",
+        "q&a"
       ],
       "performance_level": "mid",
       "estimated_latency": "< 1s"
@@ -1259,8 +1333,8 @@
         "text-generation"
       ],
       "tags": [
-        "chat",
-        "text-generation"
+        "text-generation",
+        "chat"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
@@ -1276,10 +1350,10 @@
       "tier": "small",
       "speed": "fast",
       "use_case": [
-        "conversation",
-        "q&a",
         "content-creation",
-        "writing-assistance"
+        "writing-assistance",
+        "conversation",
+        "q&a"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
@@ -1302,8 +1376,8 @@
         "text-generation"
       ],
       "tags": [
-        "chat",
-        "text-generation"
+        "text-generation",
+        "chat"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
@@ -1320,10 +1394,10 @@
       "tier": "large",
       "speed": "standard",
       "use_case": [
-        "conversation",
-        "q&a",
         "content-creation",
-        "writing-assistance"
+        "writing-assistance",
+        "conversation",
+        "q&a"
       ],
       "performance_level": "mid",
       "estimated_latency": "3-10s"
@@ -1348,6 +1422,7 @@
       ],
       "tags": [
         "reasoning",
+        "code-generation",
         "chat",
         "text-generation"
       ],
@@ -1370,6 +1445,8 @@
         "problem-solving",
         "logical-analysis",
         "math",
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "content-creation",
@@ -1396,13 +1473,18 @@
         "rerank"
       ],
       "tags": [
+        "text-generation",
+        "code-generation",
+        "embeddings",
         "rerank"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
-      "free_quota": null,
+      "free_quota": {
+        "notes": "讯飞星辰 MaaS 免费模型（inferencePrice 输入/输出均为 0）；平台按账号限并发，具体数值只在 maas.xfyun.cn 登录后的控制台展示，公开模型列表 API 不返回该字段"
+      },
       "trial_scope": "specific",
       "model_family": "qwen3-reranker-8b",
       "model_variant": "reranker",
@@ -1413,6 +1495,12 @@
       "tier": "medium",
       "speed": "fast",
       "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "software-development",
+        "code-completion",
+        "semantic-search",
+        "similarity",
         "search-improvement",
         "relevance"
       ],
@@ -1436,13 +1524,17 @@
         "embeddings"
       ],
       "tags": [
+        "text-generation",
+        "code-generation",
         "embeddings"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
-      "free_quota": null,
+      "free_quota": {
+        "notes": "讯飞星辰 MaaS 免费模型（inferencePrice 输入/输出均为 0）；平台按账号限并发，具体数值只在 maas.xfyun.cn 登录后的控制台展示，公开模型列表 API 不返回该字段"
+      },
       "trial_scope": "specific",
       "model_family": "qwen3-embedding-8b",
       "model_variant": "embedding",
@@ -1454,6 +1546,10 @@
       "tier": "medium",
       "speed": "fast",
       "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "software-development",
+        "code-completion",
         "semantic-search",
         "similarity"
       ],
@@ -1478,8 +1574,8 @@
         "text-generation"
       ],
       "tags": [
-        "chat",
-        "text-generation"
+        "text-generation",
+        "chat"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
@@ -1495,10 +1591,10 @@
       "tier": "medium",
       "speed": "fast",
       "use_case": [
-        "conversation",
-        "q&a",
         "content-creation",
-        "writing-assistance"
+        "writing-assistance",
+        "conversation",
+        "q&a"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
@@ -1521,8 +1617,8 @@
         "text-generation"
       ],
       "tags": [
-        "chat",
-        "text-generation"
+        "text-generation",
+        "chat"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
@@ -1538,10 +1634,10 @@
       "tier": "small",
       "speed": "fast",
       "use_case": [
-        "conversation",
-        "q&a",
         "content-creation",
-        "writing-assistance"
+        "writing-assistance",
+        "conversation",
+        "q&a"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
@@ -1564,8 +1660,9 @@
         "text-generation"
       ],
       "tags": [
-        "chat",
-        "text-generation"
+        "text-generation",
+        "code-generation",
+        "chat"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
@@ -1582,12 +1679,14 @@
       "tier": "medium",
       "speed": "standard",
       "use_case": [
-        "conversation",
-        "q&a",
         "content-creation",
-        "writing-assistance"
+        "writing-assistance",
+        "software-development",
+        "code-completion",
+        "conversation",
+        "q&a"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "1-3s"
     },
     {
@@ -1608,8 +1707,8 @@
         "text-generation"
       ],
       "tags": [
-        "chat",
-        "text-generation"
+        "text-generation",
+        "chat"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
@@ -1625,10 +1724,10 @@
       "tier": "medium",
       "speed": "standard",
       "use_case": [
-        "conversation",
-        "q&a",
         "content-creation",
-        "writing-assistance"
+        "writing-assistance",
+        "conversation",
+        "q&a"
       ],
       "performance_level": "entry",
       "estimated_latency": "1-3s"
@@ -1651,8 +1750,8 @@
         "text-generation"
       ],
       "tags": [
-        "chat",
-        "text-generation"
+        "text-generation",
+        "chat"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
@@ -1668,10 +1767,10 @@
       "tier": "medium",
       "speed": "standard",
       "use_case": [
-        "conversation",
-        "q&a",
         "content-creation",
-        "writing-assistance"
+        "writing-assistance",
+        "conversation",
+        "q&a"
       ],
       "performance_level": "entry",
       "estimated_latency": "1-3s"
@@ -1694,8 +1793,8 @@
         "text-generation"
       ],
       "tags": [
-        "chat",
-        "text-generation"
+        "text-generation",
+        "chat"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
@@ -1708,10 +1807,10 @@
       "tier": "medium",
       "speed": "premium",
       "use_case": [
-        "conversation",
-        "q&a",
         "content-creation",
-        "writing-assistance"
+        "writing-assistance",
+        "conversation",
+        "q&a"
       ],
       "performance_level": "mid",
       "estimated_latency": "1-3s"
@@ -1734,8 +1833,8 @@
         "text-generation"
       ],
       "tags": [
-        "chat",
-        "text-generation"
+        "text-generation",
+        "chat"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
@@ -1750,10 +1849,10 @@
       "tier": "medium",
       "speed": "fast",
       "use_case": [
-        "conversation",
-        "q&a",
         "content-creation",
-        "writing-assistance"
+        "writing-assistance",
+        "conversation",
+        "q&a"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
@@ -1776,8 +1875,9 @@
         "text-generation"
       ],
       "tags": [
-        "chat",
-        "text-generation"
+        "text-generation",
+        "code-generation",
+        "chat"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
@@ -1791,12 +1891,14 @@
       "tier": "medium",
       "speed": "standard",
       "use_case": [
-        "conversation",
-        "q&a",
         "content-creation",
-        "writing-assistance"
+        "writing-assistance",
+        "software-development",
+        "code-completion",
+        "conversation",
+        "q&a"
       ],
-      "performance_level": "entry",
+      "performance_level": "mid",
       "estimated_latency": "1-3s"
     },
     {
@@ -1817,28 +1919,33 @@
         "text-generation"
       ],
       "tags": [
+        "vision",
+        "text-generation",
+        "tool-use",
         "chat",
-        "text-generation"
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
+      "is_multimodal": true,
+      "has_tool_use": true,
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
       "model_family": "qwen-v2-1.5b",
       "model_variant": "instruct",
       "aliases": [],
-      "tier": "medium",
-      "speed": "standard",
+      "tier": "large",
+      "speed": "premium",
       "use_case": [
-        "conversation",
-        "q&a",
+        "image-understanding",
+        "visual-q&a",
         "content-creation",
-        "writing-assistance"
+        "writing-assistance",
+        "conversation",
+        "q&a"
       ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
+      "performance_level": "mid",
+      "estimated_latency": "3-10s"
     },
     {
       "id": "xsqwenv2s0b5c",
@@ -1858,28 +1965,33 @@
         "text-generation"
       ],
       "tags": [
+        "vision",
+        "text-generation",
+        "tool-use",
         "chat",
-        "text-generation"
+        "multimodal"
       ],
       "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
+      "is_multimodal": true,
+      "has_tool_use": true,
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
       "model_family": "qwen-v2-0.5b",
       "model_variant": "instruct",
       "aliases": [],
-      "tier": "medium",
-      "speed": "standard",
+      "tier": "large",
+      "speed": "premium",
       "use_case": [
-        "conversation",
-        "q&a",
+        "image-understanding",
+        "visual-q&a",
         "content-creation",
-        "writing-assistance"
+        "writing-assistance",
+        "conversation",
+        "q&a"
       ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
+      "performance_level": "mid",
+      "estimated_latency": "3-10s"
     },
     {
       "id": "xqwen14bchat",
@@ -1899,8 +2011,8 @@
         "text-generation"
       ],
       "tags": [
-        "chat",
-        "text-generation"
+        "text-generation",
+        "chat"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
@@ -1914,10 +2026,10 @@
       "tier": "medium",
       "speed": "standard",
       "use_case": [
-        "conversation",
-        "q&a",
         "content-creation",
-        "writing-assistance"
+        "writing-assistance",
+        "conversation",
+        "q&a"
       ],
       "performance_level": "entry",
       "estimated_latency": "1-3s"
