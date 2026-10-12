@@ -1,7 +1,7 @@
 {
   "object": "list",
   "view": "small",
-  "updated_at": "2026-10-11T09:53:38.113Z",
+  "updated_at": "2026-10-12T08:47:18.602Z",
   "total": 75,
   "filters": {
     "tier": "small"
@@ -1998,6 +1998,47 @@
       "estimated_latency": "< 1s"
     },
     {
+      "id": "meta-llama/llama-prompt-guard-2-86m",
+      "object": "model",
+      "created": 2021365556,
+      "owned_by": "groq",
+      "provider": "groq",
+      "name": "Prompt Guard 2 86M",
+      "context_size": 512,
+      "context_label": "512",
+      "price_input": 0.04,
+      "price_output": 0.04,
+      "is_free": true,
+      "capabilities": [
+        "moderation"
+      ],
+      "tags": [
+        "moderation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpd": 14400,
+        "tpm": 15000,
+        "rpm": 30,
+        "tokens_per_day": 500000
+      },
+      "trial_scope": "all",
+      "model_family": "llama-prompt-guard-2-86m",
+      "model_variant": "guard",
+      "aliases": [],
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "content-filtering",
+        "safety"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
       "id": "meta-llama/llama-prompt-guard-2-22m",
       "object": "model",
       "created": 2021358890,
@@ -2084,47 +2125,6 @@
         "q&a",
         "content-creation",
         "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "meta-llama/llama-prompt-guard-2-86m",
-      "object": "model",
-      "created": 2021365556,
-      "owned_by": "groq",
-      "provider": "groq",
-      "name": "Prompt Guard 2 86M",
-      "context_size": 512,
-      "context_label": "512",
-      "price_input": 0.04,
-      "price_output": 0.04,
-      "is_free": true,
-      "capabilities": [
-        "moderation"
-      ],
-      "tags": [
-        "moderation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "rpd": 14400,
-        "tpm": 15000,
-        "rpm": 30,
-        "tokens_per_day": 500000
-      },
-      "trial_scope": "all",
-      "model_family": "llama-prompt-guard-2-86m",
-      "model_variant": "guard",
-      "aliases": [],
-      "tier": "small",
-      "speed": "fast",
-      "use_case": [
-        "content-filtering",
-        "safety"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
