@@ -52,7 +52,7 @@ curl https://ofind.cn/FreeModels/v1/models.json
 | [OVHcloud AI Endpoints](https://www.ovhcloud.com/en-gb/public-cloud/ai-endpoints/)  | `ovh` | 23 | 23 | 0 | 目录内模型支持匿名调用（无需注册、无需 API key）：每 IP 每模型 2 requests/分钟。带 API key 走 Public Cloud 按 token 计费（400 RPM/项目），表内 price_input/price_output 是该付费费率，不是匿名档费用。 | [注册](https://www.ovhcloud.com/en-gb/public-cloud/ai-endpoints/) | — | [文档](https://docs.ovhcloud.com/en/guides/public-cloud/ai-machine-learning/ai-endpoints-getting-started) | [JSON](https://ofind.cn/FreeModels/data/providers/ovh/models.json) |
 | [SambaNova Cloud](https://cloud.sambanova.ai)  | `sambanova` | 19 | 19 | 0 | 新账户提供 $5 trial credits，有效期 3 个月。 | [注册](https://cloud.sambanova.ai) | [API Key](https://cloud.sambanova.ai/apis) | [文档](https://docs.sambanova.ai) | [JSON](https://ofind.cn/FreeModels/data/providers/sambanova/models.json) |
 | —  | `sensenova` | 3 | 3 | 0 | — | — | — | — | [JSON](https://ofind.cn/FreeModels/data/providers/sensenova/models.json) |
-| [iFlytek MaaS / 讯飞星辰](https://maas.xfyun.cn)  | `xingchen` | 44 | 7 | 0 | 第三方模型聚合（GLM/Qwen/DeepSeek 等）；部分模型 0 元开放，具体以控制台为准。 | [注册](https://maas.xfyun.cn) | [API Key](https://maas.xfyun.cn) | [文档](https://maas.xfyun.cn/docs) | [JSON](https://ofind.cn/FreeModels/data/providers/xingchen/models.json) |
+| [iFlytek MaaS / 讯飞星辰](https://maas.xfyun.cn)  | `xingchen` | 42 | 7 | 0 | 第三方模型聚合（GLM/Qwen/DeepSeek 等）；部分模型 0 元开放，具体以控制台为准。 | [注册](https://maas.xfyun.cn) | [API Key](https://maas.xfyun.cn) | [文档](https://maas.xfyun.cn/docs) | [JSON](https://ofind.cn/FreeModels/data/providers/xingchen/models.json) |
 | [iFlytek Spark / 讯飞星火](https://xinghuo.xfyun.cn)  | `xinghuo` | 6 | 1 | 0 | Spark Lite 永久免费但限速（5 并发）；其他 Spark 系列按 token 计费。 | [注册](https://xinghuo.xfyun.cn) | [API Key](https://console.xfyun.cn/services/cbm) | [文档](https://www.xfyun.cn/doc/spark) | [JSON](https://ofind.cn/FreeModels/data/providers/xinghuo/models.json) |
 <!-- AUTO-GENERATED:PROVIDER_INDEX_END -->
 
@@ -64,11 +64,11 @@ curl https://ofind.cn/FreeModels/v1/models.json
 | 维度 | 数量 |
 |------|-----:|
 | Provider | 19 |
-| 模型总数 | 677 |
+| 模型总数 | 675 |
 | 免费模型 (`is_free=true`) | 330 |
 | 付费可试用 (Gitee 体验等) | 92 |
-| 模型家族 | 564 |
-| 跨 Provider 家族 | 70 |
+| 模型家族 | 563 |
+| 跨 Provider 家族 | 69 |
 | · 限速免费 | 194 |
 | · 日 token 配额 | 69 |
 | · 永久免费 | 46 |
