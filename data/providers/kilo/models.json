@@ -1,9 +1,62 @@
 {
   "object": "list",
   "provider": "kilo",
-  "updated_at": "2026-10-12T08:47:18.569Z",
+  "updated_at": "2026-10-13T09:05:09.531Z",
   "total": 16,
   "data": [
+    {
+      "id": "kilo-auto/free",
+      "object": "model",
+      "created": 2052545975,
+      "owned_by": "kilo",
+      "provider": "kilo",
+      "name": "Auto Free",
+      "description": "Rotates through available free models. Limited capability and no credits required. [Learn more](https://kilo.ai/docs/code-with-ai/agents/auto-model)\n\n**Warning** Prompts may be logged by the upstream provider and used to improve their services. Not suitable for production or sensitive data workloads.",
+      "context_size": 256000,
+      "context_label": "256K",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "tool-use",
+        "reasoning"
+      ],
+      "tags": [
+        "text-generation",
+        "code-generation",
+        "chat",
+        "tool-use",
+        "reasoning"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "200 requests per hour per IP (anonymous, no API key required)"
+      },
+      "trial_scope": "specific",
+      "model_family": "kilo-auto-free",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "software-development",
+        "code-completion",
+        "conversation",
+        "q&a",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
     {
       "id": "stepfun/step-5-preview-free",
       "object": "model",
@@ -63,13 +116,13 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "kilo-auto/free",
+      "id": "stealth/glyph-cluster",
       "object": "model",
-      "created": 2052545975,
+      "created": 1623554298,
       "owned_by": "kilo",
       "provider": "kilo",
-      "name": "Auto Free",
-      "description": "Rotates through available free models. Limited capability and no credits required. [Learn more](https://kilo.ai/docs/code-with-ai/agents/auto-model)\n\n**Warning** Prompts may be logged by the upstream provider and used to improve their services. Not suitable for production or sensitive data workloads.",
+      "name": "Stealth: Glyph Cluster (free)",
+      "description": "Your prompts and completions may be retained and used to train or improve the provider's services. Glyph Cluster is a reasoning model for coding and long-context analysis, served through Vercel AI Gateway during its stealth period at no cost. It supports function calling and streaming, takes text input only, and does not support structured outputs. Zero Data Retention is not available for this model.",
       "context_size": 256000,
       "context_label": "256K",
       "price_input": 0,
@@ -82,11 +135,11 @@
         "reasoning"
       ],
       "tags": [
+        "reasoning",
         "text-generation",
-        "code-generation",
-        "chat",
         "tool-use",
-        "reasoning"
+        "code-generation",
+        "chat"
       ],
       "is_reasoning": true,
       "is_multimodal": false,
@@ -96,35 +149,35 @@
         "notes": "200 requests per hour per IP (anonymous, no API key required)"
       },
       "trial_scope": "specific",
-      "model_family": "kilo-auto-free",
+      "model_family": "stealth-glyph-cluster",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
       "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
         "content-creation",
         "writing-assistance",
         "software-development",
         "code-completion",
         "conversation",
         "q&a",
-        "problem-solving",
-        "logical-analysis",
-        "math",
         "complex-reasoning"
       ],
       "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
-      "id": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "id": "inclusionai/ling-3.1-flash",
       "object": "model",
-      "created": 590732147,
+      "created": 1783289548,
       "owned_by": "kilo",
       "provider": "kilo",
-      "name": "NVIDIA: Nemotron 3 Ultra (free)",
-      "description": "NVIDIA Nemotron 3 Ultra is an open frontier-reasoning and orchestration model from NVIDIA, with 55B active parameters out of 550B total (MoE). Built on a hybrid Transformer-Mamba mixture-of-experts architecture, it...\n\n**Terms of service** For NVIDIA free endpoints (Super/Ultra/etc): Trial use only - do not submit personal or confidential data. Your use is logged for security purposes and to improve NVIDIA products and services. The logged session data for improvement purposes is not linked to y",
-      "context_size": 1000000,
-      "context_label": "1M",
+      "name": "inclusionAI: Ling 3.1 Flash",
+      "description": "Ling 3.1 Flash is a hybrid reasoning mixture-of-experts model from inclusionAI, with 25B active parameters out of 560B total.",
+      "context_size": 262144,
+      "context_label": "262K",
       "price_input": 0,
       "price_output": 0,
       "is_free": true,
@@ -148,10 +201,9 @@
         "notes": "200 requests per hour per IP (anonymous, no API key required)"
       },
       "trial_scope": "specific",
-      "model_family": "nemotron-3-ultra-550b-a55b",
+      "model_family": "inclusionai-ling-3.1-flash",
       "aliases": [
-        "nvidia/nemotron-3-ultra-550b-a55b",
-        "nvidia/nemotron-3-ultra-550b-a55b:free"
+        "inclusionai/ling-3.1-flash"
       ],
       "tier": "large",
       "speed": "fast",
@@ -220,166 +272,6 @@
         "problem-solving",
         "logical-analysis",
         "math",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "inclusionai/ling-3.1-flash",
-      "object": "model",
-      "created": 1783289548,
-      "owned_by": "kilo",
-      "provider": "kilo",
-      "name": "inclusionAI: Ling 3.1 Flash",
-      "description": "Ling 3.1 Flash is a hybrid reasoning mixture-of-experts model from inclusionAI, with 25B active parameters out of 560B total.",
-      "context_size": 262144,
-      "context_label": "262K",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "tool-use",
-        "reasoning"
-      ],
-      "tags": [
-        "reasoning",
-        "text-generation",
-        "chat",
-        "tool-use"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": false,
-      "has_tool_use": true,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "200 requests per hour per IP (anonymous, no API key required)"
-      },
-      "trial_scope": "specific",
-      "model_family": "inclusionai-ling-3.1-flash",
-      "aliases": [
-        "inclusionai/ling-3.1-flash"
-      ],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "poolside/laguna-s-2.1:free",
-      "object": "model",
-      "created": 1987332451,
-      "owned_by": "kilo",
-      "provider": "kilo",
-      "name": "Poolside: Laguna S 2.1 (free)",
-      "description": "Laguna S 2.1 is the latest coding agent model from [Poolside](<https://poolside.ai/>). Laguna S 2.1 is a 118B total parameter model with 8B active parameters, scoring 70.2% on Terminal-Bench 2.1 and...",
-      "context_size": 262144,
-      "context_label": "262K",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "tool-use",
-        "reasoning"
-      ],
-      "tags": [
-        "text-generation",
-        "code-generation",
-        "chat",
-        "tool-use",
-        "reasoning"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": false,
-      "has_tool_use": true,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "200 requests per hour per IP (anonymous, no API key required)"
-      },
-      "trial_scope": "specific",
-      "model_family": "poolside-laguna-s-2.1",
-      "aliases": [
-        "poolside/laguna-s-2.1:free"
-      ],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "software-development",
-        "code-completion",
-        "conversation",
-        "q&a",
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "stealth/glyph-cluster",
-      "object": "model",
-      "created": 1623554298,
-      "owned_by": "kilo",
-      "provider": "kilo",
-      "name": "Stealth: Glyph Cluster (free)",
-      "description": "Your prompts and completions may be retained and used to train or improve the provider's services. Glyph Cluster is a reasoning model for coding and long-context analysis, served through Vercel AI Gateway during its stealth period at no cost. It supports function calling and streaming, takes text input only, and does not support structured outputs. Zero Data Retention is not available for this model.",
-      "context_size": 256000,
-      "context_label": "256K",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "tool-use",
-        "reasoning"
-      ],
-      "tags": [
-        "reasoning",
-        "text-generation",
-        "tool-use",
-        "code-generation",
-        "chat"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": false,
-      "has_tool_use": true,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "200 requests per hour per IP (anonymous, no API key required)"
-      },
-      "trial_scope": "specific",
-      "model_family": "stealth-glyph-cluster",
-      "aliases": [],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "content-creation",
-        "writing-assistance",
-        "software-development",
-        "code-completion",
-        "conversation",
-        "q&a",
         "complex-reasoning"
       ],
       "performance_level": "mid",
@@ -555,6 +447,61 @@
       "estimated_latency": "< 1s"
     },
     {
+      "id": "poolside/laguna-s-2.1:free",
+      "object": "model",
+      "created": 1987332451,
+      "owned_by": "kilo",
+      "provider": "kilo",
+      "name": "Poolside: Laguna S 2.1 (free)",
+      "description": "Laguna S 2.1 is the latest coding agent model from [Poolside](<https://poolside.ai/>). Laguna S 2.1 is a 118B total parameter model with 8B active parameters, scoring 70.2% on Terminal-Bench 2.1 and...",
+      "context_size": 262144,
+      "context_label": "262K",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "tool-use",
+        "reasoning"
+      ],
+      "tags": [
+        "text-generation",
+        "code-generation",
+        "chat",
+        "tool-use",
+        "reasoning"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "200 requests per hour per IP (anonymous, no API key required)"
+      },
+      "trial_scope": "specific",
+      "model_family": "poolside-laguna-s-2.1",
+      "aliases": [
+        "poolside/laguna-s-2.1:free"
+      ],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "software-development",
+        "code-completion",
+        "conversation",
+        "q&a",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
       "id": "poolside/laguna-xs-2.1:free",
       "object": "model",
       "created": 1715082907,
@@ -722,6 +669,59 @@
         "problem-solving",
         "logical-analysis",
         "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "object": "model",
+      "created": 590732147,
+      "owned_by": "kilo",
+      "provider": "kilo",
+      "name": "NVIDIA: Nemotron 3 Ultra (free)",
+      "description": "NVIDIA Nemotron 3 Ultra is an open frontier-reasoning and orchestration model from NVIDIA, with 55B active parameters out of 550B total (MoE). Built on a hybrid Transformer-Mamba mixture-of-experts architecture, it...\n\n**Terms of service** For NVIDIA free endpoints (Super/Ultra/etc): Trial use only - do not submit personal or confidential data. Your use is logged for security purposes and to improve NVIDIA products and services. The logged session data for improvement purposes is not linked to y",
+      "context_size": 1000000,
+      "context_label": "1M",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "tool-use",
+        "reasoning"
+      ],
+      "tags": [
+        "reasoning",
+        "text-generation",
+        "chat",
+        "tool-use"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "200 requests per hour per IP (anonymous, no API key required)"
+      },
+      "trial_scope": "specific",
+      "model_family": "nemotron-3-ultra-550b-a55b",
+      "aliases": [
+        "nvidia/nemotron-3-ultra-550b-a55b",
+        "nvidia/nemotron-3-ultra-550b-a55b:free"
+      ],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
         "complex-reasoning"
       ],
       "performance_level": "mid",
