@@ -1,8 +1,8 @@
 {
   "object": "list",
   "provider": "kilo",
-  "updated_at": "2026-10-13T09:05:09.531Z",
-  "total": 16,
+  "updated_at": "2026-10-14T07:14:55.846Z",
+  "total": 15,
   "data": [
     {
       "id": "kilo-auto/free",
@@ -58,13 +58,13 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "stepfun/step-5-preview-free",
+      "id": "nvidia/nemotron-3-ultra-550b-a55b:free",
       "object": "model",
-      "created": 493256365,
+      "created": 590732147,
       "owned_by": "kilo",
       "provider": "kilo",
-      "name": "StepFun: Step 5 Preview (free)",
-      "description": "Step 5 Preview is StepFun's flagship model for agentic work, with strong capabilities in software engineering, professional knowledge work, and finance. It natively supports text, image, and video input with a 1M-token context window and up to 64K output tokens. The model supports tool calling, structured outputs, and selectable reasoning levels (low/medium/high) for long-context research, coding, and multi-step workflows.",
+      "name": "NVIDIA: Nemotron 3 Ultra (free)",
+      "description": "NVIDIA Nemotron 3 Ultra is an open frontier-reasoning and orchestration model from NVIDIA, with 55B active parameters out of 550B total (MoE). Built on a hybrid Transformer-Mamba mixture-of-experts architecture, it...\n\n**Terms of service** For NVIDIA free endpoints (Super/Ultra/etc): Trial use only - do not submit personal or confidential data. Your use is logged for security purposes and to improve NVIDIA products and services. The logged session data for improvement purposes is not linked to y",
       "context_size": 1000000,
       "context_label": "1M",
       "price_input": 0,
@@ -73,46 +73,41 @@
       "capabilities": [
         "chat",
         "text-generation",
-        "vision",
         "tool-use",
         "reasoning"
       ],
       "tags": [
         "reasoning",
-        "vision",
         "text-generation",
-        "code-generation",
         "chat",
-        "tool-use",
-        "multimodal"
+        "tool-use"
       ],
       "is_reasoning": true,
-      "is_multimodal": true,
+      "is_multimodal": false,
       "has_tool_use": true,
       "free_mechanism": "rate-limited",
       "free_quota": {
         "notes": "200 requests per hour per IP (anonymous, no API key required)"
       },
       "trial_scope": "specific",
-      "model_family": "stepfun-step-5-preview-free",
-      "aliases": [],
+      "model_family": "nemotron-3-ultra-550b-a55b",
+      "aliases": [
+        "nvidia/nemotron-3-ultra-550b-a55b",
+        "nvidia/nemotron-3-ultra-550b-a55b:free"
+      ],
       "tier": "large",
       "speed": "fast",
       "use_case": [
         "problem-solving",
         "logical-analysis",
         "math",
-        "image-understanding",
-        "visual-q&a",
         "content-creation",
         "writing-assistance",
-        "software-development",
-        "code-completion",
         "conversation",
         "q&a",
         "complex-reasoning"
       ],
-      "performance_level": "high",
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     },
     {
@@ -161,58 +156,6 @@
         "writing-assistance",
         "software-development",
         "code-completion",
-        "conversation",
-        "q&a",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "inclusionai/ling-3.1-flash",
-      "object": "model",
-      "created": 1783289548,
-      "owned_by": "kilo",
-      "provider": "kilo",
-      "name": "inclusionAI: Ling 3.1 Flash",
-      "description": "Ling 3.1 Flash is a hybrid reasoning mixture-of-experts model from inclusionAI, with 25B active parameters out of 560B total.",
-      "context_size": 262144,
-      "context_label": "262K",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "tool-use",
-        "reasoning"
-      ],
-      "tags": [
-        "reasoning",
-        "text-generation",
-        "chat",
-        "tool-use"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": false,
-      "has_tool_use": true,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "200 requests per hour per IP (anonymous, no API key required)"
-      },
-      "trial_scope": "specific",
-      "model_family": "inclusionai-ling-3.1-flash",
-      "aliases": [
-        "inclusionai/ling-3.1-flash"
-      ],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "content-creation",
-        "writing-assistance",
         "conversation",
         "q&a",
         "complex-reasoning"
@@ -675,59 +618,6 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "nvidia/nemotron-3-ultra-550b-a55b:free",
-      "object": "model",
-      "created": 590732147,
-      "owned_by": "kilo",
-      "provider": "kilo",
-      "name": "NVIDIA: Nemotron 3 Ultra (free)",
-      "description": "NVIDIA Nemotron 3 Ultra is an open frontier-reasoning and orchestration model from NVIDIA, with 55B active parameters out of 550B total (MoE). Built on a hybrid Transformer-Mamba mixture-of-experts architecture, it...\n\n**Terms of service** For NVIDIA free endpoints (Super/Ultra/etc): Trial use only - do not submit personal or confidential data. Your use is logged for security purposes and to improve NVIDIA products and services. The logged session data for improvement purposes is not linked to y",
-      "context_size": 1000000,
-      "context_label": "1M",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "tool-use",
-        "reasoning"
-      ],
-      "tags": [
-        "reasoning",
-        "text-generation",
-        "chat",
-        "tool-use"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": false,
-      "has_tool_use": true,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "200 requests per hour per IP (anonymous, no API key required)"
-      },
-      "trial_scope": "specific",
-      "model_family": "nemotron-3-ultra-550b-a55b",
-      "aliases": [
-        "nvidia/nemotron-3-ultra-550b-a55b",
-        "nvidia/nemotron-3-ultra-550b-a55b:free"
-      ],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
       "id": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
       "object": "model",
       "created": 918644060,
@@ -898,6 +788,64 @@
         "complex-reasoning"
       ],
       "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "stepfun/step-5-preview-free",
+      "object": "model",
+      "created": 493256365,
+      "owned_by": "kilo",
+      "provider": "kilo",
+      "name": "StepFun: Step 5 Preview (free)",
+      "description": "Step 5 Preview is StepFun's flagship model for agentic work, with strong capabilities in software engineering, professional knowledge work, and finance. It natively supports text, image, and video input with a 1M-token context window and up to 64K output tokens. The model supports tool calling, structured outputs, and selectable reasoning levels (low/medium/high) for long-context research, coding, and multi-step workflows.",
+      "context_size": 1000000,
+      "context_label": "1M",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision",
+        "tool-use",
+        "reasoning"
+      ],
+      "tags": [
+        "reasoning",
+        "vision",
+        "text-generation",
+        "code-generation",
+        "chat",
+        "tool-use",
+        "multimodal"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "200 requests per hour per IP (anonymous, no API key required)"
+      },
+      "trial_scope": "specific",
+      "model_family": "stepfun-step-5-preview-free",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "software-development",
+        "code-completion",
+        "conversation",
+        "q&a",
+        "complex-reasoning"
+      ],
+      "performance_level": "high",
       "estimated_latency": "< 1s"
     }
   ]
