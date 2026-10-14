@@ -1,8 +1,8 @@
 {
   "object": "list",
   "view": "free-quota",
-  "updated_at": "2026-10-13T09:05:09.545Z",
-  "total": 90,
+  "updated_at": "2026-10-14T07:14:55.859Z",
+  "total": 91,
   "filters": {
     "freeMechanism": [
       "daily-tokens",
@@ -2253,8 +2253,8 @@
       "aliases": [
         "whisper-large-v3-turbo",
         "whisper-large-v3",
-        "groq/whisper-large-v3-turbo",
         "groq/whisper-large-v3",
+        "groq/whisper-large-v3-turbo",
         "ovh/whisper-large-v3-turbo",
         "ovh/whisper-large-v3",
         "sambanova/Whisper-Large-v3"
@@ -2959,6 +2959,60 @@
       "estimated_latency": "< 1s"
     },
     {
+      "id": "minimax-m2.7",
+      "object": "model",
+      "created": 1352925492,
+      "owned_by": "llm7",
+      "provider": "llm7",
+      "name": "minimax-m2.7",
+      "description": "LLM7 chat (turbo tier)",
+      "context_size": 180000,
+      "context_label": "180K",
+      "price_input": 0.03,
+      "price_output": 0.05,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "tool-use",
+        "reasoning"
+      ],
+      "tags": [
+        "text-generation",
+        "chat",
+        "tool-use",
+        "reasoning"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "rpm": 60,
+        "tokens_per_day": 100000,
+        "notes": "Free API token from dash.llm7.io (signup required, no payment). 100,000 tokens per 24 hours across input+output 60 requests per minute, 250 per hour. Official docs warn the free-token quota may be reduced without notice. price_input/price_output are LLM7 paid-usage rates (USD per 1M tokens), not what the free tier costs."
+      },
+      "trial_scope": "specific",
+      "model_family": "minimax-m2.7",
+      "aliases": [
+        "MiniMax-M2.7"
+      ],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
       "id": "mistral-Nemo-Instruct-2407",
       "object": "model",
       "created": 166918731,
@@ -3483,8 +3537,8 @@
         "cloudflare/@cf/openai/whisper-large-v3-turbo",
         "whisper-large-v3-turbo",
         "whisper-large-v3",
-        "groq/whisper-large-v3-turbo",
         "groq/whisper-large-v3",
+        "groq/whisper-large-v3-turbo",
         "ovh/whisper-large-v3-turbo",
         "ovh/whisper-large-v3"
       ],

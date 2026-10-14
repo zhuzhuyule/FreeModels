@@ -21,8 +21,8 @@
 
 | 指标 | 数量 |
 |---|---:|
-| 总模型 | 19 |
-| 免费模型 | 19 |
+| 总模型 | 17 |
+| 免费模型 | 17 |
 | 付费可试用 | 0 |
 
 ## 免费策略
@@ -33,7 +33,6 @@
 
 | Provider | Model ID | 名称 | 上下文 | 免费类型 | 限制 |
 |---|---|---|---:|---|---|
-| openrouter  | `apodex/apodex-1.1-mini:free` | Apodex: Apodex 1.1 Mini (free) | 262K | 限速免费 | 20 RPM / 50 RPD / Free-variant limit is 20 RPM and 50 requests/day; a one-time purchase of 10+ USD credits raises the daily ceiling to 1000. Providers may log prompts for training on free routes. |
 | openrouter  | `cohere/north-mini-code:free` | Cohere: North Mini Code (free) | 256K | 限速免费 | 20 RPM / 50 RPD / Free-variant limit is 20 RPM and 50 requests/day; a one-time purchase of 10+ USD credits raises the daily ceiling to 1000. Providers may log prompts for training on free routes. |
 | openrouter  | `dots-studio/dots-3-note-preview:free` | Dots Studio: Dots3-Note Preview (free) | 512K | 限速免费 | 20 RPM / 50 RPD / Free-variant limit is 20 RPM and 50 requests/day; a one-time purchase of 10+ USD credits raises the daily ceiling to 1000. Providers may log prompts for training on free routes. |
 | openrouter  | `free` | Free Models Router | 200K | 限速免费 | 20 RPM / 50 RPD / Free-variant limit is 20 RPM and 50 requests/day; a one-time purchase of 10+ USD credits raises the daily ceiling to 1000. Providers may log prompts for training on free routes. |
@@ -41,7 +40,6 @@
 | openrouter  | `google/gemma-4-31b-it:free` | Google: Gemma 4 31B (free) | 262K | 限速免费 | 20 RPM / 50 RPD / Free-variant limit is 20 RPM and 50 requests/day; a one-time purchase of 10+ USD credits raises the daily ceiling to 1000. Providers may log prompts for training on free routes. |
 | openrouter  | `google/lyria-3-clip-preview` | Google: Lyria 3 Clip Preview | 1M | 限速免费 | 20 RPM / 50 RPD / Free-variant limit is 20 RPM and 50 requests/day; a one-time purchase of 10+ USD credits raises the daily ceiling to 1000. Providers may log prompts for training on free routes. |
 | openrouter  | `google/lyria-3-pro-preview` | Google: Lyria 3 Pro Preview | 1M | 限速免费 | 20 RPM / 50 RPD / Free-variant limit is 20 RPM and 50 requests/day; a one-time purchase of 10+ USD credits raises the daily ceiling to 1000. Providers may log prompts for training on free routes. |
-| openrouter  | `inclusionai/ling-3.1-flash` | inclusionAI: Ling 3.1 Flash | 262K | 限速免费 | 20 RPM / 50 RPD / Free-variant limit is 20 RPM and 50 requests/day; a one-time purchase of 10+ USD credits raises the daily ceiling to 1000. Providers may log prompts for training on free routes. |
 | openrouter  | `liquid/lfm-2.5-2.6b:free` | LiquidAI: LFM2.5-2.6B (free) | 66K | 限速免费 | 20 RPM / 50 RPD / Free-variant limit is 20 RPM and 50 requests/day; a one-time purchase of 10+ USD credits raises the daily ceiling to 1000. Providers may log prompts for training on free routes. |
 | openrouter  | `nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free` | NVIDIA: Nemotron 3 Nano Omni (free) | 256K | 限速免费 | 20 RPM / 50 RPD / Free-variant limit is 20 RPM and 50 requests/day; a one-time purchase of 10+ USD credits raises the daily ceiling to 1000. Providers may log prompts for training on free routes. |
 | openrouter  | `nvidia/nemotron-3-super-120b-a12b:free` | NVIDIA: Nemotron 3 Super (free) | 262K | 限速免费 | 20 RPM / 50 RPD / Free-variant limit is 20 RPM and 50 requests/day; a one-time purchase of 10+ USD credits raises the daily ceiling to 1000. Providers may log prompts for training on free routes. |

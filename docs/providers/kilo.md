@@ -21,8 +21,8 @@
 
 | 指标 | 数量 |
 |---|---:|
-| 总模型 | 16 |
-| 免费模型 | 16 |
+| 总模型 | 15 |
+| 免费模型 | 15 |
 | 付费可试用 | 0 |
 
 ## 免费策略
@@ -35,7 +35,6 @@
 |---|---|---|---:|---|---|
 | kilo  | `cohere/north-mini-code:free` | Cohere: North Mini Code (free) | 256K | 限速免费 | 200 requests per hour per IP (anonymous, no API key required) |
 | kilo  | `dots-studio/dots-3-note-preview:free` | Dots Studio: Dots3-Note Preview (free) | 512K | 限速免费 | 200 requests per hour per IP (anonymous, no API key required) |
-| kilo  | `inclusionai/ling-3.1-flash` | inclusionAI: Ling 3.1 Flash | 262K | 限速免费 | 200 requests per hour per IP (anonymous, no API key required) |
 | kilo  | `kilo-auto/free` | Auto Free | 256K | 限速免费 | 200 requests per hour per IP (anonymous, no API key required) |
 | kilo  | `liquid/lfm-2.5-2.6b:free` | LiquidAI: LFM2.5-2.6B (free) | 66K | 限速免费 | 200 requests per hour per IP (anonymous, no API key required) |
 | kilo  | `nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free` | NVIDIA: Nemotron 3 Nano Omni (free) | 256K | 限速免费 | 200 requests per hour per IP (anonymous, no API key required) |
