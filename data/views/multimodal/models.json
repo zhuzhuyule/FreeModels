@@ -1,7 +1,7 @@
 {
   "object": "list",
   "view": "multimodal",
-  "updated_at": "2026-10-14T07:14:55.862Z",
+  "updated_at": "2026-10-15T07:06:30.313Z",
   "total": 200,
   "filters": {
     "tags": "vision"
@@ -8263,44 +8263,42 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "Mistral-Small-3.2-24B-Instruct-2506",
+      "id": "Qwen2.5-VL-72B-Instruct",
       "object": "model",
-      "created": 1936234523,
+      "created": 1525125023,
       "owned_by": "ovh",
       "provider": "ovh",
-      "name": "Mistral-Small-3.2-24B-Instruct-2506",
-      "description": "Building upon Mistral Small 3 (2501), Mistral Small 3.2 (2506) adds state-of-the-art vision understanding and enhances long context capabilities up to 128k tokens without compromising text performance.\nWith 24 billion parameters, this model achieves top-tier capabilities in both text and vision tasks.\nThis model is a minor update of Mistral-Small-3.1-24B-Instruct-2503, which is an instruction-finetuned version of: Mistral-Small-3.1-24B-Base-2503.",
-      "context_size": 131072,
-      "context_label": "131K",
-      "price_input": 0.1,
-      "price_output": 0.31,
+      "name": "Qwen2.5-VL-72B-Instruct",
+      "description": "Qwen2.5-VL is a powerful vision-language model, designed for advanced image understanding. It can generate detailed image captions, analyze documents, OCR, detect objects, and answer questions based on visuals, making it useful for AI assistants, RAG and Agents.",
+      "context_size": 32768,
+      "context_label": "33K",
+      "price_input": 1.01,
+      "price_output": 1.01,
       "is_free": true,
       "capabilities": [
         "chat",
         "text-generation",
-        "vision",
-        "tool-use"
+        "vision"
       ],
       "tags": [
         "chat",
         "text-generation",
         "vision",
-        "tool-use",
         "multimodal"
       ],
       "is_reasoning": false,
       "is_multimodal": true,
-      "has_tool_use": true,
+      "has_tool_use": false,
       "free_mechanism": "rate-limited",
       "free_quota": {
         "rpm": 2,
         "notes": "Anonymous access (no API key, no signup): 2 requests per minute, per IP and per model. With an API key the same models are billed pay-as-you-go per token (400 RPM per project) — price_input/price_output are those rates, not what the anonymous tier costs."
       },
       "trial_scope": "all",
-      "model_family": "mistral-small-3.2-24b",
-      "model_variant": "instruct",
+      "model_family": "qwen2.5-vl-72b",
+      "model_variant": "vl",
       "aliases": [],
-      "parameter_count": 24000000000,
+      "parameter_count": 72000000000,
       "tier": "large",
       "speed": "fast",
       "use_case": [
@@ -8315,17 +8313,17 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "Qwen3.5-397B-A17B",
+      "id": "Qwen3.6-27B",
       "object": "model",
-      "created": 362190396,
+      "created": 1102402603,
       "owned_by": "ovh",
       "provider": "ovh",
-      "name": "Qwen3.5-397B-A17B",
-      "description": "Qwen3.5-397B-A17B is a highly efficient, reasoning focused MoE (Mixture of Experts) model delivering state-of-the-art performance in language, vision, and multimodal tasks, with strong capabilities in code, reasoning, and real-world adaptability.",
+      "name": "Qwen3.6-27B",
+      "description": "Qwen3.6-27B is a 27-billion-parameter multimodal causal language model developed by Alibaba's Qwen team, released as an open-weight variant following the February release of the Qwen3.5 series. It is built as an Image-Text-to-Text model.",
       "context_size": 262144,
       "context_label": "262K",
-      "price_input": 0.71,
-      "price_output": 4.25,
+      "price_input": 0.47,
+      "price_output": 3.19,
       "is_free": true,
       "capabilities": [
         "chat",
@@ -8351,11 +8349,11 @@
         "notes": "Anonymous access (no API key, no signup): 2 requests per minute, per IP and per model. With an API key the same models are billed pay-as-you-go per token (400 RPM per project) — price_input/price_output are those rates, not what the anonymous tier costs."
       },
       "trial_scope": "all",
-      "model_family": "qwen3.5-397b-a17b",
+      "model_family": "qwen3.6-27b",
       "aliases": [
-        "xingchen/xopqwen35397b"
+        "Qwen3.6-27B"
       ],
-      "parameter_count": 397000000000,
+      "parameter_count": 27000000000,
       "tier": "large",
       "speed": "fast",
       "use_case": [
@@ -8431,115 +8429,6 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "Qwen3.6-27B",
-      "object": "model",
-      "created": 1102402603,
-      "owned_by": "ovh",
-      "provider": "ovh",
-      "name": "Qwen3.6-27B",
-      "description": "Qwen3.6-27B is a 27-billion-parameter multimodal causal language model developed by Alibaba's Qwen team, released as an open-weight variant following the February release of the Qwen3.5 series. It is built as an Image-Text-to-Text model.",
-      "context_size": 262144,
-      "context_label": "262K",
-      "price_input": 0.47,
-      "price_output": 3.19,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "vision",
-        "reasoning",
-        "tool-use"
-      ],
-      "tags": [
-        "chat",
-        "text-generation",
-        "vision",
-        "reasoning",
-        "tool-use",
-        "multimodal"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": true,
-      "has_tool_use": true,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "rpm": 2,
-        "notes": "Anonymous access (no API key, no signup): 2 requests per minute, per IP and per model. With an API key the same models are billed pay-as-you-go per token (400 RPM per project) — price_input/price_output are those rates, not what the anonymous tier costs."
-      },
-      "trial_scope": "all",
-      "model_family": "qwen3.6-27b",
-      "aliases": [
-        "Qwen3.6-27B"
-      ],
-      "parameter_count": 27000000000,
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance",
-        "image-understanding",
-        "visual-q&a",
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "Qwen2.5-VL-72B-Instruct",
-      "object": "model",
-      "created": 1525125023,
-      "owned_by": "ovh",
-      "provider": "ovh",
-      "name": "Qwen2.5-VL-72B-Instruct",
-      "description": "Qwen2.5-VL is a powerful vision-language model, designed for advanced image understanding. It can generate detailed image captions, analyze documents, OCR, detect objects, and answer questions based on visuals, making it useful for AI assistants, RAG and Agents.",
-      "context_size": 32768,
-      "context_label": "33K",
-      "price_input": 1.01,
-      "price_output": 1.01,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "vision"
-      ],
-      "tags": [
-        "chat",
-        "text-generation",
-        "vision",
-        "multimodal"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "rpm": 2,
-        "notes": "Anonymous access (no API key, no signup): 2 requests per minute, per IP and per model. With an API key the same models are billed pay-as-you-go per token (400 RPM per project) — price_input/price_output are those rates, not what the anonymous tier costs."
-      },
-      "trial_scope": "all",
-      "model_family": "qwen2.5-vl-72b",
-      "model_variant": "vl",
-      "aliases": [],
-      "parameter_count": 72000000000,
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance",
-        "image-understanding",
-        "visual-q&a"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
       "id": "Qwen3.8-27B",
       "object": "model",
       "created": 1104774445,
@@ -8596,6 +8485,117 @@
         "logical-analysis",
         "math",
         "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "Qwen3.5-397B-A17B",
+      "object": "model",
+      "created": 362190396,
+      "owned_by": "ovh",
+      "provider": "ovh",
+      "name": "Qwen3.5-397B-A17B",
+      "description": "Qwen3.5-397B-A17B is a highly efficient, reasoning focused MoE (Mixture of Experts) model delivering state-of-the-art performance in language, vision, and multimodal tasks, with strong capabilities in code, reasoning, and real-world adaptability.",
+      "context_size": 262144,
+      "context_label": "262K",
+      "price_input": 0.71,
+      "price_output": 4.25,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision",
+        "reasoning",
+        "tool-use"
+      ],
+      "tags": [
+        "chat",
+        "text-generation",
+        "vision",
+        "reasoning",
+        "tool-use",
+        "multimodal"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 2,
+        "notes": "Anonymous access (no API key, no signup): 2 requests per minute, per IP and per model. With an API key the same models are billed pay-as-you-go per token (400 RPM per project) — price_input/price_output are those rates, not what the anonymous tier costs."
+      },
+      "trial_scope": "all",
+      "model_family": "qwen3.5-397b-a17b",
+      "aliases": [
+        "xingchen/xopqwen35397b"
+      ],
+      "parameter_count": 397000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "image-understanding",
+        "visual-q&a",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "Mistral-Small-3.2-24B-Instruct-2506",
+      "object": "model",
+      "created": 1936234523,
+      "owned_by": "ovh",
+      "provider": "ovh",
+      "name": "Mistral-Small-3.2-24B-Instruct-2506",
+      "description": "Building upon Mistral Small 3 (2501), Mistral Small 3.2 (2506) adds state-of-the-art vision understanding and enhances long context capabilities up to 128k tokens without compromising text performance.\nWith 24 billion parameters, this model achieves top-tier capabilities in both text and vision tasks.\nThis model is a minor update of Mistral-Small-3.1-24B-Instruct-2503, which is an instruction-finetuned version of: Mistral-Small-3.1-24B-Base-2503.",
+      "context_size": 131072,
+      "context_label": "131K",
+      "price_input": 0.1,
+      "price_output": 0.31,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision",
+        "tool-use"
+      ],
+      "tags": [
+        "chat",
+        "text-generation",
+        "vision",
+        "tool-use",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 2,
+        "notes": "Anonymous access (no API key, no signup): 2 requests per minute, per IP and per model. With an API key the same models are billed pay-as-you-go per token (400 RPM per project) — price_input/price_output are those rates, not what the anonymous tier costs."
+      },
+      "trial_scope": "all",
+      "model_family": "mistral-small-3.2-24b",
+      "model_variant": "instruct",
+      "aliases": [],
+      "parameter_count": 24000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "image-understanding",
+        "visual-q&a"
       ],
       "performance_level": "mid",
       "estimated_latency": "< 1s"
