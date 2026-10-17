@@ -1,181 +1,50 @@
 {
   "object": "list",
   "provider": "groq",
-  "updated_at": "2026-10-15T07:06:30.300Z",
+  "updated_at": "2026-10-17T06:42:27.887Z",
   "total": 11,
   "data": [
     {
-      "id": "allam-2-7b",
+      "id": "whisper-large-v3-turbo",
       "object": "model",
-      "created": 1278808711,
+      "created": 831031114,
       "owned_by": "groq",
       "provider": "groq",
-      "name": "allam-2-7b",
-      "context_size": 4096,
-      "context_label": "4K",
+      "name": "Whisper Large V3 Turbo",
+      "context_size": 448,
+      "context_label": "448",
       "is_free": true,
       "capabilities": [
-        "chat",
-        "text-generation"
+        "speech-recognition"
       ],
       "tags": [
-        "chat",
-        "text-generation"
+        "speech-recognition"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
       "free_quota": {
-        "rpd": 7000,
-        "tpm": 6000
+        "rpd": 2000,
+        "rpm": 20
       },
       "trial_scope": "all",
-      "model_family": "allam-2-7b",
-      "aliases": [],
-      "parameter_count": 7000000000,
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "openai/gpt-oss-safeguard-20b",
-      "object": "model",
-      "created": 573618965,
-      "owned_by": "groq",
-      "provider": "groq",
-      "name": "Safety GPT OSS 20B",
-      "context_size": 131072,
-      "context_label": "131K",
-      "price_input": 0.075,
-      "price_output": 0.3,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "moderation",
-        "chat",
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "rpd": 1000,
-        "tpm": 2000,
-        "rpm": 3,
-        "tokens_per_day": 200000
-      },
-      "trial_scope": "all",
-      "model_family": "gpt-oss-safeguard-20b",
-      "aliases": [],
-      "parameter_count": 20000000000,
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-filtering",
-        "safety",
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "openai/gpt-oss-20b",
-      "object": "model",
-      "created": 772969846,
-      "owned_by": "groq",
-      "provider": "groq",
-      "name": "GPT OSS 20B",
-      "context_size": 131072,
-      "context_label": "131K",
-      "price_input": 0.075,
-      "price_output": 0.3,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "chat",
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "rpd": 1000,
-        "tpm": 8000,
-        "rpm": 30,
-        "tokens_per_day": 200000
-      },
-      "trial_scope": "all",
-      "model_family": "gpt-oss-20b",
+      "model_family": "whisper-large-v3",
+      "model_variant": "turbo",
       "aliases": [
-        "cloudflare/@cf/openai/gpt-oss-20b",
-        "openai/gpt-oss-20b",
-        "ovh/gpt-oss-20b"
+        "cloudflare/@cf/openai/whisper-large-v3-turbo",
+        "whisper-large-v3-turbo",
+        "whisper-large-v3",
+        "groq/whisper-large-v3",
+        "ovh/whisper-large-v3",
+        "ovh/whisper-large-v3-turbo",
+        "sambanova/Whisper-Large-v3"
       ],
-      "parameter_count": 20000000000,
       "tier": "medium",
       "speed": "fast",
       "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "canopylabs/orpheus-v1-english",
-      "object": "model",
-      "created": 1993843289,
-      "owned_by": "groq",
-      "provider": "groq",
-      "name": "Canopy Labs Orpheus V1 English",
-      "context_size": 4000,
-      "context_label": "4K",
-      "is_free": true,
-      "capabilities": [
-        "speech-synthesis"
-      ],
-      "tags": [
-        "speech-synthesis"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "rpd": 100,
-        "tpm": 1200,
-        "rpm": 10,
-        "tokens_per_day": 3600
-      },
-      "trial_scope": "all",
-      "model_family": "orpheus-v1-english",
-      "aliases": [],
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "text-to-speech",
-        "voice-output"
+        "transcription",
+        "voice-input"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
@@ -217,6 +86,55 @@
       "use_case": [
         "content-filtering",
         "safety"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "qwen/qwen3.8-27b",
+      "object": "model",
+      "created": 1620215523,
+      "owned_by": "groq",
+      "provider": "groq",
+      "name": "Qwen/Qwen3.8-27B",
+      "context_size": 131072,
+      "context_label": "131K",
+      "price_input": 0.8,
+      "price_output": 4,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpd": 1000,
+        "tpm": 8000,
+        "rpm": 30,
+        "tokens_per_day": 200000
+      },
+      "trial_scope": "all",
+      "model_family": "qwen3.8-27b",
+      "aliases": [
+        "cloudflare/@cf/qwen/qwen3.8-27b",
+        "qwen3.8-27b",
+        "ovh/Qwen3.8-27B"
+      ],
+      "parameter_count": 27000000000,
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
@@ -313,90 +231,50 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "whisper-large-v3",
+      "id": "openai/gpt-oss-20b",
       "object": "model",
-      "created": 821695011,
+      "created": 772969846,
       "owned_by": "groq",
       "provider": "groq",
-      "name": "Whisper",
-      "context_size": 448,
-      "context_label": "448",
+      "name": "GPT OSS 20B",
+      "context_size": 131072,
+      "context_label": "131K",
+      "price_input": 0.075,
+      "price_output": 0.3,
       "is_free": true,
       "capabilities": [
-        "speech-recognition"
+        "chat",
+        "text-generation"
       ],
       "tags": [
-        "speech-recognition"
+        "chat",
+        "text-generation"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
       "free_quota": {
-        "rpd": 2000,
-        "rpm": 20
+        "rpd": 1000,
+        "tpm": 8000,
+        "rpm": 30,
+        "tokens_per_day": 200000
       },
       "trial_scope": "all",
-      "model_family": "whisper-large-v3",
+      "model_family": "gpt-oss-20b",
       "aliases": [
-        "cloudflare/@cf/openai/whisper-large-v3-turbo",
-        "whisper-large-v3-turbo",
-        "whisper-large-v3",
-        "groq/whisper-large-v3-turbo",
-        "ovh/whisper-large-v3-turbo",
-        "ovh/whisper-large-v3",
-        "sambanova/Whisper-Large-v3"
+        "cloudflare/@cf/openai/gpt-oss-20b",
+        "openai/gpt-oss-20b",
+        "ovh/gpt-oss-20b"
       ],
+      "parameter_count": 20000000000,
       "tier": "medium",
       "speed": "fast",
       "use_case": [
-        "transcription",
-        "voice-input"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "whisper-large-v3-turbo",
-      "object": "model",
-      "created": 831031114,
-      "owned_by": "groq",
-      "provider": "groq",
-      "name": "Whisper Large V3 Turbo",
-      "context_size": 448,
-      "context_label": "448",
-      "is_free": true,
-      "capabilities": [
-        "speech-recognition"
-      ],
-      "tags": [
-        "speech-recognition"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "rpd": 2000,
-        "rpm": 20
-      },
-      "trial_scope": "all",
-      "model_family": "whisper-large-v3",
-      "model_variant": "turbo",
-      "aliases": [
-        "cloudflare/@cf/openai/whisper-large-v3-turbo",
-        "whisper-large-v3-turbo",
-        "whisper-large-v3",
-        "groq/whisper-large-v3",
-        "ovh/whisper-large-v3-turbo",
-        "ovh/whisper-large-v3",
-        "sambanova/Whisper-Large-v3"
-      ],
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "transcription",
-        "voice-input"
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
@@ -442,16 +320,144 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "qwen/qwen3.8-27b",
+      "id": "openai/gpt-oss-safeguard-20b",
       "object": "model",
-      "created": 1620215523,
+      "created": 573618965,
       "owned_by": "groq",
       "provider": "groq",
-      "name": "Qwen/Qwen3.8-27B",
+      "name": "Safety GPT OSS 20B",
       "context_size": 131072,
       "context_label": "131K",
-      "price_input": 0.8,
-      "price_output": 4,
+      "price_input": 0.075,
+      "price_output": 0.3,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "moderation",
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpd": 1000,
+        "tpm": 2000,
+        "rpm": 3,
+        "tokens_per_day": 200000
+      },
+      "trial_scope": "all",
+      "model_family": "gpt-oss-safeguard-20b",
+      "aliases": [],
+      "parameter_count": 20000000000,
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-filtering",
+        "safety",
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "canopylabs/orpheus-v1-english",
+      "object": "model",
+      "created": 1993843289,
+      "owned_by": "groq",
+      "provider": "groq",
+      "name": "Canopy Labs Orpheus V1 English",
+      "context_size": 4000,
+      "context_label": "4K",
+      "is_free": true,
+      "capabilities": [
+        "speech-synthesis"
+      ],
+      "tags": [
+        "speech-synthesis"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpd": 100,
+        "tpm": 1200,
+        "rpm": 10,
+        "tokens_per_day": 3600
+      },
+      "trial_scope": "all",
+      "model_family": "orpheus-v1-english",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "text-to-speech",
+        "voice-output"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "whisper-large-v3",
+      "object": "model",
+      "created": 821695011,
+      "owned_by": "groq",
+      "provider": "groq",
+      "name": "Whisper",
+      "context_size": 448,
+      "context_label": "448",
+      "is_free": true,
+      "capabilities": [
+        "speech-recognition"
+      ],
+      "tags": [
+        "speech-recognition"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpd": 2000,
+        "rpm": 20
+      },
+      "trial_scope": "all",
+      "model_family": "whisper-large-v3",
+      "aliases": [
+        "cloudflare/@cf/openai/whisper-large-v3-turbo",
+        "whisper-large-v3-turbo",
+        "whisper-large-v3",
+        "groq/whisper-large-v3-turbo",
+        "ovh/whisper-large-v3",
+        "ovh/whisper-large-v3-turbo",
+        "sambanova/Whisper-Large-v3"
+      ],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "transcription",
+        "voice-input"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "allam-2-7b",
+      "object": "model",
+      "created": 1278808711,
+      "owned_by": "groq",
+      "provider": "groq",
+      "name": "allam-2-7b",
+      "context_size": 4096,
+      "context_label": "4K",
       "is_free": true,
       "capabilities": [
         "chat",
@@ -466,19 +472,13 @@
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
       "free_quota": {
-        "rpd": 1000,
-        "tpm": 8000,
-        "rpm": 30,
-        "tokens_per_day": 200000
+        "rpd": 7000,
+        "tpm": 6000
       },
       "trial_scope": "all",
-      "model_family": "qwen3.8-27b",
-      "aliases": [
-        "cloudflare/@cf/qwen/qwen3.8-27b",
-        "qwen3.8-27b",
-        "ovh/Qwen3.8-27B"
-      ],
-      "parameter_count": 27000000000,
+      "model_family": "allam-2-7b",
+      "aliases": [],
+      "parameter_count": 7000000000,
       "tier": "medium",
       "speed": "fast",
       "use_case": [

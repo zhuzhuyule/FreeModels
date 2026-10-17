@@ -1,8 +1,8 @@
 {
   "object": "list",
   "view": "free-quota",
-  "updated_at": "2026-10-15T07:06:30.310Z",
-  "total": 91,
+  "updated_at": "2026-10-17T06:42:27.894Z",
+  "total": 92,
   "filters": {
     "freeMechanism": [
       "daily-tokens",
@@ -2129,6 +2129,49 @@
       "estimated_latency": "< 1s"
     },
     {
+      "id": "@cf/daily-co/phonellm-mini-alpha-2",
+      "object": "model",
+      "created": 521516327,
+      "owned_by": "cloudflare",
+      "provider": "cloudflare",
+      "name": "@cf/daily-co/phonellm-mini-alpha-2",
+      "description": "PhoneLLM is an open model tuned for voice agents. The model is based on Nemotron Nano 30B base capabilities and excels at typical voice agent tasks with thinking disabled.",
+      "context_size": 262140,
+      "context_label": "262K",
+      "is_free": true,
+      "capabilities": [
+        "text-generation",
+        "function-calling"
+      ],
+      "tags": [
+        "reasoning",
+        "text-generation",
+        "function-calling"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "daily-tokens",
+      "free_quota": {
+        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
+      },
+      "trial_scope": "all",
+      "model_family": "daily-co-phonellm-mini-alpha-2",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
       "id": "@cf/qwen/qwen3.8-27b",
       "object": "model",
       "created": 258959613,
@@ -2253,10 +2296,10 @@
       "aliases": [
         "whisper-large-v3-turbo",
         "whisper-large-v3",
-        "groq/whisper-large-v3",
         "groq/whisper-large-v3-turbo",
-        "ovh/whisper-large-v3-turbo",
+        "groq/whisper-large-v3",
         "ovh/whisper-large-v3",
+        "ovh/whisper-large-v3-turbo",
         "sambanova/Whisper-Large-v3"
       ],
       "tier": "medium",
@@ -3537,10 +3580,10 @@
         "cloudflare/@cf/openai/whisper-large-v3-turbo",
         "whisper-large-v3-turbo",
         "whisper-large-v3",
-        "groq/whisper-large-v3",
         "groq/whisper-large-v3-turbo",
-        "ovh/whisper-large-v3-turbo",
-        "ovh/whisper-large-v3"
+        "groq/whisper-large-v3",
+        "ovh/whisper-large-v3",
+        "ovh/whisper-large-v3-turbo"
       ],
       "tier": "medium",
       "speed": "fast",

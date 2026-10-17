@@ -1,7 +1,7 @@
 {
   "object": "list",
   "provider": "nvidia",
-  "updated_at": "2026-10-15T07:06:30.300Z",
+  "updated_at": "2026-10-17T06:42:27.887Z",
   "total": 81,
   "data": [
     {
@@ -1287,9 +1287,7 @@
       "trial_scope": "none",
       "model_family": "mistral-7b-v0.3",
       "model_variant": "instruct",
-      "aliases": [
-        "ovh/Mistral-7B-Instruct-v0.3"
-      ],
+      "aliases": [],
       "parameter_count": 7000000000,
       "tier": "medium",
       "speed": "standard",
@@ -1453,55 +1451,6 @@
       ],
       "performance_level": "entry",
       "estimated_latency": "1-3s"
-    },
-    {
-      "id": "moonshotai/kimi-k3",
-      "object": "model",
-      "created": 987502986,
-      "owned_by": "nvidia",
-      "provider": "nvidia",
-      "name": "kimi-k3",
-      "description": "NVIDIA: ~2.8T hybrid KDA+MLA multimodal MoE for long-horizon coding, agentic tool use, and image understanding.",
-      "context_label": "unknown",
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "vision",
-        "tool-use",
-        "code-generation",
-        "chat",
-        "text-generation",
-        "multimodal"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": true,
-      "has_tool_use": true,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Public NIM endpoints: Up to 40 rpm and 10,000 requests per day; limits may vary by model and by traffic",
-        "rpm": 40,
-        "rpd": 10000
-      },
-      "trial_scope": "specific",
-      "model_family": "moonshotai-kimi-k3",
-      "aliases": [],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "image-understanding",
-        "visual-q&a",
-        "software-development",
-        "code-completion",
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
     },
     {
       "id": "nv-mistralai/mistral-nemo-12b-instruct",
@@ -2415,6 +2364,57 @@
       "estimated_latency": "< 1s"
     },
     {
+      "id": "nemotron-3.5-super-vl-120b-a12b",
+      "object": "model",
+      "created": 772914428,
+      "owned_by": "nvidia",
+      "provider": "nvidia",
+      "name": "nemotron-3.5-super-vl-120b-a12b",
+      "description": "NVIDIA: Nemotron 3.5 Super early-access reasoning model for agentic, coding, tool-calling, and multimodal workloads",
+      "context_label": "unknown",
+      "is_free": true,
+      "capabilities": [
+        "vision"
+      ],
+      "tags": [
+        "reasoning",
+        "vision",
+        "text-generation",
+        "code-generation",
+        "multimodal"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Public NIM endpoints: Up to 40 rpm and 10,000 requests per day; limits may vary by model and by traffic",
+        "rpm": 40,
+        "rpd": 10000
+      },
+      "trial_scope": "specific",
+      "model_family": "nemotron-3.5-super-vl-120b-a12b",
+      "model_variant": "vl",
+      "aliases": [],
+      "parameter_count": 120000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "software-development",
+        "code-completion",
+        "complex-reasoning"
+      ],
+      "performance_level": "high",
+      "estimated_latency": "< 1s"
+    },
+    {
       "id": "nemotron-4-340b-instruct",
       "object": "model",
       "created": 639233999,
@@ -2986,7 +2986,7 @@
       "name": "step-5-preview",
       "description": "Model: stepfun-ai/step-5-preview",
       "context_label": "unknown",
-      "is_free": false,
+      "is_free": true,
       "capabilities": [
         "chat",
         "text-generation"
@@ -2998,13 +2998,17 @@
       "is_reasoning": false,
       "is_multimodal": false,
       "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Public NIM endpoints: Up to 40 rpm and 10,000 requests per day; limits may vary by model and by traffic",
+        "rpm": 40,
+        "rpd": 10000
+      },
+      "trial_scope": "specific",
       "model_family": "stepfun-ai-step-5-preview",
       "aliases": [],
       "tier": "medium",
-      "speed": "standard",
+      "speed": "fast",
       "use_case": [
         "content-creation",
         "writing-assistance",
@@ -3012,7 +3016,7 @@
         "q&a"
       ],
       "performance_level": "entry",
-      "estimated_latency": "1-3s"
+      "estimated_latency": "< 1s"
     },
     {
       "id": "writer/palmyra-creative-122b",

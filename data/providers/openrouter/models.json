@@ -1,9 +1,126 @@
 {
   "object": "list",
   "provider": "openrouter",
-  "updated_at": "2026-10-15T07:06:30.301Z",
-  "total": 17,
+  "updated_at": "2026-10-17T06:42:27.887Z",
+  "total": 19,
   "data": [
+    {
+      "id": "xingchen-agi/xing4.0-29b-a4b:free",
+      "object": "model",
+      "created": 1079133832,
+      "owned_by": "openrouter",
+      "provider": "openrouter",
+      "name": "XingChen: Xing4.0 29B A4B (free)",
+      "description": "Xing4.0-29B-A4B is an open-weight mixture-of-experts language model from China Telecom's AI team (TeleAI) and the successor to the TeleChat series. It has 29B total parameters with 4B active per token...",
+      "context_size": 262144,
+      "context_label": "262K",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "reasoning",
+        "tool-use"
+      ],
+      "tags": [
+        "text-generation",
+        "chat",
+        "reasoning",
+        "tool-use"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "rpd": 50,
+        "notes": "Free-variant limit is 20 RPM and 50 requests/day; a one-time purchase of 10+ USD credits raises the daily ceiling to 1000. Providers may log prompts for training on free routes."
+      },
+      "trial_scope": "specific",
+      "model_family": "xingchen-agi-xing4.0-29b-a4b",
+      "aliases": [
+        "kilo/xingchen-agi/xing4.0-29b-a4b:free"
+      ],
+      "parameter_count": 29000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "nvidia/nemotron-3.5-super-vl:free",
+      "object": "model",
+      "created": 194583403,
+      "owned_by": "openrouter",
+      "provider": "openrouter",
+      "name": "NVIDIA: Nemotron 3.5 Super VL (free)",
+      "description": "NVIDIA Nemotron 3.5 Super VL is an open multimodal mixture-of-experts model from NVIDIA, with 12B active parameters out of 120B total. It takes text, images, documents, GUI screenshots, and video...",
+      "context_size": 1000000,
+      "context_label": "1M",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision",
+        "video-processing",
+        "reasoning",
+        "tool-use"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "chat",
+        "video-processing",
+        "reasoning",
+        "tool-use",
+        "multimodal"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "rpd": 50,
+        "notes": "Free-variant limit is 20 RPM and 50 requests/day; a one-time purchase of 10+ USD credits raises the daily ceiling to 1000. Providers may log prompts for training on free routes."
+      },
+      "trial_scope": "specific",
+      "model_family": "nemotron-3.5-super-vl",
+      "model_variant": "vl",
+      "aliases": [
+        "kilo/nvidia/nemotron-3.5-super-vl:free"
+      ],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
     {
       "id": "dots-studio/dots-3-note-preview:free",
       "object": "model",

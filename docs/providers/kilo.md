@@ -21,8 +21,8 @@
 
 | 指标 | 数量 |
 |---|---:|
-| 总模型 | 15 |
-| 免费模型 | 15 |
+| 总模型 | 17 |
+| 免费模型 | 17 |
 | 付费可试用 | 0 |
 
 ## 免费策略
@@ -42,9 +42,11 @@
 | kilo  | `nvidia/nemotron-3-ultra-550b-a55b:free` | NVIDIA: Nemotron 3 Ultra (free) | 1M | 限速免费 | 200 requests per hour per IP (anonymous, no API key required) |
 | kilo  | `nvidia/nemotron-3.5-content-safety:free` | NVIDIA: Nemotron 3.5 Content Safety (free) | 128K | 限速免费 | 200 requests per hour per IP (anonymous, no API key required) |
 | kilo  | `nvidia/nemotron-3.5-lightning:free` | NVIDIA: Nemotron 3.5 Lightning (free) | 1M | 限速免费 | 200 requests per hour per IP (anonymous, no API key required) |
+| kilo  | `nvidia/nemotron-3.5-super-vl:free` | NVIDIA: Nemotron 3.5 Super VL (free) | 1M | 限速免费 | 200 requests per hour per IP (anonymous, no API key required) |
 | kilo  | `openrouter/free` | OpenRouter Free Models Router | 200K | 限速免费 | 200 requests per hour per IP (anonymous, no API key required) |
 | kilo  | `poolside/laguna-s-2.1:free` | Poolside: Laguna S 2.1 (free) | 262K | 限速免费 | 200 requests per hour per IP (anonymous, no API key required) |
 | kilo  | `poolside/laguna-xs-2.1:free` | Poolside: Laguna XS 2.1 (free) | 262K | 限速免费 | 200 requests per hour per IP (anonymous, no API key required) |
+| kilo  | `reflection/beam-free` | Reflection: Beam 1.0 (free) | 1M | 限速免费 | 200 requests per hour per IP (anonymous, no API key required) |
 | kilo  | `stealth/glyph-cluster` | Stealth: Glyph Cluster (free) | 256K | 限速免费 | 200 requests per hour per IP (anonymous, no API key required) |
-| kilo  | `stepfun/step-5-preview-free` | StepFun: Step 5 Preview (free) | 1M | 限速免费 | 200 requests per hour per IP (anonymous, no API key required) |
 | kilo  | `thinkingmachines/inkling-small:free` | Thinking Machines: Inkling Small (free) | 1M | 限速免费 | 200 requests per hour per IP (anonymous, no API key required) |
+| kilo  | `xingchen-agi/xing4.0-29b-a4b:free` | XingChen: Xing4.0 29B A4B (free) | 262K | 限速免费 | 200 requests per hour per IP (anonymous, no API key required) |
