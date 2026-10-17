@@ -1,7 +1,7 @@
 {
   "object": "list",
   "view": "small",
-  "updated_at": "2026-10-15T07:06:30.322Z",
+  "updated_at": "2026-10-17T06:42:27.902Z",
   "total": 74,
   "filters": {
     "tier": "small"
@@ -2463,49 +2463,41 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "Mistral-Nemo-Instruct-2407",
+      "id": "bge-m3",
       "object": "model",
-      "created": 2044441628,
+      "created": 1335353508,
       "owned_by": "ovh",
       "provider": "ovh",
-      "name": "Mistral-Nemo-Instruct-2407",
-      "description": "The Mistral-Nemo-Instruct-2407 model, developed collaboratively by Mistral AI and NVIDIA, is an instruction-tuned LLM released in 2024. Designed for multilingual applications, it excels in tasks such as conversational dialogue, code generation, and instructional comprehension across various languages.",
-      "context_size": 65536,
-      "context_label": "66K",
-      "price_input": 0.14,
-      "price_output": 0.14,
+      "name": "bge-m3",
+      "description": "The BGE-M3 model, developed by the BAAI and released in early 2024, is a powerful multilingual and multigranular embedding model. It supports texts of varying lengths across over 100 languages and produces dense embeddings optimized for semantic search and retrieval applications.",
+      "context_size": 8192,
+      "context_label": "8K",
+      "price_input": 0.01,
       "is_free": true,
       "capabilities": [
-        "chat",
-        "text-generation",
-        "tool-use"
+        "embeddings"
       ],
       "tags": [
-        "chat",
-        "text-generation",
-        "tool-use"
+        "embeddings"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
-      "has_tool_use": true,
+      "has_tool_use": false,
       "free_mechanism": "rate-limited",
       "free_quota": {
         "rpm": 2,
         "notes": "Anonymous access (no API key, no signup): 2 requests per minute, per IP and per model. With an API key the same models are billed pay-as-you-go per token (400 RPM per project) — price_input/price_output are those rates, not what the anonymous tier costs."
       },
       "trial_scope": "all",
-      "model_family": "mistral-nemo",
-      "model_variant": "instruct",
+      "model_family": "bge-m3",
       "aliases": [
-        "llm7/mistral-Nemo-Instruct-2407"
+        "bge-m3"
       ],
       "tier": "small",
       "speed": "fast",
       "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance"
+        "semantic-search",
+        "similarity"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
@@ -2549,41 +2541,49 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "bge-m3",
+      "id": "Mistral-Nemo-Instruct-2407",
       "object": "model",
-      "created": 1335353508,
+      "created": 2044441628,
       "owned_by": "ovh",
       "provider": "ovh",
-      "name": "bge-m3",
-      "description": "The BGE-M3 model, developed by the BAAI and released in early 2024, is a powerful multilingual and multigranular embedding model. It supports texts of varying lengths across over 100 languages and produces dense embeddings optimized for semantic search and retrieval applications.",
-      "context_size": 8192,
-      "context_label": "8K",
-      "price_input": 0.01,
+      "name": "Mistral-Nemo-Instruct-2407",
+      "description": "The Mistral-Nemo-Instruct-2407 model, developed collaboratively by Mistral AI and NVIDIA, is an instruction-tuned LLM released in 2024. Designed for multilingual applications, it excels in tasks such as conversational dialogue, code generation, and instructional comprehension across various languages.",
+      "context_size": 65536,
+      "context_label": "66K",
+      "price_input": 0.14,
+      "price_output": 0.14,
       "is_free": true,
       "capabilities": [
-        "embeddings"
+        "chat",
+        "text-generation",
+        "tool-use"
       ],
       "tags": [
-        "embeddings"
+        "chat",
+        "text-generation",
+        "tool-use"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
-      "has_tool_use": false,
+      "has_tool_use": true,
       "free_mechanism": "rate-limited",
       "free_quota": {
         "rpm": 2,
         "notes": "Anonymous access (no API key, no signup): 2 requests per minute, per IP and per model. With an API key the same models are billed pay-as-you-go per token (400 RPM per project) — price_input/price_output are those rates, not what the anonymous tier costs."
       },
       "trial_scope": "all",
-      "model_family": "bge-m3",
+      "model_family": "mistral-nemo",
+      "model_variant": "instruct",
       "aliases": [
-        "bge-m3"
+        "llm7/mistral-Nemo-Instruct-2407"
       ],
       "tier": "small",
       "speed": "fast",
       "use_case": [
-        "semantic-search",
-        "similarity"
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
