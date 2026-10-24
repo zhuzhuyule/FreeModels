@@ -1,8 +1,8 @@
 {
   "object": "list",
   "provider": "gitee",
-  "updated_at": "2026-10-15T07:06:30.298Z",
-  "total": 205,
+  "updated_at": "2026-10-24T06:58:09.263Z",
+  "total": 210,
   "data": [
     {
       "id": "Qwen2.5-7B-Instruct",
@@ -149,8 +149,8 @@
       "aliases": [
         "cloudflare/@cf/openai/whisper-large-v3-turbo",
         "whisper-large-v3",
-        "groq/whisper-large-v3",
         "groq/whisper-large-v3-turbo",
+        "groq/whisper-large-v3",
         "ovh/whisper-large-v3-turbo",
         "ovh/whisper-large-v3",
         "sambanova/Whisper-Large-v3"
@@ -165,42 +165,6 @@
       ],
       "performance_level": "entry",
       "estimated_latency": "1-3s"
-    },
-    {
-      "id": "CosyVoice2",
-      "object": "model",
-      "created": 451919563,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "CosyVoice2-0.5B",
-      "description": "CosyVoice2 是一款升级版语音生成模型，提供更高精准度的多语种支持、情感调节与自然流畅的语音合成，适用于智能客服、语音助手等多个场景。",
-      "context_label": "unknown",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": false,
-      "capabilities": [
-        "speech-synthesis"
-      ],
-      "tags": [
-        "speech-synthesis"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "cosyvoice2-0.5b",
-      "aliases": [],
-      "parameter_count": 500000000,
-      "tier": "small",
-      "speed": "standard",
-      "use_case": [
-        "text-to-speech",
-        "voice-output"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
     },
     {
       "id": "UVDoc",
@@ -760,7 +724,8 @@
       "trial_scope": "all",
       "model_family": "qwq-32b",
       "aliases": [
-        "cloudflare/@cf/qwen/qwq-32b"
+        "cloudflare/@cf/qwen/qwq-32b",
+        "sambanova/QwQ-32B"
       ],
       "parameter_count": 32000000000,
       "tier": "large",
@@ -877,8 +842,8 @@
       "aliases": [
         "cloudflare/@cf/openai/whisper-large-v3-turbo",
         "whisper-large-v3-turbo",
-        "groq/whisper-large-v3",
         "groq/whisper-large-v3-turbo",
+        "groq/whisper-large-v3",
         "ovh/whisper-large-v3-turbo",
         "ovh/whisper-large-v3",
         "sambanova/Whisper-Large-v3"
@@ -4494,6 +4459,7 @@
       "trial_scope": "none",
       "model_family": "minimax-m2.5",
       "aliases": [
+        "sambanova/MiniMax-M2.5",
         "xingchen/xminimaxm25"
       ],
       "tier": "medium",
@@ -4707,8 +4673,7 @@
       "model_family": "gemma-4-26b-a4b",
       "model_variant": "it",
       "aliases": [
-        "cloudflare/@cf/google/gemma-4-26b-a4b-it",
-        "google/gemma-4-26b-a4b-it:free"
+        "cloudflare/@cf/google/gemma-4-26b-a4b-it"
       ],
       "parameter_count": 26000000000,
       "tier": "large",
@@ -4915,7 +4880,6 @@
       "aliases": [
         "cloudflare/@cf/deepseek-ai/deepseek-v4-flash-0731",
         "deepseek-v4-flash-0731",
-        "llm7/DeepSeek-V4-Flash-0731",
         "sensenova/deepseek-v4-flash",
         "xingchen/xopdeepseekv4flash0731"
       ],
@@ -5365,7 +5329,9 @@
       "free_quota": null,
       "trial_scope": "none",
       "model_family": "minimax-m3",
-      "aliases": [],
+      "aliases": [
+        "sambanova/MiniMax-M3"
+      ],
       "tier": "large",
       "speed": "premium",
       "use_case": [
@@ -6372,7 +6338,6 @@
       "aliases": [
         "cloudflare/@cf/deepseek-ai/deepseek-v4-flash-0731",
         "DeepSeek-V4-Flash",
-        "llm7/DeepSeek-V4-Flash-0731",
         "sensenova/deepseek-v4-flash",
         "xingchen/xopdeepseekv4flash0731"
       ],
@@ -6580,6 +6545,7 @@
       "model_family": "glm-5.3",
       "aliases": [
         "z-ai/glm-5.3",
+        "sambanova/GLM-5.3",
         "xingchen/xopglm53"
       ],
       "tier": "medium",
@@ -6700,7 +6666,6 @@
       "trial_scope": "none",
       "model_family": "glm-5.3-flash",
       "aliases": [
-        "llm7/GLM-5.3-Flash",
         "z-ai/glm-5.3-flash"
       ],
       "tier": "large",
@@ -6886,46 +6851,6 @@
       ],
       "performance_level": "mid",
       "estimated_latency": "3-10s"
-    },
-    {
-      "id": "qwen3-coder-plus",
-      "object": "model",
-      "created": 2084532158,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "qwen3-coder-plus",
-      "description": "基于Qwen3的代码生成模型，具有强大的Coding Agent能力，擅长工具调用和环境交互，能够实现自主编程、代码能力卓越的同时兼具通用能力。",
-      "context_label": "unknown",
-      "price_input": 4,
-      "price_output": 16,
-      "is_free": false,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "tool-use",
-        "code-generation",
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": true,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
-      "model_family": "qwen3-coder-plus",
-      "model_variant": "coder",
-      "aliases": [],
-      "tier": "medium",
-      "speed": "premium",
-      "use_case": [
-        "software-development",
-        "code-completion",
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "1-3s"
     },
     {
       "id": "qwen-mt-plus",
@@ -7263,15 +7188,15 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "Atria-Dawn-Preview",
+      "id": "Atria-Dawn",
       "object": "model",
-      "created": 1245771420,
+      "created": 1303556531,
       "owned_by": "gitee",
       "provider": "gitee",
-      "name": "Atria Dawn Preview",
-      "description": "Atria Dawn Preview （限时免费）是由上海人工智能实验室研发的新一代智能体大模型预览版，旨在协助用户将开放性问题推进为可执行、可验证和可复现的结果。",
-      "context_size": 256000,
-      "context_label": "256K",
+      "name": "Atria Dawn",
+      "description": "Atria Dawn 是由上海人工智能实验室研发的新一代智能体大模型预览版，旨在协助用户将开放性问题推进为可执行、可验证和可复现的结果。",
+      "context_size": 512000,
+      "context_label": "512K",
       "price_input": 0,
       "price_output": 0,
       "is_free": true,
@@ -7287,7 +7212,7 @@
       "free_mechanism": "permanent",
       "free_quota": null,
       "trial_scope": "specific",
-      "model_family": "atria-dawn-preview",
+      "model_family": "atria-dawn",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
@@ -7436,6 +7361,8 @@
       "trial_scope": "none",
       "model_family": "deepseek-v4.1-flash",
       "aliases": [
+        "cloudflare/@cf/deepseek-ai/deepseek-v4.1-flash-1017",
+        "DeepSeek-V4.1-Flash-1017",
         "deepseek-ai/deepseek-v4.1-flash"
       ],
       "tier": "large",
@@ -7744,6 +7671,49 @@
       "estimated_latency": "< 1s"
     },
     {
+      "id": "qwen-image-2.1-viggle-turbo",
+      "object": "model",
+      "created": 393964718,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "Qwen-Image-2.1-viggle-turbo",
+      "description": "基于Qwen构建。Qwen/Qwen-Image-2.1的简化版学生模型，由Viggle采用分布匹配蒸馏技术进行训练。该模型无需分类器自由引导，即可在6个Transformer通道（而非40个）内，利用1-3张参考图像完成文本到图像的转换和指令驱动的编辑。",
+      "context_label": "unknown",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": false,
+      "capabilities": [
+        "image-generation"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "image-generation",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "qwen-image-2.1-viggle",
+      "model_variant": "image",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "creative-generation",
+        "art"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "3-10s"
+    },
+    {
       "id": "laya-multilingual",
       "object": "model",
       "created": 1148065904,
@@ -7856,6 +7826,267 @@
       ],
       "performance_level": "mid",
       "estimated_latency": "< 1s"
+    },
+    {
+      "id": "DeepSeek-V4.1-Flash-1017",
+      "object": "model",
+      "created": 1296187278,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "DeepSeek-V4.1-Flash-1017",
+      "description": "DeepSeek-V4.1-Flash-1017 是 V4.1-Flash 的最新迭代版本，通过基于自反馈的强化学习（RL）训练，在 Terminal-Bench 4.0、DeepSWE v1.1、ProgramBench 等多项基准上较上版显著提升",
+      "context_size": 1000000,
+      "context_label": "1M",
+      "price_input": 2,
+      "price_output": 8,
+      "is_free": false,
+      "capabilities": [
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "deepseek-v4.1-flash",
+      "aliases": [
+        "cloudflare/@cf/deepseek-ai/deepseek-v4.1-flash-1017",
+        "deepseek-v4.1-flash",
+        "deepseek-ai/deepseek-v4.1-flash"
+      ],
+      "tier": "medium",
+      "speed": "standard",
+      "use_case": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "1-3s"
+    },
+    {
+      "id": "d3",
+      "object": "model",
+      "created": 5863260,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "d3",
+      "description": "d3 是 vLLM Semantic Router 团队推出的 27B 多模态决策模型，支持基于文本、图像和视频进行分类、是非判断与评分，并直接输出决策结果及概率。",
+      "context_size": 32000,
+      "context_label": "32K",
+      "price_input": 0.3,
+      "price_output": 1e-8,
+      "is_free": false,
+      "capabilities": [
+        "systemone"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "d3",
+      "aliases": [
+        "d3-turbo"
+      ],
+      "tier": "large",
+      "speed": "premium",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "3-10s"
+    },
+    {
+      "id": "d3-flash",
+      "object": "model",
+      "created": 1951442729,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "d3-flash",
+      "description": "D3-Flash 是 vLLM Semantic Router 推出的 Decision 3.0 多模态决策模型系列里的主力中档型号，定位兼顾推理速度与决策精度，专门用于大模型集群里的路由、意图判别、Agent 分支决策、安全护栏等任务，不是通用对话生成模型。",
+      "context_size": 32000,
+      "context_label": "32K",
+      "price_input": 0.2,
+      "price_output": 1e-8,
+      "is_free": false,
+      "capabilities": [
+        "systemone"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "d3-flash",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "3-10s"
+    },
+    {
+      "id": "d3-turbo",
+      "object": "model",
+      "created": 1934498443,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "d3-turbo",
+      "description": "D3-Turbo 是一款面向复杂决策任务的高性能多模态决策模型，支持文本、图像和视频输入，能够根据给定的上下文与问题进行分类判断、选项评估和目标定位，为智能路由、视觉分析、内容识别及自动化决策等应用提供支持。",
+      "context_size": 32000,
+      "context_label": "32K",
+      "price_input": 0.3,
+      "price_output": 1e-8,
+      "is_free": false,
+      "capabilities": [
+        "systemone"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "d3",
+      "model_variant": "turbo",
+      "aliases": [
+        "d3"
+      ],
+      "tier": "large",
+      "speed": "premium",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "3-10s"
+    },
+    {
+      "id": "kimi-k3.1-pro-highspeed",
+      "object": "model",
+      "created": 448974005,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "Kimi-K3.1-Pro-Highspeed",
+      "description": "Kimi K3.1 Pro Highspeed 是月之暗面推出的旗舰高速推理模型，支持百万 Token 上下文，在保持与 K3.1 Pro 同等智能水平的同时，提供约 2～3 倍的输出速度，适用于复杂编程、多模态理解和长程智能体任务。",
+      "context_size": 1000000,
+      "context_label": "1M",
+      "price_input": 26,
+      "price_output": 136,
+      "is_free": false,
+      "capabilities": [
+        "text-generation"
+      ],
+      "tags": [
+        "reasoning",
+        "vision",
+        "code-generation",
+        "text-generation",
+        "multimodal"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "kimi-k3.1-pro-highspeed",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "image-understanding",
+        "visual-q&a",
+        "software-development",
+        "code-completion",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performance_level": "high",
+      "estimated_latency": "3-10s"
+    },
+    {
+      "id": "kimi-k3.1-pro",
+      "object": "model",
+      "created": 477156855,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "Kimi-K3.1-Pro",
+      "description": "Kimi K3.1 Pro 是月之暗面推出的旗舰推理模型，支持百万 Token 上下文，具备多模态理解、复杂编程与长程智能体能力，适用于深度分析和多步骤任务处理。",
+      "context_size": 1000000,
+      "context_label": "1M",
+      "price_input": 13,
+      "price_output": 68,
+      "is_free": false,
+      "capabilities": [
+        "text-generation"
+      ],
+      "tags": [
+        "reasoning",
+        "vision",
+        "code-generation",
+        "text-generation",
+        "multimodal"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "kimi-k3.1-pro",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "image-understanding",
+        "visual-q&a",
+        "software-development",
+        "code-completion",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performance_level": "high",
+      "estimated_latency": "3-10s"
     },
     {
       "id": "bge-large-zh-v1.5",

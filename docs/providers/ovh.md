@@ -21,8 +21,8 @@
 
 | 指标 | 数量 |
 |---|---:|
-| 总模型 | 23 |
-| 免费模型 | 23 |
+| 总模型 | 22 |
+| 免费模型 | 22 |
 | 付费可试用 | 0 |
 
 ## 免费策略
@@ -38,7 +38,6 @@
 | ovh  | `gpt-oss-120b` | gpt-oss-120b | 131K | 限速免费 | 2 RPM / Anonymous access (no API key, no signup): 2 requests per minute, per IP and per model. With an API key the same models are billed pay-as-you-go per token (400 RPM per project) — price_input/price_output are those rates, not what the anonymous tier costs. |
 | ovh  | `gpt-oss-20b` | gpt-oss-20b | 131K | 限速免费 | 2 RPM / Anonymous access (no API key, no signup): 2 requests per minute, per IP and per model. With an API key the same models are billed pay-as-you-go per token (400 RPM per project) — price_input/price_output are those rates, not what the anonymous tier costs. |
 | ovh  | `Meta-Llama-3_3-70B-Instruct` | Meta-Llama-3_3-70B-Instruct | 131K | 限速免费 | 2 RPM / Anonymous access (no API key, no signup): 2 requests per minute, per IP and per model. With an API key the same models are billed pay-as-you-go per token (400 RPM per project) — price_input/price_output are those rates, not what the anonymous tier costs. |
-| ovh  | `Mistral-7B-Instruct-v0.3` | Mistral-7B-Instruct-v0.3 | 66K | 限速免费 | 2 RPM / Anonymous access (no API key, no signup): 2 requests per minute, per IP and per model. With an API key the same models are billed pay-as-you-go per token (400 RPM per project) — price_input/price_output are those rates, not what the anonymous tier costs. |
 | ovh  | `Mistral-Nemo-Instruct-2407` | Mistral-Nemo-Instruct-2407 | 66K | 限速免费 | 2 RPM / Anonymous access (no API key, no signup): 2 requests per minute, per IP and per model. With an API key the same models are billed pay-as-you-go per token (400 RPM per project) — price_input/price_output are those rates, not what the anonymous tier costs. |
 | ovh  | `Mistral-Small-3.2-24B-Instruct-2506` | Mistral-Small-3.2-24B-Instruct-2506 | 131K | 限速免费 | 2 RPM / Anonymous access (no API key, no signup): 2 requests per minute, per IP and per model. With an API key the same models are billed pay-as-you-go per token (400 RPM per project) — price_input/price_output are those rates, not what the anonymous tier costs. |
 | ovh  | `nvr-tts-de-de` | nvr-tts-de-de | unknown | 限速免费 | 2 RPM / Anonymous access (no API key, no signup): 2 requests per minute, per IP and per model. With an API key the same models are billed pay-as-you-go per token (400 RPM per project) — price_input/price_output are those rates, not what the anonymous tier costs. |

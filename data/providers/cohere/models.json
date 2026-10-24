@@ -1,8 +1,8 @@
 {
   "object": "list",
   "provider": "cohere",
-  "updated_at": "2026-10-15T07:06:30.298Z",
-  "total": 35,
+  "updated_at": "2026-10-24T06:58:09.262Z",
+  "total": 37,
   "data": [
     {
       "id": "c4ai-aya-expanse-32b",
@@ -1234,6 +1234,78 @@
       },
       "trial_scope": "all",
       "model_family": "rerank-v4.0-pro",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "search-improvement",
+        "relevance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "rerank-v5.0-fast",
+      "object": "model",
+      "created": 628065630,
+      "owned_by": "cohere",
+      "provider": "cohere",
+      "name": "rerank-v5.0-fast",
+      "context_size": 32768,
+      "context_label": "33K",
+      "is_free": true,
+      "capabilities": [
+        "rerank"
+      ],
+      "tags": [
+        "rerank"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "notes": "Trial API key: 1,000 requests/month shared across all models (20 RPM); beyond that a paid key is required"
+      },
+      "trial_scope": "all",
+      "model_family": "rerank-v5.0-fast",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "search-improvement",
+        "relevance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "rerank-v5.0-pro",
+      "object": "model",
+      "created": 1841151073,
+      "owned_by": "cohere",
+      "provider": "cohere",
+      "name": "rerank-v5.0-pro",
+      "context_size": 32768,
+      "context_label": "33K",
+      "is_free": true,
+      "capabilities": [
+        "rerank"
+      ],
+      "tags": [
+        "rerank"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "notes": "Trial API key: 1,000 requests/month shared across all models (20 RPM); beyond that a paid key is required"
+      },
+      "trial_scope": "all",
+      "model_family": "rerank-v5.0-pro",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",

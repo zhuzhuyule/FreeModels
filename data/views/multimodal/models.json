@@ -1,289 +1,12 @@
 {
   "object": "list",
   "view": "multimodal",
-  "updated_at": "2026-10-15T07:06:30.313Z",
-  "total": 200,
+  "updated_at": "2026-10-24T06:58:09.289Z",
+  "total": 196,
   "filters": {
     "tags": "vision"
   },
   "data": [
-    {
-      "id": "agnes-2.5-flash",
-      "object": "model",
-      "created": 1375767443,
-      "owned_by": "agnes",
-      "provider": "agnes",
-      "name": "Agnes 2.5 Flash",
-      "description": "Agnes AI: Generally available upgrade of Agnes 2.0 Flash with improved coding capability, agent workflows, tool calling, and multimodal understanding.",
-      "context_size": 512000,
-      "context_label": "512K",
-      "price_input": 0.05,
-      "price_output": 0.15,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "function-calling",
-        "tool-use"
-      ],
-      "tags": [
-        "vision",
-        "code-generation",
-        "chat",
-        "text-generation",
-        "function-calling",
-        "tool-use",
-        "multimodal"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": true,
-      "has_tool_use": true,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "限时 $0 Current Price (List price 为正常单价); 免费档 RPM 限制见 docs/tokenplan"
-      },
-      "trial_scope": "all",
-      "model_family": "agnes-2.5-flash",
-      "aliases": [],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "image-understanding",
-        "visual-q&a",
-        "software-development",
-        "code-completion",
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "agnes-2.5-pro",
-      "object": "model",
-      "created": 606116880,
-      "owned_by": "agnes",
-      "provider": "agnes",
-      "name": "Agnes 2.5 Pro",
-      "description": "Agnes AI: The commercial stable version of Agnes 2.5 Pro Beta for advanced coding, scientific reasoning, long-context analysis, agentic workflows, and multimodal understanding.",
-      "context_size": 1000000,
-      "context_label": "1M",
-      "price_input": 0.45,
-      "price_output": 0.9,
-      "is_free": false,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "vision",
-        "function-calling",
-        "tool-use"
-      ],
-      "tags": [
-        "reasoning",
-        "vision",
-        "code-generation",
-        "chat",
-        "text-generation",
-        "function-calling",
-        "tool-use",
-        "multimodal"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": true,
-      "has_tool_use": true,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
-      "model_family": "agnes-2.5-pro",
-      "aliases": [],
-      "tier": "large",
-      "speed": "premium",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "image-understanding",
-        "visual-q&a",
-        "software-development",
-        "code-completion",
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance",
-        "complex-reasoning"
-      ],
-      "performance_level": "high",
-      "estimated_latency": "3-10s"
-    },
-    {
-      "id": "agnes-2.5-pro-beta",
-      "object": "model",
-      "created": 979734823,
-      "owned_by": "agnes",
-      "provider": "agnes",
-      "name": "Agnes 2.5 Pro Beta",
-      "description": "Agnes AI: Integrate Agnes 2.5 Pro Beta for advanced reasoning, coding, long-context analysis, agentic workflows, and multimodal understanding.",
-      "context_size": 1000000,
-      "context_label": "1M",
-      "price_input": 0.1,
-      "price_output": 0.3,
-      "is_free": false,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "vision",
-        "function-calling",
-        "tool-use"
-      ],
-      "tags": [
-        "reasoning",
-        "vision",
-        "code-generation",
-        "chat",
-        "text-generation",
-        "function-calling",
-        "tool-use",
-        "multimodal"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": true,
-      "has_tool_use": true,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
-      "model_family": "agnes-2.5-pro-beta",
-      "aliases": [],
-      "tier": "large",
-      "speed": "premium",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "image-understanding",
-        "visual-q&a",
-        "software-development",
-        "code-completion",
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance",
-        "complex-reasoning"
-      ],
-      "performance_level": "high",
-      "estimated_latency": "3-10s"
-    },
-    {
-      "id": "agnes-3.0-flash",
-      "object": "model",
-      "created": 1583827543,
-      "owned_by": "agnes",
-      "provider": "agnes",
-      "name": "Agnes 3.0 Flash",
-      "description": "Agnes AI: A new-generation Agnes AI text model with stronger Agnes Code task execution, tool orchestration, and trustworthy delivery.",
-      "context_size": 512000,
-      "context_label": "512K",
-      "price_input": 0.05,
-      "price_output": 0.15,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "vision",
-        "function-calling",
-        "tool-use"
-      ],
-      "tags": [
-        "text-generation",
-        "code-generation",
-        "chat",
-        "vision",
-        "function-calling",
-        "tool-use",
-        "multimodal"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": true,
-      "has_tool_use": true,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "限时 $0 Current Price (List price 为正常单价); 免费档 RPM 限制见 docs/tokenplan"
-      },
-      "trial_scope": "all",
-      "model_family": "agnes-3.0-flash",
-      "aliases": [],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "software-development",
-        "code-completion",
-        "conversation",
-        "q&a",
-        "image-understanding",
-        "visual-q&a"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "agnes-3.0-pro",
-      "object": "model",
-      "created": 1891655244,
-      "owned_by": "agnes",
-      "provider": "agnes",
-      "name": "Agnes 3.0 Pro",
-      "description": "Agnes AI: A new-generation Pro model, coming soon, for agentic work, professional document analysis, scientific coding, and long-context reasoning.",
-      "context_label": "unknown",
-      "price_input": 0.45,
-      "price_output": 0.9,
-      "is_free": false,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "vision",
-        "function-calling",
-        "tool-use"
-      ],
-      "tags": [
-        "reasoning",
-        "text-generation",
-        "code-generation",
-        "chat",
-        "vision",
-        "function-calling",
-        "tool-use",
-        "multimodal"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": true,
-      "has_tool_use": true,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
-      "model_family": "agnes-3.0-pro",
-      "aliases": [],
-      "tier": "large",
-      "speed": "premium",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "content-creation",
-        "writing-assistance",
-        "software-development",
-        "code-completion",
-        "conversation",
-        "q&a",
-        "image-understanding",
-        "visual-q&a",
-        "complex-reasoning"
-      ],
-      "performance_level": "high",
-      "estimated_latency": "3-10s"
-    },
     {
       "id": "glm-4.5v",
       "object": "model",
@@ -342,8 +65,7 @@
       "capabilities": [
         "chat",
         "text-generation",
-        "vision",
-        "reasoning"
+        "vision"
       ],
       "tags": [
         "reasoning",
@@ -873,8 +595,7 @@
       "capabilities": [
         "chat",
         "text-generation",
-        "vision",
-        "reasoning"
+        "vision"
       ],
       "tags": [
         "reasoning",
@@ -1622,7 +1343,8 @@
       "model_variant": "vision",
       "aliases": [
         "github/Llama-3-2-11B-Vision-Instruct",
-        "meta/llama-3.2-11b-vision-instruct"
+        "meta/llama-3.2-11b-vision-instruct",
+        "sambanova/Llama-3.2-11B-Vision-Instruct"
       ],
       "parameter_count": 11000000000,
       "tier": "large",
@@ -1694,6 +1416,60 @@
       ],
       "performance_level": "mid",
       "estimated_latency": "< 1s"
+    },
+    {
+      "id": "@cf/deepseek-ai/deepseek-v4.1-flash-1017",
+      "object": "model",
+      "created": 590004934,
+      "owned_by": "cloudflare",
+      "provider": "cloudflare",
+      "name": "@cf/deepseek-ai/deepseek-v4.1-flash-1017",
+      "description": "We introduce DeepSeek-V4.1-Flash, a multimodal Mixture-of-Experts (MoE) model with 552B backbone parameters and support for contexts of up to one million tokens. The model natively processes images and text, and generates text autoregressively.",
+      "context_size": 1048576,
+      "context_label": "1M",
+      "price_input": 0.006,
+      "price_output": 1.2,
+      "is_free": false,
+      "capabilities": [
+        "text-generation",
+        "function-calling",
+        "reasoning"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "function-calling",
+        "reasoning",
+        "multimodal"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": true,
+      "free_mechanism": null,
+      "free_quota": {
+        "notes": "Excluded from the 10,000 neurons/day free allocation: requires the Workers Paid plan or prepaid AI Gateway credits"
+      },
+      "trial_scope": "none",
+      "model_family": "deepseek-v4.1-flash",
+      "aliases": [
+        "deepseek-v4.1-flash",
+        "DeepSeek-V4.1-Flash-1017",
+        "deepseek-ai/deepseek-v4.1-flash"
+      ],
+      "tier": "large",
+      "speed": "premium",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "high",
+      "estimated_latency": "3-10s"
     },
     {
       "id": "@cf/moondream/moondream3.1-9B-A2B",
@@ -1821,7 +1597,8 @@
       "model_family": "llama-4-scout-17b-16e",
       "model_variant": "instruct",
       "aliases": [
-        "github/Llama-4-Scout-17B-16E-Instruct"
+        "github/Llama-4-Scout-17B-16E-Instruct",
+        "sambanova/Llama-4-Scout-17B-16E-Instruct"
       ],
       "parameter_count": 17000000000,
       "tier": "large",
@@ -4458,8 +4235,7 @@
       "model_family": "gemma-4-26b-a4b",
       "model_variant": "it",
       "aliases": [
-        "cloudflare/@cf/google/gemma-4-26b-a4b-it",
-        "google/gemma-4-26b-a4b-it:free"
+        "cloudflare/@cf/google/gemma-4-26b-a4b-it"
       ],
       "parameter_count": 26000000000,
       "tier": "large",
@@ -4581,7 +4357,9 @@
       "free_quota": null,
       "trial_scope": "none",
       "model_family": "minimax-m3",
-      "aliases": [],
+      "aliases": [
+        "sambanova/MiniMax-M3"
+      ],
       "tier": "large",
       "speed": "premium",
       "use_case": [
@@ -5303,7 +5081,6 @@
       "trial_scope": "none",
       "model_family": "glm-5.3-flash",
       "aliases": [
-        "llm7/GLM-5.3-Flash",
         "z-ai/glm-5.3-flash"
       ],
       "tier": "large",
@@ -5526,6 +5303,8 @@
       "trial_scope": "none",
       "model_family": "deepseek-v4.1-flash",
       "aliases": [
+        "cloudflare/@cf/deepseek-ai/deepseek-v4.1-flash-1017",
+        "DeepSeek-V4.1-Flash-1017",
         "deepseek-ai/deepseek-v4.1-flash"
       ],
       "tier": "large",
@@ -5663,6 +5442,49 @@
       "estimated_latency": "3-10s"
     },
     {
+      "id": "qwen-image-2.1-viggle-turbo",
+      "object": "model",
+      "created": 393964718,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "Qwen-Image-2.1-viggle-turbo",
+      "description": "基于Qwen构建。Qwen/Qwen-Image-2.1的简化版学生模型，由Viggle采用分布匹配蒸馏技术进行训练。该模型无需分类器自由引导，即可在6个Transformer通道（而非40个）内，利用1-3张参考图像完成文本到图像的转换和指令驱动的编辑。",
+      "context_label": "unknown",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": false,
+      "capabilities": [
+        "image-generation"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "image-generation",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "qwen-image-2.1-viggle",
+      "model_variant": "image",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "creative-generation",
+        "art"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "3-10s"
+    },
+    {
       "id": "Intern-Decision-4B",
       "object": "model",
       "created": 244784109,
@@ -5702,6 +5524,227 @@
       ],
       "performance_level": "mid",
       "estimated_latency": "< 1s"
+    },
+    {
+      "id": "d3",
+      "object": "model",
+      "created": 5863260,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "d3",
+      "description": "d3 是 vLLM Semantic Router 团队推出的 27B 多模态决策模型，支持基于文本、图像和视频进行分类、是非判断与评分，并直接输出决策结果及概率。",
+      "context_size": 32000,
+      "context_label": "32K",
+      "price_input": 0.3,
+      "price_output": 1e-8,
+      "is_free": false,
+      "capabilities": [
+        "systemone"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "d3",
+      "aliases": [
+        "d3-turbo"
+      ],
+      "tier": "large",
+      "speed": "premium",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "3-10s"
+    },
+    {
+      "id": "d3-flash",
+      "object": "model",
+      "created": 1951442729,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "d3-flash",
+      "description": "D3-Flash 是 vLLM Semantic Router 推出的 Decision 3.0 多模态决策模型系列里的主力中档型号，定位兼顾推理速度与决策精度，专门用于大模型集群里的路由、意图判别、Agent 分支决策、安全护栏等任务，不是通用对话生成模型。",
+      "context_size": 32000,
+      "context_label": "32K",
+      "price_input": 0.2,
+      "price_output": 1e-8,
+      "is_free": false,
+      "capabilities": [
+        "systemone"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "d3-flash",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "3-10s"
+    },
+    {
+      "id": "d3-turbo",
+      "object": "model",
+      "created": 1934498443,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "d3-turbo",
+      "description": "D3-Turbo 是一款面向复杂决策任务的高性能多模态决策模型，支持文本、图像和视频输入，能够根据给定的上下文与问题进行分类判断、选项评估和目标定位，为智能路由、视觉分析、内容识别及自动化决策等应用提供支持。",
+      "context_size": 32000,
+      "context_label": "32K",
+      "price_input": 0.3,
+      "price_output": 1e-8,
+      "is_free": false,
+      "capabilities": [
+        "systemone"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "d3",
+      "model_variant": "turbo",
+      "aliases": [
+        "d3"
+      ],
+      "tier": "large",
+      "speed": "premium",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "3-10s"
+    },
+    {
+      "id": "kimi-k3.1-pro-highspeed",
+      "object": "model",
+      "created": 448974005,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "Kimi-K3.1-Pro-Highspeed",
+      "description": "Kimi K3.1 Pro Highspeed 是月之暗面推出的旗舰高速推理模型，支持百万 Token 上下文，在保持与 K3.1 Pro 同等智能水平的同时，提供约 2～3 倍的输出速度，适用于复杂编程、多模态理解和长程智能体任务。",
+      "context_size": 1000000,
+      "context_label": "1M",
+      "price_input": 26,
+      "price_output": 136,
+      "is_free": false,
+      "capabilities": [
+        "text-generation"
+      ],
+      "tags": [
+        "reasoning",
+        "vision",
+        "code-generation",
+        "text-generation",
+        "multimodal"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "kimi-k3.1-pro-highspeed",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "image-understanding",
+        "visual-q&a",
+        "software-development",
+        "code-completion",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performance_level": "high",
+      "estimated_latency": "3-10s"
+    },
+    {
+      "id": "kimi-k3.1-pro",
+      "object": "model",
+      "created": 477156855,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "Kimi-K3.1-Pro",
+      "description": "Kimi K3.1 Pro 是月之暗面推出的旗舰推理模型，支持百万 Token 上下文，具备多模态理解、复杂编程与长程智能体能力，适用于深度分析和多步骤任务处理。",
+      "context_size": 1000000,
+      "context_label": "1M",
+      "price_input": 13,
+      "price_output": 68,
+      "is_free": false,
+      "capabilities": [
+        "text-generation"
+      ],
+      "tags": [
+        "reasoning",
+        "vision",
+        "code-generation",
+        "text-generation",
+        "multimodal"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "kimi-k3.1-pro",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "image-understanding",
+        "visual-q&a",
+        "software-development",
+        "code-completion",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performance_level": "high",
+      "estimated_latency": "3-10s"
     },
     {
       "id": "flux-1-schnell",
@@ -6003,7 +6046,8 @@
       "model_family": "llama-3.2-90b-vision",
       "model_variant": "vision",
       "aliases": [
-        "meta/llama-3.2-90b-vision-instruct"
+        "meta/llama-3.2-90b-vision-instruct",
+        "sambanova/Llama-3.2-90B-Vision-Instruct"
       ],
       "parameter_count": 90000000000,
       "tier": "large",
@@ -6059,7 +6103,8 @@
       "model_variant": "vision",
       "aliases": [
         "cloudflare/@cf/meta/llama-3.2-11b-vision-instruct",
-        "meta/llama-3.2-11b-vision-instruct"
+        "meta/llama-3.2-11b-vision-instruct",
+        "sambanova/Llama-3.2-11B-Vision-Instruct"
       ],
       "parameter_count": 11000000000,
       "tier": "large",
@@ -6726,6 +6771,64 @@
       "estimated_latency": "< 1s"
     },
     {
+      "id": "nvidia/nemotron-3.5-super-vl:free",
+      "object": "model",
+      "created": 1201602071,
+      "owned_by": "kilo",
+      "provider": "kilo",
+      "name": "NVIDIA: Nemotron 3.5 Super VL (free)",
+      "description": "NVIDIA Nemotron 3.5 Super VL is an open multimodal mixture-of-experts model from NVIDIA, with 12B active parameters out of 120B total. It takes text, images, documents, GUI screenshots, and video...\n\n**Terms of service** For NVIDIA free endpoints (Super/Ultra/etc): Trial use only - do not submit personal or confidential data. Your use is logged for security purposes and to improve NVIDIA products and services. The logged session data for improvement purposes is not linked to your identity or any",
+      "context_size": 1000000,
+      "context_label": "1M",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision",
+        "video-processing",
+        "tool-use",
+        "reasoning"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "chat",
+        "video-processing",
+        "tool-use",
+        "reasoning",
+        "multimodal"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "200 requests per hour per IP (anonymous, no API key required)"
+      },
+      "trial_scope": "specific",
+      "model_family": "nemotron-3.5-super-vl",
+      "model_variant": "vl",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
       "id": "dots-studio/dots-3-note-preview:free",
       "object": "model",
       "created": 1664052281,
@@ -6762,9 +6865,7 @@
       },
       "trial_scope": "specific",
       "model_family": "dots-studio-dots-3-note-preview",
-      "aliases": [
-        "dots-studio/dots-3-note-preview:free"
-      ],
+      "aliases": [],
       "tier": "large",
       "speed": "fast",
       "use_case": [
@@ -6777,67 +6878,6 @@
         "problem-solving",
         "logical-analysis",
         "math",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "thinkingmachines/inkling-small:free",
-      "object": "model",
-      "created": 1784353244,
-      "owned_by": "kilo",
-      "provider": "kilo",
-      "name": "Thinking Machines: Inkling Small (free)",
-      "description": "Inkling Small is an open-weight multimodal mixture-of-experts model from Thinking Machines Lab, with 12B active parameters out of 276B total. It is positioned as the smaller, more efficient member of...",
-      "context_size": 1048576,
-      "context_label": "1M",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "vision",
-        "speech-recognition",
-        "tool-use",
-        "reasoning"
-      ],
-      "tags": [
-        "reasoning",
-        "vision",
-        "text-generation",
-        "chat",
-        "speech-recognition",
-        "tool-use",
-        "multimodal"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": true,
-      "has_tool_use": true,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "200 requests per hour per IP (anonymous, no API key required)"
-      },
-      "trial_scope": "specific",
-      "model_family": "thinkingmachines-inkling-small",
-      "aliases": [
-        "thinkingmachines/inkling-small:free"
-      ],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "image-understanding",
-        "visual-q&a",
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a",
-        "transcription",
-        "voice-input",
         "complex-reasoning"
       ],
       "performance_level": "mid",
@@ -6881,8 +6921,7 @@
       "model_family": "nemotron-3.5-content-safety",
       "model_variant": "safety",
       "aliases": [
-        "nvidia/nemotron-3.5-content-safety",
-        "nvidia/nemotron-3.5-content-safety:free"
+        "nvidia/nemotron-3.5-content-safety"
       ],
       "tier": "large",
       "speed": "fast",
@@ -6946,8 +6985,7 @@
       "model_family": "nemotron-3-nano-omni-30b-a3b-reasoning",
       "model_variant": "reasoning",
       "aliases": [
-        "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
-        "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
+        "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning"
       ],
       "tier": "large",
       "speed": "fast",
@@ -7024,64 +7062,6 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "stepfun/step-5-preview-free",
-      "object": "model",
-      "created": 493256365,
-      "owned_by": "kilo",
-      "provider": "kilo",
-      "name": "StepFun: Step 5 Preview (free)",
-      "description": "Step 5 Preview is StepFun's flagship model for agentic work, with strong capabilities in software engineering, professional knowledge work, and finance. It natively supports text, image, and video input with a 1M-token context window and up to 64K output tokens. The model supports tool calling, structured outputs, and selectable reasoning levels (low/medium/high) for long-context research, coding, and multi-step workflows.",
-      "context_size": 1000000,
-      "context_label": "1M",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "vision",
-        "tool-use",
-        "reasoning"
-      ],
-      "tags": [
-        "reasoning",
-        "vision",
-        "text-generation",
-        "code-generation",
-        "chat",
-        "tool-use",
-        "multimodal"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": true,
-      "has_tool_use": true,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "200 requests per hour per IP (anonymous, no API key required)"
-      },
-      "trial_scope": "specific",
-      "model_family": "stepfun-step-5-preview-free",
-      "aliases": [],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "image-understanding",
-        "visual-q&a",
-        "content-creation",
-        "writing-assistance",
-        "software-development",
-        "code-completion",
-        "conversation",
-        "q&a",
-        "complex-reasoning"
-      ],
-      "performance_level": "high",
-      "estimated_latency": "< 1s"
-    },
-    {
       "id": "deepseek-ai/deepseek-v4.1-flash",
       "object": "model",
       "created": 1860085896,
@@ -7113,7 +7093,9 @@
       "trial_scope": "specific",
       "model_family": "deepseek-v4.1-flash",
       "aliases": [
-        "deepseek-v4.1-flash"
+        "cloudflare/@cf/deepseek-ai/deepseek-v4.1-flash-1017",
+        "deepseek-v4.1-flash",
+        "DeepSeek-V4.1-Flash-1017"
       ],
       "tier": "large",
       "speed": "fast",
@@ -7161,7 +7143,8 @@
       "model_variant": "vision",
       "aliases": [
         "cloudflare/@cf/meta/llama-3.2-11b-vision-instruct",
-        "github/Llama-3-2-11B-Vision-Instruct"
+        "github/Llama-3-2-11B-Vision-Instruct",
+        "sambanova/Llama-3.2-11B-Vision-Instruct"
       ],
       "parameter_count": 11000000000,
       "tier": "large",
@@ -7211,7 +7194,8 @@
       "model_family": "llama-3.2-90b-vision",
       "model_variant": "vision",
       "aliases": [
-        "github/Llama-3-2-90B-Vision-Instruct"
+        "github/Llama-3-2-90B-Vision-Instruct",
+        "sambanova/Llama-3.2-90B-Vision-Instruct"
       ],
       "parameter_count": 90000000000,
       "tier": "large",
@@ -7319,13 +7303,13 @@
       "estimated_latency": "3-10s"
     },
     {
-      "id": "moonshotai/kimi-k3",
+      "id": "minimaxai/minimax-m3.1-flash",
       "object": "model",
-      "created": 987502986,
+      "created": 1719781941,
       "owned_by": "nvidia",
       "provider": "nvidia",
-      "name": "kimi-k3",
-      "description": "NVIDIA: ~2.8T hybrid KDA+MLA multimodal MoE for long-horizon coding, agentic tool use, and image understanding.",
+      "name": "minimax-m3.1-flash",
+      "description": "NVIDIA: MiniMax-M3.1-Flash is a native multimodal mixture-of-experts model for coding, agentic workflows, computer use, and cybersecurity.",
       "context_label": "unknown",
       "is_free": true,
       "capabilities": [
@@ -7334,15 +7318,14 @@
       ],
       "tags": [
         "vision",
-        "tool-use",
+        "text-generation",
         "code-generation",
         "chat",
-        "text-generation",
         "multimodal"
       ],
       "is_reasoning": false,
       "is_multimodal": true,
-      "has_tool_use": true,
+      "has_tool_use": false,
       "free_mechanism": "rate-limited",
       "free_quota": {
         "notes": "Public NIM endpoints: Up to 40 rpm and 10,000 requests per day; limits may vary by model and by traffic",
@@ -7350,19 +7333,19 @@
         "rpd": 10000
       },
       "trial_scope": "specific",
-      "model_family": "moonshotai-kimi-k3",
+      "model_family": "minimaxai-minimax-m3.1-flash",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
       "use_case": [
         "image-understanding",
         "visual-q&a",
+        "content-creation",
+        "writing-assistance",
         "software-development",
         "code-completion",
         "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance"
+        "q&a"
       ],
       "performance_level": "mid",
       "estimated_latency": "< 1s"
@@ -7531,8 +7514,7 @@
       "model_family": "nemotron-3.5-content-safety",
       "model_variant": "safety",
       "aliases": [
-        "kilo/nvidia/nemotron-3.5-content-safety:free",
-        "nvidia/nemotron-3.5-content-safety:free"
+        "kilo/nvidia/nemotron-3.5-content-safety:free"
       ],
       "tier": "large",
       "speed": "fast",
@@ -7545,6 +7527,141 @@
         "safety"
       ],
       "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "nemotron-3.5-embed-1b",
+      "object": "model",
+      "created": 283215250,
+      "owned_by": "nvidia",
+      "provider": "nvidia",
+      "name": "nemotron-3.5-embed-1b",
+      "description": "NVIDIA: 1B multimodal embedding model for text and document-image retrieval in RAG applications.",
+      "context_label": "unknown",
+      "is_free": false,
+      "capabilities": [
+        "embeddings"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "embeddings",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "nemotron-3.5-embed-1b",
+      "model_variant": "embed",
+      "aliases": [],
+      "parameter_count": 1000000000,
+      "tier": "medium",
+      "speed": "premium",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "semantic-search",
+        "similarity"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "1-3s"
+    },
+    {
+      "id": "nemotron-3.5-embed-8b",
+      "object": "model",
+      "created": 283215019,
+      "owned_by": "nvidia",
+      "provider": "nvidia",
+      "name": "nemotron-3.5-embed-8b",
+      "description": "NVIDIA: 8B multimodal embedding model for text and document-image retrieval in RAG applications.",
+      "context_label": "unknown",
+      "is_free": false,
+      "capabilities": [
+        "embeddings"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "embeddings",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "nemotron-3.5-embed-8b",
+      "model_variant": "embed",
+      "aliases": [],
+      "parameter_count": 8000000000,
+      "tier": "medium",
+      "speed": "premium",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "semantic-search",
+        "similarity"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "1-3s"
+    },
+    {
+      "id": "nemotron-3.5-super-vl-120b-a12b",
+      "object": "model",
+      "created": 772914428,
+      "owned_by": "nvidia",
+      "provider": "nvidia",
+      "name": "nemotron-3.5-super-vl-120b-a12b",
+      "description": "NVIDIA: Nemotron 3.5 Super early-access reasoning model for agentic, coding, tool-calling, and multimodal workloads",
+      "context_label": "unknown",
+      "is_free": true,
+      "capabilities": [
+        "vision"
+      ],
+      "tags": [
+        "reasoning",
+        "vision",
+        "text-generation",
+        "code-generation",
+        "multimodal"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Public NIM endpoints: Up to 40 rpm and 10,000 requests per day; limits may vary by model and by traffic",
+        "rpm": 40,
+        "rpd": 10000
+      },
+      "trial_scope": "specific",
+      "model_family": "nemotron-3.5-super-vl-120b-a12b",
+      "model_variant": "vl",
+      "aliases": [],
+      "parameter_count": 120000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "software-development",
+        "code-completion",
+        "complex-reasoning"
+      ],
+      "performance_level": "high",
       "estimated_latency": "< 1s"
     },
     {
@@ -7668,662 +7785,17 @@
       "estimated_latency": "3-10s"
     },
     {
-      "id": "dots-studio/dots-3-note-preview:free",
+      "id": "Qwen3.5-397B-A17B",
       "object": "model",
-      "created": 1721487749,
-      "owned_by": "openrouter",
-      "provider": "openrouter",
-      "name": "Dots Studio: Dots3-Note Preview (free)",
-      "description": "Dots3-Note Preview is an open-weight mixture-of-experts model from Dots Studio, with 16B active parameters out of 280B total. It is the lightest model in the Dots 3 family and is...",
-      "context_size": 512000,
-      "context_label": "512K",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "vision",
-        "reasoning",
-        "tool-use"
-      ],
-      "tags": [
-        "text-generation",
-        "chat",
-        "vision",
-        "reasoning",
-        "tool-use",
-        "multimodal"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": true,
-      "has_tool_use": true,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "rpm": 20,
-        "rpd": 50,
-        "notes": "Free-variant limit is 20 RPM and 50 requests/day; a one-time purchase of 10+ USD credits raises the daily ceiling to 1000. Providers may log prompts for training on free routes."
-      },
-      "trial_scope": "specific",
-      "model_family": "dots-studio-dots-3-note-preview",
-      "aliases": [
-        "kilo/dots-studio/dots-3-note-preview:free"
-      ],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a",
-        "image-understanding",
-        "visual-q&a",
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "thinkingmachines/inkling-small:free",
-      "object": "model",
-      "created": 1756794842,
-      "owned_by": "openrouter",
-      "provider": "openrouter",
-      "name": "Thinking Machines: Inkling Small (free)",
-      "description": "Inkling Small is an open-weight multimodal mixture-of-experts model from Thinking Machines Lab, with 12B active parameters out of 276B total. It is positioned as the smaller, more efficient member of...",
-      "context_size": 1048576,
-      "context_label": "1M",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "vision",
-        "speech-recognition",
-        "reasoning",
-        "tool-use"
-      ],
-      "tags": [
-        "reasoning",
-        "vision",
-        "text-generation",
-        "chat",
-        "speech-recognition",
-        "tool-use",
-        "multimodal"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": true,
-      "has_tool_use": true,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "rpm": 20,
-        "rpd": 50,
-        "notes": "Free-variant limit is 20 RPM and 50 requests/day; a one-time purchase of 10+ USD credits raises the daily ceiling to 1000. Providers may log prompts for training on free routes."
-      },
-      "trial_scope": "specific",
-      "model_family": "thinkingmachines-inkling-small",
-      "aliases": [
-        "kilo/thinkingmachines/inkling-small:free"
-      ],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "image-understanding",
-        "visual-q&a",
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a",
-        "transcription",
-        "voice-input",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "thinkingmachines/inkling:free",
-      "object": "model",
-      "created": 311814880,
-      "owned_by": "openrouter",
-      "provider": "openrouter",
-      "name": "Thinking Machines: Inkling (free)",
-      "description": "Inkling is an open-weight multimodal mixture-of-experts model from Thinking Machines Lab, with 41B active parameters out of 975B total. It is designed for general-purpose reasoning, coding, agentic and tool-use systems,...",
-      "context_size": 1048576,
-      "context_label": "1M",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "vision",
-        "speech-recognition",
-        "reasoning",
-        "tool-use"
-      ],
-      "tags": [
-        "reasoning",
-        "vision",
-        "text-generation",
-        "tool-use",
-        "code-generation",
-        "chat",
-        "speech-recognition",
-        "multimodal"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": true,
-      "has_tool_use": true,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "rpm": 20,
-        "rpd": 50,
-        "notes": "Free-variant limit is 20 RPM and 50 requests/day; a one-time purchase of 10+ USD credits raises the daily ceiling to 1000. Providers may log prompts for training on free routes."
-      },
-      "trial_scope": "specific",
-      "model_family": "thinkingmachines-inkling",
-      "aliases": [],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "image-understanding",
-        "visual-q&a",
-        "content-creation",
-        "writing-assistance",
-        "software-development",
-        "code-completion",
-        "conversation",
-        "q&a",
-        "transcription",
-        "voice-input",
-        "complex-reasoning"
-      ],
-      "performance_level": "high",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "nvidia/nemotron-3.5-content-safety:free",
-      "object": "model",
-      "created": 109416543,
-      "owned_by": "openrouter",
-      "provider": "openrouter",
-      "name": "NVIDIA: Nemotron 3.5 Content Safety (free)",
-      "description": "NVIDIA Nemotron 3.5 Content Safety is a compact 4B-parameter multimodal guardrail model from NVIDIA, fine-tuned from Google Gemma-3-4B. It moderates both inputs to and responses from LLMs and VLMs, accepting...",
-      "context_size": 128000,
-      "context_label": "128K",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "vision",
-        "reasoning"
-      ],
-      "tags": [
-        "vision",
-        "text-generation",
-        "moderation",
-        "chat",
-        "reasoning",
-        "multimodal"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "rpm": 20,
-        "rpd": 50,
-        "notes": "Free-variant limit is 20 RPM and 50 requests/day; a one-time purchase of 10+ USD credits raises the daily ceiling to 1000. Providers may log prompts for training on free routes."
-      },
-      "trial_scope": "specific",
-      "model_family": "nemotron-3.5-content-safety",
-      "model_variant": "safety",
-      "aliases": [
-        "kilo/nvidia/nemotron-3.5-content-safety:free",
-        "nvidia/nemotron-3.5-content-safety"
-      ],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "image-understanding",
-        "visual-q&a",
-        "content-creation",
-        "writing-assistance",
-        "content-filtering",
-        "safety",
-        "conversation",
-        "q&a",
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
-      "object": "model",
-      "created": 1904997150,
-      "owned_by": "openrouter",
-      "provider": "openrouter",
-      "name": "NVIDIA: Nemotron 3 Nano Omni (free)",
-      "description": "NVIDIA Nemotron™ 3 Nano Omni is a 30B-A3B open multimodal model designed to function as a perception and context sub-agent in enterprise agent systems. It accepts text, image, video, and...",
-      "context_size": 256000,
-      "context_label": "256K",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "vision",
-        "speech-recognition",
-        "video-processing",
-        "reasoning",
-        "tool-use"
-      ],
-      "tags": [
-        "reasoning",
-        "vision",
-        "text-generation",
-        "chat",
-        "speech-recognition",
-        "video-processing",
-        "tool-use",
-        "multimodal"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": true,
-      "has_tool_use": true,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "rpm": 20,
-        "rpd": 50,
-        "notes": "Free-variant limit is 20 RPM and 50 requests/day; a one-time purchase of 10+ USD credits raises the daily ceiling to 1000. Providers may log prompts for training on free routes."
-      },
-      "trial_scope": "specific",
-      "model_family": "nemotron-3-nano-omni-30b-a3b-reasoning",
-      "model_variant": "reasoning",
-      "aliases": [
-        "kilo/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
-        "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning"
-      ],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "image-understanding",
-        "visual-q&a",
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a",
-        "transcription",
-        "voice-input",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "google/gemma-4-26b-a4b-it:free",
-      "object": "model",
-      "created": 1797759078,
-      "owned_by": "openrouter",
-      "provider": "openrouter",
-      "name": "Google: Gemma 4 26B A4B  (free)",
-      "description": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference — delivering near-31B quality at...",
-      "context_size": 262144,
-      "context_label": "262K",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "vision",
-        "video-processing",
-        "reasoning",
-        "tool-use"
-      ],
-      "tags": [
-        "text-generation",
-        "chat",
-        "vision",
-        "video-processing",
-        "reasoning",
-        "tool-use",
-        "multimodal"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": true,
-      "has_tool_use": true,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "rpm": 20,
-        "rpd": 50,
-        "notes": "Free-variant limit is 20 RPM and 50 requests/day; a one-time purchase of 10+ USD credits raises the daily ceiling to 1000. Providers may log prompts for training on free routes."
-      },
-      "trial_scope": "specific",
-      "model_family": "gemma-4-26b-a4b",
-      "model_variant": "it",
-      "aliases": [
-        "cloudflare/@cf/google/gemma-4-26b-a4b-it",
-        "gemma-4-26B-A4B-it"
-      ],
-      "parameter_count": 26000000000,
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a",
-        "image-understanding",
-        "visual-q&a",
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "google/gemma-4-31b-it:free",
-      "object": "model",
-      "created": 280595854,
-      "owned_by": "openrouter",
-      "provider": "openrouter",
-      "name": "Google: Gemma 4 31B (free)",
-      "description": "Gemma 4 31B Instruct is Google DeepMind's 30.7B dense multimodal model supporting text and image input with text output. Features a 256K token context window, configurable thinking/reasoning mode, native function...",
-      "context_size": 262144,
-      "context_label": "262K",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "vision",
-        "video-processing",
-        "reasoning",
-        "tool-use"
-      ],
-      "tags": [
-        "reasoning",
-        "vision",
-        "text-generation",
-        "chat",
-        "video-processing",
-        "tool-use",
-        "multimodal"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": true,
-      "has_tool_use": true,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "rpm": 20,
-        "rpd": 50,
-        "notes": "Free-variant limit is 20 RPM and 50 requests/day; a one-time purchase of 10+ USD credits raises the daily ceiling to 1000. Providers may log prompts for training on free routes."
-      },
-      "trial_scope": "specific",
-      "model_family": "gemma-4-31b",
-      "model_variant": "it",
-      "aliases": [
-        "google/gemma-4-31b-it"
-      ],
-      "parameter_count": 31000000000,
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "image-understanding",
-        "visual-q&a",
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "google/lyria-3-pro-preview",
-      "object": "model",
-      "created": 749388223,
-      "owned_by": "openrouter",
-      "provider": "openrouter",
-      "name": "Google: Lyria 3 Pro Preview",
-      "description": "Full-length songs are priced at $0.08 per song. Lyria 3 is Google's family of music generation models, available through the Gemini API. With Lyria 3, you can generate high-quality, 48kHz...",
-      "context_size": 1048576,
-      "context_label": "1M",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "vision"
-      ],
-      "tags": [
-        "chat",
-        "text-generation",
-        "vision",
-        "multimodal"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "rpm": 20,
-        "rpd": 50,
-        "notes": "Free-variant limit is 20 RPM and 50 requests/day; a one-time purchase of 10+ USD credits raises the daily ceiling to 1000. Providers may log prompts for training on free routes."
-      },
-      "trial_scope": "specific",
-      "model_family": "lyria-3-pro-preview",
-      "aliases": [
-        "google/models/lyria-3-pro-preview"
-      ],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance",
-        "image-understanding",
-        "visual-q&a"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "google/lyria-3-clip-preview",
-      "object": "model",
-      "created": 935630838,
-      "owned_by": "openrouter",
-      "provider": "openrouter",
-      "name": "Google: Lyria 3 Clip Preview",
-      "description": "30 second duration clips are priced at $0.04 per clip. Lyria 3 is Google's family of music generation models, available through the Gemini API. With Lyria 3, you can generate...",
-      "context_size": 1048576,
-      "context_label": "1M",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "vision"
-      ],
-      "tags": [
-        "chat",
-        "text-generation",
-        "vision",
-        "multimodal"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "rpm": 20,
-        "rpd": 50,
-        "notes": "Free-variant limit is 20 RPM and 50 requests/day; a one-time purchase of 10+ USD credits raises the daily ceiling to 1000. Providers may log prompts for training on free routes."
-      },
-      "trial_scope": "specific",
-      "model_family": "lyria-3-clip-preview",
-      "aliases": [
-        "google/models/lyria-3-clip-preview"
-      ],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance",
-        "image-understanding",
-        "visual-q&a"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "free",
-      "object": "model",
-      "created": 2062807223,
-      "owned_by": "openrouter",
-      "provider": "openrouter",
-      "name": "Free Models Router",
-      "description": "The simplest way to get free inference. openrouter/free is a router that selects free models at random from the models available on OpenRouter. The router smartly filters for models that...",
-      "context_size": 200000,
-      "context_label": "200K",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "vision",
-        "tool-use"
-      ],
-      "tags": [
-        "chat",
-        "text-generation",
-        "vision",
-        "tool-use",
-        "multimodal"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": true,
-      "has_tool_use": true,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "rpm": 20,
-        "rpd": 50,
-        "notes": "Free-variant limit is 20 RPM and 50 requests/day; a one-time purchase of 10+ USD credits raises the daily ceiling to 1000. Providers may log prompts for training on free routes."
-      },
-      "trial_scope": "specific",
-      "model_family": "free-models-router",
-      "aliases": [],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance",
-        "image-understanding",
-        "visual-q&a"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "Qwen2.5-VL-72B-Instruct",
-      "object": "model",
-      "created": 1525125023,
+      "created": 362190396,
       "owned_by": "ovh",
       "provider": "ovh",
-      "name": "Qwen2.5-VL-72B-Instruct",
-      "description": "Qwen2.5-VL is a powerful vision-language model, designed for advanced image understanding. It can generate detailed image captions, analyze documents, OCR, detect objects, and answer questions based on visuals, making it useful for AI assistants, RAG and Agents.",
-      "context_size": 32768,
-      "context_label": "33K",
-      "price_input": 1.01,
-      "price_output": 1.01,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "vision"
-      ],
-      "tags": [
-        "chat",
-        "text-generation",
-        "vision",
-        "multimodal"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "rpm": 2,
-        "notes": "Anonymous access (no API key, no signup): 2 requests per minute, per IP and per model. With an API key the same models are billed pay-as-you-go per token (400 RPM per project) — price_input/price_output are those rates, not what the anonymous tier costs."
-      },
-      "trial_scope": "all",
-      "model_family": "qwen2.5-vl-72b",
-      "model_variant": "vl",
-      "aliases": [],
-      "parameter_count": 72000000000,
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance",
-        "image-understanding",
-        "visual-q&a"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "Qwen3.6-27B",
-      "object": "model",
-      "created": 1102402603,
-      "owned_by": "ovh",
-      "provider": "ovh",
-      "name": "Qwen3.6-27B",
-      "description": "Qwen3.6-27B is a 27-billion-parameter multimodal causal language model developed by Alibaba's Qwen team, released as an open-weight variant following the February release of the Qwen3.5 series. It is built as an Image-Text-to-Text model.",
+      "name": "Qwen3.5-397B-A17B",
+      "description": "Qwen3.5-397B-A17B is a highly efficient, reasoning focused MoE (Mixture of Experts) model delivering state-of-the-art performance in language, vision, and multimodal tasks, with strong capabilities in code, reasoning, and real-world adaptability.",
       "context_size": 262144,
       "context_label": "262K",
-      "price_input": 0.47,
-      "price_output": 3.19,
+      "price_input": 0.71,
+      "price_output": 4.25,
       "is_free": true,
       "capabilities": [
         "chat",
@@ -8349,11 +7821,11 @@
         "notes": "Anonymous access (no API key, no signup): 2 requests per minute, per IP and per model. With an API key the same models are billed pay-as-you-go per token (400 RPM per project) — price_input/price_output are those rates, not what the anonymous tier costs."
       },
       "trial_scope": "all",
-      "model_family": "qwen3.6-27b",
+      "model_family": "qwen3.5-397b-a17b",
       "aliases": [
-        "Qwen3.6-27B"
+        "xingchen/xopqwen35397b"
       ],
-      "parameter_count": 27000000000,
+      "parameter_count": 397000000000,
       "tier": "large",
       "speed": "fast",
       "use_case": [
@@ -8412,6 +7884,117 @@
       "aliases": [],
       "parameter_count": 9000000000,
       "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "image-understanding",
+        "visual-q&a",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "Mistral-Small-3.2-24B-Instruct-2506",
+      "object": "model",
+      "created": 1936234523,
+      "owned_by": "ovh",
+      "provider": "ovh",
+      "name": "Mistral-Small-3.2-24B-Instruct-2506",
+      "description": "Building upon Mistral Small 3 (2501), Mistral Small 3.2 (2506) adds state-of-the-art vision understanding and enhances long context capabilities up to 128k tokens without compromising text performance.\nWith 24 billion parameters, this model achieves top-tier capabilities in both text and vision tasks.\nThis model is a minor update of Mistral-Small-3.1-24B-Instruct-2503, which is an instruction-finetuned version of: Mistral-Small-3.1-24B-Base-2503.",
+      "context_size": 131072,
+      "context_label": "131K",
+      "price_input": 0.1,
+      "price_output": 0.31,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision",
+        "tool-use"
+      ],
+      "tags": [
+        "chat",
+        "text-generation",
+        "vision",
+        "tool-use",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 2,
+        "notes": "Anonymous access (no API key, no signup): 2 requests per minute, per IP and per model. With an API key the same models are billed pay-as-you-go per token (400 RPM per project) — price_input/price_output are those rates, not what the anonymous tier costs."
+      },
+      "trial_scope": "all",
+      "model_family": "mistral-small-3.2-24b",
+      "model_variant": "instruct",
+      "aliases": [],
+      "parameter_count": 24000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "Qwen3.6-27B",
+      "object": "model",
+      "created": 1102402603,
+      "owned_by": "ovh",
+      "provider": "ovh",
+      "name": "Qwen3.6-27B",
+      "description": "Qwen3.6-27B is a 27-billion-parameter multimodal causal language model developed by Alibaba's Qwen team, released as an open-weight variant following the February release of the Qwen3.5 series. It is built as an Image-Text-to-Text model.",
+      "context_size": 262144,
+      "context_label": "262K",
+      "price_input": 0.47,
+      "price_output": 3.19,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision",
+        "reasoning",
+        "tool-use"
+      ],
+      "tags": [
+        "chat",
+        "text-generation",
+        "vision",
+        "reasoning",
+        "tool-use",
+        "multimodal"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 2,
+        "notes": "Anonymous access (no API key, no signup): 2 requests per minute, per IP and per model. With an API key the same models are billed pay-as-you-go per token (400 RPM per project) — price_input/price_output are those rates, not what the anonymous tier costs."
+      },
+      "trial_scope": "all",
+      "model_family": "qwen3.6-27b",
+      "aliases": [
+        "Qwen3.6-27B"
+      ],
+      "parameter_count": 27000000000,
+      "tier": "large",
       "speed": "fast",
       "use_case": [
         "conversation",
@@ -8490,103 +8073,42 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "Qwen3.5-397B-A17B",
+      "id": "Qwen2.5-VL-72B-Instruct",
       "object": "model",
-      "created": 362190396,
+      "created": 1525125023,
       "owned_by": "ovh",
       "provider": "ovh",
-      "name": "Qwen3.5-397B-A17B",
-      "description": "Qwen3.5-397B-A17B is a highly efficient, reasoning focused MoE (Mixture of Experts) model delivering state-of-the-art performance in language, vision, and multimodal tasks, with strong capabilities in code, reasoning, and real-world adaptability.",
-      "context_size": 262144,
-      "context_label": "262K",
-      "price_input": 0.71,
-      "price_output": 4.25,
+      "name": "Qwen2.5-VL-72B-Instruct",
+      "description": "Qwen2.5-VL is a powerful vision-language model, designed for advanced image understanding. It can generate detailed image captions, analyze documents, OCR, detect objects, and answer questions based on visuals, making it useful for AI assistants, RAG and Agents.",
+      "context_size": 32768,
+      "context_label": "33K",
+      "price_input": 1.01,
+      "price_output": 1.01,
       "is_free": true,
       "capabilities": [
         "chat",
         "text-generation",
-        "vision",
-        "reasoning",
-        "tool-use"
+        "vision"
       ],
       "tags": [
         "chat",
         "text-generation",
         "vision",
-        "reasoning",
-        "tool-use",
-        "multimodal"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": true,
-      "has_tool_use": true,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "rpm": 2,
-        "notes": "Anonymous access (no API key, no signup): 2 requests per minute, per IP and per model. With an API key the same models are billed pay-as-you-go per token (400 RPM per project) — price_input/price_output are those rates, not what the anonymous tier costs."
-      },
-      "trial_scope": "all",
-      "model_family": "qwen3.5-397b-a17b",
-      "aliases": [
-        "xingchen/xopqwen35397b"
-      ],
-      "parameter_count": 397000000000,
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance",
-        "image-understanding",
-        "visual-q&a",
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "Mistral-Small-3.2-24B-Instruct-2506",
-      "object": "model",
-      "created": 1936234523,
-      "owned_by": "ovh",
-      "provider": "ovh",
-      "name": "Mistral-Small-3.2-24B-Instruct-2506",
-      "description": "Building upon Mistral Small 3 (2501), Mistral Small 3.2 (2506) adds state-of-the-art vision understanding and enhances long context capabilities up to 128k tokens without compromising text performance.\nWith 24 billion parameters, this model achieves top-tier capabilities in both text and vision tasks.\nThis model is a minor update of Mistral-Small-3.1-24B-Instruct-2503, which is an instruction-finetuned version of: Mistral-Small-3.1-24B-Base-2503.",
-      "context_size": 131072,
-      "context_label": "131K",
-      "price_input": 0.1,
-      "price_output": 0.31,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "vision",
-        "tool-use"
-      ],
-      "tags": [
-        "chat",
-        "text-generation",
-        "vision",
-        "tool-use",
         "multimodal"
       ],
       "is_reasoning": false,
       "is_multimodal": true,
-      "has_tool_use": true,
+      "has_tool_use": false,
       "free_mechanism": "rate-limited",
       "free_quota": {
         "rpm": 2,
         "notes": "Anonymous access (no API key, no signup): 2 requests per minute, per IP and per model. With an API key the same models are billed pay-as-you-go per token (400 RPM per project) — price_input/price_output are those rates, not what the anonymous tier costs."
       },
       "trial_scope": "all",
-      "model_family": "mistral-small-3.2-24b",
-      "model_variant": "instruct",
+      "model_family": "qwen2.5-vl-72b",
+      "model_variant": "vl",
       "aliases": [],
-      "parameter_count": 24000000000,
+      "parameter_count": 72000000000,
       "tier": "large",
       "speed": "fast",
       "use_case": [
@@ -8596,6 +8118,107 @@
         "writing-assistance",
         "image-understanding",
         "visual-q&a"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "Llama-3.2-11B-Vision-Instruct",
+      "object": "model",
+      "created": 1532775694,
+      "owned_by": "sambanova",
+      "provider": "sambanova",
+      "name": "Llama 3.2 11B Vision",
+      "context_label": "unknown",
+      "price_input": 0.15,
+      "price_output": 0.3,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "vision",
+        "chat",
+        "text-generation",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "total_credits": 5,
+        "notes": "$5 trial credits, valid for 3 months; listed prices are pay-as-you-go rates after credits run out"
+      },
+      "trial_scope": "all",
+      "model_family": "llama-3.2-11b-vision",
+      "model_variant": "vision",
+      "aliases": [
+        "cloudflare/@cf/meta/llama-3.2-11b-vision-instruct",
+        "github/Llama-3-2-11B-Vision-Instruct",
+        "meta/llama-3.2-11b-vision-instruct"
+      ],
+      "parameter_count": 11000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "Llama-3.2-90B-Vision-Instruct",
+      "object": "model",
+      "created": 1029751513,
+      "owned_by": "sambanova",
+      "provider": "sambanova",
+      "name": "Llama 3.2 90B Vision",
+      "context_label": "unknown",
+      "price_input": 0.8,
+      "price_output": 1.6,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "vision",
+        "chat",
+        "text-generation",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "total_credits": 5,
+        "notes": "$5 trial credits, valid for 3 months; listed prices are pay-as-you-go rates after credits run out"
+      },
+      "trial_scope": "all",
+      "model_family": "llama-3.2-90b-vision",
+      "model_variant": "vision",
+      "aliases": [
+        "github/Llama-3-2-90B-Vision-Instruct",
+        "meta/llama-3.2-90b-vision-instruct"
+      ],
+      "parameter_count": 90000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
       ],
       "performance_level": "mid",
       "estimated_latency": "< 1s"
