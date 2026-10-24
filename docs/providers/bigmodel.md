@@ -40,6 +40,6 @@ GLM Flash 等部分模型可免费使用，具体以官方价格页和控制台�
 | bigmodel  | `glm-4.1v-thinking-flash` | GLM-4.1V-Thinking-Flash | 64K | 永久免费 | — |
 | bigmodel  | `glm-4.5-flash` | GLM-4.5-Flash | 128K | 永久免费 | — |
 | bigmodel  | `glm-4.6v-flash` | GLM-4.6V-Flash | 128K | 永久免费 | — |
-| bigmodel  | `glm-4.7-flash` | GLM-4.7-Flash | 200K | 永久免费 | — |
+| bigmodel  | `glm-4.7-flash` | GLM-4.7-Flash | unknown | 永久免费 | — |
 | bigmodel  | `glm-4v-flash` | GLM-4V-Flash | 4K | 永久免费 | — |
 | bigmodel  | `glm-z1-flash` | GLM-Z1-Flash | 128K | 永久免费 | — |

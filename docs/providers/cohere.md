@@ -21,8 +21,8 @@
 
 | 指标 | 数量 |
 |---|---:|
-| 总模型 | 35 |
-| 免费模型 | 35 |
+| 总模型 | 37 |
+| 免费模型 | 37 |
 | 付费可试用 | 0 |
 
 ## 免费策略
@@ -64,6 +64,8 @@ Trial key 永久免费：20 RPM、1000 requests/月，所有模型共享配额�
 | cohere  | `rerank-v3.5` | rerank-v3.5 | 4K | 限速免费 | 20 RPM / Trial API key: 1,000 requests/month shared across all models (20 RPM); beyond that a paid key is required |
 | cohere  | `rerank-v4.0-fast` | rerank-v4.0-fast | 33K | 限速免费 | 20 RPM / Trial API key: 1,000 requests/month shared across all models (20 RPM); beyond that a paid key is required |
 | cohere  | `rerank-v4.0-pro` | rerank-v4.0-pro | 33K | 限速免费 | 20 RPM / Trial API key: 1,000 requests/month shared across all models (20 RPM); beyond that a paid key is required |
+| cohere  | `rerank-v5.0-fast` | rerank-v5.0-fast | 33K | 限速免费 | 20 RPM / Trial API key: 1,000 requests/month shared across all models (20 RPM); beyond that a paid key is required |
+| cohere  | `rerank-v5.0-pro` | rerank-v5.0-pro | 33K | 限速免费 | 20 RPM / Trial API key: 1,000 requests/month shared across all models (20 RPM); beyond that a paid key is required |
 | cohere  | `tiny-aya-earth` | tiny-aya-earth | 8K | 限速免费 | 20 RPM / Trial API key: 1,000 requests/month shared across all models (20 RPM); beyond that a paid key is required |
 | cohere  | `tiny-aya-fire` | tiny-aya-fire | 8K | 限速免费 | 20 RPM / Trial API key: 1,000 requests/month shared across all models (20 RPM); beyond that a paid key is required |
 | cohere  | `tiny-aya-global` | tiny-aya-global | 8K | 限速免费 | 20 RPM / Trial API key: 1,000 requests/month shared across all models (20 RPM); beyond that a paid key is required |
