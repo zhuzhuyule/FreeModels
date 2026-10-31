@@ -21,8 +21,8 @@
 
 | 指标 | 数量 |
 |---|---:|
-| 总模型 | 7 |
-| 免费模型 | 7 |
+| 总模型 | 4 |
+| 免费模型 | 4 |
 | 付费可试用 | 0 |
 
 ## 免费策略
@@ -34,9 +34,6 @@ turbo 层模型可用免费 token 调用（在 dash.llm7.io 注册领取，无�
 | Provider | Model ID | 名称 | 上下文 | 免费类型 | 限制 |
 |---|---|---|---:|---|---|
 | llm7  | `codestral-latest` | codestral-latest | 32K | 日 token 配额 | 60 RPM / 100,000 tokens/天 / Free API token from dash.llm7.io (signup required, no payment). 100,000 tokens per 24 hours across input+output 60 requests per minute, 250 per hour. Official docs warn the free-token quota may be reduced without notice. price_input/price_output are LLM7 paid-usage rates (USD per 1M tokens), not what the free tier costs. |
-| llm7  | `DeepSeek-V4-Flash-0731` | DeepSeek-V4-Flash-0731 | 400K | 日 token 配额 | 60 RPM / 100,000 tokens/天 / Free API token from dash.llm7.io (signup required, no payment). 100,000 tokens per 24 hours across input+output 60 requests per minute, 250 per hour. Official docs warn the free-token quota may be reduced without notice. price_input/price_output are LLM7 paid-usage rates (USD per 1M tokens), not what the free tier costs. |
-| llm7  | `GLM-5.3-Flash` | GLM-5.3-Flash | 400K | 日 token 配额 | 60 RPM / 100,000 tokens/天 / Free API token from dash.llm7.io (signup required, no payment). 100,000 tokens per 24 hours across input+output 60 requests per minute, 250 per hour. Official docs warn the free-token quota may be reduced without notice. price_input/price_output are LLM7 paid-usage rates (USD per 1M tokens), not what the free tier costs. |
 | llm7  | `gpt-oss:20b` | gpt-oss:20b | 128K | 日 token 配额 | 60 RPM / 100,000 tokens/天 / Free API token from dash.llm7.io (signup required, no payment). 100,000 tokens per 24 hours across input+output 60 requests per minute, 250 per hour. Official docs warn the free-token quota may be reduced without notice. price_input/price_output are LLM7 paid-usage rates (USD per 1M tokens), not what the free tier costs. |
-| llm7  | `minimax-m2.7` | minimax-m2.7 | 180K | 日 token 配额 | 60 RPM / 100,000 tokens/天 / Free API token from dash.llm7.io (signup required, no payment). 100,000 tokens per 24 hours across input+output 60 requests per minute, 250 per hour. Official docs warn the free-token quota may be reduced without notice. price_input/price_output are LLM7 paid-usage rates (USD per 1M tokens), not what the free tier costs. |
 | llm7  | `mistral-Nemo-Instruct-2407` | mistral-Nemo-Instruct-2407 | 128K | 日 token 配额 | 60 RPM / 100,000 tokens/天 / Free API token from dash.llm7.io (signup required, no payment). 100,000 tokens per 24 hours across input+output 60 requests per minute, 250 per hour. Official docs warn the free-token quota may be reduced without notice. price_input/price_output are LLM7 paid-usage rates (USD per 1M tokens), not what the free tier costs. |
 | llm7  | `nemotron-3-nano:30b` | nemotron-3-nano:30b | 1M | 日 token 配额 | 60 RPM / 100,000 tokens/天 / Free API token from dash.llm7.io (signup required, no payment). 100,000 tokens per 24 hours across input+output 60 requests per minute, 250 per hour. Official docs warn the free-token quota may be reduced without notice. price_input/price_output are LLM7 paid-usage rates (USD per 1M tokens), not what the free tier costs. |

@@ -1,9 +1,98 @@
 {
   "object": "list",
   "provider": "xingchen",
-  "updated_at": "2026-10-15T07:06:30.301Z",
-  "total": 42,
+  "updated_at": "2026-10-31T08:07:22.295Z",
+  "total": 43,
   "data": [
+    {
+      "id": "spark-x2.6",
+      "object": "model",
+      "created": 1617850916,
+      "owned_by": "xingchen",
+      "provider": "xingchen",
+      "name": "Spark-X2.6",
+      "description": "Spark-X2.6基于国产算力完成训练，采用 293B-A30B 参数的 MoE 架构，上下文长度拓展至 1M，代码与智能体能力达业界一流水平，同时提供专业安全防护并支持按任务场景自定义安全策略。",
+      "context_size": 1,
+      "context_label": "1",
+      "price_input": 0.9,
+      "price_output": 3.6,
+      "is_free": false,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "code-generation",
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "spark-x2.6",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "standard",
+      "use_case": [
+        "software-development",
+        "code-completion",
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "1-3s"
+    },
+    {
+      "id": "spark-x2.6-4b",
+      "object": "model",
+      "created": 263866841,
+      "owned_by": "xingchen",
+      "provider": "xingchen",
+      "name": "Spark-X2.6-4B",
+      "description": "Spark-X2.6-4B在代码、智能体、长文本及多语言能力上实现大幅提升，新增三档推理模式，自研推理框架下的推理效率较 ollama 有所提升。",
+      "context_size": 1,
+      "context_label": "1",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation",
+        "code-generation",
+        "chat"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "讯飞星辰 MaaS 免费模型（inferencePrice 输入/输出均为 0）；平台按账号限并发，具体数值只在 maas.xfyun.cn 登录后的控制台展示，公开模型列表 API 不返回该字段"
+      },
+      "trial_scope": "specific",
+      "model_family": "spark-x2.6-4b",
+      "aliases": [],
+      "parameter_count": 4000000000,
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "software-development",
+        "code-completion",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
     {
       "id": "spark-x2.5",
       "object": "model",
@@ -181,8 +270,7 @@
       "trial_scope": "none",
       "model_family": "glm-5.3",
       "aliases": [
-        "GLM-5.3",
-        "z-ai/glm-5.3"
+        "GLM-5.3"
       ],
       "tier": "medium",
       "speed": "standard",
@@ -274,7 +362,6 @@
         "cloudflare/@cf/deepseek-ai/deepseek-v4-flash-0731",
         "DeepSeek-V4-Flash",
         "deepseek-v4-flash-0731",
-        "llm7/DeepSeek-V4-Flash-0731",
         "sensenova/deepseek-v4-flash"
       ],
       "tier": "medium",
@@ -712,46 +799,6 @@
       "estimated_latency": "3-10s"
     },
     {
-      "id": "xsparkx2",
-      "object": "model",
-      "created": 1447445,
-      "owned_by": "xingchen",
-      "provider": "xingchen",
-      "name": "Spark X2",
-      "description": "Spark X2整体能力对标国际顶尖模型水平，在数学、推理、语言理解、智能体等能力上媲美国际最优；130+多语言综合能力继续提升，拉美、东盟等地区重点语种效果保持业界领先水平。输入最大长度支持64K，输出最大长度支持128K。",
-      "context_size": 196608,
-      "context_label": "197K",
-      "price_input": 3,
-      "price_output": 3,
-      "is_free": false,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "chat",
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
-      "model_family": "spark-x2",
-      "aliases": [],
-      "tier": "medium",
-      "speed": "standard",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
-    },
-    {
       "id": "xop35qwen2b",
       "object": "model",
       "created": 368694390,
@@ -872,7 +919,8 @@
       "trial_scope": "none",
       "model_family": "minimax-m2.5",
       "aliases": [
-        "MiniMax-M2.5"
+        "MiniMax-M2.5",
+        "sambanova/MiniMax-M2.5"
       ],
       "tier": "medium",
       "speed": "standard",

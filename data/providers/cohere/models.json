@@ -1,8 +1,8 @@
 {
   "object": "list",
   "provider": "cohere",
-  "updated_at": "2026-10-15T07:06:30.298Z",
-  "total": 35,
+  "updated_at": "2026-10-31T08:07:22.290Z",
+  "total": 37,
   "data": [
     {
       "id": "c4ai-aya-expanse-32b",
@@ -935,12 +935,12 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "north-mini-code-1-0",
+      "id": "north-mini-code-1.0",
       "object": "model",
-      "created": 1628690670,
+      "created": 1628690637,
       "owned_by": "cohere",
       "provider": "cohere",
-      "name": "north-mini-code-1-0",
+      "name": "north-mini-code-1.0",
       "context_size": 436000,
       "context_label": "436K",
       "is_free": true,
@@ -966,7 +966,7 @@
         "notes": "Trial API key: 1,000 requests/month shared across all models (20 RPM); beyond that a paid key is required"
       },
       "trial_scope": "all",
-      "model_family": "north-mini-code-1-0",
+      "model_family": "north-mini-code-1.0",
       "model_variant": "code",
       "aliases": [],
       "tier": "large",
@@ -987,12 +987,12 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "north-small-translate-09-2026",
+      "id": "north-small-translate-1.0",
       "object": "model",
-      "created": 520067427,
+      "created": 238778866,
       "owned_by": "cohere",
       "provider": "cohere",
-      "name": "north-small-translate-09-2026",
+      "name": "north-small-translate-1.0",
       "context_size": 32768,
       "context_label": "33K",
       "is_free": true,
@@ -1014,7 +1014,7 @@
         "notes": "Trial API key: 1,000 requests/month shared across all models (20 RPM); beyond that a paid key is required"
       },
       "trial_scope": "all",
-      "model_family": "north-small-translate-09",
+      "model_family": "north-small-translate-1.0",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
@@ -1234,6 +1234,78 @@
       },
       "trial_scope": "all",
       "model_family": "rerank-v4.0-pro",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "search-improvement",
+        "relevance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "rerank-v5.0-fast",
+      "object": "model",
+      "created": 628065630,
+      "owned_by": "cohere",
+      "provider": "cohere",
+      "name": "rerank-v5.0-fast",
+      "context_size": 32768,
+      "context_label": "33K",
+      "is_free": true,
+      "capabilities": [
+        "rerank"
+      ],
+      "tags": [
+        "rerank"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "notes": "Trial API key: 1,000 requests/month shared across all models (20 RPM); beyond that a paid key is required"
+      },
+      "trial_scope": "all",
+      "model_family": "rerank-v5.0-fast",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "search-improvement",
+        "relevance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "rerank-v5.0-pro",
+      "object": "model",
+      "created": 1841151073,
+      "owned_by": "cohere",
+      "provider": "cohere",
+      "name": "rerank-v5.0-pro",
+      "context_size": 32768,
+      "context_label": "33K",
+      "is_free": true,
+      "capabilities": [
+        "rerank"
+      ],
+      "tags": [
+        "rerank"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 20,
+        "notes": "Trial API key: 1,000 requests/month shared across all models (20 RPM); beyond that a paid key is required"
+      },
+      "trial_scope": "all",
+      "model_family": "rerank-v5.0-pro",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",

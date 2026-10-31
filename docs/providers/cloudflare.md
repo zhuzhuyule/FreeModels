@@ -21,8 +21,8 @@
 
 | 指标 | 数量 |
 |---|---:|
-| 总模型 | 69 |
-| 免费模型 | 62 |
+| 总模型 | 72 |
+| 免费模型 | 64 |
 | 付费可试用 | 0 |
 
 ## 免费策略
@@ -45,9 +45,11 @@
 | cloudflare  | `@cf/black-forest-labs/flux-2-klein-4b` | @cf/black-forest-labs/flux-2-klein-4b | unknown | 日 token 配额 | 10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up |
 | cloudflare  | `@cf/black-forest-labs/flux-2-klein-9b` | @cf/black-forest-labs/flux-2-klein-9b | unknown | 日 token 配额 | 10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up |
 | cloudflare  | `@cf/bytedance/stable-diffusion-xl-lightning` | @cf/bytedance/stable-diffusion-xl-lightning | unknown | 日 token 配额 | 10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up |
+| cloudflare  | `@cf/cloudflare/clairic` | @cf/cloudflare/clairic | 66K | 日 token 配额 | 10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up |
 | cloudflare  | `@cf/cloudflare/clef` | @cf/cloudflare/clef | 66K | 日 token 配额 | 10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up |
 | cloudflare  | `@cf/cloudflare/clef-flash` | @cf/cloudflare/clef-flash | 25K | 日 token 配额 | 10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up |
 | cloudflare  | `@cf/cloudflare/clef-omni` | @cf/cloudflare/clef-omni | 66K | 日 token 配额 | 10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up |
+| cloudflare  | `@cf/daily-co/phonellm-mini-alpha-2` | @cf/daily-co/phonellm-mini-alpha-2 | 262K | 日 token 配额 | 10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up |
 | cloudflare  | `@cf/deepgram/aura-1` | @cf/deepgram/aura-1 | unknown | 日 token 配额 | 10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up |
 | cloudflare  | `@cf/deepgram/aura-2-en` | @cf/deepgram/aura-2-en | unknown | 日 token 配额 | 10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up |
 | cloudflare  | `@cf/deepgram/aura-2-es` | @cf/deepgram/aura-2-es | unknown | 日 token 配额 | 10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up |

@@ -1,8 +1,8 @@
 {
   "object": "list",
   "provider": "google",
-  "updated_at": "2026-10-15T07:06:30.299Z",
-  "total": 39,
+  "updated_at": "2026-10-31T08:07:22.292Z",
+  "total": 36,
   "data": [
     {
       "id": "models/gemini-4-argon",
@@ -533,43 +533,6 @@
       "free_quota": null,
       "trial_scope": "none",
       "model_family": "gemini-omni-1.1-flash",
-      "aliases": [],
-      "tier": "medium",
-      "speed": "standard",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "video-creation"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
-    },
-    {
-      "id": "models/gemini-omni-flash-preview",
-      "object": "model",
-      "created": 1162537575,
-      "owned_by": "google",
-      "provider": "google",
-      "name": "Gemini Omni Flash Preview",
-      "description": "Google: Our next-generation video generation and editing model.",
-      "context_label": "unknown",
-      "price_input": 1.5,
-      "price_output": 9,
-      "is_free": false,
-      "capabilities": [
-        "video-generation"
-      ],
-      "tags": [
-        "text-generation",
-        "video-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
-      "model_family": "gemini-omni-flash-preview",
       "aliases": [],
       "tier": "medium",
       "speed": "standard",
@@ -1318,114 +1281,6 @@
       "estimated_latency": "1-3s"
     },
     {
-      "id": "models/veo-3.1-generate-preview",
-      "object": "model",
-      "created": 684528492,
-      "owned_by": "google",
-      "provider": "google",
-      "name": "veo-3.1-generate-preview",
-      "description": "Google: A fast video generation model.",
-      "context_label": "unknown",
-      "price_input": 0.4,
-      "is_free": false,
-      "capabilities": [
-        "video-generation"
-      ],
-      "tags": [
-        "text-generation",
-        "video-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
-      "model_family": "veo-3.1-generate-preview",
-      "aliases": [],
-      "tier": "small",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "video-creation"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "models/veo-3.1-fast-generate-preview",
-      "object": "model",
-      "created": 1855103823,
-      "owned_by": "google",
-      "provider": "google",
-      "name": "veo-3.1-fast-generate-preview",
-      "description": "Google: A fast video generation model.",
-      "context_label": "unknown",
-      "price_input": 0.1,
-      "is_free": false,
-      "capabilities": [
-        "video-generation"
-      ],
-      "tags": [
-        "text-generation",
-        "video-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
-      "model_family": "veo-3.1-fast-generate-preview",
-      "aliases": [],
-      "tier": "small",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "video-creation"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "models/veo-3.1-lite-generate-preview",
-      "object": "model",
-      "created": 1940413359,
-      "owned_by": "google",
-      "provider": "google",
-      "name": "veo-3.1-lite-generate-preview",
-      "description": "Google: A fast video generation model.",
-      "context_label": "unknown",
-      "price_input": 0.05,
-      "is_free": false,
-      "capabilities": [
-        "video-generation"
-      ],
-      "tags": [
-        "text-generation",
-        "video-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
-      "model_family": "veo-3.1-lite-generate-preview",
-      "aliases": [],
-      "tier": "small",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "video-creation"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
       "id": "models/lyria-3.5",
       "object": "model",
       "created": 356100776,
@@ -1489,9 +1344,7 @@
       "free_quota": null,
       "trial_scope": "none",
       "model_family": "lyria-3-clip-preview",
-      "aliases": [
-        "google/lyria-3-clip-preview"
-      ],
+      "aliases": [],
       "tier": "small",
       "speed": "fast",
       "use_case": [
@@ -1529,9 +1382,7 @@
       "free_quota": null,
       "trial_scope": "none",
       "model_family": "lyria-3-pro-preview",
-      "aliases": [
-        "google/lyria-3-pro-preview"
-      ],
+      "aliases": [],
       "tier": "small",
       "speed": "premium",
       "use_case": [
@@ -1579,6 +1430,46 @@
       "use_case": [
         "image-understanding",
         "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "semantic-search",
+        "similarity"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "models/gemini-embedding-001",
+      "object": "model",
+      "created": 1413255911,
+      "owned_by": "google",
+      "provider": "google",
+      "name": "Gemini Embedding",
+      "description": "Google: Our first Gemini Embeddings model for text-only use cases.",
+      "context_label": "unknown",
+      "price_input": 0.15,
+      "is_free": true,
+      "capabilities": [
+        "embeddings"
+      ],
+      "tags": [
+        "text-generation",
+        "embeddings"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "Free tier is limited per project by requests/min, input tokens/min and requests/day. Google publishes the per-model numbers only in AI Studio (https://aistudio.google.com/rate-limit); the public docs state limits \"are not guaranteed and actual capacity may vary\"."
+      },
+      "trial_scope": "fast",
+      "model_family": "gemini-embedding-001",
+      "model_variant": "embedding",
+      "aliases": [],
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
         "content-creation",
         "writing-assistance",
         "semantic-search",
