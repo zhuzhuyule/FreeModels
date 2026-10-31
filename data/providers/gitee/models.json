@@ -1,8 +1,8 @@
 {
   "object": "list",
   "provider": "gitee",
-  "updated_at": "2026-10-15T07:06:30.298Z",
-  "total": 205,
+  "updated_at": "2026-10-31T08:07:22.290Z",
+  "total": 211,
   "data": [
     {
       "id": "Qwen2.5-7B-Instruct",
@@ -151,8 +151,8 @@
         "whisper-large-v3",
         "groq/whisper-large-v3",
         "groq/whisper-large-v3-turbo",
-        "ovh/whisper-large-v3-turbo",
         "ovh/whisper-large-v3",
+        "ovh/whisper-large-v3-turbo",
         "sambanova/Whisper-Large-v3"
       ],
       "tier": "medium",
@@ -165,42 +165,6 @@
       ],
       "performance_level": "entry",
       "estimated_latency": "1-3s"
-    },
-    {
-      "id": "CosyVoice2",
-      "object": "model",
-      "created": 451919563,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "CosyVoice2-0.5B",
-      "description": "CosyVoice2 是一款升级版语音生成模型，提供更高精准度的多语种支持、情感调节与自然流畅的语音合成，适用于智能客服、语音助手等多个场景。",
-      "context_label": "unknown",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": false,
-      "capabilities": [
-        "speech-synthesis"
-      ],
-      "tags": [
-        "speech-synthesis"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "cosyvoice2-0.5b",
-      "aliases": [],
-      "parameter_count": 500000000,
-      "tier": "small",
-      "speed": "standard",
-      "use_case": [
-        "text-to-speech",
-        "voice-output"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
     },
     {
       "id": "UVDoc",
@@ -760,7 +724,8 @@
       "trial_scope": "all",
       "model_family": "qwq-32b",
       "aliases": [
-        "cloudflare/@cf/qwen/qwq-32b"
+        "cloudflare/@cf/qwen/qwq-32b",
+        "sambanova/QwQ-32B"
       ],
       "parameter_count": 32000000000,
       "tier": "large",
@@ -879,8 +844,8 @@
         "whisper-large-v3-turbo",
         "groq/whisper-large-v3",
         "groq/whisper-large-v3-turbo",
-        "ovh/whisper-large-v3-turbo",
         "ovh/whisper-large-v3",
+        "ovh/whisper-large-v3-turbo",
         "sambanova/Whisper-Large-v3"
       ],
       "tier": "medium",
@@ -1052,47 +1017,6 @@
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
-    },
-    {
-      "id": "GLM-4-32B",
-      "object": "model",
-      "created": 131201542,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "GLM-4-32B",
-      "description": "GLM 家族新一代开源模型，320 亿参数，经过 15T 高质量数据的预训练，其中包含大量推理类的合成数据。在后训练阶段，除了针对对话场景进行了人类偏好对齐外，还通过拒绝采样和强化学习等技术强化了模型在指令遵循、工程代码、函数调用方面的效果，加强了智能体任务所需的原子能力。在工程代码、Artifacts 生成、函数调用、搜索问答及报告等方面都取得了不错的效果。",
-      "context_size": 32000,
-      "context_label": "32K",
-      "price_input": 1.89,
-      "price_output": 1.89,
-      "is_free": false,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation",
-        "tool-use",
-        "code-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": true,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "glm-4-32b",
-      "aliases": [],
-      "parameter_count": 32000000000,
-      "tier": "large",
-      "speed": "standard",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "software-development",
-        "code-completion"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "3-10s"
     },
     {
       "id": "InternVL3-78B",
@@ -4494,6 +4418,7 @@
       "trial_scope": "none",
       "model_family": "minimax-m2.5",
       "aliases": [
+        "sambanova/MiniMax-M2.5",
         "xingchen/xminimaxm25"
       ],
       "tier": "medium",
@@ -4707,8 +4632,7 @@
       "model_family": "gemma-4-26b-a4b",
       "model_variant": "it",
       "aliases": [
-        "cloudflare/@cf/google/gemma-4-26b-a4b-it",
-        "google/gemma-4-26b-a4b-it:free"
+        "cloudflare/@cf/google/gemma-4-26b-a4b-it"
       ],
       "parameter_count": 26000000000,
       "tier": "large",
@@ -4750,9 +4674,7 @@
       "free_quota": null,
       "trial_scope": "none",
       "model_family": "minimax-m2.7",
-      "aliases": [
-        "llm7/minimax-m2.7"
-      ],
+      "aliases": [],
       "tier": "medium",
       "speed": "standard",
       "use_case": [
@@ -4915,7 +4837,6 @@
       "aliases": [
         "cloudflare/@cf/deepseek-ai/deepseek-v4-flash-0731",
         "deepseek-v4-flash-0731",
-        "llm7/DeepSeek-V4-Flash-0731",
         "sensenova/deepseek-v4-flash",
         "xingchen/xopdeepseekv4flash0731"
       ],
@@ -6372,7 +6293,6 @@
       "aliases": [
         "cloudflare/@cf/deepseek-ai/deepseek-v4-flash-0731",
         "DeepSeek-V4-Flash",
-        "llm7/DeepSeek-V4-Flash-0731",
         "sensenova/deepseek-v4-flash",
         "xingchen/xopdeepseekv4flash0731"
       ],
@@ -6467,43 +6387,6 @@
       "estimated_latency": "1-3s"
     },
     {
-      "id": "Wan2.2-T2V-A14B",
-      "object": "model",
-      "created": 920611077,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "Wan2.2-T2V-A14B",
-      "description": "Wan2.2-T2V-A14B 是 Wan2.2 系列的文本生成视频（Text-to-Video）模型，采用混合专家架构，可根据文字描述生成具有复杂运动和电影感画面的视频，本服务仅支持 480P 输出。",
-      "context_label": "unknown",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": false,
-      "capabilities": [
-        "video-generation"
-      ],
-      "tags": [
-        "text-generation",
-        "video-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
-      "model_family": "wan2.2-t2v-a14b",
-      "aliases": [],
-      "tier": "medium",
-      "speed": "standard",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "video-creation"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
-    },
-    {
       "id": "qwen3.8-27b",
       "object": "model",
       "created": 388523311,
@@ -6579,7 +6462,6 @@
       "trial_scope": "none",
       "model_family": "glm-5.3",
       "aliases": [
-        "z-ai/glm-5.3",
         "xingchen/xopglm53"
       ],
       "tier": "medium",
@@ -6700,7 +6582,6 @@
       "trial_scope": "none",
       "model_family": "glm-5.3-flash",
       "aliases": [
-        "llm7/GLM-5.3-Flash",
         "z-ai/glm-5.3-flash"
       ],
       "tier": "large",
@@ -6886,46 +6767,6 @@
       ],
       "performance_level": "mid",
       "estimated_latency": "3-10s"
-    },
-    {
-      "id": "qwen3-coder-plus",
-      "object": "model",
-      "created": 2084532158,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "qwen3-coder-plus",
-      "description": "基于Qwen3的代码生成模型，具有强大的Coding Agent能力，擅长工具调用和环境交互，能够实现自主编程、代码能力卓越的同时兼具通用能力。",
-      "context_label": "unknown",
-      "price_input": 4,
-      "price_output": 16,
-      "is_free": false,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "tool-use",
-        "code-generation",
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": true,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
-      "model_family": "qwen3-coder-plus",
-      "model_variant": "coder",
-      "aliases": [],
-      "tier": "medium",
-      "speed": "premium",
-      "use_case": [
-        "software-development",
-        "code-completion",
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "1-3s"
     },
     {
       "id": "qwen-mt-plus",
@@ -7263,15 +7104,15 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "Atria-Dawn-Preview",
+      "id": "Atria-Dawn",
       "object": "model",
-      "created": 1245771420,
+      "created": 1303556531,
       "owned_by": "gitee",
       "provider": "gitee",
-      "name": "Atria Dawn Preview",
-      "description": "Atria Dawn Preview （限时免费）是由上海人工智能实验室研发的新一代智能体大模型预览版，旨在协助用户将开放性问题推进为可执行、可验证和可复现的结果。",
-      "context_size": 256000,
-      "context_label": "256K",
+      "name": "Atria Dawn",
+      "description": "Atria Dawn 是由上海人工智能实验室研发的新一代智能体大模型预览版，旨在协助用户将开放性问题推进为可执行、可验证和可复现的结果。",
+      "context_size": 512000,
+      "context_label": "512K",
       "price_input": 0,
       "price_output": 0,
       "is_free": true,
@@ -7287,7 +7128,7 @@
       "free_mechanism": "permanent",
       "free_quota": null,
       "trial_scope": "specific",
-      "model_family": "atria-dawn-preview",
+      "model_family": "atria-dawn",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
@@ -7436,6 +7277,8 @@
       "trial_scope": "none",
       "model_family": "deepseek-v4.1-flash",
       "aliases": [
+        "cloudflare/@cf/deepseek-ai/deepseek-v4.1-flash-1017",
+        "DeepSeek-V4.1-Flash-1017",
         "deepseek-ai/deepseek-v4.1-flash"
       ],
       "tier": "large",
@@ -7744,6 +7587,49 @@
       "estimated_latency": "< 1s"
     },
     {
+      "id": "qwen-image-2.1-viggle-turbo",
+      "object": "model",
+      "created": 393964718,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "Qwen-Image-2.1-viggle-turbo",
+      "description": "基于Qwen构建。Qwen/Qwen-Image-2.1的简化版学生模型，由Viggle采用分布匹配蒸馏技术进行训练。该模型无需分类器自由引导，即可在6个Transformer通道（而非40个）内，利用1-3张参考图像完成文本到图像的转换和指令驱动的编辑。",
+      "context_label": "unknown",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": false,
+      "capabilities": [
+        "image-generation"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "image-generation",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "qwen-image-2.1-viggle",
+      "model_variant": "image",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "creative-generation",
+        "art"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "3-10s"
+    },
+    {
       "id": "laya-multilingual",
       "object": "model",
       "created": 1148065904,
@@ -7856,6 +7742,390 @@
       ],
       "performance_level": "mid",
       "estimated_latency": "< 1s"
+    },
+    {
+      "id": "DeepSeek-V4.1-Flash-1017",
+      "object": "model",
+      "created": 1296187278,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "DeepSeek-V4.1-Flash-1017",
+      "description": "DeepSeek-V4.1-Flash-1017 是 V4.1-Flash 的最新迭代版本，通过基于自反馈的强化学习（RL）训练，在 Terminal-Bench 4.0、DeepSWE v1.1、ProgramBench 等多项基准上较上版显著提升",
+      "context_size": 1000000,
+      "context_label": "1M",
+      "price_input": 2,
+      "price_output": 8,
+      "is_free": false,
+      "capabilities": [
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "deepseek-v4.1-flash",
+      "aliases": [
+        "cloudflare/@cf/deepseek-ai/deepseek-v4.1-flash-1017",
+        "deepseek-v4.1-flash",
+        "deepseek-ai/deepseek-v4.1-flash"
+      ],
+      "tier": "medium",
+      "speed": "standard",
+      "use_case": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "1-3s"
+    },
+    {
+      "id": "d3",
+      "object": "model",
+      "created": 5863260,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "d3",
+      "description": "d3 是 vLLM Semantic Router 团队推出的 27B 多模态决策模型，支持基于文本、图像和视频进行分类、是非判断与评分，并直接输出决策结果及概率。",
+      "context_size": 32000,
+      "context_label": "32K",
+      "price_input": 0.3,
+      "price_output": 1e-8,
+      "is_free": false,
+      "capabilities": [
+        "systemone"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "d3",
+      "aliases": [
+        "d3-turbo"
+      ],
+      "tier": "large",
+      "speed": "premium",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "3-10s"
+    },
+    {
+      "id": "d3-flash",
+      "object": "model",
+      "created": 1951442729,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "d3-flash",
+      "description": "D3-Flash 是 vLLM Semantic Router 推出的 Decision 3.0 多模态决策模型系列里的主力中档型号，定位兼顾推理速度与决策精度，专门用于大模型集群里的路由、意图判别、Agent 分支决策、安全护栏等任务，不是通用对话生成模型。",
+      "context_size": 32000,
+      "context_label": "32K",
+      "price_input": 0.2,
+      "price_output": 1e-8,
+      "is_free": false,
+      "capabilities": [
+        "systemone"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "d3-flash",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "3-10s"
+    },
+    {
+      "id": "d3-turbo",
+      "object": "model",
+      "created": 1934498443,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "d3-turbo",
+      "description": "D3-Turbo 是一款面向复杂决策任务的高性能多模态决策模型，支持文本、图像和视频输入，能够根据给定的上下文与问题进行分类判断、选项评估和目标定位，为智能路由、视觉分析、内容识别及自动化决策等应用提供支持。",
+      "context_size": 32000,
+      "context_label": "32K",
+      "price_input": 0.3,
+      "price_output": 1e-8,
+      "is_free": false,
+      "capabilities": [
+        "systemone"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "d3",
+      "model_variant": "turbo",
+      "aliases": [
+        "d3"
+      ],
+      "tier": "large",
+      "speed": "premium",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "3-10s"
+    },
+    {
+      "id": "kimi-k3.1-pro-highspeed",
+      "object": "model",
+      "created": 448974005,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "Kimi-K3.1-Pro-Highspeed",
+      "description": "Kimi K3.1 Pro Highspeed 是月之暗面推出的旗舰高速推理模型，支持百万 Token 上下文，在保持与 K3.1 Pro 同等智能水平的同时，提供约 2～3 倍的输出速度，适用于复杂编程、多模态理解和长程智能体任务。",
+      "context_size": 1000000,
+      "context_label": "1M",
+      "price_input": 26,
+      "price_output": 136,
+      "is_free": false,
+      "capabilities": [
+        "text-generation"
+      ],
+      "tags": [
+        "reasoning",
+        "vision",
+        "code-generation",
+        "text-generation",
+        "multimodal"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "kimi-k3.1-pro-highspeed",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "image-understanding",
+        "visual-q&a",
+        "software-development",
+        "code-completion",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performance_level": "high",
+      "estimated_latency": "3-10s"
+    },
+    {
+      "id": "kimi-k3.1-pro",
+      "object": "model",
+      "created": 477156855,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "Kimi-K3.1-Pro",
+      "description": "Kimi K3.1 Pro 是月之暗面推出的旗舰推理模型，支持百万 Token 上下文，具备多模态理解、复杂编程与长程智能体能力，适用于深度分析和多步骤任务处理。",
+      "context_size": 1000000,
+      "context_label": "1M",
+      "price_input": 13,
+      "price_output": 68,
+      "is_free": false,
+      "capabilities": [
+        "text-generation"
+      ],
+      "tags": [
+        "reasoning",
+        "vision",
+        "code-generation",
+        "text-generation",
+        "multimodal"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "kimi-k3.1-pro",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "image-understanding",
+        "visual-q&a",
+        "software-development",
+        "code-completion",
+        "content-creation",
+        "writing-assistance",
+        "complex-reasoning"
+      ],
+      "performance_level": "high",
+      "estimated_latency": "3-10s"
+    },
+    {
+      "id": "MiniMax-M3.1-Flash",
+      "object": "model",
+      "created": 1067651457,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "MiniMax-M3.1-Flash",
+      "description": "作为新⼀代flash模型，M3.1 Flash 在 Agentic 任务、编程及⽹络安全能⼒等⽅⾯实现了全⾯提升，同时保持了极具竞争⼒的使⽤成本，在性能与效率两⽅⾯同时取得了巨⼤的提升。",
+      "context_size": 1000000,
+      "context_label": "1M",
+      "price_input": 1,
+      "price_output": 4,
+      "is_free": false,
+      "capabilities": [
+        "text-generation"
+      ],
+      "tags": [
+        "code-generation",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "minimax-m3.1-flash",
+      "aliases": [
+        "sambanova/MiniMax-M3.1-Flash"
+      ],
+      "tier": "medium",
+      "speed": "standard",
+      "use_case": [
+        "software-development",
+        "code-completion",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "1-3s"
+    },
+    {
+      "id": "Fibo-2.0-edit-turbo",
+      "object": "model",
+      "created": 864352910,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "Fibo-2.0-edit-turbo",
+      "description": "Fibo-2.0-Edit-Turbo 是由 Bria AI 开发的高效图像编辑模型，拥有约 8B 参数，支持通过自然语言指令对现有图像进行编辑，可实现物体添加、删除与替换、背景修改、风格调整、光照优化及图像文字编辑等操作。模型采用少步推理技术，仅需 4 步即可完成图像编辑，在保证图像质量的同时降低推理延迟与成本，适用于电商产品图处理、创意设计和图像自动化编辑等场景。",
+      "context_label": "unknown",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": false,
+      "capabilities": [
+        "image-to-image"
+      ],
+      "tags": [
+        "vision",
+        "image-to-image",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "fibo-2.0-edit",
+      "model_variant": "turbo",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "image-editing",
+        "style-transfer"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "3-10s"
+    },
+    {
+      "id": "Unlimited-OCR-2",
+      "object": "model",
+      "created": 990041600,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "Unlimited-OCR-2",
+      "description": "Unlimited-OCR-2 是百度推出的超长文档解析与多模态 OCR 模型，总参数量约 3.3B，采用混合专家（MoE）架构，支持从图像中提取文本、识别文档结构及理解跨页面内容。模型通过稀疏参考滑动窗口注意力（SR-SWA）机制降低长文档处理的计算与内存开销，能够高效解析数十页乃至数百页的文档，适用于 PDF 解析、复杂文档识别、表格提取及长篇资料数字化等场景。",
+      "context_label": "unknown",
+      "price_input": 2.8,
+      "price_output": 2.8,
+      "is_free": false,
+      "capabilities": [
+        "text-generation"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "document-processing",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "unlimited-ocr-2",
+      "aliases": [],
+      "tier": "large",
+      "speed": "premium",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "pdf-processing",
+        "ocr"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "3-10s"
     },
     {
       "id": "bge-large-zh-v1.5",

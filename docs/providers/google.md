@@ -21,8 +21,8 @@
 
 | 指标 | 数量 |
 |---|---:|
-| 总模型 | 39 |
-| 免费模型 | 22 |
+| 总模型 | 36 |
+| 免费模型 | 23 |
 | 付费可试用 | 0 |
 
 ## 免费策略
@@ -52,6 +52,7 @@ Gemini API 部分模型提供免费层，通常带有 RPM / RPD / TPM 限制。
 | google  | `models/gemini-3.8-flash-tts` | Gemini 3.8 Flash TTS | unknown | 限速免费 | Free tier is limited per project by requests/min, input tokens/min and requests/day. Google publishes the per-model numbers only in AI Studio (https://aistudio.google.com/rate-limit); the public docs state limits "are not guaranteed and actual capacity may vary". |
 | google  | `models/gemini-3.8-live` | Gemini 3.8 Live | unknown | 限速免费 | Free tier is limited per project by requests/min, input tokens/min and requests/day. Google publishes the per-model numbers only in AI Studio (https://aistudio.google.com/rate-limit); the public docs state limits "are not guaranteed and actual capacity may vary". |
 | google  | `models/gemini-3.8-live-extended-thinking` | Gemini 3.8 Live Extended Thinking | unknown | 限速免费 | Free tier is limited per project by requests/min, input tokens/min and requests/day. Google publishes the per-model numbers only in AI Studio (https://aistudio.google.com/rate-limit); the public docs state limits "are not guaranteed and actual capacity may vary". |
+| google  | `models/gemini-embedding-001` | Gemini Embedding | unknown | 限速免费 | Free tier is limited per project by requests/min, input tokens/min and requests/day. Google publishes the per-model numbers only in AI Studio (https://aistudio.google.com/rate-limit); the public docs state limits "are not guaranteed and actual capacity may vary". |
 | google  | `models/gemini-embedding-2` | Gemini Embedding 2 | unknown | 限速免费 | Free tier is limited per project by requests/min, input tokens/min and requests/day. Google publishes the per-model numbers only in AI Studio (https://aistudio.google.com/rate-limit); the public docs state limits "are not guaranteed and actual capacity may vary". |
 | google  | `models/gemini-robotics-er-2-preview` | Gemini Robotics ER 2 Preview | unknown | 限速免费 | Free tier is limited per project by requests/min, input tokens/min and requests/day. Google publishes the per-model numbers only in AI Studio (https://aistudio.google.com/rate-limit); the public docs state limits "are not guaranteed and actual capacity may vary". |
 | google  | `models/gemini-robotics-er-2-streaming-preview` | Gemini Robotics ER 2 Streaming Preview | unknown | 限速免费 | Free tier is limited per project by requests/min, input tokens/min and requests/day. Google publishes the per-model numbers only in AI Studio (https://aistudio.google.com/rate-limit); the public docs state limits "are not guaranteed and actual capacity may vary". |

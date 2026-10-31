@@ -1,8 +1,8 @@
 {
   "object": "list",
   "provider": "kilo",
-  "updated_at": "2026-10-15T07:06:30.300Z",
-  "total": 15,
+  "updated_at": "2026-10-31T08:07:22.293Z",
+  "total": 17,
   "data": [
     {
       "id": "kilo-auto/free",
@@ -58,14 +58,72 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "id": "nvidia/nemotron-3.5-super-vl:free",
       "object": "model",
-      "created": 590732147,
+      "created": 1201602071,
       "owned_by": "kilo",
       "provider": "kilo",
-      "name": "NVIDIA: Nemotron 3 Ultra (free)",
-      "description": "NVIDIA Nemotron 3 Ultra is an open frontier-reasoning and orchestration model from NVIDIA, with 55B active parameters out of 550B total (MoE). Built on a hybrid Transformer-Mamba mixture-of-experts architecture, it...\n\n**Terms of service** For NVIDIA free endpoints (Super/Ultra/etc): Trial use only - do not submit personal or confidential data. Your use is logged for security purposes and to improve NVIDIA products and services. The logged session data for improvement purposes is not linked to y",
+      "name": "NVIDIA: Nemotron 3.5 Super VL (free)",
+      "description": "NVIDIA Nemotron 3.5 Super VL is an open multimodal mixture-of-experts model from NVIDIA, with 12B active parameters out of 120B total. It takes text, images, documents, GUI screenshots, and video...\n\n**Terms of service** For NVIDIA free endpoints (Super/Ultra/etc): Trial use only - do not submit personal or confidential data. Your use is logged for security purposes and to improve NVIDIA products and services. The logged session data for improvement purposes is not linked to your identity or any",
       "context_size": 1000000,
+      "context_label": "1M",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision",
+        "video-processing",
+        "tool-use",
+        "reasoning"
+      ],
+      "tags": [
+        "vision",
+        "text-generation",
+        "chat",
+        "video-processing",
+        "tool-use",
+        "reasoning",
+        "multimodal"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "200 requests per hour per IP (anonymous, no API key required)"
+      },
+      "trial_scope": "specific",
+      "model_family": "nemotron-3.5-super-vl",
+      "model_variant": "vl",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "image-understanding",
+        "visual-q&a",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "reflection/beam-free",
+      "object": "model",
+      "created": 1117055359,
+      "owned_by": "kilo",
+      "provider": "kilo",
+      "name": "Reflection: Beam 1.0 (free)",
+      "description": "Your prompts and completions may be retained and used to train or improve the provider's services. Beam is Reflection's reasoning model for coding and agentic workflows, combining strong coding capabilities with fast, low-latency inference, served through Vercel AI Gateway at no cost. It supports function calling, structured outputs, and streaming, and takes text input only. Zero Data Retention is not available for this model.",
+      "context_size": 1048576,
       "context_label": "1M",
       "price_input": 0,
       "price_output": 0,
@@ -79,8 +137,9 @@
       "tags": [
         "reasoning",
         "text-generation",
-        "chat",
-        "tool-use"
+        "tool-use",
+        "code-generation",
+        "chat"
       ],
       "is_reasoning": true,
       "is_multimodal": false,
@@ -90,11 +149,8 @@
         "notes": "200 requests per hour per IP (anonymous, no API key required)"
       },
       "trial_scope": "specific",
-      "model_family": "nemotron-3-ultra-550b-a55b",
-      "aliases": [
-        "nvidia/nemotron-3-ultra-550b-a55b",
-        "nvidia/nemotron-3-ultra-550b-a55b:free"
-      ],
+      "model_family": "reflection:-beam-1.0",
+      "aliases": [],
       "tier": "large",
       "speed": "fast",
       "use_case": [
@@ -103,6 +159,8 @@
         "math",
         "content-creation",
         "writing-assistance",
+        "software-development",
+        "code-completion",
         "conversation",
         "q&a",
         "complex-reasoning"
@@ -164,6 +222,110 @@
       "estimated_latency": "< 1s"
     },
     {
+      "id": "recursive/flint-v1.0:free",
+      "object": "model",
+      "created": 1264809611,
+      "owned_by": "kilo",
+      "provider": "kilo",
+      "name": "Recursive: Flint (free)",
+      "description": "Flint is an open-weight mixture-of-experts model from Recursive, with about 2.5B active parameters out of 40B total, built by Recursive's autoresearch system Eureka Machine for coding agents. It is suited...",
+      "context_size": 262144,
+      "context_label": "262K",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "tool-use",
+        "reasoning"
+      ],
+      "tags": [
+        "text-generation",
+        "code-generation",
+        "chat",
+        "tool-use",
+        "reasoning"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "200 requests per hour per IP (anonymous, no API key required)"
+      },
+      "trial_scope": "specific",
+      "model_family": "recursive-flint-v1.0",
+      "aliases": [],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "software-development",
+        "code-completion",
+        "conversation",
+        "q&a",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "xingchen-agi/xing4.0-29b-a4b:free",
+      "object": "model",
+      "created": 317051642,
+      "owned_by": "kilo",
+      "provider": "kilo",
+      "name": "XingChen: Xing4.0 29B A4B (free)",
+      "description": "Xing4.0-29B-A4B is an open-weight mixture-of-experts language model from China Telecom's AI team (TeleAI) and the successor to the TeleChat series. It has 29B total parameters with 4B active per token...",
+      "context_size": 262144,
+      "context_label": "262K",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "tool-use",
+        "reasoning"
+      ],
+      "tags": [
+        "text-generation",
+        "chat",
+        "tool-use",
+        "reasoning"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "200 requests per hour per IP (anonymous, no API key required)"
+      },
+      "trial_scope": "specific",
+      "model_family": "xingchen-agi-xing4.0-29b-a4b",
+      "aliases": [],
+      "parameter_count": 29000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
       "id": "dots-studio/dots-3-note-preview:free",
       "object": "model",
       "created": 1664052281,
@@ -200,9 +362,7 @@
       },
       "trial_scope": "specific",
       "model_family": "dots-studio-dots-3-note-preview",
-      "aliases": [
-        "dots-studio/dots-3-note-preview:free"
-      ],
+      "aliases": [],
       "tier": "large",
       "speed": "fast",
       "use_case": [
@@ -255,9 +415,7 @@
       },
       "trial_scope": "specific",
       "model_family": "liquid-lfm-2.5-2.6b",
-      "aliases": [
-        "liquid/lfm-2.5-2.6b:free"
-      ],
+      "aliases": [],
       "parameter_count": 2600000000,
       "tier": "medium",
       "speed": "fast",
@@ -310,9 +468,7 @@
       },
       "trial_scope": "specific",
       "model_family": "nemotron-3.5-lightning",
-      "aliases": [
-        "nvidia/nemotron-3.5-lightning:free"
-      ],
+      "aliases": [],
       "tier": "large",
       "speed": "fast",
       "use_case": [
@@ -323,67 +479,6 @@
         "problem-solving",
         "logical-analysis",
         "math",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "thinkingmachines/inkling-small:free",
-      "object": "model",
-      "created": 1784353244,
-      "owned_by": "kilo",
-      "provider": "kilo",
-      "name": "Thinking Machines: Inkling Small (free)",
-      "description": "Inkling Small is an open-weight multimodal mixture-of-experts model from Thinking Machines Lab, with 12B active parameters out of 276B total. It is positioned as the smaller, more efficient member of...",
-      "context_size": 1048576,
-      "context_label": "1M",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "vision",
-        "speech-recognition",
-        "tool-use",
-        "reasoning"
-      ],
-      "tags": [
-        "reasoning",
-        "vision",
-        "text-generation",
-        "chat",
-        "speech-recognition",
-        "tool-use",
-        "multimodal"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": true,
-      "has_tool_use": true,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "200 requests per hour per IP (anonymous, no API key required)"
-      },
-      "trial_scope": "specific",
-      "model_family": "thinkingmachines-inkling-small",
-      "aliases": [
-        "thinkingmachines/inkling-small:free"
-      ],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "image-understanding",
-        "visual-q&a",
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a",
-        "transcription",
-        "voice-input",
         "complex-reasoning"
       ],
       "performance_level": "mid",
@@ -424,9 +519,7 @@
       },
       "trial_scope": "specific",
       "model_family": "poolside-laguna-s-2.1",
-      "aliases": [
-        "poolside/laguna-s-2.1:free"
-      ],
+      "aliases": [],
       "tier": "large",
       "speed": "fast",
       "use_case": [
@@ -480,8 +573,7 @@
       "trial_scope": "specific",
       "model_family": "poolside-laguna-xs-2.1",
       "aliases": [
-        "poolside/laguna-xs-2.1",
-        "poolside/laguna-xs-2.1:free"
+        "poolside/laguna-xs-2.1"
       ],
       "tier": "large",
       "speed": "fast",
@@ -537,9 +629,7 @@
       "trial_scope": "specific",
       "model_family": "north-mini-code",
       "model_variant": "code",
-      "aliases": [
-        "cohere/north-mini-code:free"
-      ],
+      "aliases": [],
       "tier": "large",
       "speed": "fast",
       "use_case": [
@@ -595,8 +685,7 @@
       "model_family": "nemotron-3.5-content-safety",
       "model_variant": "safety",
       "aliases": [
-        "nvidia/nemotron-3.5-content-safety",
-        "nvidia/nemotron-3.5-content-safety:free"
+        "nvidia/nemotron-3.5-content-safety"
       ],
       "tier": "large",
       "speed": "fast",
@@ -612,6 +701,58 @@
         "problem-solving",
         "logical-analysis",
         "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "object": "model",
+      "created": 590732147,
+      "owned_by": "kilo",
+      "provider": "kilo",
+      "name": "NVIDIA: Nemotron 3 Ultra (free)",
+      "description": "NVIDIA Nemotron 3 Ultra is an open frontier-reasoning and orchestration model from NVIDIA, with 55B active parameters out of 550B total (MoE). Built on a hybrid Transformer-Mamba mixture-of-experts architecture, it...\n\n**Terms of service** For NVIDIA free endpoints (Super/Ultra/etc): Trial use only - do not submit personal or confidential data. Your use is logged for security purposes and to improve NVIDIA products and services. The logged session data for improvement purposes is not linked to y",
+      "context_size": 1000000,
+      "context_label": "1M",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "tool-use",
+        "reasoning"
+      ],
+      "tags": [
+        "reasoning",
+        "text-generation",
+        "chat",
+        "tool-use"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": false,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "200 requests per hour per IP (anonymous, no API key required)"
+      },
+      "trial_scope": "specific",
+      "model_family": "nemotron-3-ultra-550b-a55b",
+      "aliases": [
+        "nvidia/nemotron-3-ultra-550b-a55b"
+      ],
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a",
         "complex-reasoning"
       ],
       "performance_level": "mid",
@@ -660,8 +801,7 @@
       "model_family": "nemotron-3-nano-omni-30b-a3b-reasoning",
       "model_variant": "reasoning",
       "aliases": [
-        "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
-        "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
+        "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning"
       ],
       "tier": "large",
       "speed": "fast",
@@ -677,59 +817,6 @@
         "q&a",
         "transcription",
         "voice-input",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "nvidia/nemotron-3-super-120b-a12b:free",
-      "object": "model",
-      "created": 241202292,
-      "owned_by": "kilo",
-      "provider": "kilo",
-      "name": "NVIDIA: Nemotron 3 Super (free)",
-      "description": "NVIDIA Nemotron 3 Super is a 120B-parameter open hybrid MoE model, activating just 12B parameters for maximum compute efficiency and accuracy in complex multi-agent applications. Built on a hybrid Mamba-Transformer...\n\n**Terms of service** For NVIDIA free endpoints (Super/Ultra/etc): Trial use only - do not submit personal or confidential data. Your use is logged for security purposes and to improve NVIDIA products and services. The logged session data for improvement purposes is not linked to y",
-      "context_size": 262144,
-      "context_label": "262K",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "tool-use",
-        "reasoning"
-      ],
-      "tags": [
-        "text-generation",
-        "chat",
-        "tool-use",
-        "reasoning"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": false,
-      "has_tool_use": true,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "200 requests per hour per IP (anonymous, no API key required)"
-      },
-      "trial_scope": "specific",
-      "model_family": "nemotron-3-super-120b-a12b",
-      "aliases": [
-        "nvidia/nemotron-3-super-120b-a12b",
-        "nvidia/nemotron-3-super-120b-a12b:free"
-      ],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a",
-        "problem-solving",
-        "logical-analysis",
-        "math",
         "complex-reasoning"
       ],
       "performance_level": "mid",
@@ -791,13 +878,13 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "stepfun/step-5-preview-free",
+      "id": "inclusionai/ling-3.1-flash-1019-free",
       "object": "model",
-      "created": 493256365,
+      "created": 2115642587,
       "owned_by": "kilo",
       "provider": "kilo",
-      "name": "StepFun: Step 5 Preview (free)",
-      "description": "Step 5 Preview is StepFun's flagship model for agentic work, with strong capabilities in software engineering, professional knowledge work, and finance. It natively supports text, image, and video input with a 1M-token context window and up to 64K output tokens. The model supports tool calling, structured outputs, and selectable reasoning levels (low/medium/high) for long-context research, coding, and multi-step workflows.",
+      "name": "inclusionAI: Ling 3.1 Flash 1019 (free)",
+      "description": "An updated checkpoint of inclusionAI's Ling 3.1 Flash, provided free of charge by Novita AI until November 3, 2026. Ling 3.1 Flash is a hybrid reasoning mixture-of-experts model with 25B active parameters out of 560B total and a 1M-token context window.",
       "context_size": 1000000,
       "context_label": "1M",
       "price_input": 0,
@@ -806,28 +893,24 @@
       "capabilities": [
         "chat",
         "text-generation",
-        "vision",
         "tool-use",
         "reasoning"
       ],
       "tags": [
         "reasoning",
-        "vision",
         "text-generation",
-        "code-generation",
         "chat",
-        "tool-use",
-        "multimodal"
+        "tool-use"
       ],
       "is_reasoning": true,
-      "is_multimodal": true,
+      "is_multimodal": false,
       "has_tool_use": true,
       "free_mechanism": "rate-limited",
       "free_quota": {
         "notes": "200 requests per hour per IP (anonymous, no API key required)"
       },
       "trial_scope": "specific",
-      "model_family": "stepfun-step-5-preview-free",
+      "model_family": "inclusionai-ling-3.1-flash-1019-free",
       "aliases": [],
       "tier": "large",
       "speed": "fast",
@@ -835,17 +918,13 @@
         "problem-solving",
         "logical-analysis",
         "math",
-        "image-understanding",
-        "visual-q&a",
         "content-creation",
         "writing-assistance",
-        "software-development",
-        "code-completion",
         "conversation",
         "q&a",
         "complex-reasoning"
       ],
-      "performance_level": "high",
+      "performance_level": "mid",
       "estimated_latency": "< 1s"
     }
   ]

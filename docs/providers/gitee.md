@@ -21,9 +21,9 @@
 
 | 指标 | 数量 |
 |---|---:|
-| 总模型 | 205 |
+| 总模型 | 211 |
 | 免费模型 | 36 |
-| 付费可试用 | 92 |
+| 付费可试用 | 90 |
 
 ## 免费策略
 
@@ -34,7 +34,7 @@
 | Provider | Model ID | 名称 | 上下文 | 免费类型 | 限制 |
 |---|---|---|---:|---|---|
 | gitee  | `all-mpnet-base-v2` | all-mpnet-base-v2 | unknown | 永久免费 | — |
-| gitee  | `Atria-Dawn-Preview` | Atria Dawn Preview | 256K | 永久免费 | — |
+| gitee  | `Atria-Dawn` | Atria Dawn | 512K | 永久免费 | — |
 | gitee  | `bce-embedding-base_v1` | bce-embedding-base_v1 | 500 | 永久免费 | — |
 | gitee  | `bce-reranker-base_v1` | bce-reranker-base_v1 | 500 | 永久免费 | — |
 | gitee  | `bge-large-zh-v1.5` | bge-large-zh-v1.5 | 500 | 永久免费 | — |
