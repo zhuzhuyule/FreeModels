@@ -1,24 +1,24 @@
 {
   "object": "list",
   "provider": "ovh",
-  "updated_at": "2026-10-15T07:06:30.301Z",
-  "total": 23,
+  "updated_at": "2026-11-14T08:43:09.167Z",
+  "total": 21,
   "data": [
     {
-      "id": "stable-diffusion-xl-base-v10",
+      "id": "nvr-tts-de-de",
       "object": "model",
-      "created": 1270954067,
+      "created": 1727188117,
       "owned_by": "ovh",
       "provider": "ovh",
-      "name": "stable-diffusion-xl-base-v10",
-      "description": "SDXL, developed by Stability AI, is an advanced text-to-image model released in July 2023, offering enhanced image generation capabilities.",
+      "name": "nvr-tts-de-de",
+      "description": "This NVIDIA TTS model generates natural-sounding German speech from raw text without requiring additional information.",
       "context_label": "unknown",
       "is_free": true,
       "capabilities": [
-        "image-generation"
+        "speech-synthesis"
       ],
       "tags": [
-        "image-generation"
+        "speech-synthesis"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
@@ -29,13 +29,14 @@
         "notes": "Anonymous access (no API key, no signup): 2 requests per minute, per IP and per model. With an API key the same models are billed pay-as-you-go per token (400 RPM per project) — price_input/price_output are those rates, not what the anonymous tier costs."
       },
       "trial_scope": "all",
-      "model_family": "stable-diffusion-xl-base-v10",
+      "model_family": "nvr-tts-de-de",
+      "model_variant": "tts",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
       "use_case": [
-        "creative-generation",
-        "art"
+        "text-to-speech",
+        "voice-output"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
@@ -66,43 +67,6 @@
       },
       "trial_scope": "all",
       "model_family": "nvr-tts-es-es",
-      "model_variant": "tts",
-      "aliases": [],
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "text-to-speech",
-        "voice-output"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "nvr-tts-de-de",
-      "object": "model",
-      "created": 1727188117,
-      "owned_by": "ovh",
-      "provider": "ovh",
-      "name": "nvr-tts-de-de",
-      "description": "This NVIDIA TTS model generates natural-sounding German speech from raw text without requiring additional information.",
-      "context_label": "unknown",
-      "is_free": true,
-      "capabilities": [
-        "speech-synthesis"
-      ],
-      "tags": [
-        "speech-synthesis"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "rpm": 2,
-        "notes": "Anonymous access (no API key, no signup): 2 requests per minute, per IP and per model. With an API key the same models are billed pay-as-you-go per token (400 RPM per project) — price_input/price_output are those rates, not what the anonymous tier costs."
-      },
-      "trial_scope": "all",
-      "model_family": "nvr-tts-de-de",
       "model_variant": "tts",
       "aliases": [],
       "tier": "medium",
@@ -189,24 +153,22 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "Mistral-7B-Instruct-v0.3",
+      "id": "whisper-large-v3-turbo",
       "object": "model",
-      "created": 759365312,
+      "created": 787287382,
       "owned_by": "ovh",
       "provider": "ovh",
-      "name": "Mistral-7B-Instruct-v0.3",
-      "context_size": 65536,
-      "context_label": "66K",
-      "price_input": 0.11,
-      "price_output": 0.11,
+      "name": "whisper-large-v3-turbo",
+      "description": "Whisper is a state-of-the-art model for automatic speech recognition (ASR) and speech translation, proposed in the paper \"Robust Speech Recognition via Large-Scale Weak Supervision\" by Alec Radford et al. from OpenAI. Trained on >5M hours of labeled data, Whisper demonstrates a strong ability to generalise to many datasets and domains in a zero-shot setting.\nWhisper large-v3-turbo is a finetuned version of a pruned Whisper large-v3. In other words, it's the exact same model, except that the number of decoding layers have reduced from 32 to 4. As a result, the model is way faster, at the expense of a minor quality degradation.",
+      "context_label": "unknown",
       "is_free": true,
       "capabilities": [
-        "chat",
-        "text-generation"
+        "speech-recognition",
+        "translation"
       ],
       "tags": [
-        "chat",
-        "text-generation"
+        "speech-recognition",
+        "translation"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
@@ -217,49 +179,46 @@
         "notes": "Anonymous access (no API key, no signup): 2 requests per minute, per IP and per model. With an API key the same models are billed pay-as-you-go per token (400 RPM per project) — price_input/price_output are those rates, not what the anonymous tier costs."
       },
       "trial_scope": "all",
-      "model_family": "mistral-7b-v0.3",
-      "model_variant": "instruct",
+      "model_family": "whisper-large-v3",
+      "model_variant": "turbo",
       "aliases": [
-        "mistralai/mistral-7b-instruct-v0.3"
+        "cloudflare/@cf/openai/whisper-large-v3-turbo",
+        "whisper-large-v3-turbo",
+        "whisper-large-v3",
+        "groq/whisper-large-v3-turbo",
+        "groq/whisper-large-v3",
+        "ovh/whisper-large-v3",
+        "sambanova/Whisper-Large-v3"
       ],
-      "parameter_count": 7000000000,
       "tier": "medium",
       "speed": "fast",
       "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance"
+        "transcription",
+        "voice-input"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
     },
     {
-      "id": "Qwen2.5-VL-72B-Instruct",
+      "id": "whisper-large-v3",
       "object": "model",
-      "created": 1525125023,
+      "created": 1948647215,
       "owned_by": "ovh",
       "provider": "ovh",
-      "name": "Qwen2.5-VL-72B-Instruct",
-      "description": "Qwen2.5-VL is a powerful vision-language model, designed for advanced image understanding. It can generate detailed image captions, analyze documents, OCR, detect objects, and answer questions based on visuals, making it useful for AI assistants, RAG and Agents.",
-      "context_size": 32768,
-      "context_label": "33K",
-      "price_input": 1.01,
-      "price_output": 1.01,
+      "name": "whisper-large-v3",
+      "description": "Whisper is a state-of-the-art model for automatic speech recognition (ASR) and speech translation, proposed in the paper \"Robust Speech Recognition via Large-Scale Weak Supervision\" by Alec Radford et al. from OpenAI. Trained on >5M hours of labeled data, Whisper demonstrates a strong ability to generalise to many datasets and domains in a zero-shot setting.",
+      "context_label": "unknown",
       "is_free": true,
       "capabilities": [
-        "chat",
-        "text-generation",
-        "vision"
+        "speech-recognition",
+        "translation"
       ],
       "tags": [
-        "chat",
-        "text-generation",
-        "vision",
-        "multimodal"
+        "speech-recognition",
+        "translation"
       ],
       "is_reasoning": false,
-      "is_multimodal": true,
+      "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
       "free_quota": {
@@ -267,21 +226,23 @@
         "notes": "Anonymous access (no API key, no signup): 2 requests per minute, per IP and per model. With an API key the same models are billed pay-as-you-go per token (400 RPM per project) — price_input/price_output are those rates, not what the anonymous tier costs."
       },
       "trial_scope": "all",
-      "model_family": "qwen2.5-vl-72b",
-      "model_variant": "vl",
-      "aliases": [],
-      "parameter_count": 72000000000,
-      "tier": "large",
+      "model_family": "whisper-large-v3",
+      "aliases": [
+        "cloudflare/@cf/openai/whisper-large-v3-turbo",
+        "whisper-large-v3-turbo",
+        "whisper-large-v3",
+        "groq/whisper-large-v3-turbo",
+        "groq/whisper-large-v3",
+        "ovh/whisper-large-v3-turbo",
+        "sambanova/Whisper-Large-v3"
+      ],
+      "tier": "medium",
       "speed": "fast",
       "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance",
-        "image-understanding",
-        "visual-q&a"
+        "transcription",
+        "voice-input"
       ],
-      "performance_level": "mid",
+      "performance_level": "entry",
       "estimated_latency": "< 1s"
     },
     {
@@ -344,190 +305,6 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "Meta-Llama-3_3-70B-Instruct",
-      "object": "model",
-      "created": 1740013843,
-      "owned_by": "ovh",
-      "provider": "ovh",
-      "name": "Meta-Llama-3_3-70B-Instruct",
-      "description": "Llama 3.3 is an instruction-tuned generative language model optimized for multilingual dialogue use cases. It was released by Meta AI on December 6, 2024, and utilizes an advanced transformer architecture and is designed to align with human preferences for helpfulness and safety through supervised fine-tuning (SFT) and reinforcement learning with human feedback (RLHF). The knowledge cutoff for this 70B model is December 31, 2023.",
-      "context_size": 131072,
-      "context_label": "131K",
-      "price_input": 0.74,
-      "price_output": 0.74,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "tool-use"
-      ],
-      "tags": [
-        "chat",
-        "text-generation",
-        "tool-use"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": true,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "rpm": 2,
-        "notes": "Anonymous access (no API key, no signup): 2 requests per minute, per IP and per model. With an API key the same models are billed pay-as-you-go per token (400 RPM per project) — price_input/price_output are those rates, not what the anonymous tier costs."
-      },
-      "trial_scope": "all",
-      "model_family": "3_3-70b",
-      "model_variant": "instruct",
-      "aliases": [],
-      "parameter_count": 70000000000,
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "Qwen3.5-9B",
-      "object": "model",
-      "created": 487231654,
-      "owned_by": "ovh",
-      "provider": "ovh",
-      "name": "Qwen3.5-9B",
-      "description": "Qwen3.5 9B is a highly efficient, reasoning focused model delivering state of the art performance in language, vision, and multimodal tasks, with strong capabilities in code, reasoning, and real-world adaptability.",
-      "context_size": 262144,
-      "context_label": "262K",
-      "price_input": 0.12,
-      "price_output": 0.18,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "vision",
-        "reasoning",
-        "tool-use"
-      ],
-      "tags": [
-        "chat",
-        "text-generation",
-        "vision",
-        "reasoning",
-        "tool-use",
-        "multimodal"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": true,
-      "has_tool_use": true,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "rpm": 2,
-        "notes": "Anonymous access (no API key, no signup): 2 requests per minute, per IP and per model. With an API key the same models are billed pay-as-you-go per token (400 RPM per project) — price_input/price_output are those rates, not what the anonymous tier costs."
-      },
-      "trial_scope": "all",
-      "model_family": "qwen3.5-9b",
-      "aliases": [],
-      "parameter_count": 9000000000,
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance",
-        "image-understanding",
-        "visual-q&a",
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "Qwen3Guard-Gen-8B",
-      "object": "model",
-      "created": 1850569904,
-      "owned_by": "ovh",
-      "provider": "ovh",
-      "name": "Qwen3Guard-Gen-8B",
-      "description": "Qwen3Guard is a series of safety moderation models built upon Qwen3 and trained on a dataset of 1.19 million prompts and responses labeled for safety. The series includes models of three sizes (0.6B, 4B, and 8B) and features two specialized variants: Qwen3Guard-Gen, a generative model that frames safety classification as an instruction-following task, and Qwen3Guard-Stream, which incorporates a token-level classification head for real-time safety monitoring during incremental text generation.",
-      "context_size": 32768,
-      "context_label": "33K",
-      "is_free": true,
-      "capabilities": [
-        "moderation"
-      ],
-      "tags": [
-        "moderation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "rpm": 2,
-        "notes": "Anonymous access (no API key, no signup): 2 requests per minute, per IP and per model. With an API key the same models are billed pay-as-you-go per token (400 RPM per project) — price_input/price_output are those rates, not what the anonymous tier costs."
-      },
-      "trial_scope": "all",
-      "model_family": "qwen3guard-gen-8b",
-      "aliases": [
-        "Qwen3Guard-Gen-8B"
-      ],
-      "parameter_count": 8000000000,
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-filtering",
-        "safety"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "Qwen3Guard-Gen-0.6B",
-      "object": "model",
-      "created": 930656204,
-      "owned_by": "ovh",
-      "provider": "ovh",
-      "name": "Qwen3Guard-Gen-0.6B",
-      "description": "Qwen3Guard is a series of safety moderation models built upon Qwen3 and trained on a dataset of 1.19 million prompts and responses labeled for safety. The series includes models of three sizes (0.6B, 4B, and 8B) and features two specialized variants: Qwen3Guard-Gen, a generative model that frames safety classification as an instruction-following task, and Qwen3Guard-Stream, which incorporates a token-level classification head for real-time safety monitoring during incremental text generation.",
-      "context_size": 32768,
-      "context_label": "33K",
-      "is_free": true,
-      "capabilities": [
-        "moderation"
-      ],
-      "tags": [
-        "moderation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "rpm": 2,
-        "notes": "Anonymous access (no API key, no signup): 2 requests per minute, per IP and per model. With an API key the same models are billed pay-as-you-go per token (400 RPM per project) — price_input/price_output are those rates, not what the anonymous tier costs."
-      },
-      "trial_scope": "all",
-      "model_family": "qwen3guard-gen-0.6b",
-      "aliases": [
-        "Qwen3Guard-Gen-0.6B"
-      ],
-      "parameter_count": 600000000,
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-filtering",
-        "safety"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
       "id": "gpt-oss-120b",
       "object": "model",
       "created": 1576077904,
@@ -585,6 +362,46 @@
       "estimated_latency": "< 1s"
     },
     {
+      "id": "Qwen3Guard-Gen-8B",
+      "object": "model",
+      "created": 1850569904,
+      "owned_by": "ovh",
+      "provider": "ovh",
+      "name": "Qwen3Guard-Gen-8B",
+      "description": "Qwen3Guard is a series of safety moderation models built upon Qwen3 and trained on a dataset of 1.19 million prompts and responses labeled for safety. The series includes models of three sizes (0.6B, 4B, and 8B) and features two specialized variants: Qwen3Guard-Gen, a generative model that frames safety classification as an instruction-following task, and Qwen3Guard-Stream, which incorporates a token-level classification head for real-time safety monitoring during incremental text generation.",
+      "context_size": 32768,
+      "context_label": "33K",
+      "is_free": true,
+      "capabilities": [
+        "moderation"
+      ],
+      "tags": [
+        "moderation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 2,
+        "notes": "Anonymous access (no API key, no signup): 2 requests per minute, per IP and per model. With an API key the same models are billed pay-as-you-go per token (400 RPM per project) — price_input/price_output are those rates, not what the anonymous tier costs."
+      },
+      "trial_scope": "all",
+      "model_family": "qwen3guard-gen-8b",
+      "aliases": [
+        "Qwen3Guard-Gen-8B"
+      ],
+      "parameter_count": 8000000000,
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-filtering",
+        "safety"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
       "id": "gpt-oss-20b",
       "object": "model",
       "created": 568363103,
@@ -622,7 +439,8 @@
       "aliases": [
         "cloudflare/@cf/openai/gpt-oss-20b",
         "groq/openai/gpt-oss-20b",
-        "openai/gpt-oss-20b"
+        "openai/gpt-oss-20b",
+        "sambanova/gpt-oss-20b"
       ],
       "parameter_count": 20000000000,
       "tier": "medium",
@@ -761,6 +579,103 @@
       "estimated_latency": "< 1s"
     },
     {
+      "id": "Qwen3.5-9B",
+      "object": "model",
+      "created": 487231654,
+      "owned_by": "ovh",
+      "provider": "ovh",
+      "name": "Qwen3.5-9B",
+      "description": "Qwen3.5 9B is a highly efficient, reasoning focused model delivering state of the art performance in language, vision, and multimodal tasks, with strong capabilities in code, reasoning, and real-world adaptability.",
+      "context_size": 262144,
+      "context_label": "262K",
+      "price_input": 0.12,
+      "price_output": 0.18,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision",
+        "reasoning",
+        "tool-use"
+      ],
+      "tags": [
+        "chat",
+        "text-generation",
+        "vision",
+        "reasoning",
+        "tool-use",
+        "multimodal"
+      ],
+      "is_reasoning": true,
+      "is_multimodal": true,
+      "has_tool_use": true,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 2,
+        "notes": "Anonymous access (no API key, no signup): 2 requests per minute, per IP and per model. With an API key the same models are billed pay-as-you-go per token (400 RPM per project) — price_input/price_output are those rates, not what the anonymous tier costs."
+      },
+      "trial_scope": "all",
+      "model_family": "qwen3.5-9b",
+      "aliases": [],
+      "parameter_count": 9000000000,
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "image-understanding",
+        "visual-q&a",
+        "problem-solving",
+        "logical-analysis",
+        "math",
+        "complex-reasoning"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "Qwen3Guard-Gen-0.6B",
+      "object": "model",
+      "created": 930656204,
+      "owned_by": "ovh",
+      "provider": "ovh",
+      "name": "Qwen3Guard-Gen-0.6B",
+      "description": "Qwen3Guard is a series of safety moderation models built upon Qwen3 and trained on a dataset of 1.19 million prompts and responses labeled for safety. The series includes models of three sizes (0.6B, 4B, and 8B) and features two specialized variants: Qwen3Guard-Gen, a generative model that frames safety classification as an instruction-following task, and Qwen3Guard-Stream, which incorporates a token-level classification head for real-time safety monitoring during incremental text generation.",
+      "context_size": 32768,
+      "context_label": "33K",
+      "is_free": true,
+      "capabilities": [
+        "moderation"
+      ],
+      "tags": [
+        "moderation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 2,
+        "notes": "Anonymous access (no API key, no signup): 2 requests per minute, per IP and per model. With an API key the same models are billed pay-as-you-go per token (400 RPM per project) — price_input/price_output are those rates, not what the anonymous tier costs."
+      },
+      "trial_scope": "all",
+      "model_family": "qwen3guard-gen-0.6b",
+      "aliases": [
+        "Qwen3Guard-Gen-0.6B"
+      ],
+      "parameter_count": 600000000,
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-filtering",
+        "safety"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
       "id": "Mistral-Small-3.2-24B-Instruct-2506",
       "object": "model",
       "created": 1936234523,
@@ -813,17 +728,17 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "Mistral-Nemo-Instruct-2407",
+      "id": "Meta-Llama-3_3-70B-Instruct",
       "object": "model",
-      "created": 2044441628,
+      "created": 1740013843,
       "owned_by": "ovh",
       "provider": "ovh",
-      "name": "Mistral-Nemo-Instruct-2407",
-      "description": "The Mistral-Nemo-Instruct-2407 model, developed collaboratively by Mistral AI and NVIDIA, is an instruction-tuned LLM released in 2024. Designed for multilingual applications, it excels in tasks such as conversational dialogue, code generation, and instructional comprehension across various languages.",
-      "context_size": 65536,
-      "context_label": "66K",
-      "price_input": 0.14,
-      "price_output": 0.14,
+      "name": "Meta-Llama-3_3-70B-Instruct",
+      "description": "Llama 3.3 is an instruction-tuned generative language model optimized for multilingual dialogue use cases. It was released by Meta AI on December 6, 2024, and utilizes an advanced transformer architecture and is designed to align with human preferences for helpfulness and safety through supervised fine-tuning (SFT) and reinforcement learning with human feedback (RLHF). The knowledge cutoff for this 70B model is December 31, 2023.",
+      "context_size": 131072,
+      "context_label": "131K",
+      "price_input": 0.74,
+      "price_output": 0.74,
       "is_free": true,
       "capabilities": [
         "chat",
@@ -844,18 +759,103 @@
         "notes": "Anonymous access (no API key, no signup): 2 requests per minute, per IP and per model. With an API key the same models are billed pay-as-you-go per token (400 RPM per project) — price_input/price_output are those rates, not what the anonymous tier costs."
       },
       "trial_scope": "all",
-      "model_family": "mistral-nemo",
+      "model_family": "3_3-70b",
       "model_variant": "instruct",
-      "aliases": [
-        "llm7/mistral-Nemo-Instruct-2407"
-      ],
-      "tier": "small",
+      "aliases": [],
+      "parameter_count": 70000000000,
+      "tier": "large",
       "speed": "fast",
       "use_case": [
         "conversation",
         "q&a",
         "content-creation",
         "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "Qwen2.5-VL-72B-Instruct",
+      "object": "model",
+      "created": 1525125023,
+      "owned_by": "ovh",
+      "provider": "ovh",
+      "name": "Qwen2.5-VL-72B-Instruct",
+      "description": "Qwen2.5-VL is a powerful vision-language model, designed for advanced image understanding. It can generate detailed image captions, analyze documents, OCR, detect objects, and answer questions based on visuals, making it useful for AI assistants, RAG and Agents.",
+      "context_size": 32768,
+      "context_label": "33K",
+      "price_input": 1.01,
+      "price_output": 1.01,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation",
+        "vision"
+      ],
+      "tags": [
+        "chat",
+        "text-generation",
+        "vision",
+        "multimodal"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": true,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 2,
+        "notes": "Anonymous access (no API key, no signup): 2 requests per minute, per IP and per model. With an API key the same models are billed pay-as-you-go per token (400 RPM per project) — price_input/price_output are those rates, not what the anonymous tier costs."
+      },
+      "trial_scope": "all",
+      "model_family": "qwen2.5-vl-72b",
+      "model_variant": "vl",
+      "aliases": [],
+      "parameter_count": 72000000000,
+      "tier": "large",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance",
+        "image-understanding",
+        "visual-q&a"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "stable-diffusion-xl-base-v10",
+      "object": "model",
+      "created": 1270954067,
+      "owned_by": "ovh",
+      "provider": "ovh",
+      "name": "stable-diffusion-xl-base-v10",
+      "description": "SDXL, developed by Stability AI, is an advanced text-to-image model released in July 2023, offering enhanced image generation capabilities.",
+      "context_label": "unknown",
+      "is_free": true,
+      "capabilities": [
+        "image-generation"
+      ],
+      "tags": [
+        "image-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "rpm": 2,
+        "notes": "Anonymous access (no API key, no signup): 2 requests per minute, per IP and per model. With an API key the same models are billed pay-as-you-go per token (400 RPM per project) — price_input/price_output are those rates, not what the anonymous tier costs."
+      },
+      "trial_scope": "all",
+      "model_family": "stable-diffusion-xl-base-v10",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "creative-generation",
+        "art"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
@@ -977,99 +977,6 @@
       "use_case": [
         "semantic-search",
         "similarity"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "whisper-large-v3-turbo",
-      "object": "model",
-      "created": 787287382,
-      "owned_by": "ovh",
-      "provider": "ovh",
-      "name": "whisper-large-v3-turbo",
-      "description": "Whisper is a state-of-the-art model for automatic speech recognition (ASR) and speech translation, proposed in the paper \"Robust Speech Recognition via Large-Scale Weak Supervision\" by Alec Radford et al. from OpenAI. Trained on >5M hours of labeled data, Whisper demonstrates a strong ability to generalise to many datasets and domains in a zero-shot setting.\nWhisper large-v3-turbo is a finetuned version of a pruned Whisper large-v3. In other words, it's the exact same model, except that the number of decoding layers have reduced from 32 to 4. As a result, the model is way faster, at the expense of a minor quality degradation.",
-      "context_label": "unknown",
-      "is_free": true,
-      "capabilities": [
-        "speech-recognition",
-        "translation"
-      ],
-      "tags": [
-        "speech-recognition",
-        "translation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "rpm": 2,
-        "notes": "Anonymous access (no API key, no signup): 2 requests per minute, per IP and per model. With an API key the same models are billed pay-as-you-go per token (400 RPM per project) — price_input/price_output are those rates, not what the anonymous tier costs."
-      },
-      "trial_scope": "all",
-      "model_family": "whisper-large-v3",
-      "model_variant": "turbo",
-      "aliases": [
-        "cloudflare/@cf/openai/whisper-large-v3-turbo",
-        "whisper-large-v3-turbo",
-        "whisper-large-v3",
-        "groq/whisper-large-v3",
-        "groq/whisper-large-v3-turbo",
-        "ovh/whisper-large-v3",
-        "sambanova/Whisper-Large-v3"
-      ],
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "transcription",
-        "voice-input"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "whisper-large-v3",
-      "object": "model",
-      "created": 1948647215,
-      "owned_by": "ovh",
-      "provider": "ovh",
-      "name": "whisper-large-v3",
-      "description": "Whisper is a state-of-the-art model for automatic speech recognition (ASR) and speech translation, proposed in the paper \"Robust Speech Recognition via Large-Scale Weak Supervision\" by Alec Radford et al. from OpenAI. Trained on >5M hours of labeled data, Whisper demonstrates a strong ability to generalise to many datasets and domains in a zero-shot setting.",
-      "context_label": "unknown",
-      "is_free": true,
-      "capabilities": [
-        "speech-recognition",
-        "translation"
-      ],
-      "tags": [
-        "speech-recognition",
-        "translation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "rpm": 2,
-        "notes": "Anonymous access (no API key, no signup): 2 requests per minute, per IP and per model. With an API key the same models are billed pay-as-you-go per token (400 RPM per project) — price_input/price_output are those rates, not what the anonymous tier costs."
-      },
-      "trial_scope": "all",
-      "model_family": "whisper-large-v3",
-      "aliases": [
-        "cloudflare/@cf/openai/whisper-large-v3-turbo",
-        "whisper-large-v3-turbo",
-        "whisper-large-v3",
-        "groq/whisper-large-v3",
-        "groq/whisper-large-v3-turbo",
-        "ovh/whisper-large-v3-turbo",
-        "sambanova/Whisper-Large-v3"
-      ],
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "transcription",
-        "voice-input"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
