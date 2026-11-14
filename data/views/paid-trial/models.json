@@ -1,8 +1,8 @@
 {
   "object": "list",
   "view": "paid-trial",
-  "updated_at": "2026-10-15T07:06:30.311Z",
-  "total": 92,
+  "updated_at": "2026-11-14T08:43:09.175Z",
+  "total": 87,
   "filters": {
     "isFree": "false",
     "trialScope": "all"
@@ -153,8 +153,8 @@
       "aliases": [
         "cloudflare/@cf/openai/whisper-large-v3-turbo",
         "whisper-large-v3",
-        "groq/whisper-large-v3",
         "groq/whisper-large-v3-turbo",
+        "groq/whisper-large-v3",
         "ovh/whisper-large-v3-turbo",
         "ovh/whisper-large-v3",
         "sambanova/Whisper-Large-v3"
@@ -169,42 +169,6 @@
       ],
       "performance_level": "entry",
       "estimated_latency": "1-3s"
-    },
-    {
-      "id": "CosyVoice2",
-      "object": "model",
-      "created": 451919563,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "CosyVoice2-0.5B",
-      "description": "CosyVoice2 是一款升级版语音生成模型，提供更高精准度的多语种支持、情感调节与自然流畅的语音合成，适用于智能客服、语音助手等多个场景。",
-      "context_label": "unknown",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": false,
-      "capabilities": [
-        "speech-synthesis"
-      ],
-      "tags": [
-        "speech-synthesis"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "cosyvoice2-0.5b",
-      "aliases": [],
-      "parameter_count": 500000000,
-      "tier": "small",
-      "speed": "standard",
-      "use_case": [
-        "text-to-speech",
-        "voice-output"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
     },
     {
       "id": "UVDoc",
@@ -520,7 +484,8 @@
       "trial_scope": "all",
       "model_family": "qwq-32b",
       "aliases": [
-        "cloudflare/@cf/qwen/qwq-32b"
+        "cloudflare/@cf/qwen/qwq-32b",
+        "sambanova/QwQ-32B"
       ],
       "parameter_count": 32000000000,
       "tier": "large",
@@ -599,8 +564,8 @@
       "aliases": [
         "cloudflare/@cf/openai/whisper-large-v3-turbo",
         "whisper-large-v3-turbo",
-        "groq/whisper-large-v3",
         "groq/whisper-large-v3-turbo",
+        "groq/whisper-large-v3",
         "ovh/whisper-large-v3-turbo",
         "ovh/whisper-large-v3",
         "sambanova/Whisper-Large-v3"
@@ -734,47 +699,6 @@
       ],
       "performance_level": "entry",
       "estimated_latency": "1-3s"
-    },
-    {
-      "id": "GLM-4-32B",
-      "object": "model",
-      "created": 131201542,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "GLM-4-32B",
-      "description": "GLM 家族新一代开源模型，320 亿参数，经过 15T 高质量数据的预训练，其中包含大量推理类的合成数据。在后训练阶段，除了针对对话场景进行了人类偏好对齐外，还通过拒绝采样和强化学习等技术强化了模型在指令遵循、工程代码、函数调用方面的效果，加强了智能体任务所需的原子能力。在工程代码、Artifacts 生成、函数调用、搜索问答及报告等方面都取得了不错的效果。",
-      "context_size": 32000,
-      "context_label": "32K",
-      "price_input": 1.89,
-      "price_output": 1.89,
-      "is_free": false,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation",
-        "tool-use",
-        "code-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": true,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "glm-4-32b",
-      "aliases": [],
-      "parameter_count": 32000000000,
-      "tier": "large",
-      "speed": "standard",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "software-development",
-        "code-completion"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "3-10s"
     },
     {
       "id": "InternVL3-78B",
@@ -1637,44 +1561,6 @@
       "estimated_latency": "3-10s"
     },
     {
-      "id": "Hunyuan-MT-Chimera-7B",
-      "object": "model",
-      "created": 1283151801,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "Hunyuan-MT-Chimera-7B 翻译大模型",
-      "description": "Hunyuan-MT-Chimera-7B 是腾讯首款翻译集成模型，能够融合多个翻译系统（如 Hunyuan-MT-7B 和 Deepseek）的输出，为专业场景生成更优质、更准确的翻译结果。",
-      "context_size": 32000,
-      "context_label": "32K",
-      "price_input": 0.3,
-      "price_output": 0.3,
-      "is_free": false,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation",
-        "translation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "hunyuan-mt-chimera-7b",
-      "aliases": [],
-      "parameter_count": 7000000000,
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
       "id": "IndexTTS-2",
       "object": "model",
       "created": 816151767,
@@ -1750,48 +1636,6 @@
         "writing-assistance",
         "pdf-processing",
         "ocr"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "3-10s"
-    },
-    {
-      "id": "Qwen3-VL-30B-A3B-Instruct",
-      "object": "model",
-      "created": 342286624,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "Qwen3-VL-30B-A3B-Instruct",
-      "description": "Qwen3-VL-30B-A3B-Instruct 是一款旗舰级多模态模型，具备超强的视觉理解、跨模态推理与视频时序感知能力。",
-      "context_size": 32000,
-      "context_label": "32K",
-      "price_input": 0.7,
-      "price_output": 2.8,
-      "is_free": false,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "vision",
-        "text-generation",
-        "multimodal"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "qwen3-vl-30b-a3b",
-      "model_variant": "vl",
-      "aliases": [],
-      "parameter_count": 30000000000,
-      "tier": "large",
-      "speed": "standard",
-      "use_case": [
-        "image-understanding",
-        "visual-q&a",
-        "content-creation",
-        "writing-assistance"
       ],
       "performance_level": "mid",
       "estimated_latency": "3-10s"
@@ -3228,8 +3072,7 @@
       "model_family": "gemma-4-26b-a4b",
       "model_variant": "it",
       "aliases": [
-        "cloudflare/@cf/google/gemma-4-26b-a4b-it",
-        "google/gemma-4-26b-a4b-it:free"
+        "cloudflare/@cf/google/gemma-4-26b-a4b-it"
       ],
       "parameter_count": 26000000000,
       "tier": "large",
@@ -3398,45 +3241,6 @@
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
-    },
-    {
-      "id": "Unlimited-OCR",
-      "object": "model",
-      "created": 263335873,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "Unlimited-OCR",
-      "description": "Unlimited-OCR 模型是一款面向长文档解析的智能OCR模型，支持高精度文字识别、版面解析与结构化信息提取，适用于文档数字化及智能文档处理场景。",
-      "context_size": 32000,
-      "context_label": "32K",
-      "price_input": 2.8,
-      "price_output": 2.8,
-      "is_free": false,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "document-processing",
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "unlimited-ocr",
-      "aliases": [],
-      "tier": "medium",
-      "speed": "standard",
-      "use_case": [
-        "pdf-processing",
-        "ocr",
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
     },
     {
       "id": "MinerU2.5-Pro",
