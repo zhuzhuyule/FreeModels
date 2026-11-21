@@ -1,8 +1,8 @@
 {
   "object": "list",
   "view": "free-permanent",
-  "updated_at": "2026-10-15T07:06:30.308Z",
-  "total": 46,
+  "updated_at": "2026-11-21T09:20:22.613Z",
+  "total": 39,
   "filters": {
     "freeMechanism": "permanent"
   },
@@ -107,8 +107,7 @@
       "capabilities": [
         "chat",
         "text-generation",
-        "vision",
-        "reasoning"
+        "vision"
       ],
       "tags": [
         "reasoning",
@@ -153,7 +152,7 @@
       "owned_by": "bigmodel",
       "provider": "bigmodel",
       "name": "GLM-4V-Flash",
-      "description": "GLM-4V-Flash 是智谱推出的首个完全免费的图像理解模型。在图像识别、图像问答、图像推理等多项任务中展现出卓越的性能。在企业应用场景中，GLM-4V-Flash 表现突出，不仅能够帮助企业实现高效图像处理，还能紧密贴合不同垂直领域的实际需求，适配多样化应用场景。",
+      "description": "图像理解",
       "context_size": 4000,
       "context_label": "4K",
       "price_input": 0,
@@ -321,24 +320,21 @@
       "provider": "bigmodel",
       "name": "GLM-4.7-Flash",
       "description": "GLM-4.7-Flash 作为 30B 级 SOTA 模型，提供了一个兼顾性能与效率的新选择。面向 Agentic Coding 场景强化了编码能力、长程任务规划与工具协同，并在多个公开基准的当期榜单中取得同尺寸开源模型中的出色表现。在执行复杂智能体任务，在工具调用时指令遵循更强，Artifacts 与 Agentic Coding 的前端美感和长程任务完成效率进一步提升。",
-      "context_size": 200000,
-      "context_label": "200K",
+      "context_label": "unknown",
       "price_input": 0,
       "price_output": 0,
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation",
-        "reasoning"
+        "text-generation"
       ],
       "tags": [
         "tool-use",
         "code-generation",
         "chat",
-        "text-generation",
-        "reasoning"
+        "text-generation"
       ],
-      "is_reasoning": true,
+      "is_reasoning": false,
       "is_multimodal": false,
       "has_tool_use": true,
       "free_mechanism": "permanent",
@@ -348,7 +344,7 @@
       "aliases": [
         "xingchen/xopglmv47flash"
       ],
-      "tier": "large",
+      "tier": "medium",
       "speed": "fast",
       "use_case": [
         "software-development",
@@ -356,59 +352,9 @@
         "conversation",
         "q&a",
         "content-creation",
-        "writing-assistance",
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "complex-reasoning"
+        "writing-assistance"
       ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "glm-4.5-flash",
-      "object": "model",
-      "created": 1572481322,
-      "owned_by": "bigmodel",
-      "provider": "bigmodel",
-      "name": "GLM-4.5-Flash",
-      "description": "GLM-4.5-Flash 将于2026 年 1 月 30 日下线，请您及时将模型编码更新为最新版本。正式下线后，相关请求将会自动路由至 GLM-4.7-Flash。",
-      "context_size": 128000,
-      "context_label": "128K",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "reasoning"
-      ],
-      "tags": [
-        "chat",
-        "text-generation",
-        "reasoning"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "permanent",
-      "free_quota": null,
-      "trial_scope": "specific",
-      "model_family": "glm-4.5-flash",
-      "aliases": [],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance",
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
+      "performance_level": "entry",
       "estimated_latency": "< 1s"
     },
     {
@@ -427,8 +373,7 @@
       "capabilities": [
         "chat",
         "text-generation",
-        "vision",
-        "reasoning"
+        "vision"
       ],
       "tags": [
         "reasoning",
@@ -464,6 +409,49 @@
       "estimated_latency": "< 1s"
     },
     {
+      "id": "glm-4.5-flash",
+      "object": "model",
+      "created": 1572481322,
+      "owned_by": "bigmodel",
+      "provider": "bigmodel",
+      "name": "GLM-4.5-Flash",
+      "description": "GLM-4.5-Flash 模型在确保强大推理能力、稳定代码生成和多工具协同处理能力的同时，具备显著的运行速度优势，且完全免费开放使用。",
+      "context_size": 128000,
+      "context_label": "128K",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "code-generation",
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "permanent",
+      "free_quota": null,
+      "trial_scope": "specific",
+      "model_family": "glm-4.5-flash",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "software-development",
+        "code-completion",
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
       "id": "SenseVoiceSmall",
       "object": "model",
       "created": 442304562,
@@ -494,46 +482,6 @@
       "use_case": [
         "transcription",
         "voice-input"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "bce-embedding-base_v1",
-      "object": "model",
-      "created": 1438537673,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "bce-embedding-base_v1",
-      "description": "bce-embedding-base_v1 是一款优化文本嵌入任务的预训练模型，擅长生成语义丰富的文本向量，应用于相似度计算和语义分析等任务。",
-      "context_size": 500,
-      "context_label": "500",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "embeddings"
-      ],
-      "tags": [
-        "text-generation",
-        "embeddings"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "permanent",
-      "free_quota": null,
-      "trial_scope": "specific",
-      "model_family": "bce-embedding-base_v1",
-      "model_variant": "embedding",
-      "aliases": [],
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "semantic-search",
-        "similarity"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
@@ -665,49 +613,6 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "DeepSeek-R1-Distill-Qwen-7B",
-      "object": "model",
-      "created": 1477285557,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "DeepSeek-R1-Distill-Qwen-7B",
-      "description": "基于 Qwen2.5-Math-7B 的 DeepSeek-R1 蒸馏模型，通过强化学习与冷启动数据优化推理性能，开源模型刷新多任务标杆。",
-      "context_size": 32000,
-      "context_label": "32K",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "reasoning",
-        "text-generation"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "permanent",
-      "free_quota": null,
-      "trial_scope": "specific",
-      "model_family": "deepseek-r1-distill-qwen-7b",
-      "model_variant": "r1",
-      "aliases": [],
-      "parameter_count": 7000000000,
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "content-creation",
-        "writing-assistance",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
       "id": "internlm3-8b-instruct",
       "object": "model",
       "created": 724333007,
@@ -741,46 +646,6 @@
       "use_case": [
         "content-creation",
         "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "Spark-TTS-0.5B",
-      "object": "model",
-      "created": 1573793520,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "Spark-TTS-0.5B",
-      "description": "Spark-TTS 是一款先进的文本转语音系统，它利用大型语言模型 (LLM) 的强大功能，实现高精度、自然的语音合成。它高效、灵活、功能强大，适用于研究和生产环境。",
-      "context_label": "unknown",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "speech-synthesis"
-      ],
-      "tags": [
-        "text-generation",
-        "speech-synthesis"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "permanent",
-      "free_quota": null,
-      "trial_scope": "specific",
-      "model_family": "spark-tts-0.5b",
-      "model_variant": "tts",
-      "aliases": [],
-      "parameter_count": 500000000,
-      "tier": "small",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "text-to-speech",
-        "voice-output"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
@@ -938,45 +803,6 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "Qwen3-4B",
-      "object": "model",
-      "created": 128569450,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "Qwen3-4B",
-      "description": "Qwen3 是 Qwen 系列中的最新一代大型语言模型，提供了一系列密集型和混合专家（MoE）模型。基于在训练数据、模型架构和优化技术方面的广泛进步。",
-      "context_size": 32000,
-      "context_label": "32K",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "permanent",
-      "free_quota": null,
-      "trial_scope": "specific",
-      "model_family": "qwen3-4b",
-      "aliases": [
-        "xingchen/xop3qwen4b"
-      ],
-      "parameter_count": 4000000000,
-      "tier": "small",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
       "id": "DeepSeek-Prover-V2-7B",
       "object": "model",
       "created": 7115537,
@@ -1014,49 +840,6 @@
         "complex-reasoning"
       ],
       "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "GLM-4-9B-0414",
-      "object": "model",
-      "created": 1121739548,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "GLM-4-9B-0414",
-      "description": "GLM-4-9B-0414 是清华大学智谱AI发布的一款高性能中英双语通用大语言模型，具备强大的推理、代码生成和中英文理解能力，参数规模为 9B，适用于多种通用任务。",
-      "context_size": 32000,
-      "context_label": "32K",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation",
-        "code-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "permanent",
-      "free_quota": null,
-      "trial_scope": "specific",
-      "model_family": "glm-4-9b",
-      "aliases": [
-        "bigmodel/glm-4-9b",
-        "glm-4-9b-chat"
-      ],
-      "parameter_count": 9000000000,
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "software-development",
-        "code-completion"
-      ],
-      "performance_level": "entry",
       "estimated_latency": "< 1s"
     },
     {
@@ -1596,15 +1379,15 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "Atria-Dawn-Preview",
+      "id": "Atria-Dawn-Free",
       "object": "model",
-      "created": 1245771420,
+      "created": 742266372,
       "owned_by": "gitee",
       "provider": "gitee",
-      "name": "Atria Dawn Preview",
-      "description": "Atria Dawn Preview （限时免费）是由上海人工智能实验室研发的新一代智能体大模型预览版，旨在协助用户将开放性问题推进为可执行、可验证和可复现的结果。",
-      "context_size": 256000,
-      "context_label": "256K",
+      "name": "Atria Dawn Free",
+      "description": "Atria Dawn 是由上海人工智能实验室研发的新一代智能体大模型预览版，旨在协助用户将开放性问题推进为可执行、可验证和可复现的结果。",
+      "context_size": 512000,
+      "context_label": "512K",
       "price_input": 0,
       "price_output": 0,
       "is_free": true,
@@ -1620,7 +1403,7 @@
       "free_mechanism": "permanent",
       "free_quota": null,
       "trial_scope": "specific",
-      "model_family": "atria-dawn-preview",
+      "model_family": "atria-dawn-free",
       "aliases": [],
       "tier": "medium",
       "speed": "fast",
@@ -1829,92 +1612,6 @@
         "relevance",
         "semantic-search",
         "similarity"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "glm-4-9b-chat",
-      "object": "model",
-      "created": 1110896549,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "GLM-4-9B-Chat",
-      "description": "GLM-4-9B-Chat 在语义、数学、推理、代码和知识等多方面均表现出较高性能。还具备网页浏览、代码执行、自定义工具调用和长文本推理。 支持包括日语，韩语，德语在内的 26 种语言。",
-      "context_size": 32000,
-      "context_label": "32K",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation",
-        "tool-use",
-        "code-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": true,
-      "free_mechanism": "permanent",
-      "free_quota": null,
-      "trial_scope": "specific",
-      "model_family": "glm-4-9b",
-      "model_variant": "chat",
-      "aliases": [
-        "bigmodel/glm-4-9b",
-        "GLM-4-9B-0414"
-      ],
-      "parameter_count": 9000000000,
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "software-development",
-        "code-completion"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "Qwen2-7B-Instruct",
-      "object": "model",
-      "created": 1233369025,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "Qwen2-7B-Instruct",
-      "description": "Qwen2 是 Qwen 模型的最新系列，能够超越同等规模的最优开源模型甚至更大规模的模型，Qwen2 7B 在多个评测上取得显著的优势，尤其是代码及中文理解上。",
-      "context_size": 24000,
-      "context_label": "24K",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "code-generation",
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "permanent",
-      "free_quota": null,
-      "trial_scope": "specific",
-      "model_family": "qwen2-7b",
-      "model_variant": "instruct",
-      "aliases": [],
-      "parameter_count": 7000000000,
-      "tier": "medium",
-      "speed": "fast",
-      "use_case": [
-        "software-development",
-        "code-completion",
-        "content-creation",
-        "writing-assistance"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
