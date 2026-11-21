@@ -1,7 +1,7 @@
 {
   "object": "list",
   "provider": "bigmodel",
-  "updated_at": "2026-10-15T07:06:30.297Z",
+  "updated_at": "2026-11-21T09:20:22.602Z",
   "total": 57,
   "data": [
     {
@@ -384,10 +384,7 @@
       "free_quota": null,
       "trial_scope": "none",
       "model_family": "glm-4-9b",
-      "aliases": [
-        "GLM-4-9B-0414",
-        "glm-4-9b-chat"
-      ],
+      "aliases": [],
       "parameter_count": 9000000000,
       "tier": "medium",
       "speed": "standard",
@@ -458,8 +455,7 @@
       "capabilities": [
         "chat",
         "text-generation",
-        "vision",
-        "reasoning"
+        "vision"
       ],
       "tags": [
         "reasoning",
@@ -504,7 +500,7 @@
       "owned_by": "bigmodel",
       "provider": "bigmodel",
       "name": "GLM-4V-Flash",
-      "description": "GLM-4V-Flash 是智谱推出的首个完全免费的图像理解模型。在图像识别、图像问答、图像推理等多项任务中展现出卓越的性能。在企业应用场景中，GLM-4V-Flash 表现突出，不仅能够帮助企业实现高效图像处理，还能紧密贴合不同垂直领域的实际需求，适配多样化应用场景。",
+      "description": "图像理解",
       "context_size": 4000,
       "context_label": "4K",
       "price_input": 0,
@@ -2297,24 +2293,21 @@
       "provider": "bigmodel",
       "name": "GLM-4.7-Flash",
       "description": "GLM-4.7-Flash 作为 30B 级 SOTA 模型，提供了一个兼顾性能与效率的新选择。面向 Agentic Coding 场景强化了编码能力、长程任务规划与工具协同，并在多个公开基准的当期榜单中取得同尺寸开源模型中的出色表现。在执行复杂智能体任务，在工具调用时指令遵循更强，Artifacts 与 Agentic Coding 的前端美感和长程任务完成效率进一步提升。",
-      "context_size": 200000,
-      "context_label": "200K",
+      "context_label": "unknown",
       "price_input": 0,
       "price_output": 0,
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation",
-        "reasoning"
+        "text-generation"
       ],
       "tags": [
         "tool-use",
         "code-generation",
         "chat",
-        "text-generation",
-        "reasoning"
+        "text-generation"
       ],
-      "is_reasoning": true,
+      "is_reasoning": false,
       "is_multimodal": false,
       "has_tool_use": true,
       "free_mechanism": "permanent",
@@ -2324,7 +2317,7 @@
       "aliases": [
         "xingchen/xopglmv47flash"
       ],
-      "tier": "large",
+      "tier": "medium",
       "speed": "fast",
       "use_case": [
         "software-development",
@@ -2332,59 +2325,9 @@
         "conversation",
         "q&a",
         "content-creation",
-        "writing-assistance",
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "complex-reasoning"
+        "writing-assistance"
       ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "glm-4.5-flash",
-      "object": "model",
-      "created": 1572481322,
-      "owned_by": "bigmodel",
-      "provider": "bigmodel",
-      "name": "GLM-4.5-Flash",
-      "description": "GLM-4.5-Flash 将于2026 年 1 月 30 日下线，请您及时将模型编码更新为最新版本。正式下线后，相关请求将会自动路由至 GLM-4.7-Flash。",
-      "context_size": 128000,
-      "context_label": "128K",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "reasoning"
-      ],
-      "tags": [
-        "chat",
-        "text-generation",
-        "reasoning"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "permanent",
-      "free_quota": null,
-      "trial_scope": "specific",
-      "model_family": "glm-4.5-flash",
-      "aliases": [],
-      "tier": "large",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance",
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "complex-reasoning"
-      ],
-      "performance_level": "mid",
+      "performance_level": "entry",
       "estimated_latency": "< 1s"
     },
     {
@@ -2403,8 +2346,7 @@
       "capabilities": [
         "chat",
         "text-generation",
-        "vision",
-        "reasoning"
+        "vision"
       ],
       "tags": [
         "reasoning",
@@ -2437,6 +2379,49 @@
         "complex-reasoning"
       ],
       "performance_level": "mid",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "glm-4.5-flash",
+      "object": "model",
+      "created": 1572481322,
+      "owned_by": "bigmodel",
+      "provider": "bigmodel",
+      "name": "GLM-4.5-Flash",
+      "description": "GLM-4.5-Flash 模型在确保强大推理能力、稳定代码生成和多工具协同处理能力的同时，具备显著的运行速度优势，且完全免费开放使用。",
+      "context_size": 128000,
+      "context_label": "128K",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "code-generation",
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "permanent",
+      "free_quota": null,
+      "trial_scope": "specific",
+      "model_family": "glm-4.5-flash",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "software-development",
+        "code-completion",
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
       "estimated_latency": "< 1s"
     }
   ]
