@@ -1,8 +1,8 @@
 {
   "object": "list",
   "view": "small",
-  "updated_at": "2026-10-15T07:06:30.322Z",
-  "total": 74,
+  "updated_at": "2026-11-28T09:54:45.376Z",
+  "total": 61,
   "filters": {
     "tier": "small"
   },
@@ -88,15 +88,16 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "@cf/google/gemma-2b-it-lora",
+      "id": "@cf/cloudflare/clairic-flash",
       "object": "model",
-      "created": 1773086106,
+      "created": 1962954673,
       "owned_by": "cloudflare",
       "provider": "cloudflare",
-      "name": "@cf/google/gemma-2b-it-lora",
-      "description": "This is a Gemma-2B base model that Cloudflare dedicates for inference with LoRA adapters. Gemma is a family of lightweight, state-of-the-art open models from Google, built from the same research and technology used to create the Gemini models.",
-      "context_size": 8192,
-      "context_label": "8K",
+      "name": "@cf/cloudflare/clairic-flash",
+      "description": "Clairic is a System One-style model that can extract, compute, estimate, and forecast values from inputs. It is strongly typed and outputs confidence scores and probabilities against its outputs. This model is in early research preview from the Cloudflare Workers AI team.",
+      "context_size": 65536,
+      "context_label": "66K",
+      "price_input": 0.1,
       "is_free": true,
       "capabilities": [
         "text-generation"
@@ -112,50 +113,8 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
-      "model_family": "gemma-2b-lora",
-      "model_variant": "it",
+      "model_family": "clairic-flash",
       "aliases": [],
-      "parameter_count": 2000000000,
-      "tier": "small",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "@cf/meta/llama-3.2-3b-instruct",
-      "object": "model",
-      "created": 1195405333,
-      "owned_by": "cloudflare",
-      "provider": "cloudflare",
-      "name": "@cf/meta/llama-3.2-3b-instruct",
-      "description": "The Llama 3.2 instruction-tuned text only models are optimized for multilingual dialogue use cases, including agentic retrieval and summarization tasks.",
-      "context_size": 80000,
-      "context_label": "80K",
-      "price_input": 0.0509,
-      "price_output": 0.335,
-      "is_free": true,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "daily-tokens",
-      "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
-      },
-      "trial_scope": "all",
-      "model_family": "llama-3.2-3b",
-      "model_variant": "instruct",
-      "aliases": [],
-      "parameter_count": 3000000000,
       "tier": "small",
       "speed": "fast",
       "use_case": [
@@ -207,17 +166,16 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "@cf/meta/llama-3.2-1b-instruct",
+      "id": "@cf/cloudflare/clairic",
       "object": "model",
-      "created": 1015481747,
+      "created": 537160492,
       "owned_by": "cloudflare",
       "provider": "cloudflare",
-      "name": "@cf/meta/llama-3.2-1b-instruct",
-      "description": "The Llama 3.2 instruction-tuned text only models are optimized for multilingual dialogue use cases, including agentic retrieval and summarization tasks.",
-      "context_size": 60000,
-      "context_label": "60K",
-      "price_input": 0.027,
-      "price_output": 0.201,
+      "name": "@cf/cloudflare/clairic",
+      "description": "Clairic is a System One-style model that can extract, compute, estimate, and forecast values from inputs. It is strongly typed and outputs confidence scores and probabilities against its outputs. This model is in early research preview from the Cloudflare Workers AI team.",
+      "context_size": 65536,
+      "context_label": "66K",
+      "price_input": 0.1,
       "is_free": true,
       "capabilities": [
         "text-generation"
@@ -233,50 +191,7 @@
         "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
       },
       "trial_scope": "all",
-      "model_family": "llama-3.2-1b",
-      "model_variant": "instruct",
-      "aliases": [],
-      "parameter_count": 1000000000,
-      "tier": "small",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "@cf/ibm-granite/granite-4.0-h-micro",
-      "object": "model",
-      "created": 2029425488,
-      "owned_by": "cloudflare",
-      "provider": "cloudflare",
-      "name": "@cf/ibm-granite/granite-4.0-h-micro",
-      "description": "Granite 4.0 instruct models deliver strong performance across benchmarks, achieving industry-leading results in key agentic tasks like instruction following and function calling. These efficiencies make the models well-suited for a wide range of use cases like retrieval-augmented generation (RAG), multi-agent workflows, and edge deployments.",
-      "context_size": 131000,
-      "context_label": "131K",
-      "price_input": 0.017,
-      "price_output": 0.112,
-      "is_free": true,
-      "capabilities": [
-        "text-generation",
-        "function-calling"
-      ],
-      "tags": [
-        "tool-use",
-        "text-generation",
-        "function-calling"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": true,
-      "free_mechanism": "daily-tokens",
-      "free_quota": {
-        "notes": "10,000 neurons/day account-wide (shared across all Workers AI models); price_input/price_output are overage rates once the daily quota is used up"
-      },
-      "trial_scope": "all",
-      "model_family": "ibm-granite-granite-4.0-h-micro",
+      "model_family": "clairic",
       "aliases": [],
       "tier": "small",
       "speed": "fast",
@@ -613,85 +528,6 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "CosyVoice2",
-      "object": "model",
-      "created": 451919563,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "CosyVoice2-0.5B",
-      "description": "CosyVoice2 是一款升级版语音生成模型，提供更高精准度的多语种支持、情感调节与自然流畅的语音合成，适用于智能客服、语音助手等多个场景。",
-      "context_label": "unknown",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": false,
-      "capabilities": [
-        "speech-synthesis"
-      ],
-      "tags": [
-        "speech-synthesis"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "all",
-      "model_family": "cosyvoice2-0.5b",
-      "aliases": [],
-      "parameter_count": 500000000,
-      "tier": "small",
-      "speed": "standard",
-      "use_case": [
-        "text-to-speech",
-        "voice-output"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "DeepSeek-R1-Distill-Qwen-1.5B",
-      "object": "model",
-      "created": 1848528840,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "DeepSeek-R1-Distill-Qwen-1.5B",
-      "description": "基于 Qwen2.5-Math-1.5B 的 DeepSeek-R1 蒸馏模型，通过强化学习与冷启动数据优化推理性能，开源模型刷新多任务标杆。",
-      "context_size": 32000,
-      "context_label": "32K",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "reasoning",
-        "text-generation"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "permanent",
-      "free_quota": null,
-      "trial_scope": "specific",
-      "model_family": "deepseek-r1-distill-qwen-1.5b",
-      "model_variant": "r1",
-      "aliases": [],
-      "parameter_count": 1500000000,
-      "tier": "small",
-      "speed": "fast",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "content-creation",
-        "writing-assistance",
-        "complex-reasoning"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
       "id": "Step-Audio-TTS-3B",
       "object": "model",
       "created": 1708997162,
@@ -727,85 +563,6 @@
         "writing-assistance",
         "text-to-speech",
         "voice-output"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "Spark-TTS-0.5B",
-      "object": "model",
-      "created": 1573793520,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "Spark-TTS-0.5B",
-      "description": "Spark-TTS 是一款先进的文本转语音系统，它利用大型语言模型 (LLM) 的强大功能，实现高精度、自然的语音合成。它高效、灵活、功能强大，适用于研究和生产环境。",
-      "context_label": "unknown",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "speech-synthesis"
-      ],
-      "tags": [
-        "text-generation",
-        "speech-synthesis"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "permanent",
-      "free_quota": null,
-      "trial_scope": "specific",
-      "model_family": "spark-tts-0.5b",
-      "model_variant": "tts",
-      "aliases": [],
-      "parameter_count": 500000000,
-      "tier": "small",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "text-to-speech",
-        "voice-output"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "Qwen3-4B",
-      "object": "model",
-      "created": 128569450,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "Qwen3-4B",
-      "description": "Qwen3 是 Qwen 系列中的最新一代大型语言模型，提供了一系列密集型和混合专家（MoE）模型。基于在训练数据、模型架构和优化技术方面的广泛进步。",
-      "context_size": 32000,
-      "context_label": "32K",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": true,
-      "capabilities": [
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "permanent",
-      "free_quota": null,
-      "trial_scope": "specific",
-      "model_family": "qwen3-4b",
-      "aliases": [
-        "xingchen/xop3qwen4b"
-      ],
-      "parameter_count": 4000000000,
-      "tier": "small",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
@@ -974,50 +731,6 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "Qwen3-VL-Embedding-2B",
-      "object": "model",
-      "created": 1650875217,
-      "owned_by": "gitee",
-      "provider": "gitee",
-      "name": "Qwen3-VL-Embedding-2B",
-      "description": "Qwen3-VL-Embedding-2B 是一个支持文本、图像等多模态输入、用于生成统一高维语义向量的 2 B 参数级多模态嵌入模型，常用于跨模态检索和相似性搜索等任务。",
-      "context_label": "unknown",
-      "price_input": 0,
-      "price_output": 0,
-      "is_free": false,
-      "capabilities": [
-        "embeddings"
-      ],
-      "tags": [
-        "vision",
-        "text-generation",
-        "embeddings",
-        "multimodal"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": true,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
-      "model_family": "qwen3-vl-embedding-2b",
-      "model_variant": "vl",
-      "aliases": [],
-      "parameter_count": 2000000000,
-      "tier": "small",
-      "speed": "premium",
-      "use_case": [
-        "image-understanding",
-        "visual-q&a",
-        "content-creation",
-        "writing-assistance",
-        "semantic-search",
-        "similarity"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "< 1s"
-    },
-    {
       "id": "Qwen3-VL-Reranker-2B",
       "object": "model",
       "created": 2038695946,
@@ -1128,6 +841,7 @@
       "trial_scope": "all",
       "model_family": "qwen3.6-35b-a3b",
       "aliases": [
+        "ovh/qwen3.6-35b-a3b",
         "xingchen/xopqwen36v35b"
       ],
       "parameter_count": 35000000000,
@@ -1554,6 +1268,43 @@
       "estimated_latency": "< 1s"
     },
     {
+      "id": "AutoTrust-JEV-27B-v1.1",
+      "object": "model",
+      "created": 544301533,
+      "owned_by": "gitee",
+      "provider": "gitee",
+      "name": "AutoTrust-JEV-27B-v1.1",
+      "description": "AutoTrust-JEV-27B-v1.1 是 AutoTrust AI 推出的**开源结构化决策大模型（Typed Decision Model）**，主打 System1 快速判定 + System2 原生推理双路径，面向 Agent 流程、内容风控、分类打分、自动审核等需要确定性判断 + 校准置信概率的场景，底座基于冻结的 Qwen3.8-27B。",
+      "context_size": 32000,
+      "context_label": "32K",
+      "price_input": 0.3,
+      "price_output": 0,
+      "is_free": false,
+      "capabilities": [
+        "systemone"
+      ],
+      "tags": [
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "autotrust-jev-27b-v1.1",
+      "aliases": [],
+      "parameter_count": 27000000000,
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
       "id": "Ministral-3B",
       "object": "model",
       "created": 1733062572,
@@ -1603,396 +1354,42 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "models/gemini-3.5-flash-lite",
+      "id": "meta-llama/llama-prompt-guard-2-86m",
       "object": "model",
-      "created": 954890954,
-      "owned_by": "google",
-      "provider": "google",
-      "name": "Gemini 3.5 Flash-Lite",
-      "description": "Google: A cost-efficient model, optimized for high-volume agentic tasks, translation, and simple data processing.",
-      "context_label": "unknown",
-      "price_input": 0.3,
-      "price_output": 2.5,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation",
-        "translation",
-        "chat"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Free tier is limited per project by requests/min, input tokens/min and requests/day. Google publishes the per-model numbers only in AI Studio (https://aistudio.google.com/rate-limit); the public docs state limits \"are not guaranteed and actual capacity may vary\"."
-      },
-      "trial_scope": "fast",
-      "model_family": "gemini-3.5-flash-lite",
-      "aliases": [],
-      "tier": "small",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "models/gemini-3.1-flash-lite",
-      "object": "model",
-      "created": 55054258,
-      "owned_by": "google",
-      "provider": "google",
-      "name": "Gemini 3.1 Flash-Lite",
-      "description": "Google: A cost-efficient model, optimized for high-volume agentic tasks, translation, and simple data processing.",
-      "context_label": "unknown",
-      "price_input": 0.25,
-      "price_output": 1.5,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation",
-        "translation",
-        "chat"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Free tier is limited per project by requests/min, input tokens/min and requests/day. Google publishes the per-model numbers only in AI Studio (https://aistudio.google.com/rate-limit); the public docs state limits \"are not guaranteed and actual capacity may vary\"."
-      },
-      "trial_scope": "fast",
-      "model_family": "gemini-3.1-flash-lite",
-      "aliases": [],
-      "tier": "small",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "models/gemini-2.5-flash-lite",
-      "object": "model",
-      "created": 1948955755,
-      "owned_by": "google",
-      "provider": "google",
-      "name": "Gemini 2.5 Flash-Lite",
-      "description": "Google: A small and cost effective model, built for at scale usage.",
-      "context_label": "unknown",
-      "price_input": 0.1,
-      "price_output": 0.4,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation",
-        "chat"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "notes": "Free tier is limited per project by requests/min, input tokens/min and requests/day. Google publishes the per-model numbers only in AI Studio (https://aistudio.google.com/rate-limit); the public docs state limits \"are not guaranteed and actual capacity may vary\"."
-      },
-      "trial_scope": "fast",
-      "model_family": "gemini-2.5-flash-lite",
-      "aliases": [],
-      "tier": "small",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "models/veo-3.1-generate-preview",
-      "object": "model",
-      "created": 684528492,
-      "owned_by": "google",
-      "provider": "google",
-      "name": "veo-3.1-generate-preview",
-      "description": "Google: A fast video generation model.",
-      "context_label": "unknown",
-      "price_input": 0.4,
-      "is_free": false,
-      "capabilities": [
-        "video-generation"
-      ],
-      "tags": [
-        "text-generation",
-        "video-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
-      "model_family": "veo-3.1-generate-preview",
-      "aliases": [],
-      "tier": "small",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "video-creation"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "models/veo-3.1-fast-generate-preview",
-      "object": "model",
-      "created": 1855103823,
-      "owned_by": "google",
-      "provider": "google",
-      "name": "veo-3.1-fast-generate-preview",
-      "description": "Google: A fast video generation model.",
-      "context_label": "unknown",
-      "price_input": 0.1,
-      "is_free": false,
-      "capabilities": [
-        "video-generation"
-      ],
-      "tags": [
-        "text-generation",
-        "video-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
-      "model_family": "veo-3.1-fast-generate-preview",
-      "aliases": [],
-      "tier": "small",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "video-creation"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "models/veo-3.1-lite-generate-preview",
-      "object": "model",
-      "created": 1940413359,
-      "owned_by": "google",
-      "provider": "google",
-      "name": "veo-3.1-lite-generate-preview",
-      "description": "Google: A fast video generation model.",
-      "context_label": "unknown",
-      "price_input": 0.05,
-      "is_free": false,
-      "capabilities": [
-        "video-generation"
-      ],
-      "tags": [
-        "text-generation",
-        "video-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
-      "model_family": "veo-3.1-lite-generate-preview",
-      "aliases": [],
-      "tier": "small",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "video-creation"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "models/lyria-3.5",
-      "object": "model",
-      "created": 356100776,
-      "owned_by": "google",
-      "provider": "google",
-      "name": "Lyria 3.5",
-      "description": "Google: Google's music generation model.",
-      "context_label": "unknown",
-      "price_input": 0.08,
-      "is_free": false,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation",
-        "chat"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
-      "model_family": "lyria-3.5",
-      "aliases": [],
-      "tier": "small",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "models/lyria-3-clip-preview",
-      "object": "model",
-      "created": 535765353,
-      "owned_by": "google",
-      "provider": "google",
-      "name": "lyria-3-clip-preview",
-      "description": "Google: Google's family of legacy music generation models.",
-      "context_label": "unknown",
+      "created": 2021365556,
+      "owned_by": "groq",
+      "provider": "groq",
+      "name": "Prompt Guard 2 86M",
+      "context_size": 512,
+      "context_label": "512",
       "price_input": 0.04,
-      "is_free": false,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "chat",
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
-      "model_family": "lyria-3-clip-preview",
-      "aliases": [
-        "google/lyria-3-clip-preview"
-      ],
-      "tier": "small",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "models/lyria-3-pro-preview",
-      "object": "model",
-      "created": 434083630,
-      "owned_by": "google",
-      "provider": "google",
-      "name": "lyria-3-pro-preview",
-      "description": "Google: Google's family of legacy music generation models.",
-      "context_label": "unknown",
-      "price_input": 0.08,
-      "is_free": false,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "chat",
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
-      "model_family": "lyria-3-pro-preview",
-      "aliases": [
-        "google/lyria-3-pro-preview"
-      ],
-      "tier": "small",
-      "speed": "premium",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "models/gemini-embedding-2",
-      "object": "model",
-      "created": 612610824,
-      "owned_by": "google",
-      "provider": "google",
-      "name": "Gemini Embedding 2",
-      "description": "Google: Our first multimodal embedding model, mapping text, images, video, audio, and PDFs into a unified embedding space.",
-      "context_label": "unknown",
-      "price_input": 0.2,
+      "price_output": 0.04,
       "is_free": true,
       "capabilities": [
-        "embeddings"
+        "moderation"
       ],
       "tags": [
-        "vision",
-        "text-generation",
-        "embeddings",
-        "multimodal"
+        "moderation"
       ],
       "is_reasoning": false,
-      "is_multimodal": true,
+      "is_multimodal": false,
       "has_tool_use": false,
       "free_mechanism": "rate-limited",
       "free_quota": {
-        "notes": "Free tier is limited per project by requests/min, input tokens/min and requests/day. Google publishes the per-model numbers only in AI Studio (https://aistudio.google.com/rate-limit); the public docs state limits \"are not guaranteed and actual capacity may vary\"."
+        "rpd": 14400,
+        "tpm": 15000,
+        "rpm": 30,
+        "tokens_per_day": 500000
       },
-      "trial_scope": "fast",
-      "model_family": "gemini-embedding-2",
-      "model_variant": "embedding",
+      "trial_scope": "all",
+      "model_family": "llama-prompt-guard-2-86m",
+      "model_variant": "guard",
       "aliases": [],
       "tier": "small",
       "speed": "fast",
       "use_case": [
-        "image-understanding",
-        "visual-q&a",
-        "content-creation",
-        "writing-assistance",
-        "semantic-search",
-        "similarity"
+        "content-filtering",
+        "safety"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
@@ -2089,182 +1486,6 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "meta-llama/llama-prompt-guard-2-86m",
-      "object": "model",
-      "created": 2021365556,
-      "owned_by": "groq",
-      "provider": "groq",
-      "name": "Prompt Guard 2 86M",
-      "context_size": 512,
-      "context_label": "512",
-      "price_input": 0.04,
-      "price_output": 0.04,
-      "is_free": true,
-      "capabilities": [
-        "moderation"
-      ],
-      "tags": [
-        "moderation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "rate-limited",
-      "free_quota": {
-        "rpd": 14400,
-        "tpm": 15000,
-        "rpm": 30,
-        "tokens_per_day": 500000
-      },
-      "trial_scope": "all",
-      "model_family": "llama-prompt-guard-2-86m",
-      "model_variant": "guard",
-      "aliases": [],
-      "tier": "small",
-      "speed": "fast",
-      "use_case": [
-        "content-filtering",
-        "safety"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "codestral-latest",
-      "object": "model",
-      "created": 1487565173,
-      "owned_by": "llm7",
-      "provider": "llm7",
-      "name": "codestral-latest",
-      "description": "LLM7 chat (turbo tier)",
-      "context_size": 32000,
-      "context_label": "32K",
-      "price_input": 0.01,
-      "price_output": 0.02,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "tool-use",
-        "code-generation"
-      ],
-      "tags": [
-        "text-generation",
-        "chat",
-        "tool-use",
-        "code-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": true,
-      "free_mechanism": "daily-tokens",
-      "free_quota": {
-        "rpm": 60,
-        "tokens_per_day": 100000,
-        "notes": "Free API token from dash.llm7.io (signup required, no payment). 100,000 tokens per 24 hours across input+output 60 requests per minute, 250 per hour. Official docs warn the free-token quota may be reduced without notice. price_input/price_output are LLM7 paid-usage rates (USD per 1M tokens), not what the free tier costs."
-      },
-      "trial_scope": "specific",
-      "model_family": "codestral-latest",
-      "aliases": [],
-      "tier": "small",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a",
-        "software-development",
-        "code-completion"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "mistral-Nemo-Instruct-2407",
-      "object": "model",
-      "created": 166918731,
-      "owned_by": "llm7",
-      "provider": "llm7",
-      "name": "mistral-Nemo-Instruct-2407",
-      "description": "LLM7 chat (turbo tier)",
-      "context_size": 128000,
-      "context_label": "128K",
-      "price_input": 0.03,
-      "price_output": 0.03,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation",
-        "chat"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "daily-tokens",
-      "free_quota": {
-        "rpm": 60,
-        "tokens_per_day": 100000,
-        "notes": "Free API token from dash.llm7.io (signup required, no payment). 100,000 tokens per 24 hours across input+output 60 requests per minute, 250 per hour. Official docs warn the free-token quota may be reduced without notice. price_input/price_output are LLM7 paid-usage rates (USD per 1M tokens), not what the free tier costs."
-      },
-      "trial_scope": "specific",
-      "model_family": "mistral-nemo",
-      "model_variant": "instruct",
-      "aliases": [
-        "ovh/Mistral-Nemo-Instruct-2407"
-      ],
-      "tier": "small",
-      "speed": "fast",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "google/gemma-2b",
-      "object": "model",
-      "created": 916532583,
-      "owned_by": "nvidia",
-      "provider": "nvidia",
-      "name": "gemma-2b",
-      "description": "Model: google/gemma-2b",
-      "context_label": "unknown",
-      "is_free": false,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation",
-        "chat"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
-      "model_family": "gemma-2b",
-      "aliases": [],
-      "parameter_count": 2000000000,
-      "tier": "small",
-      "speed": "standard",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
       "id": "google/gemma-3-4b-it",
       "object": "model",
       "created": 1771287141,
@@ -2299,122 +1520,6 @@
         "writing-assistance",
         "conversation",
         "q&a"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "google/recurrentgemma-2b",
-      "object": "model",
-      "created": 2051718125,
-      "owned_by": "nvidia",
-      "provider": "nvidia",
-      "name": "recurrentgemma-2b",
-      "description": "Model: google/recurrentgemma-2b",
-      "context_label": "unknown",
-      "is_free": false,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation",
-        "chat"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
-      "model_family": "recurrentgemma-2b",
-      "aliases": [],
-      "parameter_count": 2000000000,
-      "tier": "small",
-      "speed": "standard",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "ibm/granite-3.0-3b-a800m-instruct",
-      "object": "model",
-      "created": 1994111218,
-      "owned_by": "nvidia",
-      "provider": "nvidia",
-      "name": "granite-3.0-3b-a800m-instruct",
-      "description": "Model: ibm/granite-3.0-3b-a800m-instruct",
-      "context_label": "unknown",
-      "is_free": false,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "text-generation",
-        "chat"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
-      "model_family": "ibm-granite-3.0-3b-a800m",
-      "model_variant": "instruct",
-      "aliases": [],
-      "parameter_count": 3000000000,
-      "tier": "small",
-      "speed": "standard",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "riva-translate-4b-instruct",
-      "object": "model",
-      "created": 460366680,
-      "owned_by": "nvidia",
-      "provider": "nvidia",
-      "name": "riva-translate-4b-instruct",
-      "description": "Model: nvidia/riva-translate-4b-instruct",
-      "context_label": "unknown",
-      "is_free": false,
-      "capabilities": [
-        "speech-synthesis"
-      ],
-      "tags": [
-        "text-generation",
-        "translation",
-        "speech-synthesis"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
-      "model_family": "riva-translate-4b",
-      "model_variant": "instruct",
-      "aliases": [],
-      "parameter_count": 4000000000,
-      "tier": "small",
-      "speed": "standard",
-      "use_case": [
-        "content-creation",
-        "writing-assistance",
-        "text-to-speech",
-        "voice-output"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
@@ -2463,41 +1568,37 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "Mistral-Nemo-Instruct-2407",
+      "id": "clef-flash",
       "object": "model",
-      "created": 2044441628,
+      "created": 1197582154,
       "owned_by": "ovh",
       "provider": "ovh",
-      "name": "Mistral-Nemo-Instruct-2407",
-      "description": "The Mistral-Nemo-Instruct-2407 model, developed collaboratively by Mistral AI and NVIDIA, is an instruction-tuned LLM released in 2024. Designed for multilingual applications, it excels in tasks such as conversational dialogue, code generation, and instructional comprehension across various languages.",
-      "context_size": 65536,
-      "context_label": "66K",
-      "price_input": 0.14,
-      "price_output": 0.14,
+      "name": "clef-flash",
+      "description": "Clef-Flash is a decision model from Cloudflare: it answers typed questions (choice, score, yes/no) about a text, with calibrated probabilities, following the System One request shape. Text only.",
+      "context_size": 16384,
+      "context_label": "16K",
+      "price_input": 0.04,
       "is_free": true,
       "capabilities": [
         "chat",
-        "text-generation",
-        "tool-use"
+        "text-generation"
       ],
       "tags": [
         "chat",
-        "text-generation",
-        "tool-use"
+        "text-generation"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
-      "has_tool_use": true,
+      "has_tool_use": false,
       "free_mechanism": "rate-limited",
       "free_quota": {
         "rpm": 2,
         "notes": "Anonymous access (no API key, no signup): 2 requests per minute, per IP and per model. With an API key the same models are billed pay-as-you-go per token (400 RPM per project) — price_input/price_output are those rates, not what the anonymous tier costs."
       },
       "trial_scope": "all",
-      "model_family": "mistral-nemo",
-      "model_variant": "instruct",
+      "model_family": "clef-flash",
       "aliases": [
-        "llm7/mistral-Nemo-Instruct-2407"
+        "cloudflare/@cf/cloudflare/clef-flash"
       ],
       "tier": "small",
       "speed": "fast",
@@ -2631,6 +1732,313 @@
       "estimated_latency": "< 1s"
     },
     {
+      "id": "gpt-oss-120b",
+      "object": "model",
+      "created": 2048018171,
+      "owned_by": "sambanova",
+      "provider": "sambanova",
+      "name": "openai/gpt-oss-120b",
+      "context_label": "unknown",
+      "price_input": 0.22,
+      "price_output": 0.59,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "total_credits": 5,
+        "notes": "$5 trial credits, valid for 3 months; listed prices are pay-as-you-go rates after credits run out"
+      },
+      "trial_scope": "all",
+      "model_family": "gpt-oss-120b",
+      "aliases": [
+        "cerebras/gpt-oss-120b",
+        "cloudflare/@cf/openai/gpt-oss-120b",
+        "groq/openai/gpt-oss-120b",
+        "ovh/gpt-oss-120b"
+      ],
+      "parameter_count": 120000000000,
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "ALLaM-7B-Instruct-preview",
+      "object": "model",
+      "created": 385789167,
+      "owned_by": "sambanova",
+      "provider": "sambanova",
+      "name": "tbd",
+      "context_label": "unknown",
+      "price_input": 0.22,
+      "price_output": 0.59,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "total_credits": 5,
+        "notes": "$5 trial credits, valid for 3 months; listed prices are pay-as-you-go rates after credits run out"
+      },
+      "trial_scope": "all",
+      "model_family": "allam-7b-preview",
+      "model_variant": "instruct",
+      "aliases": [],
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "Llama-4-Scout-17B-16E-Instruct",
+      "object": "model",
+      "created": 1727002696,
+      "owned_by": "sambanova",
+      "provider": "sambanova",
+      "name": "Llama-4-Scout-17B-16E-Instruct",
+      "context_label": "unknown",
+      "price_input": 0.4,
+      "price_output": 0.7,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "total_credits": 5,
+        "notes": "$5 trial credits, valid for 3 months; listed prices are pay-as-you-go rates after credits run out"
+      },
+      "trial_scope": "all",
+      "model_family": "llama-4-scout-17b-16e",
+      "model_variant": "instruct",
+      "aliases": [
+        "cloudflare/@cf/meta/llama-4-scout-17b-16e-instruct",
+        "github/Llama-4-Scout-17B-16E-Instruct"
+      ],
+      "parameter_count": 17000000000,
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "Meta-Llama-3.2-1B-Instruct",
+      "object": "model",
+      "created": 847455120,
+      "owned_by": "sambanova",
+      "provider": "sambanova",
+      "name": "Llama 3.2 1B",
+      "context_label": "unknown",
+      "price_input": 0.04,
+      "price_output": 0.08,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "total_credits": 5,
+        "notes": "$5 trial credits, valid for 3 months; listed prices are pay-as-you-go rates after credits run out"
+      },
+      "trial_scope": "all",
+      "model_family": "3.2-1b",
+      "model_variant": "instruct",
+      "aliases": [],
+      "parameter_count": 1000000000,
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "Meta-Llama-3.2-3B-Instruct",
+      "object": "model",
+      "created": 1027378706,
+      "owned_by": "sambanova",
+      "provider": "sambanova",
+      "name": "Llama 3.2 3B",
+      "context_label": "unknown",
+      "price_input": 0.08,
+      "price_output": 0.16,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "total_credits": 5,
+        "notes": "$5 trial credits, valid for 3 months; listed prices are pay-as-you-go rates after credits run out"
+      },
+      "trial_scope": "all",
+      "model_family": "3.2-3b",
+      "model_variant": "instruct",
+      "aliases": [],
+      "parameter_count": 3000000000,
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "Mistral-Large-3-675B-Instruct-2512",
+      "object": "model",
+      "created": 1999325169,
+      "owned_by": "sambanova",
+      "provider": "sambanova",
+      "name": "mistralai/Mistral-Large-3-675B-Instruct-2512",
+      "context_label": "unknown",
+      "price_input": 0.22,
+      "price_output": 0.59,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "total_credits": 5,
+        "notes": "$5 trial credits, valid for 3 months; listed prices are pay-as-you-go rates after credits run out"
+      },
+      "trial_scope": "all",
+      "model_family": "mistral-large-3-675b",
+      "model_variant": "instruct",
+      "aliases": [],
+      "parameter_count": 675000000000,
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "Qwen2.5-0.5B-SFT-Instruct",
+      "object": "model",
+      "created": 660829921,
+      "owned_by": "sambanova",
+      "provider": "sambanova",
+      "name": "Qwen2.5 0.5B SFT",
+      "context_label": "unknown",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "total_credits": 5,
+        "notes": "$5 trial credits, valid for 3 months; listed prices are pay-as-you-go rates after credits run out"
+      },
+      "trial_scope": "all",
+      "model_family": "qwen2.5-0.5b-sft",
+      "model_variant": "instruct",
+      "aliases": [],
+      "parameter_count": 500000000,
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
       "id": "Qwen3-235B-A22B-Instruct-2507",
       "object": "model",
       "created": 2096442811,
@@ -2664,6 +2072,48 @@
         "xingchen/xop3qwen235b2507"
       ],
       "parameter_count": 235000000000,
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "SCX-Magpie-120b",
+      "object": "model",
+      "created": 322282492,
+      "owned_by": "sambanova",
+      "provider": "sambanova",
+      "name": "SCX-Magpie-120b",
+      "context_label": "unknown",
+      "price_input": 0.22,
+      "price_output": 0.59,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "total_credits": 5,
+        "notes": "$5 trial credits, valid for 3 months; listed prices are pay-as-you-go rates after credits run out"
+      },
+      "trial_scope": "all",
+      "model_family": "scx-magpie-120b",
+      "aliases": [],
+      "parameter_count": 120000000000,
       "tier": "small",
       "speed": "fast",
       "use_case": [
@@ -2719,12 +2169,12 @@
       "estimated_latency": "< 1s"
     },
     {
-      "id": "ALLaM-7B-Instruct-preview",
+      "id": "gpt-oss-120b-aurora-chat-v3",
       "object": "model",
-      "created": 385789167,
+      "created": 1491673035,
       "owned_by": "sambanova",
       "provider": "sambanova",
-      "name": "tbd",
+      "name": "shazzadulimun/gpt-oss-120b-aurora-chat-v3",
       "context_label": "unknown",
       "price_input": 0.22,
       "price_output": 0.59,
@@ -2734,8 +2184,8 @@
         "text-generation"
       ],
       "tags": [
-        "chat",
-        "text-generation"
+        "text-generation",
+        "chat"
       ],
       "is_reasoning": false,
       "is_multimodal": false,
@@ -2746,108 +2196,150 @@
         "notes": "$5 trial credits, valid for 3 months; listed prices are pay-as-you-go rates after credits run out"
       },
       "trial_scope": "all",
-      "model_family": "allam-7b-preview",
-      "model_variant": "instruct",
+      "model_family": "gpt-oss-120b-aurora-v3",
+      "model_variant": "chat",
       "aliases": [],
-      "tier": "small",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "gemma-3-12b-it",
-      "object": "model",
-      "created": 1136995089,
-      "owned_by": "sambanova",
-      "provider": "sambanova",
-      "name": "google/gemma-3-12b-it",
-      "context_label": "unknown",
-      "price_input": 0.22,
-      "price_output": 0.59,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "chat",
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "trial-credits",
-      "free_quota": {
-        "total_credits": 5,
-        "notes": "$5 trial credits, valid for 3 months; listed prices are pay-as-you-go rates after credits run out"
-      },
-      "trial_scope": "all",
-      "model_family": "gemma-3-12b",
-      "model_variant": "it",
-      "aliases": [
-        "google/gemma-3-12b-it"
-      ],
-      "parameter_count": 12000000000,
-      "tier": "small",
-      "speed": "fast",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "< 1s"
-    },
-    {
-      "id": "gpt-oss-120b",
-      "object": "model",
-      "created": 2048018171,
-      "owned_by": "sambanova",
-      "provider": "sambanova",
-      "name": "openai/gpt-oss-120b",
-      "context_label": "unknown",
-      "price_input": 0.22,
-      "price_output": 0.59,
-      "is_free": true,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "chat",
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": "trial-credits",
-      "free_quota": {
-        "total_credits": 5,
-        "notes": "$5 trial credits, valid for 3 months; listed prices are pay-as-you-go rates after credits run out"
-      },
-      "trial_scope": "all",
-      "model_family": "gpt-oss-120b",
-      "aliases": [
-        "cerebras/gpt-oss-120b",
-        "cloudflare/@cf/openai/gpt-oss-120b",
-        "groq/openai/gpt-oss-120b",
-        "ovh/gpt-oss-120b"
-      ],
       "parameter_count": 120000000000,
       "tier": "small",
       "speed": "fast",
       "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "gemma-4-31B-it",
+      "object": "model",
+      "created": 1392290191,
+      "owned_by": "sambanova",
+      "provider": "sambanova",
+      "name": "google/gemma-4-31B-it",
+      "context_label": "unknown",
+      "price_input": 0.38,
+      "price_output": 1.15,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "total_credits": 5,
+        "notes": "$5 trial credits, valid for 3 months; listed prices are pay-as-you-go rates after credits run out"
+      },
+      "trial_scope": "all",
+      "model_family": "gemma-4-31b",
+      "model_variant": "it",
+      "aliases": [],
+      "parameter_count": 31000000000,
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
         "conversation",
         "q&a",
         "content-creation",
         "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "MiniMax-M2.5",
+      "object": "model",
+      "created": 1377797550,
+      "owned_by": "sambanova",
+      "provider": "sambanova",
+      "name": "minimaxai/minimax-m2.5",
+      "context_label": "unknown",
+      "price_input": 0.22,
+      "price_output": 0.59,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "chat",
+        "text-generation"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "trial-credits",
+      "free_quota": {
+        "total_credits": 5,
+        "notes": "$5 trial credits, valid for 3 months; listed prices are pay-as-you-go rates after credits run out"
+      },
+      "trial_scope": "all",
+      "model_family": "minimax-m2.5",
+      "aliases": [
+        "MiniMax-M2.5",
+        "xingchen/xminimaxm25"
+      ],
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "conversation",
+        "q&a",
+        "content-creation",
+        "writing-assistance"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "spark-x2.6-4b",
+      "object": "model",
+      "created": 263866841,
+      "owned_by": "xingchen",
+      "provider": "xingchen",
+      "name": "Spark-X2.6-4B",
+      "description": "Spark-X2.6-4B在代码、智能体、长文本及多语言能力上实现大幅提升，新增三档推理模式，自研推理框架下的推理效率较 ollama 有所提升。",
+      "context_size": 1,
+      "context_label": "1",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation",
+        "code-generation",
+        "chat"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "讯飞星辰 MaaS 免费模型（inferencePrice 输入/输出均为 0）；平台按账号限并发，具体数值只在 maas.xfyun.cn 登录后的控制台展示，公开模型列表 API 不返回该字段"
+      },
+      "trial_scope": "specific",
+      "model_family": "spark-x2.6-4b",
+      "aliases": [],
+      "parameter_count": 4000000000,
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "software-development",
+        "code-completion",
+        "conversation",
+        "q&a"
       ],
       "performance_level": "entry",
       "estimated_latency": "< 1s"
@@ -2976,9 +2468,7 @@
       "free_quota": null,
       "trial_scope": "none",
       "model_family": "qwen3-30b-a3b",
-      "aliases": [
-        "cloudflare/@cf/qwen/qwen3-30b-a3b-fp8"
-      ],
+      "aliases": [],
       "parameter_count": 30000000000,
       "tier": "small",
       "speed": "fast",
@@ -3019,9 +2509,7 @@
       "free_quota": null,
       "trial_scope": "none",
       "model_family": "qwen3-4b",
-      "aliases": [
-        "Qwen3-4B"
-      ],
+      "aliases": [],
       "parameter_count": 4000000000,
       "tier": "small",
       "speed": "fast",

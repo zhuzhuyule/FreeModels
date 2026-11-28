@@ -1,20 +1,20 @@
 {
   "object": "list",
   "provider": "xingchen",
-  "updated_at": "2026-10-15T07:06:30.301Z",
-  "total": 42,
+  "updated_at": "2026-11-28T09:54:45.358Z",
+  "total": 47,
   "data": [
     {
-      "id": "spark-x2.5",
+      "id": "spark-x2.6",
       "object": "model",
-      "created": 1617850915,
+      "created": 1617850916,
       "owned_by": "xingchen",
       "provider": "xingchen",
-      "name": "Spark-X2.5",
-      "description": "该模型基于全国产平台训练，采用MoE框架，模型参数293B-A30，支持256K上下文，全面提升代码和智能体能力，同时覆盖 200 余种语言，在语言理解、答题、推理等通用任务上保持优异的效果。",
-      "context_size": 262144,
-      "context_label": "262K",
-      "price_input": 0.96,
+      "name": "Spark-X2.6",
+      "description": "Spark-X2.6基于国产算力完成训练，采用 293B-A30B 参数的 MoE 架构，上下文长度拓展至 1M，代码与智能体能力达业界一流水平，同时提供专业安全防护并支持按任务场景自定义安全策略。",
+      "context_size": 1,
+      "context_label": "1",
+      "price_input": 0.9,
       "price_output": 3.6,
       "is_free": false,
       "capabilities": [
@@ -32,7 +32,7 @@
       "free_mechanism": null,
       "free_quota": null,
       "trial_scope": "none",
-      "model_family": "spark-x2.5",
+      "model_family": "spark-x2.6",
       "aliases": [],
       "tier": "medium",
       "speed": "standard",
@@ -46,6 +46,98 @@
       ],
       "performance_level": "mid",
       "estimated_latency": "1-3s"
+    },
+    {
+      "id": "spark-x2.6-4b",
+      "object": "model",
+      "created": 263866841,
+      "owned_by": "xingchen",
+      "provider": "xingchen",
+      "name": "Spark-X2.6-4B",
+      "description": "Spark-X2.6-4B在代码、智能体、长文本及多语言能力上实现大幅提升，新增三档推理模式，自研推理框架下的推理效率较 ollama 有所提升。",
+      "context_size": 1,
+      "context_label": "1",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation",
+        "code-generation",
+        "chat"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "讯飞星辰 MaaS 免费模型（inferencePrice 输入/输出均为 0）；平台按账号限并发，具体数值只在 maas.xfyun.cn 登录后的控制台展示，公开模型列表 API 不返回该字段"
+      },
+      "trial_scope": "specific",
+      "model_family": "spark-x2.6-4b",
+      "aliases": [],
+      "parameter_count": 4000000000,
+      "tier": "small",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "software-development",
+        "code-completion",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
+    },
+    {
+      "id": "spark-x2.6-1.7b",
+      "object": "model",
+      "created": 411656457,
+      "owned_by": "xingchen",
+      "provider": "xingchen",
+      "name": "Spark-X2.6-1.7B",
+      "description": "Spark-X2.6-1.7B在代码、智能体、长文本及多语言能力上实现大幅提升，新增三档推理模式，自研推理框架下的推理效率较 ollama 有所提升。",
+      "context_size": 1,
+      "context_label": "1",
+      "price_input": 0,
+      "price_output": 0,
+      "is_free": true,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation",
+        "code-generation",
+        "chat"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": "rate-limited",
+      "free_quota": {
+        "notes": "讯飞星辰 MaaS 免费模型（inferencePrice 输入/输出均为 0）；平台按账号限并发，具体数值只在 maas.xfyun.cn 登录后的控制台展示，公开模型列表 API 不返回该字段"
+      },
+      "trial_scope": "specific",
+      "model_family": "spark-x2.6-1.7b",
+      "aliases": [],
+      "parameter_count": 1700000000,
+      "tier": "medium",
+      "speed": "fast",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "software-development",
+        "code-completion",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "< 1s"
     },
     {
       "id": "spark-x2.5-4b",
@@ -182,7 +274,7 @@
       "model_family": "glm-5.3",
       "aliases": [
         "GLM-5.3",
-        "z-ai/glm-5.3"
+        "sambanova/GLM-5.3"
       ],
       "tier": "medium",
       "speed": "standard",
@@ -226,10 +318,8 @@
       "trial_scope": "none",
       "model_family": "deepseek-v4-pro",
       "aliases": [
-        "cloudflare/@cf/deepseek-ai/deepseek-v4-pro-0813",
         "DeepSeek-V4-Pro",
-        "DeepSeek-V4-Pro-0813",
-        "xingchen/xopdeepseekv4pro"
+        "DeepSeek-V4-Pro-0813"
       ],
       "tier": "medium",
       "speed": "premium",
@@ -271,10 +361,8 @@
       "trial_scope": "none",
       "model_family": "deepseek-v4-flash",
       "aliases": [
-        "cloudflare/@cf/deepseek-ai/deepseek-v4-flash-0731",
         "DeepSeek-V4-Flash",
         "deepseek-v4-flash-0731",
-        "llm7/DeepSeek-V4-Flash-0731",
         "sensenova/deepseek-v4-flash"
       ],
       "tier": "medium",
@@ -433,51 +521,6 @@
       "estimated_latency": "3-10s"
     },
     {
-      "id": "xopdeepseekv4pro",
-      "object": "model",
-      "created": 663035872,
-      "owned_by": "xingchen",
-      "provider": "xingchen",
-      "name": "DeepSeek-V4-Pro",
-      "description": "DeepSeek-V4 系列预览版，DeepSeek-V4-Pro 参数量达 1.6 万亿（激活参数量 490 亿）。",
-      "context_size": 1,
-      "context_label": "1",
-      "price_input": 12,
-      "price_output": 24,
-      "is_free": false,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "chat",
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
-      "model_family": "deepseek-v4-pro",
-      "aliases": [
-        "cloudflare/@cf/deepseek-ai/deepseek-v4-pro-0813",
-        "DeepSeek-V4-Pro",
-        "DeepSeek-V4-Pro-0813",
-        "xingchen/xopdeepseekv4pro0813"
-      ],
-      "tier": "large",
-      "speed": "premium",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "mid",
-      "estimated_latency": "3-10s"
-    },
-    {
       "id": "xopqwen36v35b",
       "object": "model",
       "created": 1041248835,
@@ -509,7 +552,8 @@
       "trial_scope": "none",
       "model_family": "qwen3.6-35b-a3b",
       "aliases": [
-        "Qwen3.6-35B-A3B"
+        "Qwen3.6-35B-A3B",
+        "ovh/qwen3.6-35b-a3b"
       ],
       "parameter_count": 35000000000,
       "tier": "large",
@@ -712,46 +756,6 @@
       "estimated_latency": "3-10s"
     },
     {
-      "id": "xsparkx2",
-      "object": "model",
-      "created": 1447445,
-      "owned_by": "xingchen",
-      "provider": "xingchen",
-      "name": "Spark X2",
-      "description": "Spark X2整体能力对标国际顶尖模型水平，在数学、推理、语言理解、智能体等能力上媲美国际最优；130+多语言综合能力继续提升，拉美、东盟等地区重点语种效果保持业界领先水平。输入最大长度支持64K，输出最大长度支持128K。",
-      "context_size": 196608,
-      "context_label": "197K",
-      "price_input": 3,
-      "price_output": 3,
-      "is_free": false,
-      "capabilities": [
-        "chat",
-        "text-generation"
-      ],
-      "tags": [
-        "chat",
-        "text-generation"
-      ],
-      "is_reasoning": false,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
-      "model_family": "spark-x2",
-      "aliases": [],
-      "tier": "medium",
-      "speed": "standard",
-      "use_case": [
-        "conversation",
-        "q&a",
-        "content-creation",
-        "writing-assistance"
-      ],
-      "performance_level": "entry",
-      "estimated_latency": "1-3s"
-    },
-    {
       "id": "xop35qwen2b",
       "object": "model",
       "created": 368694390,
@@ -872,7 +876,8 @@
       "trial_scope": "none",
       "model_family": "minimax-m2.5",
       "aliases": [
-        "MiniMax-M2.5"
+        "MiniMax-M2.5",
+        "sambanova/MiniMax-M2.5"
       ],
       "tier": "medium",
       "speed": "standard",
@@ -974,59 +979,6 @@
         "writing-assistance",
         "conversation",
         "q&a",
-        "complex-reasoning"
-      ],
-      "performance_level": "high",
-      "estimated_latency": "3-10s"
-    },
-    {
-      "id": "xop3qwencodernext",
-      "object": "model",
-      "created": 26807463,
-      "owned_by": "xingchen",
-      "provider": "xingchen",
-      "name": "Qwen3-Coder-Next-FP8",
-      "description": "Qwen3-Coder-Next-FP8 是专为编码智能体和本地开发设计的开源语言模型，具备优秀的长程推理等智能体能力，256k 上下文长度可无缝集成各类 CLI/IDE 开发平台。",
-      "context_size": 262144,
-      "context_label": "262K",
-      "price_input": 2.5,
-      "price_output": 10,
-      "is_free": false,
-      "capabilities": [
-        "chat",
-        "text-generation",
-        "code-generation"
-      ],
-      "tags": [
-        "reasoning",
-        "text-generation",
-        "chat",
-        "code-generation"
-      ],
-      "is_reasoning": true,
-      "is_multimodal": false,
-      "has_tool_use": false,
-      "free_mechanism": null,
-      "free_quota": null,
-      "trial_scope": "none",
-      "model_family": "qwen3-coder-next",
-      "model_variant": "coder",
-      "quantization": "fp8",
-      "aliases": [
-        "Qwen3-Coder-Next"
-      ],
-      "tier": "large",
-      "speed": "premium",
-      "use_case": [
-        "problem-solving",
-        "logical-analysis",
-        "math",
-        "content-creation",
-        "writing-assistance",
-        "conversation",
-        "q&a",
-        "software-development",
-        "code-completion",
         "complex-reasoning"
       ],
       "performance_level": "high",
@@ -1343,9 +1295,7 @@
       "free_quota": null,
       "trial_scope": "none",
       "model_family": "qwen3-30b-a3b",
-      "aliases": [
-        "cloudflare/@cf/qwen/qwen3-30b-a3b-fp8"
-      ],
+      "aliases": [],
       "parameter_count": 30000000000,
       "tier": "small",
       "speed": "fast",
@@ -1434,10 +1384,7 @@
       "trial_scope": "none",
       "model_family": "deepseek-r1-distill-qwen-32b",
       "model_variant": "r1",
-      "aliases": [
-        "cloudflare/@cf/deepseek-ai/deepseek-r1-distill-qwen-32b",
-        "DeepSeek-R1-Distill-Qwen-32B"
-      ],
+      "aliases": [],
       "parameter_count": 32000000000,
       "tier": "large",
       "speed": "premium",
@@ -1627,9 +1574,7 @@
       "free_quota": null,
       "trial_scope": "none",
       "model_family": "qwen3-4b",
-      "aliases": [
-        "Qwen3-4B"
-      ],
+      "aliases": [],
       "parameter_count": 4000000000,
       "tier": "small",
       "speed": "fast",
@@ -1776,6 +1721,89 @@
       "estimated_latency": "1-3s"
     },
     {
+      "id": "1",
+      "object": "model",
+      "created": 1294340505,
+      "owned_by": "xingchen",
+      "provider": "xingchen",
+      "name": "internlm2.5_7b_chat",
+      "description": "【仅供研究】internlm2.5_7b_chat是InternLM2.5开源的70亿个参数的基础模型并为实际场景量身定制的聊天模型。旨在理解和生成自然语言文本。",
+      "context_size": 8192,
+      "context_label": "8K",
+      "price_input": 2,
+      "price_output": 8,
+      "is_free": false,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation",
+        "chat"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "internlm2.5-7b",
+      "model_variant": "chat",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "standard",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "1-3s"
+    },
+    {
+      "id": "2",
+      "object": "model",
+      "created": 1294340506,
+      "owned_by": "xingchen",
+      "provider": "xingchen",
+      "name": "Qwen_v2.5_7b_base",
+      "description": "【可商用】Qwen_v2.5_7b_base是由阿里巴巴集团Qwen团队研发的大型语言模型系列中的新成员。该模型拥有76.1亿参数，通过大规模多语言数据的预训练和高质量数据的后期微调，提高了其在自然语言理解和生成方面的能力。该模型在编程和数学领域表现出较强的知识和能力，能够处理复杂的编程任务和数学问题。",
+      "context_label": "unknown",
+      "price_input": 2,
+      "price_output": 8,
+      "is_free": false,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation",
+        "code-generation",
+        "chat"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "qwen-v2.5-7b-base",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "standard",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "software-development",
+        "code-completion",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "1-3s"
+    },
+    {
       "id": "xsqwen2d53b",
       "object": "model",
       "created": 1087969650,
@@ -1817,6 +1845,170 @@
         "q&a"
       ],
       "performance_level": "mid",
+      "estimated_latency": "1-3s"
+    },
+    {
+      "id": "Qwen_v2.5_3b_base",
+      "object": "model",
+      "created": 736188037,
+      "owned_by": "xingchen",
+      "provider": "xingchen",
+      "name": "Qwen_v2.5_3b_base",
+      "description": "【可商用】Qwen_v2.5_3b_base是由阿里巴巴集团Qwen团队研发的Qwen2.5系列大型语言模型中的一个版本。该模型支持超过29种语言，支持长达32,768 token的输入，并能生成最多8,192 token的文本。",
+      "context_label": "unknown",
+      "price_input": 2,
+      "price_output": 8,
+      "is_free": false,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation",
+        "chat"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "qwen-v2.5-3b-base",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "standard",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
+      "estimated_latency": "1-3s"
+    },
+    {
+      "id": "Qwen_v2.5_1.5b_Instruct",
+      "object": "model",
+      "created": 850590947,
+      "owned_by": "xingchen",
+      "provider": "xingchen",
+      "name": "Qwen_v2.5_1.5b_Instruct",
+      "description": "【可商用】Qwen_v2.5_1.5b_Instruct是由阿里巴巴集团Qwen团队研发的Qwen2.5系列大型语言模型中的一个版本。该模型拥有15.4亿参数，支持超过29种语言，支持长达32,768 token的输入，并能生成最多8,192 token的文本。该模型在长文本生成、对话系统和内容理解等方面表现出色，同时保持了较小的模型体积，适合于资源受限的环境。此外，它在编程和数学领域的应用也展现",
+      "context_size": 8192,
+      "context_label": "8K",
+      "price_input": 2,
+      "price_output": 8,
+      "is_free": false,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation",
+        "code-generation",
+        "chat"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "qwen-v2.5-1.5b",
+      "model_variant": "instruct",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "standard",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "software-development",
+        "code-completion",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "1-3s"
+    },
+    {
+      "id": "Qwen_v2.5_1.5b_base",
+      "object": "model",
+      "created": 824485988,
+      "owned_by": "xingchen",
+      "provider": "xingchen",
+      "name": "Qwen_v2.5_1.5b_base",
+      "description": "【可商用】Qwen_v2.5_1.5b_base是由阿里巴巴集团Qwen团队研发的Qwen2.5系列大型语言模型中的一个版本。该模型拥有15.4亿参数，支持超过29种语言，支持长达32,768 token的输入，并能生成最多8,192 token的文本。该模型在长文本生成、对话系统和内容理解等方面表现出色，同时保持了较小的模型体积，适合于资源受限的环境。此外，它在编程和数学领域的应用也展现了不错的",
+      "context_label": "unknown",
+      "price_input": 2,
+      "price_output": 8,
+      "is_free": false,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation",
+        "code-generation",
+        "chat"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "qwen-v2.5-1.5b-base",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "standard",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "software-development",
+        "code-completion",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "mid",
+      "estimated_latency": "1-3s"
+    },
+    {
+      "id": "Qwen_v2.5_0.5b_base",
+      "object": "model",
+      "created": 1516168859,
+      "owned_by": "xingchen",
+      "provider": "xingchen",
+      "name": "Qwen_v2.5_0.5b_base",
+      "description": "【可商用】Qwen_v2.5_0.5b_base是Qwen_v2.5系列中最小的模型，具有5.1亿参数。该模型支持长达32,768 token的输入，并能生成最多8,192 token的文本。尽管其体积最小，但它依然能够处理各种NLP任务，并且具有较快的处理速度和较低的资源消耗，非常适合对响应时间和资源消耗有严格要求的应用场景。",
+      "context_label": "unknown",
+      "price_input": 2,
+      "price_output": 8,
+      "is_free": false,
+      "capabilities": [
+        "chat",
+        "text-generation"
+      ],
+      "tags": [
+        "text-generation",
+        "chat"
+      ],
+      "is_reasoning": false,
+      "is_multimodal": false,
+      "has_tool_use": false,
+      "free_mechanism": null,
+      "free_quota": null,
+      "trial_scope": "none",
+      "model_family": "qwen-v2.5-0.5b-base",
+      "aliases": [],
+      "tier": "medium",
+      "speed": "standard",
+      "use_case": [
+        "content-creation",
+        "writing-assistance",
+        "conversation",
+        "q&a"
+      ],
+      "performance_level": "entry",
       "estimated_latency": "1-3s"
     },
     {
